@@ -368,6 +368,10 @@ Full-Width Styles
   background: #212121;
 }
 
+#home {
+  text-decoration: none;
+  color: inherit;
+}
 
 
 /*******************************************************************************
