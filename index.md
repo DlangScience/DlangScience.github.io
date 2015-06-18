@@ -5,7 +5,7 @@ layout: default
 DlangScience
 
 ##Libraries:
-- [dstats](http://dlangscience.github.io/dstats)
+- [dstats](/dstats)
 - [libcerf](http://dlangscience.github.io/libcerf/)
 
 ##Bindings:

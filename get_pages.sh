@@ -9,8 +9,8 @@ for pageName in dstats NetCDF-D cblas dstats PydMagic clFFT-D libcerf OpenMPI pa
     mkdir -p ${pageName}
     if [ -f repos/${pageName}/site/readme_as_index ]
     then
-        echo -e '---\nlayout: default\n---\n' | cat - repos/${pageName}/README.md > ${pageName}/index.md
+        echo -e '---\nlayout: default\n---\n' | cat - repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
     fi
-    cp -r repos/${pageName}/site ${pageName}
+    cp -r repos/${pageName}/site/* ${pageName}/
 done
 
