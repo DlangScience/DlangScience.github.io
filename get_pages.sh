@@ -6,7 +6,8 @@ for pageName in dstats NetCDF-D cblas dstats PydMagic clFFT-D libcerf OpenMPI pa
         echo No site directory found for repo $pageName
         continue
     fi
-    mkdir -p ${pageName}
+    rm -r ${pageName}
+    mkdir ${pageName}
     if [ -f repos/${pageName}/site/readme_as_index ]
     then
         echo -e '---\nlayout: default\n---\n' | cat - repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
