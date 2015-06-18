@@ -1,9 +1,9 @@
 set -e
 
 for pageName in dstats NetCDF-D cblas dstats PydMagic clFFT-D libcerf OpenMPI parallel_algorithm; do
-    mkdir -p ${pageName}
-    wget -O ${pageName}/index.md https://raw.githubusercontent.com/DlangScience/${pageName}/master/README.md
-    echo -e '---\nlayout: default\n---\n' | cat - ${pageName}/index.md > ${pageName}/_tmp
-    mv ${pageName}/_tmp ${pageName}/index.md
+    if [ -f repos/${pageName}/site/readme_as_index] then
+        echo -e '---\nlayout: default\n---\n' | cat - repos/${pageName}/README.md > ${pageName}/index.md
+    fi
+    cp repos/${pageName}/site ${pageName}
 done
 
