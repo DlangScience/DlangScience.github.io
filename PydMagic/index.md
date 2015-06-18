@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # PydMagic
 Ipython/Jupyter magic for inline D code in a python notebook
 

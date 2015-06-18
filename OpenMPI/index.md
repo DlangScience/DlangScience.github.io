@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # OpenMPI
 D interface to Open MPI
 
