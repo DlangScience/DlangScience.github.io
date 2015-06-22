@@ -5,7 +5,7 @@ layout: default
 
 <p>Self-contained numeric library that provides an efficient and accurate implementation of complex error functions, along with Dawson, Faddeeva, and Voigt functions.</p>
 
-<p>####Functions:</p>
+<h4>Functions:</h4>
 
 <ul>
 <li>erf (complex)</li>
@@ -18,7 +18,7 @@ layout: default
 <li>fadeevaIm (double)</li>
 </ul>
 
-<p>####Example:</p>
+<h4>Example:</h4>
 
 <div class="highlight highlight-D"><pre><span class="pl-k">import</span> <span class="pl-c1">std.complex</span>, <span class="pl-c1">std.math</span>;
 <span class="pl-k">import</span> libcerf;
@@ -28,10 +28,10 @@ layout: default
 
 <span class="pl-k">assert</span>(fabs((c.re <span class="pl-k">-</span> f)<span class="pl-k">/</span>f) <span class="pl-k">&lt;</span> <span class="pl-c1">1e-13</span>);</pre></div>
 
-<p>####Links</p>
+<h4>Links</h4>
 
 <ul>
-<li>D source code on <a href="https://github.com/9il/libcerf">GitHub</a>
+<li>D source code on <a href="https://github.com/DlangScience/libcerf">GitHub</a>
 </li>
 <li>Original <a href="http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package">Faddeeva Package</a>
 </li>
