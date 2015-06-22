@@ -6,12 +6,26 @@ for pageName in dstats NetCDF-D cblas dstats PydMagic clFFT-D libcerf OpenMPI pa
         echo No site directory found for repo $pageName
         continue
     fi
-    rm -r ${pageName}
+    rm -rf ${pageName}
     mkdir ${pageName}
     if [ -f repos/${pageName}/site/readme_as_index ]
     then
-        echo -e '---\nlayout: default\n---\n' | cat - repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
+        cat repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
     fi
     cp -r repos/${pageName}/site/* ${pageName}/
+    
+    for page in $(find ${pageName} -name \*.md); do
+        page_html=${page%.*}.html
+        python3 md_to_html.py $page > $page_html
+        rm $page
+        if [ "$(head -n1 $page_html | tr -d '\n')" != '---' ]
+        then
+            sed '1i\
+---\
+layout: default\
+---\
+' $page_html > _tmp_
+            mv _tmp_ $page_html
+        fi
+    done
 done
-
