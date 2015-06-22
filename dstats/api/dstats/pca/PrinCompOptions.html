@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct PrinCompOptions</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class="selected module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct PrinCompOptions</h1>
+			<section>
+				<p>Sets options for principal component analysis.  The default options are
+also the values in PrinCompOptions.init.
+</p>
+
+					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/pca/PrinCompOptions.absError.html" class="public"><code>absError</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>    Absolute error at which to stop the optimization procedure.  Default:  1e-5
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/pca/PrinCompOptions.destructive.html" class="public"><code>destructive</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>    Overwrite input matrix instead of copying.  Ignored if the matrix
+    passed in does not have assignable, lvalue elements and centering or
+    scaling is enabled.  Default value:  false.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/pca/PrinCompOptions.maxIter.html" class="public"><code>maxIter</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td>    Maximum iterations for the optimization procedure.  After this many
+    iterations, the algorithm gives up and calls teh solution "good enough"
+    no matter what.  For exploratory analyses, "good enough" solutions
+    can be had fast sometimes by making this value small.  Default:  uint.max
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/pca/PrinCompOptions.relError.html" class="public"><code>relError</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>    Relative error at which to stop the optimization procedure.  Default: 1e-4
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/pca/PrinCompOptions.transpose.html" class="public"><code>transpose</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>    Effectively <code class="prettyprint lang-d">transpose</code> the matrix.  If enabled, treat each column as a
+    data points and each row as a dimension.  If disabled, do the opposite.
+    Note that, if this is enabled, each row will be scaled and centered,
+    not each column.  Default value:  false.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/pca/PrinCompOptions.unitVariance.html" class="public"><code>unitVariance</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>    Scale each column to unit variance.  Note that, if this option is set to
+    true, <a href="../../dstats/pca/PrinCompOptions.zeroMean.html"><code class="prettyprint lang-d">zeroMean</code></a> is ignored and the mean of each column is set to zero even
+    if <a href="../../dstats/pca/PrinCompOptions.zeroMean.html"><code class="prettyprint lang-d">zeroMean</code></a> is false.  Default value:  false.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/pca/PrinCompOptions.zeroMean.html" class="public"><code>zeroMean</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>Center each column to zero mean.  Default value:  true.
+</td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

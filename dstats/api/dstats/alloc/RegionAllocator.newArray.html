@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function RegionAllocator.newArray</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function RegionAllocator.newArray</h1>
+			<section>
+				<p>Allocates an <a href="../../dstats/alloc/RegionAllocator.array.html"><code class="prettyprint lang-d">array</code></a> of type T.  T may be a multidimensional
+    <a href="../../dstats/alloc/RegionAllocator.array.html"><code class="prettyprint lang-d">array</code></a>.  In this case <a href="../../dstats/alloc/RegionAllocator.newArray.html#sizes"><code class="prettyprint lang-d">sizes</code></a> may be specified for any number of dimensions
+    from 1 to the number in T.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+auto newArray(T, I...)(
+&nbsp;&nbsp;I sizes
+)
+if (allSatisfy!(isIntegral, I));</pre>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+double[] arr = alloc.newArray!(double[])(100);
+assert(arr.length == 100);
+
+double[][] matrix = alloc.newArray!(double[][])(42, 31);
+assert(matrix.length == 42);
+assert(matrix[0].length == 31);
+</pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct LogisticRes</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class="selected module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct LogisticRes</h1>
+			<section>
+				<p>Plain old data struct to hold the results of a <a href="../../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a> regression.
+</p>
+
+					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.betas.html" class="public"><code>betas</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td>The coefficients, one for each range in X.  These will be in the order
+ that the X ranges were passed in.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.logLikelihood.html" class="public"><code>logLikelihood</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>    The log likelihood for the model fit.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.lowerBound.html" class="public"><code>lowerBound</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td>    The Wald lower confidence bounds of the beta terms, at the confidence level
+    specificied.  (Default 0.95).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.nullLogLikelihood.html" class="public"><code>nullLogLikelihood</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>    The log likelihood for the null model.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.overallP.html" class="public"><code>overallP</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>    The P-value for the model as a whole, based on the likelihood ratio test.
+    The null here is that the model has no predictive value, the alternative
+    is that it does have predictive value.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.p.html" class="public"><code>p</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td>    The P-value for the alternative that the corresponding beta value is
+    different from zero against the null that it is equal to zero.  These
+    are calculated using the Wald Test.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.stdErr.html" class="public"><code>stdErr</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td>The standard error terms of the X ranges passed in.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.upperBound.html" class="public"><code>upperBound</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td>    The Wald upper confidence bounds of the beta terms, at the confidence level
+    specificied.  (Default 0.95).
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.aic.html" class="public property"><code>aic</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td>    Akaike Information Criterion, which is a complexity-penalized goodness-
+    of-fit score, equal to 2 * k - 2 log(L) where L is the log likelihood and
+    k is the number of parameters.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/LogisticRes.toString.html" class="public">
+										<code>toString</code>
+									</a>
+								</td>
+								<td>Print out the results in the default format.
+</td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

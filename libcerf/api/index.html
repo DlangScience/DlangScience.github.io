@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="./prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">libcerf</a>
+						<ul class="tree-view">
+							<li>
+								<a href="./libcerf/erfcx_.html" class=" module">erfcx_</a>
+							</li>
+							<li>
+								<a href="./libcerf/err_fcts.html" class=" module">err_fcts</a>
+							</li>
+							<li>
+								<a href="./libcerf/im_w_of_x.html" class=" module">im_w_of_x</a>
+							</li>
+							<li>
+								<a href="./libcerf/testutils.html" class=" module">testutils</a>
+							</li>
+							<li>
+								<a href="./libcerf/w_of_z.html" class=" module">w_of_z</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="./libcerf.html" class=" module">libcerf</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="./symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>API documentation</h1>
+			<table>
+				<col class="caption"/>
+				<tr>
+					<th>Module</th>
+					<th>Description</th>
+				</tr>
+			<tr>
+				<td>
+					<a href="./libcerf/erfcx_.html">libcerf.erfcx_</a>
+				</td>
+				<td>
+Compute <a href="./libcerf/erfcx_/erfcx.html"><code class="prettyprint lang-d">erfcx</code></a>(x) = exp(x^2) erfc(x) function, for real x,
+using a novel algorithm that is much faster than DERFC of SLATEC.
+This function is used in the computation of Faddeeva, Dawson, and
+other complex error functions.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./libcerf/err_fcts.html">libcerf.err_fcts</a>
+				</td>
+				<td>
+Computate Dawson, Voigt, and several error functions,
+based on erfcx, im_w_of_x, w_of_z as implemented in separate files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./libcerf/im_w_of_x.html">libcerf.im_w_of_x</a>
+				</td>
+				<td>
+Compute complex error functions, based on a new implementation of
+Faddeeva's w_of_z. Also provide Dawson and Voigt functions.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./libcerf/testutils.html">libcerf.testutils</a>
+				</td>
+				<td>
+Internal test utilities.
+Use flags -unittest -debug=libcerf to receive debug info.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./libcerf/w_of_z.html">libcerf.w_of_z</a>
+				</td>
+				<td>
+Computation of Faddeeva's complex scaled error function,
+  w(z) = exp(-z^2) * erfc(-i*z),
+nameless function (7.1.3) of Abramowitz&Stegun (1964),
+also known as the plasma dispersion function.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./libcerf.html">libcerf</a>
+				</td>
+				<td>
+Package module with aliases.
+
+				</td>
+			</tr>
+			</table>
+			<section>
+				<h2>Authors</h2>
+			</section>
+			<section>
+				<h2>Copyright</h2>
+			</section>
+			<section>
+				<h2>License</h2>
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function partial</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class="selected module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function partial</h1>
+			<section>
+				<p>Computes the <code class="prettyprint lang-d">partial</code> correlation between <a href="../../dstats/cor/partial.html#vec1"><code class="prettyprint lang-d">vec1</code></a>, <a href="../../dstats/cor/partial.html#vec2"><code class="prettyprint lang-d">vec2</code></a> given
+ conditions.  conditions can be either a tuple of ranges, a range of ranges,
+ or (for a single condition) a single range.
+</p>
+<section>
+<p> cor is the correlation metric to use.  It can be either <a href="../../dstats/cor/pearsonCor.html"><code class="prettyprint lang-d">pearsonCor</code></a>,
+ <a href="../../dstats/cor/spearmanCor.html"><code class="prettyprint lang-d">spearmanCor</code></a>, <a href="../../dstats/cor/kendallCor.html"><code class="prettyprint lang-d">kendallCor</code></a>, or any custom correlation metric you can come up
+ with.
+</p>
+
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+double partial(alias cor, T, U, V...)(
+&nbsp;&nbsp;T vec1,
+&nbsp;&nbsp;U vec2,
+&nbsp;&nbsp;V conditionsIn
+)
+if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; allSatisfy!(isInputRange, V));</pre>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">uint[] stock1Price = [8, 6, 7, 5, 3, 0, 9];
+uint[] stock2Price = [3, 1, 4, 1, 5, 9, 2];
+uint[] economicHealth = [2, 7, 1, 8, 2, 8, 1];
+uint[] consumerFear = [1, 2, 3, 4, 5, 6, 7];
+
+// See whether the prices of stock 1 and stock 2 are correlated even
+// after adjusting for the overall condition of the economy and consumer
+// fear.
+double partialCor =
+  partial!<a href="../../dstats/cor/pearsonCor.html">pearsonCor</a>(stock1Price, stock2Price, economicHealth, consumerFear);
+</pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

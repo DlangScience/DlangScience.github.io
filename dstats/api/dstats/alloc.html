@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.alloc</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../dstats/alloc.html" class="selected module">alloc</a>
+							</li>
+							<li>
+								<a href="../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.alloc</h1>
+			<p>Stuff having to do with memory management.  Mostly a copy of <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
+for now until it gets into Phobos, as well as some <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>-specific
+data structures.
+</p>
+<section>
+</section>
+
+			<section><section><h2>Author</h2>
+<p>David Simcha
+</p>
+</section>
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="appendDelOld" class="public" href="../dstats/alloc/appendDelOld.html">
+								<code>appendDelOld</code>
+							</a>
+						</td>
+						<td>Appends <a href="../dstats/alloc/appendDelOld.html#to"><code class="prettyprint lang-d">to</code></a> an array, deleting the old array if it has <a href="../dstats/alloc/appendDelOld.html#to"><code class="prettyprint lang-d">to</code></a> be realloced.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="newRegionAllocator" class="public" href="../dstats/alloc/newRegionAllocator.html">
+								<code>newRegionAllocator</code>
+							</a>
+						</td>
+						<td>Returns a new <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> that uses the default thread-local
+<a href="../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="scanThreadLocalStack" class="public property" href="../dstats/alloc/scanThreadLocalStack.html">
+								<code>scanThreadLocalStack</code>
+							</a>
+						</td>
+						<td>These properties determine whether the default thread-local
+<a href="../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance is scanned by the garbage collector.
+The default is no.  In most cases, scanning a stack this long-lived is not
+recommended, as it will cause too many false pointers.  (See regionallocator, <a href="../dstats/alloc/GCScan.html"><code class="prettyprint lang-d">GCScan</code></a> for details.)
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="threadLocalSegmentSize" class="public property" href="../dstats/alloc/threadLocalSegmentSize.html">
+								<code>threadLocalSegmentSize</code>
+							</a>
+						</td>
+						<td>These properties get and set the segment size of the default thread-local
+<a href="../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance.  The default size is 4 megabytes.
+The setter is only effective before the global function
+<a href="../dstats/alloc/newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a> has been called for the first time in the current
+thread.  Attempts to set this property after the first call to this
+function from the current thread throw a <a href="../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a>.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="RegionAllocatorException" class="public" href="../dstats/alloc/RegionAllocatorException.html">
+								<code>RegionAllocatorException</code>
+							</a>
+						</td>
+						<td>The exception that is thrown on invalid use of  and
+<a href="../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a>.  This exception is not thrown on out of memory.
+An OutOfMemoryError is thrown instead.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="HashRange" class="public" href="../dstats/alloc/HashRange.html">
+								<code>HashRange</code>
+							</a>
+						</td>
+						<td>Forward range struct for iterating over the keys or values of a
+ <a href="../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a> or <a href="../dstats/alloc/StackSet.html"><code class="prettyprint lang-d">StackSet</code></a>.  The lifetime of this object must not exceed that
+ of the underlying <a href="../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a> or <a href="../dstats/alloc/StackSet.html"><code class="prettyprint lang-d">StackSet</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="RegionAllocator" class="public" href="../dstats/alloc/RegionAllocator.html">
+								<code>RegionAllocator</code>
+							</a>
+						</td>
+						<td>This struct provides an interface to the <code class="prettyprint lang-d">RegionAllocator</code> functionality
+and enforces scoped deletion.  A new instance using the thread-local
+<a href="../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance is created using the global
+<a href="../dstats/alloc/newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a> function.  A new instance using
+an explicitly created <a href="../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> is created using
+<a href="../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><code class="prettyprint lang-d">RegionAllocatorStack.newRegionAllocator</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="RegionAllocatorStack" class="public" href="../dstats/alloc/RegionAllocatorStack.html">
+								<code>RegionAllocatorStack</code>
+							</a>
+						</td>
+						<td>This object represents a segmented stack.  Memory can be allocated from this
+stack using a regionallocator <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> object.  Multiple
+<a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> objects may be created per
+<code class="prettyprint lang-d">RegionAllocatorStack</code> but each <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> uses a single
+<code class="prettyprint lang-d">RegionAllocatorStack</code>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="StackHash" class="public" href="../dstats/alloc/StackHash.html">
+								<code>StackHash</code>
+							</a>
+						</td>
+						<td>A hash table that allocates its memory on <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  Good for building a
+ temporary hash tables that will not escape the current scope.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="StackSet" class="public" href="../dstats/alloc/StackSet.html">
+								<code>StackSet</code>
+							</a>
+						</td>
+						<td>A hash set that allocates its memory on <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  Good for building a
+ temporary set that will not escape the current scope.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="StackTree" class="public" href="../dstats/alloc/StackTree.html">
+								<code>StackTree</code>
+							</a>
+						</td>
+						<td>An AVL tree implementation on top of <a href="../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  If elements are removed,
+ they are stored on an internal free list and recycled when new elements
+ are added to the tree.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="StackTreeAA" class="public" href="../dstats/alloc/StackTreeAA.html">
+								<code>StackTreeAA</code>
+							</a>
+						</td>
+						<td>An associative array implementation based on <a href="../dstats/alloc/StackTree.html"><code class="prettyprint lang-d">StackTree</code></a>.  Lookups and
+ insertions are O(log N).  This is significantly slower in both theory and
+ practice than <a href="../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>, but you may want to use it if:
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TreeAaIter" class="public" href="../dstats/alloc/TreeAaIter.html">
+								<code>TreeAaIter</code>
+							</a>
+						</td>
+						<td>Struct that iterates over keys or values of a <a href="../dstats/alloc/StackTreeAA.html"><code class="prettyprint lang-d">StackTreeAA</code></a>.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="GCScan" class="public" href="../dstats/alloc/GCScan.html">
+								<code>GCScan</code>
+							</a>
+						</td>
+						<td>This flag determines whether a given <a href="../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> is scanned for
+pointers by the garbage collector (GC).  If <a href="../dstats/alloc/GCScan.yes.html"><code class="prettyprint lang-d">yes</code></a>, the entire stack is scanned,
+not just the part currently in use, since there is currently <a href="../dstats/alloc/GCScan.no.html"><code class="prettyprint lang-d">no</code></a> efficient way to
+modify the bounds of a GC region.  The stack is scanned conservatively, meaning
+that any bit pattern that would point to GC-allocated memory if interpreted as
+a pointer is considered to be a pointer.  This can result in GC-allocated
+memory being retained when it should be freed.  Due to these caveats,
+it is recommended that any stack scanned by the GC be small and/or short-lived.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

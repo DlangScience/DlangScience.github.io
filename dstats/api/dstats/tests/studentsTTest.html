@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>studentsTTest - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>studentsTTest - multiple declarations</h1>
+			<ul>
+				<li>Function studentsTTest</li>
+				<li>Function studentsTTest</li>
+			</ul>
+			<section>
+				<h2>Function studentsTTest</h2>
+				<p>Two-sample T test for a difference in means,
+assumes variances of samples are equal.  Alteratives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning
+mean(<a href="../../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &lt; <a href="../../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning
+mean(<a href="../../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &gt; <a href="../../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning
+mean(<a href="../../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) != <a href="../../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</p>
+<section>
+<p><a href="../../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> may be either iterables with elements implicitly
+convertible to double or summary structs (see <a href="../../dstats/tests/isSummary.html"><code class="prettyprint lang-d">isSummary</code></a>).
+</p>
+
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> studentsTTest(T, U)(
+&nbsp;&nbsp;T sample1,
+&nbsp;&nbsp;U sample2,
+&nbsp;&nbsp;double testMean = 0,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+)
+if ((doubleIterable!T || isSummary!T) &amp;&amp; (doubleIterable!U || isSummary!U));</pre>
+					</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> containing the T statistic, the P-value, and the
+boundaries of the confidence interval for the difference between means
+of <a href="../../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> at the specified level.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Student%27s_t-test
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function studentsTTest</h2>
+				<p>One-sample Student's T-test for difference between mean of <a href="../../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a> and
+ a fixed value.  Alternatives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning mean(<a href="../../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a>) &lt; <a href="../../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>,
+ <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning mean(<a href="../../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a>) &gt; <a href="../../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning
+ mean(<a href="../../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a>)!= <a href="../../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</p>
+<section>
+<p> <a href="../../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a> may be either an iterable with elements implicitly convertible to
+ double or a summary struct (see <a href="../../dstats/tests/isSummary.html"><code class="prettyprint lang-d">isSummary</code></a>).
+</p>
+
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> studentsTTest(T)(
+&nbsp;&nbsp;T data,
+&nbsp;&nbsp;double testMean = 0,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+)
+if (isSummary!T || doubleIterable!T);</pre>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">uint[] <a href="../../dstats/tests/studentsTTest.html#data">data</a> = [1,2,3,4,5];
+
+// Test the null hypothesis that the mean of <a href="../../dstats/tests/studentsTTest.html#data">data</a> is >= 1 against the
+// alternative that the mean of <a href="../../dstats/tests/studentsTTest.html#data">data</a> is < 1.  Calculate confidence
+// intervals at 90%.
+auto result1 = <a href="../../dstats/tests/studentsTTest.html">studentsTTest</a>(<a href="../../dstats/tests/studentsTTest.html#data">data</a>, 1, <a href="../../dstats/tests/Alt.less.html">Alt.less</a>, 0.9);
+
+// Do the same thing, only this time we've already calculated the summary
+// statistics explicitly before passing them to studensTTest.
+auto summary = meanStdev(<a href="../../dstats/tests/studentsTTest.html#data">data</a>);
+writeln(<a href="../../dstats/summary/stdev.html">summary.stdev</a>);
+result2 = <a href="../../dstats/tests/studentsTTest.html">studentsTTest</a>(summary, 1, <a href="../../dstats/tests/Alt.less.html">Alt.less</a>, 0.9);  // Same as result1.
+assert(result1 == result2);
+</pre>
+
+</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> containing T, the P-value and the boundaries of
+ the confidence interval for mean(<a href="../../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a>) at the level specified.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Student%27s_t-test
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

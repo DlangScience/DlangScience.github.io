@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function kendallCor</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class="selected module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function kendallCor</h1>
+			<section>
+				<p>Kendall's Tau-b, O(N log N) version.  This is a non-parametric measure
+of monotonic association and can be defined in terms of the
+bubble sort distance, or the number of swaps that would be needed in a
+bubble sort to sort <a href="../../dstats/cor/kendallCor.html#input2"><code class="prettyprint lang-d">input2</code></a> into the same order as <a href="../../dstats/cor/kendallCor.html#input1"><code class="prettyprint lang-d">input1</code></a>.
+</p>
+<section>
+<p>Since a copy of the inputs is made anyhow because they need to be sorted,
+this function can work with any input range.  However, the ranges must
+have the same length.
+</p>
+
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+double kendallCor(T, U)(
+&nbsp;&nbsp;T input1,
+&nbsp;&nbsp;U input2
+)
+if (isInputRange!T &amp;&amp; isInputRange!U);</pre>
+					</section>
+<section><h3>Note</h3>
+
+<p>As an optimization, when a range is a SortedRange with predicate "a &lt; b",
+it is assumed already sorted and not sorted a second time by this function.
+This is useful when applying this function multiple times with one of the
+arguments the same every time:
+</p>
+
+<pre class="code prettyprint lang-d">auto lhs = randArray!rNorm(1_000, 0, 1);
+auto indices = new size_t[1_000];
+makeIndex(lhs, indices);
+
+foreach(i; 0..1_000) {
+    auto rhs = randArray!rNorm(1_000, 0, 1);
+    auto lhsSorted = assumeSorted(
+        indexed(lhs, indices)
+    );
+
+    // Rearrange rhs according to the sorting permutation of lhs.
+    // kendallCor(lhsSorted, rhsRearranged) will be much faster than
+    // kendallCor(lhs, rhs).
+    auto rhsRearranged = indexed(rhs, indices);
+    assert(kendallCor(lhsSorted, rhsRearranged) == kendallCor(lhs, rhs));
+}
+</pre>
+
+</section>
+<section><h3>References</h3>
+<p>A Computer Method for Calculating Kendall's Tau with Ungrouped Data,
+William R. Knight, Journal of the American Statistical Association, Vol.
+61, No. 314, Part 1 (Jun., 1966), pp. 436-439
+</p>
+
+<p>The Variance of Tau When Both Rankings Contain Ties.  M.G. Kendall.
+Biometrika, Vol 34, No. 3/4 (Dec., 1947), pp. 297-298
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

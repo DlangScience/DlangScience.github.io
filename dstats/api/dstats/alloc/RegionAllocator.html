@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct RegionAllocator</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct RegionAllocator</h1>
+			<section>
+				<p>This struct provides an interface to the <code class="prettyprint lang-d">RegionAllocator</code> functionality
+and enforces scoped deletion.  A new instance using the thread-local
+<a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance is created using the global
+<a href="../../dstats/alloc/newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a> function.  A new instance using
+an explicitly created <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> is created using
+<a href="../../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><code class="prettyprint lang-d">RegionAllocatorStack.newRegionAllocator</code></a>.
+</p>
+<section>
+<p>Each instance has reference semantics in that any copy will <a href="../../dstats/alloc/RegionAllocator.allocate.html"><code class="prettyprint lang-d">allocate</code></a> from the
+same memory.  When the last copy of an instance goes out of scope, all memory
+allocated via that instance is freed.  Only the most recently created
+still-existing <code class="prettyprint lang-d">RegionAllocator</code> using a given <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a>
+may be used to <a href="../../dstats/alloc/RegionAllocator.allocate.html"><code class="prettyprint lang-d">allocate</code></a> and <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">free</code></a> memory at any given time.  Deviations
+from this model result in a <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> being thrown.
+</p>
+
+<p>An uninitialized <code class="prettyprint lang-d">RegionAllocator</code> (for example RegionAllocator.init)
+has semantics similar to a null pointer.  It may be assigned to or passed to
+a function.  However, any attempt to call a method will result in a
+<a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> being thrown.
+</p>
+
+</section>
+
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.gcScanned.html" class="public property"><code>gcScanned</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>    Returns whether the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
+    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance is scanned by the garbage collector.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.segmentSize.html" class="public property"><code>segmentSize</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">ulong</code></td>
+								<td>    Returns the segment size of the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
+    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.segmentSlack.html" class="public property"><code>segmentSlack</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">ulong</code></td>
+								<td>    Returns the maximum number of bytes that may be allocated in the
+    current segment.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.alignBytes.html" class="public">
+										<code>alignBytes</code>
+									</a>
+								</td>
+								<td>    Returns the number of bytes to which an allocation of size <a href="../../dstats/alloc/RegionAllocator.alignBytes.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> is
+    guaranteed to be aligned.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.allocate.html" class="public">
+										<code>allocate</code>
+									</a>
+								</td>
+								<td>    Allocates <a href="../../dstats/alloc/RegionAllocator.allocate.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> bytes on the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
+    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance.  The last block allocated from this
+    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance can be freed by calling
+    <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">RegionAllocator.free</code></a> or <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">RegionAllocator.freeLast</code></a> or will be
+    automatically freed when the last copy of this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
+    instance goes out of scope.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.allocSize.html" class="public">
+										<code>allocSize</code>
+									</a>
+								</td>
+								<td>    Returns the number of bytes used to satisfy an allocation request
+    of <a href="../../dstats/alloc/RegionAllocator.allocSize.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a>.  Will return a value greater than or equal to
+    <a href="../../dstats/alloc/RegionAllocator.allocSize.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> to account for alignment overhead.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.array.html" class="public">
+										<code>array</code>
+									</a>
+								</td>
+								<td>    Copies <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> to an <code class="prettyprint lang-d">array</code>.  The <code class="prettyprint lang-d">array</code> will be located on the
+    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> stack if any of the following conditions apply:
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.free.html" class="public">
+										<code>free</code>
+									</a>
+								</td>
+								<td>    Checks that <a href="../../dstats/alloc/RegionAllocator.free.html#ptr"><code class="prettyprint lang-d">ptr</code></a> is a pointer to the block that would be freed by
+    <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a> then calls <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>.  Throws a
+    <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> if the pointer does not point to the
+    block that would be freed by <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.freeLast.html" class="public">
+										<code>freeLast</code>
+									</a>
+								</td>
+								<td>    Frees the last block of memory allocated by the current
+    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  Throws a <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> if
+    this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> is not the most recently created still-existing
+    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> using its <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.newArray.html" class="public">
+										<code>newArray</code>
+									</a>
+								</td>
+								<td>Allocates an <a href="../../dstats/alloc/RegionAllocator.array.html"><code class="prettyprint lang-d">array</code></a> of type T.  T may be a multidimensional
+    <a href="../../dstats/alloc/RegionAllocator.array.html"><code class="prettyprint lang-d">array</code></a>.  In this case <a href="../../dstats/alloc/RegionAllocator.newArray.html#sizes"><code class="prettyprint lang-d">sizes</code></a> may be specified for any number of dimensions
+    from 1 to the number in T.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.resize.html" class="public">
+										<code>resize</code>
+									</a>
+								</td>
+								<td>    Attempts to <code class="prettyprint lang-d">resize</code> a previously allocated block of memory in place.
+    This is possible only if <a href="../../dstats/alloc/RegionAllocator.resize.html#ptr"><code class="prettyprint lang-d">ptr</code></a> points to the beginning of the last
+    block allocated by this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance and, in the
+    case where <a href="../../dstats/alloc/RegionAllocator.resize.html#newSize"><code class="prettyprint lang-d">newSize</code></a> is greater than the old size, there is
+    additional space in the segment that <a href="../../dstats/alloc/RegionAllocator.resize.html#ptr"><code class="prettyprint lang-d">ptr</code></a> was allocated from.
+    Additionally, blocks larger than this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>'s segment size
+    cannot be grown or shrunk.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocator.uninitializedArray.html" class="public">
+										<code>uninitializedArray</code>
+									</a>
+								</td>
+								<td>    Same as <a href="../../dstats/alloc/RegionAllocator.newArray.html"><code class="prettyprint lang-d">newArray</code></a>, except skips initialization of elements for
+    performance reasons.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">void foo() {
+    auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+    auto ptr1 = bar(alloc);
+    auto ptr2 = alloc.allocate(42);
+
+    // The last copy of the RegionAllocator object used to <a href="../../dstats/alloc/RegionAllocator.allocate.html">allocate</a> ptr1
+    // and ptr2 is going out of scope here.  The memory pointed to by
+    // both ptr1 and ptr2 will be freed.
+}
+
+void* bar(RegionAllocator alloc) {
+    auto ret = alloc.allocate(42);
+
+    auto alloc2 = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+    auto ptr3 = alloc2.allocate(42);
+
+    // ptr3 was allocated using alloc2, which is going out of scope.
+    // Its memory will therefore be freed.  ret was allocated using alloc.
+    // A copy of this RegionAllocator is still alive in foo() after
+    // bar() executes.  Therefore, ret will not be freed on returning and
+    // is still valid after bar() returns.
+
+    return ret;
+}
+
+void* thisIsSafe() {
+    // This is safe because the two RegionAllocator objects being used
+    // are using two different <a href="../../dstats/alloc/RegionAllocatorStack.html">RegionAllocatorStack</a> objects.
+    auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+    auto ptr1 = alloc.allocate(42);
+
+    auto stack = <a href="../../dstats/alloc/RegionAllocatorStack.html">RegionAllocatorStack</a>(1_048_576, <a href="../../dstats/alloc/GCScan.no.html">GCScan.no</a>);
+    auto alloc2 = stack.newRegionAllocator();
+
+    auto ptr2 = alloc2.allocate(42);
+    auto ptr3 = alloc.allocate(42);
+}
+
+void* dontDoThis() {
+    auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+    auto ptr1 = alloc.allocate(42);
+    auto alloc2 = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+
+    // Error:  Allocating from a RegionAllocator instance other than the
+    // most recently created one that's still alive from a given stack.
+    auto ptr = alloc.allocate(42);
+}
+
+void uninitialized() {
+    RegionAllocator alloc;
+    auto ptr = alloc.allocate(42);  // Error:  alloc is not initialized.
+    auto alloc2 = alloc;  // Ok.  Both alloc, alloc2 are uninitialized.
+
+    alloc2 = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+    auto ptr2 = alloc2.allocate(42);  // Ok.
+    auto ptr3 = alloc.allocate(42);  // Error:  alloc is still uninitialized.
+
+    alloc = alloc2;
+    auto ptr4 = alloc.allocate(42);  // Ok.
+}
+</pre>
+
+</section>
+<section><h3>Note</h3>
+<p>Allocations larger than this.segmentSize are handled as a special
+case and fall back to allocating directly from the C heap.  These large
+allocations are freed as if they were allocated on a <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a>
+when <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">free</code></a> or <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a> is called or the last copy of a
+<code class="prettyprint lang-d">RegionAllocator</code> instance goes out of scope.  However, due to the extra
+bookkeeping required, destroying a region (as happens when the last copy of
+a <code class="prettyprint lang-d">RegionAllocator</code> instance goes out of scope) will require time linear
+instead of constant in the number of allocations for regions where these
+large allocations are present.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

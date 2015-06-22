@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct TopN</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class="selected module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct TopN</h1>
+			<section>
+				<p>Given a set of data points entered through the <a href="../../dstats/sort/TopN.put.html"><code class="prettyprint lang-d">put</code></a> function, this output range
+ maintains the invariant that the top N according to compFun will be
+ contained in the data structure.  Uses a heap internally, O(log N) insertion
+ time.  Good for finding the largest/smallest N elements of a very large
+ dataset that cannot be sorted quickly in its entirety, and may not even fit
+ in memory. If less than N datapoints have been entered, all are contained in
+ the structure.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td> The variable <a href="../../dstats/sort/TopN.this.html#ntop"><code class="prettyprint lang-d">ntop</code></a> controls how many elements are retained.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.getElements.html" class="public">
+										<code>getElements</code>
+									</a>
+								</td>
+								<td>Get the elements currently in the struct.  Returns a reference to
+ internal state, elements will be in an arbitrary order.  Cheap.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.getSorted.html" class="public">
+										<code>getSorted</code>
+									</a>
+								</td>
+								<td>Returns the elements sorted by compFun.  The array returned is a
+ duplicate of the input array.  Not cheap.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.put.html" class="public">
+										<code>put</code>
+									</a>
+								</td>
+								<td> Insert an element into the topN struct.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">Random gen;
+gen.seed(unpredictableSeed);
+uint[] nums = seq(0U, 100U);
+auto less = TopN!(uint, "a < b")(10);
+auto more = TopN!(uint, "a > b")(10);
+randomShuffle(nums, gen);
+foreach(n; nums) {
+    less.put(n);
+    more.put(n);
+}
+ assert(less.getSorted == [0U, 1,2,3,4,5,6,7,8,9]);
+ assert(more.getSorted == [99U, 98, 97, 96, 95, 94, 93, 92, 91, 90]);
+</pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

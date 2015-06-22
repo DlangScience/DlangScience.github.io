@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function spearmanCorTest</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function spearmanCorTest</h1>
+			<section>
+				<p>Tests the hypothesis that the Spearman correlation between two ranges is
+different from some 0.  Alternatives are
+<a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a> (spearmanCor(<a href="../../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &lt; 0), <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (spearmanCor(<a href="../../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>)
+&gt; 0) and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> (spearmanCor(<a href="../../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/TestRes.html">TestRes</a> spearmanCorTest(T, U)(
+&nbsp;&nbsp;T range1,
+&nbsp;&nbsp;U range2,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+)
+if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; is(typeof(range1.front &lt; range1.front) == bool) &amp;&amp; is(typeof(range2.front &lt; range2.front) == bool));</pre>
+					</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the Spearman correlation coefficient and
+the P-value for the given alternative.
+</p>
+
+</section>
+<section><h3>Bugs</h3>
+<p>Exact P-value computation not yet implemented.  Uses asymptotic
+approximation only.  This is good enough for most practical purposes given
+reasonably large N, but is not perfectly accurate.  Not valid for data with
+very large amounts of ties.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

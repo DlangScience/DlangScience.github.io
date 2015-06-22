@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.tests</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.tests</h1>
+			<p>Hypothesis testing beyond simple CDFs.  All functions work with input
+ ranges with elements implicitly convertible to double unless otherwise noted.
+</p>
+<section>
+</section>
+
+			<section><section><h2>Author</h2>
+<p>David Simcha
+</p>
+</section>
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="binomialTest" class="public" href="../dstats/tests/binomialTest.html">
+								<code>binomialTest</code>
+							</a>
+						</td>
+						<td>Two-sided binomial test for whether P(success) == <a href="../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a>.  The one-sided
+alternatives are covered by <a href="../dstats/distrib/binomialCDF.html"><code class="prettyprint lang-d">dstats.distrib.binomialCDF</code></a> and binomialCDFR.
+<a href="../dstats/tests/binomialTest.html#k"><code class="prettyprint lang-d">k</code></a> is the number of successes observed, <a href="../dstats/tests/binomialTest.html#n"><code class="prettyprint lang-d">n</code></a> is the number of trials, <a href="../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a>
+is the probability of success under the null.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chiSquareContingency" class="public" href="../dstats/tests/chiSquareContingency.html">
+								<code>chiSquareContingency</code>
+							</a>
+						</td>
+						<td>Performs a Pearson's chi-square test on a contingency table of arbitrary
+dimensions.  When the chi-square test is mentioned, this is usually the one
+being referred to.  Takes a set of finite forward ranges, one for each column
+in the contingency table.  These can be expressed either as a tuple of ranges
+or a range of ranges.  Returns a P-value for the alternative hypothesis that
+frequencies in each row of the contingency table depend on the column against
+the null that they don't.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chiSquareFit" class="public" href="../dstats/tests/chiSquareFit.html">
+								<code>chiSquareFit</code>
+							</a>
+						</td>
+						<td>Performs a one-way Pearson's chi-square goodness of fit test between a range
+of <a href="../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> and a range of <a href="../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> values.  This is a useful statistical
+test for testing whether a set of observations fits a discrete distribution.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chiSquareObs" class="public" href="../dstats/tests/chiSquareObs.html">
+								<code>chiSquareObs</code>
+							</a>
+						</td>
+						<td>Given two vectors of observations of jointly distributed variables <a href="../dstats/tests/chiSquareObs.html#x"><code class="prettyprint lang-d">x</code></a>, <a href="../dstats/tests/chiSquareObs.html#y"><code class="prettyprint lang-d">y</code></a>, tests
+the null hypothesis that values in <a href="../dstats/tests/chiSquareObs.html#x"><code class="prettyprint lang-d">x</code></a> are independent of the corresponding
+values in <a href="../dstats/tests/chiSquareObs.html#y"><code class="prettyprint lang-d">y</code></a>.  This is done using Pearson's Chi-Square Test.  For a similar test
+that assumes the data has already been tabulated into a contingency table, see
+<a href="../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="correlatedAnova" class="public" href="../dstats/tests/correlatedAnova.html">
+								<code>correlatedAnova</code>
+							</a>
+						</td>
+						<td>Performs a correlated sample (within-subjects) ANOVA.  This is a
+ generalization of the paired T-test to 3 or more treatments.  This
+ function accepts data as either a tuple of ranges (1 for each treatment,
+ such that a given index represents the same subject in each range) or
+ similarly as a range of ranges.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dAgostinoK" class="public" href="../dstats/tests/dAgostinoK.html">
+								<code>dAgostinoK</code>
+							</a>
+						</td>
+						<td>A test for normality of the distribution of a <a href="../dstats/tests/dAgostinoK.html#range"><code class="prettyprint lang-d">range</code></a> of values.  Based on
+ the assumption that normally distributed values will have a sample skewness
+ and sample kurtosis very close to zero.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="falseDiscoveryRate" class="public" href="../dstats/tests/falseDiscoveryRate.html">
+								<code>falseDiscoveryRate</code>
+							</a>
+						</td>
+						<td>Computes the false discovery rate statistic given a list of
+p-values, according to Benjamini and Hochberg (1995) (independent) or
+Benjamini and Yekutieli (2001) (dependent).  The <a href="../dstats/tests/Dependency.html"><code class="prettyprint lang-d">Dependency</code></a> parameter
+controls whether hypotheses are assumed to be independent, or whether
+the more conservative assumption that they are correlated must be made.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="fisherExact" class="public" href="../dstats/tests/fisherExact.html">
+								<code>fisherExact</code>
+							</a>
+						</td>
+						<td>Convenience function.  Converts a dynamic array to a static one, then
+calls the overload.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="fisherExact" class="public" href="../dstats/tests/fisherExact.html">
+								<code>fisherExact</code>
+							</a>
+						</td>
+						<td>Fisher's Exact test for difference in odds between rows/columns
+in a 2x2 contingency table.  Specifically, this function tests the odds
+ratio, which is defined, for a contingency table c, as (c[0][0] * c[1][1])
+ / (c[1][0] * c[0][1]).  Alternatives are <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning true odds ratio
+&lt; 1, <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning true odds ratio &gt; 1, and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning
+true odds ratio != 1.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="fishersMethod" class="public" href="../dstats/tests/fishersMethod.html">
+								<code>fishersMethod</code>
+							</a>
+						</td>
+						<td>Fisher's method of meta-analyzing a set of P-values to determine whether
+ there are more significant results than would be expected by chance.
+ Based on a chi-square statistic for the sum of the logs of the P-values.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="friedmanTest" class="public" href="../dstats/tests/friedmanTest.html">
+								<code>friedmanTest</code>
+							</a>
+						</td>
+						<td>The Friedman test is a non-parametric within-subject ANOVA.  It's useful
+ when parametric assumptions cannot be made.  Usage is identical to
+ <a href="../dstats/tests/correlatedAnova.html"><code class="prettyprint lang-d">correlatedAnova</code></a>().
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="fTest" class="public" href="../dstats/tests/fTest.html">
+								<code>fTest</code>
+							</a>
+						</td>
+						<td>The F-test is a one-way ANOVA extension of the T-test to &gt;2 groups.
+It's useful when you have 3 or more groups with equal variance and want
+to test whether their means are equal.  Data can be input as either a
+tuple or a range.  This may contain any combination of ranges of numeric
+types, MeanSD structs and Summary structs.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="gTestContingency" class="public" href="../dstats/tests/gTestContingency.html">
+								<code>gTestContingency</code>
+							</a>
+						</td>
+						<td>The G or likelihood ratio chi-square test for contingency tables.  Roughly
+the same as Pearson's chi-square test (<a href="../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>), but may be more
+accurate in certain situations and less accurate in others.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="gTestFit" class="public" href="../dstats/tests/gTestFit.html">
+								<code>gTestFit</code>
+							</a>
+						</td>
+						<td>The G or likelihood ratio chi-square test for goodness of fit.  Roughly
+ the same as Pearson's chi-square test (<a href="../dstats/tests/chiSquareFit.html"><code class="prettyprint lang-d">chiSquareFit</code></a>), but may be more
+ accurate in certain situations and less accurate in others.  However, it is
+ still based on asymptotic distributions, and is not exact. Usage is is
+ identical to <a href="../dstats/tests/chiSquareFit.html"><code class="prettyprint lang-d">chiSquareFit</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="gTestObs" class="public" href="../dstats/tests/gTestObs.html">
+								<code>gTestObs</code>
+							</a>
+						</td>
+						<td>Given two ranges of observations of jointly distributed variables <a href="../dstats/tests/gTestObs.html#x"><code class="prettyprint lang-d">x</code></a>, <a href="../dstats/tests/gTestObs.html#y"><code class="prettyprint lang-d">y</code></a>, tests
+the null hypothesis that values in <a href="../dstats/tests/gTestObs.html#x"><code class="prettyprint lang-d">x</code></a> are independent of the corresponding
+values in <a href="../dstats/tests/gTestObs.html#y"><code class="prettyprint lang-d">y</code></a>.  This is done using the Likelihood Ratio G test.  Usage is similar
+to <a href="../dstats/tests/chiSquareObs.html"><code class="prettyprint lang-d">chiSquareObs</code></a>.  For an otherwise identical test that assumes the data has
+already been tabulated into a contingency table, see <a href="../dstats/tests/gTestContingency.html"><code class="prettyprint lang-d">gTestContingency</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="hochberg" class="public" href="../dstats/tests/hochberg.html">
+								<code>hochberg</code>
+							</a>
+						</td>
+						<td>Uses the Hochberg procedure to control the familywise error rate assuming
+ that hypothesis tests are independent.  This is more powerful than
+ Holm-Bonferroni correction, but requires the independence assumption.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="holmBonferroni" class="public" href="../dstats/tests/holmBonferroni.html">
+								<code>holmBonferroni</code>
+							</a>
+						</td>
+						<td>Uses the Holm-Bonferroni method to adjust a set of P-values in a way that
+ controls the familywise error rate (The probability of making at least one
+ Type I error).  This is basically a less conservative version of
+ Bonferroni correction that is still valid for arbitrary assumptions and
+ controls the familywise error rate.  Therefore, there aren't too many good
+ reasons to use regular Bonferroni correction instead.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="kendallCorTest" class="public" href="../dstats/tests/kendallCorTest.html">
+								<code>kendallCorTest</code>
+							</a>
+						</td>
+						<td>Tests the hypothesis that the Kendall Tau-b between two ranges is
+different from 0.  Alternatives are <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a> (kendallCor(<a href="../dstats/tests/kendallCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/kendallCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &lt; 0),
+<a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (kendallCor(<a href="../dstats/tests/kendallCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/kendallCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &gt; 0) and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>
+(kendallCor(<a href="../dstats/tests/kendallCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/kendallCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="kruskalWallis" class="public" href="../dstats/tests/kruskalWallis.html">
+								<code>kruskalWallis</code>
+							</a>
+						</td>
+						<td>The Kruskal-Wallis rank sum test.  Tests the null hypothesis that data in
+ each group is not stochastically ordered with respect to data in each other
+ groups.  This is a one-way non-parametric ANOVA and can be thought of
+ as either a generalization of the Wilcoxon rank sum test to &gt;2 groups or
+ a non-parametric equivalent to the F-test.  Data can be input as either a
+ tuple of ranges (one range for each group) or a range of ranges
+ (one element for each group).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ksTest" class="public" href="../dstats/tests/ksTest.html">
+								<code>ksTest</code>
+							</a>
+						</td>
+						<td>Performs a Kolmogorov-Smirnov (K-S) 2-sample test.  The K-S test is a
+non-parametric test for a difference between two empirical distributions or
+between an empirical distribution and a reference distribution.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ksTest" class="public" href="../dstats/tests/ksTest.html">
+								<code>ksTest</code>
+							</a>
+						</td>
+						<td>One-sample Kolmogorov-Smirnov test against a reference distribution.
+Takes a callable object for the CDF of refernce distribution.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ksTestDestructive" class="public" href="../dstats/tests/ksTestDestructive.html">
+								<code>ksTestDestructive</code>
+							</a>
+						</td>
+						<td>Ditto.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ksTestDestructive" class="public" href="../dstats/tests/ksTestDestructive.html">
+								<code>ksTestDestructive</code>
+							</a>
+						</td>
+						<td>Same as <a href="../dstats/tests/ksTest.html"><code class="prettyprint lang-d">ksTest</code></a>, except sorts in place, avoiding memory allocations.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="levenesTest" class="public" href="../dstats/tests/levenesTest.html">
+								<code>levenesTest</code>
+							</a>
+						</td>
+						<td>Tests the null hypothesis that the variances of all groups are equal against
+the alternative that heteroscedasticity exists.  <a href="../dstats/tests/levenesTest.html#data"><code class="prettyprint lang-d">data</code></a> must be either a
+tuple of ranges or a range of ranges.  central is an alias for the measure
+of central tendency to be used.  This can be any function that maps a
+forward range of numeric types to a numeric type.  The commonly used ones
+are median (default) and mean (less robust).  Trimmed mean is sometimes
+useful, but is currently not implemented in <a href="../dstats/summary.html"><code class="prettyprint lang-d">dstats.summary</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="multinomialTest" class="public" href="../dstats/tests/multinomialTest.html">
+								<code>multinomialTest</code>
+							</a>
+						</td>
+						<td>The exact multinomial goodness of fit test for whether a set of counts
+fits a hypothetical distribution.  counts is an input range of counts.
+<a href="../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a> is an input range of expected <a href="../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a>.  These are normalized
+automatically, so they can sum to any value.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="pairedTTest" class="public" href="../dstats/tests/pairedTTest.html">
+								<code>pairedTTest</code>
+							</a>
+						</td>
+						<td>Compute a paired T test directly from summary statistics of the differences
+between corresponding samples.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="pairedTTest" class="public" href="../dstats/tests/pairedTTest.html">
+								<code>pairedTTest</code>
+							</a>
+						</td>
+						<td>Paired T test.  Tests the hypothesis that the mean difference between
+corresponding elements of <a href="../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> is <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.  Alternatives are
+<a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning the that the true mean difference (<a href="../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a>[i] - <a href="../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a>[i])
+is less than <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning the true mean difference is
+greater than <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning the true mean difference is not
+equal to <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="pearsonCorTest" class="public" href="../dstats/tests/pearsonCorTest.html">
+								<code>pearsonCorTest</code>
+							</a>
+						</td>
+						<td>Same as overload, but uses pre-computed correlation coefficient and sample
+size instead of computing them.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="pearsonCorTest" class="public" href="../dstats/tests/pearsonCorTest.html">
+								<code>pearsonCorTest</code>
+							</a>
+						</td>
+						<td>Tests the hypothesis that the Pearson correlation between two ranges is
+different from some 0.  Alternatives are <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>
+(pearsonCor(<a href="../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &lt; 0), <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (pearsonCor(<a href="../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>)
+ 0) and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> (pearsonCor(<a href="../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="runsTest" class="public" href="../dstats/tests/runsTest.html">
+								<code>runsTest</code>
+							</a>
+						</td>
+						<td>Wald-wolfowitz or runs test for randomness of the distribution of
+elements for which positive() evaluates to true.  For example, given
+a sequence of coin flips [H,H,H,H,H,T,T,T,T,T] and a positive() function of
+"a == 'H'", this test would determine that the heads are non-randomly
+distributed, since they are all at the beginning of <a href="../dstats/tests/runsTest.html#obs"><code class="prettyprint lang-d">obs</code></a>.  This is done
+by counting the number of runs of consecutive elements for which
+positive() evaluates to true, and the number of consecutive runs for which
+it evaluates to false.  In the example above, we have 2 runs.  These are the
+block of 5 consecutive heads at the beginning and the 5 consecutive tails
+at the end.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="signTest" class="public" href="../dstats/tests/signTest.html">
+								<code>signTest</code>
+							</a>
+						</td>
+						<td>Similar to the overload, but allows testing for a difference between a
+ range and a fixed value <a href="../dstats/tests/signTest.html#mu"><code class="prettyprint lang-d">mu</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="signTest" class="public" href="../dstats/tests/signTest.html">
+								<code>signTest</code>
+							</a>
+						</td>
+						<td>Sign test for differences between paired values.  This is a very robust
+ but very low power test.  Alternatives are <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning elements
+ of <a href="../dstats/tests/signTest.html#before"><code class="prettyprint lang-d">before</code></a> are typically less than corresponding elements of <a href="../dstats/tests/signTest.html#after"><code class="prettyprint lang-d">after</code></a>,
+ <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning elements of <a href="../dstats/tests/signTest.html#before"><code class="prettyprint lang-d">before</code></a> are typically greater than
+ elements of <a href="../dstats/tests/signTest.html#after"><code class="prettyprint lang-d">after</code></a>, and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning that there is a significant
+ difference in either direction.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spearmanCorTest" class="public" href="../dstats/tests/spearmanCorTest.html">
+								<code>spearmanCorTest</code>
+							</a>
+						</td>
+						<td>Tests the hypothesis that the Spearman correlation between two ranges is
+different from some 0.  Alternatives are
+<a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a> (spearmanCor(<a href="../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &lt; 0), <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (spearmanCor(<a href="../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>)
+&gt; 0) and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> (spearmanCor(<a href="../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="studentsTTest" class="public" href="../dstats/tests/studentsTTest.html">
+								<code>studentsTTest</code>
+							</a>
+						</td>
+						<td>Two-sample T test for a difference in means,
+assumes variances of samples are equal.  Alteratives are <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning
+mean(<a href="../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &lt; <a href="../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning
+mean(<a href="../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &gt; <a href="../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning
+mean(<a href="../dstats/tests/studentsTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../dstats/tests/studentsTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) != <a href="../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="studentsTTest" class="public" href="../dstats/tests/studentsTTest.html">
+								<code>studentsTTest</code>
+							</a>
+						</td>
+						<td>One-sample Student's T-test for difference between mean of <a href="../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a> and
+ a fixed value.  Alternatives are <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning mean(<a href="../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a>) &lt; <a href="../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>,
+ <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning mean(<a href="../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a>) &gt; <a href="../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning
+ mean(<a href="../dstats/tests/studentsTTest.html#data"><code class="prettyprint lang-d">data</code></a>)!= <a href="../dstats/tests/studentsTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="welchAnova" class="public" href="../dstats/tests/welchAnova.html">
+								<code>welchAnova</code>
+							</a>
+						</td>
+						<td>Same as <a href="../dstats/tests/fTest.html"><code class="prettyprint lang-d">fTest</code></a>, except that this test does not require the assumption of
+equal variances.  In exchange it's slightly less powerful.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="welchTTest" class="public" href="../dstats/tests/welchTTest.html">
+								<code>welchTTest</code>
+							</a>
+						</td>
+						<td>Two-sample T-test for difference in means.  Does not assume variances are equal.
+Alteratives are <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning mean(<a href="../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &lt; <a href="../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>,
+<a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning mean(<a href="../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &gt; <a href="../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and
+<a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning mean(<a href="../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) != <a href="../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="wilcoxonRankSum" class="public" href="../dstats/tests/wilcoxonRankSum.html">
+								<code>wilcoxonRankSum</code>
+							</a>
+						</td>
+						<td>Computes Wilcoxon rank sum test statistic and P-value for
+ a set of observations against another set, using the given alternative.
+ <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a> means that <a href="../dstats/tests/wilcoxonRankSum.html#sample1"><code class="prettyprint lang-d">sample1</code></a> is stochastically less than <a href="../dstats/tests/wilcoxonRankSum.html#sample2"><code class="prettyprint lang-d">sample2</code></a>.
+ <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> means <a href="../dstats/tests/wilcoxonRankSum.html#sample1"><code class="prettyprint lang-d">sample1</code></a> is stochastically greater than <a href="../dstats/tests/wilcoxonRankSum.html#sample2"><code class="prettyprint lang-d">sample2</code></a>.
+ <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> means <a href="../dstats/tests/wilcoxonRankSum.html#sample1"><code class="prettyprint lang-d">sample1</code></a> is stochastically less than or greater than
+ <a href="../dstats/tests/wilcoxonRankSum.html#sample2"><code class="prettyprint lang-d">sample2</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="wilcoxonSignedRank" class="public" href="../dstats/tests/wilcoxonSignedRank.html">
+								<code>wilcoxonSignedRank</code>
+							</a>
+						</td>
+						<td>Computes a test statistic and P-value for a Wilcoxon signed rank test against
+ the given alternative. <a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a> means that elements of <a href="../dstats/tests/wilcoxonSignedRank.html#before"><code class="prettyprint lang-d">before</code></a> are stochastically
+ less than corresponding elements of <a href="../dstats/tests/wilcoxonSignedRank.html#after"><code class="prettyprint lang-d">after</code></a>.  <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> means elements of
+ <a href="../dstats/tests/wilcoxonSignedRank.html#before"><code class="prettyprint lang-d">before</code></a> are stochastically greater than corresponding elements of <a href="../dstats/tests/wilcoxonSignedRank.html#after"><code class="prettyprint lang-d">after</code></a>.
+ <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> means there is a significant difference in either direction.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="wilcoxonSignedRank" class="public" href="../dstats/tests/wilcoxonSignedRank.html">
+								<code>wilcoxonSignedRank</code>
+							</a>
+						</td>
+						<td>Same as the overload, but allows testing whether a range is stochastically
+ less than or greater than a fixed value <a href="../dstats/tests/wilcoxonSignedRank.html#mu"><code class="prettyprint lang-d">mu</code></a> rather than paired elements of
+ a second range.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="ConfInt" class="public" href="../dstats/tests/ConfInt.html">
+								<code>ConfInt</code>
+							</a>
+						</td>
+						<td>A plain old data struct for returning the results of hypothesis tests
+that also produce confidence intervals.  Contains, can implicitly convert
+to, a <a href="../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="GTestRes" class="public" href="../dstats/tests/GTestRes.html">
+								<code>GTestRes</code>
+							</a>
+						</td>
+						<td>This struct is a subtype of <a href="../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> and is used to return the results of
+<a href="../dstats/tests/gTestContingency.html"><code class="prettyprint lang-d">gTestContingency</code></a> and <a href="../dstats/tests/gTestObs.html"><code class="prettyprint lang-d">gTestObs</code></a>.  Due to the information theoretic interpretation
+of the G test, it contains an extra field to return the mutual information
+in bits.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="RunsTest" class="public" href="../dstats/tests/RunsTest.html">
+								<code>RunsTest</code>
+							</a>
+						</td>
+						<td>Runs test as in <a href="../dstats/tests/runsTest.html"><code class="prettyprint lang-d">runsTest</code></a>(), except calculates online instead of from stored
+array elements.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TestRes" class="public" href="../dstats/tests/TestRes.html">
+								<code>TestRes</code>
+							</a>
+						</td>
+						<td>A plain old data struct for returning the results of hypothesis tests.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="Alt" class="public" href="../dstats/tests/Alt.html">
+								<code>Alt</code>
+							</a>
+						</td>
+						<td>Alternative hypotheses.  Exact meaning varies with test used.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Dependency" class="public" href="../dstats/tests/Dependency.html">
+								<code>Dependency</code>
+							</a>
+						</td>
+						<td>For <a href="../dstats/tests/falseDiscoveryRate.html"><code class="prettyprint lang-d">falseDiscoveryRate</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Expected" class="public" href="../dstats/tests/Expected.html">
+								<code>Expected</code>
+							</a>
+						</td>
+						<td>For <a href="../dstats/tests/chiSquareFit.html"><code class="prettyprint lang-d">chiSquareFit</code></a> and <a href="../dstats/tests/gTestFit.html"><code class="prettyprint lang-d">gTestFit</code></a>, is expected value range counts or proportions?
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enum values</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="isSummary" class="public" href="../dstats/tests/isSummary.html">
+								<code>isSummary</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td>Tests whether a struct/class has the necessary information for calculating
+a T-test.  It must have a property .mean (mean), .stdev (stdandard deviation),
+.var (variance), and .N (sample size).
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

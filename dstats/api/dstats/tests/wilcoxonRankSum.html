@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function wilcoxonRankSum</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function wilcoxonRankSum</h1>
+			<section>
+				<p>Computes Wilcoxon rank sum test statistic and P-value for
+ a set of observations against another set, using the given alternative.
+ <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a> means that <a href="../../dstats/tests/wilcoxonRankSum.html#sample1"><code class="prettyprint lang-d">sample1</code></a> is stochastically less than <a href="../../dstats/tests/wilcoxonRankSum.html#sample2"><code class="prettyprint lang-d">sample2</code></a>.
+ <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> means <a href="../../dstats/tests/wilcoxonRankSum.html#sample1"><code class="prettyprint lang-d">sample1</code></a> is stochastically greater than <a href="../../dstats/tests/wilcoxonRankSum.html#sample2"><code class="prettyprint lang-d">sample2</code></a>.
+ <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> means <a href="../../dstats/tests/wilcoxonRankSum.html#sample1"><code class="prettyprint lang-d">sample1</code></a> is stochastically less than or greater than
+ <a href="../../dstats/tests/wilcoxonRankSum.html#sample2"><code class="prettyprint lang-d">sample2</code></a>.
+</p>
+<section>
+<p> <a href="../../dstats/tests/wilcoxonRankSum.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> is the threshold value of (n1 + n2) at which this function
+ switches from exact to approximate computation of the p-value.  Do not set
+ <a href="../../dstats/tests/wilcoxonRankSum.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> to more than 200, as the exact
+ calculation is both very slow and not numerically stable past this point,
+ and the asymptotic calculation is very good for N this large.  To disable
+ exact calculation entirely, set <a href="../../dstats/tests/wilcoxonRankSum.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> to 0.
+</p>
+
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/TestRes.html">TestRes</a> wilcoxonRankSum(T, U)(
+&nbsp;&nbsp;T sample1,
+&nbsp;&nbsp;U sample2,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;uint exactThresh = 50
+)
+if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; is(typeof(sample1.front &lt; sample2.front) == bool) &amp;&amp; is(CommonType!(ElementType!T, ElementType!U)));</pre>
+					</section>
+<section><h3>Notes</h3>
+<p>Exact p-value computation is never used when ties are present in the
+ data, because it is not computationally feasible.
+</p>
+
+<p> Input ranges for this function must define a length.
+</p>
+
+<p> This test is also known as the Mann-Whitney U test.
+</p>
+
+</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the W test statistic and the P-value against
+ the given alternative.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U
+</p>
+
+<p> StackOverflow Question 376003  http://stackoverflow.com/questions/376003
+</p>
+
+<p> Loughborough University MLSC Statistics 2.3 The Mann-Whitney U Test
+</p>
+</section>
+<section><h3>http</h3>
+<p>//mlsc.lboro.ac.uk/resources/statistics/Mannwhitney.pdf
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

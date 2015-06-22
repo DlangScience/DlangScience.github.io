@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct RegionAllocatorStack</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct RegionAllocatorStack</h1>
+			<section>
+				<p>This object represents a segmented stack.  Memory can be allocated from this
+stack using a regionallocator <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> object.  Multiple
+<a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> objects may be created per
+<code class="prettyprint lang-d">RegionAllocatorStack</code> but each <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> uses a single
+<code class="prettyprint lang-d">RegionAllocatorStack</code>.
+</p>
+<section>
+<p>For most use cases it's convenient to use the default thread-local
+instance of <code class="prettyprint lang-d">RegionAllocatorStack</code>, which is lazily instantiated on
+the first call to the global function
+regionallocator, <a href="../../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a>.  Occasionally it may be useful
+to have multiple independent stacks in one thread, in which case a
+<code class="prettyprint lang-d">RegionAllocatorStack</code> can be created manually.
+</p>
+
+<p><code class="prettyprint lang-d">RegionAllocatorStack</code> is reference counted and has reference semantics.
+When the last copy of a given instance goes out of scope, the memory
+held by the <code class="prettyprint lang-d">RegionAllocatorStack</code> instance is released back to the
+heap.  This cannot happen before memory allocated to a <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
+instance is released back to the stack, because a <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
+holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code> instance it uses.
+</p>
+
+</section>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocatorStack.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>    Create a new <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> with a given segment size in bytes.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocatorStack.gcScanned.html" class="public property"><code>gcScanned</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td>    Whether this stack is scanned by the garbage collector.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html" class="public">
+										<code>newRegionAllocator</code>
+									</a>
+								</td>
+								<td>    Creates a new <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> region using this stack.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">import std.regionallocator;
+
+void main() {
+    fun1();
+}
+
+void fun1() {
+    auto stack = RegionAllocatorStack(1_048_576, <a href="../../dstats/alloc/GCScan.no.html">GCScan.no</a>);
+    fun2(stack);
+
+    // At the end of fun1, the last copy of the RegionAllocatorStack
+    // instance pointed to by stack goes out of scope.  The memory
+    // held by stack is released back to the heap.
+}
+
+void fun2(RegionAllocatorStack stack) {
+    auto alloc = stack.newRegionAllocator();
+    auto arr = alloc.newArray!(double[])(1_024);
+
+    // At the end of fun2, the last copy of the <a href="../../dstats/alloc/RegionAllocator.html">RegionAllocator</a> instance
+    // pointed to by alloc goes out of scope.  The memory used by arr
+    // is released back to stack.
+}
+</pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

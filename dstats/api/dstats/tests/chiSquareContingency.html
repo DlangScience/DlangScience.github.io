@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function chiSquareContingency</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function chiSquareContingency</h1>
+			<section>
+				<p>Performs a Pearson's chi-square test on a contingency table of arbitrary
+dimensions.  When the chi-square test is mentioned, this is usually the one
+being referred to.  Takes a set of finite forward ranges, one for each column
+in the contingency table.  These can be expressed either as a tuple of ranges
+or a range of ranges.  Returns a P-value for the alternative hypothesis that
+frequencies in each row of the contingency table depend on the column against
+the null that they don't.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareContingency(T...)(
+&nbsp;&nbsp;T inputData
+);</pre>
+					</section>
+<section><h3>Notes</h3>
+<p>The chi-square test relies on asymptotic statistical properties
+and is therefore not exact.  The typical rule of thumb is that each cell
+should have an expected value of at least 5.  However, this is likely to
+be unnecessarily stringent.
+</p>
+
+<p>Yates's continuity correction is never used in this implementation.  If
+you want something that's guaranteed to be conservative, use <a href="../../dstats/tests/fisherExact.html"><code class="prettyprint lang-d">fisherExact</code></a>().
+</p>
+
+<p>This is, for all practical purposes, an inherently non-directional test.
+Therefore, the one-sided verses two-sided option is not provided.
+</p>
+
+<p>For 2x2 contingency tables, <a href="../../dstats/tests/fisherExact.html"><code class="prettyprint lang-d">fisherExact</code></a> is a more conservative test, in that
+the type I error rate is guaranteed to never be above the nominal P-value.
+However, even for small sample sizes this test may produce results closer
+to the true P-value, at the risk of possibly being non-conservative.
+</p>
+
+</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">// Test to see whether the relative frequency of outcome 0, 1, and 2
+// depends on the treatment (drug1, drug2 or placebo) in some hypothetical
+// experiment.  For example, 1500 people had outcome 2 if they were treated
+// with drug1 and 1100 had outcome 1 if treated with placebo.
+uint[] drug1 = [1000, 2000, 1500];
+uint[] drug2 = [1500, 3000, 2300];
+uint[] placebo = [500, 1100, 750];
+auto result1 = chiSquareContingency(drug1, drug2, placebo);
+
+// The following uses a range of ranges instead of an array of ranges,
+// and will produce equivalent results.
+auto rangeOfRanges = [drug1, drug2, placebo];
+auto result2 = chiSquareContingency(rangeOfRanges);
+</pre>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Pearson%27s_chi-square_test
+</p>
+
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

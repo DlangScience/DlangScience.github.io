@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>pairedTTest - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>pairedTTest - multiple declarations</h1>
+			<ul>
+				<li>Function pairedTTest</li>
+				<li>Function pairedTTest</li>
+			</ul>
+			<section>
+				<h2>Function pairedTTest</h2>
+				<p>Compute a paired T test directly from summary statistics of the differences
+between corresponding samples.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> pairedTTest(T)(
+&nbsp;&nbsp;T diffSummary,
+&nbsp;&nbsp;double testMean = 0,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+)
+if (isSummary!T);</pre>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">float[] data1 = [8, 6, 7, 5, 3, 0, 9];
+float[] data2 = [3, 6, 2, 4, 3, 6, 8];
+
+// Calculate summary statistics on difference explicitly.
+MeanSD summary;
+foreach(i; 0..data1.length) {
+    summary.put(data1[i] - data2[i]);
+}
+
+// Test the null hypothesis that the mean difference between corresponding
+// elements (data1[i] - data2[i]) is greater than 5 against the null that it
+// is <= 5.  Calculate confidence intervals at 99%.
+auto result = pairedTTest(summary, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
+
+// This is equivalent to:
+auto result2 = pairedTTest(data1, data2, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
+</pre>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Student%27s_t-test
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function pairedTTest</h2>
+				<p>Paired T test.  Tests the hypothesis that the mean difference between
+corresponding elements of <a href="../../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> is <a href="../../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.  Alternatives are
+<a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning the that the true mean difference (<a href="../../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a>[i] - <a href="../../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a>[i])
+is less than <a href="../../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning the true mean difference is
+greater than <a href="../../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning the true mean difference is not
+equal to <a href="../../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</p>
+<section>
+<p><a href="../../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> must be input ranges with elements implicitly convertible
+to double and must have the same length.
+</p>
+
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> pairedTTest(T, U)(
+&nbsp;&nbsp;T before,
+&nbsp;&nbsp;U after,
+&nbsp;&nbsp;double testMean = 0,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+)
+if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; isInputRange!T &amp;&amp; isInputRange!U);</pre>
+					</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> containing the T statistic, the P-value, and the
+boundaries of the confidence interval for the mean difference between
+corresponding elements of sample1 and sample2 at the specified level.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Student%27s_t-test
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function dAgostinoK</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function dAgostinoK</h1>
+			<section>
+				<p>A test for normality of the distribution of a <a href="../../dstats/tests/dAgostinoK.html#range"><code class="prettyprint lang-d">range</code></a> of values.  Based on
+ the assumption that normally distributed values will have a sample skewness
+ and sample kurtosis very close to zero.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/TestRes.html">TestRes</a> dAgostinoK(T)(
+&nbsp;&nbsp;T range
+)
+if (doubleIterable!T);</pre>
+					</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the K statistic, which is Chi-Square distributed
+ with 2 degrees of freedom under the null, and the P-value for the alternative
+ that the data has skewness and kurtosis not equal to zero against the null
+ that skewness and kurtosis are near zero.  A normal distribution always has
+ skewness and kurtosis that converge to zero as sample size goes to infinity.
+</p>
+
+</section>
+<section><h3>Notes</h3>
+<p>Contrary to popular belief, tests for normality should usually
+ not be used to deterimine whether T-tests are valid.  If the sample size is
+ large, T-tests are valid regardless of the distribution due to the central
+ limit theorem.  If the sample size is small, a test for normality will
+ likely not be very powerful, and a priori knowledge or simple inspection
+ of the data is often a better idea.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p> D'Agostino, Ralph B., Albert Belanger, and Ralph B. D'Agostino, Jr.
+ "A Suggestion for Using Powerful and Informative Tests of Normality",
+ The American Statistician, Vol. 44, No. 4. (Nov., 1990), pp. 316-321.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

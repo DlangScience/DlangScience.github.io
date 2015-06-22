@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct StackTreeAA</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct StackTreeAA</h1>
+			<section>
+				<p>An associative array implementation based on <a href="../../dstats/alloc/StackTree.html"><code class="prettyprint lang-d">StackTree</code></a>.  Lookups and
+ insertions are O(log N).  This is significantly slower in both theory and
+ practice than <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>, but you may want to use it if:
+</p>
+<section>
+<p> 1.  You don't know the approximate size of the table you will be creating
+     in advance.  Unlike <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>, this AA implementation does not need
+     to pre-allocate anything.
+</p>
+
+<p> 2.  You care more about worst-case performance than average-case
+     performance.
+</p>
+
+<p> 3.  You have a good comparison function for your type, but not a good hash
+     function.
+</p>
+
+</section>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.keys.html" class="public property"><code>keys</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/TreeAaIter.html">TreeAaIter</a>!(typeof(tree),"a.key")</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.length.html" class="public property"><code>length</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.values.html" class="public property"><code>values</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/TreeAaIter.html">TreeAaIter</a>!(typeof(tree),getVal)</code></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.opApply.html" class="public">
+										<code>opApply</code>
+									</a>
+								</td>
+								<td>Iterate over both the <a href="../../dstats/alloc/StackTreeAA.keys.html"><code class="prettyprint lang-d">keys</code></a> and <a href="../../dstats/alloc/StackTreeAA.values.html"><code class="prettyprint lang-d">values</code></a> of this associative array.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.opIndex.html" class="public">
+										<code>opIndex</code>
+									</a>
+								</td>
+								<td>Looks up <a href="../../dstats/alloc/StackTreeAA.opIndex.html#key"><code class="prettyprint lang-d">key</code></a> in the table, returns it by reference.  If it does not
+ exist, it will be created and initialized to V.init.  This is handy,
+ for example, when counting things with integer types.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.opIndexAssign.html" class="public">
+										<code>opIndexAssign</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.opIn_r.html" class="public">
+										<code>opIn_r</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackTreeAA.remove.html" class="public">
+										<code>remove</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

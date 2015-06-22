@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="./prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="./dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="./dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="./dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="./dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="./dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="./dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="./dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="./dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="./dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="./dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="./dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="./dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="./dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="./symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>API documentation</h1>
+			<table>
+				<col class="caption"/>
+				<tr>
+					<th>Module</th>
+					<th>Description</th>
+				</tr>
+			<tr>
+				<td>
+					<a href="./dstats/alloc.html">dstats.alloc</a>
+				</td>
+				<td>
+Stuff having to do with memory management.  Mostly a copy of <a href="./dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
+for now until it gets into Phobos, as well as some <a href="./dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>-specific
+data structures.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/base.html">dstats.base</a>
+				</td>
+				<td>
+Relatively low-level primitives on which to build higher-level math/stat
+ functionality.  Some are used internally, some are just things that may be
+ useful to users of this library.  This module is starting to take on the
+ appearance of a small utility library.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/cor.html">dstats.cor</a>
+				</td>
+				<td>
+Pearson, Spearman and Kendall correlations, <a href="./dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a>.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/distrib.html">dstats.distrib</a>
+				</td>
+				<td>
+Probability distribution CDFs, PDFs/PMFs, and a few inverse CDFs.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/infotheory.html">dstats.infotheory</a>
+				</td>
+				<td>
+Basic information theory.  <a href="./dstats/infotheory/Joint.html"><code class="prettyprint lang-d">Joint</code></a> <a href="./dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a>, mutual information, conditional
+ mutual information.  This module uses the base 2 definition of these
+ quantities, i.e, <a href="./dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a>, mutual info, etc. are output in bits.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/kerneldensity.html">dstats.kerneldensity</a>
+				</td>
+				<td>
+This module contains a small but growing library for performing kernel
+ density estimation.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/pca.html">dstats.pca</a>
+				</td>
+				<td>
+This module contains a basic implementation of principal component analysis,
+based on the NIPALS algorithm.  This is fast when you only need the first
+few components (which is usually the case since PCA's main uses are
+visualization and dimensionality reduction).  However, convergence slows
+drastically after the first few components have been removed and most of
+the matrix is just noise.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/random.html">dstats.random</a>
+				</td>
+				<td>
+Generates random samples from a various probability distributions.
+ These are mostly D ports of the NumPy random number generators.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/regress.html">dstats.regress</a>
+				</td>
+				<td>
+A module for performing linear regression.  This module has an unusual
+ interface, as it is range-based instead of matrix based. Values for
+ independent variables are provided as either a tuple or a range of ranges.
+ This means that one can use, for example, map, to fit high order models and
+ lazily evaluate certain values.  (For details, see examples below.)
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/sort.html">dstats.sort</a>
+				</td>
+				<td>
+A comprehensive sorting library for statistical functions.  Each function
+takes N arguments, which are arrays or array-like objects, sorts the first
+and sorts the rest in lockstep.  For merge and insertion sort, if the last
+argument is a ulong*, increments the dereference of this ulong* by the bubble
+sort distance between the first argument and the sorted version of the first
+argument.  This is useful for some statistical calculations.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/summary.html">dstats.summary</a>
+				</td>
+				<td>
+<a href="./dstats/summary/Summary.html"><code class="prettyprint lang-d">Summary</code></a> statistics such as <a href="./dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a>, <a href="./dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a>, <a href="./dstats/summary/sum.html"><code class="prettyprint lang-d">sum</code></a>, <a href="./dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>, <a href="./dstats/summary/skewness.html"><code class="prettyprint lang-d">skewness</code></a>, <a href="./dstats/summary/kurtosis.html"><code class="prettyprint lang-d">kurtosis</code></a>.
+ Except for <a href="./dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> and <a href="./dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation, which cannot be calculated
+ online, all <a href="./dstats/summary/summary.html"><code class="prettyprint lang-d">summary</code></a> statistics have both an input range interface and an
+ output range interface.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/tests.html">dstats.tests</a>
+				</td>
+				<td>
+Hypothesis testing beyond simple CDFs.  All functions work with input
+ ranges with elements implicitly convertible to double unless otherwise noted.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats.html">dstats</a>
+				</td>
+				<td>
+Convenience module that simply publicly imports everything else.
+
+				</td>
+			</tr>
+			</table>
+			<section>
+				<h2>Authors</h2>
+			</section>
+			<section>
+				<h2>Copyright</h2>
+			</section>
+			<section>
+				<h2>License</h2>
+			</section>
+		</div>
+	</body>
+</html>

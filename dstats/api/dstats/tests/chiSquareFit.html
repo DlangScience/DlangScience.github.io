@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function chiSquareFit</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function chiSquareFit</h1>
+			<section>
+				<p>Performs a one-way Pearson's chi-square goodness of fit test between a range
+of <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> and a range of <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> values.  This is a useful statistical
+test for testing whether a set of observations fits a discrete distribution.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareFit(T, U)(
+&nbsp;&nbsp;T observed,
+&nbsp;&nbsp;U expected,
+&nbsp;&nbsp;<a href="../../dstats/tests/Expected.html">Expected</a> countProp = Expected.proportion
+)
+if (doubleInput!T &amp;&amp; doubleInput!U);</pre>
+					</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> of the chi-square statistic and the P-value for the
+alternative hypothesis that <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> is not a sample from <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> against
+the null that <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> is a sample from <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a>.
+</p>
+
+</section>
+<section><h3>Notes</h3>
+<p>By default, <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> is assumed to be a range of <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> proportions.
+These proportions are automatically normalized, and can sum to any number.
+By passing <a href="../../dstats/tests/Expected.count.html"><code class="prettyprint lang-d">Expected.count</code></a> in as the last parameter, calculating <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a>
+counts will be skipped, and <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> will assume to already be properly
+normalized.  This is slightly faster, but more importantly
+allows input ranges to be used.
+</p>
+
+<p>The chi-square test relies on asymptotic statistical properties
+and is therefore not considered valid, as a rule of thumb,  when <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a>
+counts are below 5.  However, this rule is likely to be unnecessarily
+stringent in most cases.
+</p>
+
+</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">// Test to see whether a set of categorical observations differs
+// statistically from a discrete uniform distribution.
+
+uint[] <a href="../../dstats/tests/chiSquareFit.html#observed">observed</a> = [980, 1028, 1001, 964, 1102];
+auto <a href="../../dstats/tests/chiSquareFit.html#expected">expected</a> = repeat(1.0);
+auto res2 = chiSquareFit(<a href="../../dstats/tests/chiSquareFit.html#observed">observed</a>, <a href="../../dstats/tests/chiSquareFit.html#expected">expected</a>);
+assert(approxEqual(res2, 0.0207));
+assert(approxEqual(res2.testStat, 11.59));
+</pre>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Pearson%27s_chi-square_test
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

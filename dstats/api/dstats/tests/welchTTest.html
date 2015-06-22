@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function welchTTest</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function welchTTest</h1>
+			<section>
+				<p>Two-sample T-test for difference in means.  Does not assume variances are equal.
+Alteratives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &lt; <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>,
+<a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &gt; <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and
+<a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) != <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+</p>
+<section>
+<p><a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> may be either iterables with elements implicitly
+convertible to double or summary structs (see <a href="../../dstats/tests/isSummary.html"><code class="prettyprint lang-d">isSummary</code></a>).
+</p>
+
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> welchTTest(T, U)(
+&nbsp;&nbsp;T sample1,
+&nbsp;&nbsp;U sample2,
+&nbsp;&nbsp;double testMean = 0,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+)
+if ((isSummary!T || doubleIterable!T) &amp;&amp; (isSummary!U || doubleIterable!U));</pre>
+					</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> containing the T statistic, the P-value, and the
+boundaries of the confidence interval for the difference between means
+of <a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> at the specified level.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Student%27s_t-test
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

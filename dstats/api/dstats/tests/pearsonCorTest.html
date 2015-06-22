@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>pearsonCorTest - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../../dstats/tests.html" class="selected module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>pearsonCorTest - multiple declarations</h1>
+			<ul>
+				<li>Function pearsonCorTest</li>
+				<li>Function pearsonCorTest</li>
+			</ul>
+			<section>
+				<h2>Function pearsonCorTest</h2>
+				<p>Same as overload, but uses pre-computed correlation coefficient and sample
+size instead of computing them.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> pearsonCorTest()(
+&nbsp;&nbsp;double cor,
+&nbsp;&nbsp;double N,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+);</pre>
+					</section>
+<section><h3>Note</h3>
+<p>This is a template only because of DMD Bug 2972.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function pearsonCorTest</h2>
+				<p>Tests the hypothesis that the Pearson correlation between two ranges is
+different from some 0.  Alternatives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>
+(pearsonCor(<a href="../../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &lt; 0), <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (pearsonCor(<a href="../../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>)
+ 0) and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> (pearsonCor(<a href="../../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> pearsonCorTest(T, U)(
+&nbsp;&nbsp;T range1,
+&nbsp;&nbsp;U range2,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+)
+if (doubleInput!T &amp;&amp; doubleInput!U);</pre>
+					</section>
+<section><h3>Returns</h3>
+<p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> of the estimated Pearson correlation of the two ranges,
+the P-value against the given alternative, and the confidence interval of
+the correlation at the level specified by <a href="../../dstats/tests/pearsonCorTest.html#confLevel"><code class="prettyprint lang-d">confLevel</code></a>.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Pearson_correlation
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

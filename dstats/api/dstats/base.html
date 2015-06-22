@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.base</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../dstats/base.html" class="selected module">base</a>
+							</li>
+							<li>
+								<a href="../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../dstats/pca.html" class=" module">pca</a>
+							</li>
+							<li>
+								<a href="../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.base</h1>
+			<p>Relatively low-level primitives on which to build higher-level math/stat
+ functionality.  Some are used internally, some are just things that may be
+ useful to users of this library.  This module is starting to take on the
+ appearance of a small utility library.
+</p>
+<section>
+</section>
+
+			<section><section><h2>Note</h2>
+<p>In several functions in this module that return arrays, the last
+ parameter is an optional buffer for storing the return value.  If this
+ parameter is ommitted or the buffer is not large enough, one will be
+ allocated on the GC heap.
+</p>
+
+</section>
+<section><h2>Author</h2>
+<p>David Simcha
+</p>
+</section>
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="auroc" class="public" href="../dstats/base/auroc.html">
+								<code>auroc</code>
+							</a>
+						</td>
+						<td>Finds the area under the ROC curve (a curve with sensitivity on the Y-axis
+ and 1 - specificity on the X-axis).  This is a useful metric for
+ determining how well a test statistic discriminates between two classes.
+ The following assumptions are made in this implementation:
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="bin" class="public" href="../dstats/base/bin.html">
+								<code>bin</code>
+							</a>
+						</td>
+						<td>Bins <a href="../dstats/base/bin.html#data"><code class="prettyprint lang-d">data</code></a> into <a href="../dstats/base/bin.html#nbin"><code class="prettyprint lang-d">nbin</code></a> equal width bins, indexed from
+ 0 to <a href="../dstats/base/bin.html#nbin"><code class="prettyprint lang-d">nbin</code></a> - 1, with 0 being the smallest <code class="prettyprint lang-d">bin</code>, etc.
+ The values returned are the <code class="prettyprint lang-d">bin</code> index for each element.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="binCounts" class="public" href="../dstats/base/binCounts.html">
+								<code>binCounts</code>
+							</a>
+						</td>
+						<td>Bins <a href="../dstats/base/binCounts.html#data"><code class="prettyprint lang-d">data</code></a> into <a href="../dstats/base/binCounts.html#nbin"><code class="prettyprint lang-d">nbin</code></a> equal width bins, indexed from
+ 0 to <a href="../dstats/base/binCounts.html#nbin"><code class="prettyprint lang-d">nbin</code></a> - 1, with 0 being the smallest <a href="../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a>, etc.
+ The values returned are the counts for each <a href="../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="byCategory" class="public" href="../dstats/base/byCategory.html">
+								<code>byCategory</code>
+							</a>
+						</td>
+						<td>Given a range of <a href="../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a> and a range of <a href="../dstats/base/byCategory.html#categories"><code class="prettyprint lang-d">categories</code></a>, separates <a href="../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a>
+ by category.  This function also guarantees that the order within each
+ category will be maintained.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="byCategory" class="public" href="../dstats/base/byCategory.html">
+								<code>byCategory</code>
+							</a>
+						</td>
+						<td>Special case implementation for when ElementType!C is boolean.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="comb" class="public" href="../dstats/base/comb.html">
+								<code>comb</code>
+							</a>
+						</td>
+						<td>Create a <a href="../dstats/base/Comb.html"><code class="prettyprint lang-d">Comb</code></a> struct from a range or of a set of bounds.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="frequency" class="public" href="../dstats/base/frequency.html">
+								<code>frequency</code>
+							</a>
+						</td>
+						<td>Returns an associative array of counts of every element in <a href="../dstats/base/frequency.html#input"><code class="prettyprint lang-d">input</code></a>.
+ Works w/ any iterable.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="frqBin" class="public" href="../dstats/base/frqBin.html">
+								<code>frqBin</code>
+							</a>
+						</td>
+						<td>Bins <a href="../dstats/base/frqBin.html#data"><code class="prettyprint lang-d">data</code></a> into <a href="../dstats/base/frqBin.html#nbin"><code class="prettyprint lang-d">nbin</code></a> equal <a href="../dstats/base/frequency.html"><code class="prettyprint lang-d">frequency</code></a> bins, indexed from
+ 0 to <a href="../dstats/base/frqBin.html#nbin"><code class="prettyprint lang-d">nbin</code></a> - 1, with 0 being the smallest <a href="../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a>, etc.
+ The values returned are the <a href="../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a> index for each element.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="logFactorial" class="public" href="../dstats/base/logFactorial.html">
+								<code>logFactorial</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="logNcomb" class="public" href="../dstats/base/logNcomb.html">
+								<code>logNcomb</code>
+							</a>
+						</td>
+						<td>Log of (<a href="../dstats/base/logNcomb.html#n"><code class="prettyprint lang-d">n</code></a> choose <a href="../dstats/base/logNcomb.html#k"><code class="prettyprint lang-d">k</code></a>).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="perm" class="public" href="../dstats/base/perm.html">
+								<code>perm</code>
+							</a>
+						</td>
+						<td>Create a <a href="../dstats/base/Perm.html"><code class="prettyprint lang-d">Perm</code></a> struct from a range or of a set of bounds.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rank" class="public" href="../dstats/base/rank.html">
+								<code>rank</code>
+							</a>
+						</td>
+						<td>Given an <a href="../dstats/base/rank.html#input"><code class="prettyprint lang-d">input</code></a> array, outputs an array containing the <code class="prettyprint lang-d">rank</code> from
+ [1, input.length] corresponding to each element.  Ties are dealt with by
+ averaging.  This function does not reorder the <a href="../dstats/base/rank.html#input"><code class="prettyprint lang-d">input</code></a> range.
+ Return type is float[] by default, but if you are sure you have no ties,
+ ints can be used for efficiency (in which case ties will not be averaged),
+ and if you need more precision when averaging ties, you can use double or
+ real.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rankSort" class="public" href="../dstats/base/rankSort.html">
+								<code>rankSort</code>
+							</a>
+						</td>
+						<td>Same as <a href="../dstats/base/rank.html"><code class="prettyprint lang-d">rank</code></a>(), but also sorts the <a href="../dstats/base/rankSort.html#input"><code class="prettyprint lang-d">input</code></a> range.
+ The array returned will still be identical to that returned by <a href="../dstats/base/rank.html"><code class="prettyprint lang-d">rank</code></a>(), i.e.
+ the <a href="../dstats/base/rank.html"><code class="prettyprint lang-d">rank</code></a> of each element will correspond to the ranks of the elements in the
+ <a href="../dstats/base/rankSort.html#input"><code class="prettyprint lang-d">input</code></a> array before sorting.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="saveAll" class="public" href="../dstats/base/saveAll.html">
+								<code>saveAll</code>
+							</a>
+						</td>
+						<td>Given a tuple possibly containing forward ranges, returns a tuple where
+save() has been called on all forward ranges.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="seq" class="public" href="../dstats/base/seq.html">
+								<code>seq</code>
+							</a>
+						</td>
+						<td>Generates a sequence from [<a href="../dstats/base/seq.html#start"><code class="prettyprint lang-d">start</code></a>..end] by <a href="../dstats/base/seq.html#increment"><code class="prettyprint lang-d">increment</code></a>.  Includes <a href="../dstats/base/seq.html#start"><code class="prettyprint lang-d">start</code></a>,
+ excludes <a href="../dstats/base/seq.html#end"><code class="prettyprint lang-d">end</code></a>.  Does so eagerly as an array.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sign" class="public" href="../dstats/base/sign.html">
+								<code>sign</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="toNumericRange" class="public" href="../dstats/base/toNumericRange.html">
+								<code>toNumericRange</code>
+							</a>
+						</td>
+						<td>Converts a range with arbitrary element types (usually strings) to a
+ range of reals lazily.  Ignores any elements that could not be successfully
+ converted.  Useful for creating an input range that can be used with this
+ lib out of a File without having to read the whole file into an array first.
+ The advantages to this over just using std.algorithm.map are that it's
+ less typing and that it ignores non-convertible elements, such as blank
+ lines.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="DstatsArgumentException" class="public" href="../dstats/base/DstatsArgumentException.html">
+								<code>DstatsArgumentException</code>
+							</a>
+						</td>
+						<td>This is the exception that is thrown on invalid arguments to a dstats function.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="Comb" class="public" href="../dstats/base/Comb.html">
+								<code>Comb</code>
+							</a>
+						</td>
+						<td>Generates every possible combination of r elements of the given sequence, or
+array indices from zero to N, depending on which c'tor is called.  Uses
+an input range interface.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Perm" class="public" href="../dstats/base/Perm.html">
+								<code>Perm</code>
+							</a>
+						</td>
+						<td>A struct that generates all possible permutations of a sequence.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ToNumericRange" class="public" href="../dstats/base/ToNumericRange.html">
+								<code>ToNumericRange</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Templates</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="doubleIterable" class="public" href="../dstats/base/doubleIterable.html">
+								<code>doubleIterable</code>
+							</a>
+						</td>
+						<td>Tests whether T is iterable and has elements of a type implicitly
+ convertible to double.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enum values</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="doubleInput" class="public" href="../dstats/base/doubleInput.html">
+								<code>doubleInput</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td>Tests whether T is an input range whose elements can be implicitly
+converted to doubles.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

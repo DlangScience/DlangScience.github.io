@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.pca</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dstats</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../dstats/alloc.html" class=" module">alloc</a>
+							</li>
+							<li>
+								<a href="../dstats/base.html" class=" module">base</a>
+							</li>
+							<li>
+								<a href="../dstats/cor.html" class=" module">cor</a>
+							</li>
+							<li>
+								<a href="../dstats/distrib.html" class=" module">distrib</a>
+							</li>
+							<li>
+								<a href="../dstats/infotheory.html" class=" module">infotheory</a>
+							</li>
+							<li>
+								<a href="../dstats/kerneldensity.html" class=" module">kerneldensity</a>
+							</li>
+							<li>
+								<a href="../dstats/pca.html" class="selected module">pca</a>
+							</li>
+							<li>
+								<a href="../dstats/random.html" class=" module">random</a>
+							</li>
+							<li>
+								<a href="../dstats/regress.html" class=" module">regress</a>
+							</li>
+							<li>
+								<a href="../dstats/sort.html" class=" module">sort</a>
+							</li>
+							<li>
+								<a href="../dstats/summary.html" class=" module">summary</a>
+							</li>
+							<li>
+								<a href="../dstats/tests.html" class=" module">tests</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../dstats.html" class=" module">dstats</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.pca</h1>
+			<p>This module contains a basic implementation of principal component analysis,
+based on the NIPALS algorithm.  This is fast when you only need the first
+few components (which is usually the case since PCA's main uses are
+visualization and dimensionality reduction).  However, convergence slows
+drastically after the first few components have been removed and most of
+the matrix is just noise.
+</p>
+<section>
+</section>
+
+			<section><section><h2>References</h2>
+
+<p>en.wikipedia.org/wiki/Principal_component_analysis#Computing_principal_components_iteratively
+</p>
+
+</section>
+<section><h2>Author</h2>
+<p>David Simcha
+</p>
+</section>
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="firstComponent" class="public" href="../dstats/pca/firstComponent.html">
+								<code>firstComponent</code>
+							</a>
+						</td>
+						<td>Uses expectation-maximization to compute the first principal component of mat.
+Since there are a lot of options, they are controlled by a <a href="../dstats/pca/PrinCompOptions.html"><code class="prettyprint lang-d">PrinCompOptions</code></a>
+struct.  (See above.  PrinCompOptions.init contains the default values.)
+To have the results returned in a pre-allocated space, pass an explicit value
+for <a href="../dstats/pca/firstComponent.html#buf"><code class="prettyprint lang-d">buf</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="firstNComponents" class="public" href="../dstats/pca/firstNComponents.html">
+								<code>firstNComponents</code>
+							</a>
+						</td>
+						<td>Computes the first N principal components of the matrix.  More efficient than
+calling <a href="../dstats/pca/firstComponent.html"><code class="prettyprint lang-d">firstComponent</code></a> and <a href="../dstats/pca/removeComponent.html"><code class="prettyprint lang-d">removeComponent</code></a> repeatedly because copying and
+transposing, if enabled, only happen once.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="removeComponent" class="public" href="../dstats/pca/removeComponent.html">
+								<code>removeComponent</code>
+							</a>
+						</td>
+						<td>Remove the principal component specified by the given <a href="../dstats/pca/removeComponent.html#rotation"><code class="prettyprint lang-d">rotation</code></a> vector from
+<a href="../dstats/pca/removeComponent.html#data"><code class="prettyprint lang-d">data</code></a>.  <a href="../dstats/pca/removeComponent.html#data"><code class="prettyprint lang-d">data</code></a> must have assignable elements.  <a href="../dstats/pca/Transposed.html"><code class="prettyprint lang-d">Transposed</code></a> controls whether
+<a href="../dstats/pca/removeComponent.html#rotation"><code class="prettyprint lang-d">rotation</code></a> is considered a loading for the <a href="../dstats/pca/removeComponent.html#transposed"><code class="prettyprint lang-d">transposed</code></a> matrix or the matrix
+as-is.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="PrincipalComponent" class="public" href="../dstats/pca/PrincipalComponent.html">
+								<code>PrincipalComponent</code>
+							</a>
+						</td>
+						<td>Result holder
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="PrinCompOptions" class="public" href="../dstats/pca/PrinCompOptions.html">
+								<code>PrinCompOptions</code>
+							</a>
+						</td>
+						<td>Sets options for principal component analysis.  The default options are
+also the values in PrinCompOptions.init.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="Transposed" class="public" href="../dstats/pca/Transposed.html">
+								<code>Transposed</code>
+							</a>
+						</td>
+						<td>Used for <a href="../dstats/pca/removeComponent.html"><code class="prettyprint lang-d">removeComponent</code></a>().
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>
