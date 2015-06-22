@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -e
 
 for pageName in dstats NetCDF-D cblas dstats PydMagic clFFT-D libcerf OpenMPI parallel_algorithm; do
