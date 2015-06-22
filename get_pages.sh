@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-for pageName in dstats NetCDF-D cblas dstats PydMagic clFFT-D libcerf OpenMPI parallel_algorithm; do
+for pageName in dstats NetCDF-D cblas PydMagic clFFT-D libcerf OpenMPI parallel_algorithm; do
+    echo -e "****************\nbuilding: $pageName\n****************"
     if [ ! -d repos/${pageName}/site ]
     then
         echo No site directory found for repo $pageName
@@ -9,6 +10,11 @@ for pageName in dstats NetCDF-D cblas dstats PydMagic clFFT-D libcerf OpenMPI pa
     fi
     rm -rf ${pageName}
     mkdir ${pageName}
+
+    pushd repos/${pageName}
+    ./gen_docs
+    popd
+
     if [ -f repos/${pageName}/site/readme_as_index ]
     then
         cat repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
