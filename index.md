@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-
-DlangScience
-
 ##Libraries:
 - [dstats](dstats/) A statistics library with a reasonable balance of performance and ease-of-use
 - [libcerf](libcerf/) Complex error functions, along with Dawson, Faddeeva, and Voigt functions
