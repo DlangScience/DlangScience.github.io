@@ -1,26 +1,4 @@
 ---
 layout: default
 ---
-<p><a href="https://travis-ci.org/DlangScience/NetCDF-D"><img src="https://camo.githubusercontent.com/a655510cb11bbd5b537daa95ace9a4331f78d356/68747470733a2f2f7472617669732d63692e6f72672f446c616e67536369656e63652f4e65744344462d442e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/DlangScience/NetCDF-D.svg?branch=master" style="max-width:100%;"></a></p>
-
-<h1>NetCDF-D</h1>
-
-<p>D bindings to the NetCDF C library (<a href="https://github.com/Unidata/netcdf-c">https://github.com/Unidata/netcdf-c</a> and <a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a>)</p>
-
-<h2>Usage</h2>
-
-<p><code>import netcdf;</code> and you're away.</p>
-
-<p>Everything should work identically to the C version, with the exception of the backward compatibility and deprecated sections which have been removed. D version blocks have been used in place of C version macros. The names of the versions are kept the same.</p>
-
-<p>Note that this is a binding a C library, where type sizes are somewhat implementation defined. I would recommend against using functions taking <code>c_long</code>/<code>c_ulong</code> in favour of <code>int</code>/<code>uint</code> and <code>long</code>/<code>ulong</code>.[1]</p>
-
-<p>Architectures / C compilers where C types don't comply with <code>sizeof(int) == 4 &amp;&amp; sizeof(long long) == 8</code> or have <code>float</code>/<code>double</code> types laid out differently to the IEEE-754 standard single and double precision formats are not supported at this time.[2]</p>
-
-<p>[1] Note that the function naming has not been changed. Functions with <code>long</code>/<code>ulong</code> in the name take <code>c_long</code>/<code>c_ulong</code> as parameters, functions with (u)longlong in the name take <code>long</code>/<code>ulong</code>.</p>
-
-<p>[2] Things will probably still work if you can avoid using the parts of the C API that use the offending types.</p>
-
-<h2>Licence</h2>
-
-<p>NetCDF uses a very liberal custom licence (see NetCDF_COPYRIGHT), which also applies to these bindings. Dub doesn't know about this license and may blindly complain that it is incompatible with everything. This does not necessarily mean it is incompatible with the other licenses you are using.</p>
+{"message":"API rate limit exceeded for 5.148.129.30. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://developer.github.com/v3/#rate-limiting"}
