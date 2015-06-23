@@ -22,4 +22,6 @@ you may have to manually add new pages.
 
 If you want a repo to use its README.md as its index page, add an empty file ```site/readme_as_index``` in that repo.
 
+DDOC in source files is rendered to html by calling ```gen_docs``` in each repository. ```gen_docs``` should generate the documentation and place it in ```site/api```.
+
 The scripts are currently quite hacky and will likely need changing in the future.
