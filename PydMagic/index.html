@@ -9,50 +9,75 @@ layout: default
 
 <p>To install, just enter</p>
 
-<pre><code>%install_ext https://raw.githubusercontent.com/DlangScience/PydMagic/master/pyd_magic.py
+<pre><code>in [1]: %install_ext https://raw.githubusercontent.com/DlangScience/PydMagic/master/pyd_magic.py
 </code></pre>
 
 <p>in any ipython instance.</p>
 
 <p>To use, first enter</p>
 
-<pre><code>%load_ext pyd_magic
+<pre><code>in [2]: %load_ext pyd_magic
 </code></pre>
 
 <p>then write your pyd extension in a cell marked with <code>%%pyd</code> e.g.</p>
 
-<div class="highlight highlight-D"><pre><span class="pl-k">%%</span>pyd
+<div class="highlight highlight-D"><pre><span class="pl-k">in</span> [<span class="pl-c1">3</span>]: <span class="pl-k">%%</span>pyd
 
-@pdef<span class="pl-k">!</span>() <span class="pl-c1">string</span> hello() {
-    <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>;
-}
+        @pdef<span class="pl-k">!</span>() <span class="pl-c1">string</span> hello() {
+            <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>;
+        }
 
-@pdef<span class="pl-k">!</span>(Docstring<span class="pl-k">!</span><span class="pl-s"><span class="pl-pds">"</span>takes a single int, returns that int converted to a string<span class="pl-pds">"</span></span>)
-<span class="pl-c1">string</span> <span class="pl-en">intToStr</span>(<span class="pl-k">int</span> b)
-{
-    <span class="pl-k">import</span> <span class="pl-c1">std.conv</span>;
-    <span class="pl-k">return</span> b.to<span class="pl-k">!</span><span class="pl-c1">string</span>;
-}
+        @pdef<span class="pl-k">!</span>(Docstring<span class="pl-k">!</span><span class="pl-s"><span class="pl-pds">"</span>takes a single int, returns that int converted to a string<span class="pl-pds">"</span></span>)
+        <span class="pl-c1">string</span> <span class="pl-en">intToStr</span>(<span class="pl-k">int</span> b)
+        {
+            <span class="pl-k">import</span> <span class="pl-c1">std.conv</span>;
+            <span class="pl-k">return</span> b.to<span class="pl-k">!</span><span class="pl-c1">string</span>;
+        }
 
-@pdef<span class="pl-k">!</span>(PyName<span class="pl-k">!</span><span class="pl-s"><span class="pl-pds">"</span>binary_zebra<span class="pl-pds">"</span></span>) <span class="pl-k">int</span> zebra()
-{
-    <span class="pl-k">return</span> <span class="pl-c1">101010101</span>;
-}
+        @pdef<span class="pl-k">!</span>(PyName<span class="pl-k">!</span><span class="pl-s"><span class="pl-pds">"</span>binary_zebra<span class="pl-pds">"</span></span>) <span class="pl-k">int</span> zebra()
+        {
+            <span class="pl-k">return</span> <span class="pl-c1">101010101</span>;
+        }
 
-@pdef<span class="pl-k">!</span>() <span class="pl-k">long</span>[] whereExactlyIntegral(<span class="pl-k">float</span>[] data)
-{
-    <span class="pl-k">import</span> <span class="pl-c1">std.algorithm</span>, <span class="pl-c1">std.array</span>;
-    <span class="pl-k">return</span> data.filter<span class="pl-k">!</span>(x =<span class="pl-k">&gt;</span> x <span class="pl-k">==</span> <span class="pl-k">cast</span>(<span class="pl-k">long</span>)x).map<span class="pl-k">!</span>(x =<span class="pl-k">&gt;</span> <span class="pl-k">cast</span>(<span class="pl-k">long</span>)x).array;
-}
+        @pdef<span class="pl-k">!</span>() <span class="pl-k">long</span>[] whereExactlyIntegral(<span class="pl-k">double</span>[] data)
+        {
+            <span class="pl-k">import</span> <span class="pl-c1">std.algorithm</span>, <span class="pl-c1">std.array</span>;
+            <span class="pl-k">return</span> data.filter<span class="pl-k">!</span>(x =<span class="pl-k">&gt;</span> x <span class="pl-k">==</span> <span class="pl-k">cast</span>(<span class="pl-k">long</span>)x).map<span class="pl-k">!</span>(x =<span class="pl-k">&gt;</span> <span class="pl-k">cast</span>(<span class="pl-k">long</span>)x).array;
+        }
 
-@pdef<span class="pl-k">!</span>()
-<span class="pl-k">struct</span> <span class="pl-en">S</span>
-{
-    @pdef<span class="pl-k">!</span>() <span class="pl-c1">string</span> bleep = <span class="pl-s"><span class="pl-pds">"</span>bloop7<span class="pl-pds">"</span></span>;
-    @pdef<span class="pl-k">!</span>() <span class="pl-k">int</span> bar(<span class="pl-k">int</span> w) { <span class="pl-k">return</span> w <span class="pl-k">*</span> <span class="pl-c1">42</span>; }
-}</pre></div>
+        @pdef<span class="pl-k">!</span>()
+        <span class="pl-k">struct</span> <span class="pl-en">S</span>
+        {
+            @pdef<span class="pl-k">!</span>() <span class="pl-c1">string</span> bleep = <span class="pl-s"><span class="pl-pds">"</span>bloop<span class="pl-pds">"</span></span>;
+            @pdef<span class="pl-k">!</span>() <span class="pl-k">int</span> bar(<span class="pl-k">int</span> w) { <span class="pl-k">return</span> w <span class="pl-k">*</span> <span class="pl-c1">42</span>; }
+        }</pre></div>
 
-<p>and run. After it has finished building, your extension should be automatically imported and ready to use. Builds are cached just like with cython magic. Some basic flags are supported as arguments to <code>%%pyd</code> such as <code>--dub_args</code>, run <code>%%pyd?</code> for more info.</p>
+<p>and run. After it has finished building, your extension should be automatically imported and ready to use, like so:</p>
+
+<pre><code>in [4]: hello()
+out[4]: 'Hello World!'
+
+in [5]: intToStr(435)
+out[5]: '435'
+
+in [6]: whereExactlyIntegral([3.0, 2.4, 7.0, 1.001])
+out[6]: [3, 7]
+
+in [7]: s = S();
+        s.bleep
+out[7]: 'bloop'
+
+in [8]: s.bleep = 'blah'
+        s.bleep
+out[8]: 'blah'
+
+in [9]: s.bar(2)
+out[9]: 84
+</code></pre>
+
+<p>see <code>examples/test.ipynb</code> for an example using numpy arrays.</p>
+
+<p>Builds are cached just like with cython magic. Some basic flags are supported as arguments to <code>%%pyd</code> such as <code>--dub_args</code>, run <code>%%pyd?</code> for more info.</p>
 
 <p>The <code>pdef</code> UDA instructs the extension to wrap the function/type/member for use in python. It takes any template arguments that pyd.pyd.def takes.</p>
 
