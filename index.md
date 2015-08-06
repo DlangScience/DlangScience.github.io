@@ -14,3 +14,9 @@ layout: default
 
 ##Language Interfaces
 - [PydMagic](PydMagic/) Use D in a python Ipython/Jupyter notebook. See also [pyd](https://github.com/ariovistus/pyd) for the underlying general purpose D/Python interface.
+
+
+#Development and Contributions
+We are actively looking for contributors, both from a fresh start or with existing code to contribute. Message us at [gitter.im/DlangScience/public](https://gitter.im/DlangScience/public) or make a pull request. Even the smallest of things can help!
+
+Bugs should be reported as github issues in the relevant repository.
