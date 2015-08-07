@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+[![Join the chat at https://gitter.im/DlangScience/public](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DlangScience/public?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ##Libraries:
 - [dstats](dstats/) A statistics library with a reasonable balance of performance and ease-of-use
 - [libcerf](libcerf/) Complex error functions, along with Dawson, Faddeeva, and Voigt functions
