@@ -1,32 +1,32 @@
 [submodule "dstats"]
-	path = repos/dstats
+	path = content/repos/dstats
 	url = https://github.com/DlangScience/dstats.git
 	branch = master
 [submodule "NetCDF-D"]
-	path = repos/NetCDF-D
+	path = content/repos/NetCDF-D
 	url = https://github.com/DlangScience/NetCDF-D
 	branch = master
 [submodule "OpenMPI"]
-	path = repos/OpenMPI
+	path = content/repos/OpenMPI
 	url = https://github.com/DlangScience/OpenMPI
 	branch = master
 [submodule "PydMagic"]
-	path = repos/PydMagic
+	path = content/repos/PydMagic
 	url = https://github.com/DlangScience/PydMagic
 	branch = master
 [submodule "cblas"]
-	path = repos/cblas
+	path = content/repos/cblas
 	url = https://github.com/DlangScience/cblas
 	branch = master
 [submodule "clFFT-D"]
-	path = repos/clFFT-D
+	path = content/repos/clFFT-D
 	url = https://github.com/DlangScience/clFFT-D
 	branch = master
 [submodule "libcerf"]
-	path = repos/libcerf
+	path = content/repos/libcerf
 	url = https://github.com/DlangScience/libcerf
 	branch = master
 [submodule "parallel_algorithm"]
-	path = repos/parallel_algorithm
+	path = content/repos/parallel_algorithm
 	url = https://github.com/DlangScience/parallel_algorithm
 	branch = master

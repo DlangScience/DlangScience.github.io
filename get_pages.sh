@@ -1,43 +1,42 @@
 set -e
 
-for pageName in . dstats NetCDF-D cblas PydMagic clFFT-D libcerf OpenMPI parallel_algorithm; do
-    echo -e "****************\nbuilding: $pageName\n****************"
-    if [ $pageName != . ]
+for pageName in content/main $(ls content/repos/); do
+    echo "****************\nbuilding: $pageName\n****************"
+    
+    if [ $pageName != content/main ]
     then
-        if [ ! -d repos/${pageName}/site ]
-        then
-            echo No site directory found for repo $pageName
-            continue
-        fi
         rm -rf ${pageName}
         mkdir ${pageName}
-        
-        pushd repos/${pageName}
+    
+        pushd content/repos/${pageName}
         ./gen_docs
         popd
         
-        if [ -f repos/${pageName}/site/readme_as_index ]
+        if [ -f content/repos/${pageName}/site/readme_as_index ]
         then
-            cat repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
+            cat content/repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
         fi
-        cp -r repos/${pageName}/site/* ${pageName}/
+        cp -r content/repos/${pageName}/site/* ${pageName}/
+        mdFiles=$(find ${pageName} -name \*.md)
+    else
+        cp -r content/main/* .
+        mdFiles=$(find content/main -name \*.md | sed "s|^content/main/||")
     fi
-    for page in $(find ${pageName} -name \*.md); do
+
+    for page in $mdFiles; do
+        if [ "$(head -n1 $page | tr -d '\n')" = --- ]
+        then
+            sed -n '/^---/,/^---/p' $page > header
+            sed '/^---/,/^---/d' $page > body
+        else
+            cp $page body
+            echo "---\nlayout: default\n---" > header
+        fi
+
         page_html=${page%.*}.html
-        python3 md_to_html.py $page > $page_html
-        if [$pageName != .]
-        then
-            rm $page
-        fi
-        if [ "$(head -n1 $page_html | tr -d '\n')" != '---' ]
-        then
-            sed '1i\
----\
-layout: default\
----\
-' $page_html > _tmp_
-            mv _tmp_ $page_html
-        fi
+        python3 md_to_html.py body > processed
+        cat header processed > $page_html
+
+        rm $page body header processed
     done
-    break
 done
