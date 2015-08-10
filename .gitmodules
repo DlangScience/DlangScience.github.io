@@ -1,6 +1,6 @@
 [submodule "dstats"]
 	path = content/repos/dstats
-	url = https://github.com/DlangScience/dstats.git
+	url = https://github.com/DlangScience/dstats
 	branch = master
 [submodule "NetCDF-D"]
 	path = content/repos/NetCDF-D
