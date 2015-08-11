@@ -1,7 +1,7 @@
 set -e
 
 for pageName in content/main $(ls content/repos/); do
-    echo "****************\nbuilding: $pageName\n****************"
+    printf "****************\nbuilding: $pageName\n****************\n"
     
     if [ $pageName != content/main ]
     then
@@ -30,7 +30,7 @@ for pageName in content/main $(ls content/repos/); do
             sed '/^---/,/^---/d' $page > body
         else
             cp $page body
-            echo "---\nlayout: default\n---" > header
+            printf -- "---\nlayout: default\n---\n" > header
         fi
 
         page_html=${page%.*}.html
