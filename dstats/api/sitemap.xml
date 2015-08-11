@@ -54,14 +54,11 @@
 <url><loc>http://127.0.0.1/dstats/alloc/StackSet.this.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.find.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/alloc/StackTree.find.find.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.insert.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.length.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.opApply.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.opIn_r.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/alloc/StackTree.opIn_r.opIn_r.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.remove.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/alloc/StackTree.remove.remove.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTree.this.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTreeAA.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/StackTreeAA.keys.html</loc></url>
@@ -106,7 +103,6 @@
 <url><loc>http://127.0.0.1/dstats/base/Perm.popFront.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/Perm.save.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/Perm.this.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/base/Perm.this.this.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/perm.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/rank.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/rankSort.html</loc></url>
