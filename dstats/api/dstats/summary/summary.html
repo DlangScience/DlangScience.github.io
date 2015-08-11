@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct Summary</title>
+		<title>Function summary</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,187 +73,20 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct Summary</h1>
+			<h1>Function summary</h1>
 			<section>
-				<p>Output range to compute <a href="../../dstats/summary/Summary.mean.html"><code class="prettyprint lang-d">mean</code></a>, <a href="../../dstats/summary/Summary.stdev.html"><code class="prettyprint lang-d">stdev</code></a>, <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>, <a href="../../dstats/summary/Summary.skewness.html"><code class="prettyprint lang-d">skewness</code></a>, <a href="../../dstats/summary/Summary.kurtosis.html"><code class="prettyprint lang-d">kurtosis</code></a>, <a href="../../dstats/summary/Summary.min.html"><code class="prettyprint lang-d">min</code></a>, and
- <a href="../../dstats/summary/Summary.max.html"><code class="prettyprint lang-d">max</code></a> online. Using this struct is relatively expensive, so if you just need
- <a href="../../dstats/summary/Summary.mean.html"><code class="prettyprint lang-d">mean</code></a> and/or <a href="../../dstats/summary/Summary.stdev.html"><code class="prettyprint lang-d">stdev</code></a>, try <a href="../../dstats/summary/MeanSD.html"><code class="prettyprint lang-d">MeanSD</code></a> or <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a>. Getter methods for <a href="../../dstats/summary/Summary.stdev.html"><code class="prettyprint lang-d">stdev</code></a>,
- <a href="../../dstats/summary/Summary.var.html"><code class="prettyprint lang-d">var</code></a> cost a few floating point ops.  Getter for <a href="../../dstats/summary/Summary.mean.html"><code class="prettyprint lang-d">mean</code></a> costs a single branch to
- check for <a href="../../dstats/summary/Summary.N.html"><code class="prettyprint lang-d">N</code></a> == 0.  Getters for <a href="../../dstats/summary/Summary.skewness.html"><code class="prettyprint lang-d">skewness</code></a> and <a href="../../dstats/summary/Summary.kurtosis.html"><code class="prettyprint lang-d">kurtosis</code></a> cost a whole bunch of
- floating point ops.  This struct uses O(1) space and does *NOT* store the
- individual elements.
+				<p>Convenience function.  Puts all elements of <a href="../../dstats/summary/summary.html#data"><code class="prettyprint lang-d">data</code></a> into a <a href="../../dstats/summary/Summary.html"><code class="prettyprint lang-d">Summary</code></a> struct,
+ and returns this struct.
 </p>
-<section>
-</section>
 
 					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.kurtosis.html" class="public property"><code>kurtosis</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.max.html" class="public property"><code>max</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.mean.html" class="public property"><code>mean</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.min.html" class="public property"><code>min</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.mse.html" class="public property"><code>mse</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td>        <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> squared error.  In other words, a biased estimate of <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.N.html" class="public property"><code>N</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.skewness.html" class="public property"><code>skewness</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.stdev.html" class="public property"><code>stdev</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.sum.html" class="public property"><code>sum</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.toMeanSD.html" class="public property"><code>toMeanSD</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/MeanSD.html">MeanSD</a></code></td>
-								<td>Converts this struct to a <a href="../../dstats/summary/MeanSD.html"><code class="prettyprint lang-d">MeanSD</code></a>.  Called via alias this when an
- implicit conversion is attetmpted.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.var.html" class="public property"><code>var</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-						</table>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/summary/Summary.html">Summary</a> summary(T)(
+&nbsp;&nbsp;T data
+)
+if (doubleIterable!T);</pre>
 					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td>Combine two <a href="../../dstats/summary/Summary.html"><code class="prettyprint lang-d">Summary</code></a>'s.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Summary.toString.html" class="public">
-										<code>toString</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Note</h3>
-<p>This struct can implicitly convert to a <a href="../../dstats/summary/MeanSD.html"><code class="prettyprint lang-d">MeanSD</code></a>.
-</p>
-
-</section>
-<section><h3>References</h3>
-<p>Computing Higher-Order Moments Online.
-</p>
-</section>
-<section><h3>http</h3>
-<p>//people.xiph.org/~tterribe/notes/homs.html
-</p>
-
-</section>
-<section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">Summary summ;
-summ.put(1);
-summ.put(2);
-summ.put(3);
-summ.put(4);
-summ.put(5);
-assert(summ.N == 5);
-assert(summ.mean == 3);
-assert(summ.stdev == sqrt(2.5));
-assert(summ.var == 2.5);
-assert(approxEqual(summ.kurtosis, -1.9120));
-assert(summ.min == 1);
-assert(summ.max == 5);
-assert(summ.sum == 15);
-</pre>
-</section>
 
 			</section>
 			<section>
