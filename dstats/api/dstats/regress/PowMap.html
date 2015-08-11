@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct PowMap</title>
+		<title>Function powMap</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,10 +73,21 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct PowMap</h1>
+			<h1>Function powMap</h1>
 			<section>
-				<p></p>
+				<p>Maps a forward <a href="../../dstats/regress/powMap.html#range"><code class="prettyprint lang-d">range</code></a> to a power determined at runtime.  ExpType is the type
+ of the <a href="../../dstats/regress/powMap.html#exponent"><code class="prettyprint lang-d">exponent</code></a>.  Using an int is faster than using a double, but obviously
+ less flexible.
+</p>
 
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/regress/PowMap.html">PowMap</a>!(ExpType,T) powMap(ExpType, T)(
+&nbsp;&nbsp;T range,
+&nbsp;&nbsp;ExpType exponent
+);</pre>
+					</section>
 
 			</section>
 			<section>

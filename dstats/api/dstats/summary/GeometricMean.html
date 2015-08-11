@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct GeometricMean</title>
+		<title>Function geometricMean</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,73 +73,19 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct GeometricMean</h1>
+			<h1>Function geometricMean</h1>
 			<section>
-				<p>Output range to calculate the geometric <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a> online.
- Operates similarly to <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">dstats.summary.Mean</code></a>
+				<p>Calculates the geometric <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a> of any input range that has elements implicitly
+ convertible to double
 </p>
 
 					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/GeometricMean.geoMean.html" class="public property"><code>geoMean</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/GeometricMean.N.html" class="public property"><code>N</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/GeometricMean.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/GeometricMean.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td>Combine two <a href="../../dstats/summary/GeometricMean.html"><code class="prettyprint lang-d">GeometricMean</code></a>'s.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/GeometricMean.toString.html" class="public">
-										<code>toString</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+double geometricMean(T)(
+&nbsp;&nbsp;T data
+)
+if (doubleIterable!T);</pre>
 					</section>
 
 			</section>

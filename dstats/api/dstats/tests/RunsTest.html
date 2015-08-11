@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct RunsTest</title>
+		<title>Function runsTest</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,46 +73,48 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct RunsTest</h1>
+			<h1>Function runsTest</h1>
 			<section>
-				<p>Runs test as in <a href="../../dstats/tests/runsTest.html"><code class="prettyprint lang-d">runsTest</code></a>(), except calculates online instead of from stored
-array elements.
+				<p>Wald-wolfowitz or runs test for randomness of the distribution of
+elements for which positive() evaluates to true.  For example, given
+a sequence of coin flips [H,H,H,H,H,T,T,T,T,T] and a positive() function of
+"a == 'H'", this test would determine that the heads are non-randomly
+distributed, since they are all at the beginning of <a href="../../dstats/tests/runsTest.html#obs"><code class="prettyprint lang-d">obs</code></a>.  This is done
+by counting the number of runs of consecutive elements for which
+positive() evaluates to true, and the number of consecutive runs for which
+it evaluates to false.  In the example above, we have 2 runs.  These are the
+block of 5 consecutive heads at the beginning and the 5 consecutive tails
+at the end.
+</p>
+<section>
+<p>Alternatives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning that less runs than expected have been
+observed and data for which positive() is true tends to cluster,
+<a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, which means that more runs than expected have been observed
+and data for which positive() is true tends to not cluster even moreso than
+expected by chance, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning that elements for which
+positive() is true cluster as much as expected by chance.
 </p>
 
+</section>
+
 					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/tests/RunsTest.nRuns.html" class="public">
-										<code>nRuns</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/tests/RunsTest.p.html" class="public">
-										<code>p</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/tests/RunsTest.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+double runsTest(alias positive, T)(
+&nbsp;&nbsp;T obs,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+)
+if (isIterable!T);</pre>
 					</section>
+<section><h3>Bugs</h3>
+<p>No exact calculation of the P-value.  Asymptotic approximation only.
+</p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Runs_test
+</p>
+</section>
 
 			</section>
 			<section>

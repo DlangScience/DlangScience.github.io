@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct Perm</title>
+		<title>Function perm</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,136 +73,24 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct Perm</h1>
+			<h1>Function perm</h1>
 			<section>
-				<p>A struct that generates all possible permutations of a sequence.
+				<p>Create a <a href="../../dstats/base/Perm.html"><code class="prettyprint lang-d">Perm</code></a> struct from a range or of a set of bounds.
 </p>
 <section>
 </section>
 
 					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Perm.empty.html" class="public property"><code>empty</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Perm.front.html" class="public property"><code>front</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">const(T)[]</code></td>
-								<td>    Returns the current permutation.  The array is const because it is
-    recycled across iterations and modifying it would destroy the state of
-    the permutation generator.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Perm.length.html" class="public property"><code>length</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
-								<td>    The number of permutations left.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Perm.save.html" class="public property"><code>save</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(this)</code></td>
-								<td></td>
-							</tr>
-						</table>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+auto perm(T...)(
+&nbsp;&nbsp;T stuff
+);</pre>
 					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Perm.popFront.html" class="public">
-										<code>popFront</code>
-									</a>
-								</td>
-								<td>    Get the next permutation in the sequence.  This will overwrite the
-    contents of the array returned by the last call to <a href="../../dstats/base/Perm.front.html"><code class="prettyprint lang-d">front</code></a>.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Templates</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Perm.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Generate permutations from an input range.
- Create a duplicate of this sequence
- so that the original sequence is not modified.
-</td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Notes</h3>
-
-<p>Permutations are output in undefined order.
-</p>
-
-<p>The array returned by <a href="../../dstats/base/Perm.front.html"><code class="prettyprint lang-d">front</code></a> is recycled across iterations.  To preserve
-it across iterations, wrap this range using map!"a.dup" or
-map!"a.idup".
-</p>
-
-</section>
-<section><h3>Bugs</h3>
-<p>Only supports iterating over up to size_t.max permutations.
-This means the max permutation <a href="../../dstats/base/Perm.length.html"><code class="prettyprint lang-d">length</code></a> is 12 on 32-bit machines, or 20
-on 64-bit.  This was a conscious tradeoff to allow this range to have a
-<a href="../../dstats/base/Perm.length.html"><code class="prettyprint lang-d">length</code></a> of type size_t, since iterating over such huge permutation spaces
-would be insanely slow anyhow.
-</p>
-
-</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">double[][] res;
-auto <a href="../../dstats/base/perm.html">perm</a> = map!"a.dup"(Perm!(double)([1.0, 2.0, 3.0][]));
-foreach(p; <a href="../../dstats/base/perm.html">perm</a>) {
-     res ~= p;
-}
-
-auto sorted = sort(res);
-assert(sorted.canFind([1.0, 2.0, 3.0]));
-assert(sorted.canFind([1.0, 3.0, 2.0]));
-assert(sorted.canFind([2.0, 1.0, 3.0]));
-assert(sorted.canFind([2.0, 3.0, 1.0]));
-assert(sorted.canFind([3.0, 1.0, 2.0]));
-assert(sorted.canFind([3.0, 2.0, 1.0]));
-assert(sorted.length == 6);
+<pre class="code prettyprint lang-d">auto p = perm([1,2,3]);  // All permutations of [1,2,3].
+auto p = perm(5);  // All permutations of [0,1,2,3,4].
+auto p = perm(-1, 2); // All permutations of [-1, 0, 1].
 </pre>
 </section>
 
