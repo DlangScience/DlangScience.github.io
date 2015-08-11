@@ -5,12 +5,7 @@ Here is a pre-alpha draft of a bit of "getting started" documentation...
 
 ## Contributing to DlangScience
 
-All the packages which make up DlangScience are hosted in their own github
-projects at https://github.com/DlangScience/package. For the time being,
-development is proceeding quite independently in the projects. For example,
-issues are tracked separately within the respective Github site and each project
-can be forked and cloned separately. The mild exception to this concerns
-user and API documentation, as outlined in the documentation section below.
+All the packages which make up DlangScience are hosted in their own github projects at https://github.com/DlangScience/package. For the time being, development is proceeding quite independently in the projects. For example, issues are tracked separately within the respective Github site and each project can be forked and cloned separately. The mild exception to this concerns user and API documentation, as outlined in the documentation section below.
 
 ### Guidelines for package owners
 
@@ -28,14 +23,6 @@ The basic process is:
 5. push the branch to your github fork
 6. create a pull request within Github
 
-The documentation for contributing to Numpy
-[here](http://docs.scipy.org/doc/numpy-dev/dev/index.html) provides excellent
-material for getting started with Git. The section on [Development workflow]
-(http://docs.scipy.org/doc/numpy-dev/dev/gitwash/development_workflow.html)
-is relevent for any package of DlangScience (following instructions for
-contributors, not core developers).
+The documentation for contributing to Numpy [here](http://docs.scipy.org/doc/numpy-dev/dev/index.html) provides excellent material for getting started with Git. The section on [Development workflow] (http://docs.scipy.org/doc/numpy-dev/dev/gitwash/development_workflow.html) is relevent for any package of DlangScience (following instructions for contributors, not core developers).
 
-The [Rebasing](http://wiki.dlang.org/Pull_Requests#Rebasing) section of the
-Dlang wiki page on "pull requests" provides somewhat more succinct instructions
-that are also relevant here. (Note, however, the use "git pull" which is
-discouraged for newcomers in the NumPy instructions.)
+The [Rebasing](http://wiki.dlang.org/Pull_Requests#Rebasing) section of the Dlang wiki page on "pull requests" provides somewhat more succinct instructions that are also relevant here. (Note, however, the use "git pull" which is discouraged for newcomers in the NumPy instructions.)
