@@ -5,7 +5,7 @@ Here is a pre-alpha draft of a bit of "getting started" documentation...
 
 ## Contributing to DlangScience
 
-All the packages which make up DlangScience are hosted in their own github projects at https://github.com/DlangScience/package. For the time being, development is proceeding quite independently in the projects. For example, issues are tracked separately within the respective Github site and each project can be forked and cloned separately. The mild exception to this concerns user and API documentation, as outlined in the documentation section below.
+All the packages which make up DlangScience are hosted in their own github projects at ```https://github.com/DlangScience/packageName```. For the time being, development is proceeding quite independently in the projects. For example, issues are tracked separately within their respective Github sites and each project can be forked and cloned separately. 
 
 ### Guidelines for package owners
 
