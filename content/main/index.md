@@ -22,3 +22,5 @@ layout: default
 We are actively looking for contributors, both from a fresh start or with existing code to contribute. Message us at [gitter.im/DlangScience/public](https://gitter.im/DlangScience/public) or make a pull request. Even the smallest of things can help!
 
 Bugs should be reported as github issues in the relevant repository.
+
+Some preliminary help for new contributors is [here](contrib_help.html).
