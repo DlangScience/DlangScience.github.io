@@ -9,7 +9,12 @@ for pageName in content/main $(ls content/repos/); do
         mkdir ${pageName}
     
         pushd content/repos/${pageName}
-        ./gen_docs
+        if [ -f gen_docs ]
+        then
+            ./gen_docs
+        else
+            dub build --build=DSddox
+        fi
         popd
         
         if [ -f content/repos/${pageName}/site/readme_as_index ]
@@ -17,6 +22,8 @@ for pageName in content/main $(ls content/repos/); do
             cat content/repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
         fi
         cp -r content/repos/${pageName}/site/* ${pageName}/
+        rsync -ru api_format/ $pageName/api/
+
         mdFiles=$(find ${pageName} -name \*.md)
     else
         cp -r content/main/* .
