@@ -143,9 +143,7 @@ $('#symbolSearchPane').show();
 								<code>byCategory</code>
 							</a>
 						</td>
-						<td>Given a range of <a href="../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a> and a range of <a href="../dstats/base/byCategory.html#categories"><code class="prettyprint lang-d">categories</code></a>, separates <a href="../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a>
- by category.  This function also guarantees that the order within each
- category will be maintained.
+						<td>Special case implementation for when ElementType!C is boolean.
 </td>
 					</tr>
 					<tr>
@@ -154,7 +152,9 @@ $('#symbolSearchPane').show();
 								<code>byCategory</code>
 							</a>
 						</td>
-						<td>Special case implementation for when ElementType!C is boolean.
+						<td>Given a range of <a href="../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a> and a range of <a href="../dstats/base/byCategory.html#categories"><code class="prettyprint lang-d">categories</code></a>, separates <a href="../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a>
+ by category.  This function also guarantees that the order within each
+ category will be maintained.
 </td>
 					</tr>
 					<tr>
@@ -165,6 +165,14 @@ $('#symbolSearchPane').show();
 						</td>
 						<td>Create a <a href="../dstats/base/Comb.html"><code class="prettyprint lang-d">Comb</code></a> struct from a range or of a set of bounds.
 </td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstatsEnforce" class="public" href="../dstats/base/dstatsEnforce.html">
+								<code>dstatsEnforce</code>
+							</a>
+						</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>
@@ -283,6 +291,30 @@ save() has been called on all forward ranges.
  lines.
 </td>
 					</tr>
+					<tr>
+						<td>
+							<a id="_arrayExpSliceDivass_d" class="public" href="../dstats/base/_arrayExpSliceDivass_d.html">
+								<code>_arrayExpSliceDivass_d</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="_arrayExpSliceMulass_d" class="public" href="../dstats/base/_arrayExpSliceMulass_d.html">
+								<code>_arrayExpSliceMulass_d</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="_arraySliceExpMulSliceSubass_d" class="public" href="../dstats/base/_arraySliceExpMulSliceSubass_d.html">
+								<code>_arraySliceExpMulSliceSubass_d</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
 				</table>
 			</section>
 			<section>
@@ -319,7 +351,7 @@ save() has been called on all forward ranges.
 							</a>
 						</td>
 						<td>Generates every possible combination of r elements of the given sequence, or
-array indices from zero to N, depending on which c'tor is called.  Uses
+array indices from zero to <a href="../dstats/base/Comb.N.html"><code class="prettyprint lang-d">N</code></a>, depending on which c'tor is called.  Uses
 an input range interface.
 </td>
 					</tr>
@@ -382,6 +414,28 @@ an input range interface.
 						<td>Tests whether T is an input range whose elements can be implicitly
 converted to doubles.
 </td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Global variables</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="logFactorialTable" class="public" href="../dstats/base/logFactorialTable.html">
+								<code>logFactorialTable</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">immutable(double[])</code>
+						</td>
+						<td></td>
 					</tr>
 				</table>
 			</section>

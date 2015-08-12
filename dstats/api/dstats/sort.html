@@ -76,7 +76,7 @@ $('#symbolSearchPane').show();
 			<h1>Module dstats.sort</h1>
 			<p>A comprehensive sorting library for statistical functions.  Each function
 takes N arguments, which are arrays or array-like objects, sorts the first
-and sorts the rest in lockstep.  For merge and insertion sort, if the last
+and sorts the rest in lockstep.  For <a href="../dstats/sort/merge.html"><code class="prettyprint lang-d">merge</code></a> and insertion sort, if the last
 argument is a ulong*, increments the dereference of this ulong* by the bubble
 sort distance between the first argument and the sorted version of the first
 argument.  This is useful for some statistical calculations.
@@ -154,6 +154,14 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
 					</tr>
 					<tr>
 						<td>
+							<a id="heapSortImpl" class="public" href="../dstats/sort/heapSortImpl.html">
+								<code>heapSortImpl</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
 							<a id="insertionSort" class="public" href="../dstats/sort/insertionSort.html">
 								<code>insertionSort</code>
 							</a>
@@ -164,6 +172,54 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
  the dereference of this argument by the bubble sort distance between the
  input array and the sorted version of the input.
 </td>
+					</tr>
+					<tr>
+						<td>
+							<a id="insertionSortImpl" class="public" href="../dstats/sort/insertionSortImpl.html">
+								<code>insertionSortImpl</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="intIsNaN" class="public" href="../dstats/sort/intIsNaN.html">
+								<code>intIsNaN</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="makeMultiHeap" class="public" href="../dstats/sort/makeMultiHeap.html">
+								<code>makeMultiHeap</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="medianOf3" class="public" href="../dstats/sort/medianOf3.html">
+								<code>medianOf3</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="merge" class="public" href="../dstats/sort/merge.html">
+								<code>merge</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mergeInPlace" class="public" href="../dstats/sort/mergeInPlace.html">
+								<code>mergeInPlace</code>
+							</a>
+						</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>
@@ -180,14 +236,30 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
 					</tr>
 					<tr>
 						<td>
+							<a id="mergeSortImpl" class="public" href="../dstats/sort/mergeSortImpl.html">
+								<code>mergeSortImpl</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
 							<a id="mergeSortInPlace" class="public" href="../dstats/sort/mergeSortInPlace.html">
 								<code>mergeSortInPlace</code>
 							</a>
 						</td>
-						<td>In-place merge sort, based on C++ STL's stable_sort().  O(N log<sup>2</sup> N)
+						<td>In-place <a href="../dstats/sort/merge.html"><code class="prettyprint lang-d">merge</code></a> sort, based on C++ STL's stable_sort().  O(N log<sup>2</sup> N)
  time complexity, O(1) space complexity, stable.  Much slower than plain
  old <a href="../dstats/sort/mergeSort.html"><code class="prettyprint lang-d">mergeSort</code></a>(), so only use it if you really need the O(1) space.
 </td>
+					</tr>
+					<tr>
+						<td>
+							<a id="mergeSortInPlaceImpl" class="public" href="../dstats/sort/mergeSortInPlaceImpl.html">
+								<code>mergeSortInPlaceImpl</code>
+							</a>
+						</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>
@@ -201,6 +273,14 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
  as <code class="prettyprint lang-d">mergeSortTemp</code>(D, D, D, T, T, T, U) or <code class="prettyprint lang-d">mergeSortTemp</code>(D, D, D, T, T, T)
  where each D has a T of corresponding type.
 </td>
+					</tr>
+					<tr>
+						<td>
+							<a id="multiSiftDown" class="public" href="../dstats/sort/multiSiftDown.html">
+								<code>multiSiftDown</code>
+							</a>
+						</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>
@@ -219,6 +299,38 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
 					</tr>
 					<tr>
 						<td>
+							<a id="partitionKImpl" class="public" href="../dstats/sort/partitionKImpl.html">
+								<code>partitionKImpl</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="postProcess" class="public" href="../dstats/sort/postProcess.html">
+								<code>postProcess</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="postProcess" class="public" href="../dstats/sort/postProcess.html">
+								<code>postProcess</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="prepareForSorting" class="public" href="../dstats/sort/prepareForSorting.html">
+								<code>prepareForSorting</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
 							<a id="qsort" class="public" href="../dstats/sort/qsort.html">
 								<code>qsort</code>
 							</a>
@@ -226,6 +338,14 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
 						<td>Quick sort.  Unstable, O(N log N) time average, worst
  case, O(log N) space, small constant term in time complexity.
 </td>
+					</tr>
+					<tr>
+						<td>
+							<a id="qsortImpl" class="public" href="../dstats/sort/qsortImpl.html">
+								<code>qsortImpl</code>
+							</a>
+						</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>
@@ -237,6 +357,48 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
  in the input array in O(N) time.  Allocates memory, does not modify input
  array.
 </td>
+					</tr>
+					<tr>
+						<td>
+							<a id="removeWhitespace" class="public" href="../dstats/sort/removeWhitespace.html">
+								<code>removeWhitespace</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rotateLeft" class="public" href="../dstats/sort/rotateLeft.html">
+								<code>rotateLeft</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rotateRight" class="public" href="../dstats/sort/rotateRight.html">
+								<code>rotateRight</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="SortException" class="public" href="../dstats/sort/SortException.html">
+								<code>SortException</code>
+							</a>
+						</td>
+						<td></td>
 					</tr>
 				</table>
 			</section>
@@ -262,6 +424,77 @@ assert(baz == [-1.0, 0, 1, -2, -3]);
  in memory. If less than N datapoints have been entered, all are contained in
  the structure.
 </td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Templates</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="isSimpleComparison" class="public" href="../dstats/sort/isSimpleComparison.html">
+								<code>isSimpleComparison</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enum values</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="DATA" class="public" href="../dstats/sort/DATA.html">
+								<code>DATA</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TEMP" class="public" href="../dstats/sort/TEMP.html">
+								<code>TEMP</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="ArrayElemType" class="public" href="../dstats/sort/ArrayElemType.html">
+								<code>ArrayElemType</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">T</code>
+						</td>
+						<td></td>
 					</tr>
 				</table>
 			</section>

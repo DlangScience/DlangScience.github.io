@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct Joint</title>
+		<title>Function joint</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,12 +73,26 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct Joint</h1>
+			<h1>Function joint</h1>
 			<section>
-				<p>Iterate over a set of ranges by value in lockstep and return an ObsEnt,
- which is used internally by <a href="../../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> functions on each iteration.
+				<p>Bind a set of ranges together to represent a <code class="prettyprint lang-d">joint</code> probability distribution.
 </p>
+<section>
+</section>
 
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/infotheory/Joint.html">Joint</a>!(FlattenType!T) joint(T...)(
+&nbsp;&nbsp;T args
+);</pre>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">auto foo = [1,2,3,1,1];
+auto bar = [2,4,6,2,2];
+auto e = <a href="../../dstats/infotheory/entropy.html">entropy</a>(joint(foo, bar));  // Calculate joint <a href="../../dstats/infotheory/entropy.html">entropy</a> of foo, bar.
+</pre>
+</section>
 
 			</section>
 			<section>

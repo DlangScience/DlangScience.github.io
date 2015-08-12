@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct Mean</title>
+		<title>Function mean</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,109 +73,20 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct Mean</h1>
+			<h1>Function mean</h1>
 			<section>
-				<p>Output range to calculate the <a href="../../dstats/summary/Mean.mean.html"><code class="prettyprint lang-d">mean</code></a> online.  Getter for <a href="../../dstats/summary/Mean.mean.html"><code class="prettyprint lang-d">mean</code></a> costs a branch to
- check for <a href="../../dstats/summary/Mean.N.html"><code class="prettyprint lang-d">N</code></a> == 0.  This struct uses O(1) space and does *NOT* store the
- individual elements.
-</p>
-<section>
-</section>
-
-					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Mean.mean.html" class="public property"><code>mean</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Mean.N.html" class="public property"><code>N</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Mean.sum.html" class="public property"><code>sum</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Mean.toMean.html" class="public property"><code>toMean</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/Mean.html">Mean</a></code></td>
-								<td>Simply returns this.  Useful in generic programming contexts.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Mean.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Mean.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td>Adds the contents of <a href="../../dstats/summary/Mean.put.html#rhs"><code class="prettyprint lang-d">rhs</code></a> to this instance.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/summary/Mean.toString.html" class="public">
-										<code>toString</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Note</h3>
-<p>This struct can implicitly convert to the value of the <a href="../../dstats/summary/Mean.mean.html"><code class="prettyprint lang-d">mean</code></a>.
+				<p>Finds the arithmetic <code class="prettyprint lang-d">mean</code> of any input range whose elements are implicitly
+ convertible to double.
 </p>
 
-</section>
-<section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">Mean summ;
-summ.put(1);
-summ.put(2);
-summ.put(3);
-summ.put(4);
-summ.put(5);
-assert(summ.mean == 3);
-</pre>
-</section>
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/summary/Mean.html">Mean</a> mean(T)(
+&nbsp;&nbsp;T data
+)
+if (doubleIterable!T);</pre>
+					</section>
 
 			</section>
 			<section>

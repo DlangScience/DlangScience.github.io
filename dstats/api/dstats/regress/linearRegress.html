@@ -107,7 +107,7 @@ for inference, each range must be traversed twice.  This means:
 
 <p>The X ranges are traversed in lockstep, but the traversal is stopped
 at the end of the shortest one.  Therefore, using infinite ranges is safe.
-For example, using repeat(1) to get an intercept term works.
+For example, using <a href="../../dstats/regress/repeat.html"><code class="prettyprint lang-d">repeat</code></a>(1) to get an intercept term works.
 </p>
 
 <p>If the confidence interval specified is exactly 0, this is treated as a
@@ -132,11 +132,11 @@ int[] musicVolume = [3,1,4,1,5,9,2];
 int[] programmingSkill = [2,7,1,8,2,8,1];
 
 // Using default confidence interval:
-auto results = linearRegress(programmingSkill, repeat(1), nBeers, nCoffees,
+auto results = linearRegress(programmingSkill, <a href="../../dstats/regress/repeat.html">repeat</a>(1), nBeers, nCoffees,
     musicVolume, map!"a * a"(musicVolume));
 
 // Using user-specified confidence interval:
-auto results = linearRegress(programmingSkill, repeat(1), nBeers, nCoffees,
+auto results = linearRegress(programmingSkill, <a href="../../dstats/regress/repeat.html">repeat</a>(1), nBeers, nCoffees,
     musicVolume, map!"a * a"(musicVolume), 0.8675309);
 </pre>
 </section>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function loess1D</title>
+		<title>Class Loess1D</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,76 +73,103 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Function loess1D</h1>
+			<h1>Class Loess1D</h1>
 			<section>
-				<p>This function performs loess regression.  Loess regression is a local
-regression procedure, where a prediction of the dependent (<a href="../../dstats/regress/loess1D.html#y"><code class="prettyprint lang-d">y</code></a>) variable
-is made from an observation of the independent (<a href="../../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a>) variable by weighted
-least squares over <a href="../../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a> values in the neighborhood of the value being evaluated.
+				<p>This class is returned from the <a href="../../dstats/regress/loess1D.html"><code class="prettyprint lang-d">loess1D</code></a> function and holds the state of a
+loess regression with one predictor variable.
 </p>
-<section>
-<p>In the future a separate function may be included to perform loess regression
-with multiple predictors.  However, one predictor is the much more common
-case and the multiple predictor case will require a much different API
-and implementation, so for now only one predictor is supported.
-</p>
-
-</section>
 
 					<section>
-						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
-<a href="../../dstats/regress/Loess1D.html">Loess1D</a> loess1D(RX, RY)(
-&nbsp;&nbsp;RY y,
-&nbsp;&nbsp;RX x,
-&nbsp;&nbsp;double span,
-&nbsp;&nbsp;int degree = 1
-);</pre>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><code class="prettyprint lang-d">Object</code></code>
+ (base class)
+							</li>
+						</ul>
 					</section>
-<section><h3>Parameters</h3>
-<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="y">y</td><td> Observations of the dependent variable.</td></tr>
-<tr><td id="x">x</td><td> Observations of the independent variable.</td></tr>
-<tr><td id="span">span</td><td> The fraction of <a href="../../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a> observations considered to be "in the neighborhood"
-         when performing local regression to predict the <a href="../../dstats/regress/loess1D.html#y"><code class="prettyprint lang-d">y</code></a> value for a new <a href="../../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a>.
-         For example, if 8 observations are provided and <a href="../../dstats/regress/loess1D.html#span"><code class="prettyprint lang-d">span</code></a> == 0.5,
-         the 4 nearest neighbors will be used on evaluation.</td></tr>
-<tr><td id="degree">degree</td><td> The polynomial <a href="../../dstats/regress/loess1D.html#degree"><code class="prettyprint lang-d">degree</code></a> of the local regression.  Must be less than
-         the number of neighbors (<a href="../../dstats/regress/loess1D.html#span"><code class="prettyprint lang-d">span</code></a> * x.length).
-</td></tr>
-</table>
-</section>
-<section><h3>Returns</h3>
-
-<p>A <a href="../../dstats/regress/Loess1D.html"><code class="prettyprint lang-d">Loess1D</code></a> object.  This object can be used to make predictions based on
-the loess model.  The computations involved are done lazily, i.e. this
-function sets up the <a href="../../dstats/regress/Loess1D.html"><code class="prettyprint lang-d">Loess1D</code></a> instance and returns without computing
-any regression models.
-</p>
-
-</section>
-<section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto <a href="../../dstats/regress/loess1D.html#x">x</a> = [1, 2, 3, 4, 5, 6, 7];
-auto <a href="../../dstats/regress/loess1D.html#y">y</a> = [3, 6, 2, 4, 3, 6, 8];
-
-// Build the <a href="../../dstats/regress/Loess1D.html">Loess1D</a> object.
-auto model = loess1D(<a href="../../dstats/regress/loess1D.html#y">y</a>, <a href="../../dstats/regress/loess1D.html#x">x</a>, 0.5);
-
-// Compute the weights for robust regression.
-model.computeRobustWeights(2);
-
-// Predict the value of <a href="../../dstats/regress/loess1D.html#y">y</a> when <a href="../../dstats/regress/loess1D.html#x">x</a> == 5.5, using a robustness level of 2.
-auto prediction = model.predict(5.5, 2);
-</pre>
-
-</section>
-<section><h3>References</h3>
-
-<p>Cleveland, W.S. (1979). "Robust Locally Weighted Regression and Smoothing
-Scatterplots". Journal of the American Statistical Association 74 (368):
-829-836.
-</p>
-</section>
+					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/Loess1D.degree.html" class="public property"><code>degree</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">int</code></td>
+								<td>The polynomial <code class="prettyprint lang-d">degree</code> for the local regression.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/Loess1D.x.html" class="public property"><code>x</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">const(double)[]</code></td>
+								<td>The <code class="prettyprint lang-d">x</code> values provided on object creation.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/Loess1D.y.html" class="public property"><code>y</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">const(double)[]</code></td>
+								<td>The <code class="prettyprint lang-d">y</code> values provided on object creation.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/Loess1D.computeRobustWeights.html" class="public">
+										<code>computeRobustWeights</code>
+									</a>
+								</td>
+								<td>    Compute the weights for robust loess, for all <a href="../../dstats/regress/Loess1D.computeRobustWeights.html#robustness"><code class="prettyprint lang-d">robustness</code></a> levels &lt;= the
+    <a href="../../dstats/regress/Loess1D.computeRobustWeights.html#robustness"><code class="prettyprint lang-d">robustness</code></a> parameter.  This computation is embarrassingly parallel, so if a
+    TaskPool is provided it will be parallelized.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/Loess1D.predict.html" class="public">
+										<code>predict</code>
+									</a>
+								</td>
+								<td>    Predict the value of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> when <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> == <a href="../../dstats/regress/Loess1D.predict.html#point"><code class="prettyprint lang-d">point</code></a>, using <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> iterations
+    of the biweight procedure outlined in the reference to make the
+    estimates more robust.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/regress/Loess1D.predictions.html" class="public">
+										<code>predictions</code>
+									</a>
+								</td>
+								<td>    Obtain smoothed <code class="prettyprint lang-d">predictions</code> of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> at the values of <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> provided on creation
+    of this object, for the given level of <a href="../../dstats/regress/Loess1D.predictions.html#robustness"><code class="prettyprint lang-d">robustness</code></a>.  Evaluating
+    these is computationally expensive and may be parallelized by
+    providing a TaskPool object.
+</td>
+							</tr>
+						</table>
+					</section>
 
 			</section>
 			<section>

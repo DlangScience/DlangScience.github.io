@@ -81,6 +81,24 @@ $('#symbolSearchPane').show();
 </section>
 
 					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/TreeAaIter.tree.html" class="public"><code>tree</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">T</code></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
 						<h3>Properties</h3>
 						<table>
 							<col class="caption"/>
@@ -117,10 +135,44 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/TreeAaIter.IterType.html" class="public">
+										<code>IterType</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/TreeAaIter.mFun.html" class="public">
+										<code>mFun</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/TreeAaIter.Node.html" class="public">
+										<code>Node</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
 <section><h3>Bugs</h3>
 <p>Uses <a href="../../dstats/alloc/TreeAaIter.opApply.html"><code class="prettyprint lang-d">opApply</code></a> instead of the more flexible ranges, because I
  haven't figured out how to iterate efficiently and in sorted order over a
- tree without control of the stack.
+ <a href="../../dstats/alloc/TreeAaIter.tree.html"><code class="prettyprint lang-d">tree</code></a> without control of the stack.
 </p>
 </section>
 

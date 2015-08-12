@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function medianAbsDev</title>
+		<title>Struct MedianAbsDev</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,33 +73,37 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Function medianAbsDev</h1>
+			<h1>Struct MedianAbsDev</h1>
 			<section>
-				<p>Calculates the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation of a dataset.  This is the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a>
- of all absolute differences from the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> of the dataset.
+				<p>Plain old data holder struct for <a href="../../dstats/summary/MedianAbsDev.median.html"><code class="prettyprint lang-d">median</code></a>, <a href="../../dstats/summary/MedianAbsDev.median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation.
+ Alias this'd to the <a href="../../dstats/summary/MedianAbsDev.median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation member.
 </p>
-<section>
-</section>
 
 					<section>
-						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
-<a href="../../dstats/summary/MedianAbsDev.html">MedianAbsDev</a> medianAbsDev(T)(
-&nbsp;&nbsp;T data
-)
-if (doubleInput!T);</pre>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/summary/MedianAbsDev.median.html" class="public"><code>median</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/summary/MedianAbsDev.medianAbsDev.html" class="public"><code>medianAbsDev</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td></td>
+							</tr>
+						</table>
 					</section>
-<section><h3>Returns</h3>
-<p>A <a href="../../dstats/summary/MedianAbsDev.html"><code class="prettyprint lang-d">MedianAbsDev</code></a> struct that contains the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> (since it is
- computed anyhow) and the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation.
-</p>
-
-</section>
-<section><h3>Notes</h3>
-<p>No bias correction is used in this implementation, since using
- one would require assumptions about the underlying distribution of the <a href="../../dstats/summary/medianAbsDev.html#data"><code class="prettyprint lang-d">data</code></a>.
-</p>
-</section>
 
 			</section>
 			<section>

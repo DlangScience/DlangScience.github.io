@@ -106,6 +106,52 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.alloc.html" class="public"><code>alloc</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html">RegionAllocator</a></code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.freeList.html" class="public"><code>freeList</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html">StackTreeAA.<wbr/>Node</a>**</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.rKeys.html" class="public"><code>rKeys</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">Unqual!K[]</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.rNext.html" class="public"><code>rNext</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html">StackTreeAA.<wbr/>Node</a>*[]</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet._length.html" class="public"><code>_length</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
 						<h3>Properties</h3>
 						<table>
 							<col class="caption"/>
@@ -134,6 +180,14 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../dstats/alloc/StackSet.allocNode.html" class="public">
+										<code>allocNode</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../dstats/alloc/StackSet.elems.html" class="public">
 										<code>elems</code>
 									</a>
@@ -144,8 +198,24 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../dstats/alloc/StackSet.getHash.html" class="public">
+										<code>getHash</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../dstats/alloc/StackSet.insert.html" class="public">
 										<code>insert</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.newNode.html" class="public">
+										<code>newNode</code>
 									</a>
 								</td>
 								<td></td>
@@ -160,8 +230,50 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../dstats/alloc/StackSet.pushFreeList.html" class="public">
+										<code>pushFreeList</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../dstats/alloc/StackSet.remove.html" class="public">
 										<code>remove</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.usedSentinel.html" class="public">
+										<code>usedSentinel</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Inner structs</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.Node1.html" class="public">
+										<code>Node1</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/alloc/StackSet.Node2.html" class="public">
+										<code>Node2</code>
 									</a>
 								</td>
 								<td></td>
@@ -169,8 +281,8 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
-auto ss = StackSet!(uint)(5, alloc);
+<pre class="code prettyprint lang-d">auto <a href="../../dstats/alloc/StackSet.alloc.html">alloc</a> = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+auto ss = StackSet!(uint)(5, <a href="../../dstats/alloc/StackSet.alloc.html">alloc</a>);
 foreach(i; 0..5) {
     ss.insert(i);
 }

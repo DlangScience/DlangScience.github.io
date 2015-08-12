@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct ParamFunctor</title>
+		<title>Function paramFunctor</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,10 +73,31 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct ParamFunctor</h1>
+			<h1>Function paramFunctor</h1>
 			<section>
-				<p></p>
+				<p>Takes a distribution function (CDF or PDF/PMF) as a template argument, and
+ <a href="../../dstats/distrib/paramFunctor.html#parameters"><code class="prettyprint lang-d">parameters</code></a> as function arguments in the order that they appear in the
+ function declaration and returns a functor that binds the supplied
+ <a href="../../dstats/distrib/paramFunctor.html#parameters"><code class="prettyprint lang-d">parameters</code></a> to the distribution function.  Assumes the non-parameter
+ argument is the first argument to the distribution function.
+</p>
+<section>
+</section>
 
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/distrib/ParamFunctor.html">ParamFunctor</a>!distrib paramFunctor(alias distrib)(
+&nbsp;&nbsp;ParameterTypeTuple!distrib[1..__dollar] parameters
+);</pre>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">auto stdNormal = paramFunctor!(<a href="../../dstats/distrib/normalCDF.html">normalCDF</a>)(0.0L, 1.0L);
+</pre>
+
+<p> stdNormal is now a functor for the normal(0, 1) distribution.
+</p>
+</section>
 
 			</section>
 			<section>

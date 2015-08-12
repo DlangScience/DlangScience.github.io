@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct PearsonCor</title>
+		<title>Function pearsonCor</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,132 +73,30 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct PearsonCor</h1>
+			<h1>Function pearsonCor</h1>
 			<section>
-				<p>Allows computation of mean, stdev, variance, <a href="../../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a>, Pearson correlation online.
- Getters for stdev, var, <a href="../../dstats/cor/PearsonCor.cov.html"><code class="prettyprint lang-d">cov</code></a>, <a href="../../dstats/cor/PearsonCor.cor.html"><code class="prettyprint lang-d">cor</code></a> cost floating point division ops.  Getters
- for means cost a single branch to check for <a href="../../dstats/cor/PearsonCor.N.html"><code class="prettyprint lang-d">N</code></a> == 0.  This struct uses O(1)
- space.
+				<p>Convenience function for calculating Pearson correlation.
+ When the term correlation is used unqualified, it is
+ usually referring to this quantity.  This is a parametric correlation
+ metric and should not be used with extremely ill-behaved data.
+ This function works with any pair of input ranges.
 </p>
 <section>
-<p> <a href="../../dstats/cor/PearsonCor.cor.html"><code class="prettyprint lang-d">PearsonCor.cor</code></a> is alias this'd, so if this struct is used as a float, it will
- be converted to a simple correlation coefficient automatically.
-</p>
-
 </section>
 
 					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.cor.html" class="public property"><code>cor</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.cov.html" class="public property"><code>cov</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.mean1.html" class="public property"><code>mean1</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.mean2.html" class="public property"><code>mean2</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.N.html" class="public property"><code>N</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.stdev1.html" class="public property"><code>stdev1</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.stdev2.html" class="public property"><code>stdev2</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.var1.html" class="public property"><code>var1</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.var2.html" class="public property"><code>var2</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td></td>
-							</tr>
-						</table>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/cor/PearsonCor.html">PearsonCor</a> pearsonCor(T, U)(
+&nbsp;&nbsp;T input1,
+&nbsp;&nbsp;U input2
+)
+if (doubleInput!T &amp;&amp; doubleInput!U);</pre>
 					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/cor/PearsonCor.put.html" class="public">
-										<code>put</code>
-									</a>
-								</td>
-								<td>Combine two <a href="../../dstats/cor/PearsonCor.html"><code class="prettyprint lang-d">PearsonCor</code></a>'s.
-</td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Bugs</h3>
-<p>Alias this disabled due to compiler bugs.
+<section><h3>Note</h3>
+<p>The <a href="../../dstats/cor/PearsonCor.html"><code class="prettyprint lang-d">PearsonCor</code></a> struct returned by this function is alias this'd to the
+ correlation coefficient.  Therefore, the result from this function can
+ be treated simply as a floating point number.
 </p>
 
 </section>

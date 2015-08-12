@@ -106,6 +106,38 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.n.html" class="public"><code>n</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.nAdded.html" class="public"><code>nAdded</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.nodes.html" class="public"><code>nodes</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d">T[]</code></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section>
 						<h3>Methods</h3>
 						<table>
 							<col class="caption"/>
@@ -144,6 +176,24 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dstats/sort/TopN.comp.html" class="public">
+										<code>comp</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
 <section><h3>Examples</h3>
 <pre class="code prettyprint lang-d">Random gen;
 gen.seed(unpredictableSeed);
@@ -151,9 +201,9 @@ uint[] nums = seq(0U, 100U);
 auto less = TopN!(uint, "a < b")(10);
 auto more = TopN!(uint, "a > b")(10);
 randomShuffle(nums, gen);
-foreach(n; nums) {
-    less.put(n);
-    more.put(n);
+foreach(<a href="../../dstats/sort/TopN.n.html">n</a>; nums) {
+    less.put(<a href="../../dstats/sort/TopN.n.html">n</a>);
+    more.put(<a href="../../dstats/sort/TopN.n.html">n</a>);
 }
  assert(less.getSorted == [0U, 1,2,3,4,5,6,7,8,9]);
  assert(more.getSorted == [99U, 98, 97, 96, 95, 94, 93, 92, 91, 90]);

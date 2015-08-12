@@ -80,6 +80,22 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function byCategory</h2>
+				<p>Special case implementation for when ElementType!C is boolean.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+ElementType!V[][2] byCategory(V, C)(
+&nbsp;&nbsp;V values,
+&nbsp;&nbsp;C categories
+)
+if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool));</pre>
+					</section>
+
+			</section>
+			<section>
+				<h2>Function byCategory</h2>
 				<p>Given a range of <a href="../../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a> and a range of <a href="../../dstats/base/byCategory.html#categories"><code class="prettyprint lang-d">categories</code></a>, separates <a href="../../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a>
  by category.  This function also guarantees that the order within each
  category will be maintained.
@@ -108,26 +124,10 @@ if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; !is(ElementType!C == boo
 <section><h3>Examples</h3>
 <pre class="code prettyprint lang-d">uint[] <a href="../../dstats/base/byCategory.html#values">values</a> = [1,2,3,4,5,6,7,8];
 bool[] <a href="../../dstats/base/byCategory.html#categories">categories</a> = [false, false, false, false, true, true, true, true];
-auto separated = byCategory(<a href="../../dstats/base/byCategory.html#values">values</a>, <a href="../../dstats/base/byCategory.html#categories">categories</a>);
+auto separated = <a href="../../dstats/base/byCategory.html">byCategory</a>(<a href="../../dstats/base/byCategory.html#values">values</a>, <a href="../../dstats/base/byCategory.html#categories">categories</a>);
 auto tResult = studentsTTest(separated.values);
 </pre>
 </section>
-
-			</section>
-			<section>
-				<h2>Function byCategory</h2>
-				<p>Special case implementation for when ElementType!C is boolean.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
-ElementType!V[][2] byCategory(V, C)(
-&nbsp;&nbsp;V values,
-&nbsp;&nbsp;C categories
-)
-if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool));</pre>
-					</section>
 
 			</section>
 			<section>

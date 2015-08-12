@@ -80,51 +80,6 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function pairedTTest</h2>
-				<p>Compute a paired T test directly from summary statistics of the differences
-between corresponding samples.
-</p>
-<section>
-</section>
-
-					<section>
-						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
-<a href="../../dstats/tests/ConfInt.html">ConfInt</a> pairedTTest(T)(
-&nbsp;&nbsp;T diffSummary,
-&nbsp;&nbsp;double testMean = 0,
-&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
-&nbsp;&nbsp;double confLevel = 0.95
-)
-if (isSummary!T);</pre>
-					</section>
-<section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">float[] data1 = [8, 6, 7, 5, 3, 0, 9];
-float[] data2 = [3, 6, 2, 4, 3, 6, 8];
-
-// Calculate summary statistics on difference explicitly.
-MeanSD summary;
-foreach(i; 0..data1.length) {
-    summary.put(data1[i] - data2[i]);
-}
-
-// Test the null hypothesis that the mean difference between corresponding
-// elements (data1[i] - data2[i]) is greater than 5 against the null that it
-// is <= 5.  Calculate confidence intervals at 99%.
-auto result = pairedTTest(summary, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
-
-// This is equivalent to:
-auto result2 = pairedTTest(data1, data2, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
-</pre>
-
-</section>
-<section><h3>References</h3>
-<p>http://en.wikipedia.org/wiki/Student%27s_t-test
-</p>
-</section>
-
-			</section>
-			<section>
-				<h2>Function pairedTTest</h2>
 				<p>Paired T test.  Tests the hypothesis that the mean difference between
 corresponding elements of <a href="../../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> is <a href="../../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.  Alternatives are
 <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning the that the true mean difference (<a href="../../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a>[i] - <a href="../../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a>[i])
@@ -156,6 +111,51 @@ if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; isInputRange!T &amp;&amp; 
 boundaries of the confidence interval for the mean difference between
 corresponding elements of sample1 and sample2 at the specified level.
 </p>
+
+</section>
+<section><h3>References</h3>
+<p>http://en.wikipedia.org/wiki/Student%27s_t-test
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function pairedTTest</h2>
+				<p>Compute a paired T test directly from summary statistics of the differences
+between corresponding samples.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/tests/ConfInt.html">ConfInt</a> pairedTTest(T)(
+&nbsp;&nbsp;T diffSummary,
+&nbsp;&nbsp;double testMean = 0,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;double confLevel = 0.95
+)
+if (isSummary!T);</pre>
+					</section>
+<section><h3>Examples</h3>
+<pre class="code prettyprint lang-d">float[] data1 = [8, 6, 7, 5, 3, 0, 9];
+float[] data2 = [3, 6, 2, 4, 3, 6, 8];
+
+// Calculate summary statistics on difference explicitly.
+MeanSD summary;
+foreach(i; 0..data1.length) {
+    summary.put(data1[i] - data2[i]);
+}
+
+// Test the null hypothesis that the mean difference between corresponding
+// elements (data1[i] - data2[i]) is greater than 5 against the null that it
+// is <= 5.  Calculate confidence intervals at 99%.
+auto result = <a href="../../dstats/tests/pairedTTest.html">pairedTTest</a>(summary, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
+
+// This is equivalent to:
+auto result2 = <a href="../../dstats/tests/pairedTTest.html">pairedTTest</a>(data1, data2, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
+</pre>
 
 </section>
 <section><h3>References</h3>

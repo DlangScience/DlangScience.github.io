@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct Comb</title>
+		<title>Function comb</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,131 +73,24 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct Comb</h1>
+			<h1>Function comb</h1>
 			<section>
-				<p>Generates every possible combination of r elements of the given sequence, or
-array indices from zero to N, depending on which c'tor is called.  Uses
-an input range interface.
+				<p>Create a <a href="../../dstats/base/Comb.html"><code class="prettyprint lang-d">Comb</code></a> struct from a range or of a set of bounds.
 </p>
 <section>
 </section>
 
 					<section>
-						<h3>Constructors</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Comb.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>General ctor.  <a href="../../dstats/base/Comb.this.html#array"><code class="prettyprint lang-d">array</code></a> is a sequence from which to generate the
- combinations.  <a href="../../dstats/base/Comb.this.html#r"><code class="prettyprint lang-d">r</code></a> is the <a href="../../dstats/base/Comb.length.html"><code class="prettyprint lang-d">length</code></a> of the combinations to be generated.
-</td>
-							</tr>
-						</table>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+auto comb(T)(
+&nbsp;&nbsp;T stuff,
+&nbsp;&nbsp;uint r
+);</pre>
 					</section>
-					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Comb.empty.html" class="public property"><code>empty</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Comb.front.html" class="public property"><code>front</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">const(T)[]</code></td>
-								<td>    Gets the current combination.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Comb.length.html" class="public property"><code>length</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Comb.save.html" class="public property"><code>save</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(this)</code></td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/base/Comb.popFront.html" class="public">
-										<code>popFront</code>
-									</a>
-								</td>
-								<td>    Advances to the next combination.  The array returned by <a href="../../dstats/base/Comb.front.html"><code class="prettyprint lang-d">front</code></a> will be
-    overwritten with the new results.
-</td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Note</h3>
-<p>The buffer that is returned by <a href="../../dstats/base/Comb.front.html"><code class="prettyprint lang-d">front</code></a> is recycled across iterations.
-To duplicate it instead, use map!"a.dup" or map!"a.idup".
-</p>
-
-</section>
-<section><h3>Bugs</h3>
-<p>Only supports iterating over up to size_t.max combinations.
-This was a conscious tradeoff to allow this range to have a
-<a href="../../dstats/base/Comb.length.html"><code class="prettyprint lang-d">length</code></a> of type size_t, since iterating over such huge combination spaces
-would be insanely slow anyhow.
-</p>
-
-</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto comb1 = map!"a.dup"(Comb!(uint)(5, 2));
-uint[][] vals;
-foreach(c; comb1) {
-    vals ~= c;
-}
-auto sorted = sort(vals);
-assert(sorted.canFind([0u,1]));
-assert(sorted.canFind([0u,2]));
-assert(sorted.canFind([0u,3]));
-assert(sorted.canFind([0u,4]));
-assert(sorted.canFind([1u,2]));
-assert(sorted.canFind([1u,3]));
-assert(sorted.canFind([1u,4]));
-assert(sorted.canFind([2u,3]));
-assert(sorted.canFind([2u,4]));
-assert(sorted.canFind([3u,4]));
-assert(sorted.length == 10);
+<pre class="code prettyprint lang-d">auto c1 = comb([1,2,3], 2);  // Any two elements from [1,2,3].
+auto c2 = comb(5, 3);  // Any three elements from [0,1,2,3,4].
 </pre>
 </section>
 

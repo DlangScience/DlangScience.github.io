@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct Residuals</title>
+		<title>Function residuals</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -73,11 +73,22 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct Residuals</h1>
+			<h1>Function residuals</h1>
 			<section>
-				<p>Forward Range for holding the <a href="../../dstats/regress/residuals.html"><code class="prettyprint lang-d">residuals</code></a> from a regression analysis.
+				<p>Given the beta coefficients from a linear regression, and <a href="../../dstats/regress/residuals.html#X"><code class="prettyprint lang-d">X</code></a> and <a href="../../dstats/regress/residuals.html#Y"><code class="prettyprint lang-d">Y</code></a> values,
+ returns a range that lazily computes the <code class="prettyprint lang-d">residuals</code>.
 </p>
 
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../dstats/regress/Residuals.html">Residuals</a>!(F,U,T) residuals(F, U, T...)(
+&nbsp;&nbsp;F[] betas,
+&nbsp;&nbsp;U Y,
+&nbsp;&nbsp;T X
+)
+if (isFloatingPoint!F &amp;&amp; isForwardRange!U &amp;&amp; allSatisfy!(isForwardRange, T));</pre>
+					</section>
 
 			</section>
 			<section>

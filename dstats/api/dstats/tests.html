@@ -401,8 +401,12 @@ automatically, so they can sum to any value.
 								<code>pairedTTest</code>
 							</a>
 						</td>
-						<td>Compute a paired T test directly from summary statistics of the differences
-between corresponding samples.
+						<td>Paired T test.  Tests the hypothesis that the mean difference between
+corresponding elements of <a href="../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> is <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.  Alternatives are
+<a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning the that the true mean difference (<a href="../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a>[i] - <a href="../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a>[i])
+is less than <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning the true mean difference is
+greater than <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning the true mean difference is not
+equal to <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
 </td>
 					</tr>
 					<tr>
@@ -411,12 +415,8 @@ between corresponding samples.
 								<code>pairedTTest</code>
 							</a>
 						</td>
-						<td>Paired T test.  Tests the hypothesis that the mean difference between
-corresponding elements of <a href="../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> is <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.  Alternatives are
-<a href="../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning the that the true mean difference (<a href="../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a>[i] - <a href="../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a>[i])
-is less than <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, <a href="../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning the true mean difference is
-greater than <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning the true mean difference is not
-equal to <a href="../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+						<td>Compute a paired T test directly from summary statistics of the differences
+between corresponding samples.
 </td>
 					</tr>
 					<tr>
@@ -682,6 +682,16 @@ array elements.
 					</tr>
 					<tr>
 						<td>
+							<a id="isArrayLike" class="public" href="../dstats/tests/isArrayLike.html">
+								<code>isArrayLike</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
 							<a id="isSummary" class="public" href="../dstats/tests/isSummary.html">
 								<code>isSummary</code>
 							</a>
@@ -692,6 +702,67 @@ array elements.
 a T-test.  It must have a property .mean (mean), .stdev (stdandard deviation),
 .var (variance), and .N (sample size).
 </td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="chiSqrContingency" class="public" href="../dstats/tests/chiSqrContingency.html">
+								<code>chiSqrContingency</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chiSqrFit" class="public" href="../dstats/tests/chiSqrFit.html">
+								<code>chiSqrFit</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="kcorTest" class="public" href="../dstats/tests/kcorTest.html">
+								<code>kcorTest</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="pcorTest" class="public" href="../dstats/tests/pcorTest.html">
+								<code>pcorTest</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="scorTest" class="public" href="../dstats/tests/scorTest.html">
+								<code>scorTest</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
 					</tr>
 				</table>
 			</section>
