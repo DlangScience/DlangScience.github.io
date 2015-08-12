@@ -9,6 +9,9 @@ DlangScience's website
 * [requests](https://pypi.python.org/pypi/requests)
 
 ### Instructions
+
+###### BE ON A CASE-SENSITIVE FILESYSTEM! The page names in the api docs are case-sensitive and will be generated wrong on filesystems such as NTFS and the non-case-sensitive variant of HFS+ that is used by default on OS X.
+
 * have an up-to-date clone of ```https://github.com/DlangScience/DlangScience.github.io``` including submodules (either clone with ```--recursive``` or run ```git submodule update --init```.
 * ```git submodule update --remote``` to pull in the latest changes from the other DlangScience repos
 * ```./get_pages.sh``` to convert the mardown files to html, generate documentation and copy the results to the relevant directories
