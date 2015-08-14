@@ -1,7 +1,13 @@
-# Getting started as a DlangScience contributor
+# Getting started with DlangScience
 
 Here is a pre-alpha draft of a bit of "getting started" documentation...
 
+## Tips for newcomers
+
+* if you are new to the D programming language see http://dlang.org/getstarted.html
+* DlangScience depends heavily on [dub](http://code.dlang.org/getting_started) to manage package dependencies and versioning
+* for a quickstart tutorial, see [Getting Started in D](http://d.readthedocs.org/en/latest/index.html)
+* for a simple example using `dub` and a DlangScience module, see [here](https://github.com/DlangScience/cblas/tree/master/examples/gemmTest)
 
 ## Contributing to DlangScience
 
