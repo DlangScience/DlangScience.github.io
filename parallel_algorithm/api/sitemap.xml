@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>http://127.0.0.1/index.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/arrayOpImpl.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/arrayOpImpl.generateChunkCode.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/arrayOpImpl.parallelArrayOp.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/merge.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelAdjacentDifference.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelAdjacentFind.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelArrayOp.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelCount.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelCount.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelDotProduct.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelEqual.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelFind.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelFind.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelMerge.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelMergeInPlace.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelSort.html</loc></url>
+<url><loc>http://127.0.0.1/parallel_algorithm/parallelSortImpl.html</loc></url>
 </urlset>

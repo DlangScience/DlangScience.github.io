@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function parallelMerge</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li>
+								<a href="../parallel_algorithm.html" class="selected module">parallel_algorithm</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function parallelMerge</h1>
+			<section>
+				<p>Merge ranges <a href="../parallel_algorithm/parallelMerge.html#from1"><code class="prettyprint lang-d">from1</code></a> and <a href="../parallel_algorithm/parallelMerge.html#from2"><code class="prettyprint lang-d">from2</code></a>, which are assumed sorted according
+to pred, into <a href="../parallel_algorithm/parallelMerge.html#buf"><code class="prettyprint lang-d">buf</code></a> using a parallel divide-and-conquer algorithm.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+void parallelMerge(alias pred, R1, R2, R3)(
+&nbsp;&nbsp;R1 from1,
+&nbsp;&nbsp;R2 from2,
+&nbsp;&nbsp;R3 buf,
+&nbsp;&nbsp;size_t minParallel = 4096,
+&nbsp;&nbsp;TaskPool pool = null
+)
+if (allSatisfy!(finiteRandom, TypeTuple!(R1, R2, R3)) &amp;&amp; is(ElementType!R1 == ElementType!R2) &amp;&amp; is(ElementType!R2 == ElementType!R3) &amp;&amp; hasAssignableElements!R3);</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="from1">from1</td><td> The first of the two sorted ranges to be merged.  This must be a
+random access range with length.
+</td></tr>
+<tr><td id="from2">from2</td><td> The second of the two sorted ranges to be merged.  This must also
+be a random access range with length and must have an identical element type to
+$(D <a href="../parallel_algorithm/parallelMerge.html#from1"><code class="prettyprint lang-d">from1</code></a>).
+</td></tr>
+<tr><td id="buf">buf</td><td> The buffer to <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> into.  This must be a random access range with
+length equal to $(D from1.length + from2.length) and must have assignable
+elements.
+</td></tr>
+<tr><td id="minParallel">minParallel</td><td> The minimum <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> size to parallelize.  Smaller values
+create more parallel work units resulting in greater scalability but
+increased overhead.
+</td></tr>
+<tr><td id="pool">pool</td><td> The $(XREF parallelism, TaskPool) to use.  If null, the global
+default task <a href="../parallel_algorithm/parallelMerge.html#pool"><code class="prettyprint lang-d">pool</code></a> returned by $(XREF parallelism, taskPool) will be used.</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

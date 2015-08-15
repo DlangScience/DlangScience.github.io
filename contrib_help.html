@@ -1,9 +1,28 @@
 ---
 layout: default
 ---
-<h1>Getting started as a DlangScience contributor</h1>
+<h1>Getting started with DlangScience</h1>
 
 <p>Here is a pre-alpha draft of a bit of "getting started" documentation...</p>
+
+<h2>Tips for newcomers</h2>
+
+<ul>
+<li>if you are new to the D programming language see <a href="http://dlang.org/getstarted.html">http://dlang.org/getstarted.html</a>
+</li>
+<li>DlangScience depends heavily on <a href="http://code.dlang.org/getting_started">dub</a> to manage package dependencies and versioning</li>
+<li>for a quickstart tutorial, see <a href="http://d.readthedocs.org/en/latest/index.html">Getting Started in D</a>
+</li>
+<li>for a simple example using <code>dub</code> and a DlangScience module, see <a href="https://github.com/DlangScience/cblas/tree/master/examples/gemmTest">here</a>
+
+<ul>
+<li>for your own examples, change <code>"cblas": { "path": "../../" }</code> to something like <code>"cblas": "~&gt;0.1.0"</code>
+</li>
+<li>if you are using a new dub.sdl config file, add a line like: <code>dependency "cblas" version="~&gt;0.1.0"</code>
+</li>
+</ul>
+</li>
+</ul>
 
 <h2>Contributing to DlangScience</h2>
 

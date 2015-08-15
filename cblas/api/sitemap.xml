@@ -51,7 +51,9 @@
 <url><loc>http://127.0.0.1/cblas/cblas/CBLAS_DIAG.Unit.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_dnrm2.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_drot.html</loc></url>
+<url><loc>http://127.0.0.1/cblas/cblas/cblas_drotg.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_drotm.html</loc></url>
+<url><loc>http://127.0.0.1/cblas/cblas/cblas_drotmg.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_dsbmv.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_dscal.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_dsdot.html</loc></url>
@@ -99,7 +101,9 @@
 <url><loc>http://127.0.0.1/cblas/cblas/CBLAS_SIDE.Right.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_snrm2.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_srot.html</loc></url>
+<url><loc>http://127.0.0.1/cblas/cblas/cblas_srotg.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_srotm.html</loc></url>
+<url><loc>http://127.0.0.1/cblas/cblas/cblas_srotmg.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_ssbmv.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_sscal.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_sspmv.html</loc></url>

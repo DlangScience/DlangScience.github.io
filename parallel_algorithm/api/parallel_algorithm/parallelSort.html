@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function parallelSort</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li>
+								<a href="../parallel_algorithm.html" class="selected module">parallel_algorithm</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function parallelSort</h1>
+			<section>
+				<p>Sort a <a href="../parallel_algorithm/parallelSort.html#range"><code class="prettyprint lang-d">range</code></a> using a parallel <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> sort algorithm, falling back to
+baseAlgorithm for small subranges.  Usage is similar to
+algorithm, sort.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+SortedRange!(R,pred) parallelSort(alias pred, alias baseAlgorithm, R)(
+&nbsp;&nbsp;R range,
+&nbsp;&nbsp;size_t minParallelSort = 1024,
+&nbsp;&nbsp;size_t minParallelMerge = 4096,
+&nbsp;&nbsp;TaskPool pool = null
+)
+if (finiteRandom!R &amp;&amp; hasAssignableElements!R);</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="pred">pred</td><td> The predicate to sort on.
+</td></tr>
+<tr><td id="baseAlgorithm">baseAlgorithm</td><td> The algorithm to fall back to for small subranges.
+$(D <code class="prettyprint lang-d">parallelSort</code>) is a stable sort iff $(D baseAlgorithm) is a stable sort.
+</td></tr>
+<tr><td id="range">range</td><td> The <a href="../parallel_algorithm/parallelSort.html#range"><code class="prettyprint lang-d">range</code></a> to be sorted.
+</td></tr>
+<tr><td id="minParallelSort">minParallelSort</td><td> The smallest subrange to sort in parallel. Small values
+will expose more parallelism, but also incur more overhead.
+</td></tr>
+<tr><td id="minParallelMerge">minParallelMerge</td><td> The smallest subrange to <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> in parallel.  Since
+merging is a cheaper operation than sorting, this should be somewhat larger
+than $(D <a href="../parallel_algorithm/parallelSort.html#minParallelSort"><code class="prettyprint lang-d">minParallelSort</code></a>).
+</td></tr>
+<tr><td id="pool">pool</td><td> The $(XREF parallelism, TaskPool) to use.  If null, the global
+default task <a href="../parallel_algorithm/parallelSort.html#pool"><code class="prettyprint lang-d">pool</code></a> returned by $(XREF parallelism, taskPool) will be used.</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

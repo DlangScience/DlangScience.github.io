@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Enum member NC_MAX_DIMS</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li>
+								<a href="../netcdf.html" class="selected module">netcdf</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Enum member NC_MAX_DIMS</h1>
+			<section>
+				<p>Maximum for classic library.
+</p>
+<section>
+<p>In the classic netCDF model there are maximum values for the number of
+dimensions in the file (\ref <code class="prettyprint lang-d">NC_MAX_DIMS</code>), the number of global or per
+variable attributes (\ref <a href="../netcdf/NC_MAX_ATTRS.html"><code class="prettyprint lang-d">NC_MAX_ATTRS</code></a>), the number of variables in
+the file (\ref <a href="../netcdf/NC_MAX_VARS.html"><code class="prettyprint lang-d">NC_MAX_VARS</code></a>), and the length of a name (\ref
+<a href="../netcdf/NC_MAX_NAME.html"><code class="prettyprint lang-d">NC_MAX_NAME</code></a>).
+</p>
+
+<p>These maximums are enforced by the interface, to facilitate writing
+applications and utilities.  However, nothing is statically allocated
+to these sizes internally.
+</p>
+
+<p>These maximums are not used for netCDF-4/HDF5 files unless they were
+created with the ::<a href="../netcdf/NC_CLASSIC_MODEL.html"><code class="prettyprint lang-d">NC_CLASSIC_MODEL</code></a> flag.
+</p>
+
+<p>As a rule, <a href="../netcdf/NC_MAX_VAR_DIMS.html"><code class="prettyprint lang-d">NC_MAX_VAR_DIMS</code></a> &lt;= <code class="prettyprint lang-d">NC_MAX_DIMS</code>.
+</p>
+
+<p>@{
+</p>
+</section>
+
+					<section>
+						<h3>Declaration</h3>
+						<pre class="code prettyprint lang-d prototype">
+enum NC_MAX_DIMS = 1024;</pre>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>
