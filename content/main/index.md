@@ -7,6 +7,7 @@ layout: default
 - [dstats](dstats/) A statistics library with a reasonable balance of performance and ease-of-use
 - [libcerf](libcerf/) Complex error functions, along with Dawson, Faddeeva, and Voigt functions
 - [parallel_algorithm](parallel_algorithm/) Thread-parallelised implementations of various basic algorithms
+- [scid](scid/) A collection of numerical routines and bindings
 
 ## Bindings:
 - [OpenMPI](OpenMPI/) The most common message passing interface in high performance computing
