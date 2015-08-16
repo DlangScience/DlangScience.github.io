@@ -1,0 +1,6904 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module scid.bindings.lapack.lapack</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">scid</a>
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">bindings</a>
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">lapack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/bindings/lapack/dlapack.html" class=" module">dlapack</a>
+							</li>
+							<li>
+								<a href="../../../scid/bindings/lapack/lapack.html" class="selected module">lapack</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">core</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/core/fortran.html" class=" module">fortran</a>
+							</li>
+							<li>
+								<a href="../../../scid/core/memory.html" class=" module">memory</a>
+							</li>
+							<li>
+								<a href="../../../scid/core/meta.html" class=" module">meta</a>
+							</li>
+							<li>
+								<a href="../../../scid/core/testing.html" class=" module">testing</a>
+							</li>
+							<li>
+								<a href="../../../scid/core/traits.html" class=" module">traits</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">internal</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">calculus</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/internal/calculus/integrate_qk.html" class=" module">integrate_qk</a>
+							</li>
+							<li>
+								<a href="../../../scid/internal/calculus/integrate_qng.html" class=" module">integrate_qng</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">ports</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">intde</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/ports/intde/intde1.html" class=" module">intde1</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/intde/intde2.html" class=" module">intde2</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">linpack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/ports/linpack/gtsl.html" class=" module">gtsl</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">minpack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/ports/minpack/dogleg.html" class=" module">dogleg</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/minpack/enorm.html" class=" module">enorm</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/minpack/fdjac1.html" class=" module">fdjac1</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/minpack/hybrd.html" class=" module">hybrd</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/minpack/qform.html" class=" module">qform</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/minpack/qrfac.html" class=" module">qrfac</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/minpack/r1mpyq.html" class=" module">r1mpyq</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/minpack/r1updt.html" class=" module">r1updt</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">napack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/ports/napack/addchg.html" class=" module">addchg</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/napack/quasi.html" class=" module">quasi</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/napack/stopit.html" class=" module">stopit</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">quadpack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../scid/ports/quadpack/qag.html" class=" module">qag</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qage.html" class=" module">qage</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qagi.html" class=" module">qagi</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qagie.html" class=" module">qagie</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qagp.html" class=" module">qagp</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qagpe.html" class=" module">qagpe</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qags.html" class=" module">qags</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qagse.html" class=" module">qagse</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qawc.html" class=" module">qawc</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qawce.html" class=" module">qawce</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qawf.html" class=" module">qawf</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qawfe.html" class=" module">qawfe</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qawo.html" class=" module">qawo</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qawoe.html" class=" module">qawoe</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qaws.html" class=" module">qaws</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qawse.html" class=" module">qawse</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qc25c.html" class=" module">qc25c</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qc25f.html" class=" module">qc25f</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qc25s.html" class=" module">qc25s</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qcheb.html" class=" module">qcheb</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qelg.html" class=" module">qelg</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk15.html" class=" module">qk15</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk15i.html" class=" module">qk15i</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk15w.html" class=" module">qk15w</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk21.html" class=" module">qk21</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk31.html" class=" module">qk31</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk41.html" class=" module">qk41</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk51.html" class=" module">qk51</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qk61.html" class=" module">qk61</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qmomo.html" class=" module">qmomo</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qng.html" class=" module">qng</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qpsrt.html" class=" module">qpsrt</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qwgtc.html" class=" module">qwgtc</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qwgtf.html" class=" module">qwgtf</a>
+							</li>
+							<li>
+								<a href="../../../scid/ports/quadpack/qwgts.html" class=" module">qwgts</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../../scid/calculus.html" class=" module">calculus</a>
+							</li>
+							<li>
+								<a href="../../../scid/constants.html" class=" module">constants</a>
+							</li>
+							<li>
+								<a href="../../../scid/functions.html" class=" module">functions</a>
+							</li>
+							<li>
+								<a href="../../../scid/linalg.html" class=" module">linalg</a>
+							</li>
+							<li>
+								<a href="../../../scid/matrix.html" class=" module">matrix</a>
+							</li>
+							<li>
+								<a href="../../../scid/nonlinear.html" class=" module">nonlinear</a>
+							</li>
+							<li>
+								<a href="../../../scid/types.html" class=" module">types</a>
+							</li>
+							<li>
+								<a href="../../../scid/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module scid.bindings.lapack.lapack</h1>
+			<p> LAPACK bindings for D.
+</p>
+<section>
+</section>
+
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="cbdsqr_" class="public" href="../../../scid/bindings/lapack/lapack/cbdsqr_.html">
+								<code>cbdsqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbbrd_" class="public" href="../../../scid/bindings/lapack/lapack/cgbbrd_.html">
+								<code>cgbbrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbcon_" class="public" href="../../../scid/bindings/lapack/lapack/cgbcon_.html">
+								<code>cgbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbequ_" class="public" href="../../../scid/bindings/lapack/lapack/cgbequ_.html">
+								<code>cgbequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/cgbrfs_.html">
+								<code>cgbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/cgbsvx_.html">
+								<code>cgbsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbsv_" class="public" href="../../../scid/bindings/lapack/lapack/cgbsv_.html">
+								<code>cgbsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/cgbtrf_.html">
+								<code>cgbtrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/cgbtrs_.html">
+								<code>cgbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgebak_" class="public" href="../../../scid/bindings/lapack/lapack/cgebak_.html">
+								<code>cgebak_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgebal_" class="public" href="../../../scid/bindings/lapack/lapack/cgebal_.html">
+								<code>cgebal_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgebrd_" class="public" href="../../../scid/bindings/lapack/lapack/cgebrd_.html">
+								<code>cgebrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgecon_" class="public" href="../../../scid/bindings/lapack/lapack/cgecon_.html">
+								<code>cgecon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeequ_" class="public" href="../../../scid/bindings/lapack/lapack/cgeequ_.html">
+								<code>cgeequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeesx_" class="public" href="../../../scid/bindings/lapack/lapack/cgeesx_.html">
+								<code>cgeesx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgees_" class="public" href="../../../scid/bindings/lapack/lapack/cgees_.html">
+								<code>cgees_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeevx_" class="public" href="../../../scid/bindings/lapack/lapack/cgeevx_.html">
+								<code>cgeevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeev_" class="public" href="../../../scid/bindings/lapack/lapack/cgeev_.html">
+								<code>cgeev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgegs_" class="public" href="../../../scid/bindings/lapack/lapack/cgegs_.html">
+								<code>cgegs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgegv_" class="public" href="../../../scid/bindings/lapack/lapack/cgegv_.html">
+								<code>cgegv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgehrd_" class="public" href="../../../scid/bindings/lapack/lapack/cgehrd_.html">
+								<code>cgehrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgelqf_" class="public" href="../../../scid/bindings/lapack/lapack/cgelqf_.html">
+								<code>cgelqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgelsd_" class="public" href="../../../scid/bindings/lapack/lapack/cgelsd_.html">
+								<code>cgelsd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgelss_" class="public" href="../../../scid/bindings/lapack/lapack/cgelss_.html">
+								<code>cgelss_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgelsx_" class="public" href="../../../scid/bindings/lapack/lapack/cgelsx_.html">
+								<code>cgelsx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgelsy_" class="public" href="../../../scid/bindings/lapack/lapack/cgelsy_.html">
+								<code>cgelsy_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgels_" class="public" href="../../../scid/bindings/lapack/lapack/cgels_.html">
+								<code>cgels_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeqlf_" class="public" href="../../../scid/bindings/lapack/lapack/cgeqlf_.html">
+								<code>cgeqlf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeqp3_" class="public" href="../../../scid/bindings/lapack/lapack/cgeqp3_.html">
+								<code>cgeqp3_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeqpf_" class="public" href="../../../scid/bindings/lapack/lapack/cgeqpf_.html">
+								<code>cgeqpf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgeqrf_" class="public" href="../../../scid/bindings/lapack/lapack/cgeqrf_.html">
+								<code>cgeqrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgerfs_" class="public" href="../../../scid/bindings/lapack/lapack/cgerfs_.html">
+								<code>cgerfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgerqf_" class="public" href="../../../scid/bindings/lapack/lapack/cgerqf_.html">
+								<code>cgerqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgesdd_" class="public" href="../../../scid/bindings/lapack/lapack/cgesdd_.html">
+								<code>cgesdd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgesvd_" class="public" href="../../../scid/bindings/lapack/lapack/cgesvd_.html">
+								<code>cgesvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgesvx_" class="public" href="../../../scid/bindings/lapack/lapack/cgesvx_.html">
+								<code>cgesvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgesv_" class="public" href="../../../scid/bindings/lapack/lapack/cgesv_.html">
+								<code>cgesv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgetrf_" class="public" href="../../../scid/bindings/lapack/lapack/cgetrf_.html">
+								<code>cgetrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgetri_" class="public" href="../../../scid/bindings/lapack/lapack/cgetri_.html">
+								<code>cgetri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgetrs_" class="public" href="../../../scid/bindings/lapack/lapack/cgetrs_.html">
+								<code>cgetrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggbak_" class="public" href="../../../scid/bindings/lapack/lapack/cggbak_.html">
+								<code>cggbak_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggbal_" class="public" href="../../../scid/bindings/lapack/lapack/cggbal_.html">
+								<code>cggbal_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggesx_" class="public" href="../../../scid/bindings/lapack/lapack/cggesx_.html">
+								<code>cggesx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgges_" class="public" href="../../../scid/bindings/lapack/lapack/cgges_.html">
+								<code>cgges_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggevx_" class="public" href="../../../scid/bindings/lapack/lapack/cggevx_.html">
+								<code>cggevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggev_" class="public" href="../../../scid/bindings/lapack/lapack/cggev_.html">
+								<code>cggev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggglm_" class="public" href="../../../scid/bindings/lapack/lapack/cggglm_.html">
+								<code>cggglm_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgghrd_" class="public" href="../../../scid/bindings/lapack/lapack/cgghrd_.html">
+								<code>cgghrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgglse_" class="public" href="../../../scid/bindings/lapack/lapack/cgglse_.html">
+								<code>cgglse_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggqrf_" class="public" href="../../../scid/bindings/lapack/lapack/cggqrf_.html">
+								<code>cggqrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggrqf_" class="public" href="../../../scid/bindings/lapack/lapack/cggrqf_.html">
+								<code>cggrqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggsvd_" class="public" href="../../../scid/bindings/lapack/lapack/cggsvd_.html">
+								<code>cggsvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cggsvp_" class="public" href="../../../scid/bindings/lapack/lapack/cggsvp_.html">
+								<code>cggsvp_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgtcon_" class="public" href="../../../scid/bindings/lapack/lapack/cgtcon_.html">
+								<code>cgtcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgtrfs_" class="public" href="../../../scid/bindings/lapack/lapack/cgtrfs_.html">
+								<code>cgtrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgtsvx_" class="public" href="../../../scid/bindings/lapack/lapack/cgtsvx_.html">
+								<code>cgtsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgtsv_" class="public" href="../../../scid/bindings/lapack/lapack/cgtsv_.html">
+								<code>cgtsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgttrf_" class="public" href="../../../scid/bindings/lapack/lapack/cgttrf_.html">
+								<code>cgttrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cgttrs_" class="public" href="../../../scid/bindings/lapack/lapack/cgttrs_.html">
+								<code>cgttrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbevd_" class="public" href="../../../scid/bindings/lapack/lapack/chbevd_.html">
+								<code>chbevd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and, optionally, eigenvectors of a complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbevx_" class="public" href="../../../scid/bindings/lapack/lapack/chbevx_.html">
+								<code>chbevx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and eigenvectors of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbev_" class="public" href="../../../scid/bindings/lapack/lapack/chbev_.html">
+								<code>chbev_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and, optionally, eigenvectors of a complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbgst_" class="public" href="../../../scid/bindings/lapack/lapack/chbgst_.html">
+								<code>chbgst_</code>
+							</a>
+						</td>
+						<td>Reduces a complex Hermitian-definite banded generalized eigenproblem
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbgvd_" class="public" href="../../../scid/bindings/lapack/lapack/chbgvd_.html">
+								<code>chbgvd_</code>
+							</a>
+						</td>
+						<td>Computes all the eigenvalues, and optionally, the eigenvectors
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbgvx_" class="public" href="../../../scid/bindings/lapack/lapack/chbgvx_.html">
+								<code>chbgvx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, the eigenvectors
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbgv_" class="public" href="../../../scid/bindings/lapack/lapack/chbgv_.html">
+								<code>chbgv_</code>
+							</a>
+						</td>
+						<td>Computes all the eigenvalues, and optionally, the eigenvectors
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chbtrd_" class="public" href="../../../scid/bindings/lapack/lapack/chbtrd_.html">
+								<code>chbtrd_</code>
+							</a>
+						</td>
+						<td>Reduces a Hermitian band matrix to real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="checon_" class="public" href="../../../scid/bindings/lapack/lapack/checon_.html">
+								<code>checon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of <a href="../../../scid/bindings/lapack/lapack/checon_.html#a"><code class="prettyprint lang-d">a</code></a>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cheevd_" class="public" href="../../../scid/bindings/lapack/lapack/cheevd_.html">
+								<code>cheevd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and, optionally, eigenvectors of <a href="../../../scid/bindings/lapack/lapack/cheevd_.html#a"><code class="prettyprint lang-d">a</code></a> complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cheevr_" class="public" href="../../../scid/bindings/lapack/lapack/cheevr_.html">
+								<code>cheevr_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, eigenvectors of <a href="../../../scid/bindings/lapack/lapack/cheevr_.html#a"><code class="prettyprint lang-d">a</code></a> complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cheevx_" class="public" href="../../../scid/bindings/lapack/lapack/cheevx_.html">
+								<code>cheevx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and eigenvectors of <a href="../../../scid/bindings/lapack/lapack/cheevx_.html#a"><code class="prettyprint lang-d">a</code></a> Hermitian matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cheev_" class="public" href="../../../scid/bindings/lapack/lapack/cheev_.html">
+								<code>cheev_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and, optionally, eigenvectors of <a href="../../../scid/bindings/lapack/lapack/cheev_.html#a"><code class="prettyprint lang-d">a</code></a> complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chegst_" class="public" href="../../../scid/bindings/lapack/lapack/chegst_.html">
+								<code>chegst_</code>
+							</a>
+						</td>
+						<td>Reduces <a href="../../../scid/bindings/lapack/lapack/chegst_.html#a"><code class="prettyprint lang-d">a</code></a> Hermitian-definite generalized eigenproblem
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chegvd_" class="public" href="../../../scid/bindings/lapack/lapack/chegvd_.html">
+								<code>chegvd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and the eigenvectors of  <a href="../../../scid/bindings/lapack/lapack/chegvd_.html#a"><code class="prettyprint lang-d">a</code></a> generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chegvx_" class="public" href="../../../scid/bindings/lapack/lapack/chegvx_.html">
+								<code>chegvx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, the eigenvectors of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chegv_" class="public" href="../../../scid/bindings/lapack/lapack/chegv_.html">
+								<code>chegv_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and the eigenvectors of  <a href="../../../scid/bindings/lapack/lapack/chegv_.html#a"><code class="prettyprint lang-d">a</code></a> generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cherfs_" class="public" href="../../../scid/bindings/lapack/lapack/cherfs_.html">
+								<code>cherfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to <a href="../../../scid/bindings/lapack/lapack/cherfs_.html#a"><code class="prettyprint lang-d">a</code></a> complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chesvx_" class="public" href="../../../scid/bindings/lapack/lapack/chesvx_.html">
+								<code>chesvx_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/chesvx_.html#a"><code class="prettyprint lang-d">a</code></a> complex Hermitian
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chesv_" class="public" href="../../../scid/bindings/lapack/lapack/chesv_.html">
+								<code>chesv_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/chesv_.html#a"><code class="prettyprint lang-d">a</code></a> complex Hermitian indefinite system of linear equations AX=B.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chetrd_" class="public" href="../../../scid/bindings/lapack/lapack/chetrd_.html">
+								<code>chetrd_</code>
+							</a>
+						</td>
+						<td>Reduces <a href="../../../scid/bindings/lapack/lapack/chetrd_.html#a"><code class="prettyprint lang-d">a</code></a> Hermitian matrix to real symmetric tridiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chetrf_" class="public" href="../../../scid/bindings/lapack/lapack/chetrf_.html">
+								<code>chetrf_</code>
+							</a>
+						</td>
+						<td>Computes the factorization of <a href="../../../scid/bindings/lapack/lapack/chetrf_.html#a"><code class="prettyprint lang-d">a</code></a> complex Hermitian-indefinite matrix,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chetri_" class="public" href="../../../scid/bindings/lapack/lapack/chetri_.html">
+								<code>chetri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of <a href="../../../scid/bindings/lapack/lapack/chetri_.html#a"><code class="prettyprint lang-d">a</code></a> complex Hermitian indefinite matrix,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chetrs_" class="public" href="../../../scid/bindings/lapack/lapack/chetrs_.html">
+								<code>chetrs_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/chetrs_.html#a"><code class="prettyprint lang-d">a</code></a> complex Hermitian indefinite system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chgeqz_" class="public" href="../../../scid/bindings/lapack/lapack/chgeqz_.html">
+								<code>chgeqz_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpcon_" class="public" href="../../../scid/bindings/lapack/lapack/chpcon_.html">
+								<code>chpcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpevd_" class="public" href="../../../scid/bindings/lapack/lapack/chpevd_.html">
+								<code>chpevd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and, optionally, eigenvectors of a complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpevx_" class="public" href="../../../scid/bindings/lapack/lapack/chpevx_.html">
+								<code>chpevx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and eigenvectors of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpev_" class="public" href="../../../scid/bindings/lapack/lapack/chpev_.html">
+								<code>chpev_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, eigenvectors of a complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpgst_" class="public" href="../../../scid/bindings/lapack/lapack/chpgst_.html">
+								<code>chpgst_</code>
+							</a>
+						</td>
+						<td>Reduces a Hermitian-definite generalized eigenproblem
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpgvd_" class="public" href="../../../scid/bindings/lapack/lapack/chpgvd_.html">
+								<code>chpgvd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and eigenvectors of  a generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpgvx_" class="public" href="../../../scid/bindings/lapack/lapack/chpgvx_.html">
+								<code>chpgvx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, the eigenvectors of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpgv_" class="public" href="../../../scid/bindings/lapack/lapack/chpgv_.html">
+								<code>chpgv_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and eigenvectors of  a generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chprfs_" class="public" href="../../../scid/bindings/lapack/lapack/chprfs_.html">
+								<code>chprfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to a complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpsvx_" class="public" href="../../../scid/bindings/lapack/lapack/chpsvx_.html">
+								<code>chpsvx_</code>
+							</a>
+						</td>
+						<td>Solves a complex Hermitian
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chpsv_" class="public" href="../../../scid/bindings/lapack/lapack/chpsv_.html">
+								<code>chpsv_</code>
+							</a>
+						</td>
+						<td>Solves a complex Hermitian indefinite system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chptrd_" class="public" href="../../../scid/bindings/lapack/lapack/chptrd_.html">
+								<code>chptrd_</code>
+							</a>
+						</td>
+						<td>Reduces a Hermitian matrix in packed storage to real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chptrf_" class="public" href="../../../scid/bindings/lapack/lapack/chptrf_.html">
+								<code>chptrf_</code>
+							</a>
+						</td>
+						<td>Computes the factorization of a complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chptri_" class="public" href="../../../scid/bindings/lapack/lapack/chptri_.html">
+								<code>chptri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of a complex
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chptrs_" class="public" href="../../../scid/bindings/lapack/lapack/chptrs_.html">
+								<code>chptrs_</code>
+							</a>
+						</td>
+						<td>Solves a complex Hermitian
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chsein_" class="public" href="../../../scid/bindings/lapack/lapack/chsein_.html">
+								<code>chsein_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chseqr_" class="public" href="../../../scid/bindings/lapack/lapack/chseqr_.html">
+								<code>chseqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbcon_" class="public" href="../../../scid/bindings/lapack/lapack/cpbcon_.html">
+								<code>cpbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbequ_" class="public" href="../../../scid/bindings/lapack/lapack/cpbequ_.html">
+								<code>cpbequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/cpbrfs_.html">
+								<code>cpbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbstf_" class="public" href="../../../scid/bindings/lapack/lapack/cpbstf_.html">
+								<code>cpbstf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/cpbsvx_.html">
+								<code>cpbsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbsv_" class="public" href="../../../scid/bindings/lapack/lapack/cpbsv_.html">
+								<code>cpbsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/cpbtrf_.html">
+								<code>cpbtrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/cpbtrs_.html">
+								<code>cpbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpocon_" class="public" href="../../../scid/bindings/lapack/lapack/cpocon_.html">
+								<code>cpocon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpoequ_" class="public" href="../../../scid/bindings/lapack/lapack/cpoequ_.html">
+								<code>cpoequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cporfs_" class="public" href="../../../scid/bindings/lapack/lapack/cporfs_.html">
+								<code>cporfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cposvx_" class="public" href="../../../scid/bindings/lapack/lapack/cposvx_.html">
+								<code>cposvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cposv_" class="public" href="../../../scid/bindings/lapack/lapack/cposv_.html">
+								<code>cposv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpotrf_" class="public" href="../../../scid/bindings/lapack/lapack/cpotrf_.html">
+								<code>cpotrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpotri_" class="public" href="../../../scid/bindings/lapack/lapack/cpotri_.html">
+								<code>cpotri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpotrs_" class="public" href="../../../scid/bindings/lapack/lapack/cpotrs_.html">
+								<code>cpotrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cppcon_" class="public" href="../../../scid/bindings/lapack/lapack/cppcon_.html">
+								<code>cppcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cppequ_" class="public" href="../../../scid/bindings/lapack/lapack/cppequ_.html">
+								<code>cppequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpprfs_" class="public" href="../../../scid/bindings/lapack/lapack/cpprfs_.html">
+								<code>cpprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cppsvx_" class="public" href="../../../scid/bindings/lapack/lapack/cppsvx_.html">
+								<code>cppsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cppsv_" class="public" href="../../../scid/bindings/lapack/lapack/cppsv_.html">
+								<code>cppsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpptrf_" class="public" href="../../../scid/bindings/lapack/lapack/cpptrf_.html">
+								<code>cpptrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpptri_" class="public" href="../../../scid/bindings/lapack/lapack/cpptri_.html">
+								<code>cpptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpptrs_" class="public" href="../../../scid/bindings/lapack/lapack/cpptrs_.html">
+								<code>cpptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cptcon_" class="public" href="../../../scid/bindings/lapack/lapack/cptcon_.html">
+								<code>cptcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpteqr_" class="public" href="../../../scid/bindings/lapack/lapack/cpteqr_.html">
+								<code>cpteqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cptrfs_" class="public" href="../../../scid/bindings/lapack/lapack/cptrfs_.html">
+								<code>cptrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cptsvx_" class="public" href="../../../scid/bindings/lapack/lapack/cptsvx_.html">
+								<code>cptsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cptsv_" class="public" href="../../../scid/bindings/lapack/lapack/cptsv_.html">
+								<code>cptsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpttrf_" class="public" href="../../../scid/bindings/lapack/lapack/cpttrf_.html">
+								<code>cpttrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cpttrs_" class="public" href="../../../scid/bindings/lapack/lapack/cpttrs_.html">
+								<code>cpttrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cspcon_" class="public" href="../../../scid/bindings/lapack/lapack/cspcon_.html">
+								<code>cspcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csprfs_" class="public" href="../../../scid/bindings/lapack/lapack/csprfs_.html">
+								<code>csprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cspsvx_" class="public" href="../../../scid/bindings/lapack/lapack/cspsvx_.html">
+								<code>cspsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cspsv_" class="public" href="../../../scid/bindings/lapack/lapack/cspsv_.html">
+								<code>cspsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csptrf_" class="public" href="../../../scid/bindings/lapack/lapack/csptrf_.html">
+								<code>csptrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csptri_" class="public" href="../../../scid/bindings/lapack/lapack/csptri_.html">
+								<code>csptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csptrs_" class="public" href="../../../scid/bindings/lapack/lapack/csptrs_.html">
+								<code>csptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cstedc_" class="public" href="../../../scid/bindings/lapack/lapack/cstedc_.html">
+								<code>cstedc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cstegr_" class="public" href="../../../scid/bindings/lapack/lapack/cstegr_.html">
+								<code>cstegr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cstein_" class="public" href="../../../scid/bindings/lapack/lapack/cstein_.html">
+								<code>cstein_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csteqr_" class="public" href="../../../scid/bindings/lapack/lapack/csteqr_.html">
+								<code>csteqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csycon_" class="public" href="../../../scid/bindings/lapack/lapack/csycon_.html">
+								<code>csycon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csyrfs_" class="public" href="../../../scid/bindings/lapack/lapack/csyrfs_.html">
+								<code>csyrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csysvx_" class="public" href="../../../scid/bindings/lapack/lapack/csysvx_.html">
+								<code>csysvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csysv_" class="public" href="../../../scid/bindings/lapack/lapack/csysv_.html">
+								<code>csysv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csytrf_" class="public" href="../../../scid/bindings/lapack/lapack/csytrf_.html">
+								<code>csytrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csytri_" class="public" href="../../../scid/bindings/lapack/lapack/csytri_.html">
+								<code>csytri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="csytrs_" class="public" href="../../../scid/bindings/lapack/lapack/csytrs_.html">
+								<code>csytrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctbcon_" class="public" href="../../../scid/bindings/lapack/lapack/ctbcon_.html">
+								<code>ctbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/ctbrfs_.html">
+								<code>ctbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/ctbtrs_.html">
+								<code>ctbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctgevc_" class="public" href="../../../scid/bindings/lapack/lapack/ctgevc_.html">
+								<code>ctgevc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctgexc_" class="public" href="../../../scid/bindings/lapack/lapack/ctgexc_.html">
+								<code>ctgexc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctgsen_" class="public" href="../../../scid/bindings/lapack/lapack/ctgsen_.html">
+								<code>ctgsen_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctgsja_" class="public" href="../../../scid/bindings/lapack/lapack/ctgsja_.html">
+								<code>ctgsja_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctgsna_" class="public" href="../../../scid/bindings/lapack/lapack/ctgsna_.html">
+								<code>ctgsna_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctgsyl_" class="public" href="../../../scid/bindings/lapack/lapack/ctgsyl_.html">
+								<code>ctgsyl_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctpcon_" class="public" href="../../../scid/bindings/lapack/lapack/ctpcon_.html">
+								<code>ctpcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctprfs_" class="public" href="../../../scid/bindings/lapack/lapack/ctprfs_.html">
+								<code>ctprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctptri_" class="public" href="../../../scid/bindings/lapack/lapack/ctptri_.html">
+								<code>ctptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctptrs_" class="public" href="../../../scid/bindings/lapack/lapack/ctptrs_.html">
+								<code>ctptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrcon_" class="public" href="../../../scid/bindings/lapack/lapack/ctrcon_.html">
+								<code>ctrcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrevc_" class="public" href="../../../scid/bindings/lapack/lapack/ctrevc_.html">
+								<code>ctrevc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrexc_" class="public" href="../../../scid/bindings/lapack/lapack/ctrexc_.html">
+								<code>ctrexc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrrfs_" class="public" href="../../../scid/bindings/lapack/lapack/ctrrfs_.html">
+								<code>ctrrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrsen_" class="public" href="../../../scid/bindings/lapack/lapack/ctrsen_.html">
+								<code>ctrsen_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrsna_" class="public" href="../../../scid/bindings/lapack/lapack/ctrsna_.html">
+								<code>ctrsna_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrsyl_" class="public" href="../../../scid/bindings/lapack/lapack/ctrsyl_.html">
+								<code>ctrsyl_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrtri_" class="public" href="../../../scid/bindings/lapack/lapack/ctrtri_.html">
+								<code>ctrtri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctrtrs_" class="public" href="../../../scid/bindings/lapack/lapack/ctrtrs_.html">
+								<code>ctrtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctzrqf_" class="public" href="../../../scid/bindings/lapack/lapack/ctzrqf_.html">
+								<code>ctzrqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ctzrzf_" class="public" href="../../../scid/bindings/lapack/lapack/ctzrzf_.html">
+								<code>ctzrzf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cungbr_" class="public" href="../../../scid/bindings/lapack/lapack/cungbr_.html">
+								<code>cungbr_</code>
+							</a>
+						</td>
+						<td>Generates the unitary transformation matrices from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunghr_" class="public" href="../../../scid/bindings/lapack/lapack/cunghr_.html">
+								<code>cunghr_</code>
+							</a>
+						</td>
+						<td>Generates the unitary transformation matrix from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunglq_" class="public" href="../../../scid/bindings/lapack/lapack/cunglq_.html">
+								<code>cunglq_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the unitary matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cungql_" class="public" href="../../../scid/bindings/lapack/lapack/cungql_.html">
+								<code>cungql_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the unitary matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cungqr_" class="public" href="../../../scid/bindings/lapack/lapack/cungqr_.html">
+								<code>cungqr_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the unitary matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cungrq_" class="public" href="../../../scid/bindings/lapack/lapack/cungrq_.html">
+								<code>cungrq_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the unitary matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cungtr_" class="public" href="../../../scid/bindings/lapack/lapack/cungtr_.html">
+								<code>cungtr_</code>
+							</a>
+						</td>
+						<td>Generates the unitary transformation matrix from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmbr_" class="public" href="../../../scid/bindings/lapack/lapack/cunmbr_.html">
+								<code>cunmbr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/cunmbr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by one of the unitary
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmhr_" class="public" href="../../../scid/bindings/lapack/lapack/cunmhr_.html">
+								<code>cunmhr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/cunmhr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary transformation
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmlq_" class="public" href="../../../scid/bindings/lapack/lapack/cunmlq_.html">
+								<code>cunmlq_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/cunmlq_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmql_" class="public" href="../../../scid/bindings/lapack/lapack/cunmql_.html">
+								<code>cunmql_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/cunmql_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmqr_" class="public" href="../../../scid/bindings/lapack/lapack/cunmqr_.html">
+								<code>cunmqr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/cunmqr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmr3_" class="public" href="../../../scid/bindings/lapack/lapack/cunmr3_.html">
+								<code>cunmr3_</code>
+							</a>
+						</td>
+						<td>Multiples <a href="../../../scid/bindings/lapack/lapack/cunmr3_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmrq_" class="public" href="../../../scid/bindings/lapack/lapack/cunmrq_.html">
+								<code>cunmrq_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/cunmrq_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmrz_" class="public" href="../../../scid/bindings/lapack/lapack/cunmrz_.html">
+								<code>cunmrz_</code>
+							</a>
+						</td>
+						<td>Multiples <a href="../../../scid/bindings/lapack/lapack/cunmrz_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cunmtr_" class="public" href="../../../scid/bindings/lapack/lapack/cunmtr_.html">
+								<code>cunmtr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/cunmtr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cupgtr_" class="public" href="../../../scid/bindings/lapack/lapack/cupgtr_.html">
+								<code>cupgtr_</code>
+							</a>
+						</td>
+						<td>Generates the unitary transformation matrix from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cupmtr_" class="public" href="../../../scid/bindings/lapack/lapack/cupmtr_.html">
+								<code>cupmtr_</code>
+							</a>
+						</td>
+						<td>Multiplies a general matrix by the unitary
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dbdsdc_" class="public" href="../../../scid/bindings/lapack/lapack/dbdsdc_.html">
+								<code>dbdsdc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dbdsqr_" class="public" href="../../../scid/bindings/lapack/lapack/dbdsqr_.html">
+								<code>dbdsqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ddisna_" class="public" href="../../../scid/bindings/lapack/lapack/ddisna_.html">
+								<code>ddisna_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbbrd_" class="public" href="../../../scid/bindings/lapack/lapack/dgbbrd_.html">
+								<code>dgbbrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbcon_" class="public" href="../../../scid/bindings/lapack/lapack/dgbcon_.html">
+								<code>dgbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbequ_" class="public" href="../../../scid/bindings/lapack/lapack/dgbequ_.html">
+								<code>dgbequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/dgbrfs_.html">
+								<code>dgbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/dgbsvx_.html">
+								<code>dgbsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbsv_" class="public" href="../../../scid/bindings/lapack/lapack/dgbsv_.html">
+								<code>dgbsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/dgbtrf_.html">
+								<code>dgbtrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/dgbtrs_.html">
+								<code>dgbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgebak_" class="public" href="../../../scid/bindings/lapack/lapack/dgebak_.html">
+								<code>dgebak_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgebal_" class="public" href="../../../scid/bindings/lapack/lapack/dgebal_.html">
+								<code>dgebal_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgebrd_" class="public" href="../../../scid/bindings/lapack/lapack/dgebrd_.html">
+								<code>dgebrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgecon_" class="public" href="../../../scid/bindings/lapack/lapack/dgecon_.html">
+								<code>dgecon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeequ_" class="public" href="../../../scid/bindings/lapack/lapack/dgeequ_.html">
+								<code>dgeequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeesx_" class="public" href="../../../scid/bindings/lapack/lapack/dgeesx_.html">
+								<code>dgeesx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgees_" class="public" href="../../../scid/bindings/lapack/lapack/dgees_.html">
+								<code>dgees_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeevx_" class="public" href="../../../scid/bindings/lapack/lapack/dgeevx_.html">
+								<code>dgeevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeev_" class="public" href="../../../scid/bindings/lapack/lapack/dgeev_.html">
+								<code>dgeev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgegs_" class="public" href="../../../scid/bindings/lapack/lapack/dgegs_.html">
+								<code>dgegs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgegv_" class="public" href="../../../scid/bindings/lapack/lapack/dgegv_.html">
+								<code>dgegv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgehrd_" class="public" href="../../../scid/bindings/lapack/lapack/dgehrd_.html">
+								<code>dgehrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgelqf_" class="public" href="../../../scid/bindings/lapack/lapack/dgelqf_.html">
+								<code>dgelqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgelsd_" class="public" href="../../../scid/bindings/lapack/lapack/dgelsd_.html">
+								<code>dgelsd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgelss_" class="public" href="../../../scid/bindings/lapack/lapack/dgelss_.html">
+								<code>dgelss_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgelsx_" class="public" href="../../../scid/bindings/lapack/lapack/dgelsx_.html">
+								<code>dgelsx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgelsy_" class="public" href="../../../scid/bindings/lapack/lapack/dgelsy_.html">
+								<code>dgelsy_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgels_" class="public" href="../../../scid/bindings/lapack/lapack/dgels_.html">
+								<code>dgels_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeqlf_" class="public" href="../../../scid/bindings/lapack/lapack/dgeqlf_.html">
+								<code>dgeqlf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeqp3_" class="public" href="../../../scid/bindings/lapack/lapack/dgeqp3_.html">
+								<code>dgeqp3_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeqpf_" class="public" href="../../../scid/bindings/lapack/lapack/dgeqpf_.html">
+								<code>dgeqpf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgeqrf_" class="public" href="../../../scid/bindings/lapack/lapack/dgeqrf_.html">
+								<code>dgeqrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgerfs_" class="public" href="../../../scid/bindings/lapack/lapack/dgerfs_.html">
+								<code>dgerfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgerqf_" class="public" href="../../../scid/bindings/lapack/lapack/dgerqf_.html">
+								<code>dgerqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgesdd_" class="public" href="../../../scid/bindings/lapack/lapack/dgesdd_.html">
+								<code>dgesdd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgesvd_" class="public" href="../../../scid/bindings/lapack/lapack/dgesvd_.html">
+								<code>dgesvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgesvx_" class="public" href="../../../scid/bindings/lapack/lapack/dgesvx_.html">
+								<code>dgesvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgesv_" class="public" href="../../../scid/bindings/lapack/lapack/dgesv_.html">
+								<code>dgesv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgetrf_" class="public" href="../../../scid/bindings/lapack/lapack/dgetrf_.html">
+								<code>dgetrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgetri_" class="public" href="../../../scid/bindings/lapack/lapack/dgetri_.html">
+								<code>dgetri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgetrs_" class="public" href="../../../scid/bindings/lapack/lapack/dgetrs_.html">
+								<code>dgetrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggbak_" class="public" href="../../../scid/bindings/lapack/lapack/dggbak_.html">
+								<code>dggbak_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggbal_" class="public" href="../../../scid/bindings/lapack/lapack/dggbal_.html">
+								<code>dggbal_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggesx_" class="public" href="../../../scid/bindings/lapack/lapack/dggesx_.html">
+								<code>dggesx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgges_" class="public" href="../../../scid/bindings/lapack/lapack/dgges_.html">
+								<code>dgges_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggevx_" class="public" href="../../../scid/bindings/lapack/lapack/dggevx_.html">
+								<code>dggevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggev_" class="public" href="../../../scid/bindings/lapack/lapack/dggev_.html">
+								<code>dggev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggglm_" class="public" href="../../../scid/bindings/lapack/lapack/dggglm_.html">
+								<code>dggglm_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgghrd_" class="public" href="../../../scid/bindings/lapack/lapack/dgghrd_.html">
+								<code>dgghrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgglse_" class="public" href="../../../scid/bindings/lapack/lapack/dgglse_.html">
+								<code>dgglse_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggqrf_" class="public" href="../../../scid/bindings/lapack/lapack/dggqrf_.html">
+								<code>dggqrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggrqf_" class="public" href="../../../scid/bindings/lapack/lapack/dggrqf_.html">
+								<code>dggrqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggsvd_" class="public" href="../../../scid/bindings/lapack/lapack/dggsvd_.html">
+								<code>dggsvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dggsvp_" class="public" href="../../../scid/bindings/lapack/lapack/dggsvp_.html">
+								<code>dggsvp_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgtcon_" class="public" href="../../../scid/bindings/lapack/lapack/dgtcon_.html">
+								<code>dgtcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgtrfs_" class="public" href="../../../scid/bindings/lapack/lapack/dgtrfs_.html">
+								<code>dgtrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgtsvx_" class="public" href="../../../scid/bindings/lapack/lapack/dgtsvx_.html">
+								<code>dgtsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgtsv_" class="public" href="../../../scid/bindings/lapack/lapack/dgtsv_.html">
+								<code>dgtsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgttrf_" class="public" href="../../../scid/bindings/lapack/lapack/dgttrf_.html">
+								<code>dgttrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dgttrs_" class="public" href="../../../scid/bindings/lapack/lapack/dgttrs_.html">
+								<code>dgttrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dhgeqz_" class="public" href="../../../scid/bindings/lapack/lapack/dhgeqz_.html">
+								<code>dhgeqz_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dhsein_" class="public" href="../../../scid/bindings/lapack/lapack/dhsein_.html">
+								<code>dhsein_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dhseqr_" class="public" href="../../../scid/bindings/lapack/lapack/dhseqr_.html">
+								<code>dhseqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dlamch_" class="public" href="../../../scid/bindings/lapack/lapack/dlamch_.html">
+								<code>dlamch_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dopgtr_" class="public" href="../../../scid/bindings/lapack/lapack/dopgtr_.html">
+								<code>dopgtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dopmtr_" class="public" href="../../../scid/bindings/lapack/lapack/dopmtr_.html">
+								<code>dopmtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dorgbr_" class="public" href="../../../scid/bindings/lapack/lapack/dorgbr_.html">
+								<code>dorgbr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dorghr_" class="public" href="../../../scid/bindings/lapack/lapack/dorghr_.html">
+								<code>dorghr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dorglq_" class="public" href="../../../scid/bindings/lapack/lapack/dorglq_.html">
+								<code>dorglq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dorgql_" class="public" href="../../../scid/bindings/lapack/lapack/dorgql_.html">
+								<code>dorgql_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dorgqr_" class="public" href="../../../scid/bindings/lapack/lapack/dorgqr_.html">
+								<code>dorgqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dorgrq_" class="public" href="../../../scid/bindings/lapack/lapack/dorgrq_.html">
+								<code>dorgrq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dorgtr_" class="public" href="../../../scid/bindings/lapack/lapack/dorgtr_.html">
+								<code>dorgtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormbr_" class="public" href="../../../scid/bindings/lapack/lapack/dormbr_.html">
+								<code>dormbr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormhr_" class="public" href="../../../scid/bindings/lapack/lapack/dormhr_.html">
+								<code>dormhr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormlq_" class="public" href="../../../scid/bindings/lapack/lapack/dormlq_.html">
+								<code>dormlq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormql_" class="public" href="../../../scid/bindings/lapack/lapack/dormql_.html">
+								<code>dormql_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormqr_" class="public" href="../../../scid/bindings/lapack/lapack/dormqr_.html">
+								<code>dormqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormr3_" class="public" href="../../../scid/bindings/lapack/lapack/dormr3_.html">
+								<code>dormr3_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormrq_" class="public" href="../../../scid/bindings/lapack/lapack/dormrq_.html">
+								<code>dormrq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormrz_" class="public" href="../../../scid/bindings/lapack/lapack/dormrz_.html">
+								<code>dormrz_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dormtr_" class="public" href="../../../scid/bindings/lapack/lapack/dormtr_.html">
+								<code>dormtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbcon_" class="public" href="../../../scid/bindings/lapack/lapack/dpbcon_.html">
+								<code>dpbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbequ_" class="public" href="../../../scid/bindings/lapack/lapack/dpbequ_.html">
+								<code>dpbequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/dpbrfs_.html">
+								<code>dpbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbstf_" class="public" href="../../../scid/bindings/lapack/lapack/dpbstf_.html">
+								<code>dpbstf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/dpbsvx_.html">
+								<code>dpbsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbsv_" class="public" href="../../../scid/bindings/lapack/lapack/dpbsv_.html">
+								<code>dpbsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/dpbtrf_.html">
+								<code>dpbtrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/dpbtrs_.html">
+								<code>dpbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpocon_" class="public" href="../../../scid/bindings/lapack/lapack/dpocon_.html">
+								<code>dpocon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpoequ_" class="public" href="../../../scid/bindings/lapack/lapack/dpoequ_.html">
+								<code>dpoequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dporfs_" class="public" href="../../../scid/bindings/lapack/lapack/dporfs_.html">
+								<code>dporfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dposvx_" class="public" href="../../../scid/bindings/lapack/lapack/dposvx_.html">
+								<code>dposvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dposv_" class="public" href="../../../scid/bindings/lapack/lapack/dposv_.html">
+								<code>dposv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpotrf_" class="public" href="../../../scid/bindings/lapack/lapack/dpotrf_.html">
+								<code>dpotrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpotri_" class="public" href="../../../scid/bindings/lapack/lapack/dpotri_.html">
+								<code>dpotri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpotrs_" class="public" href="../../../scid/bindings/lapack/lapack/dpotrs_.html">
+								<code>dpotrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dppcon_" class="public" href="../../../scid/bindings/lapack/lapack/dppcon_.html">
+								<code>dppcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dppequ_" class="public" href="../../../scid/bindings/lapack/lapack/dppequ_.html">
+								<code>dppequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpprfs_" class="public" href="../../../scid/bindings/lapack/lapack/dpprfs_.html">
+								<code>dpprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dppsvx_" class="public" href="../../../scid/bindings/lapack/lapack/dppsvx_.html">
+								<code>dppsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dppsv_" class="public" href="../../../scid/bindings/lapack/lapack/dppsv_.html">
+								<code>dppsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpptrf_" class="public" href="../../../scid/bindings/lapack/lapack/dpptrf_.html">
+								<code>dpptrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpptri_" class="public" href="../../../scid/bindings/lapack/lapack/dpptri_.html">
+								<code>dpptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpptrs_" class="public" href="../../../scid/bindings/lapack/lapack/dpptrs_.html">
+								<code>dpptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dptcon_" class="public" href="../../../scid/bindings/lapack/lapack/dptcon_.html">
+								<code>dptcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpteqr_" class="public" href="../../../scid/bindings/lapack/lapack/dpteqr_.html">
+								<code>dpteqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dptrfs_" class="public" href="../../../scid/bindings/lapack/lapack/dptrfs_.html">
+								<code>dptrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dptsvx_" class="public" href="../../../scid/bindings/lapack/lapack/dptsvx_.html">
+								<code>dptsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dptsv_" class="public" href="../../../scid/bindings/lapack/lapack/dptsv_.html">
+								<code>dptsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpttrf_" class="public" href="../../../scid/bindings/lapack/lapack/dpttrf_.html">
+								<code>dpttrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dpttrs_" class="public" href="../../../scid/bindings/lapack/lapack/dpttrs_.html">
+								<code>dpttrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbevd_" class="public" href="../../../scid/bindings/lapack/lapack/dsbevd_.html">
+								<code>dsbevd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbevx_" class="public" href="../../../scid/bindings/lapack/lapack/dsbevx_.html">
+								<code>dsbevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbev_" class="public" href="../../../scid/bindings/lapack/lapack/dsbev_.html">
+								<code>dsbev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbgst_" class="public" href="../../../scid/bindings/lapack/lapack/dsbgst_.html">
+								<code>dsbgst_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbgvd_" class="public" href="../../../scid/bindings/lapack/lapack/dsbgvd_.html">
+								<code>dsbgvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbgvx_" class="public" href="../../../scid/bindings/lapack/lapack/dsbgvx_.html">
+								<code>dsbgvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbgv_" class="public" href="../../../scid/bindings/lapack/lapack/dsbgv_.html">
+								<code>dsbgv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsbtrd_" class="public" href="../../../scid/bindings/lapack/lapack/dsbtrd_.html">
+								<code>dsbtrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspcon_" class="public" href="../../../scid/bindings/lapack/lapack/dspcon_.html">
+								<code>dspcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspevd_" class="public" href="../../../scid/bindings/lapack/lapack/dspevd_.html">
+								<code>dspevd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspevx_" class="public" href="../../../scid/bindings/lapack/lapack/dspevx_.html">
+								<code>dspevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspev_" class="public" href="../../../scid/bindings/lapack/lapack/dspev_.html">
+								<code>dspev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspgst_" class="public" href="../../../scid/bindings/lapack/lapack/dspgst_.html">
+								<code>dspgst_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspgvd_" class="public" href="../../../scid/bindings/lapack/lapack/dspgvd_.html">
+								<code>dspgvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspgvx_" class="public" href="../../../scid/bindings/lapack/lapack/dspgvx_.html">
+								<code>dspgvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspgv_" class="public" href="../../../scid/bindings/lapack/lapack/dspgv_.html">
+								<code>dspgv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsprfs_" class="public" href="../../../scid/bindings/lapack/lapack/dsprfs_.html">
+								<code>dsprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspsvx_" class="public" href="../../../scid/bindings/lapack/lapack/dspsvx_.html">
+								<code>dspsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dspsv_" class="public" href="../../../scid/bindings/lapack/lapack/dspsv_.html">
+								<code>dspsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsptrd_" class="public" href="../../../scid/bindings/lapack/lapack/dsptrd_.html">
+								<code>dsptrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsptrf_" class="public" href="../../../scid/bindings/lapack/lapack/dsptrf_.html">
+								<code>dsptrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsptri_" class="public" href="../../../scid/bindings/lapack/lapack/dsptri_.html">
+								<code>dsptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsptrs_" class="public" href="../../../scid/bindings/lapack/lapack/dsptrs_.html">
+								<code>dsptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstebz_" class="public" href="../../../scid/bindings/lapack/lapack/dstebz_.html">
+								<code>dstebz_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstedc_" class="public" href="../../../scid/bindings/lapack/lapack/dstedc_.html">
+								<code>dstedc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstegr_" class="public" href="../../../scid/bindings/lapack/lapack/dstegr_.html">
+								<code>dstegr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstein_" class="public" href="../../../scid/bindings/lapack/lapack/dstein_.html">
+								<code>dstein_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsteqr_" class="public" href="../../../scid/bindings/lapack/lapack/dsteqr_.html">
+								<code>dsteqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsterf_" class="public" href="../../../scid/bindings/lapack/lapack/dsterf_.html">
+								<code>dsterf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstevd_" class="public" href="../../../scid/bindings/lapack/lapack/dstevd_.html">
+								<code>dstevd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstevr_" class="public" href="../../../scid/bindings/lapack/lapack/dstevr_.html">
+								<code>dstevr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstevx_" class="public" href="../../../scid/bindings/lapack/lapack/dstevx_.html">
+								<code>dstevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dstev_" class="public" href="../../../scid/bindings/lapack/lapack/dstev_.html">
+								<code>dstev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsycon_" class="public" href="../../../scid/bindings/lapack/lapack/dsycon_.html">
+								<code>dsycon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsyevd_" class="public" href="../../../scid/bindings/lapack/lapack/dsyevd_.html">
+								<code>dsyevd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsyevr_" class="public" href="../../../scid/bindings/lapack/lapack/dsyevr_.html">
+								<code>dsyevr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsyevx_" class="public" href="../../../scid/bindings/lapack/lapack/dsyevx_.html">
+								<code>dsyevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsyev_" class="public" href="../../../scid/bindings/lapack/lapack/dsyev_.html">
+								<code>dsyev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsygst_" class="public" href="../../../scid/bindings/lapack/lapack/dsygst_.html">
+								<code>dsygst_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsygvd_" class="public" href="../../../scid/bindings/lapack/lapack/dsygvd_.html">
+								<code>dsygvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsygvx_" class="public" href="../../../scid/bindings/lapack/lapack/dsygvx_.html">
+								<code>dsygvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsygv_" class="public" href="../../../scid/bindings/lapack/lapack/dsygv_.html">
+								<code>dsygv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsyrfs_" class="public" href="../../../scid/bindings/lapack/lapack/dsyrfs_.html">
+								<code>dsyrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsysvx_" class="public" href="../../../scid/bindings/lapack/lapack/dsysvx_.html">
+								<code>dsysvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsysv_" class="public" href="../../../scid/bindings/lapack/lapack/dsysv_.html">
+								<code>dsysv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsytrd_" class="public" href="../../../scid/bindings/lapack/lapack/dsytrd_.html">
+								<code>dsytrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsytrf_" class="public" href="../../../scid/bindings/lapack/lapack/dsytrf_.html">
+								<code>dsytrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsytri_" class="public" href="../../../scid/bindings/lapack/lapack/dsytri_.html">
+								<code>dsytri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsytrs_" class="public" href="../../../scid/bindings/lapack/lapack/dsytrs_.html">
+								<code>dsytrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtbcon_" class="public" href="../../../scid/bindings/lapack/lapack/dtbcon_.html">
+								<code>dtbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/dtbrfs_.html">
+								<code>dtbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/dtbtrs_.html">
+								<code>dtbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtgevc_" class="public" href="../../../scid/bindings/lapack/lapack/dtgevc_.html">
+								<code>dtgevc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtgexc_" class="public" href="../../../scid/bindings/lapack/lapack/dtgexc_.html">
+								<code>dtgexc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtgsen_" class="public" href="../../../scid/bindings/lapack/lapack/dtgsen_.html">
+								<code>dtgsen_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtgsja_" class="public" href="../../../scid/bindings/lapack/lapack/dtgsja_.html">
+								<code>dtgsja_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtgsna_" class="public" href="../../../scid/bindings/lapack/lapack/dtgsna_.html">
+								<code>dtgsna_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtgsyl_" class="public" href="../../../scid/bindings/lapack/lapack/dtgsyl_.html">
+								<code>dtgsyl_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtpcon_" class="public" href="../../../scid/bindings/lapack/lapack/dtpcon_.html">
+								<code>dtpcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtprfs_" class="public" href="../../../scid/bindings/lapack/lapack/dtprfs_.html">
+								<code>dtprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtptri_" class="public" href="../../../scid/bindings/lapack/lapack/dtptri_.html">
+								<code>dtptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtptrs_" class="public" href="../../../scid/bindings/lapack/lapack/dtptrs_.html">
+								<code>dtptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrcon_" class="public" href="../../../scid/bindings/lapack/lapack/dtrcon_.html">
+								<code>dtrcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrevc_" class="public" href="../../../scid/bindings/lapack/lapack/dtrevc_.html">
+								<code>dtrevc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrexc_" class="public" href="../../../scid/bindings/lapack/lapack/dtrexc_.html">
+								<code>dtrexc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrrfs_" class="public" href="../../../scid/bindings/lapack/lapack/dtrrfs_.html">
+								<code>dtrrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrsen_" class="public" href="../../../scid/bindings/lapack/lapack/dtrsen_.html">
+								<code>dtrsen_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrsna_" class="public" href="../../../scid/bindings/lapack/lapack/dtrsna_.html">
+								<code>dtrsna_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrsyl_" class="public" href="../../../scid/bindings/lapack/lapack/dtrsyl_.html">
+								<code>dtrsyl_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrtri_" class="public" href="../../../scid/bindings/lapack/lapack/dtrtri_.html">
+								<code>dtrtri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtrtrs_" class="public" href="../../../scid/bindings/lapack/lapack/dtrtrs_.html">
+								<code>dtrtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtzrqf_" class="public" href="../../../scid/bindings/lapack/lapack/dtzrqf_.html">
+								<code>dtzrqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dtzrzf_" class="public" href="../../../scid/bindings/lapack/lapack/dtzrzf_.html">
+								<code>dtzrzf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ilaenvset_" class="public" href="../../../scid/bindings/lapack/lapack/ilaenvset_.html">
+								<code>ilaenvset_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ilaenv_" class="public" href="../../../scid/bindings/lapack/lapack/ilaenv_.html">
+								<code>ilaenv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sbdsdc_" class="public" href="../../../scid/bindings/lapack/lapack/sbdsdc_.html">
+								<code>sbdsdc_</code>
+							</a>
+						</td>
+						<td>Computes the singular value decomposition (SVD) of a real bidiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sbdsqr_" class="public" href="../../../scid/bindings/lapack/lapack/sbdsqr_.html">
+								<code>sbdsqr_</code>
+							</a>
+						</td>
+						<td>Computes the singular value decomposition (SVD) of a real bidiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sdisna_" class="public" href="../../../scid/bindings/lapack/lapack/sdisna_.html">
+								<code>sdisna_</code>
+							</a>
+						</td>
+						<td>Computes the reciprocal condition numbers for the eigenvectors of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbbrd_" class="public" href="../../../scid/bindings/lapack/lapack/sgbbrd_.html">
+								<code>sgbbrd_</code>
+							</a>
+						</td>
+						<td>Reduces a general band matrix to real upper bidiagonal form
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbcon_" class="public" href="../../../scid/bindings/lapack/lapack/sgbcon_.html">
+								<code>sgbcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbequ_" class="public" href="../../../scid/bindings/lapack/lapack/sgbequ_.html">
+								<code>sgbequ_</code>
+							</a>
+						</td>
+						<td>Computes row and column scalings to equilibrate a general band
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/sgbrfs_.html">
+								<code>sgbrfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to a general banded system of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/sgbsvx_.html">
+								<code>sgbsvx_</code>
+							</a>
+						</td>
+						<td>Solves a general banded system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbsv_" class="public" href="../../../scid/bindings/lapack/lapack/sgbsv_.html">
+								<code>sgbsv_</code>
+							</a>
+						</td>
+						<td>Solves a general banded system of linear equations AX=B.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/sgbtrf_.html">
+								<code>sgbtrf_</code>
+							</a>
+						</td>
+						<td>Computes an LU factorization of a general band matrix, using
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/sgbtrs_.html">
+								<code>sgbtrs_</code>
+							</a>
+						</td>
+						<td>Solves a general banded system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgebak_" class="public" href="../../../scid/bindings/lapack/lapack/sgebak_.html">
+								<code>sgebak_</code>
+							</a>
+						</td>
+						<td>Transforms eigenvectors of a balanced matrix to those of the
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgebal_" class="public" href="../../../scid/bindings/lapack/lapack/sgebal_.html">
+								<code>sgebal_</code>
+							</a>
+						</td>
+						<td>Balances <a href="../../../scid/bindings/lapack/lapack/sgebal_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix in order to improve the accuracy
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgebrd_" class="public" href="../../../scid/bindings/lapack/lapack/sgebrd_.html">
+								<code>sgebrd_</code>
+							</a>
+						</td>
+						<td>Reduces <a href="../../../scid/bindings/lapack/lapack/sgebrd_.html#a"><code class="prettyprint lang-d">a</code></a> general rectangular matrix to real bidiagonal form
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgecon_" class="public" href="../../../scid/bindings/lapack/lapack/sgecon_.html">
+								<code>sgecon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of <a href="../../../scid/bindings/lapack/lapack/sgecon_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeequ_" class="public" href="../../../scid/bindings/lapack/lapack/sgeequ_.html">
+								<code>sgeequ_</code>
+							</a>
+						</td>
+						<td>Computes row and column scalings to equilibrate <a href="../../../scid/bindings/lapack/lapack/sgeequ_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeesx_" class="public" href="../../../scid/bindings/lapack/lapack/sgeesx_.html">
+								<code>sgeesx_</code>
+							</a>
+						</td>
+						<td>Computes the eigenvalues and Schur factorization of <a href="../../../scid/bindings/lapack/lapack/sgeesx_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgees_" class="public" href="../../../scid/bindings/lapack/lapack/sgees_.html">
+								<code>sgees_</code>
+							</a>
+						</td>
+						<td>Computes the eigenvalues and Schur factorization of <a href="../../../scid/bindings/lapack/lapack/sgees_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeevx_" class="public" href="../../../scid/bindings/lapack/lapack/sgeevx_.html">
+								<code>sgeevx_</code>
+							</a>
+						</td>
+						<td>Computes the eigenvalues and left and right eigenvectors of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeev_" class="public" href="../../../scid/bindings/lapack/lapack/sgeev_.html">
+								<code>sgeev_</code>
+							</a>
+						</td>
+						<td>Computes the eigenvalues and left and right eigenvectors of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgegs_" class="public" href="../../../scid/bindings/lapack/lapack/sgegs_.html">
+								<code>sgegs_</code>
+							</a>
+						</td>
+						<td>Computes the generalized eigenvalues, Schur form, and left and/or
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgegv_" class="public" href="../../../scid/bindings/lapack/lapack/sgegv_.html">
+								<code>sgegv_</code>
+							</a>
+						</td>
+						<td>Computes the generalized eigenvalues, and left and/or right
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgehrd_" class="public" href="../../../scid/bindings/lapack/lapack/sgehrd_.html">
+								<code>sgehrd_</code>
+							</a>
+						</td>
+						<td>Reduces <a href="../../../scid/bindings/lapack/lapack/sgehrd_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix to upper Hessenberg form by an
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgelqf_" class="public" href="../../../scid/bindings/lapack/lapack/sgelqf_.html">
+								<code>sgelqf_</code>
+							</a>
+						</td>
+						<td>Computes an LQ factorization of <a href="../../../scid/bindings/lapack/lapack/sgelqf_.html#a"><code class="prettyprint lang-d">a</code></a> general rectangular matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgelsd_" class="public" href="../../../scid/bindings/lapack/lapack/sgelsd_.html">
+								<code>sgelsd_</code>
+							</a>
+						</td>
+						<td>Computes the least squares solution to an over-determined system
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgelss_" class="public" href="../../../scid/bindings/lapack/lapack/sgelss_.html">
+								<code>sgelss_</code>
+							</a>
+						</td>
+						<td>Computes the minimum norm least squares solution to an over-
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgelsx_" class="public" href="../../../scid/bindings/lapack/lapack/sgelsx_.html">
+								<code>sgelsx_</code>
+							</a>
+						</td>
+						<td>Computes the minimum norm least squares solution to an over-
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgelsy_" class="public" href="../../../scid/bindings/lapack/lapack/sgelsy_.html">
+								<code>sgelsy_</code>
+							</a>
+						</td>
+						<td>Computes the minimum norm least squares solution to an over-
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgels_" class="public" href="../../../scid/bindings/lapack/lapack/sgels_.html">
+								<code>sgels_</code>
+							</a>
+						</td>
+						<td>Computes the least squares solution to an over-determined system
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeqlf_" class="public" href="../../../scid/bindings/lapack/lapack/sgeqlf_.html">
+								<code>sgeqlf_</code>
+							</a>
+						</td>
+						<td>Computes <a href="../../../scid/bindings/lapack/lapack/sgeqlf_.html#a"><code class="prettyprint lang-d">a</code></a> QL factorization of <a href="../../../scid/bindings/lapack/lapack/sgeqlf_.html#a"><code class="prettyprint lang-d">a</code></a> general rectangular matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeqp3_" class="public" href="../../../scid/bindings/lapack/lapack/sgeqp3_.html">
+								<code>sgeqp3_</code>
+							</a>
+						</td>
+						<td>Computes <a href="../../../scid/bindings/lapack/lapack/sgeqp3_.html#a"><code class="prettyprint lang-d">a</code></a> QR factorization with column pivoting of <a href="../../../scid/bindings/lapack/lapack/sgeqp3_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeqpf_" class="public" href="../../../scid/bindings/lapack/lapack/sgeqpf_.html">
+								<code>sgeqpf_</code>
+							</a>
+						</td>
+						<td>Computes <a href="../../../scid/bindings/lapack/lapack/sgeqpf_.html#a"><code class="prettyprint lang-d">a</code></a> QR factorization with column pivoting of <a href="../../../scid/bindings/lapack/lapack/sgeqpf_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgeqrf_" class="public" href="../../../scid/bindings/lapack/lapack/sgeqrf_.html">
+								<code>sgeqrf_</code>
+							</a>
+						</td>
+						<td>Computes <a href="../../../scid/bindings/lapack/lapack/sgeqrf_.html#a"><code class="prettyprint lang-d">a</code></a> QR factorization of <a href="../../../scid/bindings/lapack/lapack/sgeqrf_.html#a"><code class="prettyprint lang-d">a</code></a> general rectangular matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgerfs_" class="public" href="../../../scid/bindings/lapack/lapack/sgerfs_.html">
+								<code>sgerfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to <a href="../../../scid/bindings/lapack/lapack/sgerfs_.html#a"><code class="prettyprint lang-d">a</code></a> general system of linear
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgerqf_" class="public" href="../../../scid/bindings/lapack/lapack/sgerqf_.html">
+								<code>sgerqf_</code>
+							</a>
+						</td>
+						<td>Computes an RQ factorization of <a href="../../../scid/bindings/lapack/lapack/sgerqf_.html#a"><code class="prettyprint lang-d">a</code></a> general rectangular matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgesdd_" class="public" href="../../../scid/bindings/lapack/lapack/sgesdd_.html">
+								<code>sgesdd_</code>
+							</a>
+						</td>
+						<td>Computes the singular value decomposition (SVD) of <a href="../../../scid/bindings/lapack/lapack/sgesdd_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgesvd_" class="public" href="../../../scid/bindings/lapack/lapack/sgesvd_.html">
+								<code>sgesvd_</code>
+							</a>
+						</td>
+						<td>Computes the singular value decomposition (SVD) of <a href="../../../scid/bindings/lapack/lapack/sgesvd_.html#a"><code class="prettyprint lang-d">a</code></a> general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgesvx_" class="public" href="../../../scid/bindings/lapack/lapack/sgesvx_.html">
+								<code>sgesvx_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/sgesvx_.html#a"><code class="prettyprint lang-d">a</code></a> general system of linear equations AX=B, A**T X=B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgesv_" class="public" href="../../../scid/bindings/lapack/lapack/sgesv_.html">
+								<code>sgesv_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/sgesv_.html#a"><code class="prettyprint lang-d">a</code></a> general system of linear equations AX=B.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgetrf_" class="public" href="../../../scid/bindings/lapack/lapack/sgetrf_.html">
+								<code>sgetrf_</code>
+							</a>
+						</td>
+						<td>Computes an LU factorization of <a href="../../../scid/bindings/lapack/lapack/sgetrf_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix, using partial
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgetri_" class="public" href="../../../scid/bindings/lapack/lapack/sgetri_.html">
+								<code>sgetri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of <a href="../../../scid/bindings/lapack/lapack/sgetri_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix, using the LU factorization
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgetrs_" class="public" href="../../../scid/bindings/lapack/lapack/sgetrs_.html">
+								<code>sgetrs_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/sgetrs_.html#a"><code class="prettyprint lang-d">a</code></a> general system of linear equations AX=B, A**T X=B
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggbak_" class="public" href="../../../scid/bindings/lapack/lapack/sggbak_.html">
+								<code>sggbak_</code>
+							</a>
+						</td>
+						<td>Forms the right or left eigenvectors of the generalized eigenvalue
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggbal_" class="public" href="../../../scid/bindings/lapack/lapack/sggbal_.html">
+								<code>sggbal_</code>
+							</a>
+						</td>
+						<td>Balances <a href="../../../scid/bindings/lapack/lapack/sggbal_.html#a"><code class="prettyprint lang-d">a</code></a> pair of general real matrices for the generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggesx_" class="public" href="../../../scid/bindings/lapack/lapack/sggesx_.html">
+								<code>sggesx_</code>
+							</a>
+						</td>
+						<td>Computes the generalized eigenvalues, the real Schur form, and,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgges_" class="public" href="../../../scid/bindings/lapack/lapack/sgges_.html">
+								<code>sgges_</code>
+							</a>
+						</td>
+						<td>Computes the generalized eigenvalues, Schur form, and left and/or
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggevx_" class="public" href="../../../scid/bindings/lapack/lapack/sggevx_.html">
+								<code>sggevx_</code>
+							</a>
+						</td>
+						<td>Computes the generalized eigenvalues, and optionally, the left
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggev_" class="public" href="../../../scid/bindings/lapack/lapack/sggev_.html">
+								<code>sggev_</code>
+							</a>
+						</td>
+						<td>Computes the generalized eigenvalues, and left and/or right
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggglm_" class="public" href="../../../scid/bindings/lapack/lapack/sggglm_.html">
+								<code>sggglm_</code>
+							</a>
+						</td>
+						<td>Solves the GLM (Generalized Linear Regression Model) using
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgghrd_" class="public" href="../../../scid/bindings/lapack/lapack/sgghrd_.html">
+								<code>sgghrd_</code>
+							</a>
+						</td>
+						<td>Reduces <a href="../../../scid/bindings/lapack/lapack/sgghrd_.html#a"><code class="prettyprint lang-d">a</code></a> pair of real matrices to generalized upper
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgglse_" class="public" href="../../../scid/bindings/lapack/lapack/sgglse_.html">
+								<code>sgglse_</code>
+							</a>
+						</td>
+						<td>Solves the LSE (Constrained Linear Least Squares Problem) using
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggqrf_" class="public" href="../../../scid/bindings/lapack/lapack/sggqrf_.html">
+								<code>sggqrf_</code>
+							</a>
+						</td>
+						<td>Computes <a href="../../../scid/bindings/lapack/lapack/sggqrf_.html#a"><code class="prettyprint lang-d">a</code></a> generalized QR factorization of <a href="../../../scid/bindings/lapack/lapack/sggqrf_.html#a"><code class="prettyprint lang-d">a</code></a> pair of matrices.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggrqf_" class="public" href="../../../scid/bindings/lapack/lapack/sggrqf_.html">
+								<code>sggrqf_</code>
+							</a>
+						</td>
+						<td>Computes <a href="../../../scid/bindings/lapack/lapack/sggrqf_.html#a"><code class="prettyprint lang-d">a</code></a> generalized RQ factorization of <a href="../../../scid/bindings/lapack/lapack/sggrqf_.html#a"><code class="prettyprint lang-d">a</code></a> pair of matrices.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggsvd_" class="public" href="../../../scid/bindings/lapack/lapack/sggsvd_.html">
+								<code>sggsvd_</code>
+							</a>
+						</td>
+						<td>Computes the Generalized Singular Value Decomposition
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sggsvp_" class="public" href="../../../scid/bindings/lapack/lapack/sggsvp_.html">
+								<code>sggsvp_</code>
+							</a>
+						</td>
+						<td>Computes orthogonal matrices as <a href="../../../scid/bindings/lapack/lapack/sggsvp_.html#a"><code class="prettyprint lang-d">a</code></a> preprocessing step
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgtcon_" class="public" href="../../../scid/bindings/lapack/lapack/sgtcon_.html">
+								<code>sgtcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a general
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgtrfs_" class="public" href="../../../scid/bindings/lapack/lapack/sgtrfs_.html">
+								<code>sgtrfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to a general tridiagonal system
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgtsvx_" class="public" href="../../../scid/bindings/lapack/lapack/sgtsvx_.html">
+								<code>sgtsvx_</code>
+							</a>
+						</td>
+						<td>Solves a general tridiagonal system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgtsv_" class="public" href="../../../scid/bindings/lapack/lapack/sgtsv_.html">
+								<code>sgtsv_</code>
+							</a>
+						</td>
+						<td>Solves a general tridiagonal system of linear equations AX=B.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgttrf_" class="public" href="../../../scid/bindings/lapack/lapack/sgttrf_.html">
+								<code>sgttrf_</code>
+							</a>
+						</td>
+						<td>Computes an LU factorization of a general tridiagonal matrix,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sgttrs_" class="public" href="../../../scid/bindings/lapack/lapack/sgttrs_.html">
+								<code>sgttrs_</code>
+							</a>
+						</td>
+						<td>Solves a general tridiagonal system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="shgeqz_" class="public" href="../../../scid/bindings/lapack/lapack/shgeqz_.html">
+								<code>shgeqz_</code>
+							</a>
+						</td>
+						<td>Implements <a href="../../../scid/bindings/lapack/lapack/shgeqz_.html#a"><code class="prettyprint lang-d">a</code></a> single-/<a href="../../../scid/bindings/lapack/lapack/f_double.html"><code class="prettyprint lang-d">f_double</code></a>-shift version of the QZ method for
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="shsein_" class="public" href="../../../scid/bindings/lapack/lapack/shsein_.html">
+								<code>shsein_</code>
+							</a>
+						</td>
+						<td>Computes specified right and/or left eigenvectors of an upper
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="shseqr_" class="public" href="../../../scid/bindings/lapack/lapack/shseqr_.html">
+								<code>shseqr_</code>
+							</a>
+						</td>
+						<td>Computes the eigenvalues and Schur factorization of an upper
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="slamch_" class="public" href="../../../scid/bindings/lapack/lapack/slamch_.html">
+								<code>slamch_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sopgtr_" class="public" href="../../../scid/bindings/lapack/lapack/sopgtr_.html">
+								<code>sopgtr_</code>
+							</a>
+						</td>
+						<td>Generates the orthogonal transformation matrix from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sopmtr_" class="public" href="../../../scid/bindings/lapack/lapack/sopmtr_.html">
+								<code>sopmtr_</code>
+							</a>
+						</td>
+						<td>Multiplies a general matrix by the orthogonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sorgbr_" class="public" href="../../../scid/bindings/lapack/lapack/sorgbr_.html">
+								<code>sorgbr_</code>
+							</a>
+						</td>
+						<td>Generates the orthogonal transformation matrices from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sorghr_" class="public" href="../../../scid/bindings/lapack/lapack/sorghr_.html">
+								<code>sorghr_</code>
+							</a>
+						</td>
+						<td>Generates the orthogonal transformation matrix from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sorglq_" class="public" href="../../../scid/bindings/lapack/lapack/sorglq_.html">
+								<code>sorglq_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the orthogonal matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sorgql_" class="public" href="../../../scid/bindings/lapack/lapack/sorgql_.html">
+								<code>sorgql_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the orthogonal matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sorgqr_" class="public" href="../../../scid/bindings/lapack/lapack/sorgqr_.html">
+								<code>sorgqr_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the orthogonal matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sorgrq_" class="public" href="../../../scid/bindings/lapack/lapack/sorgrq_.html">
+								<code>sorgrq_</code>
+							</a>
+						</td>
+						<td>Generates all or part of the orthogonal matrix Q from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sorgtr_" class="public" href="../../../scid/bindings/lapack/lapack/sorgtr_.html">
+								<code>sorgtr_</code>
+							</a>
+						</td>
+						<td>Generates the orthogonal transformation matrix from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormbr_" class="public" href="../../../scid/bindings/lapack/lapack/sormbr_.html">
+								<code>sormbr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/sormbr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by one of the orthogonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormhr_" class="public" href="../../../scid/bindings/lapack/lapack/sormhr_.html">
+								<code>sormhr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/sormhr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal transformation
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormlq_" class="public" href="../../../scid/bindings/lapack/lapack/sormlq_.html">
+								<code>sormlq_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/sormlq_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormql_" class="public" href="../../../scid/bindings/lapack/lapack/sormql_.html">
+								<code>sormql_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/sormql_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormqr_" class="public" href="../../../scid/bindings/lapack/lapack/sormqr_.html">
+								<code>sormqr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/sormqr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormr3_" class="public" href="../../../scid/bindings/lapack/lapack/sormr3_.html">
+								<code>sormr3_</code>
+							</a>
+						</td>
+						<td>Multiples <a href="../../../scid/bindings/lapack/lapack/sormr3_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormrq_" class="public" href="../../../scid/bindings/lapack/lapack/sormrq_.html">
+								<code>sormrq_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/sormrq_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormrz_" class="public" href="../../../scid/bindings/lapack/lapack/sormrz_.html">
+								<code>sormrz_</code>
+							</a>
+						</td>
+						<td>Multiples <a href="../../../scid/bindings/lapack/lapack/sormrz_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sormtr_" class="public" href="../../../scid/bindings/lapack/lapack/sormtr_.html">
+								<code>sormtr_</code>
+							</a>
+						</td>
+						<td>Multiplies <a href="../../../scid/bindings/lapack/lapack/sormtr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbcon_" class="public" href="../../../scid/bindings/lapack/lapack/spbcon_.html">
+								<code>spbcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbequ_" class="public" href="../../../scid/bindings/lapack/lapack/spbequ_.html">
+								<code>spbequ_</code>
+							</a>
+						</td>
+						<td>Computes row and column scalings to equilibrate a symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/spbrfs_.html">
+								<code>spbrfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to a symmetric positive
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbstf_" class="public" href="../../../scid/bindings/lapack/lapack/spbstf_.html">
+								<code>spbstf_</code>
+							</a>
+						</td>
+						<td>Computes a split Cholesky factorization of a real symmetric positive
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/spbsvx_.html">
+								<code>spbsvx_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite banded system
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbsv_" class="public" href="../../../scid/bindings/lapack/lapack/spbsv_.html">
+								<code>spbsv_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite banded system
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/spbtrf_.html">
+								<code>spbtrf_</code>
+							</a>
+						</td>
+						<td>Computes the Cholesky factorization of a symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/spbtrs_.html">
+								<code>spbtrs_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite banded system
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spocon_" class="public" href="../../../scid/bindings/lapack/lapack/spocon_.html">
+								<code>spocon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of <a href="../../../scid/bindings/lapack/lapack/spocon_.html#a"><code class="prettyprint lang-d">a</code></a>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spoequ_" class="public" href="../../../scid/bindings/lapack/lapack/spoequ_.html">
+								<code>spoequ_</code>
+							</a>
+						</td>
+						<td>Computes row and column scalings to equilibrate <a href="../../../scid/bindings/lapack/lapack/spoequ_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sporfs_" class="public" href="../../../scid/bindings/lapack/lapack/sporfs_.html">
+								<code>sporfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to <a href="../../../scid/bindings/lapack/lapack/sporfs_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric positive
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sposvx_" class="public" href="../../../scid/bindings/lapack/lapack/sposvx_.html">
+								<code>sposvx_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/sposvx_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric positive definite system of linear
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sposv_" class="public" href="../../../scid/bindings/lapack/lapack/sposv_.html">
+								<code>sposv_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/sposv_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric positive definite system of linear
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spotrf_" class="public" href="../../../scid/bindings/lapack/lapack/spotrf_.html">
+								<code>spotrf_</code>
+							</a>
+						</td>
+						<td>Computes the Cholesky factorization of <a href="../../../scid/bindings/lapack/lapack/spotrf_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spotri_" class="public" href="../../../scid/bindings/lapack/lapack/spotri_.html">
+								<code>spotri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of <a href="../../../scid/bindings/lapack/lapack/spotri_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric positive definite
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spotrs_" class="public" href="../../../scid/bindings/lapack/lapack/spotrs_.html">
+								<code>spotrs_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/spotrs_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric positive definite system of linear
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sppcon_" class="public" href="../../../scid/bindings/lapack/lapack/sppcon_.html">
+								<code>sppcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sppequ_" class="public" href="../../../scid/bindings/lapack/lapack/sppequ_.html">
+								<code>sppequ_</code>
+							</a>
+						</td>
+						<td>Computes row and column scalings to equilibrate a symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spprfs_" class="public" href="../../../scid/bindings/lapack/lapack/spprfs_.html">
+								<code>spprfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to a symmetric positive
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sppsvx_" class="public" href="../../../scid/bindings/lapack/lapack/sppsvx_.html">
+								<code>sppsvx_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite system of linear
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sppsv_" class="public" href="../../../scid/bindings/lapack/lapack/sppsv_.html">
+								<code>sppsv_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite system of linear
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spptrf_" class="public" href="../../../scid/bindings/lapack/lapack/spptrf_.html">
+								<code>spptrf_</code>
+							</a>
+						</td>
+						<td>Computes the Cholesky factorization of a symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spptri_" class="public" href="../../../scid/bindings/lapack/lapack/spptri_.html">
+								<code>spptri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of a symmetric positive definite
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spptrs_" class="public" href="../../../scid/bindings/lapack/lapack/spptrs_.html">
+								<code>spptrs_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite system of linear
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sptcon_" class="public" href="../../../scid/bindings/lapack/lapack/sptcon_.html">
+								<code>sptcon_</code>
+							</a>
+						</td>
+						<td>Computes the reciprocal of the condition number of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spteqr_" class="public" href="../../../scid/bindings/lapack/lapack/spteqr_.html">
+								<code>spteqr_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and eigenvectors of a real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sptrfs_" class="public" href="../../../scid/bindings/lapack/lapack/sptrfs_.html">
+								<code>sptrfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to a symmetric positive
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sptsvx_" class="public" href="../../../scid/bindings/lapack/lapack/sptsvx_.html">
+								<code>sptsvx_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite tridiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sptsv_" class="public" href="../../../scid/bindings/lapack/lapack/sptsv_.html">
+								<code>sptsv_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite tridiagonal system
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spttrf_" class="public" href="../../../scid/bindings/lapack/lapack/spttrf_.html">
+								<code>spttrf_</code>
+							</a>
+						</td>
+						<td>Computes the LDL**H factorization of a symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spttrs_" class="public" href="../../../scid/bindings/lapack/lapack/spttrs_.html">
+								<code>spttrs_</code>
+							</a>
+						</td>
+						<td>Solves a symmetric positive definite tridiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbevd_" class="public" href="../../../scid/bindings/lapack/lapack/ssbevd_.html">
+								<code>ssbevd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbevx_" class="public" href="../../../scid/bindings/lapack/lapack/ssbevx_.html">
+								<code>ssbevx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and eigenvectors of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbev_" class="public" href="../../../scid/bindings/lapack/lapack/ssbev_.html">
+								<code>ssbev_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbgst_" class="public" href="../../../scid/bindings/lapack/lapack/ssbgst_.html">
+								<code>ssbgst_</code>
+							</a>
+						</td>
+						<td>Reduces a real symmetric-definite banded generalized eigenproblem
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbgvd_" class="public" href="../../../scid/bindings/lapack/lapack/ssbgvd_.html">
+								<code>ssbgvd_</code>
+							</a>
+						</td>
+						<td>Computes all the eigenvalues, and optionally, the eigenvectors
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbgvx_" class="public" href="../../../scid/bindings/lapack/lapack/ssbgvx_.html">
+								<code>ssbgvx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, the eigenvectors
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbgv_" class="public" href="../../../scid/bindings/lapack/lapack/ssbgv_.html">
+								<code>ssbgv_</code>
+							</a>
+						</td>
+						<td>Computes all the eigenvalues, and optionally, the eigenvectors
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssbtrd_" class="public" href="../../../scid/bindings/lapack/lapack/ssbtrd_.html">
+								<code>ssbtrd_</code>
+							</a>
+						</td>
+						<td>Reduces a symmetric band matrix to real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspcon_" class="public" href="../../../scid/bindings/lapack/lapack/sspcon_.html">
+								<code>sspcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspevd_" class="public" href="../../../scid/bindings/lapack/lapack/sspevd_.html">
+								<code>sspevd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspevx_" class="public" href="../../../scid/bindings/lapack/lapack/sspevx_.html">
+								<code>sspevx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and eigenvectors of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspev_" class="public" href="../../../scid/bindings/lapack/lapack/sspev_.html">
+								<code>sspev_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspgst_" class="public" href="../../../scid/bindings/lapack/lapack/sspgst_.html">
+								<code>sspgst_</code>
+							</a>
+						</td>
+						<td>Reduces a symmetric-definite generalized eigenproblem
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspgvd_" class="public" href="../../../scid/bindings/lapack/lapack/sspgvd_.html">
+								<code>sspgvd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and eigenvectors of  a generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspgvx_" class="public" href="../../../scid/bindings/lapack/lapack/sspgvx_.html">
+								<code>sspgvx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, eigenvectors of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspgv_" class="public" href="../../../scid/bindings/lapack/lapack/sspgv_.html">
+								<code>sspgv_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and eigenvectors of  a generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssprfs_" class="public" href="../../../scid/bindings/lapack/lapack/ssprfs_.html">
+								<code>ssprfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspsvx_" class="public" href="../../../scid/bindings/lapack/lapack/sspsvx_.html">
+								<code>sspsvx_</code>
+							</a>
+						</td>
+						<td>Solves a real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sspsv_" class="public" href="../../../scid/bindings/lapack/lapack/sspsv_.html">
+								<code>sspsv_</code>
+							</a>
+						</td>
+						<td>Solves a real symmetric indefinite system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssptrd_" class="public" href="../../../scid/bindings/lapack/lapack/ssptrd_.html">
+								<code>ssptrd_</code>
+							</a>
+						</td>
+						<td>Reduces a symmetric matrix in packed storage to real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssptrf_" class="public" href="../../../scid/bindings/lapack/lapack/ssptrf_.html">
+								<code>ssptrf_</code>
+							</a>
+						</td>
+						<td>Computes the factorization of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssptri_" class="public" href="../../../scid/bindings/lapack/lapack/ssptri_.html">
+								<code>ssptri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of a real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssptrs_" class="public" href="../../../scid/bindings/lapack/lapack/ssptrs_.html">
+								<code>ssptrs_</code>
+							</a>
+						</td>
+						<td>Solves a real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstebz_" class="public" href="../../../scid/bindings/lapack/lapack/sstebz_.html">
+								<code>sstebz_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues of a real symmetric tridiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstedc_" class="public" href="../../../scid/bindings/lapack/lapack/sstedc_.html">
+								<code>sstedc_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and, optionally, eigenvectors of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstegr_" class="public" href="../../../scid/bindings/lapack/lapack/sstegr_.html">
+								<code>sstegr_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and, optionally, eigenvectors of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstein_" class="public" href="../../../scid/bindings/lapack/lapack/sstein_.html">
+								<code>sstein_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvectors of a real symmetric tridiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssteqr_" class="public" href="../../../scid/bindings/lapack/lapack/ssteqr_.html">
+								<code>ssteqr_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and eigenvectors of a real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssterf_" class="public" href="../../../scid/bindings/lapack/lapack/ssterf_.html">
+								<code>ssterf_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues of a real symmetric tridiagonal matrix,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstevd_" class="public" href="../../../scid/bindings/lapack/lapack/sstevd_.html">
+								<code>sstevd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstevr_" class="public" href="../../../scid/bindings/lapack/lapack/sstevr_.html">
+								<code>sstevr_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstevx_" class="public" href="../../../scid/bindings/lapack/lapack/sstevx_.html">
+								<code>sstevx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sstev_" class="public" href="../../../scid/bindings/lapack/lapack/sstev_.html">
+								<code>sstev_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of a real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssycon_" class="public" href="../../../scid/bindings/lapack/lapack/ssycon_.html">
+								<code>ssycon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of <a href="../../../scid/bindings/lapack/lapack/ssycon_.html#a"><code class="prettyprint lang-d">a</code></a>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssyevd_" class="public" href="../../../scid/bindings/lapack/lapack/ssyevd_.html">
+								<code>ssyevd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of <a href="../../../scid/bindings/lapack/lapack/ssyevd_.html#a"><code class="prettyprint lang-d">a</code></a> real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssyevr_" class="public" href="../../../scid/bindings/lapack/lapack/ssyevr_.html">
+								<code>ssyevr_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, eigenvectors of <a href="../../../scid/bindings/lapack/lapack/ssyevr_.html#a"><code class="prettyprint lang-d">a</code></a> real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssyevx_" class="public" href="../../../scid/bindings/lapack/lapack/ssyevx_.html">
+								<code>ssyevx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues and eigenvectors of <a href="../../../scid/bindings/lapack/lapack/ssyevx_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssyev_" class="public" href="../../../scid/bindings/lapack/lapack/ssyev_.html">
+								<code>ssyev_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues, and optionally, eigenvectors of <a href="../../../scid/bindings/lapack/lapack/ssyev_.html#a"><code class="prettyprint lang-d">a</code></a> real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssygst_" class="public" href="../../../scid/bindings/lapack/lapack/ssygst_.html">
+								<code>ssygst_</code>
+							</a>
+						</td>
+						<td>Reduces <a href="../../../scid/bindings/lapack/lapack/ssygst_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric-definite generalized eigenproblem
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssygvd_" class="public" href="../../../scid/bindings/lapack/lapack/ssygvd_.html">
+								<code>ssygvd_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and the eigenvectors of  <a href="../../../scid/bindings/lapack/lapack/ssygvd_.html#a"><code class="prettyprint lang-d">a</code></a> generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssygvx_" class="public" href="../../../scid/bindings/lapack/lapack/ssygvx_.html">
+								<code>ssygvx_</code>
+							</a>
+						</td>
+						<td>Computes selected eigenvalues, and optionally, the eigenvectors of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssygv_" class="public" href="../../../scid/bindings/lapack/lapack/ssygv_.html">
+								<code>ssygv_</code>
+							</a>
+						</td>
+						<td>Computes all eigenvalues and the eigenvectors of  <a href="../../../scid/bindings/lapack/lapack/ssygv_.html#a"><code class="prettyprint lang-d">a</code></a> generalized
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssyrfs_" class="public" href="../../../scid/bindings/lapack/lapack/ssyrfs_.html">
+								<code>ssyrfs_</code>
+							</a>
+						</td>
+						<td>Improves the computed solution to <a href="../../../scid/bindings/lapack/lapack/ssyrfs_.html#a"><code class="prettyprint lang-d">a</code></a> real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssysvx_" class="public" href="../../../scid/bindings/lapack/lapack/ssysvx_.html">
+								<code>ssysvx_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/ssysvx_.html#a"><code class="prettyprint lang-d">a</code></a> real symmetric
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssysv_" class="public" href="../../../scid/bindings/lapack/lapack/ssysv_.html">
+								<code>ssysv_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/ssysv_.html#a"><code class="prettyprint lang-d">a</code></a> real symmetric indefinite system of linear equations AX=B.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssytrd_" class="public" href="../../../scid/bindings/lapack/lapack/ssytrd_.html">
+								<code>ssytrd_</code>
+							</a>
+						</td>
+						<td>Reduces <a href="../../../scid/bindings/lapack/lapack/ssytrd_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric matrix to real symmetric tridiagonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssytrf_" class="public" href="../../../scid/bindings/lapack/lapack/ssytrf_.html">
+								<code>ssytrf_</code>
+							</a>
+						</td>
+						<td>Computes the factorization of <a href="../../../scid/bindings/lapack/lapack/ssytrf_.html#a"><code class="prettyprint lang-d">a</code></a> real symmetric-indefinite matrix,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssytri_" class="public" href="../../../scid/bindings/lapack/lapack/ssytri_.html">
+								<code>ssytri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of <a href="../../../scid/bindings/lapack/lapack/ssytri_.html#a"><code class="prettyprint lang-d">a</code></a> real symmetric indefinite matrix,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ssytrs_" class="public" href="../../../scid/bindings/lapack/lapack/ssytrs_.html">
+								<code>ssytrs_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/ssytrs_.html#a"><code class="prettyprint lang-d">a</code></a> real symmetric indefinite system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stbcon_" class="public" href="../../../scid/bindings/lapack/lapack/stbcon_.html">
+								<code>stbcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a triangular
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/stbrfs_.html">
+								<code>stbrfs_</code>
+							</a>
+						</td>
+						<td>Provides forward and backward error bounds for the solution
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/stbtrs_.html">
+								<code>stbtrs_</code>
+							</a>
+						</td>
+						<td>Solves a triangular banded system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stgevc_" class="public" href="../../../scid/bindings/lapack/lapack/stgevc_.html">
+								<code>stgevc_</code>
+							</a>
+						</td>
+						<td>Computes some or all of the right and/or left generalized eigenvectors
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stgexc_" class="public" href="../../../scid/bindings/lapack/lapack/stgexc_.html">
+								<code>stgexc_</code>
+							</a>
+						</td>
+						<td>Reorders the generalized real Schur decomposition of <a href="../../../scid/bindings/lapack/lapack/stgexc_.html#a"><code class="prettyprint lang-d">a</code></a> real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stgsen_" class="public" href="../../../scid/bindings/lapack/lapack/stgsen_.html">
+								<code>stgsen_</code>
+							</a>
+						</td>
+						<td>Reorders the generalized real Schur decomposition of <a href="../../../scid/bindings/lapack/lapack/stgsen_.html#a"><code class="prettyprint lang-d">a</code></a> real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stgsja_" class="public" href="../../../scid/bindings/lapack/lapack/stgsja_.html">
+								<code>stgsja_</code>
+							</a>
+						</td>
+						<td>Computes the generalized singular value decomposition of two real
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stgsna_" class="public" href="../../../scid/bindings/lapack/lapack/stgsna_.html">
+								<code>stgsna_</code>
+							</a>
+						</td>
+						<td>Estimates reciprocal condition numbers for specified
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stgsyl_" class="public" href="../../../scid/bindings/lapack/lapack/stgsyl_.html">
+								<code>stgsyl_</code>
+							</a>
+						</td>
+						<td>Solves the generalized Sylvester equation.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stpcon_" class="public" href="../../../scid/bindings/lapack/lapack/stpcon_.html">
+								<code>stpcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of a triangular
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stprfs_" class="public" href="../../../scid/bindings/lapack/lapack/stprfs_.html">
+								<code>stprfs_</code>
+							</a>
+						</td>
+						<td>Provides forward and backward error bounds for the solution
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stptri_" class="public" href="../../../scid/bindings/lapack/lapack/stptri_.html">
+								<code>stptri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of a triangular matrix in packed storage.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stptrs_" class="public" href="../../../scid/bindings/lapack/lapack/stptrs_.html">
+								<code>stptrs_</code>
+							</a>
+						</td>
+						<td>Solves a triangular system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strcon_" class="public" href="../../../scid/bindings/lapack/lapack/strcon_.html">
+								<code>strcon_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal of the condition number of <a href="../../../scid/bindings/lapack/lapack/strcon_.html#a"><code class="prettyprint lang-d">a</code></a> triangular
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strevc_" class="public" href="../../../scid/bindings/lapack/lapack/strevc_.html">
+								<code>strevc_</code>
+							</a>
+						</td>
+						<td>Computes some or all of the right and/or left eigenvectors of
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strexc_" class="public" href="../../../scid/bindings/lapack/lapack/strexc_.html">
+								<code>strexc_</code>
+							</a>
+						</td>
+						<td>Reorders the Schur factorization of a matrix by an orthogonal
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strrfs_" class="public" href="../../../scid/bindings/lapack/lapack/strrfs_.html">
+								<code>strrfs_</code>
+							</a>
+						</td>
+						<td>Provides forward and backward error bounds for the solution
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strsen_" class="public" href="../../../scid/bindings/lapack/lapack/strsen_.html">
+								<code>strsen_</code>
+							</a>
+						</td>
+						<td>Reorders the Schur factorization of a matrix in order to find
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strsna_" class="public" href="../../../scid/bindings/lapack/lapack/strsna_.html">
+								<code>strsna_</code>
+							</a>
+						</td>
+						<td>Estimates the reciprocal condition numbers (sensitivities)
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strsyl_" class="public" href="../../../scid/bindings/lapack/lapack/strsyl_.html">
+								<code>strsyl_</code>
+							</a>
+						</td>
+						<td>Solves the Sylvester matrix equation A X +/- X B=C where A
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strtri_" class="public" href="../../../scid/bindings/lapack/lapack/strtri_.html">
+								<code>strtri_</code>
+							</a>
+						</td>
+						<td>Computes the inverse of <a href="../../../scid/bindings/lapack/lapack/strtri_.html#a"><code class="prettyprint lang-d">a</code></a> triangular matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="strtrs_" class="public" href="../../../scid/bindings/lapack/lapack/strtrs_.html">
+								<code>strtrs_</code>
+							</a>
+						</td>
+						<td>Solves <a href="../../../scid/bindings/lapack/lapack/strtrs_.html#a"><code class="prettyprint lang-d">a</code></a> triangular system of linear equations AX=B,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stzrqf_" class="public" href="../../../scid/bindings/lapack/lapack/stzrqf_.html">
+								<code>stzrqf_</code>
+							</a>
+						</td>
+						<td>Computes an RQ factorization of an upper trapezoidal matrix.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stzrzf_" class="public" href="../../../scid/bindings/lapack/lapack/stzrzf_.html">
+								<code>stzrzf_</code>
+							</a>
+						</td>
+						<td>Computes an RZ factorization of an upper trapezoidal matrix
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zbdsqr_" class="public" href="../../../scid/bindings/lapack/lapack/zbdsqr_.html">
+								<code>zbdsqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbbrd_" class="public" href="../../../scid/bindings/lapack/lapack/zgbbrd_.html">
+								<code>zgbbrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbcon_" class="public" href="../../../scid/bindings/lapack/lapack/zgbcon_.html">
+								<code>zgbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbequ_" class="public" href="../../../scid/bindings/lapack/lapack/zgbequ_.html">
+								<code>zgbequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/zgbrfs_.html">
+								<code>zgbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/zgbsvx_.html">
+								<code>zgbsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbsv_" class="public" href="../../../scid/bindings/lapack/lapack/zgbsv_.html">
+								<code>zgbsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/zgbtrf_.html">
+								<code>zgbtrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/zgbtrs_.html">
+								<code>zgbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgebak_" class="public" href="../../../scid/bindings/lapack/lapack/zgebak_.html">
+								<code>zgebak_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgebal_" class="public" href="../../../scid/bindings/lapack/lapack/zgebal_.html">
+								<code>zgebal_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgebrd_" class="public" href="../../../scid/bindings/lapack/lapack/zgebrd_.html">
+								<code>zgebrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgecon_" class="public" href="../../../scid/bindings/lapack/lapack/zgecon_.html">
+								<code>zgecon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeequ_" class="public" href="../../../scid/bindings/lapack/lapack/zgeequ_.html">
+								<code>zgeequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeesx_" class="public" href="../../../scid/bindings/lapack/lapack/zgeesx_.html">
+								<code>zgeesx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgees_" class="public" href="../../../scid/bindings/lapack/lapack/zgees_.html">
+								<code>zgees_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeevx_" class="public" href="../../../scid/bindings/lapack/lapack/zgeevx_.html">
+								<code>zgeevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeev_" class="public" href="../../../scid/bindings/lapack/lapack/zgeev_.html">
+								<code>zgeev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgegs_" class="public" href="../../../scid/bindings/lapack/lapack/zgegs_.html">
+								<code>zgegs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgegv_" class="public" href="../../../scid/bindings/lapack/lapack/zgegv_.html">
+								<code>zgegv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgehrd_" class="public" href="../../../scid/bindings/lapack/lapack/zgehrd_.html">
+								<code>zgehrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgelqf_" class="public" href="../../../scid/bindings/lapack/lapack/zgelqf_.html">
+								<code>zgelqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgelsd_" class="public" href="../../../scid/bindings/lapack/lapack/zgelsd_.html">
+								<code>zgelsd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgelss_" class="public" href="../../../scid/bindings/lapack/lapack/zgelss_.html">
+								<code>zgelss_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgelsx_" class="public" href="../../../scid/bindings/lapack/lapack/zgelsx_.html">
+								<code>zgelsx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgelsy_" class="public" href="../../../scid/bindings/lapack/lapack/zgelsy_.html">
+								<code>zgelsy_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgels_" class="public" href="../../../scid/bindings/lapack/lapack/zgels_.html">
+								<code>zgels_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeqlf_" class="public" href="../../../scid/bindings/lapack/lapack/zgeqlf_.html">
+								<code>zgeqlf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeqp3_" class="public" href="../../../scid/bindings/lapack/lapack/zgeqp3_.html">
+								<code>zgeqp3_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeqpf_" class="public" href="../../../scid/bindings/lapack/lapack/zgeqpf_.html">
+								<code>zgeqpf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgeqrf_" class="public" href="../../../scid/bindings/lapack/lapack/zgeqrf_.html">
+								<code>zgeqrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgerfs_" class="public" href="../../../scid/bindings/lapack/lapack/zgerfs_.html">
+								<code>zgerfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgerqf_" class="public" href="../../../scid/bindings/lapack/lapack/zgerqf_.html">
+								<code>zgerqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgesdd_" class="public" href="../../../scid/bindings/lapack/lapack/zgesdd_.html">
+								<code>zgesdd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgesvd_" class="public" href="../../../scid/bindings/lapack/lapack/zgesvd_.html">
+								<code>zgesvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgesvx_" class="public" href="../../../scid/bindings/lapack/lapack/zgesvx_.html">
+								<code>zgesvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgesv_" class="public" href="../../../scid/bindings/lapack/lapack/zgesv_.html">
+								<code>zgesv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgetrf_" class="public" href="../../../scid/bindings/lapack/lapack/zgetrf_.html">
+								<code>zgetrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgetri_" class="public" href="../../../scid/bindings/lapack/lapack/zgetri_.html">
+								<code>zgetri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgetrs_" class="public" href="../../../scid/bindings/lapack/lapack/zgetrs_.html">
+								<code>zgetrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggbak_" class="public" href="../../../scid/bindings/lapack/lapack/zggbak_.html">
+								<code>zggbak_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggbal_" class="public" href="../../../scid/bindings/lapack/lapack/zggbal_.html">
+								<code>zggbal_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggesx_" class="public" href="../../../scid/bindings/lapack/lapack/zggesx_.html">
+								<code>zggesx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgges_" class="public" href="../../../scid/bindings/lapack/lapack/zgges_.html">
+								<code>zgges_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggevx_" class="public" href="../../../scid/bindings/lapack/lapack/zggevx_.html">
+								<code>zggevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggev_" class="public" href="../../../scid/bindings/lapack/lapack/zggev_.html">
+								<code>zggev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggglm_" class="public" href="../../../scid/bindings/lapack/lapack/zggglm_.html">
+								<code>zggglm_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgghrd_" class="public" href="../../../scid/bindings/lapack/lapack/zgghrd_.html">
+								<code>zgghrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgglse_" class="public" href="../../../scid/bindings/lapack/lapack/zgglse_.html">
+								<code>zgglse_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggqrf_" class="public" href="../../../scid/bindings/lapack/lapack/zggqrf_.html">
+								<code>zggqrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggrqf_" class="public" href="../../../scid/bindings/lapack/lapack/zggrqf_.html">
+								<code>zggrqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggsvd_" class="public" href="../../../scid/bindings/lapack/lapack/zggsvd_.html">
+								<code>zggsvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zggsvp_" class="public" href="../../../scid/bindings/lapack/lapack/zggsvp_.html">
+								<code>zggsvp_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgtcon_" class="public" href="../../../scid/bindings/lapack/lapack/zgtcon_.html">
+								<code>zgtcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgtrfs_" class="public" href="../../../scid/bindings/lapack/lapack/zgtrfs_.html">
+								<code>zgtrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgtsvx_" class="public" href="../../../scid/bindings/lapack/lapack/zgtsvx_.html">
+								<code>zgtsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgtsv_" class="public" href="../../../scid/bindings/lapack/lapack/zgtsv_.html">
+								<code>zgtsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgttrf_" class="public" href="../../../scid/bindings/lapack/lapack/zgttrf_.html">
+								<code>zgttrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zgttrs_" class="public" href="../../../scid/bindings/lapack/lapack/zgttrs_.html">
+								<code>zgttrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbevd_" class="public" href="../../../scid/bindings/lapack/lapack/zhbevd_.html">
+								<code>zhbevd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbevx_" class="public" href="../../../scid/bindings/lapack/lapack/zhbevx_.html">
+								<code>zhbevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbev_" class="public" href="../../../scid/bindings/lapack/lapack/zhbev_.html">
+								<code>zhbev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbgst_" class="public" href="../../../scid/bindings/lapack/lapack/zhbgst_.html">
+								<code>zhbgst_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbgvd_" class="public" href="../../../scid/bindings/lapack/lapack/zhbgvd_.html">
+								<code>zhbgvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbgvx_" class="public" href="../../../scid/bindings/lapack/lapack/zhbgvx_.html">
+								<code>zhbgvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbgv_" class="public" href="../../../scid/bindings/lapack/lapack/zhbgv_.html">
+								<code>zhbgv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhbtrd_" class="public" href="../../../scid/bindings/lapack/lapack/zhbtrd_.html">
+								<code>zhbtrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhecon_" class="public" href="../../../scid/bindings/lapack/lapack/zhecon_.html">
+								<code>zhecon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zheevd_" class="public" href="../../../scid/bindings/lapack/lapack/zheevd_.html">
+								<code>zheevd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zheevr_" class="public" href="../../../scid/bindings/lapack/lapack/zheevr_.html">
+								<code>zheevr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zheevx_" class="public" href="../../../scid/bindings/lapack/lapack/zheevx_.html">
+								<code>zheevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zheev_" class="public" href="../../../scid/bindings/lapack/lapack/zheev_.html">
+								<code>zheev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhegst_" class="public" href="../../../scid/bindings/lapack/lapack/zhegst_.html">
+								<code>zhegst_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhegvd_" class="public" href="../../../scid/bindings/lapack/lapack/zhegvd_.html">
+								<code>zhegvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhegvx_" class="public" href="../../../scid/bindings/lapack/lapack/zhegvx_.html">
+								<code>zhegvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhegv_" class="public" href="../../../scid/bindings/lapack/lapack/zhegv_.html">
+								<code>zhegv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zherfs_" class="public" href="../../../scid/bindings/lapack/lapack/zherfs_.html">
+								<code>zherfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhesvx_" class="public" href="../../../scid/bindings/lapack/lapack/zhesvx_.html">
+								<code>zhesvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhesv_" class="public" href="../../../scid/bindings/lapack/lapack/zhesv_.html">
+								<code>zhesv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhetrd_" class="public" href="../../../scid/bindings/lapack/lapack/zhetrd_.html">
+								<code>zhetrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhetrf_" class="public" href="../../../scid/bindings/lapack/lapack/zhetrf_.html">
+								<code>zhetrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhetri_" class="public" href="../../../scid/bindings/lapack/lapack/zhetri_.html">
+								<code>zhetri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhetrs_" class="public" href="../../../scid/bindings/lapack/lapack/zhetrs_.html">
+								<code>zhetrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhgeqz_" class="public" href="../../../scid/bindings/lapack/lapack/zhgeqz_.html">
+								<code>zhgeqz_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpcon_" class="public" href="../../../scid/bindings/lapack/lapack/zhpcon_.html">
+								<code>zhpcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpevd_" class="public" href="../../../scid/bindings/lapack/lapack/zhpevd_.html">
+								<code>zhpevd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpevx_" class="public" href="../../../scid/bindings/lapack/lapack/zhpevx_.html">
+								<code>zhpevx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpev_" class="public" href="../../../scid/bindings/lapack/lapack/zhpev_.html">
+								<code>zhpev_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpgst_" class="public" href="../../../scid/bindings/lapack/lapack/zhpgst_.html">
+								<code>zhpgst_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpgvd_" class="public" href="../../../scid/bindings/lapack/lapack/zhpgvd_.html">
+								<code>zhpgvd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpgvx_" class="public" href="../../../scid/bindings/lapack/lapack/zhpgvx_.html">
+								<code>zhpgvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpgv_" class="public" href="../../../scid/bindings/lapack/lapack/zhpgv_.html">
+								<code>zhpgv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhprfs_" class="public" href="../../../scid/bindings/lapack/lapack/zhprfs_.html">
+								<code>zhprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpsvx_" class="public" href="../../../scid/bindings/lapack/lapack/zhpsvx_.html">
+								<code>zhpsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhpsv_" class="public" href="../../../scid/bindings/lapack/lapack/zhpsv_.html">
+								<code>zhpsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhptrd_" class="public" href="../../../scid/bindings/lapack/lapack/zhptrd_.html">
+								<code>zhptrd_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhptrf_" class="public" href="../../../scid/bindings/lapack/lapack/zhptrf_.html">
+								<code>zhptrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhptri_" class="public" href="../../../scid/bindings/lapack/lapack/zhptri_.html">
+								<code>zhptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhptrs_" class="public" href="../../../scid/bindings/lapack/lapack/zhptrs_.html">
+								<code>zhptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhsein_" class="public" href="../../../scid/bindings/lapack/lapack/zhsein_.html">
+								<code>zhsein_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zhseqr_" class="public" href="../../../scid/bindings/lapack/lapack/zhseqr_.html">
+								<code>zhseqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbcon_" class="public" href="../../../scid/bindings/lapack/lapack/zpbcon_.html">
+								<code>zpbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbequ_" class="public" href="../../../scid/bindings/lapack/lapack/zpbequ_.html">
+								<code>zpbequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/zpbrfs_.html">
+								<code>zpbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbstf_" class="public" href="../../../scid/bindings/lapack/lapack/zpbstf_.html">
+								<code>zpbstf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbsvx_" class="public" href="../../../scid/bindings/lapack/lapack/zpbsvx_.html">
+								<code>zpbsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbsv_" class="public" href="../../../scid/bindings/lapack/lapack/zpbsv_.html">
+								<code>zpbsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbtrf_" class="public" href="../../../scid/bindings/lapack/lapack/zpbtrf_.html">
+								<code>zpbtrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/zpbtrs_.html">
+								<code>zpbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpocon_" class="public" href="../../../scid/bindings/lapack/lapack/zpocon_.html">
+								<code>zpocon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpoequ_" class="public" href="../../../scid/bindings/lapack/lapack/zpoequ_.html">
+								<code>zpoequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zporfs_" class="public" href="../../../scid/bindings/lapack/lapack/zporfs_.html">
+								<code>zporfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zposvx_" class="public" href="../../../scid/bindings/lapack/lapack/zposvx_.html">
+								<code>zposvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zposv_" class="public" href="../../../scid/bindings/lapack/lapack/zposv_.html">
+								<code>zposv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpotrf_" class="public" href="../../../scid/bindings/lapack/lapack/zpotrf_.html">
+								<code>zpotrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpotri_" class="public" href="../../../scid/bindings/lapack/lapack/zpotri_.html">
+								<code>zpotri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpotrs_" class="public" href="../../../scid/bindings/lapack/lapack/zpotrs_.html">
+								<code>zpotrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zppcon_" class="public" href="../../../scid/bindings/lapack/lapack/zppcon_.html">
+								<code>zppcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zppequ_" class="public" href="../../../scid/bindings/lapack/lapack/zppequ_.html">
+								<code>zppequ_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpprfs_" class="public" href="../../../scid/bindings/lapack/lapack/zpprfs_.html">
+								<code>zpprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zppsvx_" class="public" href="../../../scid/bindings/lapack/lapack/zppsvx_.html">
+								<code>zppsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zppsv_" class="public" href="../../../scid/bindings/lapack/lapack/zppsv_.html">
+								<code>zppsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpptrf_" class="public" href="../../../scid/bindings/lapack/lapack/zpptrf_.html">
+								<code>zpptrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpptri_" class="public" href="../../../scid/bindings/lapack/lapack/zpptri_.html">
+								<code>zpptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpptrs_" class="public" href="../../../scid/bindings/lapack/lapack/zpptrs_.html">
+								<code>zpptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zptcon_" class="public" href="../../../scid/bindings/lapack/lapack/zptcon_.html">
+								<code>zptcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpteqr_" class="public" href="../../../scid/bindings/lapack/lapack/zpteqr_.html">
+								<code>zpteqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zptrfs_" class="public" href="../../../scid/bindings/lapack/lapack/zptrfs_.html">
+								<code>zptrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zptsvx_" class="public" href="../../../scid/bindings/lapack/lapack/zptsvx_.html">
+								<code>zptsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zptsv_" class="public" href="../../../scid/bindings/lapack/lapack/zptsv_.html">
+								<code>zptsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpttrf_" class="public" href="../../../scid/bindings/lapack/lapack/zpttrf_.html">
+								<code>zpttrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zpttrs_" class="public" href="../../../scid/bindings/lapack/lapack/zpttrs_.html">
+								<code>zpttrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zspcon_" class="public" href="../../../scid/bindings/lapack/lapack/zspcon_.html">
+								<code>zspcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsprfs_" class="public" href="../../../scid/bindings/lapack/lapack/zsprfs_.html">
+								<code>zsprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zspsvx_" class="public" href="../../../scid/bindings/lapack/lapack/zspsvx_.html">
+								<code>zspsvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zspsv_" class="public" href="../../../scid/bindings/lapack/lapack/zspsv_.html">
+								<code>zspsv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsptrf_" class="public" href="../../../scid/bindings/lapack/lapack/zsptrf_.html">
+								<code>zsptrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsptri_" class="public" href="../../../scid/bindings/lapack/lapack/zsptri_.html">
+								<code>zsptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsptrs_" class="public" href="../../../scid/bindings/lapack/lapack/zsptrs_.html">
+								<code>zsptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zstedc_" class="public" href="../../../scid/bindings/lapack/lapack/zstedc_.html">
+								<code>zstedc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zstegr_" class="public" href="../../../scid/bindings/lapack/lapack/zstegr_.html">
+								<code>zstegr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zstein_" class="public" href="../../../scid/bindings/lapack/lapack/zstein_.html">
+								<code>zstein_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsteqr_" class="public" href="../../../scid/bindings/lapack/lapack/zsteqr_.html">
+								<code>zsteqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsycon_" class="public" href="../../../scid/bindings/lapack/lapack/zsycon_.html">
+								<code>zsycon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsyrfs_" class="public" href="../../../scid/bindings/lapack/lapack/zsyrfs_.html">
+								<code>zsyrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsysvx_" class="public" href="../../../scid/bindings/lapack/lapack/zsysvx_.html">
+								<code>zsysvx_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsysv_" class="public" href="../../../scid/bindings/lapack/lapack/zsysv_.html">
+								<code>zsysv_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsytrf_" class="public" href="../../../scid/bindings/lapack/lapack/zsytrf_.html">
+								<code>zsytrf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsytri_" class="public" href="../../../scid/bindings/lapack/lapack/zsytri_.html">
+								<code>zsytri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zsytrs_" class="public" href="../../../scid/bindings/lapack/lapack/zsytrs_.html">
+								<code>zsytrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztbcon_" class="public" href="../../../scid/bindings/lapack/lapack/ztbcon_.html">
+								<code>ztbcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztbrfs_" class="public" href="../../../scid/bindings/lapack/lapack/ztbrfs_.html">
+								<code>ztbrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztbtrs_" class="public" href="../../../scid/bindings/lapack/lapack/ztbtrs_.html">
+								<code>ztbtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztgevc_" class="public" href="../../../scid/bindings/lapack/lapack/ztgevc_.html">
+								<code>ztgevc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztgexc_" class="public" href="../../../scid/bindings/lapack/lapack/ztgexc_.html">
+								<code>ztgexc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztgsen_" class="public" href="../../../scid/bindings/lapack/lapack/ztgsen_.html">
+								<code>ztgsen_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztgsja_" class="public" href="../../../scid/bindings/lapack/lapack/ztgsja_.html">
+								<code>ztgsja_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztgsna_" class="public" href="../../../scid/bindings/lapack/lapack/ztgsna_.html">
+								<code>ztgsna_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztgsyl_" class="public" href="../../../scid/bindings/lapack/lapack/ztgsyl_.html">
+								<code>ztgsyl_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztpcon_" class="public" href="../../../scid/bindings/lapack/lapack/ztpcon_.html">
+								<code>ztpcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztprfs_" class="public" href="../../../scid/bindings/lapack/lapack/ztprfs_.html">
+								<code>ztprfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztptri_" class="public" href="../../../scid/bindings/lapack/lapack/ztptri_.html">
+								<code>ztptri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztptrs_" class="public" href="../../../scid/bindings/lapack/lapack/ztptrs_.html">
+								<code>ztptrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrcon_" class="public" href="../../../scid/bindings/lapack/lapack/ztrcon_.html">
+								<code>ztrcon_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrevc_" class="public" href="../../../scid/bindings/lapack/lapack/ztrevc_.html">
+								<code>ztrevc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrexc_" class="public" href="../../../scid/bindings/lapack/lapack/ztrexc_.html">
+								<code>ztrexc_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrrfs_" class="public" href="../../../scid/bindings/lapack/lapack/ztrrfs_.html">
+								<code>ztrrfs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrsen_" class="public" href="../../../scid/bindings/lapack/lapack/ztrsen_.html">
+								<code>ztrsen_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrsna_" class="public" href="../../../scid/bindings/lapack/lapack/ztrsna_.html">
+								<code>ztrsna_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrsyl_" class="public" href="../../../scid/bindings/lapack/lapack/ztrsyl_.html">
+								<code>ztrsyl_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrtri_" class="public" href="../../../scid/bindings/lapack/lapack/ztrtri_.html">
+								<code>ztrtri_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztrtrs_" class="public" href="../../../scid/bindings/lapack/lapack/ztrtrs_.html">
+								<code>ztrtrs_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztzrqf_" class="public" href="../../../scid/bindings/lapack/lapack/ztzrqf_.html">
+								<code>ztzrqf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ztzrzf_" class="public" href="../../../scid/bindings/lapack/lapack/ztzrzf_.html">
+								<code>ztzrzf_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zungbr_" class="public" href="../../../scid/bindings/lapack/lapack/zungbr_.html">
+								<code>zungbr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunghr_" class="public" href="../../../scid/bindings/lapack/lapack/zunghr_.html">
+								<code>zunghr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunglq_" class="public" href="../../../scid/bindings/lapack/lapack/zunglq_.html">
+								<code>zunglq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zungql_" class="public" href="../../../scid/bindings/lapack/lapack/zungql_.html">
+								<code>zungql_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zungqr_" class="public" href="../../../scid/bindings/lapack/lapack/zungqr_.html">
+								<code>zungqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zungrq_" class="public" href="../../../scid/bindings/lapack/lapack/zungrq_.html">
+								<code>zungrq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zungtr_" class="public" href="../../../scid/bindings/lapack/lapack/zungtr_.html">
+								<code>zungtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmbr_" class="public" href="../../../scid/bindings/lapack/lapack/zunmbr_.html">
+								<code>zunmbr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmhr_" class="public" href="../../../scid/bindings/lapack/lapack/zunmhr_.html">
+								<code>zunmhr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmlq_" class="public" href="../../../scid/bindings/lapack/lapack/zunmlq_.html">
+								<code>zunmlq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmql_" class="public" href="../../../scid/bindings/lapack/lapack/zunmql_.html">
+								<code>zunmql_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmqr_" class="public" href="../../../scid/bindings/lapack/lapack/zunmqr_.html">
+								<code>zunmqr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmr3_" class="public" href="../../../scid/bindings/lapack/lapack/zunmr3_.html">
+								<code>zunmr3_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmrq_" class="public" href="../../../scid/bindings/lapack/lapack/zunmrq_.html">
+								<code>zunmrq_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmrz_" class="public" href="../../../scid/bindings/lapack/lapack/zunmrz_.html">
+								<code>zunmrz_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zunmtr_" class="public" href="../../../scid/bindings/lapack/lapack/zunmtr_.html">
+								<code>zunmtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zupgtr_" class="public" href="../../../scid/bindings/lapack/lapack/zupgtr_.html">
+								<code>zupgtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zupmtr_" class="public" href="../../../scid/bindings/lapack/lapack/zupmtr_.html">
+								<code>zupmtr_</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_CGEESX_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_CGEESX_SELECT.html">
+								<code>FCB_CGEESX_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(float)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_CGEES_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_CGEES_SELECT.html">
+								<code>FCB_CGEES_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(float)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_CGGESX_SELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_CGGESX_SELCTG.html">
+								<code>FCB_CGGESX_SELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(float)*, std.<wbr/>complex.<wbr/>Complex!(float)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_CGGES_SELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_CGGES_SELCTG.html">
+								<code>FCB_CGGES_SELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(float)*, std.<wbr/>complex.<wbr/>Complex!(float)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_DGEESX_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_DGEESX_SELECT.html">
+								<code>FCB_DGEESX_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(double*, double*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_DGEES_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_DGEES_SELECT.html">
+								<code>FCB_DGEES_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(double*, double*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_DGGESX_DELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_DGGESX_DELCTG.html">
+								<code>FCB_DGGESX_DELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(double*, double*, double*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_DGGES_DELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_DGGES_DELCTG.html">
+								<code>FCB_DGGES_DELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(double*, double*, double*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_SGEESX_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_SGEESX_SELECT.html">
+								<code>FCB_SGEESX_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(float*, float*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_SGEES_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_SGEES_SELECT.html">
+								<code>FCB_SGEES_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(float*, float*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_SGGESX_SELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_SGGESX_SELCTG.html">
+								<code>FCB_SGGESX_SELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(float*, float*, float*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_SGGES_SELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_SGGES_SELCTG.html">
+								<code>FCB_SGGES_SELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(float*, float*, float*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_ZGEESX_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_ZGEESX_SELECT.html">
+								<code>FCB_ZGEESX_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(double)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_ZGEES_SELECT" class="public" href="../../../scid/bindings/lapack/lapack/FCB_ZGEES_SELECT.html">
+								<code>FCB_ZGEES_SELECT</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(double)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_ZGGESX_DELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_ZGGESX_DELCTG.html">
+								<code>FCB_ZGGESX_DELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(double)*, std.<wbr/>complex.<wbr/>Complex!(double)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="FCB_ZGGES_DELCTG" class="public" href="../../../scid/bindings/lapack/lapack/FCB_ZGGES_DELCTG.html">
+								<code>FCB_ZGGES_DELCTG</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(double)*, std.<wbr/>complex.<wbr/>Complex!(double)*)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="f_cdouble" class="public" href="../../../scid/bindings/lapack/lapack/f_cdouble.html">
+								<code>f_cdouble</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">std.<wbr/>complex.<wbr/>Complex!(double)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="f_cfloat" class="public" href="../../../scid/bindings/lapack/lapack/f_cfloat.html">
+								<code>f_cfloat</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">std.<wbr/>complex.<wbr/>Complex!(float)</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="f_double" class="public" href="../../../scid/bindings/lapack/lapack/f_double.html">
+								<code>f_double</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">double</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="f_float" class="public" href="../../../scid/bindings/lapack/lapack/f_float.html">
+								<code>f_float</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">float</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="f_int" class="public" href="../../../scid/bindings/lapack/lapack/f_int.html">
+								<code>f_int</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">int</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="lapack_float_ret_t" class="public" href="../../../scid/bindings/lapack/lapack/lapack_float_ret_t.html">
+								<code>lapack_float_ret_t</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">float</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p>William V. Baxter III (with slight modifications by
+                Lars Tandle Kyllingstad).
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Copyright (c) 2009, Lars T. Kyllingstad. All rights reserved.
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p>Boost License 1.0
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

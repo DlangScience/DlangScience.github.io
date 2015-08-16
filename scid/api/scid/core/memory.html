@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module scid.core.memory</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">scid</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">bindings</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">lapack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/bindings/lapack/dlapack.html" class=" module">dlapack</a>
+							</li>
+							<li>
+								<a href="../../scid/bindings/lapack/lapack.html" class=" module">lapack</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+							</li>
+							<li class=" tree-view">
+								<a href="#" class="package">core</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/core/fortran.html" class=" module">fortran</a>
+							</li>
+							<li>
+								<a href="../../scid/core/memory.html" class="selected module">memory</a>
+							</li>
+							<li>
+								<a href="../../scid/core/meta.html" class=" module">meta</a>
+							</li>
+							<li>
+								<a href="../../scid/core/testing.html" class=" module">testing</a>
+							</li>
+							<li>
+								<a href="../../scid/core/traits.html" class=" module">traits</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">internal</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">calculus</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/internal/calculus/integrate_qk.html" class=" module">integrate_qk</a>
+							</li>
+							<li>
+								<a href="../../scid/internal/calculus/integrate_qng.html" class=" module">integrate_qng</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">ports</a>
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">intde</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/ports/intde/intde1.html" class=" module">intde1</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/intde/intde2.html" class=" module">intde2</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">linpack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/ports/linpack/gtsl.html" class=" module">gtsl</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">minpack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/ports/minpack/dogleg.html" class=" module">dogleg</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/minpack/enorm.html" class=" module">enorm</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/minpack/fdjac1.html" class=" module">fdjac1</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/minpack/hybrd.html" class=" module">hybrd</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/minpack/qform.html" class=" module">qform</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/minpack/qrfac.html" class=" module">qrfac</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/minpack/r1mpyq.html" class=" module">r1mpyq</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/minpack/r1updt.html" class=" module">r1updt</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">napack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/ports/napack/addchg.html" class=" module">addchg</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/napack/quasi.html" class=" module">quasi</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/napack/stopit.html" class=" module">stopit</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">quadpack</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../scid/ports/quadpack/qag.html" class=" module">qag</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qage.html" class=" module">qage</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qagi.html" class=" module">qagi</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qagie.html" class=" module">qagie</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qagp.html" class=" module">qagp</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qagpe.html" class=" module">qagpe</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qags.html" class=" module">qags</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qagse.html" class=" module">qagse</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qawc.html" class=" module">qawc</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qawce.html" class=" module">qawce</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qawf.html" class=" module">qawf</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qawfe.html" class=" module">qawfe</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qawo.html" class=" module">qawo</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qawoe.html" class=" module">qawoe</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qaws.html" class=" module">qaws</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qawse.html" class=" module">qawse</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qc25c.html" class=" module">qc25c</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qc25f.html" class=" module">qc25f</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qc25s.html" class=" module">qc25s</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qcheb.html" class=" module">qcheb</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qelg.html" class=" module">qelg</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk15.html" class=" module">qk15</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk15i.html" class=" module">qk15i</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk15w.html" class=" module">qk15w</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk21.html" class=" module">qk21</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk31.html" class=" module">qk31</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk41.html" class=" module">qk41</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk51.html" class=" module">qk51</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qk61.html" class=" module">qk61</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qmomo.html" class=" module">qmomo</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qng.html" class=" module">qng</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qpsrt.html" class=" module">qpsrt</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qwgtc.html" class=" module">qwgtc</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qwgtf.html" class=" module">qwgtf</a>
+							</li>
+							<li>
+								<a href="../../scid/ports/quadpack/qwgts.html" class=" module">qwgts</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../scid/calculus.html" class=" module">calculus</a>
+							</li>
+							<li>
+								<a href="../../scid/constants.html" class=" module">constants</a>
+							</li>
+							<li>
+								<a href="../../scid/functions.html" class=" module">functions</a>
+							</li>
+							<li>
+								<a href="../../scid/linalg.html" class=" module">linalg</a>
+							</li>
+							<li>
+								<a href="../../scid/matrix.html" class=" module">matrix</a>
+							</li>
+							<li>
+								<a href="../../scid/nonlinear.html" class=" module">nonlinear</a>
+							</li>
+							<li>
+								<a href="../../scid/types.html" class=" module">types</a>
+							</li>
+							<li>
+								<a href="../../scid/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module scid.core.memory</h1>
+			<p> Memory management.  The code in this module is borrowed from David Simcha's
+    <a href="http://www.dsource.org/projects/dstats/">dstats</a> project,
+    specifically the dstats.alloc module.
+</p>
+<section>
+</section>
+
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="appendDelOld" class="public" href="../../scid/core/memory/appendDelOld.html">
+								<code>appendDelOld</code>
+							</a>
+						</td>
+						<td>Appends <a href="../../scid/core/memory/appendDelOld.html#to"><code class="prettyprint lang-d">to</code></a> an array, deleting the old array if it has <a href="../../scid/core/memory/appendDelOld.html#to"><code class="prettyprint lang-d">to</code></a> be realloced.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="exit" class="public" href="../../scid/core/memory/exit.html">
+								<code>exit</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="fprintf" class="public" href="../../scid/core/memory/fprintf.html">
+								<code>fprintf</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="lengthVoid" class="public" href="../../scid/core/memory/lengthVoid.html">
+								<code>lengthVoid</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="lengthVoid" class="public" href="../../scid/core/memory/lengthVoid.html">
+								<code>lengthVoid</code>
+							</a>
+						</td>
+						<td>Lengthens an array w/o initializing new elements.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="newStack" class="public" href="../../scid/core/memory/newStack.html">
+								<code>newStack</code>
+							</a>
+						</td>
+						<td>Allocates an array of type T and <a href="../../scid/core/memory/newStack.html#size"><code class="prettyprint lang-d">size</code></a> <a href="../../scid/core/memory/newStack.html#size"><code class="prettyprint lang-d">size</code></a> using <a href="../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a>.
+ Note that appending to this array using the ~= operator,
+ or enlarging it using the .length property, will result in
+ undefined behavior.  This is because, if the array is located
+ at the beginning of a <a href="../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> block, the GC will think the
+ capacity is as large as a <a href="../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> block, and will overwrite
+ adjacent <a href="../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a>-allocated data, instead of reallocating it.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="newVoid" class="public" href="../../scid/core/memory/newVoid.html">
+								<code>newVoid</code>
+							</a>
+						</td>
+						<td>Returns a new array of type T w/o initializing elements.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rangeCopy" class="public" href="../../scid/core/memory/rangeCopy.html">
+								<code>rangeCopy</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="reserve" class="public" href="../../scid/core/memory/reserve.html">
+								<code>reserve</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="reserve" class="public" href="../../scid/core/memory/reserve.html">
+								<code>reserve</code>
+							</a>
+						</td>
+						<td>Reserves more space for an array w/o changing its length or initializing
+ the space.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="stackCat" class="public" href="../../scid/core/memory/stackCat.html">
+								<code>stackCat</code>
+							</a>
+						</td>
+						<td>**Same as <a href="../../scid/core/memory/newStack.html"><code class="prettyprint lang-d">newStack</code></a>(size_t) but uses stateCopy cached on stack by caller
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tempdup" class="public" href="../../scid/core/memory/tempdup.html">
+								<code>tempdup</code>
+							</a>
+						</td>
+						<td>Creates a duplicate of a range for temporary use within a function in the
+ best wsy that can be done safely.  If ElementType!(T) is a value type
+ or T is an array, the results can safely be placed in <a href="../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> because
+ either it doesn't need to be scanned by the GC or there's guaranteed to be
+ another reference to the contents somewhere. Otherwise, the results
+ are placed on the GC heap.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tempdup" class="public" href="../../scid/core/memory/tempdup.html">
+								<code>tempdup</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="toArray" class="public" href="../../scid/core/memory/toArray.html">
+								<code>toArray</code>
+							</a>
+						</td>
+						<td>Converts any <a href="../../scid/core/memory/toArray.html#range"><code class="prettyprint lang-d">range</code></a> to an array on the GC heap by the most efficient means
+ available.  If it is already an array, duplicates the <a href="../../scid/core/memory/toArray.html#range"><code class="prettyprint lang-d">range</code></a>.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="TempAlloc" class="public" href="../../scid/core/memory/TempAlloc.html">
+								<code>TempAlloc</code>
+							</a>
+						</td>
+						<td>A struct to allocate memory in a strictly first-in last-out order for
+ things like scratch space.  Technically, memory can safely escape the
+ scope in which it was allocated.  However, this is a very bad idea
+ unless being done within the private API of a class, struct or nested
+ function, where it can be guaranteed that LIFO will not be violated.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Templates</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="blockAttribute" class="public" href="../../scid/core/memory/blockAttribute.html">
+								<code>blockAttribute</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isReferenceType" class="public" href="../../scid/core/memory/isReferenceType.html">
+								<code>isReferenceType</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="IsType" class="public" href="../../scid/core/memory/IsType.html">
+								<code>IsType</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enum values</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="hasLength" class="public" href="../../scid/core/memory/hasLength.html">
+								<code>hasLength</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Global variables</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="newFrame" class="public" href="../../scid/core/memory/newFrame.html">
+								<code>newFrame</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">immutable(char[])</code>
+						</td>
+						<td>A string to mixin at the beginning of a scope, purely for
+ convenience.  Initializes a <a href="../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> frame using frameInit(),
+ and inserts a scope statement to delete this frame at the end
+ of the current scope.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="ArrayType1" class="public" href="../../scid/core/memory/ArrayType1.html">
+								<code>ArrayType1</code>
+							</a>
+						</td>
+						<td>
+<code class="prettyprint lang-d">T</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p>David Simcha
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p>Boost License 1.0
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>
