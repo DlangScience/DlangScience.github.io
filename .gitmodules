@@ -30,3 +30,7 @@
 	path = content/repos/parallel_algorithm
 	url = https://github.com/DlangScience/parallel_algorithm
 	branch = master
+[submodule "content/repos/scid"]
+	path = content/repos/scid
+	url = https://github.com/DlangScience/scid
+	branch = master
