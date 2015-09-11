@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -40,12 +48,12 @@ $('#symbolSearchPane').show();
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
 extern(C) int MPI_Intercomm_create(
-&nbsp;&nbsp;void* local_comm,
+&nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* local_comm,
 &nbsp;&nbsp;int local_leader,
-&nbsp;&nbsp;void* bridge_comm,
+&nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* bridge_comm,
 &nbsp;&nbsp;int remote_leader,
 &nbsp;&nbsp;int tag,
-&nbsp;&nbsp;void** newintercomm
+&nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>** newintercomm
 );</pre>
 					</section>
 

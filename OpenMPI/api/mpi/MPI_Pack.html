@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -42,11 +50,11 @@ $('#symbolSearchPane').show();
 extern(C) int MPI_Pack(
 &nbsp;&nbsp;void* inbuf,
 &nbsp;&nbsp;int incount,
-&nbsp;&nbsp;void* datatype,
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* datatype,
 &nbsp;&nbsp;void* outbuf,
 &nbsp;&nbsp;int outsize,
 &nbsp;&nbsp;int* position,
-&nbsp;&nbsp;void* comm
+&nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* comm
 );</pre>
 					</section>
 

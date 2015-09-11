@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function MPI_Raccumulate</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../mpi.html" class="selected module">mpi</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function MPI_Raccumulate</h1>
+			<section>
+				<p></p>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+extern(C) int MPI_Raccumulate(
+&nbsp;&nbsp;void* origin_addr,
+&nbsp;&nbsp;int origin_count,
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* origin_datatype,
+&nbsp;&nbsp;int target_rank,
+&nbsp;&nbsp;long target_disp,
+&nbsp;&nbsp;int target_count,
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* target_datatype,
+&nbsp;&nbsp;<a href="../mpi/ompi_op_t.html">ompi_op_t</a>* op,
+&nbsp;&nbsp;<a href="../mpi/ompi_win_t.html">ompi_win_t</a>* win,
+&nbsp;&nbsp;<a href="../mpi/ompi_request_t.html">ompi_request_t</a>** request
+);</pre>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -42,7 +50,7 @@ $('#symbolSearchPane').show();
 extern(C) int PMPI_Group_range_incl(
 &nbsp;&nbsp;<a href="../mpi/ompi_group_t.html">ompi_group_t</a>* group,
 &nbsp;&nbsp;int n,
-&nbsp;&nbsp;int[][3] ranges,
+&nbsp;&nbsp;int[3]* ranges,
 &nbsp;&nbsp;<a href="../mpi/ompi_group_t.html">ompi_group_t</a>** newgroup
 );</pre>
 					</section>

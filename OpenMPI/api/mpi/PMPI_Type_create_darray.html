@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -43,13 +51,13 @@ extern(C) int PMPI_Type_create_darray(
 &nbsp;&nbsp;int size,
 &nbsp;&nbsp;int rank,
 &nbsp;&nbsp;int ndims,
-&nbsp;&nbsp;int[] gsize_array,
-&nbsp;&nbsp;int[] distrib_array,
-&nbsp;&nbsp;int[] darg_array,
-&nbsp;&nbsp;int[] psize_array,
+&nbsp;&nbsp;int* gsize_array,
+&nbsp;&nbsp;int* distrib_array,
+&nbsp;&nbsp;int* darg_array,
+&nbsp;&nbsp;int* psize_array,
 &nbsp;&nbsp;int order,
-&nbsp;&nbsp;void* oldtype,
-&nbsp;&nbsp;void** newtype
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* oldtype,
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>** newtype
 );</pre>
 					</section>
 

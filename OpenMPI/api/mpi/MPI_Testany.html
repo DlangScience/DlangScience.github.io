@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -41,7 +49,7 @@ $('#symbolSearchPane').show();
 						<pre class="code prettyprint lang-d prototype">
 extern(C) int MPI_Testany(
 &nbsp;&nbsp;int count,
-&nbsp;&nbsp;<a href="../mpi/ompi_request_t.html">ompi_request_t</a>*[] array_of_requests,
+&nbsp;&nbsp;<a href="../mpi/ompi_request_t.html">ompi_request_t</a>** array_of_requests,
 &nbsp;&nbsp;int* index,
 &nbsp;&nbsp;int* flag,
 &nbsp;&nbsp;<a href="../mpi/ompi_status_public_t.html">ompi_status_public_t</a>* status

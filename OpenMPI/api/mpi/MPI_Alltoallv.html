@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -43,12 +51,12 @@ extern(C) int MPI_Alltoallv(
 &nbsp;&nbsp;void* sendbuf,
 &nbsp;&nbsp;int* sendcounts,
 &nbsp;&nbsp;int* sdispls,
-&nbsp;&nbsp;void* sendtype,
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* sendtype,
 &nbsp;&nbsp;void* recvbuf,
 &nbsp;&nbsp;int* recvcounts,
 &nbsp;&nbsp;int* rdispls,
-&nbsp;&nbsp;void* recvtype,
-&nbsp;&nbsp;void* comm
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* recvtype,
+&nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* comm
 );</pre>
 					</section>
 

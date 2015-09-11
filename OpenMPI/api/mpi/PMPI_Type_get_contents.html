@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -40,13 +48,13 @@ $('#symbolSearchPane').show();
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
 extern(C) int PMPI_Type_get_contents(
-&nbsp;&nbsp;void* mtype,
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* mtype,
 &nbsp;&nbsp;int max_integers,
 &nbsp;&nbsp;int max_addresses,
 &nbsp;&nbsp;int max_datatypes,
-&nbsp;&nbsp;int[] array_of_integers,
-&nbsp;&nbsp;long[] array_of_addresses,
-&nbsp;&nbsp;void*[] array_of_datatypes
+&nbsp;&nbsp;int* array_of_integers,
+&nbsp;&nbsp;long* array_of_addresses,
+&nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>** array_of_datatypes
 );</pre>
 					</section>
 

@@ -12,6 +12,14 @@
 	<body onload="prettyPrint(); setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">mpi</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../mpi/util.html" class=" module">util</a>
+							</li>
+						</ul>
+							</li>
 							<li>
 								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
@@ -42,7 +50,7 @@ $('#symbolSearchPane').show();
 extern(C) int MPI_Win_lock(
 &nbsp;&nbsp;int lock_type,
 &nbsp;&nbsp;int rank,
-&nbsp;&nbsp;int ass,
+&nbsp;&nbsp;int assert_,
 &nbsp;&nbsp;<a href="../mpi/ompi_win_t.html">ompi_win_t</a>* win
 );</pre>
 					</section>
