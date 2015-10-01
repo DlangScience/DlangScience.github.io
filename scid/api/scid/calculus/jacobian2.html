@@ -299,11 +299,6 @@ $('#symbolSearchPane').show();
     at best, on the order of sqrt(real.epsilon).
 </p>
 
-<p>    This function is used more or less like <a href="../../scid/calculus/jacobian.html"><code class="prettyprint lang-d">jacobian</code></a>(). The
-    differences lie in the parameters described below, which
-    are all optional.
-</p>
-
 </section>
 
 					<section>
@@ -320,6 +315,15 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="f">f</td><td> The set of functions. This is typically a function or delegate
+            which takes a vector as input and returns a vector. If the
+            function takes a second vector parameter, this is assumed to
+            be a <a href="../../scid/calculus/jacobian2.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the return value, and will be used as such.
+</td></tr>
+<tr><td id="m">m</td><td> The number of functions in $(D <a href="../../scid/calculus/jacobian2.html#f"><code class="prettyprint lang-d">f</code></a>).
+</td></tr>
+<tr><td id="x">x</td><td> The point at which to take the derivative.
+</td></tr>
 <tr><td id="scale">scale</td><td> $(D abs(<a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a>)) is the characteristic <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> of the
             function, and the sign of <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> determines which
             differentiation method is used. If $(D <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a>) is
@@ -330,6 +334,9 @@ $('#symbolSearchPane').show();
 <tr><td id="fx">fx</td><td> The result of evaluating the function at the point $(D <a href="../../scid/calculus/jacobian2.html#x"><code class="prettyprint lang-d">x</code></a>).
             Providing this saves one function evaluation if you
             for some reason have already calculated the value. (optional)
+</td></tr>
+<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/jacobian2.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least $(I <a href="../../scid/calculus/jacobian2.html#m"><code class="prettyprint lang-d">m</code></a>)*$(I n), for storing the calculated
+            Jacobian matrix. (optional)
 </td></tr>
 </table>
 </section>

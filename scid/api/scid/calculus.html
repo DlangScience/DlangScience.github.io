@@ -347,21 +347,21 @@ $('#symbolSearchPane').show();
     finite differences. The functions in this module use three different
     finite-difference formulas: Forward differences,
 </p>
-<pre class="code prettyprint lang-d">        f(x+h) - f(x)
-f'(x) = -------------
-              h
+<pre class="code prettyprint lang-d">df   f(x+h) - f(x)
+-- = -------------
+dx         h
 </pre>
 <p>    backward differences,
 </p>
-<pre class="code prettyprint lang-d">        f(x) - f(x-h)
-f'(x) = -------------
-              h
+<pre class="code prettyprint lang-d">df   f(x) - f(x-h)
+-- = -------------
+dx         h
 </pre>
 <p>    and central differences,
 </p>
-<pre class="code prettyprint lang-d">        f(x+h) - f(x-h)
-f'(x) = ---------------
-              2 h
+<pre class="code prettyprint lang-d">df   f(x+h) - f(x-h)
+-- = ---------------
+dx         2 h
 </pre>
 <p>    Of these three, the latter is the most accurate, but in the cases where
     <b><code>f(x)</code></b> is already known it requires one more function evaluation compared

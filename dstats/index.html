@@ -25,7 +25,7 @@ created to bring the library up to date and enable dub support.</p>
 and DMD.<br>
 To build, simply unpack all the files into an empty directory and do a:</p>
 
-<div class="highlight highlight-sh"><pre>dmd -O -inline -release -lib -ofdstats.lib <span class="pl-k">*</span>.d</pre></div>
+<div class="highlight highlight-source-shell"><pre>dmd -O -inline -release -lib -ofdstats.lib <span class="pl-k">*</span>.d</pre></div>
 
 <p>SciD is an optional dependency, as Dstats is slowly being integrated into it.<br>
 If used, it enables a few extra features and faster implementations of some <br>
@@ -33,7 +33,7 @@ algorithms.<br>
 To build with this enabled, make sure your SciD directory is in your import path and <br>
 do:</p>
 
-<div class="highlight highlight-sh"><pre>dmd -O -inline -release -lib -ofdstats.lib -version=scid <span class="pl-k">*</span>.d</pre></div>
+<div class="highlight highlight-source-shell"><pre>dmd -O -inline -release -lib -ofdstats.lib -version=scid <span class="pl-k">*</span>.d</pre></div>
 
 <p>You'll then need to link in your SciD library and Blas and Lapack libraries when <br>
 compiling<br>
