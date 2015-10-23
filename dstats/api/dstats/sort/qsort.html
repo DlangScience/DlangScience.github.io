@@ -78,8 +78,7 @@ $('#symbolSearchPane').show();
 				<p>Quick sort.  Unstable, O(N log N) time average, worst
  case, O(log N) space, small constant term in time complexity.
 </p>
-<section>
-<p> In this implementation, the following steps are taken to avoid the
+<section><p>In this implementation, the following steps are taken to avoid the
  O(N<sup>2</sup>) worst case of naive quick sorts:
 </p>
 
@@ -101,11 +100,17 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T[0] qsort(alias compFun, T...)(
+								<br/>
 &nbsp;&nbsp;T data
+								<br/>
 )
-if (T.length != 0);</pre>
+								<br/>
+if (T.length != 0);
+							</code>
+						</div>
 					</section>
 
 			</section>

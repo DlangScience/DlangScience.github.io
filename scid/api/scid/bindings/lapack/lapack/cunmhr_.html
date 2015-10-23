@@ -291,32 +291,51 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Multiplies <a href="../../../../scid/bindings/lapack/lapack/cunmhr_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the unitary transformation
 </p>
-<section>
-<p>matrix from <a href="../../../../scid/bindings/lapack/lapack/cunmhr_.html#a"><code class="prettyprint lang-d">a</code></a> reduction to Hessenberg form determined by CGEHRD.
+<section><p>matrix from <a href="../../../../scid/bindings/lapack/lapack/cunmhr_.html#a"><code class="prettyprint lang-d">a</code></a> reduction to Hessenberg form determined by CGEHRD.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void cunmhr_(
+								<br/>
 &nbsp;&nbsp;char* side,
+								<br/>
 &nbsp;&nbsp;char* trans,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* ilo,
+								<br/>
 &nbsp;&nbsp;int* ihi,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* tau,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* c,
+								<br/>
 &nbsp;&nbsp;int* ldc,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int side_len,
+								<br/>
 &nbsp;&nbsp;int trans_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

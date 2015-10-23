@@ -79,8 +79,7 @@ $('#symbolSearchPane').show();
  insertions are O(log N).  This is significantly slower in both theory and
  practice than <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>, but you may want to use it if:
 </p>
-<section>
-<p> 1.  You don't know the approximate size of the table you will be creating
+<section><p>1.  You don't know the approximate size of the table you will be creating
      in advance.  Unlike <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>, this AA implementation does not need
      to pre-allocate anything.
 </p>
@@ -92,7 +91,6 @@ $('#symbolSearchPane').show();
 <p> 3.  You have a good comparison function for your type, but not a good hash
      function.
 </p>
-
 </section>
 
 					<section>

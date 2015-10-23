@@ -291,24 +291,35 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes an LU factorization of a general band matrix, using
 </p>
-<section>
-<p>partial pivoting with row interchanges.
+<section><p>partial pivoting with row interchanges.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgbtrf_(
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* kl,
+								<br/>
 &nbsp;&nbsp;int* ku,
+								<br/>
 &nbsp;&nbsp;float* ab,
+								<br/>
 &nbsp;&nbsp;int* ldab,
+								<br/>
 &nbsp;&nbsp;int* ipiv,
+								<br/>
 &nbsp;&nbsp;int* info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

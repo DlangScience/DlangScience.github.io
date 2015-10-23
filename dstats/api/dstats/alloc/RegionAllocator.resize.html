@@ -75,7 +75,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.resize</h1>
 			<section>
-				<p>    Attempts to <code class="prettyprint lang-d">resize</code> a previously allocated block of memory in place.
+				<p>Attempts to <code class="prettyprint lang-d">resize</code> a previously allocated block of memory in place.
     This is possible only if <a href="../../dstats/alloc/RegionAllocator.resize.html#ptr"><code class="prettyprint lang-d">ptr</code></a> points to the beginning of the last
     block allocated by this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance and, in the
     case where <a href="../../dstats/alloc/RegionAllocator.resize.html#newSize"><code class="prettyprint lang-d">newSize</code></a> is greater than the old size, there is
@@ -83,16 +83,21 @@ $('#symbolSearchPane').show();
     Additionally, blocks larger than this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>'s segment size
     cannot be grown or shrunk.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 bool resize(
+								<br/>
 &nbsp;&nbsp;const(void)* ptr,
+								<br/>
 &nbsp;&nbsp;ulong newSize
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>True if the block was successfully resized, false otherwise.

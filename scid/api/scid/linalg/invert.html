@@ -289,20 +289,25 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function invert</h1>
 			<section>
-				<p> Calculate the inverse of a matrix.
+				<p>Calculate the inverse of a matrix.
 </p>
-<section>
-<p>    Currently only defined for general real matrices.
+<section><p>Currently only defined for general real matrices.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void invert(T, scid.matrix.Storage stor)(
+								<br/>
 &nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor) m
+								<br/>
 )
-if (isFortranType!T &amp;&amp; !scid.core.traits.isComplex!T &amp;&amp; stor == Storage.General);</pre>
+								<br/>
+if (isFortranType!T &amp;&amp; !scid.core.traits.isComplex!T &amp;&amp; stor == Storage.General);
+							</code>
+						</div>
 					</section>
 
 			</section>

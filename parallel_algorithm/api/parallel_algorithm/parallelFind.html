@@ -43,14 +43,23 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Range parallelFind(alias pred, Range, E)(
+								<br/>
 &nbsp;&nbsp;Range haystack,
+								<br/>
 &nbsp;&nbsp;E needle,
+								<br/>
 &nbsp;&nbsp;size_t workUnitSize = 250,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null
+								<br/>
 )
-if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);</pre>
+								<br/>
+if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -60,13 +69,21 @@ if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);</pre>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Range parallelFind(alias pred, Range)(
+								<br/>
 &nbsp;&nbsp;Range haystack,
+								<br/>
 &nbsp;&nbsp;size_t workUnitSize = 250,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null
+								<br/>
 )
-if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);</pre>
+								<br/>
+if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -80,23 +80,28 @@ alternatives are covered by <a href="../../dstats/distrib/binomialCDF.html"><cod
 <a href="../../dstats/tests/binomialTest.html#k"><code class="prettyprint lang-d">k</code></a> is the number of successes observed, <a href="../../dstats/tests/binomialTest.html#n"><code class="prettyprint lang-d">n</code></a> is the number of trials, <a href="../../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a>
 is the probability of success under the null.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double binomialTest(
+								<br/>
 &nbsp;&nbsp;ulong k,
+								<br/>
 &nbsp;&nbsp;ulong n,
+								<br/>
 &nbsp;&nbsp;double p
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>The P-value for the alternative that P(success) != <a href="../../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a> against
 the null that P(success) == <a href="../../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a>.
 </p>
-
 </section>
 <section><h3>Notes</h3>
 <p>This test can also be performed using <a href="../../dstats/tests/multinomialTest.html"><code class="prettyprint lang-d">multinomialTest</code></a>, but this

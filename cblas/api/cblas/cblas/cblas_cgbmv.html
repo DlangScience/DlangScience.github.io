@@ -46,23 +46,41 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void cblas_cgbmv(
+								<br/>
 &nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_ORDER.html">CBLAS_ORDER</a>) order,
+								<br/>
 &nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_TRANSPOSE.html">CBLAS_TRANSPOSE</a>) TransA,
+								<br/>
 &nbsp;&nbsp;const(int) M,
+								<br/>
 &nbsp;&nbsp;const(int) N,
+								<br/>
 &nbsp;&nbsp;const(int) KL,
+								<br/>
 &nbsp;&nbsp;const(int) KU,
+								<br/>
 &nbsp;&nbsp;const(std.<wbr/>complex.<wbr/>Complex!(float)*) alpha,
+								<br/>
 &nbsp;&nbsp;const(std.<wbr/>complex.<wbr/>Complex!(float)*) A,
+								<br/>
 &nbsp;&nbsp;const(int) lda,
+								<br/>
 &nbsp;&nbsp;const(std.<wbr/>complex.<wbr/>Complex!(float)*) X,
+								<br/>
 &nbsp;&nbsp;const(int) incX,
+								<br/>
 &nbsp;&nbsp;const(std.<wbr/>complex.<wbr/>Complex!(float)*) beta,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* Y,
+								<br/>
 &nbsp;&nbsp;const(int) incY
-) nothrow @nogc;</pre>
+								<br/>
+) nothrow @nogc;
+							</code>
+						</div>
 					</section>
 
 			</section>

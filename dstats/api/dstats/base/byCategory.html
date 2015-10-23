@@ -85,12 +85,19 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 ElementType!V[][2] byCategory(V, C)(
+								<br/>
 &nbsp;&nbsp;V values,
+								<br/>
 &nbsp;&nbsp;C categories
+								<br/>
 )
-if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool));</pre>
+								<br/>
+if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool));
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -100,17 +107,23 @@ if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool
  by category.  This function also guarantees that the order within each
  category will be maintained.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 ElementType!V[][ElementType!C] byCategory(V, C)(
+								<br/>
 &nbsp;&nbsp;V values,
+								<br/>
 &nbsp;&nbsp;C categories
+								<br/>
 )
-if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; !is(ElementType!C == bool));</pre>
+								<br/>
+if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; !is(ElementType!C == bool));
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>While the general convention of this library is to try to avoid
@@ -119,14 +132,13 @@ if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; !is(ElementType!C == boo
  because there's basically no other way to implement it.  Don't use it in
  performance-critical multithreaded code.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">uint[] <a href="../../dstats/base/byCategory.html#values">values</a> = [1,2,3,4,5,6,7,8];
+<pre class="code"><code class="prettyprint lang-d">uint[] <a href="../../dstats/base/byCategory.html#values">values</a> = [1,2,3,4,5,6,7,8];
 bool[] <a href="../../dstats/base/byCategory.html#categories">categories</a> = [false, false, false, false, true, true, true, true];
 auto separated = <a href="../../dstats/base/byCategory.html">byCategory</a>(<a href="../../dstats/base/byCategory.html#values">values</a>, <a href="../../dstats/base/byCategory.html#categories">categories</a>);
 auto tResult = studentsTTest(separated.values);
-</pre>
+</code></pre>
 </section>
 
 			</section>

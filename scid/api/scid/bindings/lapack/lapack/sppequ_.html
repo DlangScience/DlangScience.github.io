@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes row and column scalings to equilibrate a symmetric
 </p>
-<section>
-<p>positive definite matrix in packed storage and reduce its condition
+<section><p>positive definite matrix in packed storage and reduce its condition
 </p>
 
 <p>number.
@@ -301,17 +300,29 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sppequ_(
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* ap,
+								<br/>
 &nbsp;&nbsp;float* s,
+								<br/>
 &nbsp;&nbsp;float* scond,
+								<br/>
 &nbsp;&nbsp;float* amax,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

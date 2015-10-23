@@ -46,19 +46,33 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) int MPI_Dist_graph_create_adjacent(
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* comm_old,
+								<br/>
 &nbsp;&nbsp;int indegree,
+								<br/>
 &nbsp;&nbsp;int* sources,
+								<br/>
 &nbsp;&nbsp;int* sourceweights,
+								<br/>
 &nbsp;&nbsp;int outdegree,
+								<br/>
 &nbsp;&nbsp;int* destinations,
+								<br/>
 &nbsp;&nbsp;int* destweights,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_info_t.html">ompi_info_t</a>* info,
+								<br/>
 &nbsp;&nbsp;int reorder,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>** comm_dist_graph
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

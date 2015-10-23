@@ -289,29 +289,36 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function jacobian</h1>
 			<section>
-				<p> Calculate the Jacobian matrix associated with a set of <i><a href="../../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a></i> functions
+				<p>Calculate the Jacobian matrix associated with a set of <i><a href="../../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a></i> functions
     in <i>n</i> variables using a central-difference approximation to the
     Jacobian.
 </p>
-<section>
-<p>    This method requires 2<i>n</i> function evaluations, but is more
+<section><p>This method requires 2<i>n</i> function evaluations, but is more
     accurate than the faster <a href="../../scid/calculus/jacobian2.html"><code class="prettyprint lang-d">jacobian2</code></a>() function. The relative
     accuracy in the result is, at best, on the order of
     (real.epsilon)^(2/3).
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/matrix/MatrixView.html">MatrixView</a>!Real jacobian(Real, Func)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;int m,
+								<br/>
 &nbsp;&nbsp;Real[] x,
+								<br/>
 &nbsp;&nbsp;real scale = 1.00000,
+								<br/>
 &nbsp;&nbsp;Real[] buffer = null
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -320,20 +327,19 @@ $('#symbolSearchPane').show();
             function takes a second vector parameter, this is assumed to
             be a <a href="../../scid/calculus/jacobian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the return value, and will be used as such.
 </td></tr>
-<tr><td id="m">m</td><td> The number of functions in $(D <a href="../../scid/calculus/jacobian.html#f"><code class="prettyprint lang-d">f</code></a>).
+<tr><td id="m">m</td><td> The number of functions in <a href="../../scid/calculus/jacobian.html#f"><code class="prettyprint lang-d">f</code></a>.
 </td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.
 </td></tr>
 <tr><td id="scale">scale</td><td> A "characteristic <a href="../../scid/calculus/jacobian.html#scale"><code class="prettyprint lang-d">scale</code></a>" over which the function changes.
             (optional)
 </td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/jacobian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least $(I <a href="../../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a>)*$(I n), for storing the calculated
-            Jacobian matrix. (optional)
-</td></tr>
+<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/jacobian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least <i><a href="../../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a></i>*<i>n</i>, for storing the calculated
+            Jacobian matrix. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Let's say we want to find the Jacobian of the function
+<pre class="code"><code class="prettyprint lang-d">// Let's say we want to find the Jacobian of the function
 //      <a href="../../scid/calculus/jacobian.html#f">f</a>(<a href="../../scid/calculus/jacobian.html#x">x</a>,y) = (xy, <a href="../../scid/calculus/jacobian.html#x">x</a>-y)
 // at the point p = (1, 2).
 real[] p = [ 1.0, 2.0 ];
@@ -347,7 +353,7 @@ real[] <a href="../../scid/calculus/jacobian.html#f">f</a>(real[] a)
     return r;
 }
 
-auto j = jacobian(&<a href="../../scid/calculus/jacobian.html#f">f</a>, 2, p);
+auto j = jacobian(&amp;<a href="../../scid/calculus/jacobian.html#f">f</a>, 2, p);
 
 // However, if we need to perform this operation many times,
 // we may want to speed things up a bit. To avoid unnecessary
@@ -360,12 +366,11 @@ real[] g(real[] a, real[] r)
     return r[0 .. 2];
 }
 
-auto jFaster = jacobian(&g, 2, p);
-</pre>
-
+auto jFaster = jacobian(&amp;g, 2, p);
+</code></pre>
 </section>
 <section><h3>See also</h3>
-<p>    <ul><li>Wikipedia:
+<p><ul><li>Wikipedia:
         <a href="http://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant">Jacobian matrix and determinant</a>.
     </li></ul>
 </p>

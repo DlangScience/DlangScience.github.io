@@ -301,18 +301,23 @@ $('#symbolSearchPane').show();
  another reference to the contents somewhere. Otherwise, the results
  are placed on the GC heap.
 </p>
-<section>
-<p> This function is much faster if T has a length, but works even if it doesn't.
+<section><p>This function is much faster if T has a length, but works even if it doesn't.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Unqual!(ElementType!T)[] tempdup(T)(
+								<br/>
 &nbsp;&nbsp;T data
+								<br/>
 )
-if (isInputRange!T &amp;&amp; (isArray!T || !isReferenceType!(ElementType!T)));</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; (isArray!T || !isReferenceType!(ElementType!T)));
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -322,11 +327,17 @@ if (isInputRange!T &amp;&amp; (isArray!T || !isReferenceType!(ElementType!T)));<
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Unqual!(ElementType!T)[] tempdup(T)(
+								<br/>
 &nbsp;&nbsp;T data
+								<br/>
 )
-if (isInputRange!T &amp;&amp; !(isArray!T || !isReferenceType!(ElementType!T)));</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; !(isArray!T || !isReferenceType!(ElementType!T)));
+							</code>
+						</div>
 					</section>
 
 			</section>

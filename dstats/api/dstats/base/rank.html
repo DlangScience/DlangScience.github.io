@@ -83,26 +83,31 @@ $('#symbolSearchPane').show();
  and if you need more precision when averaging ties, you can use double or
  real.
 </p>
-<section>
-<p> Works with any <a href="../../dstats/base/rank.html#input"><code class="prettyprint lang-d">input</code></a> range.
+<section><p>Works with any <a href="../../dstats/base/rank.html#input"><code class="prettyprint lang-d">input</code></a> range.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Ret[] rank(alias compFun, Ret, T)(
+								<br/>
 &nbsp;&nbsp;T input,
+								<br/>
 &nbsp;&nbsp;Ret[] buf = null
+								<br/>
 )
-if (isInputRange!T &amp;&amp; is(typeof(input.front &lt; input.front)));</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; is(typeof(input.front &lt; input.front)));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">uint[] test = [3, 5, 3, 1, 2];
-assert(rank!("a < b", float)(test) == [3.5f, 5f, 3.5f, 1f, 2f]);
+<pre class="code"><code class="prettyprint lang-d">uint[] test = [3, 5, 3, 1, 2];
+assert(rank!("a &lt; b", float)(test) == [3.5f, 5f, 3.5f, 1f, 2f]);
 assert(test == [3U, 5, 3, 1, 2]);
-</pre>
+</code></pre>
 </section>
 
 			</section>

@@ -75,10 +75,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function chiSquareCDF</h1>
 			<section>
-				<p>  &chi;,2 distribution function and its complement.
+				<p>&chi;,2 distribution function and its complement.
 </p>
-<section>
-<p> Returns the area under the left hand tail (from 0 to <a href="../../dstats/distrib/chiSquareCDF.html#x"><code class="prettyprint lang-d">x</code></a>)
+<section><p>Returns the area under the left hand tail (from 0 to <a href="../../dstats/distrib/chiSquareCDF.html#x"><code class="prettyprint lang-d">x</code></a>)
  of the Chi square probability density function with
  <a href="../../dstats/distrib/chiSquareCDF.html#v"><code class="prettyprint lang-d">v</code></a> degrees of freedom. The complement returns the area under
  the right hand tail (from <a href="../../dstats/distrib/chiSquareCDF.html#x"><code class="prettyprint lang-d">x</code></a> to &infin;).
@@ -93,22 +92,26 @@ $('#symbolSearchPane').show();
           t, <a href="../../dstats/distrib/chiSquareCDF.html#v"><code class="prettyprint lang-d">v</code></a>/2-1 e, -t/2 dt )
              / 2, <a href="../../dstats/distrib/chiSquareCDF.html#v"><code class="prettyprint lang-d">v</code></a>/2 (<a href="../../dstats/distrib/chiSquareCDF.html#v"><code class="prettyprint lang-d">v</code></a>/2)
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double chiSquareCDF(
+								<br/>
 &nbsp;&nbsp;double x,
+								<br/>
 &nbsp;&nbsp;double v
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="v">v</td><td> degrees of freedom. Must be positive.</td></tr>
-<tr><td id="x">x</td><td> the $(POWER &chi;,2) variable. Must be positive.
-</td></tr>
+<tr><td id="x">x</td><td> the &chi;,2 variable. Must be positive.</td></tr>
 </table>
 </section>
 

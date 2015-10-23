@@ -289,35 +289,55 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function bisect</h1>
 			<section>
-				<p> Use bisection to find the point where the given <a href="../../scid/nonlinear/bisect.html#predicate"><code class="prettyprint lang-d">predicate</code></a> goes from
+				<p>Use bisection to find the point where the given <a href="../../scid/nonlinear/bisect.html#predicate"><code class="prettyprint lang-d">predicate</code></a> goes from
     returning false to returning true.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototypes</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Tuple!(T,"xTrue",T,"xFalse",R,"fTrue",R,"fFalse") bisect(F, T, R)(
+								<br/>
 &nbsp;&nbsp;scope F f,
+								<br/>
 &nbsp;&nbsp;bool delegate(T, R) predicate,
+								<br/>
 &nbsp;&nbsp;T xTrue,
+								<br/>
 &nbsp;&nbsp;T xFalse,
+								<br/>
 &nbsp;&nbsp;T xTolerance,
+								<br/>
 &nbsp;&nbsp;int maxIterations = 40
+								<br/>
 );
-
+								<br/>
+								<br/>
 Tuple!(T,"xTrue",T,"xFalse",R,"fTrue",R,"fFalse") bisect(F, T, R)(
+								<br/>
 &nbsp;&nbsp;scope F f,
+								<br/>
 &nbsp;&nbsp;bool delegate(T, R) predicate,
+								<br/>
 &nbsp;&nbsp;T xTrue,
+								<br/>
 &nbsp;&nbsp;T xFalse,
+								<br/>
 &nbsp;&nbsp;R fTrue,
+								<br/>
 &nbsp;&nbsp;R fFalse,
+								<br/>
 &nbsp;&nbsp;T xTolerance,
+								<br/>
 &nbsp;&nbsp;int maxIterations = 40
+								<br/>
 )
-if (isFloatingPoint!T &amp;&amp; isFloatingPoint!R);</pre>
+								<br/>
+if (isFloatingPoint!T &amp;&amp; isFloatingPoint!R);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -334,41 +354,39 @@ if (isFloatingPoint!T &amp;&amp; isFloatingPoint!R);</pre>
                             the function returns.</td></tr>
 <tr><td id="maxIterations">maxIterations</td><td>   Failure: When the algorithm has failed to
                             produce a result after <a href="../../scid/nonlinear/bisect.html#maxIterations"><code class="prettyprint lang-d">maxIterations</code></a> bisections,
-                            an exception is thrown.
-</td></tr>
+                            an exception is thrown.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>    A tuple containing values named <a href="../../scid/nonlinear/bisect.html#xTrue"><code class="prettyprint lang-d">xTrue</code></a>, <a href="../../scid/nonlinear/bisect.html#xFalse"><code class="prettyprint lang-d">xFalse</code></a>, <a href="../../scid/nonlinear/bisect.html#fTrue"><code class="prettyprint lang-d">fTrue</code></a>, and <a href="../../scid/nonlinear/bisect.html#fFalse"><code class="prettyprint lang-d">fFalse</code></a>, which
+<p>A tuple containing values named <a href="../../scid/nonlinear/bisect.html#xTrue"><code class="prettyprint lang-d">xTrue</code></a>, <a href="../../scid/nonlinear/bisect.html#xFalse"><code class="prettyprint lang-d">xFalse</code></a>, <a href="../../scid/nonlinear/bisect.html#fTrue"><code class="prettyprint lang-d">fTrue</code></a>, and <a href="../../scid/nonlinear/bisect.html#fFalse"><code class="prettyprint lang-d">fFalse</code></a>, which
     satisfy
 </p>
-<pre class="code prettyprint lang-d"><a href="../../scid/nonlinear/bisect.html#f">f</a>(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>) == <a href="../../scid/nonlinear/bisect.html#fTrue">fTrue</a>
+<pre class="code"><code class="prettyprint lang-d"><a href="../../scid/nonlinear/bisect.html#f">f</a>(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>) == <a href="../../scid/nonlinear/bisect.html#fTrue">fTrue</a>
 <a href="../../scid/nonlinear/bisect.html#f">f</a>(<a href="../../scid/nonlinear/bisect.html#xFalse">xFalse</a>) == <a href="../../scid/nonlinear/bisect.html#fFalse">fFalse</a>
 <a href="../../scid/nonlinear/bisect.html#predicate">predicate</a>(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>, <a href="../../scid/nonlinear/bisect.html#fTrue">fTrue</a>) == true
 <a href="../../scid/nonlinear/bisect.html#predicate">predicate</a>(<a href="../../scid/nonlinear/bisect.html#xFalse">xFalse</a>, <a href="../../scid/nonlinear/bisect.html#fFalse">fFalse</a>) == false
-abs(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>-<a href="../../scid/nonlinear/bisect.html#xFalse">xFalse</a>) <= <a href="../../scid/nonlinear/bisect.html#xTolerance">xTolerance</a>
-</pre>
-
+abs(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>-<a href="../../scid/nonlinear/bisect.html#xFalse">xFalse</a>) &lt;= <a href="../../scid/nonlinear/bisect.html#xTolerance">xTolerance</a>
+</code></pre>
 </section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">// Find a root by bisection
+<pre class="code"><code class="prettyprint lang-d">// Find a root by bisection
 auto r = bisect(
     (real x) { return x^^3; },
-    (real x, real fx) { return fx < 0; },
+    (real x, real fx) { return fx &lt; 0; },
     -1.0L, 1.5L, 1e-10L
     );
 
 // Let's check if we got the right answer.
 enum root = 0.0L;
-assert (abs(r.xTrue - root) <= 1e-10);
-assert (abs(r.xFalse - root) <= 1e-10);
+assert (abs(r.xTrue - root) &lt;= 1e-10);
+assert (abs(r.xFalse - root) &lt;= 1e-10);
 
-assert (r.fTrue < 0);
-assert (r.fFalse >= 0);
-assert (abs(r.xTrue - r.xFalse) <= 1e-10);
-assert (r.xNaN < 0);
-assert (abs(r.xValid - r.xNan) <= 1e-6);
-</pre>
+assert (r.fTrue &lt; 0);
+assert (r.fFalse &gt;= 0);
+assert (abs(r.xTrue - r.xFalse) &lt;= 1e-10);
+assert (r.xNaN &lt; 0);
+assert (abs(r.xValid - r.xNan) &lt;= 1e-6);
+</code></pre>
 </section>
 
 			</section>

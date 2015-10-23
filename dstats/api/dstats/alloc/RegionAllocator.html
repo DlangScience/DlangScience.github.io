@@ -82,8 +82,7 @@ and enforces scoped deletion.  A new instance using the thread-local
 an explicitly created <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> is created using
 <a href="../../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><code class="prettyprint lang-d">RegionAllocatorStack.newRegionAllocator</code></a>.
 </p>
-<section>
-<p>Each instance has reference semantics in that any copy will <a href="../../dstats/alloc/RegionAllocator.allocate.html"><code class="prettyprint lang-d">allocate</code></a> from the
+<section><p>Each instance has reference semantics in that any copy will <a href="../../dstats/alloc/RegionAllocator.allocate.html"><code class="prettyprint lang-d">allocate</code></a> from the
 same memory.  When the last copy of an instance goes out of scope, all memory
 allocated via that instance is freed.  Only the most recently created
 still-existing <code class="prettyprint lang-d">RegionAllocator</code> using a given <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a>
@@ -96,7 +95,6 @@ has semantics similar to a null pointer.  It may be assigned to or passed to
 a function.  However, any attempt to call a method will result in a
 <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> being thrown.
 </p>
-
 </section>
 
 					<section>
@@ -114,7 +112,7 @@ a function.  However, any attempt to call a method will result in a
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
-								<td>    Returns whether the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
+								<td>Returns whether the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance is scanned by the garbage collector.
 </td>
 							</tr>
@@ -124,7 +122,7 @@ a function.  However, any attempt to call a method will result in a
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d">ulong</code></td>
-								<td>    Returns the segment size of the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
+								<td>Returns the segment size of the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.
 </td>
 							</tr>
@@ -134,7 +132,7 @@ a function.  However, any attempt to call a method will result in a
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d">ulong</code></td>
-								<td>    Returns the maximum number of bytes that may be allocated in the
+								<td>Returns the maximum number of bytes that may be allocated in the
     current segment.
 </td>
 							</tr>
@@ -154,7 +152,7 @@ a function.  However, any attempt to call a method will result in a
 										<code>alignBytes</code>
 									</a>
 								</td>
-								<td>    Returns the number of bytes to which an allocation of size <a href="../../dstats/alloc/RegionAllocator.alignBytes.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> is
+								<td>Returns the number of bytes to which an allocation of size <a href="../../dstats/alloc/RegionAllocator.alignBytes.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> is
     guaranteed to be aligned.
 </td>
 							</tr>
@@ -164,7 +162,7 @@ a function.  However, any attempt to call a method will result in a
 										<code>allocate</code>
 									</a>
 								</td>
-								<td>    Allocates <a href="../../dstats/alloc/RegionAllocator.allocate.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> bytes on the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
+								<td>Allocates <a href="../../dstats/alloc/RegionAllocator.allocate.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> bytes on the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance.  The last block allocated from this
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance can be freed by calling
     <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">RegionAllocator.free</code></a> or <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">RegionAllocator.freeLast</code></a> or will be
@@ -178,7 +176,7 @@ a function.  However, any attempt to call a method will result in a
 										<code>allocSize</code>
 									</a>
 								</td>
-								<td>    Returns the number of bytes used to satisfy an allocation request
+								<td>Returns the number of bytes used to satisfy an allocation request
     of <a href="../../dstats/alloc/RegionAllocator.allocSize.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a>.  Will return a value greater than or equal to
     <a href="../../dstats/alloc/RegionAllocator.allocSize.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> to account for alignment overhead.
 </td>
@@ -189,7 +187,7 @@ a function.  However, any attempt to call a method will result in a
 										<code>array</code>
 									</a>
 								</td>
-								<td>    Copies <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> to an <code class="prettyprint lang-d">array</code>.  The <code class="prettyprint lang-d">array</code> will be located on the
+								<td>Copies <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> to an <code class="prettyprint lang-d">array</code>.  The <code class="prettyprint lang-d">array</code> will be located on the
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> stack if any of the following conditions apply:
 </td>
 							</tr>
@@ -199,7 +197,7 @@ a function.  However, any attempt to call a method will result in a
 										<code>free</code>
 									</a>
 								</td>
-								<td>    Checks that <a href="../../dstats/alloc/RegionAllocator.free.html#ptr"><code class="prettyprint lang-d">ptr</code></a> is a pointer to the block that would be freed by
+								<td>Checks that <a href="../../dstats/alloc/RegionAllocator.free.html#ptr"><code class="prettyprint lang-d">ptr</code></a> is a pointer to the block that would be freed by
     <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a> then calls <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>.  Throws a
     <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> if the pointer does not point to the
     block that would be freed by <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>.
@@ -211,7 +209,7 @@ a function.  However, any attempt to call a method will result in a
 										<code>freeLast</code>
 									</a>
 								</td>
-								<td>    Frees the last block of memory allocated by the current
+								<td>Frees the last block of memory allocated by the current
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  Throws a <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> if
     this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> is not the most recently created still-existing
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> using its <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance.
@@ -242,7 +240,7 @@ a function.  However, any attempt to call a method will result in a
 										<code>resize</code>
 									</a>
 								</td>
-								<td>    Attempts to <code class="prettyprint lang-d">resize</code> a previously allocated block of memory in place.
+								<td>Attempts to <code class="prettyprint lang-d">resize</code> a previously allocated block of memory in place.
     This is possible only if <a href="../../dstats/alloc/RegionAllocator.resize.html#ptr"><code class="prettyprint lang-d">ptr</code></a> points to the beginning of the last
     block allocated by this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance and, in the
     case where <a href="../../dstats/alloc/RegionAllocator.resize.html#newSize"><code class="prettyprint lang-d">newSize</code></a> is greater than the old size, there is
@@ -257,14 +255,14 @@ a function.  However, any attempt to call a method will result in a
 										<code>uninitializedArray</code>
 									</a>
 								</td>
-								<td>    Same as <a href="../../dstats/alloc/RegionAllocator.newArray.html"><code class="prettyprint lang-d">newArray</code></a>, except skips initialization of elements for
+								<td>Same as <a href="../../dstats/alloc/RegionAllocator.newArray.html"><code class="prettyprint lang-d">newArray</code></a>, except skips initialization of elements for
     performance reasons.
 </td>
 							</tr>
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">void foo() {
+<pre class="code"><code class="prettyprint lang-d">void foo() {
     auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
     auto ptr1 = bar(alloc);
     auto ptr2 = alloc.allocate(42);
@@ -324,8 +322,7 @@ void uninitialized() {
     alloc = alloc2;
     auto ptr4 = alloc.allocate(42);  // Ok.
 }
-</pre>
-
+</code></pre>
 </section>
 <section><h3>Note</h3>
 <p>Allocations larger than this.segmentSize are handled as a special

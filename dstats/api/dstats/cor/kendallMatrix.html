@@ -83,30 +83,36 @@ as the number of vectors in <a href="../../dstats/cor/kendallMatrix.html#mat"><c
 each row to support storing the lower triangle.  If <a href="../../dstats/cor/kendallMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void kendallMatrix(RoR, Ret)(
+								<br/>
 &nbsp;&nbsp;RoR mat,
+								<br/>
 &nbsp;&nbsp;ref Ret ans,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null
+								<br/>
 )
-if (isInputRange!RoR &amp;&amp; isInputRange!(ElementType!RoR) &amp;&amp; !isInfinite!RoR &amp;&amp; (is(typeof(ans[0, 0] = 2.00000)) || is(typeof(ans[0][0] = 2.00000))));</pre>
+								<br/>
+if (isInputRange!RoR &amp;&amp; isInputRange!(ElementType!RoR) &amp;&amp; !isInfinite!RoR &amp;&amp; (is(typeof(ans[0, 0] = 2.00000)) || is(typeof(ans[0][0] = 2.00000))));
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>These functions can be used without SciD because they don't return
        SciD types.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto pearsonRoR = [[0.0], [0.0, 0.0], [0.0, 0.0, 0.0]];
+<pre class="code"><code class="prettyprint lang-d">auto pearsonRoR = [[0.0], [0.0, 0.0], [0.0, 0.0, 0.0]];
 <a href="../../dstats/cor/pearsonMatrix.html">pearsonMatrix</a>(input, pearsonRoR);
 assert(approxEqual(pearsonRoR[1][1], 1));
-</pre>
+</code></pre>
 </section>
 
 			</section>

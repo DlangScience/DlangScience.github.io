@@ -80,23 +80,28 @@ fits a hypothetical distribution.  counts is an input range of counts.
 <a href="../../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a> is an input range of expected <a href="../../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a>.  These are normalized
 automatically, so they can sum to any value.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double multinomialTest(U, F)(
+								<br/>
 &nbsp;&nbsp;U countsIn,
+								<br/>
 &nbsp;&nbsp;F proportions
+								<br/>
 )
-if (isInputRange!U &amp;&amp; isInputRange!F &amp;&amp; isIntegral!(ElementType!U) &amp;&amp; isFloatingPoint!(ElementType!F));</pre>
+								<br/>
+if (isInputRange!U &amp;&amp; isInputRange!F &amp;&amp; isIntegral!(ElementType!U) &amp;&amp; isFloatingPoint!(ElementType!F));
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>The P-value for the null that counts is a sample from <a href="../../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a>
 against the alternative that it isn't.
 </p>
-
 </section>
 <section><h3>Notes</h3>
 <p>This test is EXTREMELY slow for anything but very small samples and

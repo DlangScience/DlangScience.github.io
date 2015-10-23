@@ -291,35 +291,57 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the generalized eigenvalues, and left and/or right
 </p>
-<section>
-<p>generalized eigenvectors for <a href="../../../../scid/bindings/lapack/lapack/sggev_.html#a"><code class="prettyprint lang-d">a</code></a> pair of nonsymmetric matrices
+<section><p>generalized eigenvectors for <a href="../../../../scid/bindings/lapack/lapack/sggev_.html#a"><code class="prettyprint lang-d">a</code></a> pair of nonsymmetric matrices
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sggev_(
+								<br/>
 &nbsp;&nbsp;char* jobvl,
+								<br/>
 &nbsp;&nbsp;char* jobvr,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* alphar,
+								<br/>
 &nbsp;&nbsp;float* alphai,
+								<br/>
 &nbsp;&nbsp;float* betav,
+								<br/>
 &nbsp;&nbsp;float* vl,
+								<br/>
 &nbsp;&nbsp;int* ldvl,
+								<br/>
 &nbsp;&nbsp;float* vr,
+								<br/>
 &nbsp;&nbsp;int* ldvr,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int jobvl_len,
+								<br/>
 &nbsp;&nbsp;int jobvr_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

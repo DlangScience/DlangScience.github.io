@@ -38,26 +38,34 @@ $('#symbolSearchPane').show();
 baseAlgorithm for small subranges.  Usage is similar to
 algorithm, sort.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 SortedRange!(R,pred) parallelSort(alias pred, alias baseAlgorithm, R)(
+								<br/>
 &nbsp;&nbsp;R range,
+								<br/>
 &nbsp;&nbsp;size_t minParallelSort = 1024,
+								<br/>
 &nbsp;&nbsp;size_t minParallelMerge = 4096,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null
+								<br/>
 )
-if (finiteRandom!R &amp;&amp; hasAssignableElements!R);</pre>
+								<br/>
+if (finiteRandom!R &amp;&amp; hasAssignableElements!R);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="pred">pred</td><td> The predicate to sort on.
 </td></tr>
 <tr><td id="baseAlgorithm">baseAlgorithm</td><td> The algorithm to fall back to for small subranges.
-$(D <code class="prettyprint lang-d">parallelSort</code>) is a stable sort iff $(D baseAlgorithm) is a stable sort.
+<code class="prettyprint lang-d">parallelSort</code> is a stable sort iff baseAlgorithm is a stable sort.
 </td></tr>
 <tr><td id="range">range</td><td> The <a href="../parallel_algorithm/parallelSort.html#range"><code class="prettyprint lang-d">range</code></a> to be sorted.
 </td></tr>
@@ -66,10 +74,10 @@ will expose more parallelism, but also incur more overhead.
 </td></tr>
 <tr><td id="minParallelMerge">minParallelMerge</td><td> The smallest subrange to <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> in parallel.  Since
 merging is a cheaper operation than sorting, this should be somewhat larger
-than $(D <a href="../parallel_algorithm/parallelSort.html#minParallelSort"><code class="prettyprint lang-d">minParallelSort</code></a>).
+than <a href="../parallel_algorithm/parallelSort.html#minParallelSort"><code class="prettyprint lang-d">minParallelSort</code></a>.
 </td></tr>
-<tr><td id="pool">pool</td><td> The $(XREF parallelism, TaskPool) to use.  If null, the global
-default task <a href="../parallel_algorithm/parallelSort.html#pool"><code class="prettyprint lang-d">pool</code></a> returned by $(XREF parallelism, taskPool) will be used.</td></tr>
+<tr><td id="pool">pool</td><td> The parallelism, TaskPool to use.  If null, the global
+default task <a href="../parallel_algorithm/parallelSort.html#pool"><code class="prettyprint lang-d">pool</code></a> returned by parallelism, taskPool will be used.</td></tr>
 </table>
 </section>
 

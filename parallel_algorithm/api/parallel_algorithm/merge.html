@@ -37,18 +37,25 @@ $('#symbolSearchPane').show();
 				<p>Merge ranges <a href="../parallel_algorithm/merge.html#from1"><code class="prettyprint lang-d">from1</code></a> and <a href="../parallel_algorithm/merge.html#from2"><code class="prettyprint lang-d">from2</code></a>, which are assumed sorted according
 to pred, into <a href="../parallel_algorithm/merge.html#buf"><code class="prettyprint lang-d">buf</code></a> using a sequential algorithm.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void merge(alias pred, R1, R2, R3)(
+								<br/>
 &nbsp;&nbsp;R1 from1,
+								<br/>
 &nbsp;&nbsp;R2 from2,
+								<br/>
 &nbsp;&nbsp;R3 buf
+								<br/>
 )
-if (allSatisfy!(isInputRange, TypeTuple!(R1, R2)) &amp;&amp; is(ElementType!R1 == ElementType!R2) &amp;&amp; is(ElementType!R2 == ElementType!R3) &amp;&amp; isOutputRange!(R3, ElementType!R1));</pre>
+								<br/>
+if (allSatisfy!(isInputRange, TypeTuple!(R1, R2)) &amp;&amp; is(ElementType!R1 == ElementType!R2) &amp;&amp; is(ElementType!R2 == ElementType!R3) &amp;&amp; isOutputRange!(R3, ElementType!R1));
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -56,20 +63,19 @@ if (allSatisfy!(isInputRange, TypeTuple!(R1, R2)) &amp;&amp; is(ElementType!R1 =
 </td></tr>
 <tr><td id="from2">from2</td><td> The second of the two sorted ranges to be merged.  This must also
 be an input range and must have an identical element type to
-$(D <a href="../parallel_algorithm/merge.html#from1"><code class="prettyprint lang-d">from1</code></a>).
+<a href="../parallel_algorithm/merge.html#from1"><code class="prettyprint lang-d">from1</code></a>.
 </td></tr>
 <tr><td id="buf">buf</td><td> The buffer to <code class="prettyprint lang-d">merge</code> into.  This must be an output range with
-capacity at least equal to $(D walkLength(<a href="../parallel_algorithm/merge.html#from1"><code class="prettyprint lang-d">from1</code></a>) + walkLength(<a href="../parallel_algorithm/merge.html#from2"><code class="prettyprint lang-d">from2</code></a>)).
-</td></tr>
+capacity at least equal to walkLength(<a href="../parallel_algorithm/merge.html#from1"><code class="prettyprint lang-d">from1</code></a>) + walkLength(<a href="../parallel_algorithm/merge.html#from2"><code class="prettyprint lang-d">from2</code></a>).</td></tr>
 </table>
 </section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">auto <a href="../parallel_algorithm/merge.html#from1">from1</a> = [1, 2, 4, 8, 16, 32];
+<pre class="code"><code class="prettyprint lang-d">auto <a href="../parallel_algorithm/merge.html#from1">from1</a> = [1, 2, 4, 8, 16, 32];
 auto <a href="../parallel_algorithm/merge.html#from2">from2</a> = [2, 4, 6, 8, 10, 12];
 auto <a href="../parallel_algorithm/merge.html#buf">buf</a> = new int[from1.length + from2.length];
 merge(<a href="../parallel_algorithm/merge.html#from1">from1</a>, <a href="../parallel_algorithm/merge.html#from2">from2</a>, <a href="../parallel_algorithm/merge.html#buf">buf</a>);
 assert(<a href="../parallel_algorithm/merge.html#buf">buf</a> == [1, 2, 2, 4, 4, 6, 8, 8, 10, 12, 16, 32]);
-</pre>
+</code></pre>
 </section>
 
 			</section>

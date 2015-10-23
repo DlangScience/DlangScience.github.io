@@ -75,29 +75,32 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function invChiSquareCDFR</h1>
 			<section>
-				<p>  Inverse of complemented &chi;, 2 distribution
+				<p>Inverse of complemented &chi;, 2 distribution
 </p>
-<section>
-<p> Finds the &chi;, 2 argument x such that the integral
+<section><p>Finds the &chi;, 2 argument x such that the integral
  from x to &infin; of the &chi;, 2 density is equal
  to the given cumulative probability <a href="../../dstats/distrib/invChiSquareCDFR.html#p"><code class="prettyprint lang-d">p</code></a>.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double invChiSquareCDFR(
+								<br/>
 &nbsp;&nbsp;double v,
+								<br/>
 &nbsp;&nbsp;double p
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="p">p</td><td> Cumulative probability. 0&lt;= <a href="../../dstats/distrib/invChiSquareCDFR.html#p"><code class="prettyprint lang-d">p</code></a> &lt;=1.</td></tr>
-<tr><td id="v">v</td><td> Degrees of freedom. Must be positive.
-</td></tr>
+<tr><td id="v">v</td><td> Degrees of freedom. Must be positive.</td></tr>
 </table>
 </section>
 

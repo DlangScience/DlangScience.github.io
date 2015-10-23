@@ -80,8 +80,7 @@ and returns the beta coefficients.  This is a generalized linear model with
 the link function f(XB) = 1 / (1 + exp(XB)). This is generally used to model
 the probability that a binary Y variable is 1 given a set of X variables.
 </p>
-<section>
-<p>For the purpose of this function, Y variables are interpreted as Booleans,
+<section><p>For the purpose of this function, Y variables are interpreted as Booleans,
 regardless of their type.  X may be either a range of ranges or a tuple of
 ranges.  However, note that unlike in <a href="../../dstats/regress/linearRegress.html"><code class="prettyprint lang-d">linearRegress</code></a>, they are copied to an
 array if they are not random access ranges.  Note that each value is accessed
@@ -114,29 +113,31 @@ to use in Design to get the same results is 2 * (n - 1) * lambda / n.
 <p>Also note that, as in <a href="../../dstats/regress/linearRegress.html"><code class="prettyprint lang-d">linearRegress</code></a>, <a href="../../dstats/regress/repeat.html"><code class="prettyprint lang-d">repeat</code></a>(1) can be used for the intercept
 term.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double[] logisticRegressBeta(T, U...)(
+								<br/>
 &nbsp;&nbsp;T yIn,
+								<br/>
 &nbsp;&nbsp;U xRidge
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>The beta coefficients for the regression model.
 </p>
-
 </section>
 <section><h3>References</h3>
-
 </section>
 <section><h3>http</h3>
 <p>//en.wikipedia.org/wiki/Logistic_regression
 </p>
-
 </section>
 <section><h3>http</h3>
 <p>//socserv.mcmaster.ca/jfox/Courses/UCLA/<a href="../../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a>-regression-notes.pdf

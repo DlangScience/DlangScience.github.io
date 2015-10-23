@@ -83,23 +83,28 @@ $('#symbolSearchPane').show();
 				<p>This function calculates the Shannon <a href="../../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> of a forward range that is
  treated as frequency counts of a set of discrete observations.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double entropyCounts(T)(
+								<br/>
 &nbsp;&nbsp;T data
+								<br/>
 )
-if (isForwardRange!T &amp;&amp; doubleInput!T);</pre>
+								<br/>
+if (isForwardRange!T &amp;&amp; doubleInput!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">double uniform3 = entropyCounts([4, 4, 4]);
+<pre class="code"><code class="prettyprint lang-d">double uniform3 = entropyCounts([4, 4, 4]);
 assert(approxEqual(uniform3, log2(3)));
 double uniform4 = entropyCounts([5, 5, 5, 5]);
 assert(approxEqual(uniform4, 2));
-</pre>
+</code></pre>
 </section>
 
 			</section>
@@ -109,12 +114,19 @@ assert(approxEqual(uniform4, 2));
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double entropyCounts(T)(
+								<br/>
 &nbsp;&nbsp;T data,
+								<br/>
 &nbsp;&nbsp;double n
+								<br/>
 )
-if (isIterable!T);</pre>
+								<br/>
+if (isIterable!T);
+							</code>
+						</div>
 					</section>
 
 			</section>

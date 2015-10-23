@@ -291,25 +291,37 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Generates the unitary transformation matrix from
 </p>
-<section>
-<p><a href="../../../../scid/bindings/lapack/lapack/cunghr_.html#a"><code class="prettyprint lang-d">a</code></a> reduction to Hessenberg form determined by CGEHRD.
+<section><p><a href="../../../../scid/bindings/lapack/lapack/cunghr_.html#a"><code class="prettyprint lang-d">a</code></a> reduction to Hessenberg form determined by CGEHRD.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void cunghr_(
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* ilo,
+								<br/>
 &nbsp;&nbsp;int* ihi,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* tau,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

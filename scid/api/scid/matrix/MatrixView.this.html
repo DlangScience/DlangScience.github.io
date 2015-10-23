@@ -294,10 +294,9 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function MatrixView.this</h2>
-				<p>    Wraps <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> with <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a> <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a> around the given <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
+				<p>Wraps <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> with <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a> <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a> around the given <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
 </p>
-<section>
-<p>    For general matrices, the number of columns in the <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>
+<section><p>For general matrices, the number of columns in the <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>
     is set to a.length/<a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a>, whereas for triangular and symmetric
     matrices the number of columns is set equal to the number
     of <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a>.
@@ -306,39 +305,52 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 this(
+								<br/>
 &nbsp;&nbsp;T[] a,
+								<br/>
 &nbsp;&nbsp;size_t m
-) pure;</pre>
+								<br/>
+) pure;
+							</code>
+						</div>
 					</section>
 
 			</section>
 			<section>
 				<h2>Function MatrixView.this</h2>
-				<p>    Wraps <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> with <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a> <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a> and <a href="../../scid/matrix/MatrixView.this.html#n"><code class="prettyprint lang-d">n</code></a> columns around the given <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
+				<p>Wraps <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> with <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a> <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a> and <a href="../../scid/matrix/MatrixView.this.html#n"><code class="prettyprint lang-d">n</code></a> columns around the given <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
     For <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> given set of <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a>, <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a>, and <a href="../../scid/matrix/MatrixView.this.html#n"><code class="prettyprint lang-d">n</code></a>, the following must be true for
     <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> general <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>:
 </p>
-<section><pre class="code prettyprint lang-d">a.length >= <a href="../../scid/matrix/MatrixView.this.html#m">m</a>*<a href="../../scid/matrix/MatrixView.this.html#n">n</a>
-</pre>
+<section><pre class="code"><code class="prettyprint lang-d">a.length &gt;= <a href="../../scid/matrix/MatrixView.this.html#m">m</a>*<a href="../../scid/matrix/MatrixView.this.html#n">n</a>
+</code></pre>
 <p>    For triangular and symmetric matrices, there are two constraints:
 </p>
-<pre class="code prettyprint lang-d"><a href="../../scid/matrix/MatrixView.this.html#m">m</a> == <a href="../../scid/matrix/MatrixView.this.html#n">n</a>
-a.length >= (<a href="../../scid/matrix/MatrixView.this.html#n">n</a>*<a href="../../scid/matrix/MatrixView.this.html#n">n</a> + <a href="../../scid/matrix/MatrixView.this.html#n">n</a>)/2
-</pre>
+<pre class="code"><code class="prettyprint lang-d"><a href="../../scid/matrix/MatrixView.this.html#m">m</a> == <a href="../../scid/matrix/MatrixView.this.html#n">n</a>
+a.length &gt;= (<a href="../../scid/matrix/MatrixView.this.html#n">n</a>*<a href="../../scid/matrix/MatrixView.this.html#n">n</a> + <a href="../../scid/matrix/MatrixView.this.html#n">n</a>)/2
+</code></pre>
 <p>    These conditions are only checked in non-release builds.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 this(
+								<br/>
 &nbsp;&nbsp;T[] a,
+								<br/>
 &nbsp;&nbsp;size_t m,
+								<br/>
 &nbsp;&nbsp;size_t n
-) pure;</pre>
+								<br/>
+) pure;
+							</code>
+						</div>
 					</section>
 
 			</section>

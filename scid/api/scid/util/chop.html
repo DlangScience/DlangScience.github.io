@@ -294,48 +294,63 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function chop</h2>
-				<p> Replaces real numbers that are close to zero by exactly zero.
+				<p>Replaces real numbers that are close to zero by exactly zero.
 </p>
-<section><pre class="code prettyprint lang-d">assert (chop(1.0) == 1.0);
+<section><pre class="code"><code class="prettyprint lang-d">assert (chop(1.0) == 1.0);
 assert (chop(1e-20) == 0.0);
-</pre>
+</code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Real chop(Real)(
+								<br/>
 &nbsp;&nbsp;Real x,
+								<br/>
 &nbsp;&nbsp;real threshold = 1e-10L
+								<br/>
 ) pure nothrow
-if (isFloatingPoint!Real);</pre>
+								<br/>
+if (isFloatingPoint!Real);
+							</code>
+						</div>
 					</section>
 
 			</section>
 			<section>
 				<h2>Function chop</h2>
-				<p> Replaces all numbers in the given array that are close to zero
+				<p>Replaces all numbers in the given array that are close to zero
     by exactly zero. To <a href="../../scid/util/chop.html"><code class="prettyprint lang-d">chop</code></a> the array in-place, pass the same array
     as both <a href="../../scid/util/chop.html#x"><code class="prettyprint lang-d">x</code></a> and <a href="../../scid/util/chop.html#buffer"><code class="prettyprint lang-d">buffer</code></a>.
 </p>
-<section><pre class="code prettyprint lang-d">double[] a = [1.0, 1e-20, 2.0];
+<section><pre class="code"><code class="prettyprint lang-d">double[] a = [1.0, 1e-20, 2.0];
 double[] <a href="../../scid/util/chop.html#x">x</a> = [1.0, 0.0, 2.0];
 auto b = <a href="../../scid/util/chop.html">chop</a>(a);
 assert (b == <a href="../../scid/util/chop.html#x">x</a>);
 <a href="../../scid/util/chop.html">chop</a>(a, 1e-12L, a);
 assert (a == <a href="../../scid/util/chop.html#x">x</a>);
-</pre>
+</code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Real[] chop(Real)(
+								<br/>
 &nbsp;&nbsp;Real[] x,
+								<br/>
 &nbsp;&nbsp;real threshold = 1e-10L,
+								<br/>
 &nbsp;&nbsp;Real[] buffer = null
+								<br/>
 ) nothrow
-if (isFloatingPoint!Real);</pre>
+								<br/>
+if (isFloatingPoint!Real);
+							</code>
+						</div>
 					</section>
 
 			</section>

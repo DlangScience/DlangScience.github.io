@@ -87,31 +87,38 @@ is less than <a href="../../dstats/tests/pairedTTest.html#testMean"><code class=
 greater than <a href="../../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning the true mean difference is not
 equal to <a href="../../dstats/tests/pairedTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
 </p>
-<section>
-<p><a href="../../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> must be input ranges with elements implicitly convertible
+<section><p><a href="../../dstats/tests/pairedTTest.html#before"><code class="prettyprint lang-d">before</code></a> and <a href="../../dstats/tests/pairedTTest.html#after"><code class="prettyprint lang-d">after</code></a> must be input ranges with elements implicitly convertible
 to double and must have the same length.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/ConfInt.html">ConfInt</a> pairedTTest(T, U)(
+								<br/>
 &nbsp;&nbsp;T before,
+								<br/>
 &nbsp;&nbsp;U after,
+								<br/>
 &nbsp;&nbsp;double testMean = 0,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;double confLevel = 0.95
+								<br/>
 )
-if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; isInputRange!T &amp;&amp; isInputRange!U);</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; isInputRange!T &amp;&amp; isInputRange!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> containing the T statistic, the P-value, and the
 boundaries of the confidence interval for the mean difference between
 corresponding elements of sample1 and sample2 at the specified level.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Student%27s_t-test
@@ -124,22 +131,30 @@ corresponding elements of sample1 and sample2 at the specified level.
 				<p>Compute a paired T test directly from summary statistics of the differences
 between corresponding samples.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/ConfInt.html">ConfInt</a> pairedTTest(T)(
+								<br/>
 &nbsp;&nbsp;T diffSummary,
+								<br/>
 &nbsp;&nbsp;double testMean = 0,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;double confLevel = 0.95
+								<br/>
 )
-if (isSummary!T);</pre>
+								<br/>
+if (isSummary!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">float[] data1 = [8, 6, 7, 5, 3, 0, 9];
+<pre class="code"><code class="prettyprint lang-d">float[] data1 = [8, 6, 7, 5, 3, 0, 9];
 float[] data2 = [3, 6, 2, 4, 3, 6, 8];
 
 // Calculate summary statistics on difference explicitly.
@@ -150,13 +165,12 @@ foreach(i; 0..data1.length) {
 
 // Test the null hypothesis that the mean difference between corresponding
 // elements (data1[i] - data2[i]) is greater than 5 against the null that it
-// is <= 5.  Calculate confidence intervals at 99%.
+// is &lt;= 5.  Calculate confidence intervals at 99%.
 auto result = <a href="../../dstats/tests/pairedTTest.html">pairedTTest</a>(summary, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
 
 // This is equivalent to:
 auto result2 = <a href="../../dstats/tests/pairedTTest.html">pairedTTest</a>(data1, data2, 5, <a href="../../dstats/tests/Alt.twoSided.html">Alt.twoSided</a>, 0.99);
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Student%27s_t-test

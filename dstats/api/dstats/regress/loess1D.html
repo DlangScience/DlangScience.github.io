@@ -80,24 +80,30 @@ regression procedure, where a prediction of the dependent (<a href="../../dstats
 is made from an observation of the independent (<a href="../../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a>) variable by weighted
 least squares over <a href="../../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a> values in the neighborhood of the value being evaluated.
 </p>
-<section>
-<p>In the future a separate function may be included to perform loess regression
+<section><p>In the future a separate function may be included to perform loess regression
 with multiple predictors.  However, one predictor is the much more common
 case and the multiple predictor case will require a much different API
 and implementation, so for now only one predictor is supported.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/regress/Loess1D.html">Loess1D</a> loess1D(RX, RY)(
+								<br/>
 &nbsp;&nbsp;RY y,
+								<br/>
 &nbsp;&nbsp;RX x,
+								<br/>
 &nbsp;&nbsp;double span,
+								<br/>
 &nbsp;&nbsp;int degree = 1
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -108,21 +114,18 @@ and implementation, so for now only one predictor is supported.
          For example, if 8 observations are provided and <a href="../../dstats/regress/loess1D.html#span"><code class="prettyprint lang-d">span</code></a> == 0.5,
          the 4 nearest neighbors will be used on evaluation.</td></tr>
 <tr><td id="degree">degree</td><td> The polynomial <a href="../../dstats/regress/loess1D.html#degree"><code class="prettyprint lang-d">degree</code></a> of the local regression.  Must be less than
-         the number of neighbors (<a href="../../dstats/regress/loess1D.html#span"><code class="prettyprint lang-d">span</code></a> * x.length).
-</td></tr>
+         the number of neighbors (<a href="../../dstats/regress/loess1D.html#span"><code class="prettyprint lang-d">span</code></a> * x.length).</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-
 <p>A <a href="../../dstats/regress/Loess1D.html"><code class="prettyprint lang-d">Loess1D</code></a> object.  This object can be used to make predictions based on
 the loess model.  The computations involved are done lazily, i.e. this
 function sets up the <a href="../../dstats/regress/Loess1D.html"><code class="prettyprint lang-d">Loess1D</code></a> instance and returns without computing
 any regression models.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto <a href="../../dstats/regress/loess1D.html#x">x</a> = [1, 2, 3, 4, 5, 6, 7];
+<pre class="code"><code class="prettyprint lang-d">auto <a href="../../dstats/regress/loess1D.html#x">x</a> = [1, 2, 3, 4, 5, 6, 7];
 auto <a href="../../dstats/regress/loess1D.html#y">y</a> = [3, 6, 2, 4, 3, 6, 8];
 
 // Build the <a href="../../dstats/regress/Loess1D.html">Loess1D</a> object.
@@ -133,11 +136,9 @@ model.computeRobustWeights(2);
 
 // Predict the value of <a href="../../dstats/regress/loess1D.html#y">y</a> when <a href="../../dstats/regress/loess1D.html#x">x</a> == 5.5, using a robustness level of 2.
 auto prediction = model.predict(5.5, 2);
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
-
 <p>Cleveland, W.S. (1979). "Robust Locally Weighted Regression and Smoothing
 Scatterplots". Journal of the American Statistical Association 74 (368):
 829-836.

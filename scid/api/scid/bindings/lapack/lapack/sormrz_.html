@@ -291,32 +291,51 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Multiples <a href="../../../../scid/bindings/lapack/lapack/sormrz_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix by the orthogonal matrix
 </p>
-<section>
-<p>from an RZ factorization determined by STZRZF.
+<section><p>from an RZ factorization determined by STZRZF.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sormrz_(
+								<br/>
 &nbsp;&nbsp;char* side,
+								<br/>
 &nbsp;&nbsp;char* trans,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* k,
+								<br/>
 &nbsp;&nbsp;int* l,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* tau,
+								<br/>
 &nbsp;&nbsp;float* c,
+								<br/>
 &nbsp;&nbsp;int* ldc,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int side_len,
+								<br/>
 &nbsp;&nbsp;int trans_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

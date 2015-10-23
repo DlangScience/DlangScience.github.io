@@ -84,11 +84,17 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void postProcess(alias comp, F)(
+								<br/>
 &nbsp;&nbsp;F arr
+								<br/>
 )
-if ((is(F == double[]) || is(F == float[])) &amp;&amp; isSimpleComparison!comp);</pre>
+								<br/>
+if ((is(F == double[]) || is(F == float[])) &amp;&amp; isSimpleComparison!comp);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -98,11 +104,17 @@ if ((is(F == double[]) || is(F == float[])) &amp;&amp; isSimpleComparison!comp);
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void postProcess(alias comp, T)(
+								<br/>
 &nbsp;&nbsp;T arr
+								<br/>
 )
-if (!isSimpleComparison!comp || !is(T == double[]) &amp;&amp; !is(T == float[]));</pre>
+								<br/>
+if (!isSimpleComparison!comp || !is(T == double[]) &amp;&amp; !is(T == float[]));
+							</code>
+						</div>
 					</section>
 
 			</section>

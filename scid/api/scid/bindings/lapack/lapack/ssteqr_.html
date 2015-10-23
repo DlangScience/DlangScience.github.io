@@ -291,25 +291,37 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes all eigenvalues and eigenvectors of a real symmetric
 </p>
-<section>
-<p>tridiagonal matrix, using the implicit QL or QR algorithm.
+<section><p>tridiagonal matrix, using the implicit QL or QR algorithm.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void ssteqr_(
+								<br/>
 &nbsp;&nbsp;char* compz,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* d,
+								<br/>
 &nbsp;&nbsp;float* e,
+								<br/>
 &nbsp;&nbsp;float* z,
+								<br/>
 &nbsp;&nbsp;int* ldz,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int compz_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

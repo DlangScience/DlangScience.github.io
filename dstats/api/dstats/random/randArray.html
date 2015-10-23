@@ -83,21 +83,26 @@ $('#symbolSearchPane').show();
 				<p>Convenience function to allow one-statement creation of arrays of random
  numbers.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 auto randArray(alias randFun, Args...)(
+								<br/>
 &nbsp;&nbsp;size_t N,
+								<br/>
 &nbsp;&nbsp;auto ref Args args
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Create an array of 10 random numbers distributed Normal(0, 1).
+<pre class="code"><code class="prettyprint lang-d">// Create an array of 10 random numbers distributed Normal(0, 1).
 auto normals = randArray!<a href="../../dstats/random/rNorm.html">rNorm</a>(10, 0, 1);
-</pre>
+</code></pre>
 </section>
 
 			</section>
@@ -107,21 +112,26 @@ auto normals = randArray!<a href="../../dstats/random/rNorm.html">rNorm</a>(10, 
  specified type.  Useful, for example, when single-precision floats are all
  you need.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 R[] randArray(R, alias randFun, Args...)(
+								<br/>
 &nbsp;&nbsp;size_t N,
+								<br/>
 &nbsp;&nbsp;auto ref Args args
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Create an array of 10 million floats distributed Normal(0, 1).
+<pre class="code"><code class="prettyprint lang-d">// Create an array of 10 million floats distributed Normal(0, 1).
 float[] normals = <a href="../../dstats/random/randArray.html">randArray</a>!(float, <a href="../../dstats/random/rNorm.html">rNorm</a>)(10, 0, 1);
-</pre>
+</code></pre>
 </section>
 
 			</section>

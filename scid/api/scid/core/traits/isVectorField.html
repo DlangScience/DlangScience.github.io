@@ -289,20 +289,23 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Enum member isVectorField</h1>
 			<section>
-				<p> Evaluates to true if FuncType is a vector field, i.e. a callable type
+				<p>Evaluates to true if FuncType is a vector field, i.e. a callable type
     that takes an ArgType[] array as input and returns a RetType[] array.
 </p>
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 enum isVectorField(FuncType, ArgType, RetType) = isBufferVectorField!(FuncType, ArgType, RetType) || __traits(compiles, ()
 {
 ArgType[] x;
 FuncType f;
 RetType[] y = f(x);
 }
-);</pre>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -289,10 +289,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAWF</h1>
 			<section>
-				<p> Calculates <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> Fourier transform integral.
+				<p>Calculates <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> Fourier transform integral.
 </p>
-<section>
-<p>    Use this to calculate the integral of <a href="../../scid/calculus/integrateQAWF.html#f"><code class="prettyprint lang-d">f</code></a>(x)*cos(<a href="../../scid/calculus/integrateQAWF.html#omega"><code class="prettyprint lang-d">omega</code></a>*x)
+<section><p>Use this to calculate the integral of <a href="../../scid/calculus/integrateQAWF.html#f"><code class="prettyprint lang-d">f</code></a>(x)*cos(<a href="../../scid/calculus/integrateQAWF.html#omega"><code class="prettyprint lang-d">omega</code></a>*x)
     or <a href="../../scid/calculus/integrateQAWF.html#f"><code class="prettyprint lang-d">f</code></a>(x)*sin(<a href="../../scid/calculus/integrateQAWF.html#omega"><code class="prettyprint lang-d">omega</code></a>*x)
     on the interval (<a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a>,).  The <a href="../../scid/calculus/integrateQAWF.html#weight"><code class="prettyprint lang-d">weight</code></a> function is specified
     by setting <a href="../../scid/calculus/integrateQAWF.html#weight"><code class="prettyprint lang-d">weight</code></a> to <a href="../../scid/calculus/Oscillation.cos.html"><code class="prettyprint lang-d">Oscillation.cos</code></a> or <a href="../../scid/calculus/Oscillation.sin.html"><code class="prettyprint lang-d">Oscillation.sin</code></a>.
@@ -302,37 +301,43 @@ $('#symbolSearchPane').show();
     intervals, and convergence acceleration by means of the Epsilon
     algorithm is applied to the series of integral approximations.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a>!Real integrateQAWF(Func, Real)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real a,
+								<br/>
 &nbsp;&nbsp;Real omega,
+								<br/>
 &nbsp;&nbsp;<a href="../../scid/calculus/Oscillation.html">Oscillation</a> weight,
+								<br/>
 &nbsp;&nbsp;Real epsAbs
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
-<p>    This function is unique among the QUADPACK integrators in that
+<p>This function is unique among the QUADPACK integrators in that
     you must specify an absolute accuracy, not <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> relative one.
 </p>
-
 </section>
 <section><h3>See Also</h3>
-<p>    <a href="../../scid/calculus/integrateQAWO.html"><code class="prettyprint lang-d">integrateQAWO</code></a>(), for similar integrals over <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> finite interval.
+<p><a href="../../scid/calculus/integrateQAWO.html"><code class="prettyprint lang-d">integrateQAWO</code></a>(), for similar integrals over <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> finite interval.
 </p>
-
 </section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">// Calculate the integral of cos(x)*exp(-x/64)/sqrt(x) over
+<pre class="code"><code class="prettyprint lang-d">// Calculate the integral of cos(x)*exp(-x/64)/sqrt(x) over
 // the interval (0, infinity).
-real <a href="../../scid/calculus/integrateQAWF.html#f">f</a>(real x) { return x <= 0 ? 0 : exp(-x/64) / sqrt(x); }
-auto i = integrateQAWF(&<a href="../../scid/calculus/integrateQAWF.html#f">f</a>, 0.0L, 1.0L, <a href="../../scid/calculus/Oscillation.cos.html">Oscillation.cos</a>, 1e-15L);
-</pre>
+real <a href="../../scid/calculus/integrateQAWF.html#f">f</a>(real x) { return x &lt;= 0 ? 0 : exp(-x/64) / sqrt(x); }
+auto i = integrateQAWF(&amp;<a href="../../scid/calculus/integrateQAWF.html#f">f</a>, 0.0L, 1.0L, <a href="../../scid/calculus/Oscillation.cos.html">Oscillation.cos</a>, 1e-15L);
+</code></pre>
 </section>
 
 			</section>

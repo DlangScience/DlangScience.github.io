@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Estimates the reciprocal of the condition number of <a href="../../../../scid/bindings/lapack/lapack/sgecon_.html#a"><code class="prettyprint lang-d">a</code></a> general
 </p>
-<section>
-<p>matrix, in either the 1-<a href="../../../../scid/bindings/lapack/lapack/sgecon_.html#norm"><code class="prettyprint lang-d">norm</code></a> or the infinity-<a href="../../../../scid/bindings/lapack/lapack/sgecon_.html#norm"><code class="prettyprint lang-d">norm</code></a>, using the
+<section><p>matrix, in either the 1-<a href="../../../../scid/bindings/lapack/lapack/sgecon_.html#norm"><code class="prettyprint lang-d">norm</code></a> or the infinity-<a href="../../../../scid/bindings/lapack/lapack/sgecon_.html#norm"><code class="prettyprint lang-d">norm</code></a>, using the
 </p>
 
 <p>LU factorization computed by SGETRF.
@@ -301,19 +300,33 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgecon_(
+								<br/>
 &nbsp;&nbsp;char* norm,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* anorm,
+								<br/>
 &nbsp;&nbsp;float* rcond,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int norm_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -81,24 +81,29 @@ values in <a href="../../dstats/tests/chiSquareObs.html#y"><code class="prettypr
 that assumes the data has already been tabulated into a contingency table, see
 <a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>.
 </p>
-<section>
-<p><a href="../../dstats/tests/chiSquareObs.html#x"><code class="prettyprint lang-d">x</code></a> and <a href="../../dstats/tests/chiSquareObs.html#y"><code class="prettyprint lang-d">y</code></a> must both be input ranges.  If they are not the same length, a
+<section><p><a href="../../dstats/tests/chiSquareObs.html#x"><code class="prettyprint lang-d">x</code></a> and <a href="../../dstats/tests/chiSquareObs.html#y"><code class="prettyprint lang-d">y</code></a> must both be input ranges.  If they are not the same length, a
 DstatsArgumentException is thrown.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareObs(T, U)(
+								<br/>
 &nbsp;&nbsp;T x,
+								<br/>
 &nbsp;&nbsp;U y
+								<br/>
 )
-if (isInputRange!T &amp;&amp; isInputRange!U);</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; isInputRange!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Test whether the appearance of "foo" vs. "bar" is independent of the
+<pre class="code"><code class="prettyprint lang-d">// Test whether the appearance of "foo" vs. "bar" is independent of the
 // appearance of "baz" vs. "xxx".
 auto <a href="../../dstats/tests/chiSquareObs.html#x">x</a> = ["foo", "bar", "bar", "foo", "foo"];
 auto <a href="../../dstats/tests/chiSquareObs.html#y">y</a> = ["xxx", "baz", "baz", "xxx", "baz"];
@@ -113,7 +118,7 @@ foreach(i; 0..x.length) {
 }
 
 auto result2 = <a href="../../dstats/tests/chiSquareContingency.html">chiSquareContingency</a>(contingency);
-</pre>
+</code></pre>
 </section>
 
 			</section>

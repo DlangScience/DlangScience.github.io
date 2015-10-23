@@ -289,25 +289,31 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateDEI</h1>
 			<section>
-				<p> Calculate the integral of <a href="../../scid/calculus/integrateDEI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the infinite interval
+				<p>Calculate the integral of <a href="../../scid/calculus/integrateDEI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the infinite interval
     (<a href="../../scid/calculus/integrateDEI.html#a"><code class="prettyprint lang-d">a</code></a>,) using double exponential integration.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a>!Real integrateDEI(Func, Real)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real a,
+								<br/>
 &nbsp;&nbsp;Real epsRel = cast(Real)1e-06
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">double <a href="../../scid/calculus/integrateDEI.html#f">f</a>(double x) { return (1 + 10*x)^^(-2) / sqrt(x); }
-auto i = integrateDEI(&<a href="../../scid/calculus/integrateDEI.html#f">f</a>, 0.0);
-</pre>
+<pre class="code"><code class="prettyprint lang-d">double <a href="../../scid/calculus/integrateDEI.html#f">f</a>(double x) { return (1 + 10*x)^^(-2) / sqrt(x); }
+auto i = integrateDEI(&amp;<a href="../../scid/calculus/integrateDEI.html#f">f</a>, 0.0);
+</code></pre>
 </section>
 
 			</section>

@@ -83,8 +83,7 @@ $('#symbolSearchPane').show();
  in memory. If less than N datapoints have been entered, all are contained in
  the structure.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Constructors</h3>
@@ -100,7 +99,7 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td> The variable <a href="../../dstats/sort/TopN.this.html#ntop"><code class="prettyprint lang-d">ntop</code></a> controls how many elements are retained.
+								<td>The variable <a href="../../dstats/sort/TopN.this.html#ntop"><code class="prettyprint lang-d">ntop</code></a> controls how many elements are retained.
 </td>
 							</tr>
 						</table>
@@ -171,7 +170,7 @@ $('#symbolSearchPane').show();
 										<code>put</code>
 									</a>
 								</td>
-								<td> Insert an element into the topN struct.
+								<td>Insert an element into the topN struct.
 </td>
 							</tr>
 						</table>
@@ -195,11 +194,11 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">Random gen;
+<pre class="code"><code class="prettyprint lang-d">Random gen;
 gen.seed(unpredictableSeed);
 uint[] nums = seq(0U, 100U);
-auto less = TopN!(uint, "a < b")(10);
-auto more = TopN!(uint, "a > b")(10);
+auto less = TopN!(uint, "a &lt; b")(10);
+auto more = TopN!(uint, "a &gt; b")(10);
 randomShuffle(nums, gen);
 foreach(<a href="../../dstats/sort/TopN.n.html">n</a>; nums) {
     less.put(<a href="../../dstats/sort/TopN.n.html">n</a>);
@@ -207,7 +206,7 @@ foreach(<a href="../../dstats/sort/TopN.n.html">n</a>; nums) {
 }
  assert(less.getSorted == [0U, 1,2,3,4,5,6,7,8,9]);
  assert(more.getSorted == [99U, 98, 97, 96, 95, 94, 93, 92, 91, 90]);
-</pre>
+</code></pre>
 </section>
 
 			</section>

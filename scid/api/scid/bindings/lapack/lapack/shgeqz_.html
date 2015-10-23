@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Implements <a href="../../../../scid/bindings/lapack/lapack/shgeqz_.html#a"><code class="prettyprint lang-d">a</code></a> single-/<a href="../../../../scid/bindings/lapack/lapack/f_double.html"><code class="prettyprint lang-d">f_double</code></a>-shift version of the QZ method for
 </p>
-<section>
-<p>finding the generalized eigenvalues of the equation
+<section><p>finding the generalized eigenvalues of the equation
 </p>
 
 <p>det(A - w(i) B) = 0
@@ -301,32 +300,59 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void shgeqz_(
+								<br/>
 &nbsp;&nbsp;char* job,
+								<br/>
 &nbsp;&nbsp;char* compq,
+								<br/>
 &nbsp;&nbsp;char* compz,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* ilo,
+								<br/>
 &nbsp;&nbsp;int* ihi,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* alphar,
+								<br/>
 &nbsp;&nbsp;float* alphai,
+								<br/>
 &nbsp;&nbsp;float* betav,
+								<br/>
 &nbsp;&nbsp;float* q,
+								<br/>
 &nbsp;&nbsp;int* ldq,
+								<br/>
 &nbsp;&nbsp;float* z,
+								<br/>
 &nbsp;&nbsp;int* ldz,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int job_len,
+								<br/>
 &nbsp;&nbsp;int compq_len,
+								<br/>
 &nbsp;&nbsp;int compz_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

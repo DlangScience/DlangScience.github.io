@@ -294,8 +294,7 @@ $('#symbolSearchPane').show();
  and inserts a scope statement to delete this frame at the end
  of the current scope.
 </p>
-<section>
-<p> Slower than calling free() manually when only a few pieces
+<section><p>Slower than calling free() manually when only a few pieces
  of memory will be allocated in the current scope, due to the
  extra bookkeeping involved.  Can be faster, however, when
  large amounts of allocations, such as arrays of arrays,
@@ -306,8 +305,11 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
-<code class="prettyprint lang-d">immutable(char[])</code> newFrame = "TempAlloc.frameInit(); scope(exit) TempAlloc.frameFree();";</pre>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+immutable(char[]) newFrame = "TempAlloc.frameInit(); scope(exit) TempAlloc.frameFree();";
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -75,7 +75,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.free</h1>
 			<section>
-				<p>    Checks that <a href="../../dstats/alloc/RegionAllocator.free.html#ptr"><code class="prettyprint lang-d">ptr</code></a> is a pointer to the block that would be freed by
+				<p>Checks that <a href="../../dstats/alloc/RegionAllocator.free.html#ptr"><code class="prettyprint lang-d">ptr</code></a> is a pointer to the block that would be freed by
     <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a> then calls <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>.  Throws a
     <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a> if the pointer does not point to the
     block that would be freed by <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>.
@@ -83,10 +83,15 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void free(
+								<br/>
 &nbsp;&nbsp;void* ptr
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

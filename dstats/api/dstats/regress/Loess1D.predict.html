@@ -75,24 +75,28 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Loess1D.predict</h1>
 			<section>
-				<p>    Predict the value of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> when <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> == <a href="../../dstats/regress/Loess1D.predict.html#point"><code class="prettyprint lang-d">point</code></a>, using <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> iterations
+				<p>Predict the value of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> when <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> == <a href="../../dstats/regress/Loess1D.predict.html#point"><code class="prettyprint lang-d">point</code></a>, using <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> iterations
     of the biweight procedure outlined in the reference to make the
     estimates more robust.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double predict(
+								<br/>
 &nbsp;&nbsp;double point,
+								<br/>
 &nbsp;&nbsp;int robustness = 0
-) const;</pre>
+								<br/>
+) const;
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
-
-<p>    This function is computationally intensive but may be called
+<p>This function is computationally intensive but may be called
     from multiple threads simultaneously.  When predicting a
     large number of points, a parallel foreach loop may be used.
 </p>
@@ -100,7 +104,6 @@ double predict(
 <p>    Before calling this function with <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> &gt; 0,
     <a href="../../dstats/regress/Loess1D.computeRobustWeights.html"><code class="prettyprint lang-d">computeRobustWeights</code></a>() must be called.  See this function for details.
 </p>
-
 </section>
 <section><h3>Returns</h3>
 <p>The predicted <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> value.

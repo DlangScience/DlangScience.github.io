@@ -295,63 +295,77 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function eigenvalues</h2>
-				<p> Calculate the <code class="prettyprint lang-d">eigenvalues</code> of a general dense square matrix.
+				<p>Calculate the <code class="prettyprint lang-d">eigenvalues</code> of a general dense square matrix.
 </p>
-<section>
-<p>    If some <code class="prettyprint lang-d">eigenvalues</code> cannot be calculated, the algorithm
+<section><p>If some <code class="prettyprint lang-d">eigenvalues</code> cannot be calculated, the algorithm
     throws an <a href="../../scid/linalg/EigenvalueException.html"><code class="prettyprint lang-d">EigenvalueException</code></a> containing an array of the ones
     that have been calculated.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototypes</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/linalg/EigenvalueType.html">EigenvalueType</a>!ElementT[] eigenvalues(ElementT, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+								<br/>
 &nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(ElementT,stor,tri) m
+								<br/>
 )
+								<br/>
 if (stor == Storage.General);
-
+								<br/>
+								<br/>
 ComplexT[] eigenvalues(ElementT, ComplexT, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+								<br/>
 &nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(ElementT,stor,tri) m,
+								<br/>
 &nbsp;&nbsp;ComplexT[] buffer
+								<br/>
 )
-if (stor == Storage.General);</pre>
+								<br/>
+if (stor == Storage.General);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="m">m</td><td> An n-by-n symmetric matrix.</td></tr>
 <tr><td id="buffer">buffer</td><td> (optional) A <a href="../../scid/linalg/eigenvalues.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the returned values, must
-            have length &gt;= n and type Complex!T[].
-</td></tr>
+            have length &gt;= n and type Complex!T[].</td></tr>
 </table>
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto <a href="../../scid/linalg/eigenvalues.html#m">m</a> = matrix!double(3, 3);
+<pre class="code"><code class="prettyprint lang-d">auto <a href="../../scid/linalg/eigenvalues.html#m">m</a> = matrix!double(3, 3);
 ...
 auto e = eigenvalues(<a href="../../scid/linalg/eigenvalues.html#m">m</a>);
-</pre>
+</code></pre>
 </section>
 
 			</section>
 			<section>
 				<h2>Function eigenvalues</h2>
-				<p> Calculate the <a href="../../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a triangular matrix. Note that this
+				<p>Calculate the <a href="../../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a triangular matrix. Note that this
     is a trivial operation - the function just returns the diagonal
     entries of the matrix.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T[] eigenvalues(T, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+								<br/>
 &nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor,tri) m,
+								<br/>
 &nbsp;&nbsp;T[] buffer = null
+								<br/>
 )
-if (stor == Storage.Triangular);</pre>
+								<br/>
+if (stor == Storage.Triangular);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -364,19 +378,25 @@ if (stor == Storage.Triangular);</pre>
 			</section>
 			<section>
 				<h2>Function eigenvalues</h2>
-				<p> Calculate the <a href="../../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
+				<p>Calculate the <a href="../../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T[] eigenvalues(T, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+								<br/>
 &nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor,tri) m,
+								<br/>
 &nbsp;&nbsp;T[] buffer = null
+								<br/>
 )
-if (isFloatingPoint!T &amp;&amp; stor == Storage.Symmetric);</pre>
+								<br/>
+if (isFloatingPoint!T &amp;&amp; stor == Storage.Symmetric);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

@@ -291,26 +291,39 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes row and column scalings to equilibrate <a href="../../../../scid/bindings/lapack/lapack/sgeequ_.html#a"><code class="prettyprint lang-d">a</code></a> general
 </p>
-<section>
-<p>rectangular matrix and reduce its condition number.
+<section><p>rectangular matrix and reduce its condition number.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgeequ_(
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* r,
+								<br/>
 &nbsp;&nbsp;float* c,
+								<br/>
 &nbsp;&nbsp;float* rowcnd,
+								<br/>
 &nbsp;&nbsp;float* colcnd,
+								<br/>
 &nbsp;&nbsp;float* amax,
+								<br/>
 &nbsp;&nbsp;int* info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

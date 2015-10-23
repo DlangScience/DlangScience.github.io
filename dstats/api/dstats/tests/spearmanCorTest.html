@@ -80,24 +80,30 @@ different from some 0.  Alternatives are
 <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a> (spearmanCor(<a href="../../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &lt; 0), <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (spearmanCor(<a href="../../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>)
 &gt; 0) and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> (spearmanCor(<a href="../../dstats/tests/spearmanCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/spearmanCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> spearmanCorTest(T, U)(
+								<br/>
 &nbsp;&nbsp;T range1,
+								<br/>
 &nbsp;&nbsp;U range2,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+								<br/>
 )
-if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; is(typeof(range1.front &lt; range1.front) == bool) &amp;&amp; is(typeof(range2.front &lt; range2.front) == bool));</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; is(typeof(range1.front &lt; range1.front) == bool) &amp;&amp; is(typeof(range2.front &lt; range2.front) == bool));
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the Spearman correlation coefficient and
 the P-value for the given alternative.
 </p>
-
 </section>
 <section><h3>Bugs</h3>
 <p>Exact P-value computation not yet implemented.  Uses asymptotic

@@ -86,30 +86,34 @@ it evaluates to false.  In the example above, we have 2 runs.  These are the
 block of 5 consecutive heads at the beginning and the 5 consecutive tails
 at the end.
 </p>
-<section>
-<p>Alternatives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning that less runs than expected have been
+<section><p>Alternatives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning that less runs than expected have been
 observed and data for which positive() is true tends to cluster,
 <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, which means that more runs than expected have been observed
 and data for which positive() is true tends to not cluster even moreso than
 expected by chance, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning that elements for which
 positive() is true cluster as much as expected by chance.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double runsTest(alias positive, T)(
+								<br/>
 &nbsp;&nbsp;T obs,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+								<br/>
 )
-if (isIterable!T);</pre>
+								<br/>
+if (isIterable!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Bugs</h3>
 <p>No exact calculation of the P-value.  Asymptotic approximation only.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Runs_test

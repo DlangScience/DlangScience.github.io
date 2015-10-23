@@ -79,8 +79,7 @@ $('#symbolSearchPane').show();
 array indices from zero to <a href="../../dstats/base/Comb.N.html"><code class="prettyprint lang-d">N</code></a>, depending on which c'tor is called.  Uses
 an input range interface.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Constructors</h3>
@@ -185,7 +184,7 @@ an input range interface.
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d">const(T)[]</code></td>
-								<td>    Gets the current combination.
+								<td>Gets the current combination.
 </td>
 							</tr>
 							<tr>
@@ -220,7 +219,7 @@ an input range interface.
 										<code>popFront</code>
 									</a>
 								</td>
-								<td>    Advances to the next combination.  The array returned by <a href="../../dstats/base/Comb.front.html"><code class="prettyprint lang-d">front</code></a> will be
+								<td>Advances to the next combination.  The array returned by <a href="../../dstats/base/Comb.front.html"><code class="prettyprint lang-d">front</code></a> will be
     overwritten with the new results.
 </td>
 							</tr>
@@ -272,7 +271,6 @@ an input range interface.
 <p>The buffer that is returned by <a href="../../dstats/base/Comb.front.html"><code class="prettyprint lang-d">front</code></a> is recycled across iterations.
 To duplicate it instead, use map!"a.dup" or map!"a.idup".
 </p>
-
 </section>
 <section><h3>Bugs</h3>
 <p>Only supports iterating over up to size_t.max combinations.
@@ -280,10 +278,9 @@ This was a conscious tradeoff to allow this range to have a
 <a href="../../dstats/base/Comb.length.html"><code class="prettyprint lang-d">length</code></a> of type size_t, since iterating over such huge combination spaces
 would be insanely slow anyhow.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto comb1 = map!"a.dup"(Comb!(uint)(5, 2));
+<pre class="code"><code class="prettyprint lang-d">auto comb1 = map!"a.dup"(Comb!(uint)(5, 2));
 uint[][] vals;
 foreach(c; comb1) {
     vals ~= c;
@@ -300,7 +297,7 @@ assert(sorted.canFind([2u,3]));
 assert(sorted.canFind([2u,4]));
 assert(sorted.canFind([3u,4]));
 assert(sorted.length == 10);
-</pre>
+</code></pre>
 </section>
 
 			</section>

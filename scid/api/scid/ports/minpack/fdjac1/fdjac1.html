@@ -289,33 +289,47 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function fdjac1</h1>
 			<section>
-				<p> This subroutine computes a forward-difference approximation
+				<p>This subroutine computes a forward-difference approximation
     to the <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> by <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> Jacobian matrix associated with a specified
     problem of <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> functions in <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> variables. If the Jacobian has
     a banded form, then function evaluations are saved by only
     approximating the nonzero terms.
 </p>
-<section>
-
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void fdjac1(Real, Func)(
+								<br/>
 &nbsp;&nbsp;Func fcn,
+								<br/>
 &nbsp;&nbsp;size_t n,
+								<br/>
 &nbsp;&nbsp;Real* x,
+								<br/>
 &nbsp;&nbsp;Real* fvec,
+								<br/>
 &nbsp;&nbsp;Real* fjac,
+								<br/>
 &nbsp;&nbsp;size_t ldfjac,
+								<br/>
 &nbsp;&nbsp;int iflag,
+								<br/>
 &nbsp;&nbsp;size_t ml,
+								<br/>
 &nbsp;&nbsp;Real epsfcn,
+								<br/>
 &nbsp;&nbsp;size_t mu,
+								<br/>
 &nbsp;&nbsp;Real* wa1,
+								<br/>
 &nbsp;&nbsp;Real* wa2
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the eigenvalues and Schur factorization of <a href="../../../../scid/bindings/lapack/lapack/sgees_.html#a"><code class="prettyprint lang-d">a</code></a> general
 </p>
-<section>
-<p>matrix, and orders the factorization so that selected eigenvalues
+<section><p>matrix, and orders the factorization so that selected eigenvalues
 </p>
 
 <p>are at the top left of the Schur form.
@@ -301,26 +300,47 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgees_(
+								<br/>
 &nbsp;&nbsp;char* jobvs,
+								<br/>
 &nbsp;&nbsp;char* sort,
+								<br/>
 &nbsp;&nbsp;extern(C) int function(float*, float*) select,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;int* sdim,
+								<br/>
 &nbsp;&nbsp;float* wr,
+								<br/>
 &nbsp;&nbsp;float* wi,
+								<br/>
 &nbsp;&nbsp;float* vs,
+								<br/>
 &nbsp;&nbsp;int* ldvs,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* bwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int jobvs_len,
+								<br/>
 &nbsp;&nbsp;int sort_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

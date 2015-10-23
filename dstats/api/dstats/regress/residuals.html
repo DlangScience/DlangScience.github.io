@@ -81,13 +81,21 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/regress/Residuals.html">Residuals</a>!(F,U,T) residuals(F, U, T...)(
+								<br/>
 &nbsp;&nbsp;F[] betas,
+								<br/>
 &nbsp;&nbsp;U Y,
+								<br/>
 &nbsp;&nbsp;T X
+								<br/>
 )
-if (isFloatingPoint!F &amp;&amp; isForwardRange!U &amp;&amp; allSatisfy!(isForwardRange, T));</pre>
+								<br/>
+if (isFloatingPoint!F &amp;&amp; isForwardRange!U &amp;&amp; allSatisfy!(isForwardRange, T));
+							</code>
+						</div>
 					</section>
 
 			</section>

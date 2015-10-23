@@ -79,32 +79,36 @@ $('#symbolSearchPane').show();
  represents a vector of observations. If only one range is given, this reduces
  to the plain old <code class="prettyprint lang-d">entropy</code>.  Input range must have a length.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double entropy(T)(
+								<br/>
 &nbsp;&nbsp;T data
+								<br/>
 )
-if (isIterable!T);</pre>
+								<br/>
+if (isIterable!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This function specializes if ElementType!(T) is a byte, ubyte, or
  char, resulting in a much faster <code class="prettyprint lang-d">entropy</code> calculation.  When possible, try
  to provide <a href="../../dstats/infotheory/entropy.html#data"><code class="prettyprint lang-d">data</code></a> in the form of a byte, ubyte, or char.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">int[] foo = [1, 1, 1, 2, 2, 2, 3, 3, 3];
+<pre class="code"><code class="prettyprint lang-d">int[] foo = [1, 1, 1, 2, 2, 2, 3, 3, 3];
 double entropyFoo = entropy(foo);  // Plain old entropy of foo.
 assert(approxEqual(entropyFoo, log2(3)));
 int[] bar = [1, 2, 3, 1, 2, 3, 1, 2, 3];
 double HFooBar = entropy(<a href="../../dstats/infotheory/joint.html">joint</a>(foo, bar));  // <a href="../../dstats/infotheory/Joint.html">Joint</a> entropy of foo and bar.
 assert(approxEqual(HFooBar, log2(9)));
-</pre>
+</code></pre>
 </section>
 
 			</section>

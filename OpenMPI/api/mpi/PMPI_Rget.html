@@ -46,18 +46,31 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) int PMPI_Rget(
+								<br/>
 &nbsp;&nbsp;void* origin_addr,
+								<br/>
 &nbsp;&nbsp;int origin_count,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* origin_datatype,
+								<br/>
 &nbsp;&nbsp;int target_rank,
+								<br/>
 &nbsp;&nbsp;long target_disp,
+								<br/>
 &nbsp;&nbsp;int target_count,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* target_datatype,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_win_t.html">ompi_win_t</a>* win,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_request_t.html">ompi_request_t</a>** request
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

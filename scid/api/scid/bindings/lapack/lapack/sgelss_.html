@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the minimum norm least squares solution to an over-
 </p>
-<section>
-<p>or under-determined system of linear equations A X=B,  using
+<section><p>or under-determined system of linear equations A X=B,  using
 </p>
 
 <p>the singular value decomposition of A.
@@ -301,22 +300,39 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgelss_(
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* nrhs,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* s,
+								<br/>
 &nbsp;&nbsp;float* rcond,
+								<br/>
 &nbsp;&nbsp;int* rank,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

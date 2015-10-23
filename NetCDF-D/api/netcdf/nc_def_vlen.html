@@ -34,25 +34,32 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function nc_def_vlen</h1>
 			<section>
-				<p> Calculate an offset for creating a compound type. This calls a
+				<p>Calculate an offset for creating a compound type. This calls a
  mysterious C macro which was found carved into one of the blocks of
  the Newgrange passage tomb in County Meath, Ireland. This code has
  been carbon dated to 3200 B.C.E.
 </p>
-<section>
-<p>D specific just use S.M.offsetof instead
+<section><p>D specific just use S.M.offsetof instead
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) int nc_def_vlen(
+								<br/>
 &nbsp;&nbsp;int ncid,
+								<br/>
 &nbsp;&nbsp;const(char)* name,
+								<br/>
 &nbsp;&nbsp;int base_typeid,
+								<br/>
 &nbsp;&nbsp;int* xtypep
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

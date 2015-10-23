@@ -80,23 +80,29 @@ $('#symbolSearchPane').show();
  the <a href="../../dstats/base/rank.html"><code class="prettyprint lang-d">rank</code></a> of each element will correspond to the ranks of the elements in the
  <a href="../../dstats/base/rankSort.html#input"><code class="prettyprint lang-d">input</code></a> array before sorting.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Ret[] rankSort(alias compFun, Ret, T)(
+								<br/>
 &nbsp;&nbsp;T input,
+								<br/>
 &nbsp;&nbsp;Ret[] buf = null
+								<br/>
 )
-if (isRandomAccessRange!T &amp;&amp; hasLength!T &amp;&amp; is(typeof(input.front &lt; input.front)));</pre>
+								<br/>
+if (isRandomAccessRange!T &amp;&amp; hasLength!T &amp;&amp; is(typeof(input.front &lt; input.front)));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">uint[] test = [3, 5, 3, 1, 2];
+<pre class="code"><code class="prettyprint lang-d">uint[] test = [3, 5, 3, 1, 2];
 assert(rankSort(test) == [3.5, 5, 3.5, 1.0, 2.0]);
 assert(test == [1U, 2, 3, 4, 5]);
-</pre>
+</code></pre>
 </section>
 
 			</section>

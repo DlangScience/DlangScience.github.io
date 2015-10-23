@@ -289,42 +289,53 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function r1updt</h1>
 			<section>
-				<p> Given an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a> lower trapezoidal matrix S, an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a>-vector <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#u"><code class="prettyprint lang-d">u</code></a>,
+				<p>Given an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a> lower trapezoidal matrix S, an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a>-vector <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#u"><code class="prettyprint lang-d">u</code></a>,
     and an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>-vector <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#v"><code class="prettyprint lang-d">v</code></a>, the problem is to determine an
     orthogonal matrix Q such that
 </p>
-<section><pre class="code prettyprint lang-d">        t
+<section><pre class="code"><code class="prettyprint lang-d">        t
 (S + <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#u">u</a> <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#v">v</a> ) Q
-</pre>
+</code></pre>
 <p>    is again lower trapezoidal.
 </p>
 
 <p>    This subroutine determines Q as the product of 2*(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a> - 1)
     transformations
 </p>
-<pre class="code prettyprint lang-d">gv(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n">n</a>-1)*...*gv(1)*gw(1)*...*gw(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n">n</a>-1)
-</pre>
+<pre class="code"><code class="prettyprint lang-d">gv(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n">n</a>-1)*...*gv(1)*gw(1)*...*gw(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n">n</a>-1)
+</code></pre>
 <p>    where gv(i), gw(i) are Givens rotations in the (i,<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>) plane
     which eliminate elements in the i-th and <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>-th planes,
     respectively. Q itself is not accumulated, rather the
     information to recover the gv, gw rotations is returned.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void r1updt(Real)(
+								<br/>
 &nbsp;&nbsp;size_t m,
+								<br/>
 &nbsp;&nbsp;size_t n,
+								<br/>
 &nbsp;&nbsp;Real* s,
+								<br/>
 &nbsp;&nbsp;size_t ls,
+								<br/>
 &nbsp;&nbsp;Real* u,
+								<br/>
 &nbsp;&nbsp;Real* v,
+								<br/>
 &nbsp;&nbsp;Real* w,
+								<br/>
 &nbsp;&nbsp;out bool sing
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

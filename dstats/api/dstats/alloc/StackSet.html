@@ -78,8 +78,7 @@ $('#symbolSearchPane').show();
 				<p>A hash set that allocates its memory on <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  Good for building a
  temporary set that will not escape the current scope.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Constructors</h3>
@@ -281,13 +280,13 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto <a href="../../dstats/alloc/StackSet.alloc.html">alloc</a> = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+<pre class="code"><code class="prettyprint lang-d">auto <a href="../../dstats/alloc/StackSet.alloc.html">alloc</a> = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
 auto ss = StackSet!(uint)(5, <a href="../../dstats/alloc/StackSet.alloc.html">alloc</a>);
 foreach(i; 0..5) {
     ss.insert(i);
 }
 assert(3 in ss);
-</pre>
+</code></pre>
 </section>
 
 			</section>

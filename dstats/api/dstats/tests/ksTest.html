@@ -84,17 +84,23 @@ $('#symbolSearchPane').show();
 non-parametric test for a difference between two empirical distributions or
 between an empirical distribution and a reference distribution.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> ksTest(T, U)(
+								<br/>
 &nbsp;&nbsp;T F,
+								<br/>
 &nbsp;&nbsp;U Fprime
+								<br/>
 )
-if (doubleInput!T &amp;&amp; doubleInput!U);</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; doubleInput!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the K-S D value and a P value for the null that
@@ -103,12 +109,10 @@ This implementation uses a signed D value to indicate the direction of the
 difference between distributions.  To get the D value used in standard
 notation, simply take the absolute value of this D value.
 </p>
-
 </section>
 <section><h3>Bugs</h3>
 <p>Exact calculation not implemented.  Uses asymptotic approximation.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test
@@ -121,17 +125,23 @@ notation, simply take the absolute value of this D value.
 				<p>One-sample Kolmogorov-Smirnov test against a reference distribution.
 Takes a callable object for the CDF of refernce distribution.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> ksTest(T, Func)(
+								<br/>
 &nbsp;&nbsp;T Femp,
+								<br/>
 &nbsp;&nbsp;Func F
+								<br/>
 )
-if (doubleInput!T &amp;&amp; is(ReturnType!Func : double));</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; is(ReturnType!Func : double));
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the Kolmogorov-Smirnov D value and a P value for the
@@ -140,19 +150,16 @@ implementation uses a signed D value to indicate the direction of the
 difference between distributions.  To get the D value used in standard
 notation, simply take the absolute value of this D value.
 </p>
-
 </section>
 <section><h3>Bugs</h3>
 <p>Exact calculation not implemented.  Uses asymptotic approximation.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto stdNormal = parametrize!(normalCDF)(0.0, 1.0);
+<pre class="code"><code class="prettyprint lang-d">auto stdNormal = parametrize!(normalCDF)(0.0, 1.0);
 auto empirical = [1, 2, 3, 4, 5];
 auto res = <a href="../../dstats/tests/ksTest.html">ksTest</a>(empirical, stdNormal);
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test

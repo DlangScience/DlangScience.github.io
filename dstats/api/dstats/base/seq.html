@@ -78,22 +78,28 @@ $('#symbolSearchPane').show();
 				<p>Generates a sequence from [<a href="../../dstats/base/seq.html#start"><code class="prettyprint lang-d">start</code></a>..end] by <a href="../../dstats/base/seq.html#increment"><code class="prettyprint lang-d">increment</code></a>.  Includes <a href="../../dstats/base/seq.html#start"><code class="prettyprint lang-d">start</code></a>,
  excludes <a href="../../dstats/base/seq.html#end"><code class="prettyprint lang-d">end</code></a>.  Does so eagerly as an array.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 CommonType!(T,U)[] seq(T, U, V)(
+								<br/>
 &nbsp;&nbsp;T start,
+								<br/>
 &nbsp;&nbsp;U end,
+								<br/>
 &nbsp;&nbsp;V increment = 1u
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto s = seq(0, 5);
+<pre class="code"><code class="prettyprint lang-d">auto s = seq(0, 5);
 assert(s == [0, 1, 2, 3, 4]);
-</pre>
+</code></pre>
 </section>
 
 			</section>

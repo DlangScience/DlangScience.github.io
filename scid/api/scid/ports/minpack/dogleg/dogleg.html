@@ -289,37 +289,48 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function dogleg</h1>
 			<section>
-				<p> Given an m by <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> matrix A, an <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> by <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> nonsingular diagonal matrix D,
+				<p>Given an m by <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> matrix A, an <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> by <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> nonsingular diagonal matrix D,
     an m-vector b, and a positive number <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#delta"><code class="prettyprint lang-d">delta</code></a>, the problem is to
     determine the convex combination <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#x"><code class="prettyprint lang-d">x</code></a> of the Gauss-Newton and scaled
     gradient directions that minimizes (Ax-b) in the least squares
     sense, subject to the restriction that the Euclidean norm of Dx
     be at most <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#delta"><code class="prettyprint lang-d">delta</code></a>.
 </p>
-<section>
-<p>    This function completes the solution of the problem if it is
+<section><p>This function completes the solution of the problem if it is
     provided with the necessary information from the QR factorization
     of A. That is, if A=QR, where Q has orthogonal columns and R is
     an upper triangular matrix, then <code class="prettyprint lang-d">dogleg</code> expects the full upper
     triangle of R and the first <a href="../../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> components of (Q^T)b.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void dogleg(Real)(
+								<br/>
 &nbsp;&nbsp;size_t n,
+								<br/>
 &nbsp;&nbsp;Real* r,
+								<br/>
 &nbsp;&nbsp;size_t lr,
+								<br/>
 &nbsp;&nbsp;Real* diag,
+								<br/>
 &nbsp;&nbsp;Real* qtb,
+								<br/>
 &nbsp;&nbsp;Real delta,
+								<br/>
 &nbsp;&nbsp;Real* x,
+								<br/>
 &nbsp;&nbsp;Real* wa1,
+								<br/>
 &nbsp;&nbsp;Real* wa2
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

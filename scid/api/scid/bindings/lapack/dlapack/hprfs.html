@@ -296,8 +296,7 @@ $('#symbolSearchPane').show();
 				<h2>Function hprfs</h2>
 				<p>Improves the computed solution to a complex
 </p>
-<section>
-<p>Hermitian indefinite system of linear equations
+<section><p>Hermitian indefinite system of linear equations
 </p>
 
 <p>AX=B, where A is held in packed storage, and provides forward
@@ -309,24 +308,43 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void hprfs(
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;int nrhs,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* ap,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* afp,
+								<br/>
 &nbsp;&nbsp;int* ipiv,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* b,
+								<br/>
 &nbsp;&nbsp;int ldb,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* x,
+								<br/>
 &nbsp;&nbsp;int ldx,
+								<br/>
 &nbsp;&nbsp;float* ferr,
+								<br/>
 &nbsp;&nbsp;float* berr,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;float* rwork,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -336,24 +354,43 @@ void hprfs(
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void hprfs(
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;int nrhs,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* ap,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* afp,
+								<br/>
 &nbsp;&nbsp;int* ipiv,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* b,
+								<br/>
 &nbsp;&nbsp;int ldb,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* x,
+								<br/>
 &nbsp;&nbsp;int ldx,
+								<br/>
 &nbsp;&nbsp;double* ferr,
+								<br/>
 &nbsp;&nbsp;double* berr,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+								<br/>
 &nbsp;&nbsp;double* rwork,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

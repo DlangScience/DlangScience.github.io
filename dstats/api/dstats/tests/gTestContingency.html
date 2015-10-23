@@ -79,19 +79,22 @@ $('#symbolSearchPane').show();
 the same as Pearson's chi-square test (<a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>), but may be more
 accurate in certain situations and less accurate in others.
 </p>
-<section>
-<p>Like Pearson's Chi-square, the G-test is based on asymptotic distributions,
+<section><p>Like Pearson's Chi-square, the G-test is based on asymptotic distributions,
 and is not exact. Usage is is identical to <a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/GTestRes.html">GTestRes</a> gTestContingency(T...)(
+								<br/>
 &nbsp;&nbsp;T inputData
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This test can be thought of as a test for nonzero mutual information
@@ -101,7 +104,6 @@ and strictly decreasing, respectively, in mutual information.  Therefore, this
 function returns a <a href="../../dstats/tests/GTestRes.html"><code class="prettyprint lang-d">GTestRes</code></a>, which is a subtype of <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> and also gives
 the mutual information for use in information theoretic settings.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/G_test, last retrieved 1/22/2011

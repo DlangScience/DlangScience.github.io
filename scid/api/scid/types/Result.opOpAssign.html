@@ -289,10 +289,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Result.opOpAssign</h1>
 			<section>
-				<p> Operators for <a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a>-<a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a> arithmetic.
+				<p>Operators for <a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a>-<a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a> arithmetic.
 </p>
-<section>
-<p>        Note that these operations also perform <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> calculations, and
+<section><p>Note that these operations also perform <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> calculations, and
         are thus a bit slower than working directly with the <a href="../../scid/types/Result.value.html"><code class="prettyprint lang-d">value</code></a> itself.
         It is assumed that the <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> is much smaller than the <a href="../../scid/types/Result.value.html"><code class="prettyprint lang-d">value</code></a>, so
         terms of order O(&delta;x &delta;y) or O(&delta;x&sup2;) are ignored.
@@ -306,16 +305,21 @@ $('#symbolSearchPane').show();
         castable to the type V, and thus supports the same operations as V
         in addition to these.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a> opOpAssign(string op)(
+								<br/>
 &nbsp;&nbsp;<a href="../../scid/types/Result.html">Result</a> rhs
+								<br/>
 ) pure nothrow
-if (op == "+" || op == "-");</pre>
+								<br/>
+if (op == "+" || op == "-");
+							</code>
+						</div>
 					</section>
 
 			</section>

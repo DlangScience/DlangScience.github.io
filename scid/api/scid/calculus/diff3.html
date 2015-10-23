@@ -289,35 +289,39 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function diff3</h1>
 			<section>
-				<p> Calculate the derivative of a function using a three-point
+				<p>Calculate the derivative of a function using a three-point
     formula, a.k.a. a central difference formula.
 </p>
-<section>
-<p>    The function is evaluated twice, at points just below and
+<section><p>The function is evaluated twice, at points just below and
     just above <a href="../../scid/calculus/diff3.html#x"><code class="prettyprint lang-d">x</code></a>.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 real diff3(Func)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;real x,
+								<br/>
 &nbsp;&nbsp;real scale = 1.00000
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td> The function to differentiate.</td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.</td></tr>
-<tr><td id="scale">scale</td><td> A characteristic <a href="../../scid/calculus/diff3.html#scale"><code class="prettyprint lang-d">scale</code></a> for $(D <a href="../../scid/calculus/diff3.html#f"><code class="prettyprint lang-d">f</code></a>).
-</td></tr>
+<tr><td id="scale">scale</td><td> A characteristic <a href="../../scid/calculus/diff3.html#scale"><code class="prettyprint lang-d">scale</code></a> for <a href="../../scid/calculus/diff3.html#f"><code class="prettyprint lang-d">f</code></a>.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>        An approximation to the derivative of <a href="../../scid/calculus/diff3.html#f"><code class="prettyprint lang-d">f</code></a> at the point
+<p>An approximation to the derivative of <a href="../../scid/calculus/diff3.html#f"><code class="prettyprint lang-d">f</code></a> at the point
         <a href="../../scid/calculus/diff3.html#x"><code class="prettyprint lang-d">x</code></a>.  The relative error in the result is at best
         on the order of (real.epsilon)^(2/3), roughly three
         orders of magnitude more accurate than <a href="../../scid/calculus/diff2.html"><code class="prettyprint lang-d">diff2</code></a>().

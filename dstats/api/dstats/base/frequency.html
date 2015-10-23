@@ -78,24 +78,29 @@ $('#symbolSearchPane').show();
 				<p>Returns an associative array of counts of every element in <a href="../../dstats/base/frequency.html#input"><code class="prettyprint lang-d">input</code></a>.
  Works w/ any iterable.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 uint[ForeachType!T] frequency(T)(
+								<br/>
 &nbsp;&nbsp;T input
+								<br/>
 )
-if (isIterable!T);</pre>
+								<br/>
+if (isIterable!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">int[] foo = [1,2,3,1,2,4];
+<pre class="code"><code class="prettyprint lang-d">int[] foo = [1,2,3,1,2,4];
 uint[int] frq = frequency(foo);
 assert(frq.length == 4);
 assert(frq[1] == 2);
 assert(frq[4] == 1);
-</pre>
+</code></pre>
 </section>
 
 			</section>

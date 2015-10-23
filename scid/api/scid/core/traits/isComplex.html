@@ -289,13 +289,16 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Enum member isComplex</h1>
 			<section>
-				<p> Detect whether T is a complex floating-point type.
+				<p>Detect whether T is a complex floating-point type.
 </p>
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
-enum isComplex(T) = is(T == cfloat) || is(T == cdouble) || is(T == creal) || is(T == Complex!float) || is(T == Complex!double) || is(T == Complex!real);</pre>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+enum isComplex(T) = is(T == cfloat) || is(T == cdouble) || is(T == creal) || is(T == Complex!float) || is(T == Complex!double) || is(T == Complex!real);
+							</code>
+						</div>
 					</section>
 
 			</section>

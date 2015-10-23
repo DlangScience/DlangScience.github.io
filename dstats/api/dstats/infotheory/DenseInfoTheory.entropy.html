@@ -75,18 +75,24 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function DenseInfoTheory.entropy</h1>
 			<section>
-				<p>    Computes the <code class="prettyprint lang-d">entropy</code> of a set of observations.  Note that, for this
+				<p>Computes the <code class="prettyprint lang-d">entropy</code> of a set of observations.  Note that, for this
     function, the <a href="../../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a>() function can be used to compute <a href="../../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a> entropies
     as long as each individual <a href="../../dstats/infotheory/DenseInfoTheory.entropy.html#range"><code class="prettyprint lang-d">range</code></a> contains only integers on [0, nBin).
 </p>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double entropy(R)(
+								<br/>
 &nbsp;&nbsp;R range
+								<br/>
 )
-if (isIterable!R);</pre>
+								<br/>
+if (isIterable!R);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Estimates reciprocal condition numbers for specified
 </p>
-<section>
-<p>eigenvalues and/or eigenvectors of <a href="../../../../scid/bindings/lapack/lapack/stgsna_.html#a"><code class="prettyprint lang-d">a</code></a> matrix pair (A, B) in
+<section><p>eigenvalues and/or eigenvectors of <a href="../../../../scid/bindings/lapack/lapack/stgsna_.html#a"><code class="prettyprint lang-d">a</code></a> matrix pair (A, B) in
 </p>
 
 <p>generalized real Schur canonical form, as returned by SGGES.
@@ -301,31 +300,57 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void stgsna_(
+								<br/>
 &nbsp;&nbsp;char* job,
+								<br/>
 &nbsp;&nbsp;char* howmny,
+								<br/>
 &nbsp;&nbsp;int* select,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* vl,
+								<br/>
 &nbsp;&nbsp;int* ldvl,
+								<br/>
 &nbsp;&nbsp;float* vr,
+								<br/>
 &nbsp;&nbsp;int* ldvr,
+								<br/>
 &nbsp;&nbsp;float* s,
+								<br/>
 &nbsp;&nbsp;float* dif,
+								<br/>
 &nbsp;&nbsp;int* mm,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int job_len,
+								<br/>
 &nbsp;&nbsp;int howmny_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -82,8 +82,11 @@ a T-test.  It must have a property .mean (mean), .stdev (stdandard deviation),
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
-enum isSummary(T) = is(typeof(T.init.mean)) && is(typeof(T.init.stdev)) && is(typeof(T.init.var)) && is(typeof(T.init.N));</pre>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+enum isSummary(T) = is(typeof(T.init.mean)) && is(typeof(T.init.stdev)) && is(typeof(T.init.var)) && is(typeof(T.init.N));
+							</code>
+						</div>
 					</section>
 
 			</section>

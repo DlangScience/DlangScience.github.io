@@ -291,25 +291,37 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Solves <a href="../../../../scid/bindings/lapack/lapack/sposv_.html#a"><code class="prettyprint lang-d">a</code></a> symmetric positive definite system of linear
 </p>
-<section>
-<p>equations AX=B.
+<section><p>equations AX=B.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sposv_(
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* nrhs,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

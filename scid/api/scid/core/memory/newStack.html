@@ -297,16 +297,21 @@ $('#symbolSearchPane').show();
  capacity is as large as a <a href="../../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> block, and will overwrite
  adjacent <a href="../../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a>-allocated data, instead of reallocating it.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T[] newStack(T)(
+								<br/>
 &nbsp;&nbsp;size_t size,
+								<br/>
 &nbsp;&nbsp;TempAlloc.<wbr/>State state = null
-) nothrow;</pre>
+								<br/>
+) nothrow;
+							</code>
+						</div>
 					</section>
 <section><h3>Bugs</h3>
 <p>Do not store the only reference to a GC-allocated reference object

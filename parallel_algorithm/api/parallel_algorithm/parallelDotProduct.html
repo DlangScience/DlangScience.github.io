@@ -38,14 +38,23 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 CommonType!(ElementType!Range1,ElementType!Range2) parallelDotProduct(Range1, Range2)(
+								<br/>
 &nbsp;&nbsp;Range1 a,
+								<br/>
 &nbsp;&nbsp;Range2 b,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null,
+								<br/>
 &nbsp;&nbsp;size_t workUnitSize = size_t.max
+								<br/>
 )
-if (isFloatingPoint!(ElementType!Range1) &amp;&amp; isFloatingPoint!(ElementType!Range2) &amp;&amp; isRandomAccessRange!Range1 &amp;&amp; isRandomAccessRange!Range2 &amp;&amp; hasLength!Range1 &amp;&amp; hasLength!Range2);</pre>
+								<br/>
+if (isFloatingPoint!(ElementType!Range1) &amp;&amp; isFloatingPoint!(ElementType!Range2) &amp;&amp; isRandomAccessRange!Range1 &amp;&amp; isRandomAccessRange!Range2 &amp;&amp; hasLength!Range1 &amp;&amp; hasLength!Range2);
+							</code>
+						</div>
 					</section>
 
 			</section>

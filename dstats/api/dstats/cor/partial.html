@@ -79,26 +79,32 @@ $('#symbolSearchPane').show();
  conditions.  conditions can be either a tuple of ranges, a range of ranges,
  or (for a single condition) a single range.
 </p>
-<section>
-<p> cor is the correlation metric to use.  It can be either <a href="../../dstats/cor/pearsonCor.html"><code class="prettyprint lang-d">pearsonCor</code></a>,
+<section><p>cor is the correlation metric to use.  It can be either <a href="../../dstats/cor/pearsonCor.html"><code class="prettyprint lang-d">pearsonCor</code></a>,
  <a href="../../dstats/cor/spearmanCor.html"><code class="prettyprint lang-d">spearmanCor</code></a>, <a href="../../dstats/cor/kendallCor.html"><code class="prettyprint lang-d">kendallCor</code></a>, or any custom correlation metric you can come up
  with.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double partial(alias cor, T, U, V...)(
+								<br/>
 &nbsp;&nbsp;T vec1,
+								<br/>
 &nbsp;&nbsp;U vec2,
+								<br/>
 &nbsp;&nbsp;V conditionsIn
+								<br/>
 )
-if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; allSatisfy!(isInputRange, V));</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; allSatisfy!(isInputRange, V));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">uint[] stock1Price = [8, 6, 7, 5, 3, 0, 9];
+<pre class="code"><code class="prettyprint lang-d">uint[] stock1Price = [8, 6, 7, 5, 3, 0, 9];
 uint[] stock2Price = [3, 1, 4, 1, 5, 9, 2];
 uint[] economicHealth = [2, 7, 1, 8, 2, 8, 1];
 uint[] consumerFear = [1, 2, 3, 4, 5, 6, 7];
@@ -108,7 +114,7 @@ uint[] consumerFear = [1, 2, 3, 4, 5, 6, 7];
 // fear.
 double partialCor =
   partial!<a href="../../dstats/cor/pearsonCor.html">pearsonCor</a>(stock1Price, stock2Price, economicHealth, consumerFear);
-</pre>
+</code></pre>
 </section>
 
 			</section>

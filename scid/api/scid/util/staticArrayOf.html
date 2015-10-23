@@ -289,21 +289,26 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function staticArrayOf</h1>
 			<section>
-				<p> Create a static array literal without any heap allocation.
+				<p>Create a static array literal without any heap allocation.
 </p>
-<section>
-<p>    <a href="../../scid/util/staticArray.html"><code class="prettyprint lang-d">staticArray</code></a>() automatically deduces its type from the arguments,
+<section><p><a href="../../scid/util/staticArray.html"><code class="prettyprint lang-d">staticArray</code></a>() automatically deduces its type from the arguments,
     while <code class="prettyprint lang-d">staticArrayOf</code>() lets you specify the type explicitly.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T[U.<wbr/>length] staticArrayOf(T, U...)(
+								<br/>
 &nbsp;&nbsp;U elements
+								<br/>
 ) pure nothrow @safe
-if (allConvertibleTo!(T, U));</pre>
+								<br/>
+if (allConvertibleTo!(T, U));
+							</code>
+						</div>
 					</section>
 
 			</section>

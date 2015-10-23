@@ -81,8 +81,7 @@ $('#symbolSearchPane').show();
  ops, if you only need <a href="../../dstats/summary/MeanSD.mean.html"><code class="prettyprint lang-d">mean</code></a>, try <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a>.  This struct uses O(1) space and
  does *NOT* store the individual elements.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Properties</h3>
@@ -107,7 +106,7 @@ $('#symbolSearchPane').show();
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td>        <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> squared error.  In other words, a biased estimate of <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>.
+								<td><a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> squared error.  In other words, a biased estimate of <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>.
 </td>
 							</tr>
 							<tr>
@@ -201,7 +200,6 @@ $('#symbolSearchPane').show();
 <section><h3>Note</h3>
 <p>This struct can implicitly convert to a <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> struct.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>Computing Higher-Order Moments Online.
@@ -210,10 +208,9 @@ $('#symbolSearchPane').show();
 <section><h3>http</h3>
 <p>//people.xiph.org/~tterribe/notes/homs.html
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">MeanSD summ;
+<pre class="code"><code class="prettyprint lang-d">MeanSD summ;
 summ.put(1);
 summ.put(2);
 summ.put(3);
@@ -222,7 +219,7 @@ summ.put(5);
 assert(summ.mean == 3);
 assert(summ.stdev == sqrt(2.5));
 assert(summ.var == 2.5);
-</pre>
+</code></pre>
 </section>
 
 			</section>

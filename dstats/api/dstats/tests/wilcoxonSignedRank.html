@@ -86,27 +86,34 @@ $('#symbolSearchPane').show();
  <a href="../../dstats/tests/wilcoxonSignedRank.html#before"><code class="prettyprint lang-d">before</code></a> are stochastically greater than corresponding elements of <a href="../../dstats/tests/wilcoxonSignedRank.html#after"><code class="prettyprint lang-d">after</code></a>.
  <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> means there is a significant difference in either direction.
 </p>
-<section>
-<p> <a href="../../dstats/tests/wilcoxonSignedRank.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> is the threshold value of before.length at which this function
+<section><p><a href="../../dstats/tests/wilcoxonSignedRank.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> is the threshold value of before.length at which this function
  switches from exact to approximate computation of the p-value.   Do not set
  <a href="../../dstats/tests/wilcoxonSignedRank.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> to more than 200, as the exact calculation is both very slow and
  not numerically stable past this point, and the asymptotic calculation is
  very good for N this large.  To disable exact calculation entirely, set
  <a href="../../dstats/tests/wilcoxonSignedRank.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> to 0.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> wilcoxonSignedRank(T, U)(
+								<br/>
 &nbsp;&nbsp;T before,
+								<br/>
 &nbsp;&nbsp;U after,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;uint exactThresh = 50
+								<br/>
 )
-if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; is(typeof(before.front - after.front) : double));</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; is(typeof(before.front - after.front) : double));
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
 <p>Exact p-value computation is never used when ties are present,
@@ -116,13 +123,11 @@ if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; is(typeof(before.front - a
 <p> The input ranges for this function must define a length and must be
  forward ranges.
 </p>
-
 </section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> of the W statistic and the p-value against the given
  alternative.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Wilcoxon_signed-rank_test
@@ -146,14 +151,23 @@ if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; is(typeof(before.front - a
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> wilcoxonSignedRank(T)(
+								<br/>
 &nbsp;&nbsp;T data,
+								<br/>
 &nbsp;&nbsp;double mu,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;uint exactThresh = 50
+								<br/>
 )
-if (doubleInput!T &amp;&amp; is(typeof(data.front - mu) : double));</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; is(typeof(data.front - mu) : double));
+							</code>
+						</div>
 					</section>
 
 			</section>

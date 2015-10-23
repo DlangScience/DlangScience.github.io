@@ -296,8 +296,7 @@ $('#symbolSearchPane').show();
 				<h2>Function hbgv</h2>
 				<p>Computes all the eigenvalues, and optionally, the eigenvectors
 </p>
-<section>
-<p>of a complex generalized Hermitian-definite banded eigenproblem, of
+<section><p>of a complex generalized Hermitian-definite banded eigenproblem, of
 </p>
 
 <p>the form A*x=(lambda)*B*x.  A and B are assumed to be Hermitian
@@ -309,24 +308,43 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void hbgv(
+								<br/>
 &nbsp;&nbsp;char jobz,
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;int ka,
+								<br/>
 &nbsp;&nbsp;int kb,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* ab,
+								<br/>
 &nbsp;&nbsp;int ldab,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* bb,
+								<br/>
 &nbsp;&nbsp;int ldbb,
+								<br/>
 &nbsp;&nbsp;float* w,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* z,
+								<br/>
 &nbsp;&nbsp;int ldz,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;float* rwork,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -336,24 +354,43 @@ void hbgv(
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void hbgv(
+								<br/>
 &nbsp;&nbsp;char jobz,
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;int ka,
+								<br/>
 &nbsp;&nbsp;int kb,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* ab,
+								<br/>
 &nbsp;&nbsp;int ldab,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* bb,
+								<br/>
 &nbsp;&nbsp;int ldbb,
+								<br/>
 &nbsp;&nbsp;double* w,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* z,
+								<br/>
 &nbsp;&nbsp;int ldz,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+								<br/>
 &nbsp;&nbsp;double* rwork,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

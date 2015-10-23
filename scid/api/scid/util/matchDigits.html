@@ -289,13 +289,13 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function matchDigits</h1>
 			<section>
-				<p> Check whether <a href="../../scid/util/matchDigits.html#lhs"><code class="prettyprint lang-d">lhs</code></a> and <a href="../../scid/util/matchDigits.html#rhs"><code class="prettyprint lang-d">rhs</code></a> are equal to within the specified number
+				<p>Check whether <a href="../../scid/util/matchDigits.html#lhs"><code class="prettyprint lang-d">lhs</code></a> and <a href="../../scid/util/matchDigits.html#rhs"><code class="prettyprint lang-d">rhs</code></a> are equal to within the specified number
     of significant digits.  Both <a href="../../scid/util/matchDigits.html#lhs"><code class="prettyprint lang-d">lhs</code></a> and <a href="../../scid/util/matchDigits.html#rhs"><code class="prettyprint lang-d">rhs</code></a> can be floating-point
     numbers, complex numbers, or input ranges of floating-point or
     complex numbers.
 </p>
-<section><pre class="code prettyprint lang-d">assert (matchDigits(0.1234567, 0.1234568));
-</pre>
+<section><pre class="code"><code class="prettyprint lang-d">assert (matchDigits(0.1234567, 0.1234568));
+</code></pre>
 
 <p>    Note that numbers which are very close to zero should normally be
     compared using an absolute difference criterion.  This can be
@@ -306,22 +306,38 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototypes</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 bool matchDigits(L, R)(
+								<br/>
 &nbsp;&nbsp;L lhs,
+								<br/>
 &nbsp;&nbsp;R rhs,
+								<br/>
 &nbsp;&nbsp;uint significantDigits = 6,
+								<br/>
 &nbsp;&nbsp;real maxAbsDiff = 1e-20
+								<br/>
 )
+								<br/>
 if ((isFloatingPoint!L || is(L T == Complex!T)) &amp;&amp; (isFloatingPoint!R || is(R U == Complex!U)));
-
+								<br/>
+								<br/>
 bool matchDigits(L, R)(
+								<br/>
 &nbsp;&nbsp;L lhs,
+								<br/>
 &nbsp;&nbsp;R rhs,
+								<br/>
 &nbsp;&nbsp;uint significantDigits = 6,
+								<br/>
 &nbsp;&nbsp;real maxAbsDiff = 1e-20
+								<br/>
 )
-if (isInputRange!L || isInputRange!R);</pre>
+								<br/>
+if (isInputRange!L || isInputRange!R);
+							</code>
+						</div>
 					</section>
 
 			</section>

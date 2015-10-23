@@ -296,8 +296,7 @@ $('#symbolSearchPane').show();
 				<h2>Function upmtr</h2>
 				<p>Multiplies a general matrix by the unitary
 </p>
-<section>
-<p>transformation matrix from a reduction to tridiagonal form
+<section><p>transformation matrix from a reduction to tridiagonal form
 </p>
 
 <p>determined by CHPTRD.
@@ -306,20 +305,35 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void upmtr(
+								<br/>
 &nbsp;&nbsp;char side,
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;char trans,
+								<br/>
 &nbsp;&nbsp;int m,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* ap,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* tau,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* c,
+								<br/>
 &nbsp;&nbsp;int ldc,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -329,20 +343,35 @@ void upmtr(
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void upmtr(
+								<br/>
 &nbsp;&nbsp;char side,
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;char trans,
+								<br/>
 &nbsp;&nbsp;int m,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* ap,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* tau,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* c,
+								<br/>
 &nbsp;&nbsp;int ldc,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

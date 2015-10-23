@@ -81,8 +81,7 @@ of <a href="../../dstats/regress/linearRegress.html#input"><code class="prettypr
 be calculated.  Otherwise, the default of 0.95 is used.  The rest of <a href="../../dstats/regress/linearRegress.html#input"><code class="prettyprint lang-d">input</code></a>
 should be the elements of X.
 </p>
-<section>
-<p>When using this function, which provides several useful statistics useful
+<section><p>When using this function, which provides several useful statistics useful
 for inference, each range must be traversed twice.  This means:
 </p>
 
@@ -92,19 +91,23 @@ for inference, each range must be traversed twice.  This means:
 <p>2.  If you have a large amount of data and you're mapping it to some
     expensive function, you may want to do this eagerly instead of lazily.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/regress/RegressRes.html">RegressRes</a> linearRegress(U, TC...)(
+								<br/>
 &nbsp;&nbsp;U Y,
+								<br/>
 &nbsp;&nbsp;TC input
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
-
 <p>The X ranges are traversed in lockstep, but the traversal is stopped
 at the end of the shortest one.  Therefore, using infinite ranges is safe.
 For example, using <a href="../../dstats/regress/repeat.html"><code class="prettyprint lang-d">repeat</code></a>(1) to get an intercept term works.
@@ -115,7 +118,6 @@ special case and confidence interval calculation is skipped.  This can speed
 things up significantly and therefore can be useful in monte carlo and possibly
 data mining contexts.
 </p>
-
 </section>
 <section><h3>Bugs</h3>
 <p>The statistical tests performed in this function assume that an
@@ -123,10 +125,9 @@ intercept term is included in your regression model.  If no intercept term
 is included, the P-values, confidence intervals and adjusted R^2 values
 calculated by this function will be wrong.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">int[] nBeers = [8,6,7,5,3,0,9];
+<pre class="code"><code class="prettyprint lang-d">int[] nBeers = [8,6,7,5,3,0,9];
 int[] nCoffees = [3,6,2,4,3,6,8];
 int[] musicVolume = [3,1,4,1,5,9,2];
 int[] programmingSkill = [2,7,1,8,2,8,1];
@@ -138,7 +139,7 @@ auto results = linearRegress(programmingSkill, <a href="../../dstats/regress/rep
 // Using user-specified confidence interval:
 auto results = linearRegress(programmingSkill, <a href="../../dstats/regress/repeat.html">repeat</a>(1), nBeers, nCoffees,
     musicVolume, map!"a * a"(musicVolume), 0.8675309);
-</pre>
+</code></pre>
 </section>
 
 			</section>

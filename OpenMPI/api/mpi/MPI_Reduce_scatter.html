@@ -46,15 +46,25 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) int MPI_Reduce_scatter(
+								<br/>
 &nbsp;&nbsp;void* sendbuf,
+								<br/>
 &nbsp;&nbsp;void* recvbuf,
+								<br/>
 &nbsp;&nbsp;int* recvcounts,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* datatype,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_op_t.html">ompi_op_t</a>* op,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* comm
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

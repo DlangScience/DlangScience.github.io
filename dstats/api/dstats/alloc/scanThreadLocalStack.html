@@ -80,8 +80,7 @@ $('#symbolSearchPane').show();
 The default is no.  In most cases, scanning a stack this long-lived is not
 recommended, as it will cause too many false pointers.  (See regionallocator, <a href="../../dstats/alloc/GCScan.html"><code class="prettyprint lang-d">GCScan</code></a> for details.)
 </p>
-<section>
-<p>The setter is only effective before the global function
+<section><p>The setter is only effective before the global function
 <a href="../../dstats/alloc/newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a> has been called for the first time in the current
 thread.  Attempts to set this property after the first call to this
 function from the current thread throw a <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a>.
@@ -90,12 +89,18 @@ function from the current thread throw a <a href="../../dstats/alloc/RegionAlloc
 
 					<section>
 						<h3>Prototypes</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 bool scanThreadLocalStack() nothrow @property @safe;
-
+								<br/>
+								<br/>
 bool scanThreadLocalStack(
+								<br/>
 &nbsp;&nbsp;bool shouldScan
-) @property @safe;</pre>
+								<br/>
+) @property @safe;
+							</code>
+						</div>
 					</section>
 
 			</section>

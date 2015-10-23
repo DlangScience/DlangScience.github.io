@@ -289,34 +289,40 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateDEO</h1>
 			<section>
-				<p> Calculate the integral of an oscillating function <a href="../../scid/calculus/integrateDEO.html#f"><code class="prettyprint lang-d">f</code></a>(x)
+				<p>Calculate the integral of an oscillating function <a href="../../scid/calculus/integrateDEO.html#f"><code class="prettyprint lang-d">f</code></a>(x)
     over the infinite interval (<a href="../../scid/calculus/integrateDEO.html#a"><code class="prettyprint lang-d">a</code></a>,) using double exponential
     integration.
 </p>
-<section>
-<p>    <a href="../../scid/calculus/integrateDEO.html#f"><code class="prettyprint lang-d">f</code></a>(x) is assumed to take the form
+<section><p><a href="../../scid/calculus/integrateDEO.html#f"><code class="prettyprint lang-d">f</code></a>(x) is assumed to take the form
 </p>
-<pre class="code prettyprint lang-d"><a href="../../scid/calculus/integrateDEO.html#f">f</a>(x) = g(x) * sin(<a href="../../scid/calculus/integrateDEO.html#omega">omega</a> * x + theta)
-</pre>
+<pre class="code"><code class="prettyprint lang-d"><a href="../../scid/calculus/integrateDEO.html#f">f</a>(x) = g(x) * sin(<a href="../../scid/calculus/integrateDEO.html#omega">omega</a> * x + theta)
+</code></pre>
 <p>    as x goes to infinity (theta is not specified).
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a>!Real integrateDEO(Func, Real)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real a,
+								<br/>
 &nbsp;&nbsp;Real omega,
+								<br/>
 &nbsp;&nbsp;Real epsRel = cast(Real)1e-06
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">real <a href="../../scid/calculus/integrateDEO.html#f">f</a>(real x) { return x <= 0 ? 0 : cos(x) * exp(-x/64) / sqrt(x); }
-auto i = integrateDEO(&<a href="../../scid/calculus/integrateDEO.html#f">f</a>, 0.0L, 1.0L, 1e-18L);
-</pre>
+<pre class="code"><code class="prettyprint lang-d">real <a href="../../scid/calculus/integrateDEO.html#f">f</a>(real x) { return x &lt;= 0 ? 0 : cos(x) * exp(-x/64) / sqrt(x); }
+auto i = integrateDEO(&amp;<a href="../../scid/calculus/integrateDEO.html#f">f</a>, 0.0L, 1.0L, 1e-18L);
+</code></pre>
 </section>
 
 			</section>

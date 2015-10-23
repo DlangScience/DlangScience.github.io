@@ -295,8 +295,7 @@ $('#symbolSearchPane').show();
  unless being done within the private API of a class, struct or nested
  function, where it can be guaranteed that LIFO will not be violated.
 </p>
-<section>
-<p> Under the hood, this works by allocating large blocks (currently 4 MB)
+<section><p>Under the hood, this works by allocating large blocks (currently 4 MB)
  from the GC, and sub-allocating these as a stack.  Very large allocations
  (currently &gt; 4MB) are simply performed on the heap.  There are two ways to
  <a href="../../../scid/core/memory/TempAlloc.free.html"><code class="prettyprint lang-d">free</code></a> memory:  Calling <a href="../../../scid/core/memory/TempAlloc.free.html"><code class="prettyprint lang-d">TempAlloc.free</code></a>() frees the last allocated block.

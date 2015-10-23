@@ -289,32 +289,37 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function MatrixView.opIndex</h1>
 			<section>
-				<p>    Returns (a reference to) the element at row <a href="../../scid/matrix/MatrixView.opIndex.html#i"><code class="prettyprint lang-d">i</code></a>, column <a href="../../scid/matrix/MatrixView.opIndex.html#j"><code class="prettyprint lang-d">j</code></a>.
+				<p>Returns (a reference to) the element at row <a href="../../scid/matrix/MatrixView.opIndex.html#i"><code class="prettyprint lang-d">i</code></a>, column <a href="../../scid/matrix/MatrixView.opIndex.html#j"><code class="prettyprint lang-d">j</code></a>.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 ref T opIndex(
+								<br/>
 &nbsp;&nbsp;size_t i,
+								<br/>
 &nbsp;&nbsp;size_t j
-) pure nothrow;</pre>
+								<br/>
+) pure nothrow;
+							</code>
+						</div>
 					</section>
 <section><h3>Warning</h3>
-<p>    For convenience, this method returns values by reference. This
+<p>For convenience, this method returns values by reference. This
     means that one can do stuff like this:
 </p>
-<pre class="code prettyprint lang-d">m[1,2] += 3.14;
-</pre>
+<pre class="code"><code class="prettyprint lang-d">m[1,2] += 3.14;
+</code></pre>
 <p>    Unfortunately, it also means that in a triangular <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> one
     can change the zero element (which is common for all zero elements).
 </p>
-<pre class="code prettyprint lang-d">assert ((m[1,0] == 0.0)  &&  m[2,0] == 0.0);
+<pre class="code"><code class="prettyprint lang-d">assert ((m[1,0] == 0.0)  &amp;&amp;  m[2,0] == 0.0);
 m[1,0] += 3.14;
 assert (m[2,0] == 3.14);    // passes
-</pre>
+</code></pre>
 <p>    You are hereby warned.
 </p>
 </section>

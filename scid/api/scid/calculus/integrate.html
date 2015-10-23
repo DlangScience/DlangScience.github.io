@@ -289,10 +289,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrate</h1>
 			<section>
-				<p> Integrate <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> function from <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> to <a href="../../scid/calculus/integrate.html#b"><code class="prettyprint lang-d">b</code></a>.
+				<p>Integrate <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> function from <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> to <a href="../../scid/calculus/integrate.html#b"><code class="prettyprint lang-d">b</code></a>.
 </p>
-<section>
-<p>    This module contains <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> lot of different integration routines, and
+<section><p>This module contains <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> lot of different integration routines, and
     integrate() aims to be <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> simple interface to some of
     these. Currently, it only calls the <a href="../../scid/calculus/integrateQAGS.html"><code class="prettyprint lang-d">integrateQAGS</code></a>() and
     <a href="../../scid/calculus/integrateQAGI.html"><code class="prettyprint lang-d">integrateQAGI</code></a>() routines, but this may change in the future.
@@ -300,42 +299,48 @@ $('#symbolSearchPane').show();
     is oscillatory, if it has discontinuities and singularities in
     the integration interval, and so on.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a>!Real integrate(Func, Real)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real a,
+								<br/>
 &nbsp;&nbsp;Real b,
+								<br/>
 &nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+								<br/>
 &nbsp;&nbsp;Real epsAbs = cast(Real)0
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td> The function to integrate.  This can be given as <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a>
                     function pointer, <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> delegate, or <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> struct/class
-                    which defines $(D opCall()).</td></tr>
+                    which defines opCall().</td></tr>
 <tr><td id="a">a</td><td> The lower limit of integration.</td></tr>
 <tr><td id="b">b</td><td> The upper limit of integration.</td></tr>
 <tr><td id="epsRel">epsRel</td><td> (optional) The requested relative accuracy.</td></tr>
-<tr><td id="epsAbs">epsAbs</td><td> (optional) The requested absolute accuracy.
-</td></tr>
+<tr><td id="epsAbs">epsAbs</td><td> (optional) The requested absolute accuracy.</td></tr>
 </table>
 </section>
 <section><h3>Note</h3>
-<p>    This function is different from the other integrateXXX() routines
+<p>This function is different from the other integrateXXX() routines
     in this module in that it allows <a href="../../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> and <a href="../../scid/calculus/integrate.html#b"><code class="prettyprint lang-d">b</code></a> to take on the special
     values Real.infinity and -Real.infinity, where Real is the
     floating-point type being used.
 </p>
-
 </section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">// Let's integrate the function
+<pre class="code"><code class="prettyprint lang-d">// Let's integrate the function
 //
 //              log(x)
 //     <a href="../../scid/calculus/integrate.html#f">f</a>(x) = ----------
@@ -345,11 +350,11 @@ $('#symbolSearchPane').show();
 // from x=0 to x=infinity.
 
 real <a href="../../scid/calculus/integrate.html#f">f</a>(real x)  { return log(x)/(1 + 100*x*x); }
-auto result = integrate(&<a href="../../scid/calculus/integrate.html#f">f</a>, 0.0L, real.infinity, 0.001L);
+auto result = integrate(&amp;<a href="../../scid/calculus/integrate.html#f">f</a>, 0.0L, real.infinity, 0.001L);
 
 real exact = -PI * log(10.0)/20.0;
-assert (abs(result.value - exact) < result.error);
-</pre>
+assert (abs(result.value - exact) &lt; result.error);
+</code></pre>
 </section>
 
 			</section>

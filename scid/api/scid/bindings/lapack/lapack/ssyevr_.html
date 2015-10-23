@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes selected eigenvalues, and optionally, eigenvectors of <a href="../../../../scid/bindings/lapack/lapack/ssyevr_.html#a"><code class="prettyprint lang-d">a</code></a> real
 </p>
-<section>
-<p>symmetric matrix.  Eigenvalues are computed by the dqds
+<section><p>symmetric matrix.  Eigenvalues are computed by the dqds
 </p>
 
 <p>algorithm, and eigenvectors are computed from various "good" LDL^T
@@ -304,33 +303,61 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void ssyevr_(
+								<br/>
 &nbsp;&nbsp;char* jobz,
+								<br/>
 &nbsp;&nbsp;char* range,
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* vl,
+								<br/>
 &nbsp;&nbsp;float* vu,
+								<br/>
 &nbsp;&nbsp;int* il,
+								<br/>
 &nbsp;&nbsp;int* iu,
+								<br/>
 &nbsp;&nbsp;float* abstol,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;float* w,
+								<br/>
 &nbsp;&nbsp;float* z,
+								<br/>
 &nbsp;&nbsp;int* ldz,
+								<br/>
 &nbsp;&nbsp;int* isuppz,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* liwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int jobz_len,
+								<br/>
 &nbsp;&nbsp;int range_len,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

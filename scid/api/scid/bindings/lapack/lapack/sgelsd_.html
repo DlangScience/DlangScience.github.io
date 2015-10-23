@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the least squares solution to an over-determined system
 </p>
-<section>
-<p>of linear equations, A X=B or A**H X=B,  or the minimum norm
+<section><p>of linear equations, A X=B or A**H X=B,  or the minimum norm
 </p>
 
 <p>solution of an under-determined system, using <a href="../../../../scid/bindings/lapack/lapack/sgelsd_.html#a"><code class="prettyprint lang-d">a</code></a> divide and conquer
@@ -307,23 +306,41 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgelsd_(
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* nrhs,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* s,
+								<br/>
 &nbsp;&nbsp;float* rcond,
+								<br/>
 &nbsp;&nbsp;int* rank,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

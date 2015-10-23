@@ -289,27 +289,32 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function interval</h1>
 			<section>
-				<p> An <code class="prettyprint lang-d">interval</code> [<a href="../../scid/types/interval.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/types/interval.html#b"><code class="prettyprint lang-d">b</code></a>] along the real line, where either endpoint may
+				<p>An <code class="prettyprint lang-d">interval</code> [<a href="../../scid/types/interval.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/types/interval.html#b"><code class="prettyprint lang-d">b</code></a>] along the real line, where either endpoint may
     be infinite.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Interval.html">Interval</a>!(CommonType!(T,U)) interval(T, U)(
+								<br/>
 &nbsp;&nbsp;T a,
+								<br/>
 &nbsp;&nbsp;U b
-) pure @safe;</pre>
+								<br/>
+) pure @safe;
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto i1 = interval(1, 5);
+<pre class="code"><code class="prettyprint lang-d">auto i1 = interval(1, 5);
 assert (i1.length == 4);
 
 auto i2 = interval(0, real.infinity);
 assert (i2.isInfinite);
-</pre>
+</code></pre>
 </section>
 
 			</section>

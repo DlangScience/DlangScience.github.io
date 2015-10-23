@@ -75,10 +75,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function negBinomCDF</h1>
 			<section>
-				<p> Negative binomial distribution.
+				<p>Negative binomial distribution.
 </p>
-<section>
-<p> Returns the sum of the terms 0 through <a href="../../dstats/distrib/negBinomCDF.html#k"><code class="prettyprint lang-d">k</code></a> of the negative
+<section><p>Returns the sum of the terms 0 through <a href="../../dstats/distrib/negBinomCDF.html#k"><code class="prettyprint lang-d">k</code></a> of the negative
  binomial distribution:
 </p>
 
@@ -97,21 +96,28 @@ $('#symbolSearchPane').show();
 <p> The Geometric Distribution is a special case of the negative binomial
  distribution.
 </p>
-<pre class="code prettyprint lang-d">geometricDistribution(<a href="../../dstats/distrib/negBinomCDF.html#k">k</a>, <a href="../../dstats/distrib/negBinomCDF.html#p">p</a>) = negativeBinomialDistribution(<a href="../../dstats/distrib/negBinomCDF.html#k">k</a>, 1, <a href="../../dstats/distrib/negBinomCDF.html#p">p</a>);
-</pre>
+<pre class="code"><code class="prettyprint lang-d">geometricDistribution(<a href="../../dstats/distrib/negBinomCDF.html#k">k</a>, <a href="../../dstats/distrib/negBinomCDF.html#p">p</a>) = negativeBinomialDistribution(<a href="../../dstats/distrib/negBinomCDF.html#k">k</a>, 1, <a href="../../dstats/distrib/negBinomCDF.html#p">p</a>);
+</code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double negBinomCDF(
+								<br/>
 &nbsp;&nbsp;ulong k,
+								<br/>
 &nbsp;&nbsp;ulong n,
+								<br/>
 &nbsp;&nbsp;double p
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>References</h3>
-<p> <a href="http://mathworld.wolfram.com/NegativeBinomialDistribution.html">http://mathworld.wolfram.com/NegativeBinomialDistribution.html</a>
+<p><a href="http://mathworld.wolfram.com/NegativeBinomialDistribution.html">http://mathworld.wolfram.com/NegativeBinomialDistribution.html</a>
 </p>
 </section>
 

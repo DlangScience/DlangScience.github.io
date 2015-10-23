@@ -289,7 +289,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function qrfac</h1>
 			<section>
-				<p> This subroutine uses Householder transformations with column
+				<p>This subroutine uses Householder transformations with column
     pivoting (optional) to compute <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> QR factorization of the
     <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a> matrix A. That is, <code class="prettyprint lang-d">qrfac</code> determines an orthogonal
     matrix Q, <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> permutation matrix P, and an upper trapezoidal
@@ -297,31 +297,44 @@ $('#symbolSearchPane').show();
     such that AP = QR. The Householder transformation for
     column k, k = 1,2,...,min(<a href="../../../../scid/ports/minpack/qrfac/qrfac.html#m"><code class="prettyprint lang-d">m</code></a>,<a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a>), is of the form
 </p>
-<section><pre class="code prettyprint lang-d">                t
+<section><pre class="code"><code class="prettyprint lang-d">                t
 i - (1/u(k)) u u
-</pre>
+</code></pre>
 <p>    where u has zeros in the first k-1 positions. The form of
     this transformation and the method of pivoting first
     appeared in the corresponding LINPACK subroutine.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void qrfac(Real)(
+								<br/>
 &nbsp;&nbsp;size_t m,
+								<br/>
 &nbsp;&nbsp;size_t n,
+								<br/>
 &nbsp;&nbsp;Real* a,
+								<br/>
 &nbsp;&nbsp;size_t lda,
+								<br/>
 &nbsp;&nbsp;bool pivot,
+								<br/>
 &nbsp;&nbsp;size_t* ipvt,
+								<br/>
 &nbsp;&nbsp;size_t lipvt,
+								<br/>
 &nbsp;&nbsp;Real* rdiag,
+								<br/>
 &nbsp;&nbsp;Real* acnorm,
+								<br/>
 &nbsp;&nbsp;Real* wa
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

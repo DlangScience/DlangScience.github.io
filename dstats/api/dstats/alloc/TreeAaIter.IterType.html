@@ -79,13 +79,21 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 struct <a href="../../dstats/alloc/TreeAaIter.html">TreeAaIter</a>
+								<br/>
 {
-	// ...
-	alias IterType = <code class="prettyprint lang-d">typeof(mFun(tree.<wbr/>head.<wbr/>payload))</code>;
-	// ...
-}</pre>
+								<br/>
+&nbsp;&nbsp;// ...
+								<br/>
+&nbsp;&nbsp;alias IterType = typeof(mFun(tree.<wbr/>head.<wbr/>payload));
+								<br/>
+&nbsp;&nbsp;// ...
+								<br/>
+}
+							</code>
+						</div>
 					</section>
 
 			</section>

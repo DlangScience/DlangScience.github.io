@@ -82,8 +82,7 @@ The beta values are returned such that the smallest index corresponds to
 the leftmost element of X.  X can be either a tuple or a range of input
 ranges.  <a href="../../dstats/regress/linearRegressBeta.html#Y"><code class="prettyprint lang-d">Y</code></a> must be an input range.
 </p>
-<section>
-<p>If, after all X variables are passed in, a numeric type is passed as the last
+<section><p>If, after all X variables are passed in, a numeric type is passed as the last
 parameter, this is treated as a ridge parameter and ridge regression is
 performed.  Ridge regression is a form of regression that penalizes the L2 norm
 of the beta vector and therefore results in more parsimonious models.
@@ -95,27 +94,31 @@ support ridges.
 <p>If no ridge parameter is passed, or equivalently if the ridge parameter is
 zero, then ordinary least squares regression is performed.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double[] linearRegressBeta(U, T...)(
+								<br/>
 &nbsp;&nbsp;U Y,
+								<br/>
 &nbsp;&nbsp;T XIn
+								<br/>
 )
-if (doubleInput!U);</pre>
+								<br/>
+if (doubleInput!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
 <p>The X ranges are traversed in lockstep, but the traversal is stopped
 at the end of the shortest one.  Therefore, using infinite ranges is safe.
 For example, using <a href="../../dstats/regress/repeat.html"><code class="prettyprint lang-d">repeat</code></a>(1) to get an intercept term works.
 </p>
-
 </section>
 <section><h3>References</h3>
-
 </section>
 <section><h3>http</h3>
 <p>//www.mathworks.com/help/toolbox/stats/ridge.html
@@ -125,10 +128,9 @@ For example, using <a href="../../dstats/regress/repeat.html"><code class="prett
 Fourth Edition. Springer, New York. ISBN 0-387-95457-0
 (This is the citation for the MASS R package.)
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">int[] nBeers = [8,6,7,5,3,0,9];
+<pre class="code"><code class="prettyprint lang-d">int[] nBeers = [8,6,7,5,3,0,9];
 int[] nCoffees = [3,6,2,4,3,6,8];
 int[] musicVolume = [3,1,4,1,5,9,2];
 int[] programmingSkill = [2,7,1,8,2,8,1];
@@ -138,7 +140,7 @@ double[] betas = linearRegressBeta(programmingSkill, <a href="../../dstats/regre
 // Now throw in a ridge parameter of 2.5.
 double[] ridgeBetas = linearRegressBeta(programmingSkill, <a href="../../dstats/regress/repeat.html">repeat</a>(1), nBeers,
     nCoffees, musicVolume, map!"a * a"(musicVolume), 2.5);
-</pre>
+</code></pre>
 </section>
 
 			</section>

@@ -46,18 +46,31 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) int PMPI_Comm_spawn_multiple(
+								<br/>
 &nbsp;&nbsp;int count,
+								<br/>
 &nbsp;&nbsp;char** array_of_commands,
+								<br/>
 &nbsp;&nbsp;char*** array_of_argv,
+								<br/>
 &nbsp;&nbsp;int* array_of_maxprocs,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_info_t.html">ompi_info_t</a>** array_of_info,
+								<br/>
 &nbsp;&nbsp;int root,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* comm,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>** intercomm,
+								<br/>
 &nbsp;&nbsp;int* array_of_errcodes
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

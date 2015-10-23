@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Reduces a real symmetric-definite banded generalized eigenproblem
 </p>
-<section>
-<p>A <a href="../../../../scid/bindings/lapack/lapack/ssbgst_.html#x"><code class="prettyprint lang-d">x</code></a> = lambda B <a href="../../../../scid/bindings/lapack/lapack/ssbgst_.html#x"><code class="prettyprint lang-d">x</code></a> to standard form, where B has been factorized by
+<section><p>A <a href="../../../../scid/bindings/lapack/lapack/ssbgst_.html#x"><code class="prettyprint lang-d">x</code></a> = lambda B <a href="../../../../scid/bindings/lapack/lapack/ssbgst_.html#x"><code class="prettyprint lang-d">x</code></a> to standard form, where B has been factorized by
 </p>
 
 <p>SPBSTF (Crawford's algorithm).
@@ -301,24 +300,43 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void ssbgst_(
+								<br/>
 &nbsp;&nbsp;char* vect,
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* ka,
+								<br/>
 &nbsp;&nbsp;int* kb,
+								<br/>
 &nbsp;&nbsp;float* ab,
+								<br/>
 &nbsp;&nbsp;int* ldab,
+								<br/>
 &nbsp;&nbsp;float* bb,
+								<br/>
 &nbsp;&nbsp;int* ldbb,
+								<br/>
 &nbsp;&nbsp;float* x,
+								<br/>
 &nbsp;&nbsp;int* ldx,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int vect_len,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

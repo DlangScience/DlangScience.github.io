@@ -296,8 +296,7 @@ $('#symbolSearchPane').show();
 				<h2>Function syevd</h2>
 				<p>Computes all eigenvalues, and optionally, eigenvectors of <a href="../../../../scid/bindings/lapack/dlapack/syevd.html#a"><code class="prettyprint lang-d">a</code></a> real
 </p>
-<section>
-<p>symmetric matrix.  If eigenvectors are desired, it uses <a href="../../../../scid/bindings/lapack/dlapack/syevd.html#a"><code class="prettyprint lang-d">a</code></a> divide
+<section><p>symmetric matrix.  If eigenvectors are desired, it uses <a href="../../../../scid/bindings/lapack/dlapack/syevd.html#a"><code class="prettyprint lang-d">a</code></a> divide
 </p>
 
 <p>and conquer algorithm.
@@ -306,20 +305,35 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void syevd(
+								<br/>
 &nbsp;&nbsp;char jobz,
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int lda,
+								<br/>
 &nbsp;&nbsp;float* w,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int lwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int liwork,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -329,20 +343,35 @@ void syevd(
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void syevd(
+								<br/>
 &nbsp;&nbsp;char jobz,
+								<br/>
 &nbsp;&nbsp;char uplo,
+								<br/>
 &nbsp;&nbsp;int n,
+								<br/>
 &nbsp;&nbsp;double* a,
+								<br/>
 &nbsp;&nbsp;int lda,
+								<br/>
 &nbsp;&nbsp;double* w,
+								<br/>
 &nbsp;&nbsp;double* work,
+								<br/>
 &nbsp;&nbsp;int lwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int liwork,
+								<br/>
 &nbsp;&nbsp;ref int info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

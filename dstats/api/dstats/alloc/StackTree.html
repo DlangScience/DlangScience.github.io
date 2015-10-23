@@ -79,8 +79,7 @@ $('#symbolSearchPane').show();
  they are stored on an internal free list and recycled when new elements
  are added to the tree.
 </p>
-<section>
-<p> Template paramters:
+<section><p>Template paramters:
 </p>
 
 <p> T = The type to be stored in the tree.
@@ -92,7 +91,6 @@ $('#symbolSearchPane').show();
 
 <p> compFun = The function for comparing keys.
 </p>
-
 </section>
 
 					<section>
@@ -345,7 +343,7 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">struct StringNum {
+<pre class="code"><code class="prettyprint lang-d">struct StringNum {
     string someString;
     uint num;
 }
@@ -353,7 +351,7 @@ $('#symbolSearchPane').show();
 // Create a StackTree of StringNums, sorted in descending order, using
 // someString for comparison.
 auto <a href="../../dstats/alloc/StackTree.alloc.html">alloc</a> = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
-auto myTree = StackTree!(StringNum, "a.someString", "a > b")(<a href="../../dstats/alloc/StackTree.alloc.html">alloc</a>);
+auto myTree = StackTree!(StringNum, "a.someString", "a &gt; b")(<a href="../../dstats/alloc/StackTree.alloc.html">alloc</a>);
 
 // Add some elements.
 myTree.insert( StringNum("foo", 1));
@@ -362,26 +360,24 @@ myTree.insert( StringNum("foo", 3));
 
 assert(myTree.find("foo") == StringNum("foo", 3));
 assert(myTree.find("bar") == StringNum("bar", 2));
-</pre>
-
+</code></pre>
 </section>
 <section><h3>Note</h3>
 <p>This tree supports a compile-time interface similar to <a href="../../dstats/alloc/StackSet.html"><code class="prettyprint lang-d">StackSet</code></a>
  and can be used as a finite set implementation.
 </p>
-
 </section>
 <section><h3>Warning</h3>
-<p> This implementation places removed nodes on an internal free list and
+<p>This implementation places removed nodes on an internal free list and
  recycles them, since there is no way to delete <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>-allocated data
  in a non-LIFO order.  Therefore, you may not retain the address of a
  variable stored in a <code class="prettyprint lang-d">StackTree</code> after deleting it from the <code class="prettyprint lang-d">StackTree</code>.
  For example, DO NOT do this:
 </p>
-<pre class="code prettyprint lang-d">SomeType* myPtr = "foo" in myTree;
+<pre class="code"><code class="prettyprint lang-d">SomeType* myPtr = "foo" in myTree;
 myTree.remove("foo");
 *myPtr = someValue;
-</pre>
+</code></pre>
 </section>
 
 			</section>

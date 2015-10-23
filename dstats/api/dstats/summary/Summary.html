@@ -83,8 +83,7 @@ $('#symbolSearchPane').show();
  floating point ops.  This struct uses O(1) space and does *NOT* store the
  individual elements.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Properties</h3>
@@ -133,7 +132,7 @@ $('#symbolSearchPane').show();
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td>        <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> squared error.  In other words, a biased estimate of <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>.
+								<td><a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> squared error.  In other words, a biased estimate of <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>.
 </td>
 							</tr>
 							<tr>
@@ -226,7 +225,6 @@ $('#symbolSearchPane').show();
 <section><h3>Note</h3>
 <p>This struct can implicitly convert to a <a href="../../dstats/summary/MeanSD.html"><code class="prettyprint lang-d">MeanSD</code></a>.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>Computing Higher-Order Moments Online.
@@ -235,10 +233,9 @@ $('#symbolSearchPane').show();
 <section><h3>http</h3>
 <p>//people.xiph.org/~tterribe/notes/homs.html
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">Summary summ;
+<pre class="code"><code class="prettyprint lang-d">Summary summ;
 summ.put(1);
 summ.put(2);
 summ.put(3);
@@ -252,7 +249,7 @@ assert(approxEqual(summ.kurtosis, -1.9120));
 assert(summ.min == 1);
 assert(summ.max == 5);
 assert(summ.sum == 15);
-</pre>
+</code></pre>
 </section>
 
 			</section>

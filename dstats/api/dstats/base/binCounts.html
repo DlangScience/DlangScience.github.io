@@ -79,20 +79,27 @@ $('#symbolSearchPane').show();
  0 to <a href="../../dstats/base/binCounts.html#nbin"><code class="prettyprint lang-d">nbin</code></a> - 1, with 0 being the smallest <a href="../../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a>, etc.
  The values returned are the counts for each <a href="../../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a>.
 </p>
-<section>
-<p> Works with any forward range with elements implicitly convertible to double.
+<section><p>Works with any forward range with elements implicitly convertible to double.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Ret[] binCounts(Ret, T)(
+								<br/>
 &nbsp;&nbsp;T data,
+								<br/>
 &nbsp;&nbsp;uint nbin,
+								<br/>
 &nbsp;&nbsp;Ret[] buf = null
+								<br/>
 )
-if (isForwardRange!T &amp;&amp; doubleInput!T);</pre>
+								<br/>
+if (isForwardRange!T &amp;&amp; doubleInput!T);
+							</code>
+						</div>
 					</section>
 
 			</section>

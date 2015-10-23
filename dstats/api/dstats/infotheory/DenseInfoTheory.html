@@ -80,8 +80,7 @@ but common case where all observations are integers on the range [0, nBin).
 This is the case, for example, when the observations have been previously
 binned using, for example, <a href="../../dstats/base/frqBin.html"><code class="prettyprint lang-d">dstats.base.frqBin</code></a>().
 </p>
-<section>
-<p>Note that, due to the optimizations used, <a href="../../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a>() cannot be used with
+<section><p>Note that, due to the optimizations used, <a href="../../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a>() cannot be used with
 the member functions of this struct, except <a href="../../dstats/infotheory/DenseInfoTheory.entropy.html"><code class="prettyprint lang-d">entropy</code></a>().
 </p>
 
@@ -105,7 +104,7 @@ benchmarks.
 										<code>this</code>
 									</a>
 								</td>
-								<td>    Constructs a <a href="../../dstats/infotheory/DenseInfoTheory.html"><code class="prettyprint lang-d">DenseInfoTheory</code></a> object for <a href="../../dstats/infotheory/DenseInfoTheory.this.html#nBin"><code class="prettyprint lang-d">nBin</code></a> bins.  The values taken by
+								<td>Constructs a <a href="../../dstats/infotheory/DenseInfoTheory.html"><code class="prettyprint lang-d">DenseInfoTheory</code></a> object for <a href="../../dstats/infotheory/DenseInfoTheory.this.html#nBin"><code class="prettyprint lang-d">nBin</code></a> bins.  The values taken by
     each observation must then be on the interval [0, <a href="../../dstats/infotheory/DenseInfoTheory.this.html#nBin"><code class="prettyprint lang-d">nBin</code></a>).
 </td>
 							</tr>
@@ -143,7 +142,7 @@ benchmarks.
 										<code>entropy</code>
 									</a>
 								</td>
-								<td>    Computes the <code class="prettyprint lang-d">entropy</code> of a set of observations.  Note that, for this
+								<td>Computes the <code class="prettyprint lang-d">entropy</code> of a set of observations.  Note that, for this
     function, the <a href="../../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a>() function can be used to compute <a href="../../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a> entropies
     as long as each individual <a href="../../dstats/infotheory/DenseInfoTheory.entropy.html#range"><code class="prettyprint lang-d">range</code></a> contains only integers on [0, nBin).
 </td>
@@ -163,7 +162,7 @@ benchmarks.
 										<code>mutualInfoPval</code>
 									</a>
 								</td>
-								<td>    Calculates the P-value for I(X; Y) assuming x and y both have supports
+								<td>Calculates the P-value for I(X; Y) assuming x and y both have supports
     of [0, nBin).  The P-value is calculated using a Chi-Square approximation.
     It is asymptotically correct, but is approximate for finite sample size.
 </td>

@@ -75,11 +75,10 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.array</h1>
 			<section>
-				<p>    Copies <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> to an <code class="prettyprint lang-d">array</code>.  The <code class="prettyprint lang-d">array</code> will be located on the
+				<p>Copies <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> to an <code class="prettyprint lang-d">array</code>.  The <code class="prettyprint lang-d">array</code> will be located on the
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> stack if any of the following conditions apply:
 </p>
-<section>
-<p>    1.  std.traits.hasIndirections!(ElementType!R) is false.
+<section><p>1.  std.traits.hasIndirections!(ElementType!R) is false.
 </p>
 
 <p>    2.  R is a builtin <code class="prettyprint lang-d">array</code>.  In this case <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> maintains pointers
@@ -98,16 +97,21 @@ $('#symbolSearchPane').show();
     instance going out of scope will <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">free</code></a> the <code class="prettyprint lang-d">array</code> as if it had been
     allocated on the <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> stack.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Unqual!(ElementType!R)[] array(R)(
+								<br/>
 &nbsp;&nbsp;R range
+								<br/>
 )
-if (isInputRange!R);</pre>
+								<br/>
+if (isInputRange!R);
+							</code>
+						</div>
 					</section>
 <section><h3>Rationale</h3>
 <p>The most common reason to call <code class="prettyprint lang-d">array</code> on a builtin <code class="prettyprint lang-d">array</code> is
@@ -118,13 +122,12 @@ if (isInputRange!R);</pre>
                 to be scanned, the client can call GC.addRange before
                 modifying the original <code class="prettyprint lang-d">array</code>.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+<pre class="code"><code class="prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
 auto arr = alloc.array(iota(5));
 assert(arr == [0, 1, 2, 3, 4]);
-</pre>
+</code></pre>
 </section>
 
 			</section>

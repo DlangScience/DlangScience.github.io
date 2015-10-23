@@ -289,23 +289,31 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function qform</h1>
 			<section>
-				<p> This subroutine proceeds from the computed QR factorization of
+				<p>This subroutine proceeds from the computed QR factorization of
     an <a href="../../../../scid/ports/minpack/qform/qform.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/qform/qform.html#n"><code class="prettyprint lang-d">n</code></a> matrix a to accumulate the <a href="../../../../scid/ports/minpack/qform/qform.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/qform/qform.html#m"><code class="prettyprint lang-d">m</code></a> orthogonal matrix
     Q from its factored form.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void qform(Real)(
+								<br/>
 &nbsp;&nbsp;size_t m,
+								<br/>
 &nbsp;&nbsp;size_t n,
+								<br/>
 &nbsp;&nbsp;Real* q,
+								<br/>
 &nbsp;&nbsp;size_t ldq,
+								<br/>
 &nbsp;&nbsp;Real* wa
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

@@ -79,18 +79,25 @@ $('#symbolSearchPane').show();
  creates an array of <a href="../../dstats/regress/PowMap.html"><code class="prettyprint lang-d">PowMap</code></a> structs for integer powers 0 through <a href="../../dstats/regress/polyFit.html#N"><code class="prettyprint lang-d">N</code></a>,
  and calls <a href="../../dstats/regress/linearRegress.html"><code class="prettyprint lang-d">linearRegress</code></a>.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/regress/PolyFitRes.html">PolyFitRes</a>!(PowMap!(uint,T)[]) polyFit(T, U)(
+								<br/>
 &nbsp;&nbsp;U Y,
+								<br/>
 &nbsp;&nbsp;T X,
+								<br/>
 &nbsp;&nbsp;uint N,
+								<br/>
 &nbsp;&nbsp;double confInt = 0.95
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/regress/PolyFitRes.html"><code class="prettyprint lang-d">PolyFitRes</code></a> containing the array of <a href="../../dstats/regress/PowMap.html"><code class="prettyprint lang-d">PowMap</code></a> structs created and

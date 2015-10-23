@@ -289,20 +289,24 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function det</h1>
 			<section>
-				<p> Calculate the determinant of a square matrix.
+				<p>Calculate the determinant of a square matrix.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Unqual!T det(T, scid.matrix.Storage stor)(
+								<br/>
 &nbsp;&nbsp;const <a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor) m
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">import <a href="../../scid/matrix.html">scid.matrix</a>;
+<pre class="code"><code class="prettyprint lang-d">import <a href="../../scid/matrix.html">scid.matrix</a>;
 ...
 auto <a href="../../scid/linalg/det.html#m">m</a> = matrix!double(2, 2);
 <a href="../../scid/linalg/det.html#m">m</a>[0,0] = 1.0;  <a href="../../scid/linalg/det.html#m">m</a>[0,1] = 2.0;
@@ -310,7 +314,7 @@ auto <a href="../../scid/linalg/det.html#m">m</a> = matrix!double(2, 2);
 
 auto d = det(<a href="../../scid/linalg/det.html#m">m</a>);
 writeln(d);   // Prints "-2"
-</pre>
+</code></pre>
 </section>
 
 			</section>

@@ -80,31 +80,38 @@ Alteratives are <a href="../../dstats/tests/Alt.less.html"><code class="prettypr
 <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &gt; <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and
 <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) != <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
 </p>
-<section>
-<p><a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> may be either iterables with elements implicitly
+<section><p><a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> may be either iterables with elements implicitly
 convertible to double or summary structs (see <a href="../../dstats/tests/isSummary.html"><code class="prettyprint lang-d">isSummary</code></a>).
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/ConfInt.html">ConfInt</a> welchTTest(T, U)(
+								<br/>
 &nbsp;&nbsp;T sample1,
+								<br/>
 &nbsp;&nbsp;U sample2,
+								<br/>
 &nbsp;&nbsp;double testMean = 0,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;double confLevel = 0.95
+								<br/>
 )
-if ((isSummary!T || doubleIterable!T) &amp;&amp; (isSummary!U || doubleIterable!U));</pre>
+								<br/>
+if ((isSummary!T || doubleIterable!T) &amp;&amp; (isSummary!U || doubleIterable!U));
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> containing the T statistic, the P-value, and the
 boundaries of the confidence interval for the difference between means
 of <a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> at the specified level.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Student%27s_t-test

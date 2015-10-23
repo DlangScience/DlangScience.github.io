@@ -83,29 +83,32 @@ $('#symbolSearchPane').show();
  tuple of ranges (one range for each group) or a range of ranges
  (one element for each group).
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> kruskalWallis(T...)(
+								<br/>
 &nbsp;&nbsp;T dataIn
+								<br/>
 )
-if (doubleInput!(typeof(dataIn[0].front)) || allSatisfy!(doubleInput, T));</pre>
+								<br/>
+if (doubleInput!(typeof(dataIn[0].front)) || allSatisfy!(doubleInput, T));
+							</code>
+						</div>
 					</section>
 <section><h3>Bugs</h3>
 <p>Asymptotic approximation of P-value only, not exact.  In this case,
  I'm not sure a practical way to compute the exact P-value even exists.
 </p>
-
 </section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the K statistic and the P-value for the null that
  no group is stochastically larger than any other against the alternative that
  groups are stochastically ordered.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>"Concepts and Applications of Inferrential Statistics".

@@ -38,14 +38,23 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) <a href="../clFFT/clfftStatus.html">clfftStatus</a> clfftBakePlan(
+								<br/>
 &nbsp;&nbsp;ulong plHandle,
+								<br/>
 &nbsp;&nbsp;uint numQueues,
+								<br/>
 &nbsp;&nbsp;void** commQueueFFT,
+								<br/>
 &nbsp;&nbsp;extern(C) void function(ulong, void*) pfn_notify,
+								<br/>
 &nbsp;&nbsp;void* user_data
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

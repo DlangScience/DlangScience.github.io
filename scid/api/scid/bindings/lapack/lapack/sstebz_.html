@@ -291,36 +291,59 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes selected eigenvalues of a real symmetric tridiagonal
 </p>
-<section>
-<p>matrix by bisection.
+<section><p>matrix by bisection.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sstebz_(
+								<br/>
 &nbsp;&nbsp;char* range,
+								<br/>
 &nbsp;&nbsp;char* order,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* vl,
+								<br/>
 &nbsp;&nbsp;float* vu,
+								<br/>
 &nbsp;&nbsp;int* il,
+								<br/>
 &nbsp;&nbsp;int* iu,
+								<br/>
 &nbsp;&nbsp;float* abstol,
+								<br/>
 &nbsp;&nbsp;float* d,
+								<br/>
 &nbsp;&nbsp;float* e,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* nsplit,
+								<br/>
 &nbsp;&nbsp;float* w,
+								<br/>
 &nbsp;&nbsp;int* iblock,
+								<br/>
 &nbsp;&nbsp;int* isplit,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int range_len,
+								<br/>
 &nbsp;&nbsp;int order_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

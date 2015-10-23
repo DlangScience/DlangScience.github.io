@@ -54,10 +54,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function w_of_z</h1>
 			<section>
-				<p> <code class="prettyprint lang-d">w_of_z</code>, Faddeeva's scaled complex error function
+				<p><code class="prettyprint lang-d">w_of_z</code>, Faddeeva's scaled complex error function
 </p>
-<section>
-<p>   Computes various error functions (erf, erfc, erfi, erfcx),
+<section><p>Computes various error functions (erf, erfc, erfi, erfcx),
    including the Dawson integral, in the complex plane, based
    on algorithms for the computation of the Faddeeva function
               w(<a href="../../libcerf/w_of_z/w_of_z.html#z"><code class="prettyprint lang-d">z</code></a>) = exp(-<a href="../../libcerf/w_of_z/w_of_z.html#z"><code class="prettyprint lang-d">z</code></a>^2) * erfc(-i*<a href="../../libcerf/w_of_z/w_of_z.html#z"><code class="prettyprint lang-d">z</code></a>).
@@ -66,39 +65,41 @@ $('#symbolSearchPane').show();
    switch to Taylor expansions to avoid cancellation errors
    [e.g. near the origin for erf(<a href="../../libcerf/w_of_z/w_of_z.html#z"><code class="prettyprint lang-d">z</code></a>)].
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 std.<wbr/>complex.<wbr/>Complex!(double) w_of_z(
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double) z
-) nothrow @nogc @safe;</pre>
+								<br/>
+) nothrow @nogc @safe;
+							</code>
+						</div>
 					</section>
 
 			</section>
 			<section>
 				<h2>Authors</h2>
-<p>    Steven G. Johnson, core author;
+<p>Steven G. Johnson, core author;
     Joachim Wuttke, C package maintainer;
     <a href="http://plus.google.com/+IlyaYaroshenko">Ilya Yaroshenko</a>, D package maintainer
 </p>
 
-
 			</section>
 			<section>
 				<h2>Copyright</h2>
-<p>    © 2012 Massachusetts Institute of Technology,
+<p>© 2012 Massachusetts Institute of Technology,
     © 2013 Forschungszentrum Jülich GmbH,
     © 2014 Ilya Yaroshenko
 </p>
 
-
 			</section>
 			<section>
 				<h2>License</h2>
-<p>    Subject to the terms of the MIT license, as written in the included LICENSE.txt file.
+<p>Subject to the terms of the MIT license, as written in the included LICENSE.txt file.
 </p>
 
 			</section>

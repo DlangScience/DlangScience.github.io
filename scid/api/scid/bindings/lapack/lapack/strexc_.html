@@ -291,27 +291,41 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Reorders the Schur factorization of a matrix by an orthogonal
 </p>
-<section>
-<p>similarity transformation.
+<section><p>similarity transformation.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void strexc_(
+								<br/>
 &nbsp;&nbsp;char* compq,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* t,
+								<br/>
 &nbsp;&nbsp;int* ldt,
+								<br/>
 &nbsp;&nbsp;float* q,
+								<br/>
 &nbsp;&nbsp;int* ldq,
+								<br/>
 &nbsp;&nbsp;int* ifst,
+								<br/>
 &nbsp;&nbsp;int* ilst,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int compq_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

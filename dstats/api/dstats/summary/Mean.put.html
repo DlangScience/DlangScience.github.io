@@ -84,10 +84,15 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void put(
+								<br/>
 &nbsp;&nbsp;double element
-) pure nothrow @safe;</pre>
+								<br/>
+) pure nothrow @safe;
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -95,18 +100,22 @@ void put(
 				<h2>Function Mean.put</h2>
 				<p>Adds the contents of <a href="../../dstats/summary/Mean.put.html#rhs"><code class="prettyprint lang-d">rhs</code></a> to this instance.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void put(
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/summary/Mean.html">Mean</a> rhs
-) pure nothrow @safe;</pre>
+								<br/>
+) pure nothrow @safe;
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d"><a href="../../dstats/summary/Mean.html">Mean</a> mean1, mean2, combined;
+<pre class="code"><code class="prettyprint lang-d"><a href="../../dstats/summary/Mean.html">Mean</a> mean1, mean2, combined;
 foreach(i; 0..5) {
     mean1.put(i);
 }
@@ -122,7 +131,7 @@ foreach(i; 0..10) {
 }
 
 assert(approxEqual(combined.mean, mean1.mean));
-</pre>
+</code></pre>
 </section>
 
 			</section>

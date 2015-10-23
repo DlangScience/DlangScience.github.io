@@ -289,26 +289,32 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function gradient</h1>
 			<section>
-				<p> Calculate the gradient of a function of several variables.
+				<p>Calculate the gradient of a function of several variables.
 </p>
-<section>
-<p>    This function calculates a central-difference approximation to
+<section><p>This function calculates a central-difference approximation to
     the gradient of a function <a href="../../scid/calculus/gradient.html#f"><code class="prettyprint lang-d">f</code></a>. The error in the result is, at best,
     on the order of sqrt(real.epsilon). The function <a href="../../scid/calculus/gradient.html#f"><code class="prettyprint lang-d">f</code></a> is evaluated
     2<i>n</i> times, where <i>n</i> is the length of the vector <a href="../../scid/calculus/gradient.html#x"><code class="prettyprint lang-d">x</code></a>.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Real[] gradient(Real, Func)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real[] x,
+								<br/>
 &nbsp;&nbsp;real scale = 1.00000,
+								<br/>
 &nbsp;&nbsp;Real[] buffer = null
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -316,23 +322,21 @@ Real[] gradient(Real, Func)(
 <tr><td id="x">x</td><td> The point at which to find the gradient.</td></tr>
 <tr><td id="scale">scale</td><td> A "characteristic <a href="../../scid/calculus/gradient.html#scale"><code class="prettyprint lang-d">scale</code></a>" over which the function
             changes significantly. (optional)</td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/gradient.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of the same length as $(D <a href="../../scid/calculus/gradient.html#x"><code class="prettyprint lang-d">x</code></a>), for the returned
-            gradient vector. (optional)
-</td></tr>
+<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/gradient.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of the same length as <a href="../../scid/calculus/gradient.html#x"><code class="prettyprint lang-d">x</code></a>, for the returned
+            gradient vector. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">// Let's find the gradient of <a href="../../scid/calculus/gradient.html#f">f</a>(<a href="../../scid/calculus/gradient.html#x">x</a>,y) = <a href="../../scid/calculus/gradient.html#x">x</a> exp(y) at
+<pre class="code"><code class="prettyprint lang-d">// Let's find the gradient of <a href="../../scid/calculus/gradient.html#f">f</a>(<a href="../../scid/calculus/gradient.html#x">x</a>,y) = <a href="../../scid/calculus/gradient.html#x">x</a> exp(y) at
 // the point p = (2,1).
 real <a href="../../scid/calculus/gradient.html#f">f</a>(real[] <a href="../../scid/calculus/gradient.html#x">x</a>)  { return <a href="../../scid/calculus/gradient.html#x">x</a>[0] * exp(<a href="../../scid/calculus/gradient.html#x">x</a>[1]); }
 real[] p = [2.0L, 1.0L];
 
-auto g = gradient(&<a href="../../scid/calculus/gradient.html#f">f</a>, p);
-</pre>
-
+auto g = gradient(&amp;<a href="../../scid/calculus/gradient.html#f">f</a>, p);
+</code></pre>
 </section>
 <section><h3>See also</h3>
-<p>    <ul><li>Wikipedia:
+<p><ul><li>Wikipedia:
         <a href="http://en.wikipedia.org/wiki/Gradient">Gradient</a>.
     </li></ul>
 </p>

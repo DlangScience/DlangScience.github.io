@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes all eigenvalues, and optionally, eigenvectors of <a href="../../../../scid/bindings/lapack/lapack/ssyevd_.html#a"><code class="prettyprint lang-d">a</code></a> real
 </p>
-<section>
-<p>symmetric matrix.  If eigenvectors are desired, it uses <a href="../../../../scid/bindings/lapack/lapack/ssyevd_.html#a"><code class="prettyprint lang-d">a</code></a> divide
+<section><p>symmetric matrix.  If eigenvectors are desired, it uses <a href="../../../../scid/bindings/lapack/lapack/ssyevd_.html#a"><code class="prettyprint lang-d">a</code></a> divide
 </p>
 
 <p>and conquer algorithm.
@@ -301,22 +300,39 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void ssyevd_(
+								<br/>
 &nbsp;&nbsp;char* jobz,
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* w,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* liwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int jobz_len,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

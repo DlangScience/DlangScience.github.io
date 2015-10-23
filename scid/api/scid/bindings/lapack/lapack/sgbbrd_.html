@@ -291,35 +291,57 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Reduces a general band matrix to real upper bidiagonal form
 </p>
-<section>
-<p>by an orthogonal transformation.
+<section><p>by an orthogonal transformation.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgbbrd_(
+								<br/>
 &nbsp;&nbsp;char* vect,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* ncc,
+								<br/>
 &nbsp;&nbsp;int* kl,
+								<br/>
 &nbsp;&nbsp;int* ku,
+								<br/>
 &nbsp;&nbsp;float* ab,
+								<br/>
 &nbsp;&nbsp;int* ldab,
+								<br/>
 &nbsp;&nbsp;float* d,
+								<br/>
 &nbsp;&nbsp;float* e,
+								<br/>
 &nbsp;&nbsp;float* q,
+								<br/>
 &nbsp;&nbsp;int* ldq,
+								<br/>
 &nbsp;&nbsp;float* pt,
+								<br/>
 &nbsp;&nbsp;int* ldpt,
+								<br/>
 &nbsp;&nbsp;float* c,
+								<br/>
 &nbsp;&nbsp;int* ldc,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int vect_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

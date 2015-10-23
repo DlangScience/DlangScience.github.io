@@ -79,25 +79,29 @@ $('#symbolSearchPane').show();
  that hypothesis tests are independent.  This is more powerful than
  Holm-Bonferroni correction, but requires the independence assumption.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 float[] hochberg(T)(
+								<br/>
 &nbsp;&nbsp;T pVals
+								<br/>
 )
-if (doubleInput!T);</pre>
+								<br/>
+if (doubleInput!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
-<p> An array of adjusted P-values with indices corresponding to the order of
+<p>An array of adjusted P-values with indices corresponding to the order of
  the P-values in the input data.
 </p>
-
 </section>
 <section><h3>References</h3>
-<p> Hochberg, Y. (1988). A sharper Bonferroni procedure for multiple tests of
+<p>Hochberg, Y. (1988). A sharper Bonferroni procedure for multiple tests of
  significance. Biometrika, 75, 800-803.
 </p>
 </section>

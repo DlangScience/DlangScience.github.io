@@ -294,23 +294,32 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function findRoot</h2>
-				<p> Searches for a root of N functions of N variables using a variant
+				<p>Searches for a root of N functions of N variables using a variant
     of the Powell Hybrid Method (the HYBRD routine from MINPACK).
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Real[] findRoot(Real, Func)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real[] guess,
+								<br/>
 &nbsp;&nbsp;Real epsRel,
+								<br/>
 &nbsp;&nbsp;int maxFuncEvals = 0,
+								<br/>
 &nbsp;&nbsp;Real[] buffer = null
+								<br/>
 )
-if (isFloatingPoint!Real &amp;&amp; isVectorField!(Func, Real));</pre>
+								<br/>
+if (isFloatingPoint!Real &amp;&amp; isVectorField!(Func, Real));
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -327,19 +336,18 @@ if (isFloatingPoint!Real &amp;&amp; isVectorField!(Func, Real));</pre>
             is at most <a href="../../scid/nonlinear/findRoot.html#epsRel"><code class="prettyprint lang-d">epsRel</code></a>.</td></tr>
 <tr><td id="maxFuncEvals">maxFuncEvals</td><td> (optional) The maximum number of function evaluations.
             If <a href="../../scid/nonlinear/findRoot.html#maxFuncEvals"><code class="prettyprint lang-d">maxFuncEvals</code></a>&lt;1, it is set to 200*(N+1).</td></tr>
-<tr><td id="buffer">buffer</td><td> (optional) A <a href="../../scid/nonlinear/findRoot.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least N, for the return value.
-</td></tr>
+<tr><td id="buffer">buffer</td><td> (optional) A <a href="../../scid/nonlinear/findRoot.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least N, for the return value.</td></tr>
 </table>
 </section>
 <section><h3>Example</h3>
-<p>    The Rosenbrock function is a commonly used test problem for
+<p>The Rosenbrock function is a commonly used test problem for
     optimisation algorithms. It has a global minimum at (1,1) that is hard
     to locate numerically because it lies in a long, narrow valley.
     Instead of using an optimisation algorithm, let us try to locate
     the minimum by finding the root of the Rosenbrock function's
     gradient.
 </p>
-<pre class="code prettyprint lang-d">// The Rosenbrock function is defined as
+<pre class="code"><code class="prettyprint lang-d">// The Rosenbrock function is defined as
 //     <a href="../../scid/nonlinear/findRoot.html#f">f</a>(x,y) = (1-x)^2 + 100 (y-x^2)^2.
 // Thus, its gradient is:
 real[] dRosenbrock(real[] v, real[] buf)
@@ -352,19 +360,18 @@ real[] dRosenbrock(real[] v, real[] buf)
 }
 
 real[] <a href="../../scid/nonlinear/findRoot.html#guess">guess</a> = [ 2.0, 2.0 ];
-auto root = findRoot(&dRosenbrock, <a href="../../scid/nonlinear/findRoot.html#guess">guess</a>, 0.0L);
+auto root = findRoot(&amp;dRosenbrock, <a href="../../scid/nonlinear/findRoot.html#guess">guess</a>, 0.0L);
 
 writeln(root);  // Prints "1 1". Yay!
-</pre>
+</code></pre>
 </section>
 
 			</section>
 			<section>
 				<h2>Function findRoot</h2>
-				<p> Find a root of the function <a href="../../scid/nonlinear/findRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
+				<p>Find a root of the function <a href="../../scid/nonlinear/findRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
 </p>
-<section>
-<p>    This function first calls <a href="#bracketRoot"><a href="../../scid/nonlinear/bracketRoot.html"><code class="prettyprint lang-d">bracketRoot</code></a></a> to
+<section><p>This function first calls <a href="#bracketRoot"><a href="../../scid/nonlinear/bracketRoot.html"><code class="prettyprint lang-d">bracketRoot</code></a></a> to
     obtain an interval inside which there must be a root, and then calls
     <a href="http://www.digitalmars.com/d/2.0/phobos/std_numeric.html#findRoot">std.numeric.findRoot()</a>
     to pin down the location of the root.
@@ -387,33 +394,59 @@ writeln(root);  // Prints "1 1". Yay!
 
 					<section>
 						<h3>Prototypes</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T findRoot(F, T)(
+								<br/>
 &nbsp;&nbsp;scope F f,
+								<br/>
 &nbsp;&nbsp;T x0,
+								<br/>
 &nbsp;&nbsp;T scale,
+								<br/>
 &nbsp;&nbsp;T xMin,
+								<br/>
 &nbsp;&nbsp;T xMax,
+								<br/>
 &nbsp;&nbsp;int precision
+								<br/>
 )
+								<br/>
 if (isUnaryFunction!(F, T) &amp;&amp; isFloatingPoint!T);
-
+								<br/>
+								<br/>
 T findRoot(F, T)(
+								<br/>
 &nbsp;&nbsp;scope F f,
+								<br/>
 &nbsp;&nbsp;T x0,
+								<br/>
 &nbsp;&nbsp;T scale,
+								<br/>
 &nbsp;&nbsp;int precision
+								<br/>
 )
+								<br/>
 if (isUnaryFunction!(F, T) &amp;&amp; isFloatingPoint!T);
-
+								<br/>
+								<br/>
 T findRoot(F, T)(
+								<br/>
 &nbsp;&nbsp;scope F f,
+								<br/>
 &nbsp;&nbsp;T x0,
+								<br/>
 &nbsp;&nbsp;T scale,
+								<br/>
 &nbsp;&nbsp;T xMin = -T.infinity,
+								<br/>
 &nbsp;&nbsp;T xMax = T.infinity
+								<br/>
 )
-if (isUnaryFunction!(F, T) &amp;&amp; isFloatingPoint!T);</pre>
+								<br/>
+if (isUnaryFunction!(F, T) &amp;&amp; isFloatingPoint!T);
+							</code>
+						</div>
 					</section>
 
 			</section>

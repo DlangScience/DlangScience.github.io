@@ -82,25 +82,29 @@ $('#symbolSearchPane').show();
  controls the familywise error rate.  Therefore, there aren't too many good
  reasons to use regular Bonferroni correction instead.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 float[] holmBonferroni(T)(
+								<br/>
 &nbsp;&nbsp;T pVals
+								<br/>
 )
-if (doubleInput!T);</pre>
+								<br/>
+if (doubleInput!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
-<p> An array of adjusted P-values with indices corresponding to the order of
+<p>An array of adjusted P-values with indices corresponding to the order of
  the P-values in the input data.
 </p>
-
 </section>
 <section><h3>References</h3>
-<p> Holm, S. (1979). A simple sequentially rejective multiple test procedure.
+<p>Holm, S. (1979). A simple sequentially rejective multiple test procedure.
  Scandinavian Journal of Statistics, 6, 65-70.
 </p>
 </section>

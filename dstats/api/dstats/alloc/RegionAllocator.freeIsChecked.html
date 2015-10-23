@@ -75,19 +75,27 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Enum member RegionAllocator.freeIsChecked</h1>
 			<section>
-				<p>    True because if memory is freed via <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">free</code></a>() instead of <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>()
+				<p>True because if memory is freed via <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">free</code></a>() instead of <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">freeLast</code></a>()
     then the pointer is checked for validity.
 </p>
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 struct <a href="../../dstats/alloc/RegionAllocator.html">RegionAllocator</a>
+								<br/>
 {
-	// ...
-	enum freeIsChecked = true;
-	// ...
-}</pre>
+								<br/>
+&nbsp;&nbsp;// ...
+								<br/>
+&nbsp;&nbsp;enum freeIsChecked = true;
+								<br/>
+&nbsp;&nbsp;// ...
+								<br/>
+}
+							</code>
+						</div>
 					</section>
 
 			</section>

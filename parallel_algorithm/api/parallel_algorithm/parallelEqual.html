@@ -38,14 +38,23 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 bool parallelEqual(alias pred, R1, R2)(
+								<br/>
 &nbsp;&nbsp;R1 range1,
+								<br/>
 &nbsp;&nbsp;R2 range2,
+								<br/>
 &nbsp;&nbsp;size_t workUnitSize = 2000,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null
+								<br/>
 )
-if (isRandomAccessRange!R1 &amp;&amp; isRandomAccessRange!R2 &amp;&amp; hasLength!R1 &amp;&amp; hasLength!R2);</pre>
+								<br/>
+if (isRandomAccessRange!R1 &amp;&amp; isRandomAccessRange!R2 &amp;&amp; hasLength!R1 &amp;&amp; hasLength!R2);
+							</code>
+						</div>
 					</section>
 
 			</section>

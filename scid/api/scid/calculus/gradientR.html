@@ -289,11 +289,10 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function gradientR</h1>
 			<section>
-				<p> Calculate the <a href="../../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a> of a function of several variables
+				<p>Calculate the <a href="../../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a> of a function of several variables
     using Ridders' method.
 </p>
-<section>
-<p>    This function uses <a href="../../scid/calculus/diff.html"><code class="prettyprint lang-d">diff</code></a>() to calculate the derivative
+<section><p>This function uses <a href="../../scid/calculus/diff.html"><code class="prettyprint lang-d">diff</code></a>() to calculate the derivative
     in each direction. It is therefore more accurate, but slower, than
     the <a href="../../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a>() function. The function <a href="../../scid/calculus/gradientR.html#f"><code class="prettyprint lang-d">f</code></a> is typically evaluated
     between 6<i>n</i> and 12<i>n</i> times, where <i>n</i> is the length of <a href="../../scid/calculus/gradientR.html#x"><code class="prettyprint lang-d">x</code></a>.
@@ -306,13 +305,21 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Real[] gradientR(Real, Func)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real[] x,
+								<br/>
 &nbsp;&nbsp;real scale = 1.00000,
+								<br/>
 &nbsp;&nbsp;Real[] buffer = null
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

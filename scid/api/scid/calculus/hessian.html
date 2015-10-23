@@ -289,26 +289,32 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function hessian</h1>
 			<section>
-				<p> Calculate the Hessian matrix of a function of several variables
+				<p>Calculate the Hessian matrix of a function of several variables
     using a central-difference approximation.
 </p>
-<section>
-<p>    This function stores its results in an <i>n</i>-by-<i>n</i> symmetric matrix,
+<section><p>This function stores its results in an <i>n</i>-by-<i>n</i> symmetric matrix,
     where <i>n</i> is the number of variables (i.e. the length of <a href="../../scid/calculus/hessian.html#x"><code class="prettyprint lang-d">x</code></a>).
     The function <a href="../../scid/calculus/hessian.html#f"><code class="prettyprint lang-d">f</code></a> is evaluated 1+2<i>n</i>2 times.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(Real,Storage.Symmetric) hessian(Real, Func)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real[] x,
+								<br/>
 &nbsp;&nbsp;real scale = 1.00000,
+								<br/>
 &nbsp;&nbsp;Real[] buffer = null
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -316,20 +322,18 @@ $('#symbolSearchPane').show();
 <tr><td id="x">x</td><td> The point at which to calculate the Hessian.</td></tr>
 <tr><td id="scale">scale</td><td> A "characteristic <a href="../../scid/calculus/hessian.html#scale"><code class="prettyprint lang-d">scale</code></a>" over which the function
             changes significantly. (optional)</td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/hessian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of size at least $(I n)($(I n)+1)/2, for storing
-            the Hessian matrix. (optional)
-</td></tr>
+<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/hessian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of size at least <i>n</i>(<i>n</i>+1)/2, for storing
+            the Hessian matrix. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">// Above, we found the <a href="../../scid/calculus/gradient.html">gradient</a> of <a href="../../scid/calculus/hessian.html#f">f</a>(<a href="../../scid/calculus/hessian.html#x">x</a>,y) at the point p.
+<pre class="code"><code class="prettyprint lang-d">// Above, we found the <a href="../../scid/calculus/gradient.html">gradient</a> of <a href="../../scid/calculus/hessian.html#f">f</a>(<a href="../../scid/calculus/hessian.html#x">x</a>,y) at the point p.
 // Finding the Hessian matrix is just as simple:
-auto h = hessian(&<a href="../../scid/calculus/hessian.html#f">f</a>, p);
-</pre>
-
+auto h = hessian(&amp;<a href="../../scid/calculus/hessian.html#f">f</a>, p);
+</code></pre>
 </section>
 <section><h3>See also</h3>
-<p>    <ul><li>Wikipedia:
+<p><ul><li>Wikipedia:
         <a href="http://en.wikipedia.org/wiki/Hessian_matrix">Hessian matrix</a>.
     </li></ul>
 </p>

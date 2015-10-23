@@ -78,22 +78,26 @@ $('#symbolSearchPane').show();
 				<p>Calculates the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation of a dataset.  This is the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a>
  of all absolute differences from the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> of the dataset.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/summary/MedianAbsDev.html">MedianAbsDev</a> medianAbsDev(T)(
+								<br/>
 &nbsp;&nbsp;T data
+								<br/>
 )
-if (doubleInput!T);</pre>
+								<br/>
+if (doubleInput!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/summary/MedianAbsDev.html"><code class="prettyprint lang-d">MedianAbsDev</code></a> struct that contains the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> (since it is
  computed anyhow) and the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation.
 </p>
-
 </section>
 <section><h3>Notes</h3>
 <p>No bias correction is used in this implementation, since using

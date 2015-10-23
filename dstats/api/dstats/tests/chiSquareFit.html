@@ -79,25 +79,31 @@ $('#symbolSearchPane').show();
 of <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> and a range of <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> values.  This is a useful statistical
 test for testing whether a set of observations fits a discrete distribution.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareFit(T, U)(
+								<br/>
 &nbsp;&nbsp;T observed,
+								<br/>
 &nbsp;&nbsp;U expected,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Expected.html">Expected</a> countProp = Expected.proportion
+								<br/>
 )
-if (doubleInput!T &amp;&amp; doubleInput!U);</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; doubleInput!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> of the chi-square statistic and the P-value for the
 alternative hypothesis that <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> is not a sample from <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> against
 the null that <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> is a sample from <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a>.
 </p>
-
 </section>
 <section><h3>Notes</h3>
 <p>By default, <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> is assumed to be a range of <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> proportions.
@@ -113,10 +119,9 @@ and is therefore not considered valid, as a rule of thumb,  when <a href="../../
 counts are below 5.  However, this rule is likely to be unnecessarily
 stringent in most cases.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Test to see whether a set of categorical observations differs
+<pre class="code"><code class="prettyprint lang-d">// Test to see whether a set of categorical observations differs
 // statistically from a discrete uniform distribution.
 
 uint[] <a href="../../dstats/tests/chiSquareFit.html#observed">observed</a> = [980, 1028, 1001, 964, 1102];
@@ -124,8 +129,7 @@ auto <a href="../../dstats/tests/chiSquareFit.html#expected">expected</a> = repe
 auto res2 = chiSquareFit(<a href="../../dstats/tests/chiSquareFit.html#observed">observed</a>, <a href="../../dstats/tests/chiSquareFit.html#expected">expected</a>);
 assert(approxEqual(res2, 0.0207));
 assert(approxEqual(res2.testStat, 11.59));
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Pearson%27s_chi-square_test

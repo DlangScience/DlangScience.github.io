@@ -294,39 +294,45 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Enum member isUnaryFunction</h2>
-				<p> Evaluates to true if the following compiles:
+				<p>Evaluates to true if the following compiles:
 </p>
-<section><pre class="code prettyprint lang-d">RetT ret = F.init(ArgT.init);
-</pre>
+<section><pre class="code"><code class="prettyprint lang-d">RetT ret = F.init(ArgT.init);
+</code></pre>
 </section>
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 enum isUnaryFunction(F, RetT, ArgT) = __traits(compiles, ()
 {
 RetT ret = F.init(ArgT.init);
 }
-);</pre>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>
 			<section>
 				<h2>Enum member isUnaryFunction</h2>
-				<p> Evaluates to true if the following compiles:
+				<p>Evaluates to true if the following compiles:
 </p>
-<section><pre class="code prettyprint lang-d">F.init(ArgT.init); // No return type check.
-</pre>
+<section><pre class="code"><code class="prettyprint lang-d">F.init(ArgT.init); // No return type check.
+</code></pre>
 </section>
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 enum isUnaryFunction(F, ArgT) = __traits(compiles, ()
 {
 F.init(ArgT.init);
 }
-);</pre>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -80,43 +80,46 @@ different from 0.  Alternatives are <a href="../../dstats/tests/Alt.less.html"><
 <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (kendallCor(<a href="../../dstats/tests/kendallCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/kendallCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &gt; 0) and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>
 (kendallCor(<a href="../../dstats/tests/kendallCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/kendallCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
 </p>
-<section>
-
-<p><a href="../../dstats/tests/kendallCorTest.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> controls the maximum length of the range for which exact P-value
+<section><p><a href="../../dstats/tests/kendallCorTest.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> controls the maximum length of the range for which exact P-value
 computation is used.  The default is 50.  Exact calculation is never used
 when ties are present because it is not computationally feasible.
 Do not set this higher than 100, as it will be very slow
 and the asymptotic approximation is pretty good at even a fraction of this
 size.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> kendallCorTest(T, U)(
+								<br/>
 &nbsp;&nbsp;T range1,
+								<br/>
 &nbsp;&nbsp;U range2,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;uint exactThresh = 50
+								<br/>
 )
-if (isInputRange!T &amp;&amp; isInputRange!U);</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; isInputRange!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
-
 <p>As an optimization, when a range is a SortedRange with predicate "a &lt; b",
 it is assumed already sorted and not sorted a second time by this function.
 This is useful when applying this function multiple times with one of the
 arguments the same every time.
 </p>
-
 </section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the Kendall correlation coefficient and
 the P-value for the given alternative.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>StackOverflow Question 948341 (http://stackoverflow.com/questions/948341)

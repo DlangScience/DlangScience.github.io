@@ -46,19 +46,33 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) int MPI_Igatherv(
+								<br/>
 &nbsp;&nbsp;void* sendbuf,
+								<br/>
 &nbsp;&nbsp;int sendcount,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* sendtype,
+								<br/>
 &nbsp;&nbsp;void* recvbuf,
+								<br/>
 &nbsp;&nbsp;int* recvcounts,
+								<br/>
 &nbsp;&nbsp;int* displs,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_datatype_t.html">ompi_datatype_t</a>* recvtype,
+								<br/>
 &nbsp;&nbsp;int root,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_communicator_t.html">ompi_communicator_t</a>* comm,
+								<br/>
 &nbsp;&nbsp;<a href="../mpi/ompi_request_t.html">ompi_request_t</a>** request
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

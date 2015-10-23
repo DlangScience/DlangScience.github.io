@@ -79,26 +79,31 @@ $('#symbolSearchPane').show();
     <a href="../../dstats/alloc/RegionAllocator.array.html"><code class="prettyprint lang-d">array</code></a>.  In this case <a href="../../dstats/alloc/RegionAllocator.newArray.html#sizes"><code class="prettyprint lang-d">sizes</code></a> may be specified for any number of dimensions
     from 1 to the number in T.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 auto newArray(T, I...)(
+								<br/>
 &nbsp;&nbsp;I sizes
+								<br/>
 )
-if (allSatisfy!(isIntegral, I));</pre>
+								<br/>
+if (allSatisfy!(isIntegral, I));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+<pre class="code"><code class="prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
 double[] arr = alloc.newArray!(double[])(100);
 assert(arr.length == 100);
 
 double[][] matrix = alloc.newArray!(double[][])(42, 31);
 assert(matrix.length == 42);
 assert(matrix[0].length == 31);
-</pre>
+</code></pre>
 </section>
 
 			</section>

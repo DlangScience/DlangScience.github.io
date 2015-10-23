@@ -75,7 +75,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Variable PrinCompOptions.maxIter</h1>
 			<section>
-				<p>    Maximum iterations for the optimization procedure.  After this many
+				<p>Maximum iterations for the optimization procedure.  After this many
     iterations, the algorithm gives up and calls teh solution "good enough"
     no matter what.  For exploratory analyses, "good enough" solutions
     can be had fast sometimes by making this value small.  Default:  uint.max
@@ -83,13 +83,21 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 struct <a href="../../dstats/pca/PrinCompOptions.html">PrinCompOptions</a>
+								<br/>
 {
-	// ...
-	<code class="prettyprint lang-d">uint</code> maxIter = 4294967295u;
-	// ...
-}</pre>
+								<br/>
+&nbsp;&nbsp;// ...
+								<br/>
+&nbsp;&nbsp;uint maxIter = 4294967295u;
+								<br/>
+&nbsp;&nbsp;// ...
+								<br/>
+}
+							</code>
+						</div>
 					</section>
 
 			</section>

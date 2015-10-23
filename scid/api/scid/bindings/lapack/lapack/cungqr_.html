@@ -291,25 +291,37 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Generates all or part of the unitary matrix Q from
 </p>
-<section>
-<p><a href="../../../../scid/bindings/lapack/lapack/cungqr_.html#a"><code class="prettyprint lang-d">a</code></a> QR factorization determined by CGEQRF.
+<section><p><a href="../../../../scid/bindings/lapack/lapack/cungqr_.html#a"><code class="prettyprint lang-d">a</code></a> QR factorization determined by CGEQRF.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void cungqr_(
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* k,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* tau,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

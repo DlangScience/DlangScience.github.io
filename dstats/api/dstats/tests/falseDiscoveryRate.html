@@ -81,23 +81,28 @@ Benjamini and Yekutieli (2001) (dependent).  The <a href="../../dstats/tests/Dep
 controls whether hypotheses are assumed to be independent, or whether
 the more conservative assumption that they are correlated must be made.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 float[] falseDiscoveryRate(T)(
+								<br/>
 &nbsp;&nbsp;T pVals,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Dependency.html">Dependency</a> dep = Dependency.no
+								<br/>
 )
-if (doubleInput!T);</pre>
+								<br/>
+if (doubleInput!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>An array of adjusted P-values with indices corresponding to the order of
 the P-values in the input data.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>Benjamini, Y., and Hochberg, Y. (1995). Controlling the false discovery rate:

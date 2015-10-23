@@ -294,14 +294,17 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Enum member isFortranType</h2>
-				<p> Detect whether T is a FORTRAN-compatible floating-point type.
+				<p>Detect whether T is a FORTRAN-compatible floating-point type.
     The FORTRAN-compatible types are: float, double, cfloat, cdouble.
 </p>
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
-enum isFortranType(T) = is(T == float) || is(T == double);</pre>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+enum isFortranType(T) = is(T == float) || is(T == double);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -311,8 +314,11 @@ enum isFortranType(T) = is(T == float) || is(T == double);</pre>
 
 					<section>
 						<h3>Declaration</h3>
-						<pre class="code prettyprint lang-d prototype">
-enum isFortranType(T) = isFortranType!(typeof(T.re));</pre>
+						<div class="prototype">
+							<code class="prettyprint lang-d">
+enum isFortranType(T) = isFortranType!(typeof(T.re));
+							</code>
+						</div>
 					</section>
 
 			</section>

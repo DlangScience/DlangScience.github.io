@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Improves the computed solution to <a href="../../../../scid/bindings/lapack/lapack/sgerfs_.html#a"><code class="prettyprint lang-d">a</code></a> general system of linear
 </p>
-<section>
-<p>equations AX=B, A**T X=B or A**H X=B, and provides forward and
+<section><p>equations AX=B, A**T X=B or A**H X=B, and provides forward and
 </p>
 
 <p>backward error bounds for the solution.
@@ -301,27 +300,49 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgerfs_(
+								<br/>
 &nbsp;&nbsp;char* trans,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* nrhs,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* af,
+								<br/>
 &nbsp;&nbsp;int* ldaf,
+								<br/>
 &nbsp;&nbsp;int* ipiv,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* x,
+								<br/>
 &nbsp;&nbsp;int* ldx,
+								<br/>
 &nbsp;&nbsp;float* ferr,
+								<br/>
 &nbsp;&nbsp;float* berr,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int trans_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the eigenvalues and left and right eigenvectors of
 </p>
-<section>
-<p><a href="../../../../scid/bindings/lapack/lapack/sgeevx_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix,  with preliminary balancing of the matrix,
+<section><p><a href="../../../../scid/bindings/lapack/lapack/sgeevx_.html#a"><code class="prettyprint lang-d">a</code></a> general matrix,  with preliminary balancing of the matrix,
 </p>
 
 <p>and computes reciprocal condition numbers for the eigenvalues
@@ -304,36 +303,67 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgeevx_(
+								<br/>
 &nbsp;&nbsp;char* balanc,
+								<br/>
 &nbsp;&nbsp;char* jobvl,
+								<br/>
 &nbsp;&nbsp;char* jobvr,
+								<br/>
 &nbsp;&nbsp;char* sense,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* wr,
+								<br/>
 &nbsp;&nbsp;float* wi,
+								<br/>
 &nbsp;&nbsp;float* vl,
+								<br/>
 &nbsp;&nbsp;int* ldvl,
+								<br/>
 &nbsp;&nbsp;float* vr,
+								<br/>
 &nbsp;&nbsp;int* ldvr,
+								<br/>
 &nbsp;&nbsp;int* ilo,
+								<br/>
 &nbsp;&nbsp;int* ihi,
+								<br/>
 &nbsp;&nbsp;float* scale,
+								<br/>
 &nbsp;&nbsp;float* abnrm,
+								<br/>
 &nbsp;&nbsp;float* rconde,
+								<br/>
 &nbsp;&nbsp;float* rcondv,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int balanc_len,
+								<br/>
 &nbsp;&nbsp;int jobvl_len,
+								<br/>
 &nbsp;&nbsp;int jobvr_len,
+								<br/>
 &nbsp;&nbsp;int sense_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

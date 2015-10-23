@@ -37,20 +37,29 @@ $('#symbolSearchPane').show();
 				<p>Merge ranges <a href="../parallel_algorithm/parallelMerge.html#from1"><code class="prettyprint lang-d">from1</code></a> and <a href="../parallel_algorithm/parallelMerge.html#from2"><code class="prettyprint lang-d">from2</code></a>, which are assumed sorted according
 to pred, into <a href="../parallel_algorithm/parallelMerge.html#buf"><code class="prettyprint lang-d">buf</code></a> using a parallel divide-and-conquer algorithm.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void parallelMerge(alias pred, R1, R2, R3)(
+								<br/>
 &nbsp;&nbsp;R1 from1,
+								<br/>
 &nbsp;&nbsp;R2 from2,
+								<br/>
 &nbsp;&nbsp;R3 buf,
+								<br/>
 &nbsp;&nbsp;size_t minParallel = 4096,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null
+								<br/>
 )
-if (allSatisfy!(finiteRandom, TypeTuple!(R1, R2, R3)) &amp;&amp; is(ElementType!R1 == ElementType!R2) &amp;&amp; is(ElementType!R2 == ElementType!R3) &amp;&amp; hasAssignableElements!R3);</pre>
+								<br/>
+if (allSatisfy!(finiteRandom, TypeTuple!(R1, R2, R3)) &amp;&amp; is(ElementType!R1 == ElementType!R2) &amp;&amp; is(ElementType!R2 == ElementType!R3) &amp;&amp; hasAssignableElements!R3);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -59,18 +68,18 @@ random access range with length.
 </td></tr>
 <tr><td id="from2">from2</td><td> The second of the two sorted ranges to be merged.  This must also
 be a random access range with length and must have an identical element type to
-$(D <a href="../parallel_algorithm/parallelMerge.html#from1"><code class="prettyprint lang-d">from1</code></a>).
+<a href="../parallel_algorithm/parallelMerge.html#from1"><code class="prettyprint lang-d">from1</code></a>.
 </td></tr>
 <tr><td id="buf">buf</td><td> The buffer to <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> into.  This must be a random access range with
-length equal to $(D from1.length + from2.length) and must have assignable
+length equal to from1.length + from2.length and must have assignable
 elements.
 </td></tr>
 <tr><td id="minParallel">minParallel</td><td> The minimum <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> size to parallelize.  Smaller values
 create more parallel work units resulting in greater scalability but
 increased overhead.
 </td></tr>
-<tr><td id="pool">pool</td><td> The $(XREF parallelism, TaskPool) to use.  If null, the global
-default task <a href="../parallel_algorithm/parallelMerge.html#pool"><code class="prettyprint lang-d">pool</code></a> returned by $(XREF parallelism, taskPool) will be used.</td></tr>
+<tr><td id="pool">pool</td><td> The parallelism, TaskPool to use.  If null, the global
+default task <a href="../parallel_algorithm/parallelMerge.html#pool"><code class="prettyprint lang-d">pool</code></a> returned by parallelism, taskPool will be used.</td></tr>
 </table>
 </section>
 

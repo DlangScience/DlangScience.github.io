@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Estimates the reciprocal of the condition number of a
 </p>
-<section>
-<p>symmetric positive definite band matrix, using the
+<section><p>symmetric positive definite band matrix, using the
 </p>
 
 <p>Cholesky factorization computed by SPBTRF.
@@ -301,20 +300,35 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void spbcon_(
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;int* kd,
+								<br/>
 &nbsp;&nbsp;float* ab,
+								<br/>
 &nbsp;&nbsp;int* ldab,
+								<br/>
 &nbsp;&nbsp;float* anorm,
+								<br/>
 &nbsp;&nbsp;float* rcond,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

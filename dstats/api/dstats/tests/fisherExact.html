@@ -86,12 +86,19 @@ calls the overload.
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> fisherExact(T)(
+								<br/>
 &nbsp;&nbsp;const T[][] contingencyTable,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+								<br/>
 )
-if (isIntegral!T);</pre>
+								<br/>
+if (isIntegral!T);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -104,21 +111,26 @@ ratio, which is defined, for a contingency table c, as (c[0][0] * c[1][1])
 &lt; 1, <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning true odds ratio &gt; 1, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning
 true odds ratio != 1.
 </p>
-<section>
-<p>Accepts a 2x2 contingency table as an array of arrays of uints.
+<section><p>Accepts a 2x2 contingency table as an array of arrays of uints.
 For now, only does 2x2 contingency tables.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> fisherExact(T)(
+								<br/>
 &nbsp;&nbsp;const T[2][2] contingencyTable,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+								<br/>
 )
-if (isIntegral!T);</pre>
+								<br/>
+if (isIntegral!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
 <p>Although this test is "exact" in that it does not rely on asymptotic
@@ -128,20 +140,17 @@ closer but possibly non-conservative approximation of the true P-value is
 desired, Pearson's chi-square test (<a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>) may perform better,
 even for small samples.
 </p>
-
 </section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> of the odds ratio and the P-value against the given
 alternative.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">double res = <a href="../../dstats/tests/fisherExact.html">fisherExact</a>([[2u, 7], [8, 2]], <a href="../../dstats/tests/Alt.less.html">Alt.less</a>);
+<pre class="code"><code class="prettyprint lang-d">double res = <a href="../../dstats/tests/fisherExact.html">fisherExact</a>([[2u, 7], [8, 2]], <a href="../../dstats/tests/Alt.less.html">Alt.less</a>);
 assert(approxEqual(res.p, 0.01852));  // Odds ratio is very small in this case.
 assert(approxEqual(res.testStat, 4.0 / 56.0));
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Fisher%27s_Exact_Test

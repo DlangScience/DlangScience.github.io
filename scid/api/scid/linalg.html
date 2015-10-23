@@ -288,31 +288,29 @@ $('#symbolSearchPane').show();
 		</nav>
 		<div id="main-contents">
 			<h1>Module scid.linalg</h1>
-			<p> This module contains functions related to linear algebra.
+			<p>This module contains functions related to linear algebra.
 </p>
-<section>
-<p>    For the time being these functions are just a user-friendly interface
+<section><p>For the time being these functions are just a user-friendly interface
     to the corresponding LAPACK functions. Hence, one can only use matrices
     and vectors where the elements are of FORTRAN-compatible types, namely:
 </p>
-<pre class="code prettyprint lang-d">float
+<pre class="code"><code class="prettyprint lang-d">float
 double
 Complex!float
 Complex!double
-</pre>
+</code></pre>
 <p>    Specifically, real- and creal-valued matrices/vectors cannot be used.
 </p>
-
 </section>
 
 			<section><section><h2>Note</h2>
-<p>    Some of the functions in this module come in two forms with the same
+<p>Some of the functions in this module come in two forms with the same
     function signature, but where the name of one ends with an underscore.
     An example is
 </p>
-<pre class="code prettyprint lang-d"><a href="../scid/linalg/solve.html">solve</a>(a, b)
+<pre class="code"><code class="prettyprint lang-d"><a href="../scid/linalg/solve.html">solve</a>(a, b)
 <a href="../scid/linalg/solve_.html">solve_</a>(a, b)
-</pre>
+</code></pre>
 <p>    The difference between these is that, for performance reasons, the
     underscore-suffixed functions use some or all of the input
     matrices/vectors as a workspace, and one can't expect them to
@@ -320,7 +318,6 @@ Complex!double
     without an underscore suffix simply copy the input data and calls the
     high-performance function using the copied data as input.
 </p>
-
 </section>
 </section>
 			<section>
@@ -337,7 +334,7 @@ Complex!double
 								<code>det</code>
 							</a>
 						</td>
-						<td> Calculate the determinant of a square matrix.
+						<td>Calculate the determinant of a square matrix.
 </td>
 					</tr>
 					<tr>
@@ -346,7 +343,7 @@ Complex!double
 								<code>det_</code>
 							</a>
 						</td>
-						<td> Calculate the determinant of a square matrix.
+						<td>Calculate the determinant of a square matrix.
 </td>
 					</tr>
 					<tr>
@@ -355,7 +352,7 @@ Complex!double
 								<code>eigenvalues</code>
 							</a>
 						</td>
-						<td> Calculate the <code class="prettyprint lang-d">eigenvalues</code> of a general dense square matrix.
+						<td>Calculate the <code class="prettyprint lang-d">eigenvalues</code> of a general dense square matrix.
 </td>
 					</tr>
 					<tr>
@@ -364,7 +361,7 @@ Complex!double
 								<code>eigenvalues</code>
 							</a>
 						</td>
-						<td> Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a triangular matrix. Note that this
+						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a triangular matrix. Note that this
     is a trivial operation - the function just returns the diagonal
     entries of the matrix.
 </td>
@@ -375,7 +372,7 @@ Complex!double
 								<code>eigenvalues</code>
 							</a>
 						</td>
-						<td> Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
+						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
 </td>
 					</tr>
 					<tr>
@@ -384,7 +381,7 @@ Complex!double
 								<code>eigenvalues_</code>
 							</a>
 						</td>
-						<td> Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a general dense square matrix.
+						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a general dense square matrix.
 </td>
 					</tr>
 					<tr>
@@ -393,7 +390,7 @@ Complex!double
 								<code>eigenvalues_</code>
 							</a>
 						</td>
-						<td> Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
+						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
 </td>
 					</tr>
 					<tr>
@@ -402,7 +399,7 @@ Complex!double
 								<code>invert</code>
 							</a>
 						</td>
-						<td> Calculate the inverse of a matrix.
+						<td>Calculate the inverse of a matrix.
 </td>
 					</tr>
 					<tr>
@@ -411,7 +408,7 @@ Complex!double
 								<code>solve</code>
 							</a>
 						</td>
-						<td> Solve one or more systems of n linear equations in n variables.
+						<td>Solve one or more systems of n linear equations in n variables.
 </td>
 					</tr>
 					<tr>
@@ -420,7 +417,7 @@ Complex!double
 								<code>solve_</code>
 							</a>
 						</td>
-						<td> Solve one or more systems of n linear equations in n variables.
+						<td>Solve one or more systems of n linear equations in n variables.
 </td>
 					</tr>
 				</table>
@@ -439,7 +436,7 @@ Complex!double
 								<code>EigenvalueException</code>
 							</a>
 						</td>
-						<td> This exception is thrown when the eigenvalue() function fails to
+						<td>This exception is thrown when the eigenvalue() function fails to
     compute all <a href="../scid/linalg/EigenvalueException.eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a>. The ones that have been computed are stored
     in the member variable <a href="../scid/linalg/EigenvalueException.eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a>.
 </td>

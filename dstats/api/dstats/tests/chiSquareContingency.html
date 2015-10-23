@@ -83,15 +83,19 @@ or a range of ranges.  Returns a P-value for the alternative hypothesis that
 frequencies in each row of the contingency table depend on the column against
 the null that they don't.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareContingency(T...)(
+								<br/>
 &nbsp;&nbsp;T inputData
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
 <p>The chi-square test relies on asymptotic statistical properties
@@ -113,10 +117,9 @@ the type I error rate is guaranteed to never be above the nominal P-value.
 However, even for small sample sizes this test may produce results closer
 to the true P-value, at the risk of possibly being non-conservative.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Test to see whether the relative frequency of outcome 0, 1, and 2
+<pre class="code"><code class="prettyprint lang-d">// Test to see whether the relative frequency of outcome 0, 1, and 2
 // depends on the treatment (drug1, drug2 or placebo) in some hypothetical
 // experiment.  For example, 1500 people had outcome 2 if they were treated
 // with drug1 and 1100 had outcome 1 if treated with placebo.
@@ -129,13 +132,11 @@ auto result1 = chiSquareContingency(drug1, drug2, placebo);
 // and will produce equivalent results.
 auto rangeOfRanges = [drug1, drug2, placebo];
 auto result2 = chiSquareContingency(rangeOfRanges);
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Pearson%27s_chi-square_test
 </p>
-
 </section>
 
 			</section>

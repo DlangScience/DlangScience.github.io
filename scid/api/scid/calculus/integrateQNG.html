@@ -289,36 +289,43 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQNG</h1>
 			<section>
-				<p> Calculate the integral of <a href="../../scid/calculus/integrateQNG.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQNG.html#b"><code class="prettyprint lang-d">b</code></a>)
+				<p>Calculate the integral of <a href="../../scid/calculus/integrateQNG.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQNG.html#b"><code class="prettyprint lang-d">b</code></a>)
     using <a href="../../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a> simple
     non-adaptive automatic integrator, based on <a href="../../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a> sequence of rules with
     increasing degree of algebraic precision.
 </p>
-<section>
-<p>    This method should only be used for well-behaved integrands, or when
+<section><p>This method should only be used for well-behaved integrands, or when
     speed is <a href="../../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a> lot more important than accuracy.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a>!Real integrateQNG(Func, Real)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real a,
+								<br/>
 &nbsp;&nbsp;Real b,
+								<br/>
 &nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+								<br/>
 &nbsp;&nbsp;Real epsAbs = cast(Real)0
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">// Despite the statement above, integrateQNG() can handle some
+<pre class="code"><code class="prettyprint lang-d">// Despite the statement above, integrateQNG() can handle some
 // difficulties, such as the endpoint singularity in the following
 // example:
 double <a href="../../scid/calculus/integrateQNG.html#f">f</a>(double x) { return x^^2 * log(1/x); }
-auto i = integrateQNG(&<a href="../../scid/calculus/integrateQNG.html#f">f</a>, 0.0, 1.0);
-</pre>
+auto i = integrateQNG(&amp;<a href="../../scid/calculus/integrateQNG.html#f">f</a>, 0.0, 1.0);
+</code></pre>
 </section>
 
 			</section>

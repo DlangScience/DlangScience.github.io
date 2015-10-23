@@ -79,16 +79,21 @@ $('#symbolSearchPane').show();
  there are more significant results than would be expected by chance.
  Based on a chi-square statistic for the sum of the logs of the P-values.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> fishersMethod(R)(
+								<br/>
 &nbsp;&nbsp;R pVals
+								<br/>
 )
-if (doubleInput!R);</pre>
+								<br/>
+if (doubleInput!R);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the chi-square statistic and a P-value for
@@ -96,7 +101,6 @@ if (doubleInput!R);</pre>
  by chance are present against the alternative that the distribution of
  P-values is uniform or enriched for large P-values.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>Fisher, R. A. (1948) "Combining independent tests of

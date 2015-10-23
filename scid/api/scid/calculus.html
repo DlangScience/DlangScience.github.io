@@ -288,19 +288,16 @@ $('#symbolSearchPane').show();
 		</nav>
 		<div id="main-contents">
 			<h1>Module scid.calculus</h1>
-			<p> Functions for numerical integration (quadrature) and differentiation.
+			<p>Functions for numerical integration (quadrature) and differentiation.
 </p>
-<section>
-<p>    It is recommended to read the following introduction before using
+<section><p>It is recommended to read the following introduction before using
     any of the functions in this module, as it discusses features and
     issues that are common to several of them.
 </p>
-
 </section>
 
 			<section><section><h2>Integration</h2>
-
-<p>    This module contains several different integration methods, suitable
+<p>This module contains several different integration methods, suitable
     for a wide range of problems.  The choice of which method to use
     depends on several things, such as whether the integration
     interval is finite or infinite, whether the integrand oscillates, or
@@ -312,14 +309,14 @@ $('#symbolSearchPane').show();
 </p>
 
 <p>    When you just want to "get things done" without any fuss,
-    use the general-purpose <b><code><a href="../scid/calculus/integrate.html"><code class="prettyprint lang-d">integrate</code></a>()</code></b> function.  It tries to select
+    use the general-purpose <b><code><a href="../scid/calculus/integrate.html">integrate</a>()</code></b> function.  It tries to select
     the method which is most likely to succeed for the given interval.
 </p>
 
 <p>    All the integration functions have a set of input parameters in common:
     The function to <a href="../scid/calculus/integrate.html"><code class="prettyprint lang-d">integrate</code></a>, the limits of the integral, and some accuracy
     requirements.  All of these are described in the documentation for
-    <b><code><a href="../scid/calculus/integrate.html"><code class="prettyprint lang-d">integrate</code></a>()</code></b>.
+    <b><code><a href="../scid/calculus/integrate.html">integrate</a>()</code></b>.
 </p>
 
 <p>    Most of the quadrature routines in SciD are ported from from
@@ -337,32 +334,30 @@ $('#symbolSearchPane').show();
     <a href="http://mathworld.wolfram.com/DoubleExponentialIntegration.html">double exponential integration</a>.
     The DE algorithms are ported from Takuya Ooura's
     <a href="http://www.kurims.kyoto-u.ac.jp/~ooura/intde.html">DE-Quadrature package</a>,
-    and are available in this module through the <b><code><a href="../scid/calculus/integrateDE.html"><code class="prettyprint lang-d">integrateDE</code></a>*()</code></b> functions.
+    and are available in this module through the <b><code><a href="../scid/calculus/integrateDE.html">integrateDE</a>*()</code></b> functions.
 </p>
-
 </section>
 <section><h2>Differentiation</h2>
-
-<p>    The simplest, but fastest, form of numerical differentiation is using
+<p>The simplest, but fastest, form of numerical differentiation is using
     finite differences. The functions in this module use three different
     finite-difference formulas: Forward differences,
 </p>
-<pre class="code prettyprint lang-d">df   f(x+h) - f(x)
+<pre class="code"><code class="prettyprint lang-d">df   f(x+h) - f(x)
 -- = -------------
 dx         h
-</pre>
+</code></pre>
 <p>    backward differences,
 </p>
-<pre class="code prettyprint lang-d">df   f(x) - f(x-h)
+<pre class="code"><code class="prettyprint lang-d">df   f(x) - f(x-h)
 -- = -------------
 dx         h
-</pre>
+</code></pre>
 <p>    and central differences,
 </p>
-<pre class="code prettyprint lang-d">df   f(x+h) - f(x-h)
+<pre class="code"><code class="prettyprint lang-d">df   f(x+h) - f(x-h)
 -- = ---------------
 dx         2 h
-</pre>
+</code></pre>
 <p>    Of these three, the latter is the most accurate, but in the cases where
     <b><code>f(x)</code></b> is already known it requires one more function evaluation compared
     to the forward-/backward-difference formulas. This is of particular
@@ -370,7 +365,7 @@ dx         2 h
     case with e.g. gradients and Jacobians.
 </p>
 
-<p>    Some functions in this module, like <b><code><a href="../scid/calculus/diff.html"><code class="prettyprint lang-d">diff</code></a>()</code></b>, use another method by Ridders,
+<p>    Some functions in this module, like <b><code><a href="../scid/calculus/diff.html">diff</a>()</code></b>, use another method by Ridders,
     which extrapolates the results of finite-difference formulas like the
     above to make the approximation more accurate – usually a lot more so.
     This requires several function evaluations and is therefore also a lot
@@ -382,13 +377,11 @@ dx         2 h
     i.e. a scale over which the function changes significantly. It is
     worth experimenting a bit with this parameter, as it can have a
     drastic impact on accuracy. (For an extreme example, see the "Example"
-    section for the <b><code><a href="../scid/calculus/diff.html"><code class="prettyprint lang-d">diff</code></a>()</code></b> function below.) For practical reasons, <b><code>1.0</code></b> is
+    section for the <b><code><a href="../scid/calculus/diff.html">diff</a>()</code></b> function below.) For practical reasons, <b><code>1.0</code></b> is
     chosen as the default scale in this module. Another, probably more
     common, choice that sometimes works well is to set <b><code>scale = x</code></b>, where
     <b><code>x</code></b> is the point at which the derivative is taken.
 </p>
-
-
 </section>
 </section>
 			<section>
@@ -413,7 +406,7 @@ dx         2 h
 								<code>diff</code>
 							</a>
 						</td>
-						<td> Calculate the derivative of a function.
+						<td>Calculate the derivative of a function.
 </td>
 					</tr>
 					<tr>
@@ -422,7 +415,7 @@ dx         2 h
 								<code>diff2</code>
 							</a>
 						</td>
-						<td> Calculate the derivative of a function using a two-point
+						<td>Calculate the derivative of a function using a two-point
     formula, i.e. a forward- or backward-difference formula.
 </td>
 					</tr>
@@ -432,7 +425,7 @@ dx         2 h
 								<code>diff3</code>
 							</a>
 						</td>
-						<td> Calculate the derivative of a function using a three-point
+						<td>Calculate the derivative of a function using a three-point
     formula, a.k.a. a central difference formula.
 </td>
 					</tr>
@@ -442,7 +435,7 @@ dx         2 h
 								<code>gradient</code>
 							</a>
 						</td>
-						<td> Calculate the gradient of a function of several variables.
+						<td>Calculate the gradient of a function of several variables.
 </td>
 					</tr>
 					<tr>
@@ -451,7 +444,7 @@ dx         2 h
 								<code>gradientR</code>
 							</a>
 						</td>
-						<td> Calculate the <a href="../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a> of a function of several variables
+						<td>Calculate the <a href="../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a> of a function of several variables
     using Ridders' method.
 </td>
 					</tr>
@@ -461,7 +454,7 @@ dx         2 h
 								<code>hessian</code>
 							</a>
 						</td>
-						<td> Calculate the Hessian matrix of a function of several variables
+						<td>Calculate the Hessian matrix of a function of several variables
     using a central-difference approximation.
 </td>
 					</tr>
@@ -471,7 +464,7 @@ dx         2 h
 								<code>integrate</code>
 							</a>
 						</td>
-						<td> Integrate <a href="../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> function from <a href="../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> to <a href="../scid/calculus/integrate.html#b"><code class="prettyprint lang-d">b</code></a>.
+						<td>Integrate <a href="../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> function from <a href="../scid/calculus/integrate.html#a"><code class="prettyprint lang-d">a</code></a> to <a href="../scid/calculus/integrate.html#b"><code class="prettyprint lang-d">b</code></a>.
 </td>
 					</tr>
 					<tr>
@@ -480,7 +473,7 @@ dx         2 h
 								<code>integrateDE</code>
 							</a>
 						</td>
-						<td> Calculate the integral of <a href="../scid/calculus/integrateDE.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval
+						<td>Calculate the integral of <a href="../scid/calculus/integrateDE.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval
     (<a href="../scid/calculus/integrateDE.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateDE.html#b"><code class="prettyprint lang-d">b</code></a>) using double exponential integration.
 </td>
 					</tr>
@@ -490,7 +483,7 @@ dx         2 h
 								<code>integrateDEI</code>
 							</a>
 						</td>
-						<td> Calculate the integral of <a href="../scid/calculus/integrateDEI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the infinite interval
+						<td>Calculate the integral of <a href="../scid/calculus/integrateDEI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the infinite interval
     (<a href="../scid/calculus/integrateDEI.html#a"><code class="prettyprint lang-d">a</code></a>,) using double exponential integration.
 </td>
 					</tr>
@@ -500,7 +493,7 @@ dx         2 h
 								<code>integrateDEO</code>
 							</a>
 						</td>
-						<td> Calculate the integral of an oscillating function <a href="../scid/calculus/integrateDEO.html#f"><code class="prettyprint lang-d">f</code></a>(x)
+						<td>Calculate the integral of an oscillating function <a href="../scid/calculus/integrateDEO.html#f"><code class="prettyprint lang-d">f</code></a>(x)
     over the infinite interval (<a href="../scid/calculus/integrateDEO.html#a"><code class="prettyprint lang-d">a</code></a>,) using double exponential
     integration.
 </td>
@@ -511,7 +504,7 @@ dx         2 h
 								<code>integrateQAG</code>
 							</a>
 						</td>
-						<td> Calculate the integral of <a href="../scid/calculus/integrateQAG.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval
+						<td>Calculate the integral of <a href="../scid/calculus/integrateQAG.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval
     (<a href="../scid/calculus/integrateQAG.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQAG.html#b"><code class="prettyprint lang-d">b</code></a>) using <a href="../scid/calculus/integrateQAG.html#a"><code class="prettyprint lang-d">a</code></a> simple globally adaptive integrator.
 </td>
 					</tr>
@@ -521,7 +514,7 @@ dx         2 h
 								<code>integrateQAGI</code>
 							</a>
 						</td>
-						<td> Calculate the integral of <a href="../scid/calculus/integrateQAGI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over an infinite interval.
+						<td>Calculate the integral of <a href="../scid/calculus/integrateQAGI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over an infinite interval.
 </td>
 					</tr>
 					<tr>
@@ -530,7 +523,7 @@ dx         2 h
 								<code>integrateQAGP</code>
 							</a>
 						</td>
-						<td> Calculate the integral of <a href="../scid/calculus/integrateQAGP.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../scid/calculus/integrateQAGP.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQAGP.html#b"><code class="prettyprint lang-d">b</code></a>),
+						<td>Calculate the integral of <a href="../scid/calculus/integrateQAGP.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../scid/calculus/integrateQAGP.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQAGP.html#b"><code class="prettyprint lang-d">b</code></a>),
     taking into account known points of special difficulty
     inside the interval.
 </td>
@@ -541,7 +534,7 @@ dx         2 h
 								<code>integrateQAGS</code>
 							</a>
 						</td>
-						<td> Calculate the integral of <a href="../scid/calculus/integrateQAGS.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval
+						<td>Calculate the integral of <a href="../scid/calculus/integrateQAGS.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval
     (<a href="../scid/calculus/integrateQAGS.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQAGS.html#b"><code class="prettyprint lang-d">b</code></a>) using <a href="../scid/calculus/integrateQAGS.html#a"><code class="prettyprint lang-d">a</code></a> general-purpose integration algorithm.
 </td>
 					</tr>
@@ -551,7 +544,7 @@ dx         2 h
 								<code>integrateQAWC</code>
 							</a>
 						</td>
-						<td> Calculate <a href="../scid/calculus/integrateQAWC.html#a"><code class="prettyprint lang-d">a</code></a> Cauchy principal value integral.
+						<td>Calculate <a href="../scid/calculus/integrateQAWC.html#a"><code class="prettyprint lang-d">a</code></a> Cauchy principal value integral.
 </td>
 					</tr>
 					<tr>
@@ -560,7 +553,7 @@ dx         2 h
 								<code>integrateQAWF</code>
 							</a>
 						</td>
-						<td> Calculates <a href="../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> Fourier transform integral.
+						<td>Calculates <a href="../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> Fourier transform integral.
 </td>
 					</tr>
 					<tr>
@@ -569,7 +562,7 @@ dx         2 h
 								<code>integrateQAWO</code>
 							</a>
 						</td>
-						<td> Calculate the integral of an oscillatory function over the
+						<td>Calculate the integral of an oscillatory function over the
     finite interval (<a href="../scid/calculus/integrateQAWO.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQAWO.html#b"><code class="prettyprint lang-d">b</code></a>).
 </td>
 					</tr>
@@ -579,7 +572,7 @@ dx         2 h
 								<code>integrateQAWS</code>
 							</a>
 						</td>
-						<td> Calculate an integral over the finite interval (<a href="../scid/calculus/integrateQAWS.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQAWS.html#b"><code class="prettyprint lang-d">b</code></a>),
+						<td>Calculate an integral over the finite interval (<a href="../scid/calculus/integrateQAWS.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQAWS.html#b"><code class="prettyprint lang-d">b</code></a>),
     where the integrand has algebraic and/or logarithmic endpoint
     singularities of <a href="../scid/calculus/integrateQAWS.html#a"><code class="prettyprint lang-d">a</code></a> known type.
 </td>
@@ -590,7 +583,7 @@ dx         2 h
 								<code>integrateQNG</code>
 							</a>
 						</td>
-						<td> Calculate the integral of <a href="../scid/calculus/integrateQNG.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQNG.html#b"><code class="prettyprint lang-d">b</code></a>)
+						<td>Calculate the integral of <a href="../scid/calculus/integrateQNG.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/calculus/integrateQNG.html#b"><code class="prettyprint lang-d">b</code></a>)
     using <a href="../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a> simple
     non-adaptive automatic integrator, based on <a href="../scid/calculus/integrateQNG.html#a"><code class="prettyprint lang-d">a</code></a> sequence of rules with
     increasing degree of algebraic precision.
@@ -602,7 +595,7 @@ dx         2 h
 								<code>jacobian</code>
 							</a>
 						</td>
-						<td> Calculate the Jacobian matrix associated with a set of <i><a href="../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a></i> functions
+						<td>Calculate the Jacobian matrix associated with a set of <i><a href="../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a></i> functions
     in <i>n</i> variables using a central-difference approximation to the
     Jacobian.
 </td>
@@ -613,7 +606,7 @@ dx         2 h
 								<code>jacobian2</code>
 							</a>
 						</td>
-						<td> Calculate the Jacobian using forward-/backward-difference
+						<td>Calculate the Jacobian using forward-/backward-difference
     methods, also known as 2-point formulas.
 </td>
 					</tr>
@@ -633,7 +626,7 @@ dx         2 h
 								<code>IntegrationException</code>
 							</a>
 						</td>
-						<td> Exception thrown when an integration routine fails.
+						<td>Exception thrown when an integration routine fails.
 </td>
 					</tr>
 				</table>

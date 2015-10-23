@@ -77,21 +77,25 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Create a <a href="../../dstats/base/Perm.html"><code class="prettyprint lang-d">Perm</code></a> struct from a range or of a set of bounds.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 auto perm(T...)(
+								<br/>
 &nbsp;&nbsp;T stuff
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto p = perm([1,2,3]);  // All permutations of [1,2,3].
+<pre class="code"><code class="prettyprint lang-d">auto p = perm([1,2,3]);  // All permutations of [1,2,3].
 auto p = perm(5);  // All permutations of [0,1,2,3,4].
 auto p = perm(-1, 2); // All permutations of [-1, 0, 1].
-</pre>
+</code></pre>
 </section>
 
 			</section>

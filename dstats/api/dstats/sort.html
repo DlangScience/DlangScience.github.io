@@ -81,15 +81,12 @@ argument is a ulong*, increments the dereference of this ulong* by the bubble
 sort distance between the first argument and the sorted version of the first
 argument.  This is useful for some statistical calculations.
 </p>
-<section>
-<p>All sorting functions have the precondition that all parallel input arrays
+<section><p>All sorting functions have the precondition that all parallel input arrays
 must have the same length.
 </p>
-
 </section>
 
 			<section><section><h2>Notes</h2>
-
 <p>Comparison functions must be written such that compFun(x, x) == false.
 For example, "a &lt; b" is good, "a &lt;= b" is not.
 </p>
@@ -113,21 +110,19 @@ performance gains.  However, it comes at a price in terms of generality:
 <p>3.  All tuning and micro-optimization is done with ints and floats, not
     classes, large structs, strings, etc.
 </p>
-
 </section>
 <section><h2>Examples</h2>
-<pre class="code prettyprint lang-d">auto foo = [3, 1, 2, 4, 5].dup;
+<pre class="code"><code class="prettyprint lang-d">auto foo = [3, 1, 2, 4, 5].dup;
 auto bar = [8, 6, 7, 5, 3].dup;
 <a href="../dstats/sort/qsort.html">qsort</a>(foo, bar);
 assert(foo == [1, 2, 3, 4, 5]);
 assert(bar == [6, 7, 8, 5, 3]);
 auto baz = [1.0, 0, -1, -2, -3].dup;
-<a href="../dstats/sort/mergeSort.html">mergeSort</a>!("a > b")(bar, foo, baz);
+<a href="../dstats/sort/mergeSort.html">mergeSort</a>!("a &gt; b")(bar, foo, baz);
 assert(bar == [8, 7, 6, 5, 3]);
 assert(foo == [3, 2, 1, 4, 5]);
 assert(baz == [-1.0, 0, 1, -2, -3]);
-</pre>
-
+</code></pre>
 </section>
 <section><h2>Author</h2>
 <p>David Simcha

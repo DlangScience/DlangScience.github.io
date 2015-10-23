@@ -289,46 +289,56 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function solve_</h1>
 			<section>
-				<p> Solve one or more systems of n linear equations in n variables.
+				<p>Solve one or more systems of n linear equations in n variables.
 </p>
-<section>
-<p>    The set of equations is given on the form AX=B, where A
+<section><p>The set of equations is given on the form AX=B, where A
     is an n-by-n matrix and X and B are either vectors of
     length n (one system of n equations in n variables) or n-by-m
     matrices (m systems of n equations in n variables). Given A
     and B as input, this function returns X.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototypes</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Real[] solve_(MatrixViewA, Real)(
+								<br/>
 &nbsp;&nbsp;MatrixViewA a,
+								<br/>
 &nbsp;&nbsp;Real[] b
+								<br/>
 )
+								<br/>
 if (isMatrixView!MatrixViewA &amp;&amp; isFortranType!Real);
-
+								<br/>
+								<br/>
 MatrixViewB solve_(MatrixViewA, MatrixViewB)(
+								<br/>
 &nbsp;&nbsp;MatrixViewA a,
+								<br/>
 &nbsp;&nbsp;MatrixViewB b
+								<br/>
 )
-if (isMatrixView!MatrixViewA &amp;&amp; isMatrixView!(MatrixViewB, Storage.General));</pre>
+								<br/>
+if (isMatrixView!MatrixViewA &amp;&amp; isMatrixView!(MatrixViewB, Storage.General));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<p>    Solving <a href="../../scid/linalg/solve_.html#a"><code class="prettyprint lang-d">a</code></a> system of equations:
+<p>Solving <a href="../../scid/linalg/solve_.html#a"><code class="prettyprint lang-d">a</code></a> system of equations:
 </p>
-<pre class="code prettyprint lang-d">MatrixView!double <a href="../../scid/linalg/solve_.html#a">a</a> = ...
+<pre class="code"><code class="prettyprint lang-d">MatrixView!double <a href="../../scid/linalg/solve_.html#a">a</a> = ...
 double[] <a href="../../scid/linalg/solve_.html#b">b</a> = ...
 double[] x = <a href="../../scid/linalg/solve.html">solve</a>(<a href="../../scid/linalg/solve_.html#a">a</a>, <a href="../../scid/linalg/solve_.html#b">b</a>);
-</pre>
+</code></pre>
 <p>    Solving several systems of equations:
 </p>
-<pre class="code prettyprint lang-d">MatrixView!double <a href="../../scid/linalg/solve_.html#a">a</a> = ...
+<pre class="code"><code class="prettyprint lang-d">MatrixView!double <a href="../../scid/linalg/solve_.html#a">a</a> = ...
 MatrixView!double <a href="../../scid/linalg/solve_.html#b">b</a> = ...
 MatrixView!double x = <a href="../../scid/linalg/solve.html">solve</a>(<a href="../../scid/linalg/solve_.html#a">a</a>, <a href="../../scid/linalg/solve_.html#b">b</a>);
-</pre>
+</code></pre>
 </section>
 
 			</section>

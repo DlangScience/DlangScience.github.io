@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Reduces a Hermitian-definite generalized eigenproblem
 </p>
-<section>
-<p>Ax= lambda Bx,  ABx= lambda x,  or BAx= lambda x, to standard
+<section><p>Ax= lambda Bx,  ABx= lambda x,  or BAx= lambda x, to standard
 </p>
 
 <p>form,  where A and B are held in packed storage, and B has been
@@ -304,16 +303,27 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void chpgst_(
+								<br/>
 &nbsp;&nbsp;int* itype,
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* ap,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* bp,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

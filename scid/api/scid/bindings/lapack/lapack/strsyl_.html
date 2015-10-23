@@ -291,31 +291,49 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Solves the Sylvester matrix equation A X +/- X B=C where A
 </p>
-<section>
-<p>and B are upper quasi-triangular, and may be transposed.
+<section><p>and B are upper quasi-triangular, and may be transposed.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void strsyl_(
+								<br/>
 &nbsp;&nbsp;char* trana,
+								<br/>
 &nbsp;&nbsp;char* tranb,
+								<br/>
 &nbsp;&nbsp;int* isgn,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* c,
+								<br/>
 &nbsp;&nbsp;int* ldc,
+								<br/>
 &nbsp;&nbsp;float* scale,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int trana_len,
+								<br/>
 &nbsp;&nbsp;int tranb_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

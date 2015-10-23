@@ -80,8 +80,7 @@ $('#symbolSearchPane').show();
  determining how well a test statistic discriminates between two classes.
  The following assumptions are made in this implementation:
 </p>
-<section>
-<p> 1.  For some cutoff value c and test statistic T, your decision rule is of
+<section><p>1.  For some cutoff value c and test statistic T, your decision rule is of
      the form "Class A if T &gt; c, Class B if T &lt; c".
 </p>
 
@@ -94,12 +93,19 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double auroc(R1, R2)(
+								<br/>
 &nbsp;&nbsp;R1 classATs,
+								<br/>
 &nbsp;&nbsp;R2 classBTs
+								<br/>
 )
-if (isNumeric!(ElementType!R1) &amp;&amp; isNumeric!(ElementType!R2));</pre>
+								<br/>
+if (isNumeric!(ElementType!R1) &amp;&amp; isNumeric!(ElementType!R2));
+							</code>
+						</div>
 					</section>
 
 			</section>

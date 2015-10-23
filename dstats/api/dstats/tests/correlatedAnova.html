@@ -81,26 +81,30 @@ $('#symbolSearchPane').show();
  such that a given index represents the same subject in each range) or
  similarly as a range of ranges.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> correlatedAnova(T...)(
+								<br/>
 &nbsp;&nbsp;T dataIn
+								<br/>
 )
-if (allSatisfy!(isInputRange, T));</pre>
+								<br/>
+if (allSatisfy!(isInputRange, T));
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the F-statistic and P-value for the null that
  the the variable being measured did not vary across treatments against the
  alternative that it did.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Test the hypothesis that alcohol, loud music, caffeine and sleep
+<pre class="code"><code class="prettyprint lang-d">// Test the hypothesis that alcohol, loud music, caffeine and sleep
 // deprivation all have equivalent effects on programming ability.
 
 uint[] alcohol = [8,6,7,5,3,0,9];
@@ -111,8 +115,7 @@ uint[] loudMusic = [2,7,1,8,2,8,1];
 // no sleep, 2 under loud music.  Subject 1 had ability of 6 under alcohol,
 // 6 under caffeine, 1 under no sleep, and 7 under loud music, etc.
 auto result = correlatedAnova(alcohol, caffeine, noSleep, loudMusic);
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>"Concepts and Applications of Inferrential Statistics".

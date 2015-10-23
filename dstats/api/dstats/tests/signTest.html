@@ -86,13 +86,21 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> signTest(T)(
+								<br/>
 &nbsp;&nbsp;T data,
+								<br/>
 &nbsp;&nbsp;double mu,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+								<br/>
 )
-if (doubleInput!T &amp;&amp; is(typeof(data.front &lt; mu) == bool));</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; is(typeof(data.front &lt; mu) == bool));
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -105,18 +113,25 @@ if (doubleInput!T &amp;&amp; is(typeof(data.front &lt; mu) == bool));</pre>
  elements of <a href="../../dstats/tests/signTest.html#after"><code class="prettyprint lang-d">after</code></a>, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning that there is a significant
  difference in either direction.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> signTest(T, U)(
+								<br/>
 &nbsp;&nbsp;T before,
+								<br/>
 &nbsp;&nbsp;U after,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+								<br/>
 )
-if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; is(typeof(before.front &lt; after.front) == bool));</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; doubleInput!U &amp;&amp; is(typeof(before.front &lt; after.front) == bool));
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the proportion of elements of <a href="../../dstats/tests/signTest.html#before"><code class="prettyprint lang-d">before</code></a> that were

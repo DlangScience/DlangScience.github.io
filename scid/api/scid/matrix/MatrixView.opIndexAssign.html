@@ -289,10 +289,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function MatrixView.opIndexAssign</h1>
 			<section>
-				<p>    Assigns a <a href="../../scid/matrix/MatrixView.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to the element at row <a href="../../scid/matrix/MatrixView.opIndexAssign.html#i"><code class="prettyprint lang-d">i</code></a>, column <a href="../../scid/matrix/MatrixView.opIndexAssign.html#j"><code class="prettyprint lang-d">j</code></a>.
+				<p>Assigns a <a href="../../scid/matrix/MatrixView.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to the element at row <a href="../../scid/matrix/MatrixView.opIndexAssign.html#i"><code class="prettyprint lang-d">i</code></a>, column <a href="../../scid/matrix/MatrixView.opIndexAssign.html#j"><code class="prettyprint lang-d">j</code></a>.
 </p>
-<section>
-<p>    Unlike <a href="../../scid/matrix/MatrixView.opIndex.html"><code class="prettyprint lang-d">opIndex</code></a>(), this method checks that zero elements in
+<section><p>Unlike <a href="../../scid/matrix/MatrixView.opIndex.html"><code class="prettyprint lang-d">opIndex</code></a>(), this method checks that zero elements in
     a triangular <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> aren't assigned to, but only in non-release
     builds.
 </p>
@@ -300,12 +299,19 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T opIndexAssign(
+								<br/>
 &nbsp;&nbsp;T value,
+								<br/>
 &nbsp;&nbsp;size_t i,
+								<br/>
 &nbsp;&nbsp;size_t j
-) nothrow;</pre>
+								<br/>
+) nothrow;
+							</code>
+						</div>
 					</section>
 
 			</section>

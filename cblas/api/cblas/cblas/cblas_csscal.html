@@ -46,13 +46,21 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void cblas_csscal(
+								<br/>
 &nbsp;&nbsp;const(int) N,
+								<br/>
 &nbsp;&nbsp;const(std.<wbr/>complex.<wbr/>Complex!(float)) alpha,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* X,
+								<br/>
 &nbsp;&nbsp;const(int) incX
-) nothrow @nogc;</pre>
+								<br/>
+) nothrow @nogc;
+							</code>
+						</div>
 					</section>
 
 			</section>

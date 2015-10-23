@@ -289,39 +289,46 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAWC</h1>
 			<section>
-				<p> Calculate <a href="../../scid/calculus/integrateQAWC.html#a"><code class="prettyprint lang-d">a</code></a> Cauchy principal value integral.
+				<p>Calculate <a href="../../scid/calculus/integrateQAWC.html#a"><code class="prettyprint lang-d">a</code></a> Cauchy principal value integral.
 </p>
-<section>
-<p>    Use this to calculate the integral of <a href="../../scid/calculus/integrateQAWC.html#f"><code class="prettyprint lang-d">f</code></a>(x)/(x-<a href="../../scid/calculus/integrateQAWC.html#c"><code class="prettyprint lang-d">c</code></a>) over the finite
+<section><p>Use this to calculate the integral of <a href="../../scid/calculus/integrateQAWC.html#f"><code class="prettyprint lang-d">f</code></a>(x)/(x-<a href="../../scid/calculus/integrateQAWC.html#c"><code class="prettyprint lang-d">c</code></a>) over the finite
     interval (<a href="../../scid/calculus/integrateQAWC.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQAWC.html#b"><code class="prettyprint lang-d">b</code></a>), where <a href="../../scid/calculus/integrateQAWC.html#f"><code class="prettyprint lang-d">f</code></a>(x) is smooth on the entire
     interval and <a href="../../scid/calculus/integrateQAWC.html#c"><code class="prettyprint lang-d">c</code></a> is not one of the endpoints.
 </p>
 
 <p>    The strategy is globally adaptive.  Modified
-    <a href="http://en.wikipedia.org/wiki/Clenshaw%E2%80%93Curtis_quadrature">
-    Clenshaw–Curtis integration</a> is used on those intervals containing the point
+    <a href="http://en.wikipedia.org/wiki/Clenshaw%E2%80%93Curtis_quadrature">    Clenshaw–Curtis integration</a> is used on those intervals containing the point
     x = <a href="../../scid/calculus/integrateQAWC.html#c"><code class="prettyprint lang-d">c</code></a>.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a>!Real integrateQAWC(Func, Real)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real a,
+								<br/>
 &nbsp;&nbsp;Real b,
+								<br/>
 &nbsp;&nbsp;Real c,
+								<br/>
 &nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+								<br/>
 &nbsp;&nbsp;Real epsAbs = cast(Real)0
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code prettyprint lang-d">// Integrate cos(x-1)/(x-1) over the interval (0,3)
+<pre class="code"><code class="prettyprint lang-d">// Integrate cos(x-1)/(x-1) over the interval (0,3)
 real <a href="../../scid/calculus/integrateQAWC.html#f">f</a>(real x) { return cos(x-1); }
-auto i = integrateQAWC(&<a href="../../scid/calculus/integrateQAWC.html#f">f</a>, 0.0L, 3.0L, 1.0L, 1e-15L);
-</pre>
+auto i = integrateQAWC(&amp;<a href="../../scid/calculus/integrateQAWC.html#f">f</a>, 0.0L, 3.0L, 1.0L, 1e-15L);
+</code></pre>
 </section>
 
 			</section>

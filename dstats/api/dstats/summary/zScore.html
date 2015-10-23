@@ -86,20 +86,24 @@ $('#symbolSearchPane').show();
  <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>.  A z-score of an element in a <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> is defined as
  (element - <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a>(<a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>)) / <a href="../../dstats/summary/stdev.html"><code class="prettyprint lang-d">stdev</code></a>(<a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>).
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/summary/ZScore.html">ZScore</a>!T zScore(T)(
+								<br/>
 &nbsp;&nbsp;T range
+								<br/>
 )
-if (isForwardRange!T &amp;&amp; doubleInput!T);</pre>
+								<br/>
+if (isForwardRange!T &amp;&amp; doubleInput!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
-
-<p> If the data contained in the <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> is a sample of a larger population,
+<p>If the data contained in the <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> is a sample of a larger population,
  rather than an entire population, then technically, the results output
  from the <a href="../../dstats/summary/ZScore.html"><code class="prettyprint lang-d">ZScore</code></a> <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> are T statistics, not Z statistics.  This is because
  the sample <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a> and standard deviation are only estimates of the population
@@ -123,13 +127,21 @@ if (isForwardRange!T &amp;&amp; doubleInput!T);</pre>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/summary/ZScore.html">ZScore</a>!T zScore(T)(
+								<br/>
 &nbsp;&nbsp;T range,
+								<br/>
 &nbsp;&nbsp;double mean,
+								<br/>
 &nbsp;&nbsp;double sd
+								<br/>
 )
-if (isForwardRange!T &amp;&amp; doubleInput!T);</pre>
+								<br/>
+if (isForwardRange!T &amp;&amp; doubleInput!T);
+							</code>
+						</div>
 					</section>
 
 			</section>

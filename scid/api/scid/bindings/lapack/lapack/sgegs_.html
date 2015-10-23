@@ -291,35 +291,57 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the generalized eigenvalues, Schur form, and left and/or
 </p>
-<section>
-<p>right Schur vectors for <a href="../../../../scid/bindings/lapack/lapack/sgegs_.html#a"><code class="prettyprint lang-d">a</code></a> pair of nonsymmetric matrices
+<section><p>right Schur vectors for <a href="../../../../scid/bindings/lapack/lapack/sgegs_.html#a"><code class="prettyprint lang-d">a</code></a> pair of nonsymmetric matrices
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgegs_(
+								<br/>
 &nbsp;&nbsp;char* jobvsl,
+								<br/>
 &nbsp;&nbsp;char* jobvsr,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* alphar,
+								<br/>
 &nbsp;&nbsp;float* alphai,
+								<br/>
 &nbsp;&nbsp;float* betav,
+								<br/>
 &nbsp;&nbsp;float* vsl,
+								<br/>
 &nbsp;&nbsp;int* ldvsl,
+								<br/>
 &nbsp;&nbsp;float* vsr,
+								<br/>
 &nbsp;&nbsp;int* ldvsr,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int jobvsl_len,
+								<br/>
 &nbsp;&nbsp;int jobvsr_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

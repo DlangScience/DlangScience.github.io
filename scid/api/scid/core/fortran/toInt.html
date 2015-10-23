@@ -289,10 +289,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function toInt</h1>
 			<section>
-				<p> Convert an unsigned integer to a signed 32-bit integer.
+				<p>Convert an unsigned integer to a signed 32-bit integer.
 </p>
-<section>
-<p>    FORTRAN code typically uses 32-bit signed ints for things
+<section><p>FORTRAN code typically uses 32-bit signed ints for things
     like array lengths.  D array lengths, on the other hand,
     are uints in 32-bit mode, and ulongs in 64-bit mode.
     Use of this function is safer than inserting casts everywhere,
@@ -305,10 +304,15 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 int toInt(
+								<br/>
 &nbsp;&nbsp;ulong u
-) pure nothrow @safe;</pre>
+								<br/>
+) pure nothrow @safe;
+							</code>
+						</div>
 					</section>
 
 			</section>

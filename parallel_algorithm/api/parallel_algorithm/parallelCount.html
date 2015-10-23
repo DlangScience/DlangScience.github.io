@@ -43,14 +43,23 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 size_t parallelCount(alias pred, Range, E)(
+								<br/>
 &nbsp;&nbsp;Range r,
+								<br/>
 &nbsp;&nbsp;E value,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null,
+								<br/>
 &nbsp;&nbsp;size_t workUnitSize = size_t.max
+								<br/>
 )
-if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);</pre>
+								<br/>
+if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);
+							</code>
+						</div>
 					</section>
 
 			</section>
@@ -60,13 +69,21 @@ if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);</pre>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 size_t parallelCount(alias pred, Range)(
+								<br/>
 &nbsp;&nbsp;Range r,
+								<br/>
 &nbsp;&nbsp;TaskPool pool = null,
+								<br/>
 &nbsp;&nbsp;size_t workUnitSize = size_t.max
+								<br/>
 )
-if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);</pre>
+								<br/>
+if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);
+							</code>
+						</div>
 					</section>
 
 			</section>

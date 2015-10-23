@@ -84,20 +84,26 @@ $('#symbolSearchPane').show();
  arguments as the number of dimensions, and must return a floating point
  number.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/kerneldensity/KernelDensity.html">KernelDensity</a> fromCallable(C, R...)(
+								<br/>
 &nbsp;&nbsp;C kernel,
+								<br/>
 &nbsp;&nbsp;R ranges
+								<br/>
 )
-if (allSatisfy!(isInputRange, R));</pre>
+								<br/>
+if (allSatisfy!(isInputRange, R));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Create an estimate of the density of the joint distribution of
+<pre class="code"><code class="prettyprint lang-d">// Create an estimate of the density of the joint distribution of
 // hours sleep and programming skill.
 auto programmingSkill = [8,6,7,5,3,0,9];
 auto hoursSleep = [3,6,2,4,3,5,8];
@@ -109,11 +115,11 @@ static double myKernel(double x1, double x2) {
 }
 
 auto estimator = KernelDensity.fromCallable
-    (&myKernel, programmingSkill, hoursSleep);
+    (&amp;myKernel, programmingSkill, hoursSleep);
 
 // Estimate the density at programming skill 1, 2 hours sleep.
 auto density = estimator(1, 2);
-</pre>
+</code></pre>
 </section>
 
 			</section>

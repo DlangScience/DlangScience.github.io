@@ -83,32 +83,35 @@ forward range of numeric types to a numeric type.  The commonly used ones
 are median (default) and mean (less robust).  Trimmed mean is sometimes
 useful, but is currently not implemented in <a href="../../dstats/summary.html"><code class="prettyprint lang-d">dstats.summary</code></a>.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> levenesTest(alias central, T...)(
+								<br/>
 &nbsp;&nbsp;T data
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>References</h3>
 <p>Levene, Howard (1960). "Robust tests for equality of variances". in Ingram
 Olkin, Harold Hotelling et al. Contributions to Probability and Statistics:
 Essays in Honor of Harold Hotelling. Stanford University Press. pp. 278-292.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">int[] sample1 = [1,2,3,4,5];
+<pre class="code"><code class="prettyprint lang-d">int[] sample1 = [1,2,3,4,5];
 int[] sample2 = [100,200,300,400,500];
 auto result = levenesTest(sample1, sample2);
 
 // Clearly the variances are different between these two samples.
 assert( approxEqual(result.testStat, 10.08));
 assert( approxEqual(result.p, 0.01310));
-</pre>
+</code></pre>
 </section>
 
 			</section>

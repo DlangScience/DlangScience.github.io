@@ -81,18 +81,25 @@ way the data is standardized, no intercept term should be included in x
 implicitly included and returned in the first element of the returned array.
 Usage is otherwise identical.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double[] logisticRegressPenalized(Y, X...)(
+								<br/>
 &nbsp;&nbsp;Y yIn,
+								<br/>
 &nbsp;&nbsp;X xIn,
+								<br/>
 &nbsp;&nbsp;double lasso,
+								<br/>
 &nbsp;&nbsp;double ridge
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>Setting <a href="../../dstats/regress/logisticRegressPenalized.html#lasso"><code class="prettyprint lang-d">lasso</code></a> equal to zero is equivalent to performing <a href="../../dstats/regress/logisticRegressPenalized.html#ridge"><code class="prettyprint lang-d">ridge</code></a> regression.
@@ -100,15 +107,12 @@ double[] logisticRegressPenalized(Y, X...)(
        <a href="../../dstats/regress/logisticRegressBeta.html"><code class="prettyprint lang-d">logisticRegressBeta</code></a> algorithm is optimized for memory efficiency and
        large samples.  This algorithm is optimized for large feature sets.
 </p>
-
 </section>
 <section><h3>Returns</h3>
 <p>The beta coefficients for the regression model.
 </p>
-
 </section>
 <section><h3>References</h3>
-
 <p>Friedman J, et al Pathwise coordinate optimization. Ann. Appl. Stat.
 </p>
 <p>2007;2:302-332.
@@ -127,7 +131,6 @@ Progress in Biomedical Optics and Images vol. 4266, pp. 187-198
 of reduced rank data.  Computational Statistics &amp; Data Analysis Volume 40,
 Issue 2, 28 August 2002, Pages 253-262
 </p>
-
 </section>
 <section><h3>http</h3>
 <p>//en.wikipedia.org/wiki/Sherman%E2%80%93Morrison_formula

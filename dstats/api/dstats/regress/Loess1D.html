@@ -83,7 +83,7 @@ loess regression with one predictor variable.
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d"><code class="prettyprint lang-d">Object</code></code>
+								<code class="prettyprint lang-d">Object</code>
  (base class)
 							</li>
 						</ul>
@@ -140,7 +140,7 @@ loess regression with one predictor variable.
 										<code>computeRobustWeights</code>
 									</a>
 								</td>
-								<td>    Compute the weights for robust loess, for all <a href="../../dstats/regress/Loess1D.computeRobustWeights.html#robustness"><code class="prettyprint lang-d">robustness</code></a> levels &lt;= the
+								<td>Compute the weights for robust loess, for all <a href="../../dstats/regress/Loess1D.computeRobustWeights.html#robustness"><code class="prettyprint lang-d">robustness</code></a> levels &lt;= the
     <a href="../../dstats/regress/Loess1D.computeRobustWeights.html#robustness"><code class="prettyprint lang-d">robustness</code></a> parameter.  This computation is embarrassingly parallel, so if a
     TaskPool is provided it will be parallelized.
 </td>
@@ -151,7 +151,7 @@ loess regression with one predictor variable.
 										<code>predict</code>
 									</a>
 								</td>
-								<td>    Predict the value of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> when <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> == <a href="../../dstats/regress/Loess1D.predict.html#point"><code class="prettyprint lang-d">point</code></a>, using <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> iterations
+								<td>Predict the value of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> when <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> == <a href="../../dstats/regress/Loess1D.predict.html#point"><code class="prettyprint lang-d">point</code></a>, using <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> iterations
     of the biweight procedure outlined in the reference to make the
     estimates more robust.
 </td>
@@ -162,7 +162,7 @@ loess regression with one predictor variable.
 										<code>predictions</code>
 									</a>
 								</td>
-								<td>    Obtain smoothed <code class="prettyprint lang-d">predictions</code> of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> at the values of <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> provided on creation
+								<td>Obtain smoothed <code class="prettyprint lang-d">predictions</code> of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> at the values of <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> provided on creation
     of this object, for the given level of <a href="../../dstats/regress/Loess1D.predictions.html#robustness"><code class="prettyprint lang-d">robustness</code></a>.  Evaluating
     these is computationally expensive and may be parallelized by
     providing a TaskPool object.

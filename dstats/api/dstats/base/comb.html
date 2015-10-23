@@ -77,21 +77,26 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Create a <a href="../../dstats/base/Comb.html"><code class="prettyprint lang-d">Comb</code></a> struct from a range or of a set of bounds.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 auto comb(T)(
+								<br/>
 &nbsp;&nbsp;T stuff,
+								<br/>
 &nbsp;&nbsp;uint r
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto c1 = comb([1,2,3], 2);  // Any two elements from [1,2,3].
+<pre class="code"><code class="prettyprint lang-d">auto c1 = comb([1,2,3], 2);  // Any two elements from [1,2,3].
 auto c2 = comb(5, 3);  // Any three elements from [0,1,2,3,4].
-</pre>
+</code></pre>
 </section>
 
 			</section>

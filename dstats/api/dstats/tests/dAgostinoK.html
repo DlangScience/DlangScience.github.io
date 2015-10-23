@@ -79,16 +79,21 @@ $('#symbolSearchPane').show();
  the assumption that normally distributed values will have a sample skewness
  and sample kurtosis very close to zero.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> dAgostinoK(T)(
+								<br/>
 &nbsp;&nbsp;T range
+								<br/>
 )
-if (doubleIterable!T);</pre>
+								<br/>
+if (doubleIterable!T);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the K statistic, which is Chi-Square distributed
@@ -97,7 +102,6 @@ if (doubleIterable!T);</pre>
  that skewness and kurtosis are near zero.  A normal distribution always has
  skewness and kurtosis that converge to zero as sample size goes to infinity.
 </p>
-
 </section>
 <section><h3>Notes</h3>
 <p>Contrary to popular belief, tests for normality should usually
@@ -107,10 +111,9 @@ if (doubleIterable!T);</pre>
  likely not be very powerful, and a priori knowledge or simple inspection
  of the data is often a better idea.
 </p>
-
 </section>
 <section><h3>References</h3>
-<p> D'Agostino, Ralph B., Albert Belanger, and Ralph B. D'Agostino, Jr.
+<p>D'Agostino, Ralph B., Albert Belanger, and Ralph B. D'Agostino, Jr.
  "A Suggestion for Using Powerful and Informative Tests of Normality",
  The American Statistician, Vol. 44, No. 4. (Nov., 1990), pp. 316-321.
 </p>

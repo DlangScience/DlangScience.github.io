@@ -81,8 +81,7 @@ $('#symbolSearchPane').show();
  function is assumed to be symmetric about zero, to take its maximum
  value at zero and to be unimodal.
 </p>
-<section>
-<p> <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#edgeBuffer"><code class="prettyprint lang-d">edgeBuffer</code></a> determines how much space below and above the smallest and
+<section><p><a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#edgeBuffer"><code class="prettyprint lang-d">edgeBuffer</code></a> determines how much space below and above the smallest and
  largest observed value will be allocated when doing the binning.
  Values less than reduce!min(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#range"><code class="prettyprint lang-d">range</code></a>) - <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#edgeBuffer"><code class="prettyprint lang-d">edgeBuffer</code></a> or greater than
  reduce!max(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#range"><code class="prettyprint lang-d">range</code></a>) + <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#edgeBuffer"><code class="prettyprint lang-d">edgeBuffer</code></a> will be assigned a density of zero.
@@ -93,25 +92,32 @@ $('#symbolSearchPane').show();
 <p> The bandwidth of the <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> is indirectly selected by parametrizing the
  <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> function.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/kerneldensity/KernelDensity1D.html">KernelDensity1D</a> fromCallable(C, R)(
+								<br/>
 &nbsp;&nbsp;scope C kernel,
+								<br/>
 &nbsp;&nbsp;R range,
+								<br/>
 &nbsp;&nbsp;double edgeBuffer = (double).nan
+								<br/>
 )
-if (isForwardRange!R &amp;&amp; is(typeof(kernel(2.00000)) : double));</pre>
+								<br/>
+if (isForwardRange!R &amp;&amp; is(typeof(kernel(2.00000)) : double));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto randNums = randArray!rNorm(1_000, 0, 1);
+<pre class="code"><code class="prettyprint lang-d">auto randNums = randArray!rNorm(1_000, 0, 1);
 auto <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel">kernel</a> = parametrize!normalPDF(0, 0.01);
 auto density = <a href="../../dstats/kerneldensity/KernelDensity1D.html">KernelDensity1D</a>(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel">kernel</a>, randNums);
 writeln(normalPDF(1, 0, 1), "  ", density(1)).  // Should be about the same.
-</pre>
+</code></pre>
 </section>
 
 			</section>

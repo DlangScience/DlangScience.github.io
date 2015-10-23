@@ -289,10 +289,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function bracketRoot</h1>
 			<section>
-				<p> Bracket a root of the function <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
+				<p>Bracket a root of the function <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
 </p>
-<section>
-<p>    If a function <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x) is continuous on an interval [x1,x2],
+<section><p>If a function <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x) is continuous on an interval [x1,x2],
     and <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x1) and <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x2) have opposite sign, we know the function
     must pass through zero somewhere in the interval.
     The points x1 and x2 are then said to 'bracket' the
@@ -307,24 +306,32 @@ $('#symbolSearchPane').show();
     a root also if the root is located exactly at x1 and/or x2,
     i.e. if <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x1)=0 and/or <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x2)=0.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/nonlinear/RootBracket.html">RootBracket</a>!(T,ReturnType!F) bracketRoot(F, T)(
+								<br/>
 &nbsp;&nbsp;scope F f,
+								<br/>
 &nbsp;&nbsp;in T x0,
+								<br/>
 &nbsp;&nbsp;in T scale,
+								<br/>
 &nbsp;&nbsp;in T xMin = -T.infinity,
+								<br/>
 &nbsp;&nbsp;in T xMax = T.infinity
+								<br/>
 )
-if (isFloatingPoint!T &amp;&amp; isUnaryFunction!(F, T));</pre>
+								<br/>
+if (isFloatingPoint!T &amp;&amp; isUnaryFunction!(F, T));
+							</code>
+						</div>
 					</section>
 <section><h3>Details</h3>
-
-<p>    This function will start by evaluating <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x) in the points
+<p>This function will start by evaluating <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x) in the points
     <a href="../../scid/nonlinear/bracketRoot.html#x0"><code class="prettyprint lang-d">x0</code></a> and <a href="../../scid/nonlinear/bracketRoot.html#x0"><code class="prettyprint lang-d">x0</code></a>+<a href="../../scid/nonlinear/bracketRoot.html#scale"><code class="prettyprint lang-d">scale</code></a> and see if those
     points bracket a root of the given function.  If not, the interval
     is expanded geometrically (i.e. the distance between the points

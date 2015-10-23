@@ -79,26 +79,30 @@ $('#symbolSearchPane').show();
  estimator.  This is 1.06 * min(stdev(<a href="../../dstats/kerneldensity/scottBandwidth.html#data"><code class="prettyprint lang-d">data</code></a>), interquartileRange(<a href="../../dstats/kerneldensity/scottBandwidth.html#data"><code class="prettyprint lang-d">data</code></a>) / 1.34)
  N ^^ -0.2.  R must be a forward range of numeric types.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double scottBandwidth(R)(
+								<br/>
 &nbsp;&nbsp;R data
+								<br/>
 )
-if (isForwardRange!R &amp;&amp; is(ElementType!R : double));</pre>
+								<br/>
+if (isForwardRange!R &amp;&amp; is(ElementType!R : double));
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">immutable bandwidth = scottBandwidth(<a href="../../dstats/kerneldensity/scottBandwidth.html#data">data</a>);
+<pre class="code"><code class="prettyprint lang-d">immutable bandwidth = scottBandwidth(<a href="../../dstats/kerneldensity/scottBandwidth.html#data">data</a>);
 auto kernel = parametrize!normalPDF(0, bandwidth);
 auto kde = <a href="../../dstats/kerneldensity/KernelDensity1D.html">KernelDensity1D</a>(<a href="../../dstats/kerneldensity/scottBandwidth.html#data">data</a>, kernel);
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
-<p> Scott, D. W. (1992) Multivariate Density Estimation: Theory, Practice,
+<p>Scott, D. W. (1992) Multivariate Density Estimation: Theory, Practice,
  and Visualization. Wiley.
 </p>
 </section>

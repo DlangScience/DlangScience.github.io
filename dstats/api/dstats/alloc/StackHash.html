@@ -78,8 +78,7 @@ $('#symbolSearchPane').show();
 				<p>A hash table that allocates its memory on <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  Good for building a
  temporary hash tables that will not escape the current scope.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Constructors</h3>
@@ -215,7 +214,7 @@ $('#symbolSearchPane').show();
 										<code>get</code>
 									</a>
 								</td>
-								<td>    Attempt to look up a <a href="../../dstats/alloc/StackHash.get.html#key"><code class="prettyprint lang-d">key</code></a> and return a default value if the <a href="../../dstats/alloc/StackHash.get.html#key"><code class="prettyprint lang-d">key</code></a> is not
+								<td>Attempt to look up a <a href="../../dstats/alloc/StackHash.get.html#key"><code class="prettyprint lang-d">key</code></a> and return a default value if the <a href="../../dstats/alloc/StackHash.get.html#key"><code class="prettyprint lang-d">key</code></a> is not
     present.
 </td>
 							</tr>
@@ -336,26 +335,25 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto <a href="../../dstats/alloc/StackHash.alloc.html">alloc</a> = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
+<pre class="code"><code class="prettyprint lang-d">auto <a href="../../dstats/alloc/StackHash.alloc.html">alloc</a> = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
 auto ss = StackHash!(uint)(5, <a href="../../dstats/alloc/StackHash.alloc.html">alloc</a>);
 foreach(i; 0..5) {
     ss[i]++;
 }
 assert(ss[3] == 1);
-</pre>
-
+</code></pre>
 </section>
 <section><h3>Warning</h3>
-<p> This implementation places removed nodes on an internal free list and
+<p>This implementation places removed nodes on an internal free list and
  recycles them, since there is no way to delete <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>-allocated data
  in a non-LIFO order.  Therefore, you may not retain the address of a
  variable stored in a <code class="prettyprint lang-d">StackHash</code> after deleting it from the StachHash.
  For example, DO NOT do this:
 </p>
-<pre class="code prettyprint lang-d">SomeType* myPtr = &(myStackHash["foo"]);
+<pre class="code"><code class="prettyprint lang-d">SomeType* myPtr = &amp;(myStackHash["foo"]);
 myStackHash.remove("foo");
 *myPtr = someValue;
-</pre>
+</code></pre>
 </section>
 
 			</section>

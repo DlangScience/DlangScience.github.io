@@ -289,29 +289,37 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function jacobian2</h1>
 			<section>
-				<p> Calculate the Jacobian using forward-/backward-difference
+				<p>Calculate the Jacobian using forward-/backward-difference
     methods, also known as 2-point formulas.
 </p>
-<section>
-<p>    This is less accurate than the central-difference method
+<section><p>This is less accurate than the central-difference method
     used in the <a href="../../scid/calculus/jacobian.html"><code class="prettyprint lang-d">jacobian</code></a>() function, but requires only half
     as many function evaluations. The relative accuracy is,
     at best, on the order of sqrt(real.epsilon).
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/matrix/MatrixView.html">MatrixView</a>!Real jacobian2(Real, Func)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;int m,
+								<br/>
 &nbsp;&nbsp;Real[] x,
+								<br/>
 &nbsp;&nbsp;real scale = 1.00000,
+								<br/>
 &nbsp;&nbsp;Real[] fx = null,
+								<br/>
 &nbsp;&nbsp;Real[] buffer = null
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -320,32 +328,31 @@ $('#symbolSearchPane').show();
             function takes a second vector parameter, this is assumed to
             be a <a href="../../scid/calculus/jacobian2.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the return value, and will be used as such.
 </td></tr>
-<tr><td id="m">m</td><td> The number of functions in $(D <a href="../../scid/calculus/jacobian2.html#f"><code class="prettyprint lang-d">f</code></a>).
+<tr><td id="m">m</td><td> The number of functions in <a href="../../scid/calculus/jacobian2.html#f"><code class="prettyprint lang-d">f</code></a>.
 </td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.
 </td></tr>
-<tr><td id="scale">scale</td><td> $(D abs(<a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a>)) is the characteristic <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> of the
+<tr><td id="scale">scale</td><td> abs(<a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a>) is the characteristic <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> of the
             function, and the sign of <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> determines which
-            differentiation method is used. If $(D <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a>) is
+            differentiation method is used. If <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> is
             negative, the backward difference method is used, and
             if it is positive, forward differences are used.
             (optional)
 </td></tr>
-<tr><td id="fx">fx</td><td> The result of evaluating the function at the point $(D <a href="../../scid/calculus/jacobian2.html#x"><code class="prettyprint lang-d">x</code></a>).
+<tr><td id="fx">fx</td><td> The result of evaluating the function at the point <a href="../../scid/calculus/jacobian2.html#x"><code class="prettyprint lang-d">x</code></a>.
             Providing this saves one function evaluation if you
             for some reason have already calculated the value. (optional)
 </td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/jacobian2.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least $(I <a href="../../scid/calculus/jacobian2.html#m"><code class="prettyprint lang-d">m</code></a>)*$(I n), for storing the calculated
-            Jacobian matrix. (optional)
-</td></tr>
+<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/jacobian2.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least <i><a href="../../scid/calculus/jacobian2.html#m"><code class="prettyprint lang-d">m</code></a></i>*<i>n</i>, for storing the calculated
+            Jacobian matrix. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Continuing with the example for the <a href="../../scid/calculus/jacobian.html">jacobian</a>() function,
+<pre class="code"><code class="prettyprint lang-d">// Continuing with the example for the <a href="../../scid/calculus/jacobian.html">jacobian</a>() function,
 // we make it even faster by using a 2-point formula.
 auto gp = g(p);
-auto jFastest = jacobian2(&g, p, 1.0, gp, <a href="../../scid/calculus/jacobian2.html#buffer">buffer</a>, workspace);
-</pre>
+auto jFastest = jacobian2(&amp;g, p, 1.0, gp, <a href="../../scid/calculus/jacobian2.html#buffer">buffer</a>, workspace);
+</code></pre>
 </section>
 
 			</section>

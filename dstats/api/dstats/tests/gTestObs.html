@@ -81,17 +81,23 @@ values in <a href="../../dstats/tests/gTestObs.html#y"><code class="prettyprint 
 to <a href="../../dstats/tests/chiSquareObs.html"><code class="prettyprint lang-d">chiSquareObs</code></a>.  For an otherwise identical test that assumes the data has
 already been tabulated into a contingency table, see <a href="../../dstats/tests/gTestContingency.html"><code class="prettyprint lang-d">gTestContingency</code></a>.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/GTestRes.html">GTestRes</a> gTestObs(T, U)(
+								<br/>
 &nbsp;&nbsp;T x,
+								<br/>
 &nbsp;&nbsp;U y
+								<br/>
 )
-if (isInputRange!T &amp;&amp; isInputRange!U);</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; isInputRange!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This test can be thought of as a test for nonzero mutual information

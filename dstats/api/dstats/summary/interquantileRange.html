@@ -81,25 +81,30 @@ $('#symbolSearchPane').show();
  apparently the most common interquantile range in common usage.)
  Using a <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> value of 0.2 or 0.8 will give the interquntile range.
 </p>
-<section>
-<p> If the <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> point falls between two indices, linear interpolation is
+<section><p>If the <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> point falls between two indices, linear interpolation is
  used.
 </p>
 
 <p> This function is somewhat more efficient than simply finding the upper and
  lower <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> and subtracting them.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double interquantileRange(R)(
+								<br/>
 &nbsp;&nbsp;R data,
+								<br/>
 &nbsp;&nbsp;double quantile = 0.25
+								<br/>
 )
-if (doubleInput!R);</pre>
+								<br/>
+if (doubleInput!R);
+							</code>
+						</div>
 					</section>
 <section><h3>Tip</h3>
 <p>A <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> of 0 or 1 is handled as a special case and will compute the

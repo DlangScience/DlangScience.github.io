@@ -83,18 +83,25 @@ $('#symbolSearchPane').show();
 				<p>Same as overload, but uses pre-computed correlation coefficient and sample
 size instead of computing them.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/ConfInt.html">ConfInt</a> pearsonCorTest()(
+								<br/>
 &nbsp;&nbsp;double cor,
+								<br/>
 &nbsp;&nbsp;double N,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;double confLevel = 0.95
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This is a template only because of DMD Bug 2972.
@@ -109,26 +116,33 @@ different from some 0.  Alternatives are <a href="../../dstats/tests/Alt.less.ht
 (pearsonCor(<a href="../../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) &lt; 0), <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a> (pearsonCor(<a href="../../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>)
  0) and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> (pearsonCor(<a href="../../dstats/tests/pearsonCorTest.html#range1"><code class="prettyprint lang-d">range1</code></a>, <a href="../../dstats/tests/pearsonCorTest.html#range2"><code class="prettyprint lang-d">range2</code></a>) != 0).
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/ConfInt.html">ConfInt</a> pearsonCorTest(T, U)(
+								<br/>
 &nbsp;&nbsp;T range1,
+								<br/>
 &nbsp;&nbsp;U range2,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;double confLevel = 0.95
+								<br/>
 )
-if (doubleInput!T &amp;&amp; doubleInput!U);</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; doubleInput!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> of the estimated Pearson correlation of the two ranges,
 the P-value against the given alternative, and the confidence interval of
 the correlation at the level specified by <a href="../../dstats/tests/pearsonCorTest.html#confLevel"><code class="prettyprint lang-d">confLevel</code></a>.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Pearson_correlation

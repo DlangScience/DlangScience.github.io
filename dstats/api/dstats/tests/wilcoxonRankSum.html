@@ -82,27 +82,34 @@ $('#symbolSearchPane').show();
  <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a> means <a href="../../dstats/tests/wilcoxonRankSum.html#sample1"><code class="prettyprint lang-d">sample1</code></a> is stochastically less than or greater than
  <a href="../../dstats/tests/wilcoxonRankSum.html#sample2"><code class="prettyprint lang-d">sample2</code></a>.
 </p>
-<section>
-<p> <a href="../../dstats/tests/wilcoxonRankSum.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> is the threshold value of (n1 + n2) at which this function
+<section><p><a href="../../dstats/tests/wilcoxonRankSum.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> is the threshold value of (n1 + n2) at which this function
  switches from exact to approximate computation of the p-value.  Do not set
  <a href="../../dstats/tests/wilcoxonRankSum.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> to more than 200, as the exact
  calculation is both very slow and not numerically stable past this point,
  and the asymptotic calculation is very good for N this large.  To disable
  exact calculation entirely, set <a href="../../dstats/tests/wilcoxonRankSum.html#exactThresh"><code class="prettyprint lang-d">exactThresh</code></a> to 0.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> wilcoxonRankSum(T, U)(
+								<br/>
 &nbsp;&nbsp;T sample1,
+								<br/>
 &nbsp;&nbsp;U sample2,
+								<br/>
 &nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+								<br/>
 &nbsp;&nbsp;uint exactThresh = 50
+								<br/>
 )
-if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; is(typeof(sample1.front &lt; sample2.front) == bool) &amp;&amp; is(CommonType!(ElementType!T, ElementType!U)));</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; is(typeof(sample1.front &lt; sample2.front) == bool) &amp;&amp; is(CommonType!(ElementType!T, ElementType!U)));
+							</code>
+						</div>
 					</section>
 <section><h3>Notes</h3>
 <p>Exact p-value computation is never used when ties are present in the
@@ -114,13 +121,11 @@ if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; is(typeof(sample1.front 
 
 <p> This test is also known as the Mann-Whitney U test.
 </p>
-
 </section>
 <section><h3>Returns</h3>
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the W test statistic and the P-value against
  the given alternative.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U

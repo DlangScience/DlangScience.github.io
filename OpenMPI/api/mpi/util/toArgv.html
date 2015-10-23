@@ -42,19 +42,23 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function toArgv</h1>
 			<section>
-				<p> Convert D's string[] <a href="../../mpi/util/toArgv.html#args"><code class="prettyprint lang-d">args</code></a> to a correct C char** argv.
+				<p>Convert D's string[] <a href="../../mpi/util/toArgv.html#args"><code class="prettyprint lang-d">args</code></a> to a correct C char** argv.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 char** toArgv(
+								<br/>
 &nbsp;&nbsp;string[] args
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Example</h3>
-
-<pre class="code prettyprint lang-d">auto <a href="../../mpi/util/toArgv.html#args">args</a> = ["hello", "world"];
+<pre class="code"><code class="prettyprint lang-d">auto <a href="../../mpi/util/toArgv.html#args">args</a> = ["hello", "world"];
 auto argv = args.toArgv;
 
 foreach(i, arg; <a href="../../mpi/util/toArgv.html#args">args</a>)
@@ -63,7 +67,8 @@ foreach(i, arg; <a href="../../mpi/util/toArgv.html#args">args</a>)
     assert(argv[i][<a href="../../mpi/util/toArgv.html#args">args</a>[i].length] == 0);
 }
 assert(argv[args.length] == null);
-</pre>
+
+</code></pre>
 </section>
 
 			</section>

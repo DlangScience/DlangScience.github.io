@@ -80,32 +80,36 @@ of monotonic association and can be defined in terms of the
 bubble sort distance, or the number of swaps that would be needed in a
 bubble sort to sort <a href="../../dstats/cor/kendallCor.html#input2"><code class="prettyprint lang-d">input2</code></a> into the same order as <a href="../../dstats/cor/kendallCor.html#input1"><code class="prettyprint lang-d">input1</code></a>.
 </p>
-<section>
-<p>Since a copy of the inputs is made anyhow because they need to be sorted,
+<section><p>Since a copy of the inputs is made anyhow because they need to be sorted,
 this function can work with any input range.  However, the ranges must
 have the same length.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double kendallCor(T, U)(
+								<br/>
 &nbsp;&nbsp;T input1,
+								<br/>
 &nbsp;&nbsp;U input2
+								<br/>
 )
-if (isInputRange!T &amp;&amp; isInputRange!U);</pre>
+								<br/>
+if (isInputRange!T &amp;&amp; isInputRange!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
-
 <p>As an optimization, when a range is a SortedRange with predicate "a &lt; b",
 it is assumed already sorted and not sorted a second time by this function.
 This is useful when applying this function multiple times with one of the
 arguments the same every time:
 </p>
 
-<pre class="code prettyprint lang-d">auto lhs = randArray!rNorm(1_000, 0, 1);
+<pre class="code"><code class="prettyprint lang-d">auto lhs = randArray!rNorm(1_000, 0, 1);
 auto indices = new size_t[1_000];
 makeIndex(lhs, indices);
 
@@ -121,8 +125,7 @@ foreach(i; 0..1_000) {
     auto rhsRearranged = indexed(rhs, indices);
     assert(kendallCor(lhsSorted, rhsRearranged) == kendallCor(lhs, rhs));
 }
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>A Computer Method for Calculating Kendall's Tau with Ungrouped Data,

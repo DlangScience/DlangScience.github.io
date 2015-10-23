@@ -75,17 +75,23 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.uninitializedArray</h1>
 			<section>
-				<p>    Same as <a href="../../dstats/alloc/RegionAllocator.newArray.html"><code class="prettyprint lang-d">newArray</code></a>, except skips initialization of elements for
+				<p>Same as <a href="../../dstats/alloc/RegionAllocator.newArray.html"><code class="prettyprint lang-d">newArray</code></a>, except skips initialization of elements for
     performance reasons.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 auto uninitializedArray(T, I...)(
+								<br/>
 &nbsp;&nbsp;I sizes
+								<br/>
 )
-if (allSatisfy!(isIntegral, I));</pre>
+								<br/>
+if (allSatisfy!(isIntegral, I));
+							</code>
+						</div>
 					</section>
 
 			</section>

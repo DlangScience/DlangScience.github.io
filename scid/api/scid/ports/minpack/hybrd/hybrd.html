@@ -289,44 +289,71 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function hybrd</h1>
 			<section>
-				<p> The purpose of <code class="prettyprint lang-d">hybrd</code> is to find a zero of a system of
+				<p>The purpose of <code class="prettyprint lang-d">hybrd</code> is to find a zero of a system of
     <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> nonlinear functions in <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> variables by a modification
     of the Powell Hybrid Method. The user must provide a
     function which calculates the functions. The Jacobian is
     then calculated by a forward-difference approximation.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void hybrd(Real, Func)(
+								<br/>
 &nbsp;&nbsp;Func fcn,
+								<br/>
 &nbsp;&nbsp;size_t n,
+								<br/>
 &nbsp;&nbsp;Real* x,
+								<br/>
 &nbsp;&nbsp;Real* fvec,
+								<br/>
 &nbsp;&nbsp;Real xtol,
+								<br/>
 &nbsp;&nbsp;uint maxfev,
+								<br/>
 &nbsp;&nbsp;size_t ml,
+								<br/>
 &nbsp;&nbsp;size_t mu,
+								<br/>
 &nbsp;&nbsp;Real epsfcn,
+								<br/>
 &nbsp;&nbsp;Real* diag,
+								<br/>
 &nbsp;&nbsp;int mode,
+								<br/>
 &nbsp;&nbsp;Real factor,
+								<br/>
 &nbsp;&nbsp;int nprint,
+								<br/>
 &nbsp;&nbsp;out int info,
+								<br/>
 &nbsp;&nbsp;out uint nfev,
+								<br/>
 &nbsp;&nbsp;Real* fjac,
+								<br/>
 &nbsp;&nbsp;size_t ldfjac,
+								<br/>
 &nbsp;&nbsp;Real* r,
+								<br/>
 &nbsp;&nbsp;size_t lr,
+								<br/>
 &nbsp;&nbsp;Real* qtf,
+								<br/>
 &nbsp;&nbsp;Real* wa1,
+								<br/>
 &nbsp;&nbsp;Real* wa2,
+								<br/>
 &nbsp;&nbsp;Real* wa3,
+								<br/>
 &nbsp;&nbsp;Real* wa4
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

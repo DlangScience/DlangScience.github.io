@@ -289,31 +289,39 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function r1mpyq</h1>
 			<section>
-				<p> Given an <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a> matrix A, this subroutine computes AQ where
+				<p>Given an <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a> matrix A, this subroutine computes AQ where
     Q is the product of 2*(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>-1) transformations
 </p>
-<section><pre class="code prettyprint lang-d">gv(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n">n</a>-1)*...*gv(1)*gw(1)*...*gw(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n">n</a>-1)
-</pre>
+<section><pre class="code"><code class="prettyprint lang-d">gv(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n">n</a>-1)*...*gv(1)*gw(1)*...*gw(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n">n</a>-1)
+</code></pre>
 <p>    and gv(i), gw(i) are Givens rotations in the (i,<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>) plane which
     eliminate elements in the i-th and <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>-th planes, respectively.
     Q itself is not given, rather the information to recover the
     gv, gw rotations is supplied.
 </p>
-
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void r1mpyq(Real)(
+								<br/>
 &nbsp;&nbsp;size_t m,
+								<br/>
 &nbsp;&nbsp;size_t n,
+								<br/>
 &nbsp;&nbsp;Real* a,
+								<br/>
 &nbsp;&nbsp;size_t lda,
+								<br/>
 &nbsp;&nbsp;Real* v,
+								<br/>
 &nbsp;&nbsp;Real* w
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

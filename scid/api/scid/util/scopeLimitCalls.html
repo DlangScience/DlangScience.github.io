@@ -289,23 +289,22 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function scopeLimitCalls</h1>
 			<section>
-				<p> Limit the number of times a function can be called.
+				<p>Limit the number of times a function can be called.
 </p>
-<section>
-<p>    Given a delegate <a href="../../scid/util/scopeLimitCalls.html#dg"><code class="prettyprint lang-d">dg</code></a> and an integer <a href="../../scid/util/scopeLimitCalls.html#maxCalls"><code class="prettyprint lang-d">maxCalls</code></a>, this function
+<section><p>Given a delegate <a href="../../scid/util/scopeLimitCalls.html#dg"><code class="prettyprint lang-d">dg</code></a> and an integer <a href="../../scid/util/scopeLimitCalls.html#maxCalls"><code class="prettyprint lang-d">maxCalls</code></a>, this function
     returns a functor with the same parameter and return types as <a href="../../scid/util/scopeLimitCalls.html#dg"><code class="prettyprint lang-d">dg</code></a>,
     and that forwards up to <a href="../../scid/util/scopeLimitCalls.html#maxCalls"><code class="prettyprint lang-d">maxCalls</code></a> calls to <a href="../../scid/util/scopeLimitCalls.html#dg"><code class="prettyprint lang-d">dg</code></a>.  On the <a href="../../scid/util/scopeLimitCalls.html#maxCalls"><code class="prettyprint lang-d">maxCalls</code></a>+1th
     call it throws an exception.  This is useful for algorithms such
     as <a href="../../scid/nonlinear/findRoot.html"><code class="prettyprint lang-d">scid.nonlinear.findRoot</code></a>() which may require an arbitrary
     number of function calls to complete.
 </p>
-<pre class="code prettyprint lang-d">void f(int i) { ... }
-auto g = <a href="../../scid/util/limitCalls.html">limitCalls</a>(&f, 2);
+<pre class="code"><code class="prettyprint lang-d">void f(int i) { ... }
+auto g = <a href="../../scid/util/limitCalls.html">limitCalls</a>(&amp;f, 2);
 
 g(0);    // succeeds
 g(0);    // succeeds
 g(0);    // throws
-</pre>
+</code></pre>
 
 <p>    In the example above, when we're taking the address of f, its
     context may be copied to the heap.  This is a potentially expensive
@@ -313,7 +312,7 @@ g(0);    // throws
     instead.  This should only be used if you are absolutely sure that
     the returned delegate never escapes the current scope.
 </p>
-<pre class="code prettyprint lang-d">alias void delegate(int) DgType;
+<pre class="code"><code class="prettyprint lang-d">alias void delegate(int) DgType;
 
 // Here, the delegate escapes by being assigned to a variable
 // outside the function scope.
@@ -321,25 +320,31 @@ DgType someGlobal;
 void badIdea1()
 {
     void f(int i) { ... }
-    someGlobal = scopeLimitCalls(&f, 10);
+    someGlobal = scopeLimitCalls(&amp;f, 10);
 }
 
 // Here it escapes because we return it.
 DgType badIdea2()
 {
     void f(int i) { ... }
-    return scopeLimitCalls(&f, 10);
+    return scopeLimitCalls(&amp;f, 10);
 }
-</pre>
+</code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/util/LimitCalls.html">LimitCalls</a>!(R,T) scopeLimitCalls(R, T...)(
+								<br/>
 &nbsp;&nbsp;scope R delegate(T) dg,
+								<br/>
 &nbsp;&nbsp;uint maxCalls
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

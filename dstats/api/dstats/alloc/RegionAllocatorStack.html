@@ -81,8 +81,7 @@ stack using a regionallocator <a href="../../dstats/alloc/RegionAllocator.html">
 <code class="prettyprint lang-d">RegionAllocatorStack</code> but each <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> uses a single
 <code class="prettyprint lang-d">RegionAllocatorStack</code>.
 </p>
-<section>
-<p>For most use cases it's convenient to use the default thread-local
+<section><p>For most use cases it's convenient to use the default thread-local
 instance of <code class="prettyprint lang-d">RegionAllocatorStack</code>, which is lazily instantiated on
 the first call to the global function
 regionallocator, <a href="../../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a>.  Occasionally it may be useful
@@ -97,7 +96,6 @@ heap.  This cannot happen before memory allocated to a <a href="../../dstats/all
 instance is released back to the stack, because a <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
 holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code> instance it uses.
 </p>
-
 </section>
 
 					<section>
@@ -114,7 +112,7 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 										<code>this</code>
 									</a>
 								</td>
-								<td>    Create a new <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> with a given segment size in bytes.
+								<td>Create a new <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> with a given segment size in bytes.
 </td>
 							</tr>
 						</table>
@@ -134,7 +132,7 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
-								<td>    Whether this stack is scanned by the garbage collector.
+								<td>Whether this stack is scanned by the garbage collector.
 </td>
 							</tr>
 						</table>
@@ -153,7 +151,7 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 										<code>newRegionAllocator</code>
 									</a>
 								</td>
-								<td>    Creates a new <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> region using this stack.
+								<td>Creates a new <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> region using this stack.
 </td>
 							</tr>
 							<tr>
@@ -167,7 +165,7 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">import std.regionallocator;
+<pre class="code"><code class="prettyprint lang-d">import std.regionallocator;
 
 void main() {
     fun1();
@@ -190,7 +188,7 @@ void fun2(RegionAllocatorStack stack) {
     // pointed to by alloc goes out of scope.  The memory used by arr
     // is released back to stack.
 }
-</pre>
+</code></pre>
 </section>
 
 			</section>

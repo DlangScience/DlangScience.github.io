@@ -299,15 +299,19 @@ $('#symbolSearchPane').show();
  a new one will automatically be created.  Also, very large objects
  (currently over 4MB) will simply be heap-allocated.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 static void* malloc(
+								<br/>
 &nbsp;&nbsp;ulong nbytes
-) nothrow;</pre>
+								<br/>
+) nothrow;
+							</code>
+						</div>
 					</section>
 <section><h3>Bugs</h3>
 <p>Memory allocated by <a href="../../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> is not scanned by the GC.
@@ -326,11 +330,17 @@ static void* malloc(
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 static void* malloc(
+								<br/>
 &nbsp;&nbsp;ulong nbytes,
+								<br/>
 &nbsp;&nbsp;scid.<wbr/>core.<wbr/>memory.<wbr/>TempAlloc.<wbr/>State stateCopy
-) nothrow;</pre>
+								<br/>
+) nothrow;
+							</code>
+						</div>
 					</section>
 
 			</section>

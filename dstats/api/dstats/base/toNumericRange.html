@@ -83,37 +83,40 @@ $('#symbolSearchPane').show();
  less typing and that it ignores non-convertible elements, such as blank
  lines.
 </p>
-<section>
-<p> If <a href="../../dstats/base/toNumericRange.html#rangeIn"><code class="prettyprint lang-d">rangeIn</code></a> is an inputRange, then the result of this function is an input
+<section><p>If <a href="../../dstats/base/toNumericRange.html#rangeIn"><code class="prettyprint lang-d">rangeIn</code></a> is an inputRange, then the result of this function is an input
  range.  Otherwise, the result is a forward range.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/base/ToNumericRange.html">ToNumericRange</a>!R toNumericRange(R)(
+								<br/>
 &nbsp;&nbsp;R rangeIn
+								<br/>
 )
-if (isInputRange!R);</pre>
+								<br/>
+if (isInputRange!R);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>The reason this struct doesn't have length or random access,
  even if this is supported by <a href="../../dstats/base/toNumericRange.html#rangeIn"><code class="prettyprint lang-d">rangeIn</code></a>, is because it has to be able to
  filter out non-convertible elements.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">// Perform a T-test to see whether the mean of the data being input as text
+<pre class="code"><code class="prettyprint lang-d">// Perform a T-test to see whether the mean of the data being input as text
 // from stdin is different from zero.  This data might not even fit in memory
 // if it were read in eagerly.
 
 auto myRange = toNumericRange( stdin.byLine() );
 TestRes result = studentsTTest(myRange);
 writeln(result);
-</pre>
+</code></pre>
 </section>
 
 			</section>

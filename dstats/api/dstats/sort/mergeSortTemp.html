@@ -81,21 +81,26 @@ $('#symbolSearchPane').show();
  as <code class="prettyprint lang-d">mergeSortTemp</code>(D, D, D, T, T, T, U) or <code class="prettyprint lang-d">mergeSortTemp</code>(D, D, D, T, T, T)
  where each D has a T of corresponding type.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 T[0] mergeSortTemp(alias compFun, T...)(
+								<br/>
 &nbsp;&nbsp;T data
+								<br/>
 )
-if (T.length != 0);</pre>
+								<br/>
+if (T.length != 0);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">int[] foo = [3, 1, 2, 4, 5].dup;
+<pre class="code"><code class="prettyprint lang-d">int[] foo = [3, 1, 2, 4, 5].dup;
 int[] temp = new uint[5];
-mergeSortTemp!("a < b")(foo, temp);
+mergeSortTemp!("a &lt; b")(foo, temp);
 assert(foo == [1, 2, 3, 4, 5]); // The contents of temp will be undefined.
 foo = [3, 1, 2, 4, 5].dup;
 real bar = [3.14L, 15.9, 26.5, 35.8, 97.9];
@@ -104,7 +109,7 @@ mergeSortTemp(foo, bar, temp, temp2);
 assert(foo == [1, 2, 3, 4, 5]);
 assert(bar == [15.9L, 26.5, 3.14, 35.8, 97.9]);
 // The contents of both temp and temp2 will be undefined.
-</pre>
+</code></pre>
 </section>
 
 			</section>

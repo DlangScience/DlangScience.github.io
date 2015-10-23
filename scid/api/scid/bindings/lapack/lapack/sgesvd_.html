@@ -291,32 +291,51 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the singular value decomposition (SVD) of <a href="../../../../scid/bindings/lapack/lapack/sgesvd_.html#a"><code class="prettyprint lang-d">a</code></a> general
 </p>
-<section>
-<p>rectangular matrix.
+<section><p>rectangular matrix.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void sgesvd_(
+								<br/>
 &nbsp;&nbsp;char* jobu,
+								<br/>
 &nbsp;&nbsp;char* jobvt,
+								<br/>
 &nbsp;&nbsp;int* m,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* s,
+								<br/>
 &nbsp;&nbsp;float* u,
+								<br/>
 &nbsp;&nbsp;int* ldu,
+								<br/>
 &nbsp;&nbsp;float* vt,
+								<br/>
 &nbsp;&nbsp;int* ldvt,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int jobu_len,
+								<br/>
 &nbsp;&nbsp;int jobvt_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

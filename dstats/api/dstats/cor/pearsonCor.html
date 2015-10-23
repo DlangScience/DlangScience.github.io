@@ -81,24 +81,29 @@ $('#symbolSearchPane').show();
  metric and should not be used with extremely ill-behaved data.
  This function works with any pair of input ranges.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/cor/PearsonCor.html">PearsonCor</a> pearsonCor(T, U)(
+								<br/>
 &nbsp;&nbsp;T input1,
+								<br/>
 &nbsp;&nbsp;U input2
+								<br/>
 )
-if (doubleInput!T &amp;&amp; doubleInput!U);</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; doubleInput!U);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>The <a href="../../dstats/cor/PearsonCor.html"><code class="prettyprint lang-d">PearsonCor</code></a> struct returned by this function is alias this'd to the
  correlation coefficient.  Therefore, the result from this function can
  be treated simply as a floating point number.
 </p>
-
 </section>
 <section><h3>References</h3>
 <p>Computing Higher-Order Moments Online.

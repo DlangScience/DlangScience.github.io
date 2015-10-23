@@ -75,15 +75,14 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.allocate</h1>
 			<section>
-				<p>    Allocates <a href="../../dstats/alloc/RegionAllocator.allocate.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> bytes on the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
+				<p>Allocates <a href="../../dstats/alloc/RegionAllocator.allocate.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> bytes on the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> used by this
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance.  The last block allocated from this
     <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> instance can be freed by calling
     <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">RegionAllocator.free</code></a> or <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">RegionAllocator.freeLast</code></a> or will be
     automatically freed when the last copy of this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
     instance goes out of scope.
 </p>
-<section>
-<p>    Allocation requests larger than <a href="../../dstats/alloc/RegionAllocator.segmentSize.html"><code class="prettyprint lang-d">segmentSize</code></a> are
+<section><p>Allocation requests larger than <a href="../../dstats/alloc/RegionAllocator.segmentSize.html"><code class="prettyprint lang-d">segmentSize</code></a> are
     allocated directly on the C heap, are scanned by the GC iff
     the <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance that this object uses is scanned by
     the GC, and are freed according to the same rules as described above.
@@ -92,10 +91,15 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void* allocate(
+								<br/>
 &nbsp;&nbsp;ulong nBytes
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

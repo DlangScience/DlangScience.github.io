@@ -79,8 +79,7 @@ $('#symbolSearchPane').show();
  0 to <a href="../../dstats/base/frqBin.html#nbin"><code class="prettyprint lang-d">nbin</code></a> - 1, with 0 being the smallest <a href="../../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a>, etc.
  The values returned are the <a href="../../dstats/base/bin.html"><code class="prettyprint lang-d">bin</code></a> index for each element.
 </p>
-<section>
-<p> Default return type is ubyte, because in the <a href="../../dstats/infotheory.html"><code class="prettyprint lang-d">dstats.infotheory</code></a>,
+<section><p>Default return type is ubyte, because in the <a href="../../dstats/infotheory.html"><code class="prettyprint lang-d">dstats.infotheory</code></a>,
  entropy() and related functions specialize on ubytes, and become
  substandially faster.  However, if you're using more than 256 bins,
  you'll have to provide a different return type as a template parameter.
@@ -89,13 +88,21 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 Ret[] frqBin(Ret, T)(
+								<br/>
 &nbsp;&nbsp;T data,
+								<br/>
 &nbsp;&nbsp;uint nbin,
+								<br/>
 &nbsp;&nbsp;Ret[] buf = null
+								<br/>
 )
-if (doubleInput!T &amp;&amp; isForwardRange!T &amp;&amp; hasLength!T &amp;&amp; isIntegral!Ret);</pre>
+								<br/>
+if (doubleInput!T &amp;&amp; isForwardRange!T &amp;&amp; hasLength!T &amp;&amp; isIntegral!Ret);
+							</code>
+						</div>
 					</section>
 
 			</section>

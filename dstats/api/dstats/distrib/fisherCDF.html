@@ -75,10 +75,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function fisherCDF</h1>
 			<section>
-				<p> The Fisher distribution, its complement, and inverse.
+				<p>The Fisher distribution, its complement, and inverse.
 </p>
-<section>
-<p> The F density function (also known as Snedcor's density or the
+<section><p>The F density function (also known as Snedcor's density or the
  variance ratio density) is the density
  of <a href="../../dstats/distrib/fisherCDF.html#x"><code class="prettyprint lang-d">x</code></a> = (u1/<a href="../../dstats/distrib/fisherCDF.html#df1"><code class="prettyprint lang-d">df1</code></a>)/(u2/<a href="../../dstats/distrib/fisherCDF.html#df2"><code class="prettyprint lang-d">df2</code></a>), where u1 and u2 are random
  variables having &chi;,2 distributions with <a href="../../dstats/distrib/fisherCDF.html#df1"><code class="prettyprint lang-d">df1</code></a>
@@ -94,17 +93,23 @@ $('#symbolSearchPane').show();
  <a href="../../dstats/distrib/invFisherCDFR.html"><code class="prettyprint lang-d">invFisherCDFR</code></a>, finds the argument <a href="../../dstats/distrib/fisherCDF.html#x"><code class="prettyprint lang-d">x</code></a> such that the integral
  from <a href="../../dstats/distrib/fisherCDF.html#x"><code class="prettyprint lang-d">x</code></a> to infinity of the F density is equal to the given probability y.
 </p>
-
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double fisherCDF(
+								<br/>
 &nbsp;&nbsp;double x,
+								<br/>
 &nbsp;&nbsp;double df1,
+								<br/>
 &nbsp;&nbsp;double df2
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

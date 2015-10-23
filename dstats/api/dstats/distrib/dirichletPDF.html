@@ -77,17 +77,23 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>The Dirichlet probability density.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 double dirichletPDF(X, A)(
+								<br/>
 &nbsp;&nbsp;X x,
+								<br/>
 &nbsp;&nbsp;A alpha
+								<br/>
 )
-if (isInputRange!X &amp;&amp; isForwardRange!A &amp;&amp; is(ElementType!X : double) &amp;&amp; is(ElementType!A : double));</pre>
+								<br/>
+if (isInputRange!X &amp;&amp; isForwardRange!A &amp;&amp; is(ElementType!X : double) &amp;&amp; is(ElementType!A : double));
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

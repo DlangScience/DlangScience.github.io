@@ -291,8 +291,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes all eigenvalues and the eigenvectors of  <a href="../../../../scid/bindings/lapack/lapack/chegvd_.html#a"><code class="prettyprint lang-d">a</code></a> generalized
 </p>
-<section>
-<p>Hermitian-definite generalized eigenproblem,
+<section><p>Hermitian-definite generalized eigenproblem,
 </p>
 
 <p>Ax= lambda Bx,  ABx= lambda x,  or BAx= lambda x.
@@ -304,27 +303,49 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void chegvd_(
+								<br/>
 &nbsp;&nbsp;int* itype,
+								<br/>
 &nbsp;&nbsp;char* jobz,
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* b,
+								<br/>
 &nbsp;&nbsp;int* ldb,
+								<br/>
 &nbsp;&nbsp;float* w,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;float* rwork,
+								<br/>
 &nbsp;&nbsp;int* lrwork,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* liwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int jobz_len,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

@@ -46,21 +46,37 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void cblas_dgemv(
+								<br/>
 &nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_ORDER.html">CBLAS_ORDER</a>) order,
+								<br/>
 &nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_TRANSPOSE.html">CBLAS_TRANSPOSE</a>) trans,
+								<br/>
 &nbsp;&nbsp;const(int) m,
+								<br/>
 &nbsp;&nbsp;const(int) n,
+								<br/>
 &nbsp;&nbsp;const(double) alpha,
+								<br/>
 &nbsp;&nbsp;const(double*) a,
+								<br/>
 &nbsp;&nbsp;const(int) lda,
+								<br/>
 &nbsp;&nbsp;const(double*) x,
+								<br/>
 &nbsp;&nbsp;const(int) incx,
+								<br/>
 &nbsp;&nbsp;const(double) beta,
+								<br/>
 &nbsp;&nbsp;double* y,
+								<br/>
 &nbsp;&nbsp;const(int) incy
-) nothrow @nogc;</pre>
+								<br/>
+) nothrow @nogc;
+							</code>
+						</div>
 					</section>
 
 			</section>

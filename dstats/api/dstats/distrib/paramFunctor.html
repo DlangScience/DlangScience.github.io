@@ -81,19 +81,23 @@ $('#symbolSearchPane').show();
  <a href="../../dstats/distrib/paramFunctor.html#parameters"><code class="prettyprint lang-d">parameters</code></a> to the distribution function.  Assumes the non-parameter
  argument is the first argument to the distribution function.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/distrib/ParamFunctor.html">ParamFunctor</a>!distrib paramFunctor(alias distrib)(
+								<br/>
 &nbsp;&nbsp;ParameterTypeTuple!distrib[1..__dollar] parameters
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto stdNormal = paramFunctor!(<a href="../../dstats/distrib/normalCDF.html">normalCDF</a>)(0.0L, 1.0L);
-</pre>
+<pre class="code"><code class="prettyprint lang-d">auto stdNormal = paramFunctor!(<a href="../../dstats/distrib/normalCDF.html">normalCDF</a>)(0.0L, 1.0L);
+</code></pre>
 
 <p> stdNormal is now a functor for the normal(0, 1) distribution.
 </p>

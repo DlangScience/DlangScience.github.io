@@ -291,27 +291,41 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Reduces <a href="../../../../scid/bindings/lapack/lapack/chetrd_.html#a"><code class="prettyprint lang-d">a</code></a> Hermitian matrix to real symmetric tridiagonal
 </p>
-<section>
-<p>form by an orthogonal/unitary similarity transformation.
+<section><p>form by an orthogonal/unitary similarity transformation.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void chetrd_(
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+								<br/>
 &nbsp;&nbsp;int* lda,
+								<br/>
 &nbsp;&nbsp;float* d,
+								<br/>
 &nbsp;&nbsp;float* e,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* tau,
+								<br/>
 &nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+								<br/>
 &nbsp;&nbsp;int* lwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int uplo_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

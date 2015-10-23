@@ -81,40 +81,40 @@ to test whether their means are equal.  Data can be input as either a
 tuple or a range.  This may contain any combination of ranges of numeric
 types, MeanSD structs and Summary structs.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../dstats/tests/TestRes.html">TestRes</a> fTest(T...)(
+								<br/>
 &nbsp;&nbsp;T data
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This test makes the assumption that all groups have equal variances,
 also known as homoskedasticity.  For a similar test that does not make these
 assumptions, see <a href="../../dstats/tests/welchAnova.html"><code class="prettyprint lang-d">welchAnova</code></a>.
 </p>
-
 </section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">uint[] thing1 = [3,1,4,1],
+<pre class="code"><code class="prettyprint lang-d">uint[] thing1 = [3,1,4,1],
        thing2 = [5,9,2,6,5,3],
        thing3 = [5,8,9,7,9,3];
 auto result = fTest(thing1, meanStdev(thing2), summary(thing3));
 assert(approxEqual(result.testStat, 4.9968));
 assert(approxEqual(result.p, 0.02456));
-</pre>
-
+</code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/F-test
 </p>
-
 </section>
 <section><h3>Returns</h3>
-
 <p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the F statistic and the P-value for the alternative
 that the means of the groups are different against the null that they
 are identical.

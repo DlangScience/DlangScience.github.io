@@ -289,31 +289,46 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function isAccurate</h1>
 			<section>
-				<p> This function is used to check a computed value along with
+				<p>This function is used to check a computed value along with
     its error estimate.  It evaluates to the following:
 </p>
-<section><pre class="code prettyprint lang-d">    abs(<a href="../../../scid/core/testing/isAccurate.html#result">result</a>-<a href="../../../scid/core/testing/isAccurate.html#expected">expected</a>) <= <a href="../../../scid/core/testing/isAccurate.html#absError">absError</a>
-&&  <a href="../../../scid/core/testing/isAccurate.html#absError">absError</a> <= max(abs(<a href="../../../scid/core/testing/isAccurate.html#result">result</a>*<a href="../../../scid/core/testing/isAccurate.html#relAccuracy">relAccuracy</a>), <a href="../../../scid/core/testing/isAccurate.html#absAccuracy">absAccuracy</a>)
-</pre>
+<section><pre class="code"><code class="prettyprint lang-d">    abs(<a href="../../../scid/core/testing/isAccurate.html#result">result</a>-<a href="../../../scid/core/testing/isAccurate.html#expected">expected</a>) &lt;= <a href="../../../scid/core/testing/isAccurate.html#absError">absError</a>
+&amp;&amp;  <a href="../../../scid/core/testing/isAccurate.html#absError">absError</a> &lt;= max(abs(<a href="../../../scid/core/testing/isAccurate.html#result">result</a>*<a href="../../../scid/core/testing/isAccurate.html#relAccuracy">relAccuracy</a>), <a href="../../../scid/core/testing/isAccurate.html#absAccuracy">absAccuracy</a>)
+</code></pre>
 </section>
 
 					<section>
 						<h3>Prototypes</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 bool isAccurate(T)(
+								<br/>
 &nbsp;&nbsp;<a href="../../../scid/types/Result.html">Result</a>!T result,
+								<br/>
 &nbsp;&nbsp;T expected,
+								<br/>
 &nbsp;&nbsp;T relAccuracy,
+								<br/>
 &nbsp;&nbsp;T absAccuracy = Zero!T
+								<br/>
 );
-
+								<br/>
+								<br/>
 bool isAccurate(T)(
+								<br/>
 &nbsp;&nbsp;T result,
+								<br/>
 &nbsp;&nbsp;T absError,
+								<br/>
 &nbsp;&nbsp;T expected,
+								<br/>
 &nbsp;&nbsp;T relAccuracy,
+								<br/>
 &nbsp;&nbsp;T absAccuracy = Zero!T
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

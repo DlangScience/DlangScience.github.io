@@ -289,28 +289,34 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function intdeini</h1>
 			<section>
-				<p> I = integral of f(x) over (a,b)
+				<p>I = integral of f(x) over (a,b)
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 void intdeini(Real)(
+								<br/>
 &nbsp;&nbsp;size_t lenaw,
+								<br/>
 &nbsp;&nbsp;Real tiny,
+								<br/>
 &nbsp;&nbsp;Real eps,
+								<br/>
 &nbsp;&nbsp;Real* aw
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code prettyprint lang-d">auto <a href="../../../../scid/ports/intde/intde2/intdeini.html#aw">aw</a> = new real[8000];
+<pre class="code"><code class="prettyprint lang-d">auto <a href="../../../../scid/ports/intde/intde2/intdeini.html#aw">aw</a> = new real[8000];
 intdeini(aw.length, <a href="../../../../scid/ports/intde/intde2/intdeini.html#tiny">tiny</a>, <a href="../../../../scid/ports/intde/intde2/intdeini.html#eps">eps</a>, aw.ptr);  // initialization of <a href="../../../../scid/ports/intde/intde2/intdeini.html#aw">aw</a>
 ...
-<a href="../../../../scid/ports/intde/intde2/intde.html">intde</a>(f, a, b, aw.ptr, &i, &err);
-</pre>
-
+<a href="../../../../scid/ports/intde/intde2/intde.html">intde</a>(f, a, b, aw.ptr, &amp;i, &amp;err);
+</code></pre>
 </section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -324,12 +330,11 @@ intdeini(aw.length, <a href="../../../../scid/ports/intde/intde2/intdeini.html#t
 <tr><td id="a">a</td><td> lower limit of integration</td></tr>
 <tr><td id="b">b</td><td> upper limit of integration</td></tr>
 <tr><td id="i">i</td><td> approximation to the integral</td></tr>
-<tr><td id="err">err</td><td> estimate of the absolute error
-</td></tr>
+<tr><td id="err">err</td><td> estimate of the absolute error</td></tr>
 </table>
 </section>
 <section><h3>Remarks</h3>
-<p>    <pre>
+<p><pre>
         initial parameters
             <a href="../../../../scid/ports/intde/intde2/intdeini.html#lenaw"><code class="prettyprint lang-d">lenaw</code></a> &gt; 1000,
             IEEE double :

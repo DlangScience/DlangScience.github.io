@@ -291,28 +291,43 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Estimates the reciprocal of the condition number of a triangular
 </p>
-<section>
-<p>matrix in packed storage, in either the 1-<a href="../../../../scid/bindings/lapack/lapack/stpcon_.html#norm"><code class="prettyprint lang-d">norm</code></a> or the infinity-<a href="../../../../scid/bindings/lapack/lapack/stpcon_.html#norm"><code class="prettyprint lang-d">norm</code></a>.
+<section><p>matrix in packed storage, in either the 1-<a href="../../../../scid/bindings/lapack/lapack/stpcon_.html#norm"><code class="prettyprint lang-d">norm</code></a> or the infinity-<a href="../../../../scid/bindings/lapack/lapack/stpcon_.html#norm"><code class="prettyprint lang-d">norm</code></a>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 extern(C) void stpcon_(
+								<br/>
 &nbsp;&nbsp;char* norm,
+								<br/>
 &nbsp;&nbsp;char* uplo,
+								<br/>
 &nbsp;&nbsp;char* diag,
+								<br/>
 &nbsp;&nbsp;int* n,
+								<br/>
 &nbsp;&nbsp;float* ap,
+								<br/>
 &nbsp;&nbsp;float* rcond,
+								<br/>
 &nbsp;&nbsp;float* work,
+								<br/>
 &nbsp;&nbsp;int* iwork,
+								<br/>
 &nbsp;&nbsp;int* info,
+								<br/>
 &nbsp;&nbsp;int norm_len,
+								<br/>
 &nbsp;&nbsp;int uplo_len,
+								<br/>
 &nbsp;&nbsp;int diag_len
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>

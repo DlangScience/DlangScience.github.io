@@ -289,12 +289,11 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAGP</h1>
 			<section>
-				<p> Calculate the integral of <a href="../../scid/calculus/integrateQAGP.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../../scid/calculus/integrateQAGP.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQAGP.html#b"><code class="prettyprint lang-d">b</code></a>),
+				<p>Calculate the integral of <a href="../../scid/calculus/integrateQAGP.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../../scid/calculus/integrateQAGP.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQAGP.html#b"><code class="prettyprint lang-d">b</code></a>),
     taking into account known points of special difficulty
     inside the interval.
 </p>
-<section>
-<p>    This routine uses the same integration method as <a href="../../scid/calculus/integrateQAGS.html"><code class="prettyprint lang-d">integrateQAGS</code></a>(),
+<section><p>This routine uses the same integration method as <a href="../../scid/calculus/integrateQAGS.html"><code class="prettyprint lang-d">integrateQAGS</code></a>(),
     but allows you to specify an array of points where the
     integrand has internal singularities, discontinuities or
     other types of bad behaviour.
@@ -303,15 +302,25 @@ $('#symbolSearchPane').show();
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
+						<div class="prototype">
+							<code class="prettyprint lang-d">
 <a href="../../scid/types/Result.html">Result</a>!Real integrateQAGP(Func, Real)(
+								<br/>
 &nbsp;&nbsp;scope Func f,
+								<br/>
 &nbsp;&nbsp;Real a,
+								<br/>
 &nbsp;&nbsp;Real b,
+								<br/>
 &nbsp;&nbsp;Real[] trouble,
+								<br/>
 &nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+								<br/>
 &nbsp;&nbsp;Real epsAbs = cast(Real)0
-);</pre>
+								<br/>
+);
+							</code>
+						</div>
 					</section>
 
 			</section>
