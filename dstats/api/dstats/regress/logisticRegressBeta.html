@@ -102,11 +102,11 @@ zero, then ordinary maximum likelihood regression is performed.
 
 <p>Note that, while this implementation of ridge regression was tested against
 the R Design Package implementation, it uses slightly different conventions
-that make the results not comparable without transformation.  dstats uses a
+that make the results not comparable without transformation.  <a href="../../dstats.html"><code class="prettyprint lang-d">dstats</code></a> uses a
 biased estimate of the variance to scale the beta vector penalties, while
 Design uses an unbiased estimate.  Furthermore, Design penalizes by 1/2 of the
-L2 norm, whereas dstats penalizes by the L2 norm.  Therefore, if n is the
-sample size, and lambda is the penalty used with dstats, the proper penalty
+L2 norm, whereas <a href="../../dstats.html"><code class="prettyprint lang-d">dstats</code></a> penalizes by the L2 norm.  Therefore, if n is the
+sample size, and lambda is the penalty used with <a href="../../dstats.html"><code class="prettyprint lang-d">dstats</code></a>, the proper penalty
 to use in Design to get the same results is 2 * (n - 1) * lambda / n.
 </p>
 
