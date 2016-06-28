@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -294,11 +293,10 @@ $('#symbolSearchPane').show();
     to the corresponding LAPACK functions. Hence, one can only use matrices
     and vectors where the elements are of FORTRAN-compatible types, namely:
 </p>
-<pre class="code"><code class="prettyprint lang-d">float
+<pre class="code"><code class="lang-d"><span class="typ">float
 double
-Complex!float
-Complex!double
-</code></pre>
+Complex</span><span class="pun">!</span><span class="typ">float
+Complex</span><span class="pun">!</span><span class="typ">double</span></code></pre>
 <p>    Specifically, real- and creal-valued matrices/vectors cannot be used.
 </p>
 </section>
@@ -308,9 +306,8 @@ Complex!double
     function signature, but where the name of one ends with an underscore.
     An example is
 </p>
-<pre class="code"><code class="prettyprint lang-d"><a href="../scid/linalg/solve.html">solve</a>(a, b)
-<a href="../scid/linalg/solve_.html">solve_</a>(a, b)
-</code></pre>
+<pre class="code"><code class="lang-d"><a href="../scid/linalg/solve.html"><span class="pln">solve</span></a><span class="pun">(</span><span class="pln">a</span><span class="pun">, </span><span class="pln">b</span><span class="pun">)
+<a href="../scid/linalg/solve_.html"></span><span class="pln">solve_</span></a><span class="pun">(</span><span class="pln">a</span><span class="pun">, </span><span class="pln">b</span><span class="pun">)</span></code></pre>
 <p>    The difference between these is that, for performance reasons, the
     underscore-suffixed functions use some or all of the input
     matrices/vectors as a workspace, and one can't expect them to
@@ -352,7 +349,7 @@ Complex!double
 								<code>eigenvalues</code>
 							</a>
 						</td>
-						<td>Calculate the <code class="prettyprint lang-d">eigenvalues</code> of a general dense square matrix.
+						<td>Calculate the eigenvalues of a general dense square matrix.
 </td>
 					</tr>
 					<tr>
@@ -361,7 +358,7 @@ Complex!double
 								<code>eigenvalues</code>
 							</a>
 						</td>
-						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a triangular matrix. Note that this
+						<td>Calculate the eigenvalues of a triangular matrix. Note that this
     is a trivial operation - the function just returns the diagonal
     entries of the matrix.
 </td>
@@ -372,7 +369,7 @@ Complex!double
 								<code>eigenvalues</code>
 							</a>
 						</td>
-						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
+						<td>Calculate the eigenvalues of a symmetric matrix.
 </td>
 					</tr>
 					<tr>
@@ -381,7 +378,7 @@ Complex!double
 								<code>eigenvalues_</code>
 							</a>
 						</td>
-						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a general dense square matrix.
+						<td>Calculate the eigenvalues of a general dense square matrix.
 </td>
 					</tr>
 					<tr>
@@ -390,7 +387,7 @@ Complex!double
 								<code>eigenvalues_</code>
 							</a>
 						</td>
-						<td>Calculate the <a href="../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
+						<td>Calculate the eigenvalues of a symmetric matrix.
 </td>
 					</tr>
 					<tr>
@@ -437,8 +434,8 @@ Complex!double
 							</a>
 						</td>
 						<td>This exception is thrown when the eigenvalue() function fails to
-    compute all <a href="../scid/linalg/EigenvalueException.eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a>. The ones that have been computed are stored
-    in the member variable <a href="../scid/linalg/EigenvalueException.eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a>.
+    compute all eigenvalues. The ones that have been computed are stored
+    in the member variable eigenvalues.
 </td>
 					</tr>
 				</table>

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,9 +74,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function logisticRegressPenalized</h1>
 			<section>
-				<p>Performs <a href="../../dstats/regress/logisticRegressPenalized.html#lasso"><code class="prettyprint lang-d">lasso</code></a> (L1) and/or <a href="../../dstats/regress/logisticRegressPenalized.html#ridge"><code class="prettyprint lang-d">ridge</code></a> (L2) penalized <a href="../../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a> regression.  Due to the
+				<p>Performs lasso (L1) and/or ridge (L2) penalized logistic regression.  Due to the
 way the data is standardized, no intercept term should be included in x
-(unlike <a href="../../dstats/regress/logisticRegress.html"><code class="prettyprint lang-d">logisticRegress</code></a> and <a href="../../dstats/regress/logisticRegressBeta.html"><code class="prettyprint lang-d">logisticRegressBeta</code></a>).  The intercept coefficient is
+(unlike logisticRegress and logisticRegressBeta).  The intercept coefficient is
 implicitly included and returned in the first element of the returned array.
 Usage is otherwise identical.
 </p>
@@ -86,25 +85,25 @@ Usage is otherwise identical.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double[] logisticRegressPenalized(Y, X...)(
+							<code class="lang-d">
+<span class="typ">double</span><span class="pun">[]</span> <span class="pln">logisticRegressPenalized</span><span class="pun">(</span><span class="pln">Y</span><span class="pun">, </span><span class="pln">X</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Y yIn,
+&nbsp;&nbsp;<span class="pln">Y</span> <span class="pln">yIn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;X xIn,
+&nbsp;&nbsp;<span class="pln">X</span> <span class="pln">xIn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double lasso,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">lasso</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double ridge
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">ridge</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Note</h3>
-<p>Setting <a href="../../dstats/regress/logisticRegressPenalized.html#lasso"><code class="prettyprint lang-d">lasso</code></a> equal to zero is equivalent to performing <a href="../../dstats/regress/logisticRegressPenalized.html#ridge"><code class="prettyprint lang-d">ridge</code></a> regression.
-       This can also be done with <a href="../../dstats/regress/logisticRegressBeta.html"><code class="prettyprint lang-d">logisticRegressBeta</code></a>.  However, the
-       <a href="../../dstats/regress/logisticRegressBeta.html"><code class="prettyprint lang-d">logisticRegressBeta</code></a> algorithm is optimized for memory efficiency and
+<p>Setting lasso equal to zero is equivalent to performing ridge regression.
+       This can also be done with logisticRegressBeta.  However, the
+       logisticRegressBeta algorithm is optimized for memory efficiency and
        large samples.  This algorithm is optimized for large feature sets.
 </p>
 </section>
@@ -123,11 +122,11 @@ Biometrical Journal 52(1), 70{84.
 </p>
 
 <p>Eilers, P., Boer, J., Van Ommen, G., Van Houwelingen, H. 2001 Classification of
-microarray data with penalized <a href="../../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a> regression. Proceedings of SPIE.
+microarray data with penalized logistic regression. Proceedings of SPIE.
 Progress in Biomedical Optics and Images vol. 4266, pp. 187-198
 </p>
 
-<p>Douglas M. Hawkins and Xiangrong Yin.  A faster algorithm for <a href="../../dstats/regress/logisticRegressPenalized.html#ridge"><code class="prettyprint lang-d">ridge</code></a> regression
+<p>Douglas M. Hawkins and Xiangrong Yin.  A faster algorithm for ridge regression
 of reduced rank data.  Computational Statistics &amp; Data Analysis Volume 40,
 Issue 2, 28 August 2002, Pages 253-262
 </p>

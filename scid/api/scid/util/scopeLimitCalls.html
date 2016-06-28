@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -291,58 +290,56 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Limit the number of times a function can be called.
 </p>
-<section><p>Given a delegate <a href="../../scid/util/scopeLimitCalls.html#dg"><code class="prettyprint lang-d">dg</code></a> and an integer <a href="../../scid/util/scopeLimitCalls.html#maxCalls"><code class="prettyprint lang-d">maxCalls</code></a>, this function
-    returns a functor with the same parameter and return types as <a href="../../scid/util/scopeLimitCalls.html#dg"><code class="prettyprint lang-d">dg</code></a>,
-    and that forwards up to <a href="../../scid/util/scopeLimitCalls.html#maxCalls"><code class="prettyprint lang-d">maxCalls</code></a> calls to <a href="../../scid/util/scopeLimitCalls.html#dg"><code class="prettyprint lang-d">dg</code></a>.  On the <a href="../../scid/util/scopeLimitCalls.html#maxCalls"><code class="prettyprint lang-d">maxCalls</code></a>+1th
+<section><p>Given a delegate dg and an integer maxCalls, this function
+    returns a functor with the same parameter and return types as dg,
+    and that forwards up to maxCalls calls to dg.  On the maxCalls+1th
     call it throws an exception.  This is useful for algorithms such
-    as <a href="../../scid/nonlinear/findRoot.html"><code class="prettyprint lang-d">scid.nonlinear.findRoot</code></a>() which may require an arbitrary
+    as scid.nonlinear.findRoot() which may require an arbitrary
     number of function calls to complete.
 </p>
-<pre class="code"><code class="prettyprint lang-d">void f(int i) { ... }
-auto g = <a href="../../scid/util/limitCalls.html">limitCalls</a>(&amp;f, 2);
+<pre class="code"><code class="lang-d"><span class="typ">void </span><span class="pln">f</span><span class="pun">(</span><span class="typ">int </span><span class="pln">i</span><span class="pun">) { ... }
+</span><span class="kwd">auto </span><span class="pln">g </span><span class="pun">= <a href="../../scid/util/limitCalls.html"></span><span class="pln">limitCalls</span></a><span class="pun">(&amp;</span><span class="pln">f</span><span class="pun">, </span><span class="lit">2</span><span class="pun">);
 
-g(0);    // succeeds
-g(0);    // succeeds
-g(0);    // throws
-</code></pre>
+</span><span class="pln">g</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);    </span><span class="com">// succeeds
+</span><span class="pln">g</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);    </span><span class="com">// succeeds
+</span><span class="pln">g</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);    </span><span class="com">// throws</span></code></pre>
 
 <p>    In the example above, when we're taking the address of f, its
     context may be copied to the heap.  This is a potentially expensive
-    operation.  To avoid it, use the unsafe function <code class="prettyprint lang-d">scopeLimitCalls</code>()
+    operation.  To avoid it, use the unsafe function scopeLimitCalls()
     instead.  This should only be used if you are absolutely sure that
     the returned delegate never escapes the current scope.
 </p>
-<pre class="code"><code class="prettyprint lang-d">alias void delegate(int) DgType;
+<pre class="code"><code class="lang-d"><span class="kwd">alias </span><span class="typ">void </span><span class="kwd">delegate</span><span class="pun">(</span><span class="typ">int</span><span class="pun">) </span><span class="typ">DgType</span><span class="pun">;
 
-// Here, the delegate escapes by being assigned to a variable
+</span><span class="com">// Here, the delegate escapes by being assigned to a variable
 // outside the function scope.
-DgType someGlobal;
-void badIdea1()
+</span><span class="typ">DgType </span><span class="pln">someGlobal</span><span class="pun">;
+</span><span class="typ">void </span><span class="pln">badIdea1</span><span class="pun">()
 {
-    void f(int i) { ... }
-    someGlobal = scopeLimitCalls(&amp;f, 10);
+    </span><span class="typ">void </span><span class="pln">f</span><span class="pun">(</span><span class="typ">int </span><span class="pln">i</span><span class="pun">) { ... }
+    </span><span class="pln">someGlobal </span><span class="pun">= </span><span class="pln">scopeLimitCalls</span><span class="pun">(&amp;</span><span class="pln">f</span><span class="pun">, </span><span class="lit">10</span><span class="pun">);
 }
 
-// Here it escapes because we return it.
-DgType badIdea2()
+</span><span class="com">// Here it escapes because we return it.
+</span><span class="typ">DgType </span><span class="pln">badIdea2</span><span class="pun">()
 {
-    void f(int i) { ... }
-    return scopeLimitCalls(&amp;f, 10);
-}
-</code></pre>
+    </span><span class="typ">void </span><span class="pln">f</span><span class="pun">(</span><span class="typ">int </span><span class="pln">i</span><span class="pun">) { ... }
+    </span><span class="kwd">return </span><span class="pln">scopeLimitCalls</span><span class="pun">(&amp;</span><span class="pln">f</span><span class="pun">, </span><span class="lit">10</span><span class="pun">);
+}</span></code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/util/LimitCalls.html">LimitCalls</a>!(R,T) scopeLimitCalls(R, T...)(
+							<code class="lang-d">
+<a href="../../scid/util/LimitCalls.html"><span class="typ">LimitCalls</span></a>!(R,T) <span class="pln">scopeLimitCalls</span><span class="pun">(</span><span class="pln">R</span><span class="pun">, </span><span class="pln">T</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope R delegate(T) dg,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">R</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span> <span class="pln">dg</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint maxCalls
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">maxCalls</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

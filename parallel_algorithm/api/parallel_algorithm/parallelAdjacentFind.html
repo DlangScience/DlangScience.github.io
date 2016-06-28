@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -39,18 +38,18 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Range parallelAdjacentFind(alias pred, Range)(
+							<code class="lang-d">
+<span class="typ">Range</span> <span class="pln">parallelAdjacentFind</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">pred</span><span class="pun">, </span><span class="typ">Range</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Range range,
+&nbsp;&nbsp;<span class="typ">Range</span> <span class="pln">range</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t workUnitSize = 250,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">workUnitSize</span> <span class="pun">=</span> <span class="lit">250</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;TaskPool pool = null
+&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isRandomAccessRange!Range &amp;&amp; hasLength!Range);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="typ">Range </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="typ">Range</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

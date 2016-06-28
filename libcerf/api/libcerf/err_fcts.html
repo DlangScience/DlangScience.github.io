@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">libcerf</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../libcerf.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../libcerf/erfcx_.html" class=" module">erfcx_</a>
 							</li>
@@ -31,9 +33,6 @@
 								<a href="../libcerf/w_of_z.html" class=" module">w_of_z</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../libcerf.html" class=" module">libcerf</a>
 							</li>
 						</ul>
 				<noscript>
@@ -73,7 +72,7 @@ based on erfcx, im_w_of_x, w_of_z as implemented in separate files.
 								<code>cdawson</code>
 							</a>
 						</td>
-						<td>Compute Dawson(<a href="../libcerf/err_fcts/cdawson.html#z"><code class="prettyprint lang-d">z</code></a>) = sqrt(pi)/2  *  exp(-<a href="../libcerf/err_fcts/cdawson.html#z"><code class="prettyprint lang-d">z</code></a>^2) * <a href="../libcerf/err_fcts/erfi.html"><code class="prettyprint lang-d">erfi</code></a>(<a href="../libcerf/err_fcts/cdawson.html#z"><code class="prettyprint lang-d">z</code></a>),
+						<td>Compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z),
 Dawson's integral for a complex argument,
 using w_of_z except for certain regions.
 </td>
@@ -84,7 +83,7 @@ using w_of_z except for certain regions.
 								<code>cerf</code>
 							</a>
 						</td>
-						<td>Compute erf(<a href="../libcerf/err_fcts/cerf.html#z"><code class="prettyprint lang-d">z</code></a>), the complex error function,
+						<td>Compute erf(z), the complex error function,
 using w_of_z except for certain regions.
 </td>
 					</tr>
@@ -94,7 +93,7 @@ using w_of_z except for certain regions.
 								<code>cerfc</code>
 							</a>
 						</td>
-						<td>Compute erfc(<a href="../libcerf/err_fcts/cerfc.html#z"><code class="prettyprint lang-d">z</code></a>) = 1 - erf(<a href="../libcerf/err_fcts/cerfc.html#z"><code class="prettyprint lang-d">z</code></a>), the complex complementary error function,
+						<td>Compute erfc(z) = 1 - erf(z), the complex complementary error function,
 using w_of_z except for certain regions.
 </td>
 					</tr>
@@ -104,7 +103,7 @@ using w_of_z except for certain regions.
 								<code>cerfcx</code>
 							</a>
 						</td>
-						<td>Compute erfcx(<a href="../libcerf/err_fcts/cerfcx.html#z"><code class="prettyprint lang-d">z</code></a>) = exp(<a href="../libcerf/err_fcts/cerfcx.html#z"><code class="prettyprint lang-d">z</code></a>^2) erfc(<a href="../libcerf/err_fcts/cerfcx.html#z"><code class="prettyprint lang-d">z</code></a>),
+						<td>Compute erfcx(z) = exp(z^2) erfc(z),
 the complex underflow-compensated complementary error function,
 trivially related to Faddeeva's w_of_z.
 </td>
@@ -115,7 +114,7 @@ trivially related to Faddeeva's w_of_z.
 								<code>cerfi</code>
 							</a>
 						</td>
-						<td>Compute <a href="../libcerf/err_fcts/erfi.html"><code class="prettyprint lang-d">erfi</code></a>(<a href="../libcerf/err_fcts/cerfi.html#z"><code class="prettyprint lang-d">z</code></a>) = -i erf(iz), the rotated complex error function.
+						<td>Compute erfi(z) = -i erf(iz), the rotated complex error function.
 </td>
 					</tr>
 					<tr>
@@ -124,7 +123,7 @@ trivially related to Faddeeva's w_of_z.
 								<code>dawson</code>
 							</a>
 						</td>
-						<td>Compute <code class="prettyprint lang-d">dawson</code>(<a href="../libcerf/err_fcts/dawson.html#x"><code class="prettyprint lang-d">x</code></a>) = sqrt(pi)/2 * exp(-<a href="../libcerf/err_fcts/dawson.html#x"><code class="prettyprint lang-d">x</code></a>^2) * <a href="../libcerf/err_fcts/erfi.html"><code class="prettyprint lang-d">erfi</code></a>(<a href="../libcerf/err_fcts/dawson.html#x"><code class="prettyprint lang-d">x</code></a>),
+						<td>Compute dawson(x) = sqrt(pi)/2 * exp(-x^2) * erfi(x),
 Dawson's integral for a real argument.
 </td>
 					</tr>
@@ -134,7 +133,7 @@ Dawson's integral for a real argument.
 								<code>erfi</code>
 							</a>
 						</td>
-						<td>Compute <code class="prettyprint lang-d">erfi</code>(<a href="../libcerf/err_fcts/erfi.html#x"><code class="prettyprint lang-d">x</code></a>) = -i erf(ix), the imaginary error function.
+						<td>Compute erfi(x) = -i erf(ix), the imaginary error function.
 </td>
 					</tr>
 					<tr>
@@ -144,16 +143,16 @@ Dawson's integral for a real argument.
 							</a>
 						</td>
 						<td>Compute Voigt's convolution of a Gaussian
-G(<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>,<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>) = 1/sqrt(2*pi)/|<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>| * exp(-<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>^2/2/<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>^2)
+G(x,sigma) = 1/sqrt(2*pi)/|sigma| * exp(-x^2/2/sigma^2)
 and a Lorentzian
-L(<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>,<a href="../libcerf/err_fcts/voigt.html#gamma"><code class="prettyprint lang-d">gamma</code></a>) = |<a href="../libcerf/err_fcts/voigt.html#gamma"><code class="prettyprint lang-d">gamma</code></a>| / pi / ( <a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>^2 + <a href="../libcerf/err_fcts/voigt.html#gamma"><code class="prettyprint lang-d">gamma</code></a>^2 ),
+L(x,gamma) = |gamma| / pi / ( x^2 + gamma^2 ),
 namely
-<code class="prettyprint lang-d">voigt</code>(<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>,<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>,<a href="../libcerf/err_fcts/voigt.html#gamma"><code class="prettyprint lang-d">gamma</code></a>) =
-      \int_{-infty}^{infty} dx' G(<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>',<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>) L(<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>-<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>',<a href="../libcerf/err_fcts/voigt.html#gamma"><code class="prettyprint lang-d">gamma</code></a>)
+voigt(x,sigma,gamma) =
+      \int_{-infty}^{infty} dx' G(x',sigma) L(x-x',gamma)
 using the relation
-<code class="prettyprint lang-d">voigt</code>(<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>,<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>,<a href="../libcerf/err_fcts/voigt.html#gamma"><code class="prettyprint lang-d">gamma</code></a>) = Re{ w(z) } / sqrt(2*pi) / |<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>|
+voigt(x,sigma,gamma) = Re{ w(z) } / sqrt(2*pi) / |sigma|
 with
-z = (<a href="../libcerf/err_fcts/voigt.html#x"><code class="prettyprint lang-d">x</code></a>+i*|<a href="../libcerf/err_fcts/voigt.html#gamma"><code class="prettyprint lang-d">gamma</code></a>|) / sqrt(2) / |<a href="../libcerf/err_fcts/voigt.html#sigma"><code class="prettyprint lang-d">sigma</code></a>|.
+z = (x+i*|gamma|) / sqrt(2) / |sigma|.
 </td>
 					</tr>
 				</table>

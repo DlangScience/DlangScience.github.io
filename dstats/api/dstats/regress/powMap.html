@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,22 +74,22 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function powMap</h1>
 			<section>
-				<p>Maps a forward <a href="../../dstats/regress/powMap.html#range"><code class="prettyprint lang-d">range</code></a> to a power determined at runtime.  ExpType is the type
- of the <a href="../../dstats/regress/powMap.html#exponent"><code class="prettyprint lang-d">exponent</code></a>.  Using an int is faster than using a double, but obviously
+				<p>Maps a forward range to a power determined at runtime.  ExpType is the type
+ of the exponent.  Using an int is faster than using a double, but obviously
  less flexible.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/regress/PowMap.html">PowMap</a>!(ExpType,T) powMap(ExpType, T)(
+							<code class="lang-d">
+<a href="../../dstats/regress/PowMap.html"><span class="typ">PowMap</span></a>!(ExpType,T) <span class="pln">powMap</span><span class="pun">(</span><span class="typ">ExpType</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T range,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">range</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ExpType exponent
+&nbsp;&nbsp;<span class="typ">ExpType</span> <span class="pln">exponent</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

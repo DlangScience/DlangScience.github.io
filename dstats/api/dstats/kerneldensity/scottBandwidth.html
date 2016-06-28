@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,7 +75,7 @@ $('#symbolSearchPane').show();
 			<h1>Function scottBandwidth</h1>
 			<section>
 				<p>Uses Scott's Rule to select the bandwidth of the Gaussian kernel density
- estimator.  This is 1.06 * min(stdev(<a href="../../dstats/kerneldensity/scottBandwidth.html#data"><code class="prettyprint lang-d">data</code></a>), interquartileRange(<a href="../../dstats/kerneldensity/scottBandwidth.html#data"><code class="prettyprint lang-d">data</code></a>) / 1.34)
+ estimator.  This is 1.06 * min(stdev(data), interquartileRange(data) / 1.34)
  N ^^ -0.2.  R must be a forward range of numeric types.
 </p>
 <section></section>
@@ -84,22 +83,21 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double scottBandwidth(R)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">scottBandwidth</span><span class="pun">(</span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R data
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">data</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isForwardRange!R &amp;&amp; is(ElementType!R : double));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="pln">R </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R </span><span class="pun">: </span><span class="typ">double</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">immutable bandwidth = scottBandwidth(<a href="../../dstats/kerneldensity/scottBandwidth.html#data">data</a>);
-auto kernel = parametrize!normalPDF(0, bandwidth);
-auto kde = <a href="../../dstats/kerneldensity/KernelDensity1D.html">KernelDensity1D</a>(<a href="../../dstats/kerneldensity/scottBandwidth.html#data">data</a>, kernel);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">immutable </span><span class="pln">bandwidth </span><span class="pun">= </span><span class="pln">scottBandwidth</span><span class="pun">(<a href="../../dstats/kerneldensity/scottBandwidth.html#data"></span><span class="pln">data</span></a><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">kernel </span><span class="pun">= </span><span class="pln">parametrize</span><span class="pun">!</span><span class="pln">normalPDF</span><span class="pun">(</span><span class="lit">0</span><span class="pun">, </span><span class="pln">bandwidth</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">kde </span><span class="pun">= <a href="../../dstats/kerneldensity/KernelDensity1D.html"></span><span class="typ">KernelDensity1D</span></a><span class="pun">(<a href="../../dstats/kerneldensity/scottBandwidth.html#data"></span><span class="pln">data</span></a><span class="pun">, </span><span class="pln">kernel</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>References</h3>
 <p>Scott, D. W. (1992) Multivariate Density Estimation: Theory, Practice,

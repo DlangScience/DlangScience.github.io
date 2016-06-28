@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,7 +74,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Loess1D.predict</h1>
 			<section>
-				<p>Predict the value of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> when <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> == <a href="../../dstats/regress/Loess1D.predict.html#point"><code class="prettyprint lang-d">point</code></a>, using <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> iterations
+				<p>Predict the value of y when x == point, using robustness iterations
     of the biweight procedure outlined in the reference to make the
     estimates more robust.
 </p>
@@ -84,14 +83,14 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double predict(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">predict</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;double point,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">point</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int robustness = 0
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">robustness</span> <span class="pun">=</span> <span class="lit">0</span>
 								<br/>
-) const;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">const</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -101,12 +100,12 @@ double predict(
     large number of points, a parallel foreach loop may be used.
 </p>
 
-<p>    Before calling this function with <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> &gt; 0,
-    <a href="../../dstats/regress/Loess1D.computeRobustWeights.html"><code class="prettyprint lang-d">computeRobustWeights</code></a>() must be called.  See this function for details.
+<p>    Before calling this function with robustness &gt; 0,
+    computeRobustWeights() must be called.  See this function for details.
 </p>
 </section>
 <section><h3>Returns</h3>
-<p>The predicted <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> value.
+<p>The predicted y value.
 </p>
 </section>
 

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,7 +74,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct TopN</h1>
 			<section>
-				<p>Given a set of data points entered through the <a href="../../dstats/sort/TopN.put.html"><code class="prettyprint lang-d">put</code></a> function, this output range
+				<p>Given a set of data points entered through the put function, this output range
  maintains the invariant that the top N according to compFun will be
  contained in the data structure.  Uses a heap internally, O(log N) insertion
  time.  Good for finding the largest/smallest N elements of a very large
@@ -85,6 +84,13 @@ $('#symbolSearchPane').show();
 </p>
 <section></section>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">TopN</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="kwd">alias </span><span class="pln">compFun</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Constructors</h3>
 						<table>
@@ -99,7 +105,7 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td>The variable <a href="../../dstats/sort/TopN.this.html#ntop"><code class="prettyprint lang-d">ntop</code></a> controls how many elements are retained.
+								<td>The variable ntop controls how many elements are retained.
 </td>
 							</tr>
 						</table>
@@ -117,21 +123,21 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/sort/TopN.n.html" class="public"><code>n</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/sort/TopN.nAdded.html" class="public"><code>nAdded</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/sort/TopN.nodes.html" class="public"><code>nodes</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span><span class="pun">[]</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -194,19 +200,18 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">Random gen;
-gen.seed(unpredictableSeed);
-uint[] nums = seq(0U, 100U);
-auto less = TopN!(uint, "a &lt; b")(10);
-auto more = TopN!(uint, "a &gt; b")(10);
-randomShuffle(nums, gen);
-foreach(<a href="../../dstats/sort/TopN.n.html">n</a>; nums) {
-    less.put(<a href="../../dstats/sort/TopN.n.html">n</a>);
-    more.put(<a href="../../dstats/sort/TopN.n.html">n</a>);
+<pre class="code"><code class="lang-d"><span class="typ">Random </span><span class="pln">gen</span><span class="pun">;
+</span><span class="pln">gen<wbr/></span><span class="pun">.</span><span class="pln">seed</span><span class="pun">(</span><span class="pln">unpredictableSeed</span><span class="pun">);
+</span><span class="typ">uint</span><span class="pun">[] </span><span class="pln">nums </span><span class="pun">= </span><span class="pln">seq</span><span class="pun">(</span><span class="lit">0U</span><span class="pun">, </span><span class="lit">100U</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">less </span><span class="pun">= </span><span class="typ">TopN</span><span class="pun">!(</span><span class="typ">uint</span><span class="pun">, </span><span class="str">"a &lt; b"</span><span class="pun">)(</span><span class="lit">10</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">more </span><span class="pun">= </span><span class="typ">TopN</span><span class="pun">!(</span><span class="typ">uint</span><span class="pun">, </span><span class="str">"a &gt; b"</span><span class="pun">)(</span><span class="lit">10</span><span class="pun">);
+</span><span class="pln">randomShuffle</span><span class="pun">(</span><span class="pln">nums</span><span class="pun">, </span><span class="pln">gen</span><span class="pun">);
+</span><span class="kwd">foreach</span><span class="pun">(<a href="../../dstats/sort/TopN.n.html"></span><span class="pln">n</span></a><span class="pun">; </span><span class="pln">nums</span><span class="pun">) {
+    </span><span class="pln">less<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(<a href="../../dstats/sort/TopN.n.html"></span><span class="pln">n</span></a><span class="pun">);
+    </span><span class="pln">more<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(<a href="../../dstats/sort/TopN.n.html"></span><span class="pln">n</span></a><span class="pun">);
 }
- assert(less.getSorted == [0U, 1,2,3,4,5,6,7,8,9]);
- assert(more.getSorted == [99U, 98, 97, 96, 95, 94, 93, 92, 91, 90]);
-</code></pre>
+ </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">less<wbr/></span><span class="pun">.</span><span class="pln">getSorted </span><span class="pun">== [</span><span class="lit">0U</span><span class="pun">, </span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">7</span><span class="pun">,</span><span class="lit">8</span><span class="pun">,</span><span class="lit">9</span><span class="pun">]);
+ </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">more<wbr/></span><span class="pun">.</span><span class="pln">getSorted </span><span class="pun">== [</span><span class="lit">99U</span><span class="pun">, </span><span class="lit">98</span><span class="pun">, </span><span class="lit">97</span><span class="pun">, </span><span class="lit">96</span><span class="pun">, </span><span class="lit">95</span><span class="pun">, </span><span class="lit">94</span><span class="pun">, </span><span class="lit">93</span><span class="pun">, </span><span class="lit">92</span><span class="pun">, </span><span class="lit">91</span><span class="pun">, </span><span class="lit">90</span><span class="pun">]);</span></code></pre>
 </section>
 
 			</section>

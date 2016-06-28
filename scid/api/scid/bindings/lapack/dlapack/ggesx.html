@@ -6,19 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">bindings</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">lapack</a>
 						<ul class="tree-view">
 							<li>
@@ -301,62 +300,62 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void ggesx(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">ggesx</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char jobvsl,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char jobvsr,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sort,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sort</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(double)*, std.<wbr/>complex.<wbr/>Complex!(double)*) delctg,
+&nbsp;&nbsp;<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span><span class="pun">, </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span><span class="pun">)</span> <span class="pln">delctg</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sense,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sense</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* b,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int sdim,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">sdim</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* alphav,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">alphav</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* betav,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">betav</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* vsl,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">vsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* vsr,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">vsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* rconde,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">rconde</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* rcondv,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">rcondv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* rwork,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">rwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int liwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">liwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int bwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">bwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -369,62 +368,62 @@ void ggesx(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void ggesx(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">ggesx</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char jobvsl,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char jobvsr,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sort,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sort</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;extern(C) int function(std.<wbr/>complex.<wbr/>Complex!(float)*, std.<wbr/>complex.<wbr/>Complex!(float)*) selctg,
+&nbsp;&nbsp;<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span><span class="pun">, </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span><span class="pun">)</span> <span class="pln">selctg</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sense,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sense</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* b,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int sdim,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">sdim</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* alphav,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">alphav</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* betav,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">betav</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* vsl,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">vsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* vsr,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">vsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* rconde,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">rconde</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* rcondv,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">rcondv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* rwork,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">rwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int liwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">liwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int bwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">bwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -437,62 +436,62 @@ void ggesx(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void ggesx(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">ggesx</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char jobvsl,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char jobvsr,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sort,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sort</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;extern(C) int function(double*, double*, double*) delctg,
+&nbsp;&nbsp;<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">)</span> <span class="pln">delctg</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sense,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sense</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* a,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* b,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int sdim,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">sdim</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* alphar,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">alphar</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* alphai,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">alphai</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* betav,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">betav</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* vsl,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">vsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* vsr,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">vsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* rconde,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">rconde</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* rcondv,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">rcondv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* work,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int liwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">liwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int bwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">bwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -509,62 +508,62 @@ void ggesx(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void ggesx(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">ggesx</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char jobvsl,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char jobvsr,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">jobvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sort,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sort</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;extern(C) int function(float*, float*, float*) selctg,
+&nbsp;&nbsp;<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">)</span> <span class="pln">selctg</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char sense,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">sense</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* a,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* b,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int sdim,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">sdim</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* alphar,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">alphar</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* alphai,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">alphai</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* betav,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">betav</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* vsl,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">vsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* vsr,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">vsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvsr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvsr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* rconde,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">rconde</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* rcondv,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">rcondv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* work,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int liwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">liwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int bwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">bwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

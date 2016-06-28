@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,25 +75,25 @@ $('#symbolSearchPane').show();
 			<h1>Variable PrinCompOptions.unitVariance</h1>
 			<section>
 				<p>Scale each column to unit variance.  Note that, if this option is set to
-    true, <a href="../../dstats/pca/PrinCompOptions.zeroMean.html"><code class="prettyprint lang-d">zeroMean</code></a> is ignored and the mean of each column is set to zero even
-    if <a href="../../dstats/pca/PrinCompOptions.zeroMean.html"><code class="prettyprint lang-d">zeroMean</code></a> is false.  Default value:  false.
+    true, zeroMean is ignored and the mean of each column is set to zero even
+    if zeroMean is false.  Default value:  false.
 </p>
 
 					<section>
 						<h3>Declaration</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-struct <a href="../../dstats/pca/PrinCompOptions.html">PrinCompOptions</a>
+							<code class="lang-d">
+<span class="kwd">struct</span> <a href="../../dstats/pca/PrinCompOptions.html"><span class="typ">PrinCompOptions</span></a>
 								<br/>
-{
+								<span class="pun">{</span>
 								<br/>
-&nbsp;&nbsp;// ...
+&nbsp;&nbsp;<span class="com">// ...</span>
 								<br/>
-&nbsp;&nbsp;bool unitVariance = false;
+&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">unitVariance</span> <span class="pun">=</span> <span class="kwd">false</span><span class="pun">;</span>
 								<br/>
-&nbsp;&nbsp;// ...
+&nbsp;&nbsp;<span class="com">// ...</span>
 								<br/>
-}
+								<span class="pun">}</span>
 							</code>
 						</div>
 					</section>

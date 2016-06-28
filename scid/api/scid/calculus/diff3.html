@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -293,23 +292,23 @@ $('#symbolSearchPane').show();
     formula, a.k.a. a central difference formula.
 </p>
 <section><p>The function is evaluated twice, at points just below and
-    just above <a href="../../scid/calculus/diff3.html#x"><code class="prettyprint lang-d">x</code></a>.
+    just above <code class="lang-d"><a href="../../scid/calculus/diff3.html#x"><span class="pln">x</span></a></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-real diff3(Func)(
+							<code class="lang-d">
+<span class="typ">real</span> <span class="pln">diff3</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real x,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -317,14 +316,14 @@ real diff3(Func)(
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td> The function to differentiate.</td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.</td></tr>
-<tr><td id="scale">scale</td><td> A characteristic <a href="../../scid/calculus/diff3.html#scale"><code class="prettyprint lang-d">scale</code></a> for <a href="../../scid/calculus/diff3.html#f"><code class="prettyprint lang-d">f</code></a>.</td></tr>
+<tr><td id="scale">scale</td><td> A characteristic scale for <code class="lang-d"><a href="../../scid/calculus/diff3.html#f"><span class="pln">f</span></a></code>.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>An approximation to the derivative of <a href="../../scid/calculus/diff3.html#f"><code class="prettyprint lang-d">f</code></a> at the point
-        <a href="../../scid/calculus/diff3.html#x"><code class="prettyprint lang-d">x</code></a>.  The relative error in the result is at best
-        on the order of (real.epsilon)^(2/3), roughly three
-        orders of magnitude more accurate than <a href="../../scid/calculus/diff2.html"><code class="prettyprint lang-d">diff2</code></a>().
+<p>An approximation to the derivative of <code class="lang-d"><a href="../../scid/calculus/diff3.html#f"><span class="pln">f</span></a></code> at the point
+        <code class="lang-d"><a href="../../scid/calculus/diff3.html#x"><span class="pln">x</span></a></code>.  The relative error in the result is at best
+        on the order of <code class="lang-d"><span class="pun">(</span><span class="typ">real<wbr/></span><span class="pun">.</span><span class="pln">epsilon</span><span class="pun">)^(</span><span class="lit">2</span><span class="pun">/</span><span class="lit">3</span><span class="pun">)</span></code>, roughly three
+        orders of magnitude more accurate than <code class="lang-d"><a href="../../scid/calculus/diff2.html"><span class="pln">diff2</span></a><span class="pun">()</span></code>.
 </p>
 </section>
 

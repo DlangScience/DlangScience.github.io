@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -295,21 +294,21 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void toString(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">toString</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;void delegate(const(char)[]) sink,
+&nbsp;&nbsp;<span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">)</span><span class="pun">[]</span><span class="pun">)</span> <span class="pln">sink</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;string formatSpec = "%s"
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">formatSpec</span> <span class="pun">=</span> <span class="str">"%s"</span>
 								<br/>
-) const;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">const</span><span class="pun">;</span>
 								<br/>
 								<br/>
-string toString(
+<span class="typ">string</span> <span class="pln">toString</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;string formatSpec = "%s"
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">formatSpec</span> <span class="pun">=</span> <span class="str">"%s"</span>
 								<br/>
-) const;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">const</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

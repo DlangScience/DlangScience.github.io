@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,41 +75,41 @@ $('#symbolSearchPane').show();
 			<h1>Function welchTTest</h1>
 			<section>
 				<p>Two-sample T-test for difference in means.  Does not assume variances are equal.
-Alteratives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &lt; <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>,
-<a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) &gt; <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>, and
-<a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning mean(<a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a>) - mean(<a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a>) != <a href="../../dstats/tests/welchTTest.html#testMean"><code class="prettyprint lang-d">testMean</code></a>.
+Alteratives are Alt.less, meaning mean(sample1) - mean(sample2) &lt; testMean,
+Alt.greater, meaning mean(sample1) - mean(sample2) &gt; testMean, and
+Alt.twoSided, meaning mean(sample1) - mean(sample2) != testMean.
 </p>
-<section><p><a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> may be either iterables with elements implicitly
-convertible to double or summary structs (see <a href="../../dstats/tests/isSummary.html"><code class="prettyprint lang-d">isSummary</code></a>).
+<section><p>sample1 and sample2 may be either iterables with elements implicitly
+convertible to double or summary structs (see isSummary).
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/ConfInt.html">ConfInt</a> welchTTest(T, U)(
+							<code class="lang-d">
+<a href="../../dstats/tests/ConfInt.html"><span class="typ">ConfInt</span></a> <span class="pln">welchTTest</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T sample1,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">sample1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U sample2,
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">sample2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double testMean = 0,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">testMean</span> <span class="pun">=</span> <span class="lit">0</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided,
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double confLevel = 0.95
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">confLevel</span> <span class="pun">=</span> <span class="lit">0.95</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if ((isSummary!T || doubleIterable!T) &amp;&amp; (isSummary!U || doubleIterable!U));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pun">(</span><span class="pln">isSummary</span><span class="pun">!</span><span class="pln">T </span><span class="pun">|| </span><span class="pln">doubleIterable</span><span class="pun">!</span><span class="pln">T</span><span class="pun">) &amp;&amp; (</span><span class="pln">isSummary</span><span class="pun">!</span><span class="pln">U </span><span class="pun">|| </span><span class="pln">doubleIterable</span><span class="pun">!</span><span class="pln">U</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/ConfInt.html"><code class="prettyprint lang-d">ConfInt</code></a> containing the T statistic, the P-value, and the
+<p>A ConfInt containing the T statistic, the P-value, and the
 boundaries of the confidence interval for the difference between means
-of <a href="../../dstats/tests/welchTTest.html#sample1"><code class="prettyprint lang-d">sample1</code></a> and <a href="../../dstats/tests/welchTTest.html#sample2"><code class="prettyprint lang-d">sample2</code></a> at the specified level.
+of sample1 and sample2 at the specified level.
 </p>
 </section>
 <section><h3>References</h3>

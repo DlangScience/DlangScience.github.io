@@ -34,3 +34,7 @@
 	path = content/repos/scid
 	url = https://github.com/DlangScience/scid
 	branch = master
+[submodule "content/repos/nlopt"]
+	path = content/repos/nlopt
+	url = https://github.com/DlangScience/nlopt
+	branch = master

@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,10 +288,10 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function MatrixView.opIndexAssign</h1>
 			<section>
-				<p>Assigns a <a href="../../scid/matrix/MatrixView.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to the element at row <a href="../../scid/matrix/MatrixView.opIndexAssign.html#i"><code class="prettyprint lang-d">i</code></a>, column <a href="../../scid/matrix/MatrixView.opIndexAssign.html#j"><code class="prettyprint lang-d">j</code></a>.
+				<p>Assigns a value to the element at row i, column j.
 </p>
-<section><p>Unlike <a href="../../scid/matrix/MatrixView.opIndex.html"><code class="prettyprint lang-d">opIndex</code></a>(), this method checks that zero elements in
-    a triangular <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> aren't assigned to, but only in non-release
+<section><p>Unlike opIndex(), this method checks that zero elements in
+    a triangular matrix aren't assigned to, but only in non-release
     builds.
 </p>
 </section>
@@ -300,16 +299,16 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-T opIndexAssign(
+							<code class="lang-d">
+<span class="pln">T</span> <span class="pln">opIndexAssign</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T value,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">value</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t i,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">i</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t j
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">j</span>
 								<br/>
-) nothrow;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

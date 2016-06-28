@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,10 +75,17 @@ $('#symbolSearchPane').show();
 			<h1>Struct HashRange</h1>
 			<section>
 				<p>Forward range struct for iterating over the keys or values of a
- <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a> or <a href="../../dstats/alloc/StackSet.html"><code class="prettyprint lang-d">StackSet</code></a>.  The lifetime of this object must not exceed that
- of the underlying <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a> or <a href="../../dstats/alloc/StackSet.html"><code class="prettyprint lang-d">StackSet</code></a>.
+ StackHash or StackSet.  The lifetime of this object must not exceed that
+ of the underlying StackHash or StackSet.
 </p>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">HashRange</span><span class="pun">(</span><span class="pln">K</span><span class="pun">, </span><span class="pln">S</span><span class="pun">, </span><span class="typ">bool </span><span class="pln">vals</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Constructors</h3>
 						<table>
@@ -111,35 +117,35 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/alloc/HashRange.frontElem.html" class="public"><code>frontElem</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">K*</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">K</span><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/HashRange.index.html" class="public"><code>index</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/HashRange.next.html" class="public"><code>next</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">S.<wbr/>Node*</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">S<wbr/></span><span class="pun">.</span><span class="typ">Node</span><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/HashRange.set.html" class="public"><code>set</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">S*</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">S</span><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/HashRange._length.html" class="public"><code>_length</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -158,7 +164,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/HashRange.empty.html" class="public property"><code>empty</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -166,7 +172,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/HashRange.length.html" class="public property"><code>length</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -174,7 +180,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/HashRange.save.html" class="public property"><code>save</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(this)</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td>
 								<td></td>
 							</tr>
 						</table>

@@ -6,19 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">bindings</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">lapack</a>
 						<ul class="tree-view">
 							<li>
@@ -301,32 +300,32 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gels(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gels</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char trans,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">trans</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int nrhs,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">nrhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* b,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -339,32 +338,32 @@ void gels(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gels(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gels</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char trans,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">trans</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int nrhs,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">nrhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* a,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* b,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* work,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -377,32 +376,32 @@ void gels(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gels(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gels</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char trans,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">trans</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int nrhs,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">nrhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* b,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -415,10 +414,10 @@ void gels(
 <section><p>of linear equations, A X=B or A**H X=B,  or the minimum norm
 </p>
 
-<p>solution of an under-determined system, where A is <a href="../../../../scid/bindings/lapack/dlapack/gels.html#a"><code class="prettyprint lang-d">a</code></a> general
+<p>solution of an under-determined system, where A is a general
 </p>
 
-<p>rectangular matrix of full rank,  using <a href="../../../../scid/bindings/lapack/dlapack/gels.html#a"><code class="prettyprint lang-d">a</code></a> QR or LQ factorization
+<p>rectangular matrix of full rank,  using a QR or LQ factorization
 </p>
 
 <p>of A.
@@ -428,32 +427,32 @@ void gels(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gels(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gels</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char trans,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">trans</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int nrhs,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">nrhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* a,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* b,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* work,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

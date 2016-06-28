@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">libcerf</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../libcerf.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../libcerf/erfcx_.html" class=" module">erfcx_</a>
 							</li>
@@ -31,9 +33,6 @@
 								<a href="../../libcerf/w_of_z.html" class=" module">w_of_z</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../../libcerf.html" class=" module">libcerf</a>
 							</li>
 						</ul>
 				<noscript>
@@ -54,7 +53,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function cdawson</h1>
 			<section>
-				<p>Compute Dawson(<a href="../../libcerf/err_fcts/cdawson.html#z"><code class="prettyprint lang-d">z</code></a>) = sqrt(pi)/2  *  exp(-<a href="../../libcerf/err_fcts/cdawson.html#z"><code class="prettyprint lang-d">z</code></a>^2) * <a href="../../libcerf/err_fcts/erfi.html"><code class="prettyprint lang-d">erfi</code></a>(<a href="../../libcerf/err_fcts/cdawson.html#z"><code class="prettyprint lang-d">z</code></a>),
+				<p>Compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z),
 Dawson's integral for a complex argument,
 using w_of_z except for certain regions.
 </p>
@@ -62,12 +61,12 @@ using w_of_z except for certain regions.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-std.<wbr/>complex.<wbr/>Complex!(double) cdawson(
+							<code class="lang-d">
+<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double) <span class="pln">cdawson</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double) z
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double) <span class="pln">z</span>
 								<br/>
-) nothrow @nogc @safe;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

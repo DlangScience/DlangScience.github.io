@@ -1302,7 +1302,7 @@ var symbols = [
 {name: 'scid.matrix.MatrixView.opIndexAssign', kind: "functiondeclaration", path: './scid/matrix/MatrixView.opIndexAssign.html', attributes: ["nothrow"]},
 {name: 'scid.matrix.MatrixView.rows', kind: "variabledeclaration", path: './scid/matrix/MatrixView.rows.html', attributes: []},
 {name: 'scid.matrix.MatrixView.storage', kind: "enummemberdeclaration", path: './scid/matrix/MatrixView.storage.html', attributes: []},
-{name: 'scid.matrix.MatrixView.this', kind: "functiondeclaration", path: './scid/matrix/MatrixView.this.html', attributes: ["pure"]},
+{name: 'scid.matrix.MatrixView.this', kind: "functiondeclaration", path: './scid/matrix/MatrixView.this.html', attributes: ["pure", "nothrow"]},
 {name: 'scid.matrix.MatrixView.triangle', kind: "enummemberdeclaration", path: './scid/matrix/MatrixView.triangle.html', attributes: []},
 {name: 'scid.matrix.Storage', kind: "enumdeclaration", path: './scid/matrix/Storage.html', attributes: []},
 {name: 'scid.matrix.Storage.General', kind: "enummemberdeclaration", path: './scid/matrix/Storage.General.html', attributes: []},

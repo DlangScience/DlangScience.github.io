@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -80,6 +79,13 @@ $('#symbolSearchPane').show();
 <section></section>
 
 					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">Perm</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
+					<section>
 						<h3>Constructors</h3>
 						<table>
 							<col class="caption"/>
@@ -93,7 +99,7 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td>Generate permutations from an <a href="../../dstats/base/Perm.this.html#input"><code class="prettyprint lang-d">input</code></a> range.
+								<td>Generate permutations from an input range.
  Create a duplicate of this sequence
  so that the original sequence is not modified.
 </td>
@@ -113,28 +119,28 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/base/Perm.currentIndex.html" class="public"><code>currentIndex</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">ubyte</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Perm.Is.html" class="public"><code>Is</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">ubyte[MAX_PERM_LEN]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span><span class="pun">[</span><span class="pln">MAX_PERM_LEN</span><span class="pun">]</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Perm.len.html" class="public"><code>len</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">ubyte</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Perm.nPerms.html" class="public"><code>nPerms</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -153,7 +159,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/base/Perm.empty.html" class="public property"><code>empty</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -161,7 +167,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/base/Perm.front.html" class="public property"><code>front</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">const(T)[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">[]</span></code></td>
 								<td>Returns the current permutation.  The array is const because it is
     recycled across iterations and modifying it would destroy the state of
     the permutation generator.
@@ -172,7 +178,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/base/Perm.length.html" class="public property"><code>length</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td>The number of permutations left.
 </td>
 							</tr>
@@ -181,7 +187,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/base/Perm.save.html" class="public property"><code>save</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(this)</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -201,7 +207,7 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Get the next permutation in the sequence.  This will overwrite the
-    contents of the array returned by the last call to <a href="../../dstats/base/Perm.front.html"><code class="prettyprint lang-d">front</code></a>.
+    contents of the array returned by the last call to front.
 </td>
 							</tr>
 						</table>
@@ -228,35 +234,34 @@ $('#symbolSearchPane').show();
 <p>Permutations are output in undefined order.
 </p>
 
-<p>The array returned by <a href="../../dstats/base/Perm.front.html"><code class="prettyprint lang-d">front</code></a> is recycled across iterations.  To preserve
+<p>The array returned by front is recycled across iterations.  To preserve
 it across iterations, wrap this range using map!"a.dup" or
 map!"a.idup".
 </p>
 </section>
 <section><h3>Bugs</h3>
 <p>Only supports iterating over up to size_t.max permutations.
-This means the max permutation <a href="../../dstats/base/Perm.length.html"><code class="prettyprint lang-d">length</code></a> is 12 on 32-bit machines, or 20
+This means the max permutation length is 12 on 32-bit machines, or 20
 on 64-bit.  This was a conscious tradeoff to allow this range to have a
-<a href="../../dstats/base/Perm.length.html"><code class="prettyprint lang-d">length</code></a> of type size_t, since iterating over such huge permutation spaces
+length of type size_t, since iterating over such huge permutation spaces
 would be insanely slow anyhow.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">double[][] res;
-auto <a href="../../dstats/base/perm.html">perm</a> = map!"a.dup"(Perm!(double)([1.0, 2.0, 3.0][]));
-foreach(p; <a href="../../dstats/base/perm.html">perm</a>) {
-     res ~= p;
+<pre class="code"><code class="lang-d"><span class="typ">double</span><span class="pun">[][] </span><span class="pln">res</span><span class="pun">;
+</span><span class="kwd">auto <a href="../../dstats/base/perm.html"></span><span class="pln">perm</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">map</span><span class="pun">!</span><span class="str">"a.dup"</span><span class="pun">(</span><span class="typ">Perm</span><span class="pun">!(</span><span class="typ">double</span><span class="pun">)([</span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">3.0</span><span class="pun">][]));
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">p</span><span class="pun">; <a href="../../dstats/base/perm.html"></span><span class="pln">perm</span></a><span class="pun">) {
+     </span><span class="pln">res </span><span class="pun">~= </span><span class="pln">p</span><span class="pun">;
 }
 
-auto sorted = sort(res);
-assert(sorted.canFind([1.0, 2.0, 3.0]));
-assert(sorted.canFind([1.0, 3.0, 2.0]));
-assert(sorted.canFind([2.0, 1.0, 3.0]));
-assert(sorted.canFind([2.0, 3.0, 1.0]));
-assert(sorted.canFind([3.0, 1.0, 2.0]));
-assert(sorted.canFind([3.0, 2.0, 1.0]));
-assert(sorted.length == 6);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">sorted </span><span class="pun">= </span><span class="pln">sort</span><span class="pun">(</span><span class="pln">res</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">3.0</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">3.0</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">3.0</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">3.0</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">3.0</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">3.0</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">6</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

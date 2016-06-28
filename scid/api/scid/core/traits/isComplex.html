@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -31,7 +30,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">core</a>
 						<ul class="tree-view">
 							<li>
@@ -295,8 +294,8 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Declaration</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-enum isComplex(T) = is(T == cfloat) || is(T == cdouble) || is(T == creal) || is(T == Complex!float) || is(T == Complex!double) || is(T == Complex!real);
+							<code class="lang-d">
+<span class="kwd">enum</span> <span class="pln">isComplex</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span> <span class="pun">=</span> <span class="kwd">is</span><span class="pun">(</span><span class="pln">T </span><span class="pun">== </span><span class="typ">cfloat</span><span class="pun">) || </span><span class="kwd">is</span><span class="pun">(</span><span class="pln">T </span><span class="pun">== </span><span class="typ">cdouble</span><span class="pun">) || </span><span class="kwd">is</span><span class="pun">(</span><span class="pln">T </span><span class="pun">== </span><span class="typ">creal</span><span class="pun">) || </span><span class="kwd">is</span><span class="pun">(</span><span class="pln">T </span><span class="pun">== </span><span class="typ">Complex</span><span class="pun">!</span><span class="typ">float</span><span class="pun">) || </span><span class="kwd">is</span><span class="pun">(</span><span class="pln">T </span><span class="pun">== </span><span class="typ">Complex</span><span class="pun">!</span><span class="typ">double</span><span class="pun">) || </span><span class="kwd">is</span><span class="pun">(</span><span class="pln">T </span><span class="pun">== </span><span class="typ">Complex</span><span class="pun">!</span><span class="typ">real</span><span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

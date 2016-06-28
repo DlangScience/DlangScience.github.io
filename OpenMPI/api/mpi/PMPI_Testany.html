@@ -6,22 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class="collapsed tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">mpi</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../mpi.html" class="selected module">Package members</a>
+							</li>
 							<li>
 								<a href="../mpi/util.html" class=" module">util</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
 						</ul>
 				<noscript>
@@ -47,20 +46,20 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) int PMPI_Testany(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">int</span> <span class="pln">PMPI_Testany</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;int count,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">count</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../mpi/ompi_request_t.html">ompi_request_t</a>** array_of_requests,
+&nbsp;&nbsp;<a href="../mpi/ompi_request_t.html"><span class="pln">ompi_request_t</span></a><span class="pun">*</span><span class="pun">*</span> <span class="pln">array_of_requests</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* index,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">index</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* flag,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">flag</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../mpi/ompi_status_public_t.html">ompi_status_public_t</a>* status
+&nbsp;&nbsp;<a href="../mpi/ompi_status_public_t.html"><span class="pln">ompi_status_public_t</span></a><span class="pun">*</span> <span class="pln">status</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

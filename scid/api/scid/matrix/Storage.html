@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,11 +288,11 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Enum Storage</h1>
 			<section>
-				<p>Various <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> representations.
+				<p>Various matrix representations.
 </p>
 
 					<p>The enum base type is
-						<code class="prettyprint lang-d">int</code>
+						<code class="prettyprint lang-d"><span class="typ">int</span></code>
 .
 					</p>
 					<section>
@@ -306,27 +305,21 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../scid/matrix/Storage.General.html">
-										<code>General</code>
-									</a>
+									<code>General</code>
 								</td>
-								<td><code class="prettyprint lang-d">General</code> (dense) matrices
+								<td>General (dense) matrices
 </td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../scid/matrix/Storage.Symmetric.html">
-										<code>Symmetric</code>
-									</a>
+									<code>Symmetric</code>
 								</td>
 								<td>Packed storage of symmetric matrices
 </td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../scid/matrix/Storage.Triangular.html">
-										<code>Triangular</code>
-									</a>
+									<code>Triangular</code>
 								</td>
 								<td>Packed storage of triangular matrices
 </td>

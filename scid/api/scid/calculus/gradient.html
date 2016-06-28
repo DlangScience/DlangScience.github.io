@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -292,27 +291,27 @@ $('#symbolSearchPane').show();
 				<p>Calculate the gradient of a function of several variables.
 </p>
 <section><p>This function calculates a central-difference approximation to
-    the gradient of a function <a href="../../scid/calculus/gradient.html#f"><code class="prettyprint lang-d">f</code></a>. The error in the result is, at best,
-    on the order of sqrt(real.epsilon). The function <a href="../../scid/calculus/gradient.html#f"><code class="prettyprint lang-d">f</code></a> is evaluated
-    2<i>n</i> times, where <i>n</i> is the length of the vector <a href="../../scid/calculus/gradient.html#x"><code class="prettyprint lang-d">x</code></a>.
+    the gradient of a function <code class="lang-d"><a href="../../scid/calculus/gradient.html#f"><span class="pln">f</span></a></code>. The error in the result is, at best,
+    on the order of <code class="lang-d"><span class="pln">sqrt</span><span class="pun">(</span><span class="typ">real<wbr/></span><span class="pun">.</span><span class="pln">epsilon</span><span class="pun">)</span></code>. The function <code class="lang-d"><a href="../../scid/calculus/gradient.html#f"><span class="pln">f</span></a></code> is evaluated
+    2<i>n</i> times, where <i>n</i> is the length of the vector <code class="lang-d"><a href="../../scid/calculus/gradient.html#x"><span class="pln">x</span></a></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Real[] gradient(Real, Func)(
+							<code class="lang-d">
+<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">gradient</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -320,20 +319,19 @@ Real[] gradient(Real, Func)(
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td> The function of which to find the gradient.</td></tr>
 <tr><td id="x">x</td><td> The point at which to find the gradient.</td></tr>
-<tr><td id="scale">scale</td><td> A "characteristic <a href="../../scid/calculus/gradient.html#scale"><code class="prettyprint lang-d">scale</code></a>" over which the function
+<tr><td id="scale">scale</td><td> A "characteristic scale" over which the function
             changes significantly. (optional)</td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/gradient.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of the same length as <a href="../../scid/calculus/gradient.html#x"><code class="prettyprint lang-d">x</code></a>, for the returned
+<tr><td id="buffer">buffer</td><td> A buffer of the same length as <code class="lang-d"><a href="../../scid/calculus/gradient.html#x"><span class="pln">x</span></a></code>, for the returned
             gradient vector. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// Let's find the gradient of <a href="../../scid/calculus/gradient.html#f">f</a>(<a href="../../scid/calculus/gradient.html#x">x</a>,y) = <a href="../../scid/calculus/gradient.html#x">x</a> exp(y) at
+<pre class="code"><code class="lang-d"><span class="com">// Let's find the gradient of f(x,y) = x exp(y) at
 // the point p = (2,1).
-real <a href="../../scid/calculus/gradient.html#f">f</a>(real[] <a href="../../scid/calculus/gradient.html#x">x</a>)  { return <a href="../../scid/calculus/gradient.html#x">x</a>[0] * exp(<a href="../../scid/calculus/gradient.html#x">x</a>[1]); }
-real[] p = [2.0L, 1.0L];
+</span><span class="typ">real <a href="../../scid/calculus/gradient.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">real</span><span class="pun">[] <a href="../../scid/calculus/gradient.html#x"></span><span class="pln">x</span></a><span class="pun">)  { </span><span class="kwd">return <a href="../../scid/calculus/gradient.html#x"></span><span class="pln">x</span></a><span class="pun">[</span><span class="lit">0</span><span class="pun">] * </span><span class="pln">exp</span><span class="pun">(<a href="../../scid/calculus/gradient.html#x"></span><span class="pln">x</span></a><span class="pun">[</span><span class="lit">1</span><span class="pun">]); }
+</span><span class="typ">real</span><span class="pun">[] </span><span class="pln">p </span><span class="pun">= [</span><span class="lit">2.0L</span><span class="pun">, </span><span class="lit">1.0L</span><span class="pun">];
 
-auto g = gradient(&amp;<a href="../../scid/calculus/gradient.html#f">f</a>, p);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">g </span><span class="pun">= </span><span class="pln">gradient</span><span class="pun">(&amp;<a href="../../scid/calculus/gradient.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="pln">p</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>See also</h3>
 <p><ul><li>Wikipedia:

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,39 +74,38 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function rank</h1>
 			<section>
-				<p>Given an <a href="../../dstats/base/rank.html#input"><code class="prettyprint lang-d">input</code></a> array, outputs an array containing the <code class="prettyprint lang-d">rank</code> from
+				<p>Given an input array, outputs an array containing the rank from
  [1, input.length] corresponding to each element.  Ties are dealt with by
- averaging.  This function does not reorder the <a href="../../dstats/base/rank.html#input"><code class="prettyprint lang-d">input</code></a> range.
+ averaging.  This function does not reorder the input range.
  Return type is float[] by default, but if you are sure you have no ties,
  ints can be used for efficiency (in which case ties will not be averaged),
  and if you need more precision when averaging ties, you can use double or
  real.
 </p>
-<section><p>Works with any <a href="../../dstats/base/rank.html#input"><code class="prettyprint lang-d">input</code></a> range.
+<section><p>Works with any input range.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Ret[] rank(alias compFun, Ret, T)(
+							<code class="lang-d">
+<span class="typ">Ret</span><span class="pun">[]</span> <span class="pln">rank</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">compFun</span><span class="pun">, </span><span class="typ">Ret</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T input,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">input</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Ret[] buf = null
+&nbsp;&nbsp;<span class="typ">Ret</span><span class="pun">[]</span> <span class="pln">buf</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!T &amp;&amp; is(typeof(input.front &lt; input.front)));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">input<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">input<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">))</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">uint[] test = [3, 5, 3, 1, 2];
-assert(rank!("a &lt; b", float)(test) == [3.5f, 5f, 3.5f, 1f, 2f]);
-assert(test == [3U, 5, 3, 1, 2]);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">uint</span><span class="pun">[] </span><span class="pln">test </span><span class="pun">= [</span><span class="lit">3</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rank</span><span class="pun">!(</span><span class="str">"a &lt; b"</span><span class="pun">, </span><span class="typ">float</span><span class="pun">)(</span><span class="pln">test</span><span class="pun">) == [</span><span class="lit">3.5f</span><span class="pun">, </span><span class="lit">5f</span><span class="pun">, </span><span class="lit">3.5f</span><span class="pun">, </span><span class="lit">1f</span><span class="pun">, </span><span class="lit">2f</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">test </span><span class="pun">== [</span><span class="lit">3U</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">]);</span></code></pre>
 </section>
 
 			</section>

@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -290,12 +289,19 @@ $('#symbolSearchPane').show();
 			<h1>Struct Result</h1>
 			<section>
 				<p>Struct containing the result of a calculation, along with
-    the absolute <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> in that calculation (x &plusmn; &delta;x).
+    the absolute error in that calculation (x &plusmn; &delta;x).
 </p>
-<section><p>It is assumed, but not checked, that the <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> is nonnegative.
+<section><p>It is assumed, but not checked, that the error is nonnegative.
 </p>
 </section>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">Result</span><span class="pun">(</span><span class="pln">V</span><span class="pun">, </span><span class="pln">E</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Fields</h3>
 						<table>
@@ -309,7 +315,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../scid/types/Result.error.html" class="public"><code>error</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">E</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">E</span></code></td>
 								<td>Error.
 </td>
 							</tr>
@@ -317,8 +323,8 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../scid/types/Result.value.html" class="public"><code>value</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">V</code></td>
-								<td><a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">V</span></code></td>
+								<td>Result.
 </td>
 							</tr>
 						</table>
@@ -337,7 +343,7 @@ $('#symbolSearchPane').show();
 										<code>opBinary</code>
 									</a>
 								</td>
-								<td>Operators for <a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a>-<a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a> arithmetic.
+								<td>Operators for Result-Result arithmetic.
 </td>
 							</tr>
 							<tr>
@@ -346,7 +352,7 @@ $('#symbolSearchPane').show();
 										<code>opOpAssign</code>
 									</a>
 								</td>
-								<td>Operators for <a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a>-<a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a> arithmetic.
+								<td>Operators for Result-Result arithmetic.
 </td>
 							</tr>
 							<tr>

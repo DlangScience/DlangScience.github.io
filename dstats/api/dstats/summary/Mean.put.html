@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -85,12 +84,12 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void put(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">put</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;double element
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">element</span>
 								<br/>
-) pure nothrow @safe;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @safe</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -98,40 +97,39 @@ void put(
 			</section>
 			<section>
 				<h2>Function Mean.put</h2>
-				<p>Adds the contents of <a href="../../dstats/summary/Mean.put.html#rhs"><code class="prettyprint lang-d">rhs</code></a> to this instance.
+				<p>Adds the contents of rhs to this instance.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void put(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">put</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../dstats/summary/Mean.html">Mean</a> rhs
+&nbsp;&nbsp;<a href="../../dstats/summary/Mean.html"><span class="typ">Mean</span></a> <span class="pln">rhs</span>
 								<br/>
-) pure nothrow @safe;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @safe</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d"><a href="../../dstats/summary/Mean.html">Mean</a> mean1, mean2, combined;
-foreach(i; 0..5) {
-    mean1.put(i);
+<pre class="code"><code class="lang-d"><a href="../../dstats/summary/Mean.html"><span class="typ">Mean</span></a><span class="pln"> mean1</span><span class="pun">, </span><span class="pln">mean2</span><span class="pun">, </span><span class="pln">combined</span><span class="pun">;
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0</span><span class="pun">..</span><span class="lit">5</span><span class="pun">) {
+    </span><span class="pln">mean1<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);
 }
 
-foreach(i; 5..10) {
-    mean2.put(i);
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">5</span><span class="pun">..</span><span class="lit">10</span><span class="pun">) {
+    </span><span class="pln">mean2<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);
 }
 
-mean1.put(mean2);
+</span><span class="pln">mean1<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="pln">mean2</span><span class="pun">);
 
-foreach(i; 0..10) {
-    combined.put(i);
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0</span><span class="pun">..</span><span class="lit">10</span><span class="pun">) {
+    </span><span class="pln">combined<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);
 }
 
-assert(approxEqual(combined.mean, mean1.mean));
-</code></pre>
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">combined<wbr/></span><span class="pun">.</span><span class="pln">mean</span><span class="pun">, </span><span class="pln">mean1<wbr/></span><span class="pun">.</span><span class="pln">mean</span><span class="pun">));</span></code></pre>
 </section>
 
 			</section>

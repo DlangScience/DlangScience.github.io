@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
 		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="./scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="./prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="./scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -50,8 +49,8 @@ $('#symbolSearchPane').show();
 								<code>merge</code>
 							</a>
 						</td>
-						<td>Merge ranges <a href="./parallel_algorithm/merge.html#from1"><code class="prettyprint lang-d">from1</code></a> and <a href="./parallel_algorithm/merge.html#from2"><code class="prettyprint lang-d">from2</code></a>, which are assumed sorted according
-to pred, into <a href="./parallel_algorithm/merge.html#buf"><code class="prettyprint lang-d">buf</code></a> using a sequential algorithm.
+						<td>Merge ranges <code class="lang-d"><a href="./parallel_algorithm/merge.html#from1"><span class="pln">from1</span></a></code> and <code class="lang-d"><a href="./parallel_algorithm/merge.html#from2"><span class="pln">from2</span></a></code>, which are assumed sorted according
+to <code class="lang-d"><span class="pln">pred</span></code>, into <code class="lang-d"><a href="./parallel_algorithm/merge.html#buf"><span class="pln">buf</span></a></code> using a sequential algorithm.
 </td>
 					</tr>
 					<tr>
@@ -132,8 +131,8 @@ to pred, into <a href="./parallel_algorithm/merge.html#buf"><code class="prettyp
 								<code>parallelMerge</code>
 							</a>
 						</td>
-						<td>Merge ranges <a href="./parallel_algorithm/parallelMerge.html#from1"><code class="prettyprint lang-d">from1</code></a> and <a href="./parallel_algorithm/parallelMerge.html#from2"><code class="prettyprint lang-d">from2</code></a>, which are assumed sorted according
-to pred, into <a href="./parallel_algorithm/parallelMerge.html#buf"><code class="prettyprint lang-d">buf</code></a> using a parallel divide-and-conquer algorithm.
+						<td>Merge ranges <code class="lang-d"><a href="./parallel_algorithm/parallelMerge.html#from1"><span class="pln">from1</span></a></code> and <code class="lang-d"><a href="./parallel_algorithm/parallelMerge.html#from2"><span class="pln">from2</span></a></code>, which are assumed sorted according
+to <code class="lang-d"><span class="pln">pred</span></code>, into <code class="lang-d"><a href="./parallel_algorithm/parallelMerge.html#buf"><span class="pln">buf</span></a></code> using a parallel divide-and-conquer algorithm.
 </td>
 					</tr>
 					<tr>
@@ -150,8 +149,8 @@ to pred, into <a href="./parallel_algorithm/parallelMerge.html#buf"><code class=
 								<code>parallelSort</code>
 							</a>
 						</td>
-						<td>Sort a <a href="./parallel_algorithm/parallelSort.html#range"><code class="prettyprint lang-d">range</code></a> using a parallel <a href="./parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> sort algorithm, falling back to
-baseAlgorithm for small subranges.  Usage is similar to
+						<td>Sort a range using a parallel merge sort algorithm, falling back to
+<code class="lang-d"><span class="pln">baseAlgorithm</span></code> for small subranges.  Usage is similar to
 algorithm, sort.
 </td>
 					</tr>

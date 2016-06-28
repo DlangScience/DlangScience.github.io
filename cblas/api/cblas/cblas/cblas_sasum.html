@@ -6,22 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">cblas</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../cblas.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../cblas/cblas.html" class="selected module">cblas</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../../cblas.html" class=" module">cblas</a>
 							</li>
 						</ul>
 				<noscript>
@@ -47,16 +46,16 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) float cblas_sasum(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">float</span> <span class="pln">cblas_sasum</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const(int) n,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(float*) x,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">float</span><span class="pun">*</span><span class="pun">)</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(int) incx
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">incx</span>
 								<br/>
-) nothrow @nogc;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

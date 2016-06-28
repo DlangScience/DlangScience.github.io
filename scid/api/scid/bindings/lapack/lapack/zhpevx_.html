@@ -6,19 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">bindings</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">lapack</a>
 						<ul class="tree-view">
 							<li>
@@ -294,54 +293,54 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) void zhpevx_(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">zhpevx_</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char* jobz,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">jobz</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char* range,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">range</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char* uplo,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">uplo</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* n,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* ap,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">ap</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* vl,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">vl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* vu,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">vu</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* il,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">il</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iu,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iu</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* abstol,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">abstol</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* m,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* w,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">w</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* z,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">z</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ldz,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ldz</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* rwork,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">rwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ifail,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ifail</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* info,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">info</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int jobz_len,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">jobz_len</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int range_len,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">range_len</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int uplo_len
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">uplo_len</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

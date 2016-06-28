@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -84,19 +83,19 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> fishersMethod(R)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">fishersMethod</span><span class="pun">(</span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R pVals
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">pVals</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!R);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">R</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the chi-square statistic and a P-value for
+<p>A TestRes containing the chi-square statistic and a P-value for
  the alternative hypothesis that more small P-values than would be expected
  by chance are present against the alternative that the distribution of
  P-values is uniform or enriched for large P-values.

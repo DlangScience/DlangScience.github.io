@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -80,14 +79,14 @@ to just returning the beta values are that it's faster and that each range
 needs to be iterated over only once, and thus can be just an input range.
 The beta values are returned such that the smallest index corresponds to
 the leftmost element of X.  X can be either a tuple or a range of input
-ranges.  <a href="../../dstats/regress/linearRegressBeta.html#Y"><code class="prettyprint lang-d">Y</code></a> must be an input range.
+ranges.  Y must be an input range.
 </p>
 <section><p>If, after all X variables are passed in, a numeric type is passed as the last
 parameter, this is treated as a ridge parameter and ridge regression is
 performed.  Ridge regression is a form of regression that penalizes the L2 norm
 of the beta vector and therefore results in more parsimonious models.
 However, it makes statistical inference such as that supported by
-<a href="../../dstats/regress/linearRegress.html"><code class="prettyprint lang-d">linearRegress</code></a>() difficult to impossible.  Therefore, <a href="../../dstats/regress/linearRegress.html"><code class="prettyprint lang-d">linearRegress</code></a>() doesn't
+linearRegress() difficult to impossible.  Therefore, linearRegress() doesn't
 support ridges.
 </p>
 
@@ -99,23 +98,23 @@ zero, then ordinary least squares regression is performed.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double[] linearRegressBeta(U, T...)(
+							<code class="lang-d">
+<span class="typ">double</span><span class="pun">[]</span> <span class="pln">linearRegressBeta</span><span class="pun">(</span><span class="pln">U</span><span class="pun">, </span><span class="pln">T</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;U Y,
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">Y</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T XIn
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">XIn</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Notes</h3>
 <p>The X ranges are traversed in lockstep, but the traversal is stopped
 at the end of the shortest one.  Therefore, using infinite ranges is safe.
-For example, using <a href="../../dstats/regress/repeat.html"><code class="prettyprint lang-d">repeat</code></a>(1) to get an intercept term works.
+For example, using repeat(1) to get an intercept term works.
 </p>
 </section>
 <section><h3>References</h3>
@@ -130,17 +129,16 @@ Fourth Edition. Springer, New York. ISBN 0-387-95457-0
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">int[] nBeers = [8,6,7,5,3,0,9];
-int[] nCoffees = [3,6,2,4,3,6,8];
-int[] musicVolume = [3,1,4,1,5,9,2];
-int[] programmingSkill = [2,7,1,8,2,8,1];
-double[] betas = linearRegressBeta(programmingSkill, <a href="../../dstats/regress/repeat.html">repeat</a>(1), nBeers, nCoffees,
-    musicVolume, map!"a * a"(musicVolume));
+<pre class="code"><code class="lang-d"><span class="typ">int</span><span class="pun">[] </span><span class="pln">nBeers </span><span class="pun">= [</span><span class="lit">8</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">7</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">9</span><span class="pun">];
+</span><span class="typ">int</span><span class="pun">[] </span><span class="pln">nCoffees </span><span class="pun">= [</span><span class="lit">3</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">8</span><span class="pun">];
+</span><span class="typ">int</span><span class="pun">[] </span><span class="pln">musicVolume </span><span class="pun">= [</span><span class="lit">3</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">9</span><span class="pun">,</span><span class="lit">2</span><span class="pun">];
+</span><span class="typ">int</span><span class="pun">[] </span><span class="pln">programmingSkill </span><span class="pun">= [</span><span class="lit">2</span><span class="pun">,</span><span class="lit">7</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">8</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">8</span><span class="pun">,</span><span class="lit">1</span><span class="pun">];
+</span><span class="typ">double</span><span class="pun">[] </span><span class="pln">betas </span><span class="pun">= </span><span class="pln">linearRegressBeta</span><span class="pun">(</span><span class="pln">programmingSkill</span><span class="pun">, <a href="../../dstats/regress/repeat.html"></span><span class="pln">repeat</span></a><span class="pun">(</span><span class="lit">1</span><span class="pun">), </span><span class="pln">nBeers</span><span class="pun">, </span><span class="pln">nCoffees</span><span class="pun">,
+    </span><span class="pln">musicVolume</span><span class="pun">, </span><span class="pln">map</span><span class="pun">!</span><span class="str">"a * a"</span><span class="pun">(</span><span class="pln">musicVolume</span><span class="pun">));
 
-// Now throw in a ridge parameter of 2.5.
-double[] ridgeBetas = linearRegressBeta(programmingSkill, <a href="../../dstats/regress/repeat.html">repeat</a>(1), nBeers,
-    nCoffees, musicVolume, map!"a * a"(musicVolume), 2.5);
-</code></pre>
+</span><span class="com">// Now throw in a ridge parameter of 2.5.
+</span><span class="typ">double</span><span class="pun">[] </span><span class="pln">ridgeBetas </span><span class="pun">= </span><span class="pln">linearRegressBeta</span><span class="pun">(</span><span class="pln">programmingSkill</span><span class="pun">, <a href="../../dstats/regress/repeat.html"></span><span class="pln">repeat</span></a><span class="pun">(</span><span class="lit">1</span><span class="pun">), </span><span class="pln">nBeers</span><span class="pun">,
+    </span><span class="pln">nCoffees</span><span class="pun">, </span><span class="pln">musicVolume</span><span class="pun">, </span><span class="pln">map</span><span class="pun">!</span><span class="str">"a * a"</span><span class="pun">(</span><span class="pln">musicVolume</span><span class="pun">), </span><span class="lit">2.5</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,49 +74,48 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function KernelDensity1D.fromCallable</h1>
 			<section>
-				<p>Construct a <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> density estimation object from a callable object.
- R must be a <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#range"><code class="prettyprint lang-d">range</code></a> of numeric types.  C must be a <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> function,
- delegate, or class or struct with overloaded <a href="../../dstats/kerneldensity/KernelDensity1D.opCall.html"><code class="prettyprint lang-d">opCall</code></a>.  The <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a>
+				<p>Construct a kernel density estimation object from a callable object.
+ R must be a range of numeric types.  C must be a kernel function,
+ delegate, or class or struct with overloaded opCall.  The kernel
  function is assumed to be symmetric about zero, to take its maximum
  value at zero and to be unimodal.
 </p>
-<section><p><a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#edgeBuffer"><code class="prettyprint lang-d">edgeBuffer</code></a> determines how much space below and above the smallest and
+<section><p>edgeBuffer determines how much space below and above the smallest and
  largest observed value will be allocated when doing the binning.
- Values less than reduce!min(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#range"><code class="prettyprint lang-d">range</code></a>) - <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#edgeBuffer"><code class="prettyprint lang-d">edgeBuffer</code></a> or greater than
- reduce!max(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#range"><code class="prettyprint lang-d">range</code></a>) + <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#edgeBuffer"><code class="prettyprint lang-d">edgeBuffer</code></a> will be assigned a density of zero.
+ Values less than reduce!min(range) - edgeBuffer or greater than
+ reduce!max(range) + edgeBuffer will be assigned a density of zero.
  If this value is left at its default, it will be set to a value at which
- the <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> is somewhere between 1e-3 and 1e-4 times its value at zero.
+ the kernel is somewhere between 1e-3 and 1e-4 times its value at zero.
 </p>
 
-<p> The bandwidth of the <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> is indirectly selected by parametrizing the
- <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> function.
+<p> The bandwidth of the kernel is indirectly selected by parametrizing the
+ kernel function.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/kerneldensity/KernelDensity1D.html">KernelDensity1D</a> fromCallable(C, R)(
+							<code class="lang-d">
+<a href="../../dstats/kerneldensity/KernelDensity1D.html"><span class="typ">KernelDensity1D</span></a> <span class="pln">fromCallable</span><span class="pun">(</span><span class="pln">C</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope C kernel,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">C</span> <span class="pln">kernel</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;R range,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">range</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double edgeBuffer = (double).nan
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">edgeBuffer</span> <span class="pun">=</span> <span class="pun">(</span><span class="typ">double</span><span class="pun">)<wbr/>.</span><span class="pln">nan</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isForwardRange!R &amp;&amp; is(typeof(kernel(2.00000)) : double));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="pln">R </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">kernel</span><span class="pun">(</span><span class="lit">2.00000</span><span class="pun">)) : </span><span class="typ">double</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto randNums = randArray!rNorm(1_000, 0, 1);
-auto <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel">kernel</a> = parametrize!normalPDF(0, 0.01);
-auto density = <a href="../../dstats/kerneldensity/KernelDensity1D.html">KernelDensity1D</a>(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel">kernel</a>, randNums);
-writeln(normalPDF(1, 0, 1), "  ", density(1)).  // Should be about the same.
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">randNums </span><span class="pun">= </span><span class="pln">randArray</span><span class="pun">!</span><span class="pln">rNorm</span><span class="pun">(</span><span class="lit">1_000</span><span class="pun">, </span><span class="lit">0</span><span class="pun">, </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"></span><span class="pln">kernel</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">parametrize</span><span class="pun">!</span><span class="pln">normalPDF</span><span class="pun">(</span><span class="lit">0</span><span class="pun">, </span><span class="lit">0.01</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">density </span><span class="pun">= <a href="../../dstats/kerneldensity/KernelDensity1D.html"></span><span class="typ">KernelDensity1D</span></a><span class="pun">(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"></span><span class="pln">kernel</span></a><span class="pun">, </span><span class="pln">randNums</span><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">normalPDF</span><span class="pun">(</span><span class="lit">1</span><span class="pun">, </span><span class="lit">0</span><span class="pun">, </span><span class="lit">1</span><span class="pun">), </span><span class="str">"  "</span><span class="pun">, </span><span class="pln">density</span><span class="pun">(</span><span class="lit">1</span><span class="pun">))<wbr/>.  </span><span class="com">// Should be about the same.</span></code></pre>
 </section>
 
 			</section>

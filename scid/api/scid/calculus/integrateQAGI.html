@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,56 +288,55 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAGI</h1>
 			<section>
-				<p>Calculate the integral of <a href="../../scid/calculus/integrateQAGI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over an infinite interval.
+				<p>Calculate the integral of <code class="lang-d"><a href="../../scid/calculus/integrateQAGI.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> over an infinite interval.
 </p>
-<section><p>The infinite range is mapped onto <a href="../../scid/calculus/integrateQAGI.html#a"><code class="prettyprint lang-d">a</code></a> finite interval and subsequently
-    the same strategy as in <a href="../../scid/calculus/integrateQAGS.html"><code class="prettyprint lang-d">integrateQAGS</code></a>() is applied.
+<section><p>The infinite range is mapped onto a finite interval and subsequently
+    the same strategy as in <code class="lang-d"><a href="../../scid/calculus/integrateQAGS.html"><span class="pln">integrateQAGS</span></a><span class="pun">()</span></code> is applied.
 </p>
 
-<p>    To <a href="../../scid/calculus/integrate.html"><code class="prettyprint lang-d">integrate</code></a> <a href="../../scid/calculus/integrateQAGI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the interval (-,), use the
-    first form.  To <a href="../../scid/calculus/integrate.html"><code class="prettyprint lang-d">integrate</code></a> <a href="../../scid/calculus/integrateQAGI.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the interval (-,<a href="../../scid/calculus/integrateQAGI.html#a"><code class="prettyprint lang-d">a</code></a>) or
-    (<a href="../../scid/calculus/integrateQAGI.html#a"><code class="prettyprint lang-d">a</code></a>,) use the second form with <a href="../../scid/calculus/integrateQAGI.html#inf"><code class="prettyprint lang-d">inf</code></a>=<a href="../../scid/calculus/Infinite.lower.html"><code class="prettyprint lang-d">Infinite.lower</code></a> or
-    <a href="../../scid/calculus/integrateQAGI.html#inf"><code class="prettyprint lang-d">inf</code></a>=<a href="../../scid/calculus/Infinite.upper.html"><code class="prettyprint lang-d">Infinite.upper</code></a>, respectively.
+<p>    To integrate <code class="lang-d"><a href="../../scid/calculus/integrateQAGI.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> over the interval (-&infin;,&infin;), use the
+    first form.  To integrate <code class="lang-d"><a href="../../scid/calculus/integrateQAGI.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> over the interval (-&infin;,<code class="lang-d"><a href="../../scid/calculus/integrateQAGI.html#a"><span class="pln">a</span></a></code>) or
+    (<code class="lang-d"><a href="../../scid/calculus/integrateQAGI.html#a"><span class="pln">a</span></a></code>,&infin;) use the second form with <code class="lang-d"><a href="../../scid/calculus/integrateQAGI.html#inf"><span class="pln">inf</span></a><span class="pun">=<a href="../../scid/calculus/Infinite.lower.html"></span><span class="typ">Infinite<wbr/></span><span class="pun">.</span><span class="pln">lower</span></a></code> or
+    <code class="lang-d"><a href="../../scid/calculus/integrateQAGI.html#inf"><span class="pln">inf</span></a><span class="pun">=<a href="../../scid/calculus/Infinite.upper.html"></span><span class="typ">Infinite<wbr/></span><span class="pun">.</span><span class="pln">upper</span></a></code>, respectively.
 </p>
 </section>
 
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a>!Real integrateQAGI(Func, Real)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!Real <span class="pln">integrateQAGI</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsRel</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">1e-06</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsAbs = cast(Real)0
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsAbs</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">0</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 								<br/>
 								<br/>
-<a href="../../scid/types/Result.html">Result</a>!Real integrateQAGI(Func, Real)(
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!Real <span class="pln">integrateQAGI</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/calculus/Infinite.html">Infinite</a> inf,
+&nbsp;&nbsp;<a href="../../scid/calculus/Infinite.html"><span class="typ">Infinite</span></a> <span class="pln">inf</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsRel</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">1e-06</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsAbs = cast(Real)0
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsAbs</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">0</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// Slowly convergent integral over infinite interval,
+<pre class="code"><code class="lang-d"><span class="com">// Slowly convergent integral over infinite interval,
 // integrand with endpoint singularity.
-double <a href="../../scid/calculus/integrateQAGI.html#f">f</a>(double x) { return (1 + 10*x)^^(-2) / sqrt(x); }
-auto i = <a href="../../scid/calculus/integrateQAGI.html">integrateQAGI</a>(&amp;<a href="../../scid/calculus/integrateQAGI.html#f">f</a>, 0.0, <a href="../../scid/calculus/Infinite.upper.html">Infinite.upper</a>, 1e-8);
-</code></pre>
+</span><span class="typ">double <a href="../../scid/calculus/integrateQAGI.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">double </span><span class="pln">x</span><span class="pun">) { </span><span class="kwd">return </span><span class="pun">(</span><span class="lit">1 </span><span class="pun">+ </span><span class="lit">10</span><span class="pun">*</span><span class="pln">x</span><span class="pun">)^^(-</span><span class="lit">2</span><span class="pun">) / </span><span class="pln">sqrt</span><span class="pun">(</span><span class="pln">x</span><span class="pun">); }
+</span><span class="kwd">auto </span><span class="pln">i </span><span class="pun">= </span><span class="pln">integrateQAGI</span><span class="pun">(&amp;<a href="../../scid/calculus/integrateQAGI.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="lit">0.0</span><span class="pun">, <a href="../../scid/calculus/Infinite.upper.html"></span><span class="typ">Infinite<wbr/></span><span class="pun">.</span><span class="pln">upper</span></a><span class="pun">, </span><span class="lit">1e-8</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

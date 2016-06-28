@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,12 +74,12 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct StackTreeAA</h1>
 			<section>
-				<p>An associative array implementation based on <a href="../../dstats/alloc/StackTree.html"><code class="prettyprint lang-d">StackTree</code></a>.  Lookups and
+				<p>An associative array implementation based on StackTree.  Lookups and
  insertions are O(log N).  This is significantly slower in both theory and
- practice than <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>, but you may want to use it if:
+ practice than StackHash, but you may want to use it if:
 </p>
 <section><p>1.  You don't know the approximate size of the table you will be creating
-     in advance.  Unlike <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>, this AA implementation does not need
+     in advance.  Unlike StackHash, this AA implementation does not need
      to pre-allocate anything.
 </p>
 
@@ -93,6 +92,13 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">StackTreeAA</span><span class="pun">(</span><span class="pln">K</span><span class="pun">, </span><span class="pln">V</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Constructors</h3>
 						<table>
@@ -124,7 +130,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/alloc/StackTreeAA.tree.html" class="public"><code>tree</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTree.html">StackTree</a>!(Node,"a.key")</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTree.html"><span class="typ">StackTree</span></a>!(Node,"a.key")</code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -143,7 +149,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/StackTreeAA.keys.html" class="public property"><code>keys</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/TreeAaIter.html">TreeAaIter</a>!(typeof(tree),"a.key")</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/TreeAaIter.html"><span class="typ">TreeAaIter</span></a>!(typeof(tree),"a.key")</code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -151,7 +157,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/StackTreeAA.length.html" class="public property"><code>length</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -159,7 +165,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/StackTreeAA.values.html" class="public property"><code>values</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/TreeAaIter.html">TreeAaIter</a>!(typeof(tree),getVal)</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/TreeAaIter.html"><span class="typ">TreeAaIter</span></a>!(typeof(tree),getVal)</code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -186,7 +192,7 @@ $('#symbolSearchPane').show();
 										<code>opApply</code>
 									</a>
 								</td>
-								<td>Iterate over both the <a href="../../dstats/alloc/StackTreeAA.keys.html"><code class="prettyprint lang-d">keys</code></a> and <a href="../../dstats/alloc/StackTreeAA.values.html"><code class="prettyprint lang-d">values</code></a> of this associative array.
+								<td>Iterate over both the keys and values of this associative array.
 </td>
 							</tr>
 							<tr>
@@ -195,7 +201,7 @@ $('#symbolSearchPane').show();
 										<code>opIndex</code>
 									</a>
 								</td>
-								<td>Looks up <a href="../../dstats/alloc/StackTreeAA.opIndex.html#key"><code class="prettyprint lang-d">key</code></a> in the table, returns it by reference.  If it does not
+								<td>Looks up key in the table, returns it by reference.  If it does not
  exist, it will be created and initialized to V.init.  This is handy,
  for example, when counting things with integer types.
 </td>

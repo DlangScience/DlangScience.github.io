@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -88,12 +87,12 @@ the null that they don't.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareContingency(T...)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">chiSquareContingency</span><span class="pun">(</span><span class="pln">T</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T inputData
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">inputData</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -105,34 +104,33 @@ be unnecessarily stringent.
 </p>
 
 <p>Yates's continuity correction is never used in this implementation.  If
-you want something that's guaranteed to be conservative, use <a href="../../dstats/tests/fisherExact.html"><code class="prettyprint lang-d">fisherExact</code></a>().
+you want something that's guaranteed to be conservative, use fisherExact().
 </p>
 
 <p>This is, for all practical purposes, an inherently non-directional test.
 Therefore, the one-sided verses two-sided option is not provided.
 </p>
 
-<p>For 2x2 contingency tables, <a href="../../dstats/tests/fisherExact.html"><code class="prettyprint lang-d">fisherExact</code></a> is a more conservative test, in that
+<p>For 2x2 contingency tables, fisherExact is a more conservative test, in that
 the type I error rate is guaranteed to never be above the nominal P-value.
 However, even for small sample sizes this test may produce results closer
 to the true P-value, at the risk of possibly being non-conservative.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">// Test to see whether the relative frequency of outcome 0, 1, and 2
+<pre class="code"><code class="lang-d"><span class="com">// Test to see whether the relative frequency of outcome 0, 1, and 2
 // depends on the treatment (drug1, drug2 or placebo) in some hypothetical
 // experiment.  For example, 1500 people had outcome 2 if they were treated
 // with drug1 and 1100 had outcome 1 if treated with placebo.
-uint[] drug1 = [1000, 2000, 1500];
-uint[] drug2 = [1500, 3000, 2300];
-uint[] placebo = [500, 1100, 750];
-auto result1 = chiSquareContingency(drug1, drug2, placebo);
+</span><span class="typ">uint</span><span class="pun">[] </span><span class="pln">drug1 </span><span class="pun">= [</span><span class="lit">1000</span><span class="pun">, </span><span class="lit">2000</span><span class="pun">, </span><span class="lit">1500</span><span class="pun">];
+</span><span class="typ">uint</span><span class="pun">[] </span><span class="pln">drug2 </span><span class="pun">= [</span><span class="lit">1500</span><span class="pun">, </span><span class="lit">3000</span><span class="pun">, </span><span class="lit">2300</span><span class="pun">];
+</span><span class="typ">uint</span><span class="pun">[] </span><span class="pln">placebo </span><span class="pun">= [</span><span class="lit">500</span><span class="pun">, </span><span class="lit">1100</span><span class="pun">, </span><span class="lit">750</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">result1 </span><span class="pun">= </span><span class="pln">chiSquareContingency</span><span class="pun">(</span><span class="pln">drug1</span><span class="pun">, </span><span class="pln">drug2</span><span class="pun">, </span><span class="pln">placebo</span><span class="pun">);
 
-// The following uses a range of ranges instead of an array of ranges,
+</span><span class="com">// The following uses a range of ranges instead of an array of ranges,
 // and will produce equivalent results.
-auto rangeOfRanges = [drug1, drug2, placebo];
-auto result2 = chiSquareContingency(rangeOfRanges);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">rangeOfRanges </span><span class="pun">= [</span><span class="pln">drug1</span><span class="pun">, </span><span class="pln">drug2</span><span class="pun">, </span><span class="pln">placebo</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">result2 </span><span class="pun">= </span><span class="pln">chiSquareContingency</span><span class="pun">(</span><span class="pln">rangeOfRanges</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Pearson%27s_chi-square_test

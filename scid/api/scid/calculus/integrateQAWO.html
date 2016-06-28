@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -290,57 +289,56 @@ $('#symbolSearchPane').show();
 			<h1>Function integrateQAWO</h1>
 			<section>
 				<p>Calculate the integral of an oscillatory function over the
-    finite interval (<a href="../../scid/calculus/integrateQAWO.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQAWO.html#b"><code class="prettyprint lang-d">b</code></a>).
+    finite interval (<code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#a"><span class="pln">a</span></a></code>,<code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#b"><span class="pln">b</span></a></code>).
 </p>
-<section><p>Use this to calculate the integral of <a href="../../scid/calculus/integrateQAWO.html#f"><code class="prettyprint lang-d">f</code></a>(x)*cos(<a href="../../scid/calculus/integrateQAWO.html#omega"><code class="prettyprint lang-d">omega</code></a>*x)
-    or <a href="../../scid/calculus/integrateQAWO.html#f"><code class="prettyprint lang-d">f</code></a>(x)*sin(<a href="../../scid/calculus/integrateQAWO.html#omega"><code class="prettyprint lang-d">omega</code></a>*x)
-    where <a href="../../scid/calculus/integrateQAWO.html#f"><code class="prettyprint lang-d">f</code></a>(x) is the (possibly singular) user-specified function
-    and <a href="../../scid/calculus/integrateQAWO.html#omega"><code class="prettyprint lang-d">omega</code></a> is <a href="../../scid/calculus/integrateQAWO.html#a"><code class="prettyprint lang-d">a</code></a> known constant.  The <a href="../../scid/calculus/integrateQAWO.html#weight"><code class="prettyprint lang-d">weight</code></a> function is specified
-    by setting <a href="../../scid/calculus/integrateQAWO.html#weight"><code class="prettyprint lang-d">weight</code></a> to <a href="../../scid/calculus/Oscillation.cos.html"><code class="prettyprint lang-d">Oscillation.cos</code></a> or <a href="../../scid/calculus/Oscillation.sin.html"><code class="prettyprint lang-d">Oscillation.sin</code></a>.
+<section><p>Use this to calculate the integral of <code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)*</span><span class="pln">cos</span><span class="pun">(<a href="../../scid/calculus/integrateQAWO.html#omega"></span><span class="pln">omega</span></a><span class="pun">*</span><span class="pln">x</span><span class="pun">)</span></code>
+    or <code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)*</span><span class="pln">sin</span><span class="pun">(<a href="../../scid/calculus/integrateQAWO.html#omega"></span><span class="pln">omega</span></a><span class="pun">*</span><span class="pln">x</span><span class="pun">)</span></code>
+    where <code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> is the (possibly singular) user-specified function
+    and <code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#omega"><span class="pln">omega</span></a></code> is a known constant.  The weight function is specified
+    by setting <code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#weight"><span class="pln">weight</span></a></code> to <code class="lang-d"><a href="../../scid/calculus/Oscillation.cos.html"><span class="typ">Oscillation<wbr/></span><span class="pun">.</span><span class="pln">cos</span></a></code> or <code class="lang-d"><a href="../../scid/calculus/Oscillation.sin.html"><span class="typ">Oscillation<wbr/></span><span class="pun">.</span><span class="pln">sin</span></a></code>.
 </p>
 
 <p>    The rule evaluation component is based on the modified
     <a href="http://en.wikipedia.org/wiki/Clenshaw%E2%80%93Curtis_quadrature">    Clenshaw–Curtis technique</a>.
     An adaptive subdivision scheme is used in connection with
-    an extrapolation procedure, which is <a href="../../scid/calculus/integrateQAWO.html#a"><code class="prettyprint lang-d">a</code></a> modification of that in
-    <a href="../../scid/calculus/integrateQAGS.html"><code class="prettyprint lang-d">integrateQAGS</code></a>() and allows the algorithm to deal with
-    singularities in <a href="../../scid/calculus/integrateQAWO.html#f"><code class="prettyprint lang-d">f</code></a>(x).
+    an extrapolation procedure, which is a modification of that in
+    <code class="lang-d"><a href="../../scid/calculus/integrateQAGS.html"><span class="pln">integrateQAGS</span></a><span class="pun">()</span></code> and allows the algorithm to deal with
+    singularities in <code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a>!Real integrateQAWO(Func, Real)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!Real <span class="pln">integrateQAWO</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real b,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real omega,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">omega</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/calculus/Oscillation.html">Oscillation</a> weight,
+&nbsp;&nbsp;<a href="../../scid/calculus/Oscillation.html"><span class="typ">Oscillation</span></a> <span class="pln">weight</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsRel</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">1e-06</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsAbs = cast(Real)0
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsAbs</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">0</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>See Also</h3>
-<p><a href="../../scid/calculus/integrateQAWF.html"><code class="prettyprint lang-d">integrateQAWF</code></a>(), for similar integrals over an infinite interval.
+<p><code class="lang-d"><a href="../../scid/calculus/integrateQAWF.html"><span class="pln">integrateQAWF</span></a><span class="pun">()</span></code>, for similar integrals over an infinite interval.
 </p>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// Integrate exp(20*(x-1))*sin(256*x) over the interval (0,1)
-real <a href="../../scid/calculus/integrateQAWO.html#f">f</a>(real x) { return exp(20*(x-1)); }
-auto i = integrateQAWO(&amp;<a href="../../scid/calculus/integrateQAWO.html#f">f</a>, 0.0L, 1.0L, 256.0L, <a href="../../scid/calculus/Oscillation.sin.html">Oscillation.sin</a>, 1e-15L);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="com">// Integrate exp(20*(x-1))*sin(256*x) over the interval (0,1)
+</span><span class="typ">real <a href="../../scid/calculus/integrateQAWO.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">real </span><span class="pln">x</span><span class="pun">) { </span><span class="kwd">return </span><span class="pln">exp</span><span class="pun">(</span><span class="lit">20</span><span class="pun">*(</span><span class="pln">x</span><span class="pun">-</span><span class="lit">1</span><span class="pun">)); }
+</span><span class="kwd">auto </span><span class="pln">i </span><span class="pun">= </span><span class="pln">integrateQAWO</span><span class="pun">(&amp;<a href="../../scid/calculus/integrateQAWO.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="lit">0.0L</span><span class="pun">, </span><span class="lit">1.0L</span><span class="pun">, </span><span class="lit">256.0L</span><span class="pun">, <a href="../../scid/calculus/Oscillation.sin.html"></span><span class="typ">Oscillation<wbr/></span><span class="pun">.</span><span class="pln">sin</span></a><span class="pun">, </span><span class="lit">1e-15L</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

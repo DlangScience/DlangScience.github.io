@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 set -e
 
 for pageName in content/main $(ls content/repos/); do

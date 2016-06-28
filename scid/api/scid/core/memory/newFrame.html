@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -31,7 +30,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">core</a>
 						<ul class="tree-view">
 							<li>
@@ -290,7 +289,7 @@ $('#symbolSearchPane').show();
 			<h1>Variable newFrame</h1>
 			<section>
 				<p>A string to mixin at the beginning of a scope, purely for
- convenience.  Initializes a <a href="../../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> frame using frameInit(),
+ convenience.  Initializes a TempAlloc frame using frameInit(),
  and inserts a scope statement to delete this frame at the end
  of the current scope.
 </p>
@@ -306,8 +305,8 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Declaration</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-immutable(char[]) newFrame = "TempAlloc.frameInit(); scope(exit) TempAlloc.frameFree();";
+							<code class="lang-d">
+<span class="pln">immutable</span><span class="pun">(</span><span class="typ">char</span><span class="pun">[]</span><span class="pun">)</span> <span class="pln">newFrame</span> <span class="pun">=</span> <span class="str">"TempAlloc.frameInit(); scope(exit) TempAlloc.frameFree();"</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

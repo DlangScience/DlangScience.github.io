@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,13 +74,13 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function chiSquareObs</h1>
 			<section>
-				<p>Given two vectors of observations of jointly distributed variables <a href="../../dstats/tests/chiSquareObs.html#x"><code class="prettyprint lang-d">x</code></a>, <a href="../../dstats/tests/chiSquareObs.html#y"><code class="prettyprint lang-d">y</code></a>, tests
-the null hypothesis that values in <a href="../../dstats/tests/chiSquareObs.html#x"><code class="prettyprint lang-d">x</code></a> are independent of the corresponding
-values in <a href="../../dstats/tests/chiSquareObs.html#y"><code class="prettyprint lang-d">y</code></a>.  This is done using Pearson's Chi-Square Test.  For a similar test
+				<p>Given two vectors of observations of jointly distributed variables x, y, tests
+the null hypothesis that values in x are independent of the corresponding
+values in y.  This is done using Pearson's Chi-Square Test.  For a similar test
 that assumes the data has already been tabulated into a contingency table, see
-<a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>.
+chiSquareContingency.
 </p>
-<section><p><a href="../../dstats/tests/chiSquareObs.html#x"><code class="prettyprint lang-d">x</code></a> and <a href="../../dstats/tests/chiSquareObs.html#y"><code class="prettyprint lang-d">y</code></a> must both be input ranges.  If they are not the same length, a
+<section><p>x and y must both be input ranges.  If they are not the same length, a
 DstatsArgumentException is thrown.
 </p>
 </section>
@@ -89,36 +88,35 @@ DstatsArgumentException is thrown.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareObs(T, U)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">chiSquareObs</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T x,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U y
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">y</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!T &amp;&amp; isInputRange!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">// Test whether the appearance of "foo" vs. "bar" is independent of the
+<pre class="code"><code class="lang-d"><span class="com">// Test whether the appearance of "foo" vs. "bar" is independent of the
 // appearance of "baz" vs. "xxx".
-auto <a href="../../dstats/tests/chiSquareObs.html#x">x</a> = ["foo", "bar", "bar", "foo", "foo"];
-auto <a href="../../dstats/tests/chiSquareObs.html#y">y</a> = ["xxx", "baz", "baz", "xxx", "baz"];
-auto result = chiSquareObs(<a href="../../dstats/tests/chiSquareObs.html#x">x</a>, <a href="../../dstats/tests/chiSquareObs.html#y">y</a>);
+</span><span class="kwd">auto <a href="../../dstats/tests/chiSquareObs.html#x"></span><span class="pln">x</span></a><span class="pln"> </span><span class="pun">= [</span><span class="str">"foo"</span><span class="pun">, </span><span class="str">"bar"</span><span class="pun">, </span><span class="str">"bar"</span><span class="pun">, </span><span class="str">"foo"</span><span class="pun">, </span><span class="str">"foo"</span><span class="pun">];
+</span><span class="kwd">auto <a href="../../dstats/tests/chiSquareObs.html#y"></span><span class="pln">y</span></a><span class="pln"> </span><span class="pun">= [</span><span class="str">"xxx"</span><span class="pun">, </span><span class="str">"baz"</span><span class="pun">, </span><span class="str">"baz"</span><span class="pun">, </span><span class="str">"xxx"</span><span class="pun">, </span><span class="str">"baz"</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">result </span><span class="pun">= </span><span class="pln">chiSquareObs</span><span class="pun">(<a href="../../dstats/tests/chiSquareObs.html#x"></span><span class="pln">x</span></a><span class="pun">, <a href="../../dstats/tests/chiSquareObs.html#y"></span><span class="pln">y</span></a><span class="pun">);
 
-// This is equivalent to:
-auto contingency = new uint[][](2, 2);
-foreach(i; 0..x.length) {
-    immutable index1 = (<a href="../../dstats/tests/chiSquareObs.html#x">x</a>[i] == "foo");
-    immutable index2 = (<a href="../../dstats/tests/chiSquareObs.html#y">y</a>[i] == "xxx");
-    contingency[index1][index2]++;
+</span><span class="com">// This is equivalent to:
+</span><span class="kwd">auto </span><span class="pln">contingency </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">uint</span><span class="pun">[][](</span><span class="lit">2</span><span class="pun">, </span><span class="lit">2</span><span class="pun">);
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0</span><span class="pun">..</span><span class="pln">x<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">) {
+    </span><span class="kwd">immutable </span><span class="pln">index1 </span><span class="pun">= (<a href="../../dstats/tests/chiSquareObs.html#x"></span><span class="pln">x</span></a><span class="pun">[</span><span class="pln">i</span><span class="pun">] == </span><span class="str">"foo"</span><span class="pun">);
+    </span><span class="kwd">immutable </span><span class="pln">index2 </span><span class="pun">= (<a href="../../dstats/tests/chiSquareObs.html#y"></span><span class="pln">y</span></a><span class="pun">[</span><span class="pln">i</span><span class="pun">] == </span><span class="str">"xxx"</span><span class="pun">);
+    </span><span class="pln">contingency</span><span class="pun">[</span><span class="pln">index1</span><span class="pun">][</span><span class="pln">index2</span><span class="pun">]++;
 }
 
-auto result2 = <a href="../../dstats/tests/chiSquareContingency.html">chiSquareContingency</a>(contingency);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">result2 </span><span class="pun">= <a href="../../dstats/tests/chiSquareContingency.html"></span><span class="pln">chiSquareContingency</span></a><span class="pun">(</span><span class="pln">contingency</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

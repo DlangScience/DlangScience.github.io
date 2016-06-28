@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,7 +75,7 @@ $('#symbolSearchPane').show();
 			<h1>Function chiSquareFit</h1>
 			<section>
 				<p>Performs a one-way Pearson's chi-square goodness of fit test between a range
-of <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> and a range of <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> values.  This is a useful statistical
+of observed and a range of expected values.  This is a useful statistical
 test for testing whether a set of observations fits a discrete distribution.
 </p>
 <section></section>
@@ -84,52 +83,51 @@ test for testing whether a set of observations fits a discrete distribution.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> chiSquareFit(T, U)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">chiSquareFit</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T observed,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">observed</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U expected,
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">expected</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Expected.html">Expected</a> countProp = Expected.proportion
+&nbsp;&nbsp;<a href="../../dstats/tests/Expected.html"><span class="typ">Expected</span></a> <span class="pln">countProp</span> <span class="pun">=</span> <span class="typ">Expected<wbr/></span><span class="pun">.</span><span class="pln">proportion</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!T &amp;&amp; doubleInput!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> of the chi-square statistic and the P-value for the
-alternative hypothesis that <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> is not a sample from <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> against
-the null that <a href="../../dstats/tests/chiSquareFit.html#observed"><code class="prettyprint lang-d">observed</code></a> is a sample from <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a>.
+<p>A TestRes of the chi-square statistic and the P-value for the
+alternative hypothesis that observed is not a sample from expected against
+the null that observed is a sample from expected.
 </p>
 </section>
 <section><h3>Notes</h3>
-<p>By default, <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> is assumed to be a range of <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> proportions.
+<p>By default, expected is assumed to be a range of expected proportions.
 These proportions are automatically normalized, and can sum to any number.
-By passing <a href="../../dstats/tests/Expected.count.html"><code class="prettyprint lang-d">Expected.count</code></a> in as the last parameter, calculating <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a>
-counts will be skipped, and <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a> will assume to already be properly
+By passing Expected.count in as the last parameter, calculating expected
+counts will be skipped, and expected will assume to already be properly
 normalized.  This is slightly faster, but more importantly
 allows input ranges to be used.
 </p>
 
 <p>The chi-square test relies on asymptotic statistical properties
-and is therefore not considered valid, as a rule of thumb,  when <a href="../../dstats/tests/chiSquareFit.html#expected"><code class="prettyprint lang-d">expected</code></a>
+and is therefore not considered valid, as a rule of thumb,  when expected
 counts are below 5.  However, this rule is likely to be unnecessarily
 stringent in most cases.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">// Test to see whether a set of categorical observations differs
+<pre class="code"><code class="lang-d"><span class="com">// Test to see whether a set of categorical observations differs
 // statistically from a discrete uniform distribution.
 
-uint[] <a href="../../dstats/tests/chiSquareFit.html#observed">observed</a> = [980, 1028, 1001, 964, 1102];
-auto <a href="../../dstats/tests/chiSquareFit.html#expected">expected</a> = repeat(1.0);
-auto res2 = chiSquareFit(<a href="../../dstats/tests/chiSquareFit.html#observed">observed</a>, <a href="../../dstats/tests/chiSquareFit.html#expected">expected</a>);
-assert(approxEqual(res2, 0.0207));
-assert(approxEqual(res2.testStat, 11.59));
-</code></pre>
+</span><span class="typ">uint</span><span class="pun">[] <a href="../../dstats/tests/chiSquareFit.html#observed"></span><span class="pln">observed</span></a><span class="pln"> </span><span class="pun">= [</span><span class="lit">980</span><span class="pun">, </span><span class="lit">1028</span><span class="pun">, </span><span class="lit">1001</span><span class="pun">, </span><span class="lit">964</span><span class="pun">, </span><span class="lit">1102</span><span class="pun">];
+</span><span class="kwd">auto <a href="../../dstats/tests/chiSquareFit.html#expected"></span><span class="pln">expected</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">repeat</span><span class="pun">(</span><span class="lit">1.0</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">res2 </span><span class="pun">= </span><span class="pln">chiSquareFit</span><span class="pun">(<a href="../../dstats/tests/chiSquareFit.html#observed"></span><span class="pln">observed</span></a><span class="pun">, <a href="../../dstats/tests/chiSquareFit.html#expected"></span><span class="pln">expected</span></a><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">res2</span><span class="pun">, </span><span class="lit">0.0207</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">res2<wbr/></span><span class="pun">.</span><span class="pln">testStat</span><span class="pun">, </span><span class="lit">11.59</span><span class="pun">));</span></code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Pearson%27s_chi-square_test

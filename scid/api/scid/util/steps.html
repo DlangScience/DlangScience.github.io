@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,13 +288,13 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function steps</h1>
 			<section>
-				<p>Returns <a href="../../scid/util/steps.html#a"><code class="prettyprint lang-d">a</code></a> range that iterates over <a href="../../scid/util/steps.html#n"><code class="prettyprint lang-d">n</code></a> equally-spaced floating-point
-    numbers in the inclusive interval [<a href="../../scid/util/steps.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/util/steps.html#b"><code class="prettyprint lang-d">b</code></a>].
+				<p>Returns a range that iterates over n equally-spaced floating-point
+    numbers in the inclusive interval [a,b].
 </p>
 <section><p>This is similar to std.range.iota, except that it allows
-    you to specify the number of <code class="prettyprint lang-d">steps</code> it takes rather than the step size,
-    and that the last point is exactly equal to <a href="../../scid/util/steps.html#b"><code class="prettyprint lang-d">b</code></a> (unless <a href="../../scid/util/steps.html#n"><code class="prettyprint lang-d">n</code></a> = 1, in
-    which case <a href="../../scid/util/steps.html#a"><code class="prettyprint lang-d">a</code></a> is the first and last point).  This makes it
+    you to specify the number of steps it takes rather than the step size,
+    and that the last point is exactly equal to b (unless n = 1, in
+    which case a is the first and last point).  This makes it
     more useful than iota for iterating over floating-point numbers.
 </p>
 </section>
@@ -303,29 +302,28 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-auto steps(T, U)(
+							<code class="lang-d">
+<span class="kwd">auto</span> <span class="pln">steps</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T a,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U b,
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isFloatingPoint!T &amp;&amp; isFloatingPoint!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">int i = 0;
-foreach (x; steps(0.0, 9.0, 10))
+<pre class="code"><code class="lang-d"><span class="typ">int </span><span class="pln">i </span><span class="pun">= </span><span class="lit">0</span><span class="pun">;
+</span><span class="kwd">foreach </span><span class="pun">(</span><span class="pln">x</span><span class="pun">; </span><span class="pln">steps</span><span class="pun">(</span><span class="lit">0.0</span><span class="pun">, </span><span class="lit">9.0</span><span class="pun">, </span><span class="lit">10</span><span class="pun">))
 {
-    assert (x == i);
-    ++i;
-}
-</code></pre>
+    </span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">x </span><span class="pun">== </span><span class="pln">i</span><span class="pun">);
+    ++</span><span class="pln">i</span><span class="pun">;
+}</span></code></pre>
 </section>
 
 			</section>

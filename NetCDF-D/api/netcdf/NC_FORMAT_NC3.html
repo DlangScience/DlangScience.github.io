@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -36,18 +35,18 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>@}
 </p>
-<section><p>Extended format specifier returned by  <a href="../netcdf/nc_inq_format_extended.html"><code class="prettyprint lang-d">nc_inq_format_extended</code></a>()
+<section><p>Extended format specifier returned by  nc_inq_format_extended()
  Added in version 4.3.1. This returns the true format of the
  underlying data.
  The function returns two values
  1. a small integer indicating the underlying source type
  of the data. Note that this may differ from what the user
- sees from <a href="../netcdf/nc_inq_format.html"><code class="prettyprint lang-d">nc_inq_format</code></a>() because this latter function
+ sees from nc_inq_format() because this latter function
  returns what the user can expect to see thru the API.
  2. A mode value indicating what mode flags are effectively
  set for this dataset. This usually will be a superset
- of the mode flags used as the argument to <a href="../netcdf/nc_open.html"><code class="prettyprint lang-d">nc_open</code></a>
- or <a href="../netcdf/nc_create.html"><code class="prettyprint lang-d">nc_create</code></a>.
+ of the mode flags used as the argument to nc_open
+ or nc_create.
  More or less, the #1 values track the set of dispatch tables.
  The #1 values are as follows.
 </p>
@@ -59,8 +58,8 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Declaration</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-enum NC_FORMAT_NC3 = 1;
+							<code class="lang-d">
+<span class="kwd">enum</span> <span class="pln">NC_FORMAT_NC3</span> <span class="pun">=</span> <span class="lit">1</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

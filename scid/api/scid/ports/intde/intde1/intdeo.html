@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,10 +66,10 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">intde</a>
 						<ul class="tree-view">
 							<li>
@@ -289,38 +288,37 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function intdeo</h1>
 			<section>
-				<p>I = integral of <a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x) over (<a href="../../../../scid/ports/intde/intde1/intdeo.html#a"><code class="prettyprint lang-d">a</code></a>,infinity),
-    <a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x) has oscillatory factor :
+				<p>I = integral of f(x) over (a,infinity),
+    f(x) has oscillatory factor :
 </p>
-<section><pre class="code"><code class="prettyprint lang-d"><a href="../../../../scid/ports/intde/intde1/intdeo.html#f">f</a>(x) = g(x) * sin(<a href="../../../../scid/ports/intde/intde1/intdeo.html#omega">omega</a> * x + theta) as x -&gt; infinity
-</code></pre>
+<section><pre class="code"><code class="lang-d"><a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">) = </span><span class="pln">g</span><span class="pun">(</span><span class="pln">x</span><span class="pun">) * </span><span class="pln">sin</span><span class="pun">(<a href="../../../../scid/ports/intde/intde1/intdeo.html#omega"></span><span class="pln">omega</span></a><span class="pln"> </span><span class="pun">* </span><span class="pln">x </span><span class="pun">+ </span><span class="pln">theta</span><span class="pun">) </span><span class="pln">as x </span><span class="pun">-&gt; </span><span class="pln">infinity</span></code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void intdeo(Real, Func)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">intdeo</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Func f,
+&nbsp;&nbsp;<span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real omega,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">omega</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real eps,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">eps</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* i,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">i</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* err
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">err</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="f">f</td><td> integrand <a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x)</td></tr>
+<tr><td id="f">f</td><td> integrand f(x)</td></tr>
 <tr><td id="a">a</td><td> lower limit of integration</td></tr>
 <tr><td id="omega">omega</td><td> frequency of oscillation</td></tr>
 <tr><td id="eps">eps</td><td> relative error requested</td></tr>
@@ -331,24 +329,24 @@ void intdeo(Real, Func)(
 <section><h3>Remarks</h3>
 <p><pre>
         function
-            <a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x) needs to be analytic over (<a href="../../../../scid/ports/intde/intde1/intdeo.html#a"><code class="prettyprint lang-d">a</code></a>,infinity).
+            f(x) needs to be analytic over (a,infinity).
         relative error
-            <a href="../../../../scid/ports/intde/intde1/intdeo.html#eps"><code class="prettyprint lang-d">eps</code></a> is relative error requested excluding
+            eps is relative error requested excluding
             cancellation of significant digits.
-            i.e. <a href="../../../../scid/ports/intde/intde1/intdeo.html#eps"><code class="prettyprint lang-d">eps</code></a> means : (absolute error) /
-                             (integral_a^R |<a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x)| dx).
-            <a href="../../../../scid/ports/intde/intde1/intdeo.html#eps"><code class="prettyprint lang-d">eps</code></a> does not mean : (absolute error) / I.
+            i.e. eps means : (absolute error) /
+                             (integral_a^R |f(x)| dx).
+            eps does not mean : (absolute error) / I.
         error message
-            <a href="../../../../scid/ports/intde/intde1/intdeo.html#err"><code class="prettyprint lang-d">err</code></a> &gt;= 0 : normal termination.
-            <a href="../../../../scid/ports/intde/intde1/intdeo.html#err"><code class="prettyprint lang-d">err</code></a> &lt; 0  : abnormal termination (m &gt;= mmax).
+            err &gt;= 0 : normal termination.
+            err &lt; 0  : abnormal termination (m &gt;= mmax).
                        i.e. convergent error is detected :
-                           1. <a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x) or (d/dx)^n <a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x) has
+                           1. f(x) or (d/dx)^n f(x) has
                               discontinuous points or sharp
-                              peaks over (<a href="../../../../scid/ports/intde/intde1/intdeo.html#a"><code class="prettyprint lang-d">a</code></a>,infinity).
+                              peaks over (a,infinity).
                               you must divide the interval
-                              (<a href="../../../../scid/ports/intde/intde1/intdeo.html#a"><code class="prettyprint lang-d">a</code></a>,infinity) at this points.
-                           2. relative error of <a href="../../../../scid/ports/intde/intde1/intdeo.html#f"><code class="prettyprint lang-d">f</code></a>(x) is
-                              greater than <a href="../../../../scid/ports/intde/intde1/intdeo.html#eps"><code class="prettyprint lang-d">eps</code></a>.
+                              (a,infinity) at this points.
+                           2. relative error of f(x) is
+                              greater than eps.
     </pre>
 </p>
 </section>

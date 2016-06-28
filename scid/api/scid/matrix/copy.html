@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,19 +288,19 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function copy</h1>
 			<section>
-				<p>A convenience function that creates a <code class="prettyprint lang-d">copy</code> of the input <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>. Memory for
-the <code class="prettyprint lang-d">copy</code> is allocated using the GC.
+				<p>A convenience function that creates a copy of the input matrix. Memory for
+the copy is allocated using the GC.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor,tri) copy(T, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+							<code class="lang-d">
+<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(T,stor,tri) <span class="pln">copy</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Triangle </span><span class="pln">tri</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const <a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor,tri) m
+&nbsp;&nbsp;<span class="kwd">const </span><a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(T,stor,tri) <span class="pln">m</span>
 								<br/>
-) pure;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

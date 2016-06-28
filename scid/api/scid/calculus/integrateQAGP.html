@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,11 +288,11 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAGP</h1>
 			<section>
-				<p>Calculate the integral of <a href="../../scid/calculus/integrateQAGP.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval (<a href="../../scid/calculus/integrateQAGP.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQAGP.html#b"><code class="prettyprint lang-d">b</code></a>),
+				<p>Calculate the integral of <code class="lang-d"><a href="../../scid/calculus/integrateQAGP.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> over the finite interval (<code class="lang-d"><a href="../../scid/calculus/integrateQAGP.html#a"><span class="pln">a</span></a></code>,<code class="lang-d"><a href="../../scid/calculus/integrateQAGP.html#b"><span class="pln">b</span></a></code>),
     taking into account known points of special difficulty
     inside the interval.
 </p>
-<section><p>This routine uses the same integration method as <a href="../../scid/calculus/integrateQAGS.html"><code class="prettyprint lang-d">integrateQAGS</code></a>(),
+<section><p>This routine uses the same integration method as <code class="lang-d"><a href="../../scid/calculus/integrateQAGS.html"><span class="pln">integrateQAGS</span></a><span class="pun">()</span></code>,
     but allows you to specify an array of points where the
     integrand has internal singularities, discontinuities or
     other types of bad behaviour.
@@ -303,22 +302,22 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a>!Real integrateQAGP(Func, Real)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!Real <span class="pln">integrateQAGP</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real b,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] trouble,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">trouble</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsRel</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">1e-06</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsAbs = cast(Real)0
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsAbs</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">0</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

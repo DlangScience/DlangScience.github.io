@@ -6,22 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class="collapsed tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">mpi</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../mpi.html" class="selected module">Package members</a>
+							</li>
 							<li>
 								<a href="../mpi/util.html" class=" module">util</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
 						</ul>
 				<noscript>
@@ -47,14 +46,14 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) int PMPI_Add_error_code(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">int</span> <span class="pln">PMPI_Add_error_code</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;int errorclass,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">errorclass</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* errorcode
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">errorcode</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

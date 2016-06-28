@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,8 +74,8 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function logisticRegress</h1>
 			<section>
-				<p>Similar to <a href="../../dstats/regress/logisticRegressBeta.html"><code class="prettyprint lang-d">logisticRegressBeta</code></a>, but returns a <a href="../../dstats/regress/LogisticRes.html"><code class="prettyprint lang-d">LogisticRes</code></a> with useful stuff for
-statistical inference.  If the last element of <a href="../../dstats/regress/logisticRegress.html#input"><code class="prettyprint lang-d">input</code></a> is a floating point
+				<p>Similar to logisticRegressBeta, but returns a LogisticRes with useful stuff for
+statistical inference.  If the last element of input is a floating point
 number instead of a range, it is used to specify the confidence interval
 calculated.  Otherwise, the default of 0.95 is used.
 </p>
@@ -85,14 +84,14 @@ calculated.  Otherwise, the default of 0.95 is used.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/regress/LogisticRes.html">LogisticRes</a> logisticRegress(T, V...)(
+							<code class="lang-d">
+<a href="../../dstats/regress/LogisticRes.html"><span class="typ">LogisticRes</span></a> <span class="pln">logisticRegress</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">V</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T yIn,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">yIn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;V input
+&nbsp;&nbsp;<span class="pln">V</span> <span class="pln">input</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

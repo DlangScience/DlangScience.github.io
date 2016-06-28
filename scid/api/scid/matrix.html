@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -288,7 +287,7 @@ $('#symbolSearchPane').show();
 		</nav>
 		<div id="main-contents">
 			<h1>Module scid.matrix</h1>
-			<p>This module contains the <a href="../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> class as well as some
+			<p>This module contains the MatrixView class as well as some
 functions related to it.
 </p>
 <section></section>
@@ -308,8 +307,8 @@ functions related to it.
 								<code>copy</code>
 							</a>
 						</td>
-						<td>A convenience function that creates a <code class="prettyprint lang-d">copy</code> of the input <a href="../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>. Memory for
-the <code class="prettyprint lang-d">copy</code> is allocated using the GC.
+						<td>A convenience function that creates a copy of the input matrix. Memory for
+the copy is allocated using the GC.
 </td>
 					</tr>
 					<tr>
@@ -318,9 +317,9 @@ the <code class="prettyprint lang-d">copy</code> is allocated using the GC.
 								<code>matrix</code>
 							</a>
 						</td>
-						<td>A convenience function that allocates memory for a <code class="prettyprint lang-d">matrix</code> (using the
-GC), optionally sets the values of the <code class="prettyprint lang-d">matrix</code> elements, and returns
-a <a href="../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> of the allocated memory.
+						<td>A convenience function that allocates memory for a matrix (using the
+GC), optionally sets the values of the matrix elements, and returns
+a MatrixView of the allocated memory.
 </td>
 					</tr>
 				</table>
@@ -339,7 +338,7 @@ a <a href="../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">Matr
 								<code>MatrixView</code>
 							</a>
 						</td>
-						<td>A <a href="../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>-like view of the contents of an <a href="../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
+						<td>A matrix-like view of the contents of an array.
 </td>
 					</tr>
 				</table>
@@ -358,7 +357,7 @@ a <a href="../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">Matr
 								<code>Storage</code>
 							</a>
 						</td>
-						<td>Various <a href="../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> representations.
+						<td>Various matrix representations.
 </td>
 					</tr>
 					<tr>
@@ -388,7 +387,7 @@ one can choose to store either the upper or lower triangle.
 							</a>
 						</td>
 						<td>Evaluates to true if the given type is an instantiation of
-<a href="../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a>. Optionally test the element type and/or storage
+MatrixView. Optionally test the element type and/or storage
 scheme.
 </td>
 					</tr>

@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,13 +288,20 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct MatrixView</h1>
 			<section>
-				<p>A <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>-like view of the contents of an <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
+				<p>A matrix-like view of the contents of an array.
 </p>
-<section><p>In order to be compatible with LAPACK routines, the following <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>
+<section><p>In order to be compatible with LAPACK routines, the following matrix
 representations (i.e., memory layouts) are supported.
 </p>
 </section>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">MatrixView</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Triangle </span><span class="pln">tri</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Constructors</h3>
 						<table>
@@ -310,7 +316,7 @@ representations (i.e., memory layouts) are supported.
 										<code>this</code>
 									</a>
 								</td>
-								<td>Wraps <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> with <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a> <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a> around the given <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
+								<td>Wraps a MatrixView with m rows around the given array.
 </td>
 							</tr>
 							<tr>
@@ -319,9 +325,9 @@ representations (i.e., memory layouts) are supported.
 										<code>this</code>
 									</a>
 								</td>
-								<td>Wraps <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> with <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a> <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a> and <a href="../../scid/matrix/MatrixView.this.html#n"><code class="prettyprint lang-d">n</code></a> columns around the given <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a>.
-    For <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> given set of <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a>, <a href="../../scid/matrix/MatrixView.this.html#m"><code class="prettyprint lang-d">m</code></a>, and <a href="../../scid/matrix/MatrixView.this.html#n"><code class="prettyprint lang-d">n</code></a>, the following must be true for
-    <a href="../../scid/matrix/MatrixView.this.html#a"><code class="prettyprint lang-d">a</code></a> general <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>:
+								<td>Wraps a MatrixView with m rows and n columns around the given array.
+    For a given set of a, m, and n, the following must be true for
+    a general matrix:
 </td>
 							</tr>
 						</table>
@@ -339,24 +345,24 @@ representations (i.e., memory layouts) are supported.
 								<td>
 									<a href="../../scid/matrix/MatrixView.array.html" class="public"><code>array</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T[]</code></td>
-								<td>The <code class="prettyprint lang-d">array</code> that is wrapped by this <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span><span class="pun">[]</span></code></td>
+								<td>The array that is wrapped by this MatrixView.
 </td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../scid/matrix/MatrixView.cols.html" class="public"><code>cols</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
-								<td>The number of columns in the <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
+								<td>The number of columns in the matrix.
 </td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../scid/matrix/MatrixView.rows.html" class="public"><code>rows</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
-								<td>The number of <code class="prettyprint lang-d">rows</code> in the <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
+								<td>The number of rows in the matrix.
 </td>
 							</tr>
 						</table>
@@ -375,7 +381,7 @@ representations (i.e., memory layouts) are supported.
 										<code>opIndex</code>
 									</a>
 								</td>
-								<td>Returns (a reference to) the element at row <a href="../../scid/matrix/MatrixView.opIndex.html#i"><code class="prettyprint lang-d">i</code></a>, column <a href="../../scid/matrix/MatrixView.opIndex.html#j"><code class="prettyprint lang-d">j</code></a>.
+								<td>Returns (a reference to) the element at row i, column j.
 </td>
 							</tr>
 							<tr>
@@ -384,7 +390,7 @@ representations (i.e., memory layouts) are supported.
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>Assigns a <a href="../../scid/matrix/MatrixView.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to the element at row <a href="../../scid/matrix/MatrixView.opIndexAssign.html#i"><code class="prettyprint lang-d">i</code></a>, column <a href="../../scid/matrix/MatrixView.opIndexAssign.html#j"><code class="prettyprint lang-d">j</code></a>.
+								<td>Assigns a value to the element at row i, column j.
 </td>
 							</tr>
 						</table>
@@ -403,49 +409,44 @@ representations (i.e., memory layouts) are supported.
 										<code>leading</code>
 									</a>
 								</td>
-								<td>The <code class="prettyprint lang-d">leading</code> (row) dimension.  Included to support <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> slicing,
-        currently just an alias to <a href="../../scid/matrix/MatrixView.rows.html"><code class="prettyprint lang-d">rows</code></a>.
+								<td>The leading (row) dimension.  Included to support matrix slicing,
+        currently just an alias to rows.
 </td>
 							</tr>
 						</table>
 					</section>
 <section><h3>General matrices</h3>
 <p>The elements of dense matrices are stored in column-major order.
-This means that if the wrapped <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a> contains the elements
+This means that if the wrapped array contains the elements
 </p>
-<pre class="code"><code class="prettyprint lang-d">a b c d e f g h i j k l
-</code></pre>
-<p>then a 3x4 dense <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> view of this <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a> looks like this:
+<pre class="code"><code class="lang-d"><span class="pln">a b c d e f g h i j k l</span></code></pre>
+<p>then a 3x4 dense matrix view of this array looks like this:
 </p>
-<pre class="code"><code class="prettyprint lang-d">a d g j
+<pre class="code"><code class="lang-d"><span class="pln">a d g j
 b e h k
-c f i l
-</code></pre>
+c f i l</span></code></pre>
 </section>
 <section><h3>Triangular matrices</h3>
 <p>Triangular matrices are required to be square. If the wrapped
-<a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a> contains the six elements
+array contains the six elements
 </p>
-<pre class="code"><code class="prettyprint lang-d">a b c d e f
-</code></pre>
-<p>then the resulting 3x3 upper and lower triangular <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> views
+<pre class="code"><code class="lang-d"><span class="pln">a b c d e f</span></code></pre>
+<p>then the resulting 3x3 upper and lower triangular matrix views
 will look like this, respectively:
 </p>
-<pre class="code"><code class="prettyprint lang-d">a b d         a 0 0
-0 c e   and   b d 0
-0 0 f         c e f
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="pln">a b d         a </span><span class="lit">0 0
+0 </span><span class="pln">c e   and   b d </span><span class="lit">0
+0 0 </span><span class="pln">f         c e f</span></code></pre>
 </section>
 <section><h3>Symmetric matrices</h3>
 <p>Symmetric matrices are stored in the same way as triangular
-matrices. This means that for the <a href="../../scid/matrix/MatrixView.array.html"><code class="prettyprint lang-d">array</code></a> above, the corresponding
-symmetric <a href="../../scid/matrix/matrix.html"><code class="prettyprint lang-d">matrix</code></a> view will be
+matrices. This means that for the array above, the corresponding
+symmetric matrix view will be
 </p>
-<pre class="code"><code class="prettyprint lang-d">a b d       a b c
+<pre class="code"><code class="lang-d"><span class="pln">a b d       a b c
 b c e   or  b d e
-d e f       c e f
-</code></pre>
-<p>depending on whether the upper or lower <a href="../../scid/matrix/MatrixView.triangle.html"><code class="prettyprint lang-d">triangle</code></a> is stored.
+d e f       c e f</span></code></pre>
+<p>depending on whether the upper or lower triangle is stored.
 </p>
 </section>
 <section><h3>Hermitian matrices</h3>
@@ -453,7 +454,7 @@ d e f       c e f
 </p>
 </section>
 <section><h3>See also</h3>
-<p>LAPACK User's Guide: Matrix <a href="../../scid/matrix/MatrixView.storage.html"><code class="prettyprint lang-d">storage</code></a> schemes,
+<p>LAPACK User's Guide: Matrix storage schemes,
 <a href="http://www.netlib.org/lapack/lug/node121.html">http://www.netlib.org/lapack/lug/node121.html</a>
 </p>
 </section>

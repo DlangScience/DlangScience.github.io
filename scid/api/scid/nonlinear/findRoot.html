@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -302,22 +301,22 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Real[] findRoot(Real, Func)(
+							<code class="lang-d">
+<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">findRoot</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] guess,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">guess</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsRel,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsRel</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int maxFuncEvals = 0,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">maxFuncEvals</span> <span class="pun">=</span> <span class="lit">0</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isFloatingPoint!Real &amp;&amp; isVectorField!(Func, Real));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="typ">Real </span><span class="pun">&amp;&amp; </span><span class="pln">isVectorField</span><span class="pun">!(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -327,16 +326,16 @@ if (isFloatingPoint!Real &amp;&amp; isVectorField!(Func, Real));
             functor that takes an array of length N as input and
             returns an array of length N. If the function has
             an additional array input parameter this will be
-            assumed to be a <a href="../../scid/nonlinear/findRoot.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the output value.</td></tr>
+            assumed to be a buffer for the output value.</td></tr>
 <tr><td id="guess">guess</td><td> A starting point for the algorithm. The closer this
-            <a href="../../scid/nonlinear/findRoot.html#guess"><code class="prettyprint lang-d">guess</code></a> is to the true root, the greater chance that the
+            guess is to the true root, the greater chance that the
             algorithm converges.</td></tr>
 <tr><td id="epsRel">epsRel</td><td> Success criterion: The algorithm stops when
             the relative error between two consecutive iterations
-            is at most <a href="../../scid/nonlinear/findRoot.html#epsRel"><code class="prettyprint lang-d">epsRel</code></a>.</td></tr>
+            is at most epsRel.</td></tr>
 <tr><td id="maxFuncEvals">maxFuncEvals</td><td> (optional) The maximum number of function evaluations.
-            If <a href="../../scid/nonlinear/findRoot.html#maxFuncEvals"><code class="prettyprint lang-d">maxFuncEvals</code></a>&lt;1, it is set to 200*(N+1).</td></tr>
-<tr><td id="buffer">buffer</td><td> (optional) A <a href="../../scid/nonlinear/findRoot.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least N, for the return value.</td></tr>
+            If maxFuncEvals&lt;1, it is set to 200*(N+1).</td></tr>
+<tr><td id="buffer">buffer</td><td> (optional) A buffer of length at least N, for the return value.</td></tr>
 </table>
 </section>
 <section><h3>Example</h3>
@@ -347,104 +346,103 @@ if (isFloatingPoint!Real &amp;&amp; isVectorField!(Func, Real));
     the minimum by finding the root of the Rosenbrock function's
     gradient.
 </p>
-<pre class="code"><code class="prettyprint lang-d">// The Rosenbrock function is defined as
-//     <a href="../../scid/nonlinear/findRoot.html#f">f</a>(x,y) = (1-x)^2 + 100 (y-x^2)^2.
+<pre class="code"><code class="lang-d"><span class="com">// The Rosenbrock function is defined as
+//     f(x,y) = (1-x)^2 + 100 (y-x^2)^2.
 // Thus, its gradient is:
-real[] dRosenbrock(real[] v, real[] buf)
+</span><span class="typ">real</span><span class="pun">[] </span><span class="pln">dRosenbrock</span><span class="pun">(</span><span class="typ">real</span><span class="pun">[] </span><span class="pln">v</span><span class="pun">, </span><span class="typ">real</span><span class="pun">[] </span><span class="pln">buf</span><span class="pun">)
 {
-    auto x = v[0], y = v[1];
-    buf[0] = -2*(1-x) - 400*x*(y-x*x);
-    buf[1] = 200 * (y-x*x);
+    </span><span class="kwd">auto </span><span class="pln">x </span><span class="pun">= </span><span class="pln">v</span><span class="pun">[</span><span class="lit">0</span><span class="pun">], </span><span class="pln">y </span><span class="pun">= </span><span class="pln">v</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
+    </span><span class="pln">buf</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] = -</span><span class="lit">2</span><span class="pun">*(</span><span class="lit">1</span><span class="pun">-</span><span class="pln">x</span><span class="pun">) - </span><span class="lit">400</span><span class="pun">*</span><span class="pln">x</span><span class="pun">*(</span><span class="pln">y</span><span class="pun">-</span><span class="pln">x</span><span class="pun">*</span><span class="pln">x</span><span class="pun">);
+    </span><span class="pln">buf</span><span class="pun">[</span><span class="lit">1</span><span class="pun">] = </span><span class="lit">200 </span><span class="pun">* (</span><span class="pln">y</span><span class="pun">-</span><span class="pln">x</span><span class="pun">*</span><span class="pln">x</span><span class="pun">);
 
-    return buf;
+    </span><span class="kwd">return </span><span class="pln">buf</span><span class="pun">;
 }
 
-real[] <a href="../../scid/nonlinear/findRoot.html#guess">guess</a> = [ 2.0, 2.0 ];
-auto root = findRoot(&amp;dRosenbrock, <a href="../../scid/nonlinear/findRoot.html#guess">guess</a>, 0.0L);
+</span><span class="typ">real</span><span class="pun">[] <a href="../../scid/nonlinear/findRoot.html#guess"></span><span class="pln">guess</span></a><span class="pln"> </span><span class="pun">= [ </span><span class="lit">2.0</span><span class="pun">, </span><span class="lit">2.0 </span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">root </span><span class="pun">= </span><span class="pln">findRoot</span><span class="pun">(&amp;</span><span class="pln">dRosenbrock</span><span class="pun">, <a href="../../scid/nonlinear/findRoot.html#guess"></span><span class="pln">guess</span></a><span class="pun">, </span><span class="lit">0.0L</span><span class="pun">);
 
-writeln(root);  // Prints "1 1". Yay!
-</code></pre>
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">root</span><span class="pun">);  </span><span class="com">// Prints "1 1". Yay!</span></code></pre>
 </section>
 
 			</section>
 			<section>
 				<h2>Function findRoot</h2>
-				<p>Find a root of the function <a href="../../scid/nonlinear/findRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
+				<p>Find a root of the function f.
 </p>
-<section><p>This function first calls <a href="#bracketRoot"><a href="../../scid/nonlinear/bracketRoot.html"><code class="prettyprint lang-d">bracketRoot</code></a></a> to
+<section><p>This function first calls <a href="#bracketRoot">bracketRoot</a> to
     obtain an interval inside which there must be a root, and then calls
     <a href="http://www.digitalmars.com/d/2.0/phobos/std_numeric.html#findRoot">std.numeric.findRoot()</a>
     to pin down the location of the root.
 </p>
 
-<p>    The parameters <a href="../../scid/nonlinear/findRoot.html#x0"><code class="prettyprint lang-d">x0</code></a>, <a href="../../scid/nonlinear/findRoot.html#scale"><code class="prettyprint lang-d">scale</code></a>, <a href="../../scid/nonlinear/findRoot.html#xMin"><code class="prettyprint lang-d">xMin</code></a>, and <a href="../../scid/nonlinear/findRoot.html#xMax"><code class="prettyprint lang-d">xMax</code></a> are just passed on to
-    <a href="#bracketRoot"><a href="../../scid/nonlinear/bracketRoot.html"><code class="prettyprint lang-d">bracketRoot</code></a></a>, and they are described in detail
-    in its documentation.  In brief, <a href="../../scid/nonlinear/findRoot.html#x0"><code class="prettyprint lang-d">x0</code></a> should be an estimate of the
-    root's location, while <a href="../../scid/nonlinear/findRoot.html#scale"><code class="prettyprint lang-d">scale</code></a> should be a characteristic <a href="../../scid/nonlinear/findRoot.html#scale"><code class="prettyprint lang-d">scale</code></a> for
+<p>    The parameters x0, scale, xMin, and xMax are just passed on to
+    <a href="#bracketRoot">bracketRoot</a>, and they are described in detail
+    in its documentation.  In brief, x0 should be an estimate of the
+    root's location, while scale should be a characteristic scale for
     the function, i.e. a distance over which the function changes
-    significantly.  [<a href="../../scid/nonlinear/findRoot.html#xMin"><code class="prettyprint lang-d">xMin</code></a>,<a href="../../scid/nonlinear/findRoot.html#xMax"><code class="prettyprint lang-d">xMax</code></a>] is the interval inside which the algorithm
+    significantly.  [xMin,xMax] is the interval inside which the algorithm
     is allowed to search.
 </p>
 
-<p>    You may specify the desired (minimum) number of digits of <a href="../../scid/nonlinear/findRoot.html#precision"><code class="prettyprint lang-d">precision</code></a>
+<p>    You may specify the desired (minimum) number of digits of precision
     in the answer.  If this is left out, the algorithm will attempt
-    to achieve full machine <a href="../../scid/nonlinear/findRoot.html#precision"><code class="prettyprint lang-d">precision</code></a>.
+    to achieve full machine precision.
 </p>
 </section>
 
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-T findRoot(F, T)(
+							<code class="lang-d">
+<span class="pln">T</span> <span class="pln">findRoot</span><span class="pun">(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope F f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">F</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T x0,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">x0</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T scale,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">scale</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xMin,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xMin</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xMax,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xMax</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int precision
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">precision</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isUnaryFunction!(F, T) &amp;&amp; isFloatingPoint!T);
-								<br/>
-								<br/>
-T findRoot(F, T)(
-								<br/>
-&nbsp;&nbsp;scope F f,
-								<br/>
-&nbsp;&nbsp;T x0,
-								<br/>
-&nbsp;&nbsp;T scale,
-								<br/>
-&nbsp;&nbsp;int precision
-								<br/>
-)
-								<br/>
-if (isUnaryFunction!(F, T) &amp;&amp; isFloatingPoint!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isUnaryFunction</span><span class="pun">!(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">) &amp;&amp; </span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 								<br/>
 								<br/>
-T findRoot(F, T)(
+<span class="pln">T</span> <span class="pln">findRoot</span><span class="pun">(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope F f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">F</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T x0,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">x0</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T scale,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">scale</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xMin = -T.infinity,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">precision</span>
 								<br/>
-&nbsp;&nbsp;T xMax = T.infinity
+<span class="pun">)</span>
 								<br/>
-)
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isUnaryFunction</span><span class="pun">!(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">) &amp;&amp; </span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 								<br/>
-if (isUnaryFunction!(F, T) &amp;&amp; isFloatingPoint!T);
+								<br/>
+<span class="pln">T</span> <span class="pln">findRoot</span><span class="pun">(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">F</span> <span class="pln">f</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">x0</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">scale</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xMin</span> <span class="pun">=</span> <span class="pun">-</span><span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">infinity</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xMax</span> <span class="pun">=</span> <span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">infinity</span>
+								<br/>
+<span class="pun">)</span>
+								<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isUnaryFunction</span><span class="pun">!(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">) &amp;&amp; </span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -293,26 +292,26 @@ $('#symbolSearchPane').show();
     using a central-difference approximation.
 </p>
 <section><p>This function stores its results in an <i>n</i>-by-<i>n</i> symmetric matrix,
-    where <i>n</i> is the number of variables (i.e. the length of <a href="../../scid/calculus/hessian.html#x"><code class="prettyprint lang-d">x</code></a>).
-    The function <a href="../../scid/calculus/hessian.html#f"><code class="prettyprint lang-d">f</code></a> is evaluated 1+2<i>n</i>2 times.
+    where <i>n</i> is the number of variables (i.e. the length of <code class="lang-d"><a href="../../scid/calculus/hessian.html#x"><span class="pln">x</span></a></code>).
+    The function <code class="lang-d"><a href="../../scid/calculus/hessian.html#f"><span class="pln">f</span></a></code> is evaluated 1+2<i>n</i><sup>2</sup> times.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(Real,Storage.Symmetric) hessian(Real, Func)(
+							<code class="lang-d">
+<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(Real,Storage.Symmetric) <span class="pln">hessian</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -320,17 +319,16 @@ $('#symbolSearchPane').show();
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td> The function of which to calculate the Hessian.</td></tr>
 <tr><td id="x">x</td><td> The point at which to calculate the Hessian.</td></tr>
-<tr><td id="scale">scale</td><td> A "characteristic <a href="../../scid/calculus/hessian.html#scale"><code class="prettyprint lang-d">scale</code></a>" over which the function
+<tr><td id="scale">scale</td><td> A "characteristic scale" over which the function
             changes significantly. (optional)</td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/hessian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of size at least <i>n</i>(<i>n</i>+1)/2, for storing
+<tr><td id="buffer">buffer</td><td> A buffer of size at least <i>n</i>(<i>n</i>+1)/2, for storing
             the Hessian matrix. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// Above, we found the <a href="../../scid/calculus/gradient.html">gradient</a> of <a href="../../scid/calculus/hessian.html#f">f</a>(<a href="../../scid/calculus/hessian.html#x">x</a>,y) at the point p.
+<pre class="code"><code class="lang-d"><span class="com">// Above, we found the gradient of f(x,y) at the point p.
 // Finding the Hessian matrix is just as simple:
-auto h = hessian(&amp;<a href="../../scid/calculus/hessian.html#f">f</a>, p);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">h </span><span class="pun">= </span><span class="pln">hessian</span><span class="pun">(&amp;<a href="../../scid/calculus/hessian.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="pln">p</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>See also</h3>
 <p><ul><li>Wikipedia:

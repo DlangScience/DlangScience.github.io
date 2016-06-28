@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -52,9 +54,6 @@
 								<a href="../dstats/tests.html" class=" module">tests</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../dstats.html" class=" module">dstats</a>
 							</li>
 						</ul>
 				<noscript>
@@ -101,10 +100,10 @@ $('#symbolSearchPane').show();
 								<code>linearRegress</code>
 							</a>
 						</td>
-						<td>Perform a linear regression as in <a href="../dstats/regress/linearRegressBeta.html"><code class="prettyprint lang-d">linearRegressBeta</code></a>, but return a
-<a href="../dstats/regress/RegressRes.html"><code class="prettyprint lang-d">RegressRes</code></a> with useful stuff for statistical inference.  If the last element
-of <a href="../dstats/regress/linearRegress.html#input"><code class="prettyprint lang-d">input</code></a> is a real, this is used to specify the confidence intervals to
-be calculated.  Otherwise, the default of 0.95 is used.  The rest of <a href="../dstats/regress/linearRegress.html#input"><code class="prettyprint lang-d">input</code></a>
+						<td>Perform a linear regression as in linearRegressBeta, but return a
+RegressRes with useful stuff for statistical inference.  If the last element
+of input is a real, this is used to specify the confidence intervals to
+be calculated.  Otherwise, the default of 0.95 is used.  The rest of input
 should be the elements of X.
 </td>
 					</tr>
@@ -119,7 +118,7 @@ to just returning the beta values are that it's faster and that each range
 needs to be iterated over only once, and thus can be just an input range.
 The beta values are returned such that the smallest index corresponds to
 the leftmost element of X.  X can be either a tuple or a range of input
-ranges.  <a href="../dstats/regress/linearRegressBeta.html#Y"><code class="prettyprint lang-d">Y</code></a> must be an input range.
+ranges.  Y must be an input range.
 </td>
 					</tr>
 					<tr>
@@ -128,7 +127,7 @@ ranges.  <a href="../dstats/regress/linearRegressBeta.html#Y"><code class="prett
 								<code>linearRegressBetaBuf</code>
 							</a>
 						</td>
-						<td>Same as <a href="../dstats/regress/linearRegressBeta.html"><code class="prettyprint lang-d">linearRegressBeta</code></a>, but allows the user to specify a buffer for
+						<td>Same as linearRegressBeta, but allows the user to specify a buffer for
 the beta terms.  If the buffer is too short, a new one is allocated.
 Otherwise, the results are returned in the user-provided buffer.
 </td>
@@ -139,9 +138,9 @@ Otherwise, the results are returned in the user-provided buffer.
 								<code>linearRegressPenalized</code>
 							</a>
 						</td>
-						<td>Performs <a href="../dstats/regress/linearRegressPenalized.html#lasso"><code class="prettyprint lang-d">lasso</code></a> (L1) and/or <a href="../dstats/regress/linearRegressPenalized.html#ridge"><code class="prettyprint lang-d">ridge</code></a> (L2) penalized linear regression.  Due to the
+						<td>Performs lasso (L1) and/or ridge (L2) penalized linear regression.  Due to the
 way the data is standardized, no intercept term should be included in x
-(unlike <a href="../dstats/regress/linearRegress.html"><code class="prettyprint lang-d">linearRegress</code></a> and <a href="../dstats/regress/linearRegressBeta.html"><code class="prettyprint lang-d">linearRegressBeta</code></a>).  The intercept coefficient is
+(unlike linearRegress and linearRegressBeta).  The intercept coefficient is
 implicitly included and returned in the first element of the returned array.
 Usage is otherwise identical.
 </td>
@@ -153,9 +152,9 @@ Usage is otherwise identical.
 							</a>
 						</td>
 						<td>This function performs loess regression.  Loess regression is a local
-regression procedure, where a prediction of the dependent (<a href="../dstats/regress/loess1D.html#y"><code class="prettyprint lang-d">y</code></a>) variable
-is made from an observation of the independent (<a href="../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a>) variable by weighted
-least squares over <a href="../dstats/regress/loess1D.html#x"><code class="prettyprint lang-d">x</code></a> values in the neighborhood of the value being evaluated.
+regression procedure, where a prediction of the dependent (y) variable
+is made from an observation of the independent (x) variable by weighted
+least squares over x values in the neighborhood of the value being evaluated.
 </td>
 					</tr>
 					<tr>
@@ -164,7 +163,7 @@ least squares over <a href="../dstats/regress/loess1D.html#x"><code class="prett
 								<code>logistic</code>
 							</a>
 						</td>
-						<td>The <code class="prettyprint lang-d">logistic</code> function used in <code class="prettyprint lang-d">logistic</code> regression.
+						<td>The logistic function used in logistic regression.
 </td>
 					</tr>
 					<tr>
@@ -173,8 +172,8 @@ least squares over <a href="../dstats/regress/loess1D.html#x"><code class="prett
 								<code>logisticRegress</code>
 							</a>
 						</td>
-						<td>Similar to <a href="../dstats/regress/logisticRegressBeta.html"><code class="prettyprint lang-d">logisticRegressBeta</code></a>, but returns a <a href="../dstats/regress/LogisticRes.html"><code class="prettyprint lang-d">LogisticRes</code></a> with useful stuff for
-statistical inference.  If the last element of <a href="../dstats/regress/logisticRegress.html#input"><code class="prettyprint lang-d">input</code></a> is a floating point
+						<td>Similar to logisticRegressBeta, but returns a LogisticRes with useful stuff for
+statistical inference.  If the last element of input is a floating point
 number instead of a range, it is used to specify the confidence interval
 calculated.  Otherwise, the default of 0.95 is used.
 </td>
@@ -185,7 +184,7 @@ calculated.  Otherwise, the default of 0.95 is used.
 								<code>logisticRegressBeta</code>
 							</a>
 						</td>
-						<td>Computes a <a href="../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a> regression using a maximum likelihood estimator
+						<td>Computes a logistic regression using a maximum likelihood estimator
 and returns the beta coefficients.  This is a generalized linear model with
 the link function f(XB) = 1 / (1 + exp(XB)). This is generally used to model
 the probability that a binary Y variable is 1 given a set of X variables.
@@ -197,9 +196,9 @@ the probability that a binary Y variable is 1 given a set of X variables.
 								<code>logisticRegressPenalized</code>
 							</a>
 						</td>
-						<td>Performs <a href="../dstats/regress/logisticRegressPenalized.html#lasso"><code class="prettyprint lang-d">lasso</code></a> (L1) and/or <a href="../dstats/regress/logisticRegressPenalized.html#ridge"><code class="prettyprint lang-d">ridge</code></a> (L2) penalized <a href="../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a> regression.  Due to the
+						<td>Performs lasso (L1) and/or ridge (L2) penalized logistic regression.  Due to the
 way the data is standardized, no intercept term should be included in x
-(unlike <a href="../dstats/regress/logisticRegress.html"><code class="prettyprint lang-d">logisticRegress</code></a> and <a href="../dstats/regress/logisticRegressBeta.html"><code class="prettyprint lang-d">logisticRegressBeta</code></a>).  The intercept coefficient is
+(unlike logisticRegress and logisticRegressBeta).  The intercept coefficient is
 implicitly included and returned in the first element of the returned array.
 Usage is otherwise identical.
 </td>
@@ -210,9 +209,9 @@ Usage is otherwise identical.
 								<code>polyFit</code>
 							</a>
 						</td>
-						<td>Convenience function that takes a forward range <a href="../dstats/regress/polyFit.html#X"><code class="prettyprint lang-d">X</code></a> and a forward range <a href="../dstats/regress/polyFit.html#Y"><code class="prettyprint lang-d">Y</code></a>,
- creates an array of <a href="../dstats/regress/PowMap.html"><code class="prettyprint lang-d">PowMap</code></a> structs for integer powers 0 through <a href="../dstats/regress/polyFit.html#N"><code class="prettyprint lang-d">N</code></a>,
- and calls <a href="../dstats/regress/linearRegress.html"><code class="prettyprint lang-d">linearRegress</code></a>.
+						<td>Convenience function that takes a forward range X and a forward range Y,
+ creates an array of PowMap structs for integer powers 0 through N,
+ and calls linearRegress.
 </td>
 					</tr>
 					<tr>
@@ -221,9 +220,9 @@ Usage is otherwise identical.
 								<code>polyFitBeta</code>
 							</a>
 						</td>
-						<td>Convenience function that takes a forward range <a href="../dstats/regress/polyFitBeta.html#X"><code class="prettyprint lang-d">X</code></a> and a forward range <a href="../dstats/regress/polyFitBeta.html#Y"><code class="prettyprint lang-d">Y</code></a>,
- creates an array of <a href="../dstats/regress/PowMap.html"><code class="prettyprint lang-d">PowMap</code></a> structs for integer powers from 0 through <a href="../dstats/regress/polyFitBeta.html#N"><code class="prettyprint lang-d">N</code></a>,
- and calls <a href="../dstats/regress/linearRegressBeta.html"><code class="prettyprint lang-d">linearRegressBeta</code></a>.
+						<td>Convenience function that takes a forward range X and a forward range Y,
+ creates an array of PowMap structs for integer powers from 0 through N,
+ and calls linearRegressBeta.
 </td>
 					</tr>
 					<tr>
@@ -232,7 +231,7 @@ Usage is otherwise identical.
 								<code>polyFitBetaBuf</code>
 							</a>
 						</td>
-						<td>Same as <a href="../dstats/regress/polyFitBeta.html"><code class="prettyprint lang-d">polyFitBeta</code></a>, but allows the caller to provide an explicit buffer
+						<td>Same as polyFitBeta, but allows the caller to provide an explicit buffer
  to return the coefficients in.  If it's too short, a new one will be
  allocated.  Otherwise, results will be returned in the user-provided buffer.
 </td>
@@ -243,8 +242,8 @@ Usage is otherwise identical.
 								<code>powMap</code>
 							</a>
 						</td>
-						<td>Maps a forward <a href="../dstats/regress/powMap.html#range"><code class="prettyprint lang-d">range</code></a> to a power determined at runtime.  ExpType is the type
- of the <a href="../dstats/regress/powMap.html#exponent"><code class="prettyprint lang-d">exponent</code></a>.  Using an int is faster than using a double, but obviously
+						<td>Maps a forward range to a power determined at runtime.  ExpType is the type
+ of the exponent.  Using an int is faster than using a double, but obviously
  less flexible.
 </td>
 					</tr>
@@ -254,8 +253,8 @@ Usage is otherwise identical.
 								<code>residuals</code>
 							</a>
 						</td>
-						<td>Given the beta coefficients from a linear regression, and <a href="../dstats/regress/residuals.html#X"><code class="prettyprint lang-d">X</code></a> and <a href="../dstats/regress/residuals.html#Y"><code class="prettyprint lang-d">Y</code></a> values,
- returns a range that lazily computes the <code class="prettyprint lang-d">residuals</code>.
+						<td>Given the beta coefficients from a linear regression, and X and Y values,
+ returns a range that lazily computes the residuals.
 </td>
 					</tr>
 					<tr>
@@ -322,7 +321,7 @@ Usage is otherwise identical.
 								<code>Loess1D</code>
 							</a>
 						</td>
-						<td>This class is returned from the <a href="../dstats/regress/loess1D.html"><code class="prettyprint lang-d">loess1D</code></a> function and holds the state of a
+						<td>This class is returned from the loess1D function and holds the state of a
 loess regression with one predictor variable.
 </td>
 					</tr>
@@ -342,7 +341,7 @@ loess regression with one predictor variable.
 								<code>LogisticRes</code>
 							</a>
 						</td>
-						<td>Plain old data struct to hold the results of a <a href="../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a> regression.
+						<td>Plain old data struct to hold the results of a logistic regression.
 </td>
 					</tr>
 					<tr>
@@ -351,7 +350,7 @@ loess regression with one predictor variable.
 								<code>PolyFitRes</code>
 							</a>
 						</td>
-						<td>Struct returned by <a href="../dstats/regress/polyFit.html"><code class="prettyprint lang-d">polyFit</code></a>.
+						<td>Struct returned by polyFit.
 </td>
 					</tr>
 					<tr>
@@ -378,7 +377,7 @@ loess regression with one predictor variable.
 								<code>Residuals</code>
 							</a>
 						</td>
-						<td>Forward Range for holding the <a href="../dstats/regress/residuals.html"><code class="prettyprint lang-d">residuals</code></a> from a regression analysis.
+						<td>Forward Range for holding the residuals from a regression analysis.
 </td>
 					</tr>
 				</table>

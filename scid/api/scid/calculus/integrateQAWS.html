@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,65 +288,62 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAWS</h1>
 			<section>
-				<p>Calculate an integral over the finite interval (<a href="../../scid/calculus/integrateQAWS.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQAWS.html#b"><code class="prettyprint lang-d">b</code></a>),
+				<p>Calculate an integral over the finite interval (<code class="lang-d"><a href="../../scid/calculus/integrateQAWS.html#a"><span class="pln">a</span></a></code>,<code class="lang-d"><a href="../../scid/calculus/integrateQAWS.html#b"><span class="pln">b</span></a></code>),
     where the integrand has algebraic and/or logarithmic endpoint
-    singularities of <a href="../../scid/calculus/integrateQAWS.html#a"><code class="prettyprint lang-d">a</code></a> known type.
+    singularities of a known type.
 </p>
 <section><p>The integrand is taken to be on the form
 </p>
-<pre class="code"><code class="prettyprint lang-d">            <a href="../../scid/calculus/integrateQAWS.html#alpha">alpha</a>        <a href="../../scid/calculus/integrateQAWS.html#beta">beta</a>
-<a href="../../scid/calculus/integrateQAWS.html#f">f</a>(x) (x - <a href="../../scid/calculus/integrateQAWS.html#a">a</a>)      (<a href="../../scid/calculus/integrateQAWS.html#b">b</a> - x)     w(x)
-</code></pre>
-<p>    where <a href="../../scid/calculus/integrateQAWS.html#f"><code class="prettyprint lang-d">f</code></a>(x) is the given function and w(x) is
-    specified by setting the <a href="../../scid/calculus/integrateQAWS.html#weight"><code class="prettyprint lang-d">weight</code></a> parameter to one of the following:
+<pre class="code"><code class="lang-d"><span class="pln">            <a href="../../scid/calculus/integrateQAWS.html#alpha"></span><span class="pln">alpha</span></a><span class="pln">        beta
+<a href="../../scid/calculus/integrateQAWS.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">) (</span><span class="pln">x </span><span class="pun">- <a href="../../scid/calculus/integrateQAWS.html#a"></span><span class="pln">a</span></a><span class="pun">)      (<a href="../../scid/calculus/integrateQAWS.html#b"></span><span class="pln">b</span></a><span class="pln"> </span><span class="pun">- </span><span class="pln">x</span><span class="pun">)     </span><span class="pln">w</span><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code></pre>
+<p>    where <code class="lang-d"><a href="../../scid/calculus/integrateQAWS.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> is the given function and <code class="lang-d"><span class="pln">w</span><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> is
+    specified by setting the <code class="lang-d"><a href="../../scid/calculus/integrateQAWS.html#weight"><span class="pln">weight</span></a></code> parameter to one of the following:
 </p>
-<pre class="code"><code class="prettyprint lang-d"><a href="../../scid/calculus/Weight.unity.html">Weight.unity</a>:  w(x) = 1
-<a href="../../scid/calculus/Weight.logxa.html">Weight.logxa</a>:  w(x) = log(x-<a href="../../scid/calculus/integrateQAWS.html#a">a</a>)
-<a href="../../scid/calculus/Weight.logbx.html">Weight.logbx</a>:  w(x) = log(<a href="../../scid/calculus/integrateQAWS.html#b">b</a>-x)
-<a href="../../scid/calculus/Weight.logab.html">Weight.logab</a>:  w(x) = log(x-<a href="../../scid/calculus/integrateQAWS.html#a">a</a>) log(<a href="../../scid/calculus/integrateQAWS.html#b">b</a>-x)
-</code></pre>
+<pre class="code"><code class="lang-d"><a href="../../scid/calculus/Weight.unity.html"><span class="typ">Weight<wbr/></span><span class="pun">.</span><span class="pln">unity</span></a><span class="pun">:  </span><span class="pln">w</span><span class="pun">(</span><span class="pln">x</span><span class="pun">) = </span><span class="lit">1
+<a href="../../scid/calculus/Weight.logxa.html"></span><span class="typ">Weight<wbr/></span><span class="pun">.</span><span class="pln">logxa</span></a><span class="pun">:  </span><span class="pln">w</span><span class="pun">(</span><span class="pln">x</span><span class="pun">) = </span><span class="pln">log</span><span class="pun">(</span><span class="pln">x</span><span class="pun">-<a href="../../scid/calculus/integrateQAWS.html#a"></span><span class="pln">a</span></a><span class="pun">)
+<a href="../../scid/calculus/Weight.logbx.html"></span><span class="typ">Weight<wbr/></span><span class="pun">.</span><span class="pln">logbx</span></a><span class="pun">:  </span><span class="pln">w</span><span class="pun">(</span><span class="pln">x</span><span class="pun">) = </span><span class="pln">log</span><span class="pun">(<a href="../../scid/calculus/integrateQAWS.html#b"></span><span class="pln">b</span></a><span class="pun">-</span><span class="pln">x</span><span class="pun">)
+<a href="../../scid/calculus/Weight.logab.html"></span><span class="typ">Weight<wbr/></span><span class="pun">.</span><span class="pln">logab</span></a><span class="pun">:  </span><span class="pln">w</span><span class="pun">(</span><span class="pln">x</span><span class="pun">) = </span><span class="pln">log</span><span class="pun">(</span><span class="pln">x</span><span class="pun">-<a href="../../scid/calculus/integrateQAWS.html#a"></span><span class="pln">a</span></a><span class="pun">) </span><span class="pln">log</span><span class="pun">(<a href="../../scid/calculus/integrateQAWS.html#b"></span><span class="pln">b</span></a><span class="pun">-</span><span class="pln">x</span><span class="pun">)</span></code></pre>
 
 <p>    A globally adaptive subdivision strategy is applied,
     with modified
     <a href="http://en.wikipedia.org/wiki/Clenshaw%E2%80%93Curtis_quadrature">    Clenshaw–Curtis integration</a> on those subintervals
-    which contain <a href="../../scid/calculus/integrateQAWS.html#a"><code class="prettyprint lang-d">a</code></a> or <a href="../../scid/calculus/integrateQAWS.html#b"><code class="prettyprint lang-d">b</code></a>.
+    which contain <code class="lang-d"><a href="../../scid/calculus/integrateQAWS.html#a"><span class="pln">a</span></a></code> or <code class="lang-d"><a href="../../scid/calculus/integrateQAWS.html#b"><span class="pln">b</span></a></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a>!Real integrateQAWS(Func, Real)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!Real <span class="pln">integrateQAWS</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real b,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real alpha,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">alpha</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real beta,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">beta</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/calculus/Weight.html">Weight</a> weight,
+&nbsp;&nbsp;<a href="../../scid/calculus/Weight.html"><span class="typ">Weight</span></a> <span class="pln">weight</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsRel</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">1e-06</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsAbs = cast(Real)0
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsAbs</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">0</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// Calculate the integral of 1/(sqrt(1-x^^2) * (x+1.5)).
+<pre class="code"><code class="lang-d"><span class="com">// Calculate the integral of 1/(sqrt(1-x^^2) * (x+1.5)).
 // Another way to write this integrand is
 //     (x-(-1))^^(-0.5) * (1-x)^^0.5 / (x+1.5),
-// so we set <a href="../../scid/calculus/integrateQAWS.html#alpha">alpha</a> = <a href="../../scid/calculus/integrateQAWS.html#beta">beta</a> = -0.5.
-real <a href="../../scid/calculus/integrateQAWS.html#f">f</a>(real x) { return 1/(x + 1.5L); }
-auto i = integrateQAWS(&amp;<a href="../../scid/calculus/integrateQAWS.html#f">f</a>, -1.0L, 1.0L, -0.5L, -0.5L, <a href="../../scid/calculus/Weight.unity.html">Weight.unity</a>, 1e-15L);
-</code></pre>
+// so we set alpha = beta = -0.5.
+</span><span class="typ">real <a href="../../scid/calculus/integrateQAWS.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">real </span><span class="pln">x</span><span class="pun">) { </span><span class="kwd">return </span><span class="lit">1</span><span class="pun">/(</span><span class="pln">x </span><span class="pun">+ </span><span class="lit">1.5L</span><span class="pun">); }
+</span><span class="kwd">auto </span><span class="pln">i </span><span class="pun">= </span><span class="pln">integrateQAWS</span><span class="pun">(&amp;<a href="../../scid/calculus/integrateQAWS.html#f"></span><span class="pln">f</span></a><span class="pun">, -</span><span class="lit">1.0L</span><span class="pun">, </span><span class="lit">1.0L</span><span class="pun">, -</span><span class="lit">0.5L</span><span class="pun">, -</span><span class="lit">0.5L</span><span class="pun">, <a href="../../scid/calculus/Weight.unity.html"></span><span class="typ">Weight<wbr/></span><span class="pun">.</span><span class="pln">unity</span></a><span class="pun">, </span><span class="lit">1e-15L</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

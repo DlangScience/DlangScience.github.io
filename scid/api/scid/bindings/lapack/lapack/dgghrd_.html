@@ -6,19 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">bindings</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">lapack</a>
 						<ul class="tree-view">
 							<li>
@@ -294,42 +293,42 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) void dgghrd_(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">dgghrd_</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char* compq,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">compq</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char* compz,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">compz</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* n,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ilo,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ilo</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ihi,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ihi</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* a,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* lda,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* b,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ldb,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* q,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">q</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ldq,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ldq</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* z,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">z</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ldz,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ldz</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* info,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">info</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int compq_len,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">compq_len</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int compz_len
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">compz_len</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

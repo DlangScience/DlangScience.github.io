@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -74,7 +73,7 @@ $('#symbolSearchPane').show();
 		</nav>
 		<div id="main-contents">
 			<h1>Module dstats.cor</h1>
-			<p>Pearson, Spearman and Kendall correlations, <a href="../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a>.
+			<p>Pearson, Spearman and Kendall correlations, covariance.
 </p>
 <section></section>
 
@@ -105,12 +104,12 @@ $('#symbolSearchPane').show();
 								<code>covarianceMatrix</code>
 							</a>
 						</td>
-						<td>These overloads allow for correlation and <a href="../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a> matrices to be computed
-with the results being stored in a pre-allocated variable, <a href="../dstats/cor/covarianceMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a>.  <a href="../dstats/cor/covarianceMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> must
+						<td>These overloads allow for correlation and covariance matrices to be computed
+with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
-as the number of vectors in <a href="../dstats/cor/covarianceMatrix.html#mat"><code class="prettyprint lang-d">mat</code></a> and must have at least enough columns in
-each row to support storing the lower triangle.  If <a href="../dstats/cor/covarianceMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> is a full rectangular
+as the number of vectors in mat and must have at least enough columns in
+each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
 </td>
 					</tr>
@@ -123,7 +122,7 @@ matrix/range of ranges, only the lower triangle results will be stored.
 						<td>Kendall's Tau-b, O(N log N) version.  This is a non-parametric measure
 of monotonic association and can be defined in terms of the
 bubble sort distance, or the number of swaps that would be needed in a
-bubble sort to sort <a href="../dstats/cor/kendallCor.html#input2"><code class="prettyprint lang-d">input2</code></a> into the same order as <a href="../dstats/cor/kendallCor.html#input1"><code class="prettyprint lang-d">input1</code></a>.
+bubble sort to sort input2 into the same order as input1.
 </td>
 					</tr>
 					<tr>
@@ -152,12 +151,12 @@ or arrays.
 								<code>kendallMatrix</code>
 							</a>
 						</td>
-						<td>These overloads allow for correlation and <a href="../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a> matrices to be computed
-with the results being stored in a pre-allocated variable, <a href="../dstats/cor/kendallMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a>.  <a href="../dstats/cor/kendallMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> must
+						<td>These overloads allow for correlation and covariance matrices to be computed
+with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
-as the number of vectors in <a href="../dstats/cor/kendallMatrix.html#mat"><code class="prettyprint lang-d">mat</code></a> and must have at least enough columns in
-each row to support storing the lower triangle.  If <a href="../dstats/cor/kendallMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> is a full rectangular
+as the number of vectors in mat and must have at least enough columns in
+each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
 </td>
 					</tr>
@@ -167,7 +166,7 @@ matrix/range of ranges, only the lower triangle results will be stored.
 								<code>partial</code>
 							</a>
 						</td>
-						<td>Computes the <code class="prettyprint lang-d">partial</code> correlation between <a href="../dstats/cor/partial.html#vec1"><code class="prettyprint lang-d">vec1</code></a>, <a href="../dstats/cor/partial.html#vec2"><code class="prettyprint lang-d">vec2</code></a> given
+						<td>Computes the partial correlation between vec1, vec2 given
  conditions.  conditions can be either a tuple of ranges, a range of ranges,
  or (for a single condition) a single range.
 </td>
@@ -191,12 +190,12 @@ matrix/range of ranges, only the lower triangle results will be stored.
 								<code>pearsonMatrix</code>
 							</a>
 						</td>
-						<td>These overloads allow for correlation and <a href="../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a> matrices to be computed
-with the results being stored in a pre-allocated variable, <a href="../dstats/cor/pearsonMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a>.  <a href="../dstats/cor/pearsonMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> must
+						<td>These overloads allow for correlation and covariance matrices to be computed
+with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
-as the number of vectors in <a href="../dstats/cor/pearsonMatrix.html#mat"><code class="prettyprint lang-d">mat</code></a> and must have at least enough columns in
-each row to support storing the lower triangle.  If <a href="../dstats/cor/pearsonMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> is a full rectangular
+as the number of vectors in mat and must have at least enough columns in
+each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
 </td>
 					</tr>
@@ -217,12 +216,12 @@ matrix/range of ranges, only the lower triangle results will be stored.
 								<code>spearmanMatrix</code>
 							</a>
 						</td>
-						<td>These overloads allow for correlation and <a href="../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a> matrices to be computed
-with the results being stored in a pre-allocated variable, <a href="../dstats/cor/spearmanMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a>.  <a href="../dstats/cor/spearmanMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> must
+						<td>These overloads allow for correlation and covariance matrices to be computed
+with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
-as the number of vectors in <a href="../dstats/cor/spearmanMatrix.html#mat"><code class="prettyprint lang-d">mat</code></a> and must have at least enough columns in
-each row to support storing the lower triangle.  If <a href="../dstats/cor/spearmanMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> is a full rectangular
+as the number of vectors in mat and must have at least enough columns in
+each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
 </td>
 					</tr>
@@ -250,9 +249,9 @@ matrix/range of ranges, only the lower triangle results will be stored.
 								<code>PearsonCor</code>
 							</a>
 						</td>
-						<td>Allows computation of mean, stdev, variance, <a href="../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a>, Pearson correlation online.
- Getters for stdev, var, <a href="../dstats/cor/PearsonCor.cov.html"><code class="prettyprint lang-d">cov</code></a>, <a href="../dstats/cor/PearsonCor.cor.html"><code class="prettyprint lang-d">cor</code></a> cost floating point division ops.  Getters
- for means cost a single branch to check for <a href="../dstats/cor/PearsonCor.N.html"><code class="prettyprint lang-d">N</code></a> == 0.  This struct uses O(1)
+						<td>Allows computation of mean, stdev, variance, covariance, Pearson correlation online.
+ Getters for stdev, var, cov, cor cost floating point division ops.  Getters
+ for means cost a single branch to check for N == 0.  This struct uses O(1)
  space.
 </td>
 					</tr>
@@ -294,7 +293,7 @@ matrix/range of ranges, only the lower triangle results will be stored.
 							</a>
 						</td>
 						<td>
-<code class="prettyprint lang-d"><a href="../dstats/cor/PearsonCor.html">PearsonCor</a></code>
+<code class="prettyprint lang-d"><a href="../dstats/cor/PearsonCor.html"><span class="typ">PearsonCor</span></a></code>
 						</td>
 						<td></td>
 					</tr>

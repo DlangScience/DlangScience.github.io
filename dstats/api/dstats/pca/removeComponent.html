@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,25 +74,25 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function removeComponent</h1>
 			<section>
-				<p>Remove the principal component specified by the given <a href="../../dstats/pca/removeComponent.html#rotation"><code class="prettyprint lang-d">rotation</code></a> vector from
-<a href="../../dstats/pca/removeComponent.html#data"><code class="prettyprint lang-d">data</code></a>.  <a href="../../dstats/pca/removeComponent.html#data"><code class="prettyprint lang-d">data</code></a> must have assignable elements.  <a href="../../dstats/pca/Transposed.html"><code class="prettyprint lang-d">Transposed</code></a> controls whether
-<a href="../../dstats/pca/removeComponent.html#rotation"><code class="prettyprint lang-d">rotation</code></a> is considered a loading for the <a href="../../dstats/pca/removeComponent.html#transposed"><code class="prettyprint lang-d">transposed</code></a> matrix or the matrix
+				<p>Remove the principal component specified by the given rotation vector from
+data.  data must have assignable elements.  Transposed controls whether
+rotation is considered a loading for the transposed matrix or the matrix
 as-is.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void removeComponent(Ror, R)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">removeComponent</span><span class="pun">(</span><span class="typ">Ror</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Ror data,
+&nbsp;&nbsp;<span class="typ">Ror</span> <span class="pln">data</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;R rotation,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">rotation</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../dstats/pca/Transposed.html">Transposed</a> transposed = Transposed.no
+&nbsp;&nbsp;<a href="../../dstats/pca/Transposed.html"><span class="typ">Transposed</span></a> <span class="pln">transposed</span> <span class="pun">=</span> <span class="typ">Transposed<wbr/></span><span class="pun">.</span><span class="pln">no</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

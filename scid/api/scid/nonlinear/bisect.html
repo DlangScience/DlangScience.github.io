@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,7 +288,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function bisect</h1>
 			<section>
-				<p>Use bisection to find the point where the given <a href="../../scid/nonlinear/bisect.html#predicate"><code class="prettyprint lang-d">predicate</code></a> goes from
+				<p>Use bisection to find the point where the given predicate goes from
     returning false to returning true.
 </p>
 <section></section>
@@ -297,96 +296,94 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Tuple!(T,"xTrue",T,"xFalse",R,"fTrue",R,"fFalse") bisect(F, T, R)(
+							<code class="lang-d">
+<span class="typ">Tuple</span>!(T,"xTrue",T,"xFalse",R,"fTrue",R,"fFalse") <span class="pln">bisect</span><span class="pun">(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope F f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">F</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;bool delegate(T, R) predicate,
+&nbsp;&nbsp;<span class="typ">bool</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span> <span class="pln">predicate</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xTrue,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xTrue</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xFalse,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xFalse</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xTolerance,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xTolerance</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int maxIterations = 40
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">maxIterations</span> <span class="pun">=</span> <span class="lit">40</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 								<br/>
 								<br/>
-Tuple!(T,"xTrue",T,"xFalse",R,"fTrue",R,"fFalse") bisect(F, T, R)(
+<span class="typ">Tuple</span>!(T,"xTrue",T,"xFalse",R,"fTrue",R,"fFalse") <span class="pln">bisect</span><span class="pun">(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope F f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">F</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;bool delegate(T, R) predicate,
+&nbsp;&nbsp;<span class="typ">bool</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span> <span class="pln">predicate</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xTrue,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xTrue</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xFalse,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xFalse</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;R fTrue,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">fTrue</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;R fFalse,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">fFalse</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T xTolerance,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">xTolerance</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int maxIterations = 40
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">maxIterations</span> <span class="pun">=</span> <span class="lit">40</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isFloatingPoint!T &amp;&amp; isFloatingPoint!R);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">R</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td>   The function.</td></tr>
-<tr><td id="predicate">predicate</td><td>   The <a href="../../scid/nonlinear/bisect.html#predicate"><code class="prettyprint lang-d">predicate</code></a>, which must take a point and
+<tr><td id="predicate">predicate</td><td>   The predicate, which must take a point and
                             the function value at that point and return
                             a boolean.</td></tr>
-<tr><td id="xTrue">xTrue</td><td>   A point where the <a href="../../scid/nonlinear/bisect.html#predicate"><code class="prettyprint lang-d">predicate</code></a> is true.</td></tr>
-<tr><td id="xFalse">xFalse</td><td>   A point where the <a href="../../scid/nonlinear/bisect.html#predicate"><code class="prettyprint lang-d">predicate</code></a> is false.</td></tr>
-<tr><td id="fTrue">fTrue</td><td>   (optional) The value of <a href="../../scid/nonlinear/bisect.html#f"><code class="prettyprint lang-d">f</code></a> at <a href="../../scid/nonlinear/bisect.html#xTrue"><code class="prettyprint lang-d">xTrue</code></a>.</td></tr>
-<tr><td id="fFalse">fFalse</td><td>   (optional) The value of <a href="../../scid/nonlinear/bisect.html#f"><code class="prettyprint lang-d">f</code></a> at <a href="../../scid/nonlinear/bisect.html#xFalse"><code class="prettyprint lang-d">xFalse</code></a>.</td></tr>
+<tr><td id="xTrue">xTrue</td><td>   A point where the predicate is true.</td></tr>
+<tr><td id="xFalse">xFalse</td><td>   A point where the predicate is false.</td></tr>
+<tr><td id="fTrue">fTrue</td><td>   (optional) The value of f at xTrue.</td></tr>
+<tr><td id="fFalse">fFalse</td><td>   (optional) The value of f at xFalse.</td></tr>
 <tr><td id="xTolerance">xTolerance</td><td>   Success: When the absolute distance between
-                            <a href="../../scid/nonlinear/bisect.html#xTrue"><code class="prettyprint lang-d">xTrue</code></a> and <a href="../../scid/nonlinear/bisect.html#xFalse"><code class="prettyprint lang-d">xFalse</code></a> is less than this number,
+                            xTrue and xFalse is less than this number,
                             the function returns.</td></tr>
 <tr><td id="maxIterations">maxIterations</td><td>   Failure: When the algorithm has failed to
-                            produce a result after <a href="../../scid/nonlinear/bisect.html#maxIterations"><code class="prettyprint lang-d">maxIterations</code></a> bisections,
+                            produce a result after maxIterations bisections,
                             an exception is thrown.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>A tuple containing values named <a href="../../scid/nonlinear/bisect.html#xTrue"><code class="prettyprint lang-d">xTrue</code></a>, <a href="../../scid/nonlinear/bisect.html#xFalse"><code class="prettyprint lang-d">xFalse</code></a>, <a href="../../scid/nonlinear/bisect.html#fTrue"><code class="prettyprint lang-d">fTrue</code></a>, and <a href="../../scid/nonlinear/bisect.html#fFalse"><code class="prettyprint lang-d">fFalse</code></a>, which
+<p>A tuple containing values named xTrue, xFalse, fTrue, and fFalse, which
     satisfy
 </p>
-<pre class="code"><code class="prettyprint lang-d"><a href="../../scid/nonlinear/bisect.html#f">f</a>(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>) == <a href="../../scid/nonlinear/bisect.html#fTrue">fTrue</a>
-<a href="../../scid/nonlinear/bisect.html#f">f</a>(<a href="../../scid/nonlinear/bisect.html#xFalse">xFalse</a>) == <a href="../../scid/nonlinear/bisect.html#fFalse">fFalse</a>
-<a href="../../scid/nonlinear/bisect.html#predicate">predicate</a>(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>, <a href="../../scid/nonlinear/bisect.html#fTrue">fTrue</a>) == true
-<a href="../../scid/nonlinear/bisect.html#predicate">predicate</a>(<a href="../../scid/nonlinear/bisect.html#xFalse">xFalse</a>, <a href="../../scid/nonlinear/bisect.html#fFalse">fFalse</a>) == false
-abs(<a href="../../scid/nonlinear/bisect.html#xTrue">xTrue</a>-<a href="../../scid/nonlinear/bisect.html#xFalse">xFalse</a>) &lt;= <a href="../../scid/nonlinear/bisect.html#xTolerance">xTolerance</a>
-</code></pre>
+<pre class="code"><code class="lang-d"><a href="../../scid/nonlinear/bisect.html#f"><span class="pln">f</span></a><span class="pun">(<a href="../../scid/nonlinear/bisect.html#xTrue"></span><span class="pln">xTrue</span></a><span class="pun">) == <a href="../../scid/nonlinear/bisect.html#fTrue"></span><span class="pln">fTrue</span></a><span class="pln">
+f</span><span class="pun">(<a href="../../scid/nonlinear/bisect.html#xFalse"></span><span class="pln">xFalse</span></a><span class="pun">) == <a href="../../scid/nonlinear/bisect.html#fFalse"></span><span class="pln">fFalse</span></a><span class="pln">
+predicate</span><span class="pun">(<a href="../../scid/nonlinear/bisect.html#xTrue"></span><span class="pln">xTrue</span></a><span class="pun">, <a href="../../scid/nonlinear/bisect.html#fTrue"></span><span class="pln">fTrue</span></a><span class="pun">) == </span><span class="kwd">true
+<a href="../../scid/nonlinear/bisect.html#predicate"></span><span class="pln">predicate</span></a><span class="pun">(<a href="../../scid/nonlinear/bisect.html#xFalse"></span><span class="pln">xFalse</span></a><span class="pun">, <a href="../../scid/nonlinear/bisect.html#fFalse"></span><span class="pln">fFalse</span></a><span class="pun">) == </span><span class="kwd">false
+</span><span class="pln">abs</span><span class="pun">(<a href="../../scid/nonlinear/bisect.html#xTrue"></span><span class="pln">xTrue</span></a><span class="pun">-<a href="../../scid/nonlinear/bisect.html#xFalse"></span><span class="pln">xFalse</span></a><span class="pun">) &lt;= <a href="../../scid/nonlinear/bisect.html#xTolerance"></span><span class="pln">xTolerance</span></a></code></pre>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// Find a root by bisection
-auto r = bisect(
-    (real x) { return x^^3; },
-    (real x, real fx) { return fx &lt; 0; },
-    -1.0L, 1.5L, 1e-10L
-    );
+<pre class="code"><code class="lang-d"><span class="com">// Find a root by bisection
+</span><span class="kwd">auto </span><span class="pln">r </span><span class="pun">= </span><span class="pln">bisect</span><span class="pun">(
+    (</span><span class="typ">real </span><span class="pln">x</span><span class="pun">) { </span><span class="kwd">return </span><span class="pln">x</span><span class="pun">^^</span><span class="lit">3</span><span class="pun">; },
+    (</span><span class="typ">real </span><span class="pln">x</span><span class="pun">, </span><span class="typ">real </span><span class="pln">fx</span><span class="pun">) { </span><span class="kwd">return </span><span class="pln">fx </span><span class="pun">&lt; </span><span class="lit">0</span><span class="pun">; },
+    -</span><span class="lit">1.0L</span><span class="pun">, </span><span class="lit">1.5L</span><span class="pun">, </span><span class="lit">1e-10L
+    </span><span class="pun">);
 
-// Let's check if we got the right answer.
-enum root = 0.0L;
-assert (abs(r.xTrue - root) &lt;= 1e-10);
-assert (abs(r.xFalse - root) &lt;= 1e-10);
+</span><span class="com">// Let's check if we got the right answer.
+</span><span class="kwd">enum </span><span class="pln">root </span><span class="pun">= </span><span class="lit">0.0L</span><span class="pun">;
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">abs</span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">xTrue </span><span class="pun">- </span><span class="pln">root</span><span class="pun">) &lt;= </span><span class="lit">1e-10</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">abs</span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">xFalse </span><span class="pun">- </span><span class="pln">root</span><span class="pun">) &lt;= </span><span class="lit">1e-10</span><span class="pun">);
 
-assert (r.fTrue &lt; 0);
-assert (r.fFalse &gt;= 0);
-assert (abs(r.xTrue - r.xFalse) &lt;= 1e-10);
-assert (r.xNaN &lt; 0);
-assert (abs(r.xValid - r.xNan) &lt;= 1e-6);
-</code></pre>
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">fTrue </span><span class="pun">&lt; </span><span class="lit">0</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">fFalse </span><span class="pun">&gt;= </span><span class="lit">0</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">abs</span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">xTrue </span><span class="pun">- </span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">xFalse</span><span class="pun">) &lt;= </span><span class="lit">1e-10</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">xNaN </span><span class="pun">&lt; </span><span class="lit">0</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">abs</span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">xValid </span><span class="pun">- </span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">xNan</span><span class="pun">) &lt;= </span><span class="lit">1e-6</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

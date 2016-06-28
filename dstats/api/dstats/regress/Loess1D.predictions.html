@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,8 +74,8 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Loess1D.predictions</h1>
 			<section>
-				<p>Obtain smoothed <code class="prettyprint lang-d">predictions</code> of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> at the values of <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> provided on creation
-    of this object, for the given level of <a href="../../dstats/regress/Loess1D.predictions.html#robustness"><code class="prettyprint lang-d">robustness</code></a>.  Evaluating
+				<p>Obtain smoothed predictions of y at the values of x provided on creation
+    of this object, for the given level of robustness.  Evaluating
     these is computationally expensive and may be parallelized by
     providing a TaskPool object.
 </p>
@@ -84,14 +83,14 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-const(double)[] predictions(
+							<code class="lang-d">
+<span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">predictions</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;int robustness,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">robustness</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>parallelism.<wbr/>TaskPool pool = null
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">parallelism<wbr/></span><span class="pun">.</span><span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

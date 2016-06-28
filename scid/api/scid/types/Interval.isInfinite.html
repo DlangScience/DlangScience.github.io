@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,10 +288,10 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Interval.isInfinite</h1>
 			<section>
-				<p>Determine whether the <a href="../../scid/types/interval.html"><code class="prettyprint lang-d">interval</code></a> is infinite.  This is true if:
-        <ul>            <li><a href="../../scid/types/Interval.a.html"><code class="prettyprint lang-d">a</code></a> is infinite, <a href="../../scid/types/Interval.b.html"><code class="prettyprint lang-d">b</code></a> is finite</li>
-            <li><a href="../../scid/types/Interval.a.html"><code class="prettyprint lang-d">a</code></a> is finite, <a href="../../scid/types/Interval.b.html"><code class="prettyprint lang-d">b</code></a> is infinite</li>
-            <li><a href="../../scid/types/Interval.a.html"><code class="prettyprint lang-d">a</code></a> and <a href="../../scid/types/Interval.b.html"><code class="prettyprint lang-d">b</code></a> are infinite, but have opposite sign.</li>
+				<p>Determine whether the interval is infinite.  This is true if:
+        <ul>            <li>a is infinite, b is finite</li>
+            <li>a is finite, b is infinite</li>
+            <li>a and b are infinite, but have opposite sign.</li>
         </ul>
         If T is an integer type, this is always false.
 </p>
@@ -300,8 +299,8 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-bool isInfinite() const @property @trusted;
+							<code class="lang-d">
+<span class="typ">bool</span> <span class="pln">isInfinite<span class="pun">()</span><span class="pln"> </span><span class="kwd">const @property @trusted</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

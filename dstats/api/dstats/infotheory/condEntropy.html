@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,22 +74,22 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function condEntropy</h1>
 			<section>
-				<p>Calculate the conditional <a href="../../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> H(<a href="../../dstats/infotheory/condEntropy.html#data"><code class="prettyprint lang-d">data</code></a> | <a href="../../dstats/infotheory/condEntropy.html#cond"><code class="prettyprint lang-d">cond</code></a>).
+				<p>Calculate the conditional entropy H(data | cond).
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double condEntropy(T, U)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">condEntropy</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T data,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U cond
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">cond</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!T &amp;&amp; isInputRange!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,31 +74,30 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function seq</h1>
 			<section>
-				<p>Generates a sequence from [<a href="../../dstats/base/seq.html#start"><code class="prettyprint lang-d">start</code></a>..end] by <a href="../../dstats/base/seq.html#increment"><code class="prettyprint lang-d">increment</code></a>.  Includes <a href="../../dstats/base/seq.html#start"><code class="prettyprint lang-d">start</code></a>,
- excludes <a href="../../dstats/base/seq.html#end"><code class="prettyprint lang-d">end</code></a>.  Does so eagerly as an array.
+				<p>Generates a sequence from [start..end] by increment.  Includes start,
+ excludes end.  Does so eagerly as an array.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-CommonType!(T,U)[] seq(T, U, V)(
+							<code class="lang-d">
+<span class="typ">CommonType</span>!(T,U)<span class="pun">[]</span> <span class="pln">seq</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">, </span><span class="pln">V</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T start,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">start</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U end,
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">end</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;V increment = 1u
+&nbsp;&nbsp;<span class="pln">V</span> <span class="pln">increment</span> <span class="pun">=</span> <span class="lit">1u</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto s = seq(0, 5);
-assert(s == [0, 1, 2, 3, 4]);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">s </span><span class="pun">= </span><span class="pln">seq</span><span class="pun">(</span><span class="lit">0</span><span class="pun">, </span><span class="lit">5</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">s </span><span class="pun">== [</span><span class="lit">0</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">]);</span></code></pre>
 </section>
 
 			</section>

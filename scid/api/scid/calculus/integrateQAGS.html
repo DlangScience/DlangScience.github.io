@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,10 +288,10 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAGS</h1>
 			<section>
-				<p>Calculate the integral of <a href="../../scid/calculus/integrateQAGS.html#f"><code class="prettyprint lang-d">f</code></a>(x) over the finite interval
-    (<a href="../../scid/calculus/integrateQAGS.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/calculus/integrateQAGS.html#b"><code class="prettyprint lang-d">b</code></a>) using <a href="../../scid/calculus/integrateQAGS.html#a"><code class="prettyprint lang-d">a</code></a> general-purpose integration algorithm.
+				<p>Calculate the integral of <code class="lang-d"><a href="../../scid/calculus/integrateQAGS.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code> over the finite interval
+    (<code class="lang-d"><a href="../../scid/calculus/integrateQAGS.html#a"><span class="pln">a</span></a></code>,<code class="lang-d"><a href="../../scid/calculus/integrateQAGS.html#b"><span class="pln">b</span></a></code>) using a general-purpose integration algorithm.
 </p>
-<section><p>integrateQAGS() is an integrator based on globally adaptive interval
+<section><p><code class="lang-d"><span class="pln">integrateQAGS</span><span class="pun">()</span></code> is an integrator based on globally adaptive interval
     subdivision in connection with extrapolation by the Epsilon
     algorithm, which eliminates the effects of integrand singularities
     of several types.
@@ -302,7 +301,7 @@ $('#symbolSearchPane').show();
     integration methods, and the one that best handles bad integrand
     behaviour.  It is fairly expensive in terms of processing time, though,
     so if that is an issue you may want to investigate the integrand
-    in more detail and try one or <a href="../../scid/calculus/integrateQAGS.html#a"><code class="prettyprint lang-d">a</code></a> combination of the more specialised
+    in more detail and try one or a combination of the more specialised
     integration methods.
 </p>
 </section>
@@ -310,28 +309,27 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a>!Real integrateQAGS(Func, Real)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!Real <span class="pln">integrateQAGS</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real b,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsRel = cast(Real)1e-06,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsRel</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">1e-06</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsAbs = cast(Real)0
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsAbs</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="lit">0</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// This function has an internal singularity at x = 1/3.
-double <a href="../../scid/calculus/integrateQAGS.html#f">f</a>(double x) { return 1/sqrt(abs(x-1.0/3)); }
-auto i = integrateQAGS(&amp;<a href="../../scid/calculus/integrateQAGS.html#f">f</a>, 0.0, 1.0);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="com">// This function has an internal singularity at x = 1/3.
+</span><span class="typ">double <a href="../../scid/calculus/integrateQAGS.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">double </span><span class="pln">x</span><span class="pun">) { </span><span class="kwd">return </span><span class="lit">1</span><span class="pun">/</span><span class="pln">sqrt</span><span class="pun">(</span><span class="pln">abs</span><span class="pun">(</span><span class="pln">x</span><span class="pun">-</span><span class="lit">1.0</span><span class="pun">/</span><span class="lit">3</span><span class="pun">)); }
+</span><span class="kwd">auto </span><span class="pln">i </span><span class="pun">= </span><span class="pln">integrateQAGS</span><span class="pun">(&amp;<a href="../../scid/calculus/integrateQAGS.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="lit">0.0</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

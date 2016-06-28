@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -38,7 +37,7 @@ $('#symbolSearchPane').show();
 </p>
 <section><p>In HDF5 files you can set check-summing for each variable.
 Currently the only checksum available is Fletcher-32, which can be set
-with the function <a href="../netcdf/nc_def_var_fletcher32.html"><code class="prettyprint lang-d">nc_def_var_fletcher32</code></a>.  These defines are used
+with the function nc_def_var_fletcher32.  These defines are used
 there.
 </p>
 
@@ -49,8 +48,8 @@ there.
 					<section>
 						<h3>Declaration</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-enum NC_NOCHECKSUM = 0;
+							<code class="lang-d">
+<span class="kwd">enum</span> <span class="pln">NC_NOCHECKSUM</span> <span class="pun">=</span> <span class="lit">0</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

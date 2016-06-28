@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -77,7 +76,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>The exact multinomial goodness of fit test for whether a set of counts
 fits a hypothetical distribution.  counts is an input range of counts.
-<a href="../../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a> is an input range of expected <a href="../../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a>.  These are normalized
+proportions is an input range of expected proportions.  These are normalized
 automatically, so they can sum to any value.
 </p>
 <section></section>
@@ -85,28 +84,28 @@ automatically, so they can sum to any value.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double multinomialTest(U, F)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">multinomialTest</span><span class="pun">(</span><span class="pln">U</span><span class="pun">, </span><span class="pln">F</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;U countsIn,
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">countsIn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;F proportions
+&nbsp;&nbsp;<span class="pln">F</span> <span class="pln">proportions</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!U &amp;&amp; isInputRange!F &amp;&amp; isIntegral!(ElementType!U) &amp;&amp; isFloatingPoint!(ElementType!F));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">U </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">F </span><span class="pun">&amp;&amp; </span><span class="pln">isIntegral</span><span class="pun">!(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">U</span><span class="pun">) &amp;&amp; </span><span class="pln">isFloatingPoint</span><span class="pun">!(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">F</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>The P-value for the null that counts is a sample from <a href="../../dstats/tests/multinomialTest.html#proportions"><code class="prettyprint lang-d">proportions</code></a>
+<p>The P-value for the null that counts is a sample from proportions
 against the alternative that it isn't.
 </p>
 </section>
 <section><h3>Notes</h3>
 <p>This test is EXTREMELY slow for anything but very small samples and
-degrees of freedom.  The Pearson's chi-square (<a href="../../dstats/tests/chiSquareFit.html"><code class="prettyprint lang-d">chiSquareFit</code></a>()) or likelihood
-ratio chi-square (<a href="../../dstats/tests/gTestFit.html"><code class="prettyprint lang-d">gTestFit</code></a>()) are good enough approximations unless sample
+degrees of freedom.  The Pearson's chi-square (chiSquareFit()) or likelihood
+ratio chi-square (gTestFit()) are good enough approximations unless sample
 size is very small.
 </p>
 </section>

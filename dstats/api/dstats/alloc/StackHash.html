@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,11 +74,18 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct StackHash</h1>
 			<section>
-				<p>A hash table that allocates its memory on <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>.  Good for building a
+				<p>A hash table that allocates its memory on RegionAllocator.  Good for building a
  temporary hash tables that will not escape the current scope.
 </p>
 <section></section>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">StackHash</span><span class="pun">(</span><span class="pln">K</span><span class="pun">, </span><span class="pln">V</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Constructors</h3>
 						<table>
@@ -94,7 +100,7 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td>Due to the nature of <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>, you must specify on object creation
+								<td>Due to the nature of RegionAllocator, you must specify on object creation
  the approximate number of elements your table will have.  Too large a
  number will waste space and incur poor cache performance.  Too low a
  number will make this struct perform like a linked list.  Generally,
@@ -117,42 +123,42 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/alloc/StackHash.alloc.html" class="public"><code>alloc</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html">RegionAllocator</a></code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/StackHash.freeList.html" class="public"><code>freeList</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html">StackHash.<wbr/>Node</a>**</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html"><span class="typ">StackHash<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/StackHash.rKeys.html" class="public"><code>rKeys</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">Unqual!K[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!K<span class="pun">[]</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/StackHash.rNext.html" class="public"><code>rNext</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">Unqual!(Node*)[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!(Node*)<span class="pun">[]</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/StackHash.rVals.html" class="public"><code>rVals</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">Unqual!V[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!V<span class="pun">[]</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/alloc/StackHash._length.html" class="public"><code>_length</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -171,7 +177,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/StackHash.length.html" class="public property"><code>length</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -179,7 +185,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/StackHash.usedSentinel.html" class="public property"><code>usedSentinel</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html">StackHash.<wbr/>Node</a>*</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html"><span class="typ">StackHash<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -214,7 +220,7 @@ $('#symbolSearchPane').show();
 										<code>get</code>
 									</a>
 								</td>
-								<td>Attempt to look up a <a href="../../dstats/alloc/StackHash.get.html#key"><code class="prettyprint lang-d">key</code></a> and return a default value if the <a href="../../dstats/alloc/StackHash.get.html#key"><code class="prettyprint lang-d">key</code></a> is not
+								<td>Attempt to look up a key and return a default value if the key is not
     present.
 </td>
 							</tr>
@@ -232,9 +238,9 @@ $('#symbolSearchPane').show();
 										<code>keys</code>
 									</a>
 								</td>
-								<td>Returns a forward range to iterate over the <code class="prettyprint lang-d">keys</code> of this table.
+								<td>Returns a forward range to iterate over the keys of this table.
  The lifetime of this range must not exceed the lifetime of this
- <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>.
+ StackHash.
 </td>
 							</tr>
 							<tr>
@@ -309,9 +315,9 @@ $('#symbolSearchPane').show();
 										<code>values</code>
 									</a>
 								</td>
-								<td>Returns a forward range to iterate over the <code class="prettyprint lang-d">values</code> of this table.
+								<td>Returns a forward range to iterate over the values of this table.
  The lifetime of this range must not exceed the lifetime of this
- <a href="../../dstats/alloc/StackHash.html"><code class="prettyprint lang-d">StackHash</code></a>.
+ StackHash.
 </td>
 							</tr>
 						</table>
@@ -335,25 +341,23 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto <a href="../../dstats/alloc/StackHash.alloc.html">alloc</a> = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
-auto ss = StackHash!(uint)(5, <a href="../../dstats/alloc/StackHash.alloc.html">alloc</a>);
-foreach(i; 0..5) {
-    ss[i]++;
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../dstats/alloc/StackHash.alloc.html"></span><span class="pln">alloc</span></a><span class="pln"> </span><span class="pun">= <a href="../../dstats/alloc/newRegionAllocator.html"></span><span class="pln">newRegionAllocator</span></a><span class="pun">();
+</span><span class="kwd">auto </span><span class="pln">ss </span><span class="pun">= </span><span class="typ">StackHash</span><span class="pun">!(</span><span class="typ">uint</span><span class="pun">)(</span><span class="lit">5</span><span class="pun">, <a href="../../dstats/alloc/StackHash.alloc.html"></span><span class="pln">alloc</span></a><span class="pun">);
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0</span><span class="pun">..</span><span class="lit">5</span><span class="pun">) {
+    </span><span class="pln">ss</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]++;
 }
-assert(ss[3] == 1);
-</code></pre>
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ss</span><span class="pun">[</span><span class="lit">3</span><span class="pun">] == </span><span class="lit">1</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>Warning</h3>
 <p>This implementation places removed nodes on an internal free list and
- recycles them, since there is no way to delete <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>-allocated data
+ recycles them, since there is no way to delete RegionAllocator-allocated data
  in a non-LIFO order.  Therefore, you may not retain the address of a
- variable stored in a <code class="prettyprint lang-d">StackHash</code> after deleting it from the StachHash.
+ variable stored in a StackHash after deleting it from the StachHash.
  For example, DO NOT do this:
 </p>
-<pre class="code"><code class="prettyprint lang-d">SomeType* myPtr = &amp;(myStackHash["foo"]);
-myStackHash.remove("foo");
-*myPtr = someValue;
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">SomeType</span><span class="pun">* </span><span class="pln">myPtr </span><span class="pun">= &amp;(</span><span class="pln">myStackHash</span><span class="pun">[</span><span class="str">"foo"</span><span class="pun">]);
+</span><span class="pln">myStackHash<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"foo"</span><span class="pun">);
+*</span><span class="pln">myPtr </span><span class="pun">= </span><span class="pln">someValue</span><span class="pun">;</span></code></pre>
 </section>
 
 			</section>

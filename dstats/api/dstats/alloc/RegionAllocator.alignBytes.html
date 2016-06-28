@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,19 +74,19 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.alignBytes</h1>
 			<section>
-				<p>Returns the number of bytes to which an allocation of size <a href="../../dstats/alloc/RegionAllocator.alignBytes.html#nBytes"><code class="prettyprint lang-d">nBytes</code></a> is
+				<p>Returns the number of bytes to which an allocation of size nBytes is
     guaranteed to be aligned.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-static ulong alignBytes(
+							<code class="lang-d">
+<span class="kwd">static </span><span class="typ">ulong</span> <span class="pln">alignBytes</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;ulong nBytes
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">nBytes</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

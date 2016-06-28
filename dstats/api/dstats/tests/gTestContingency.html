@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,23 +75,23 @@ $('#symbolSearchPane').show();
 			<h1>Function gTestContingency</h1>
 			<section>
 				<p>The G or likelihood ratio chi-square test for contingency tables.  Roughly
-the same as Pearson's chi-square test (<a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>), but may be more
+the same as Pearson's chi-square test (chiSquareContingency), but may be more
 accurate in certain situations and less accurate in others.
 </p>
 <section><p>Like Pearson's Chi-square, the G-test is based on asymptotic distributions,
-and is not exact. Usage is is identical to <a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>.
+and is not exact. Usage is is identical to chiSquareContingency.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/GTestRes.html">GTestRes</a> gTestContingency(T...)(
+							<code class="lang-d">
+<a href="../../dstats/tests/GTestRes.html"><span class="typ">GTestRes</span></a> <span class="pln">gTestContingency</span><span class="pun">(</span><span class="pln">T</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T inputData
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">inputData</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -101,7 +100,7 @@ and is not exact. Usage is is identical to <a href="../../dstats/tests/chiSquare
 between the random variables represented by the rows and the columns,
 since the test statistic and P-value are strictly increasing
 and strictly decreasing, respectively, in mutual information.  Therefore, this
-function returns a <a href="../../dstats/tests/GTestRes.html"><code class="prettyprint lang-d">GTestRes</code></a>, which is a subtype of <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> and also gives
+function returns a GTestRes, which is a subtype of TestRes and also gives
 the mutual information for use in information theoretic settings.
 </p>
 </section>

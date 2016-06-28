@@ -6,22 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">cblas</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../cblas.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../cblas/cblas.html" class="selected module">cblas</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../../cblas.html" class=" module">cblas</a>
 							</li>
 						</ul>
 				<noscript>
@@ -47,30 +46,30 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) void cblas_dtbmv(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">cblas_dtbmv</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_ORDER.html">CBLAS_ORDER</a>) order,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_ORDER.html"><span class="pln">CBLAS_ORDER</span></a><span class="pun">)</span> <span class="pln">order</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_UPLO.html">CBLAS_UPLO</a>) Uplo,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_UPLO.html"><span class="pln">CBLAS_UPLO</span></a><span class="pun">)</span> <span class="pln">Uplo</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_TRANSPOSE.html">CBLAS_TRANSPOSE</a>) TransA,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_TRANSPOSE.html"><span class="pln">CBLAS_TRANSPOSE</span></a><span class="pun">)</span> <span class="pln">TransA</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(<a href="../../cblas/cblas/CBLAS_DIAG.html">CBLAS_DIAG</a>) Diag,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_DIAG.html"><span class="pln">CBLAS_DIAG</span></a><span class="pun">)</span> <span class="pln">Diag</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(int) N,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">N</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(int) K,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">K</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(double*) A,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">*</span><span class="pun">)</span> <span class="pln">A</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(int) lda,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* X,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">X</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(int) incX
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">incX</span>
 								<br/>
-) nothrow @nogc;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

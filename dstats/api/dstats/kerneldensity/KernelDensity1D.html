@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -93,7 +92,7 @@ $('#symbolSearchPane').show();
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d">Object</code>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
 							</li>
 						</ul>
@@ -112,7 +111,7 @@ $('#symbolSearchPane').show();
 										<code>cdf</code>
 									</a>
 								</td>
-								<td>Compute the cumulative density, i.e. the integral from -infinity to <a href="../../dstats/kerneldensity/KernelDensity1D.cdf.html#x"><code class="prettyprint lang-d">x</code></a>.
+								<td>Compute the cumulative density, i.e. the integral from -infinity to x.
 </td>
 							</tr>
 							<tr>
@@ -122,7 +121,7 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Compute the cumulative density from the rhs, i.e. the integral from
- <a href="../../dstats/kerneldensity/KernelDensity1D.cdfr.html#x"><code class="prettyprint lang-d">x</code></a> to infinity.
+ x to infinity.
 </td>
 							</tr>
 							<tr>
@@ -140,9 +139,9 @@ $('#symbolSearchPane').show();
 										<code>fromCallable</code>
 									</a>
 								</td>
-								<td>Construct a <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> density estimation object from a callable object.
- R must be a <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#range"><code class="prettyprint lang-d">range</code></a> of numeric types.  C must be a <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a> function,
- delegate, or class or struct with overloaded <a href="../../dstats/kerneldensity/KernelDensity1D.opCall.html"><code class="prettyprint lang-d">opCall</code></a>.  The <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"><code class="prettyprint lang-d">kernel</code></a>
+								<td>Construct a kernel density estimation object from a callable object.
+ R must be a range of numeric types.  C must be a kernel function,
+ delegate, or class or struct with overloaded opCall.  The kernel
  function is assumed to be symmetric about zero, to take its maximum
  value at zero and to be unimodal.
 </td>

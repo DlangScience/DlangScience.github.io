@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,10 +66,10 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">intde</a>
 						<ul class="tree-view">
 							<li>
@@ -297,36 +296,35 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void intdeiini(Real)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">intdeiini</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;size_t lenaw,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">lenaw</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real tiny,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">tiny</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real eps,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">eps</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* aw
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">aw</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto <a href="../../../../scid/ports/intde/intde2/intdeiini.html#aw">aw</a> = new real[8000];
-intdeiini(aw.length, <a href="../../../../scid/ports/intde/intde2/intdeiini.html#tiny">tiny</a>, <a href="../../../../scid/ports/intde/intde2/intdeiini.html#eps">eps</a>, aw.ptr);  // initialization of <a href="../../../../scid/ports/intde/intde2/intdeiini.html#aw">aw</a>
-...
-<a href="../../../../scid/ports/intde/intde2/intdei.html">intdei</a>(f, a, aw.ptr, &amp;i, &amp;err);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../../../scid/ports/intde/intde2/intdeiini.html#aw"></span><span class="pln">aw</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">real</span><span class="pun">[</span><span class="lit">8000</span><span class="pun">];
+</span><span class="pln">intdeiini</span><span class="pun">(</span><span class="pln">aw<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">, <a href="../../../../scid/ports/intde/intde2/intdeiini.html#tiny"></span><span class="pln">tiny</span></a><span class="pun">, <a href="../../../../scid/ports/intde/intde2/intdeiini.html#eps"></span><span class="pln">eps</span></a><span class="pun">, </span><span class="pln">aw<wbr/></span><span class="pun">.</span><span class="pln">ptr</span><span class="pun">);  </span><span class="com">// initialization of aw
+</span><span class="pun">...
+<a href="../../../../scid/ports/intde/intde2/intdei.html"></span><span class="pln">intdei</span></a><span class="pun">(</span><span class="pln">f</span><span class="pun">, </span><span class="pln">a</span><span class="pun">, </span><span class="pln">aw<wbr/></span><span class="pun">.</span><span class="pln">ptr</span><span class="pun">, &amp;</span><span class="pln">i</span><span class="pun">, &amp;</span><span class="pln">err</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="lenaw">lenaw</td><td> length of <a href="../../../../scid/ports/intde/intde2/intdeiini.html#aw"><code class="prettyprint lang-d">aw</code></a></td></tr>
-<tr><td id="tiny">tiny</td><td> minimum value that 1/<a href="../../../../scid/ports/intde/intde2/intdeiini.html#tiny"><code class="prettyprint lang-d">tiny</code></a> does not
+<tr><td id="lenaw">lenaw</td><td> length of aw</td></tr>
+<tr><td id="tiny">tiny</td><td> minimum value that 1/tiny does not
                     overflow</td></tr>
 <tr><td id="eps">eps</td><td> relative error requested</td></tr>
 <tr><td id="aw">aw</td><td> points and weights of the quadrature
-                    formula, <a href="../../../../scid/ports/intde/intde2/intdeiini.html#aw"><code class="prettyprint lang-d">aw</code></a>[0...lenaw-1]</td></tr>
+                    formula, aw[0...lenaw-1]</td></tr>
 <tr><td id="f">f</td><td> integrand f(x)</td></tr>
 <tr><td id="a">a</td><td> lower limit of integration</td></tr>
 <tr><td id="i">i</td><td> approximation to the integral</td></tr>
@@ -336,18 +334,18 @@ intdeiini(aw.length, <a href="../../../../scid/ports/intde/intde2/intdeiini.html
 <section><h3>Remarks</h3>
 <p><pre>
         initial parameters
-            <a href="../../../../scid/ports/intde/intde2/intdeiini.html#lenaw"><code class="prettyprint lang-d">lenaw</code></a> &gt; 1000,
+            lenaw &gt; 1000,
             IEEE double :
-                <a href="../../../../scid/ports/intde/intde2/intdeiini.html#lenaw"><code class="prettyprint lang-d">lenaw</code></a> = 8000;
-                <a href="../../../../scid/ports/intde/intde2/intdeiini.html#tiny"><code class="prettyprint lang-d">tiny</code></a> = 1.0e-307;
+                lenaw = 8000;
+                tiny = 1.0e-307;
         function
             f(x) needs to be analytic over (a,infinity).
         relative error
-            <a href="../../../../scid/ports/intde/intde2/intdeiini.html#eps"><code class="prettyprint lang-d">eps</code></a> is relative error requested excluding
+            eps is relative error requested excluding
             cancellation of significant digits.
-            i.e. <a href="../../../../scid/ports/intde/intde2/intdeiini.html#eps"><code class="prettyprint lang-d">eps</code></a> means : (absolute error) /
+            i.e. eps means : (absolute error) /
                              (integral_a^infinity |f(x)| dx).
-            <a href="../../../../scid/ports/intde/intde2/intdeiini.html#eps"><code class="prettyprint lang-d">eps</code></a> does not mean : (absolute error) / I.
+            eps does not mean : (absolute error) / I.
         error message
             err &gt;= 0 : normal termination.
             err &lt; 0  : abnormal termination.
@@ -358,7 +356,7 @@ intdeiini(aw.length, <a href="../../../../scid/ports/intde/intde2/intdeiini.html
                               you must divide the interval
                               (a,infinity) at this points.
                            2. relative error of f(x) is
-                              greater than <a href="../../../../scid/ports/intde/intde2/intdeiini.html#eps"><code class="prettyprint lang-d">eps</code></a>.
+                              greater than eps.
                            3. f(x) has oscillatory factor
                               and decay of f(x) is very slow
                               as x -&gt; infinity.

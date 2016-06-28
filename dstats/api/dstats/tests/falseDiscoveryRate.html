@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -77,7 +76,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Computes the false discovery rate statistic given a list of
 p-values, according to Benjamini and Hochberg (1995) (independent) or
-Benjamini and Yekutieli (2001) (dependent).  The <a href="../../dstats/tests/Dependency.html"><code class="prettyprint lang-d">Dependency</code></a> parameter
+Benjamini and Yekutieli (2001) (dependent).  The Dependency parameter
 controls whether hypotheses are assumed to be independent, or whether
 the more conservative assumption that they are correlated must be made.
 </p>
@@ -86,16 +85,16 @@ the more conservative assumption that they are correlated must be made.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-float[] falseDiscoveryRate(T)(
+							<code class="lang-d">
+<span class="typ">float</span><span class="pun">[]</span> <span class="pln">falseDiscoveryRate</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T pVals,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">pVals</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Dependency.html">Dependency</a> dep = Dependency.no
+&nbsp;&nbsp;<a href="../../dstats/tests/Dependency.html"><span class="typ">Dependency</span></a> <span class="pln">dep</span> <span class="pun">=</span> <span class="typ">Dependency<wbr/></span><span class="pun">.</span><span class="pln">no</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

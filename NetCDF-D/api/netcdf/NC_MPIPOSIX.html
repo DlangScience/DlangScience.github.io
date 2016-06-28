@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -35,7 +34,7 @@ $('#symbolSearchPane').show();
 			<h1>Enum member NC_MPIPOSIX</h1>
 			<section>
 				<p>Turn on MPI POSIX I/O.
-Use this in mode flags for both <a href="../netcdf/nc_create.html"><code class="prettyprint lang-d">nc_create</code></a>() and <a href="../netcdf/nc_open.html"><code class="prettyprint lang-d">nc_open</code></a>().
+Use this in mode flags for both nc_create() and nc_open().
 </p>
 <section><p>&lt; \deprecated As of libhdf5 1.8.13.
 </p>
@@ -44,8 +43,8 @@ Use this in mode flags for both <a href="../netcdf/nc_create.html"><code class="
 					<section>
 						<h3>Declaration</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-enum NC_MPIPOSIX = 16384;
+							<code class="lang-d">
+<span class="kwd">enum</span> <span class="pln">NC_MPIPOSIX</span> <span class="pun">=</span> <span class="lit">16384</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

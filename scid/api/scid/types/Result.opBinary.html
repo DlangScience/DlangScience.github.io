@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,19 +288,19 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Result.opBinary</h1>
 			<section>
-				<p>Operators for <a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a>-<a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a> arithmetic.
+				<p>Operators for Result-Result arithmetic.
 </p>
-<section><p>Note that these operations also perform <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> calculations, and
-        are thus a bit slower than working directly with the <a href="../../scid/types/Result.value.html"><code class="prettyprint lang-d">value</code></a> itself.
-        It is assumed that the <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> is much smaller than the <a href="../../scid/types/Result.value.html"><code class="prettyprint lang-d">value</code></a>, so
+<section><p>Note that these operations also perform error calculations, and
+        are thus a bit slower than working directly with the value itself.
+        It is assumed that the error is much smaller than the value, so
         terms of order O(&delta;x &delta;y) or O(&delta;x&sup2;) are ignored.
 </p>
 
 <p>        Also note that multiplication and division are only possible when
-        the <a href="../../scid/types/Result.value.html"><code class="prettyprint lang-d">value</code></a> type V and the <a href="../../scid/types/Result.error.html"><code class="prettyprint lang-d">error</code></a> type E are the same (as is the default).
+        the value type V and the error type E are the same (as is the default).
 </p>
 
-<p>        Through the magic of "alias this", <a href="../../scid/types/Result.html"><code class="prettyprint lang-d">Result</code></a>!(V, E) is implicitly
+<p>        Through the magic of "alias this", Result!(V, E) is implicitly
         castable to the type V, and thus supports the same operations as V
         in addition to these.
 </p>
@@ -310,14 +309,14 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a> opBinary(string op)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a> <span class="pln">opBinary</span><span class="pun">(</span><span class="typ">string </span><span class="pln">op</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/types/Result.html">Result</a> rhs
+&nbsp;&nbsp;<a href="../../scid/types/Result.html"><span class="typ">Result</span></a> <span class="pln">rhs</span>
 								<br/>
-) pure nothrow
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow</span>
 								<br/>
-if (op == "+" || op == "-");
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">op </span><span class="pun">== </span><span class="str">"+" </span><span class="pun">|| </span><span class="pln">op </span><span class="pun">== </span><span class="str">"-"</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

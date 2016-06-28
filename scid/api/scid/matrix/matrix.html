@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,62 +288,61 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function matrix</h1>
 			<section>
-				<p>A convenience function that allocates memory for a <code class="prettyprint lang-d">matrix</code> (using the
-GC), optionally sets the values of the <code class="prettyprint lang-d">matrix</code> elements, and returns
-a <a href="../../scid/matrix/MatrixView.html"><code class="prettyprint lang-d">MatrixView</code></a> of the allocated memory.
+				<p>A convenience function that allocates memory for a matrix (using the
+GC), optionally sets the values of the matrix elements, and returns
+a MatrixView of the allocated memory.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!T matrix(T)(
+							<code class="lang-d">
+<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!T <span class="pln">matrix</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;size_t rows,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">rows</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t cols
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">cols</span>
 								<br/>
-) pure;
-								<br/>
-								<br/>
-<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!T matrix(T)(
-								<br/>
-&nbsp;&nbsp;size_t rows,
-								<br/>
-&nbsp;&nbsp;size_t cols,
-								<br/>
-&nbsp;&nbsp;T init
-								<br/>
-) pure;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure</span><span class="pun">;</span>
 								<br/>
 								<br/>
-<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor,tri) matrix(T, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!T <span class="pln">matrix</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;size_t n,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">rows</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T init = T.init
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">cols</span><span class="pun">,</span>
 								<br/>
-) pure
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">init</span>
 								<br/>
-if (stor == Storage.Triangular);
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure</span><span class="pun">;</span>
+								<br/>
+								<br/>
+<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(T,stor,tri) <span class="pln">matrix</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Triangle </span><span class="pln">tri</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">n</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">init</span> <span class="pun">=</span> <span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">init</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure</span>
+								<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">stor </span><span class="pun">== </span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">Triangular</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">// Allocate general dense 3x4 matrix:
-auto denseMatrix = matrix!real(3, 4);
+<pre class="code"><code class="lang-d"><span class="com">// Allocate general dense 3x4 matrix:
+</span><span class="kwd">auto </span><span class="pln">denseMatrix </span><span class="pun">= </span><span class="pln">matrix</span><span class="pun">!</span><span class="typ">real</span><span class="pun">(</span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">);
 
-// Allocate dense 3x2 zero-filled matrix:
-auto denseZeroMatrix = matrix!real(3, 2, 0.0L);
+</span><span class="com">// Allocate dense 3x2 zero-filled matrix:
+</span><span class="kwd">auto </span><span class="pln">denseZeroMatrix </span><span class="pun">= </span><span class="pln">matrix</span><span class="pun">!</span><span class="typ">real</span><span class="pun">(</span><span class="lit">3</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">0.0L</span><span class="pun">);
 
-// Allocate lower triangular 3x3 matrix:
-auto loMatrix = matrix!(real, <a href="../../scid/matrix/Storage.Triangular.html">Storage.Triangular</a>, <a href="../../scid/matrix/Triangle.Lower.html">Triangle.Lower</a>)(3);
+</span><span class="com">// Allocate lower triangular 3x3 matrix:
+</span><span class="kwd">auto </span><span class="pln">loMatrix </span><span class="pun">= </span><span class="pln">matrix</span><span class="pun">!(</span><span class="typ">real</span><span class="pun">, <a href="../../scid/matrix/Storage.Triangular.html"></span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">Triangular</span></a><span class="pun">, <a href="../../scid/matrix/Triangle.Lower.html"></span><span class="typ">Triangle<wbr/></span><span class="pun">.</span><span class="typ">Lower</span></a><span class="pun">)(</span><span class="lit">3</span><span class="pun">);
 
-// Allocate upper triangular 2x2 matrix where the upper
+</span><span class="com">// Allocate upper triangular 2x2 matrix where the upper
 // triangular elements are set to 3.14.
-auto upMatrix = matrix!(real, <a href="../../scid/matrix/Storage.Triangular.html">Storage.Triangular</a>)(2, 3.14L);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">upMatrix </span><span class="pun">= </span><span class="pln">matrix</span><span class="pun">!(</span><span class="typ">real</span><span class="pun">, <a href="../../scid/matrix/Storage.Triangular.html"></span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">Triangular</span></a><span class="pun">)(</span><span class="lit">2</span><span class="pun">, </span><span class="lit">3.14L</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

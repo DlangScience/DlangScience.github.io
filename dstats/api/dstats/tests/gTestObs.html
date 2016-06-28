@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,35 +74,35 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function gTestObs</h1>
 			<section>
-				<p>Given two ranges of observations of jointly distributed variables <a href="../../dstats/tests/gTestObs.html#x"><code class="prettyprint lang-d">x</code></a>, <a href="../../dstats/tests/gTestObs.html#y"><code class="prettyprint lang-d">y</code></a>, tests
-the null hypothesis that values in <a href="../../dstats/tests/gTestObs.html#x"><code class="prettyprint lang-d">x</code></a> are independent of the corresponding
-values in <a href="../../dstats/tests/gTestObs.html#y"><code class="prettyprint lang-d">y</code></a>.  This is done using the Likelihood Ratio G test.  Usage is similar
-to <a href="../../dstats/tests/chiSquareObs.html"><code class="prettyprint lang-d">chiSquareObs</code></a>.  For an otherwise identical test that assumes the data has
-already been tabulated into a contingency table, see <a href="../../dstats/tests/gTestContingency.html"><code class="prettyprint lang-d">gTestContingency</code></a>.
+				<p>Given two ranges of observations of jointly distributed variables x, y, tests
+the null hypothesis that values in x are independent of the corresponding
+values in y.  This is done using the Likelihood Ratio G test.  Usage is similar
+to chiSquareObs.  For an otherwise identical test that assumes the data has
+already been tabulated into a contingency table, see gTestContingency.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/GTestRes.html">GTestRes</a> gTestObs(T, U)(
+							<code class="lang-d">
+<a href="../../dstats/tests/GTestRes.html"><span class="typ">GTestRes</span></a> <span class="pln">gTestObs</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T x,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U y
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">y</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!T &amp;&amp; isInputRange!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This test can be thought of as a test for nonzero mutual information
-between <a href="../../dstats/tests/gTestObs.html#x"><code class="prettyprint lang-d">x</code></a> and <a href="../../dstats/tests/gTestObs.html#y"><code class="prettyprint lang-d">y</code></a>, since the test statistic and P-value are strictly increasing
+between x and y, since the test statistic and P-value are strictly increasing
 and strictly decreasing, respectively, in mutual information.  Therefore, this
-function returns a <a href="../../dstats/tests/GTestRes.html"><code class="prettyprint lang-d">GTestRes</code></a>, which is a subtype of <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> and also gives
+function returns a GTestRes, which is a subtype of TestRes and also gives
 the mutual information for use in information theoretic settings.
 </p>
 </section>

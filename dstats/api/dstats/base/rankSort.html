@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,34 +74,33 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function rankSort</h1>
 			<section>
-				<p>Same as <a href="../../dstats/base/rank.html"><code class="prettyprint lang-d">rank</code></a>(), but also sorts the <a href="../../dstats/base/rankSort.html#input"><code class="prettyprint lang-d">input</code></a> range.
- The array returned will still be identical to that returned by <a href="../../dstats/base/rank.html"><code class="prettyprint lang-d">rank</code></a>(), i.e.
- the <a href="../../dstats/base/rank.html"><code class="prettyprint lang-d">rank</code></a> of each element will correspond to the ranks of the elements in the
- <a href="../../dstats/base/rankSort.html#input"><code class="prettyprint lang-d">input</code></a> array before sorting.
+				<p>Same as rank(), but also sorts the input range.
+ The array returned will still be identical to that returned by rank(), i.e.
+ the rank of each element will correspond to the ranks of the elements in the
+ input array before sorting.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Ret[] rankSort(alias compFun, Ret, T)(
+							<code class="lang-d">
+<span class="typ">Ret</span><span class="pun">[]</span> <span class="pln">rankSort</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">compFun</span><span class="pun">, </span><span class="typ">Ret</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T input,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">input</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Ret[] buf = null
+&nbsp;&nbsp;<span class="typ">Ret</span><span class="pun">[]</span> <span class="pln">buf</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isRandomAccessRange!T &amp;&amp; hasLength!T &amp;&amp; is(typeof(input.front &lt; input.front)));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">input<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">input<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">))</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">uint[] test = [3, 5, 3, 1, 2];
-assert(rankSort(test) == [3.5, 5, 3.5, 1.0, 2.0]);
-assert(test == [1U, 2, 3, 4, 5]);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">uint</span><span class="pun">[] </span><span class="pln">test </span><span class="pun">= [</span><span class="lit">3</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">rankSort</span><span class="pun">(</span><span class="pln">test</span><span class="pun">) == [</span><span class="lit">3.5</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">3.5</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">test </span><span class="pun">== [</span><span class="lit">1U</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">5</span><span class="pun">]);</span></code></pre>
 </section>
 
 			</section>

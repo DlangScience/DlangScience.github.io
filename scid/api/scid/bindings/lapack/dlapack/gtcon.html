@@ -6,19 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">bindings</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">lapack</a>
 						<ul class="tree-view">
 							<li>
@@ -301,32 +300,32 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gtcon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gtcon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char norm,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">norm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* dl,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">dl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* d,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">d</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* du,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">du</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* du2,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">du2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* anorm,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double rcond,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -339,32 +338,32 @@ void gtcon(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gtcon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gtcon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char norm,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">norm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* dl,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">dl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* d,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">d</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* du,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">du</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* du2,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">du2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* anorm,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float rcond,
+&nbsp;&nbsp;<span class="typ">float</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -377,34 +376,34 @@ void gtcon(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gtcon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gtcon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char norm,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">norm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* dl,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">dl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* d,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">d</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* du,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">du</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* du2,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">du2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* anorm,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double rcond,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* work,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -414,7 +413,7 @@ void gtcon(
 				<h2>Function gtcon</h2>
 				<p>Estimates the reciprocal of the condition number of a general
 </p>
-<section><p>tridiagonal matrix, in either the 1-<a href="../../../../scid/bindings/lapack/dlapack/gtcon.html#norm"><code class="prettyprint lang-d">norm</code></a> or the infinity-<a href="../../../../scid/bindings/lapack/dlapack/gtcon.html#norm"><code class="prettyprint lang-d">norm</code></a>,
+<section><p>tridiagonal matrix, in either the 1-norm or the infinity-norm,
 </p>
 
 <p>using the LU factorization computed by SGTTRF.
@@ -424,34 +423,34 @@ void gtcon(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void gtcon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">gtcon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char norm,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">norm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* dl,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">dl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* d,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">d</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* du,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">du</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* du2,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">du2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* anorm,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float rcond,
+&nbsp;&nbsp;<span class="typ">float</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* work,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

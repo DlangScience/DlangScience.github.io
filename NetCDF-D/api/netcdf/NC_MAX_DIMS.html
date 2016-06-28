@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -37,10 +36,10 @@ $('#symbolSearchPane').show();
 				<p>Maximum for classic library.
 </p>
 <section><p>In the classic netCDF model there are maximum values for the number of
-dimensions in the file (\ref <code class="prettyprint lang-d">NC_MAX_DIMS</code>), the number of global or per
-variable attributes (\ref <a href="../netcdf/NC_MAX_ATTRS.html"><code class="prettyprint lang-d">NC_MAX_ATTRS</code></a>), the number of variables in
-the file (\ref <a href="../netcdf/NC_MAX_VARS.html"><code class="prettyprint lang-d">NC_MAX_VARS</code></a>), and the length of a name (\ref
-<a href="../netcdf/NC_MAX_NAME.html"><code class="prettyprint lang-d">NC_MAX_NAME</code></a>).
+dimensions in the file (\ref NC_MAX_DIMS), the number of global or per
+variable attributes (\ref NC_MAX_ATTRS), the number of variables in
+the file (\ref NC_MAX_VARS), and the length of a name (\ref
+NC_MAX_NAME).
 </p>
 
 <p>These maximums are enforced by the interface, to facilitate writing
@@ -49,10 +48,10 @@ to these sizes internally.
 </p>
 
 <p>These maximums are not used for netCDF-4/HDF5 files unless they were
-created with the ::<a href="../netcdf/NC_CLASSIC_MODEL.html"><code class="prettyprint lang-d">NC_CLASSIC_MODEL</code></a> flag.
+created with the ::NC_CLASSIC_MODEL flag.
 </p>
 
-<p>As a rule, <a href="../netcdf/NC_MAX_VAR_DIMS.html"><code class="prettyprint lang-d">NC_MAX_VAR_DIMS</code></a> &lt;= <code class="prettyprint lang-d">NC_MAX_DIMS</code>.
+<p>As a rule, NC_MAX_VAR_DIMS &lt;= NC_MAX_DIMS.
 </p>
 
 <p>@{
@@ -62,8 +61,8 @@ created with the ::<a href="../netcdf/NC_CLASSIC_MODEL.html"><code class="pretty
 					<section>
 						<h3>Declaration</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-enum NC_MAX_DIMS = 1024;
+							<code class="lang-d">
+<span class="kwd">enum</span> <span class="pln">NC_MAX_DIMS</span> <span class="pun">=</span> <span class="lit">1024</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

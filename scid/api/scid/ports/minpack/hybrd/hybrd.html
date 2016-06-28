@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,7 +66,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -89,7 +88,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">minpack</a>
 						<ul class="tree-view">
 							<li>
@@ -289,8 +288,8 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function hybrd</h1>
 			<section>
-				<p>The purpose of <code class="prettyprint lang-d">hybrd</code> is to find a zero of a system of
-    <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> nonlinear functions in <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> variables by a modification
+				<p>The purpose of hybrd is to find a zero of a system of
+    n nonlinear functions in n variables by a modification
     of the Powell Hybrid Method. The user must provide a
     function which calculates the functions. The Jacobian is
     then calculated by a forward-difference approximation.
@@ -300,58 +299,58 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void hybrd(Real, Func)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">hybrd</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Func fcn,
+&nbsp;&nbsp;<span class="typ">Func</span> <span class="pln">fcn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t n,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* fvec,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">fvec</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real xtol,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">xtol</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint maxfev,
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">maxfev</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t ml,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">ml</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t mu,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">mu</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsfcn,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsfcn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* diag,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">diag</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int mode,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">mode</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real factor,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">factor</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int nprint,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">nprint</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out int info,
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">int</span> <span class="pln">info</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out uint nfev,
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">uint</span> <span class="pln">nfev</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* fjac,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">fjac</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t ldfjac,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">ldfjac</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* r,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">r</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t lr,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">lr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* qtf,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">qtf</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* wa1,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">wa1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* wa2,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">wa2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* wa3,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">wa3</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* wa4
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">wa4</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -359,95 +358,95 @@ void hybrd(Real, Func)(
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="fcn">fcn</td><td> the user-supplied function or delegate which
             calculates the functions. The function referenced
-            by <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fcn"><code class="prettyprint lang-d">fcn</code></a> must be declared
+            by fcn must be declared
             in an external statement in the user calling
             program, and should be written as follows.
             ---
-            void foo (size_t <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>,real* <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a>, real* <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fvec"><code class="prettyprint lang-d">fvec</code></a>, int iflag)
+            void foo (size_t n,real* x, real* fvec, int iflag)
             {
-                // calculate the functions at <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a> and
-                // return this vector in <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fvec"><code class="prettyprint lang-d">fvec</code></a>.
+                // calculate the functions at x and
+                // return this vector in fvec.
             }
             ---
             The value of iflag should not be changed by the function unless
-            the user wants to terminate execution of <code class="prettyprint lang-d">hybrd</code>.
+            the user wants to terminate execution of hybrd.
             In this case set iflag to a negative integer.
 </td></tr>
 <tr><td id="n">n</td><td> a positive integer input variable set to the number
             of functions and variables.
 </td></tr>
-<tr><td id="x">x</td><td> an array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>. On input <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a> must contain
-            an initial estimate of the solution vector. On output <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a>
+<tr><td id="x">x</td><td> an array of length n. On input x must contain
+            an initial estimate of the solution vector. On output x
             contains the final estimate of the solution vector.
 </td></tr>
-<tr><td id="fvec">fvec</td><td> an output array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> which contains
-            the functions evaluated at the output <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a>.
+<tr><td id="fvec">fvec</td><td> an output array of length n which contains
+            the functions evaluated at the output x.
 </td></tr>
 <tr><td id="xtol">xtol</td><td> a nonnegative input variable. Termination
             occurs when the relative error between two consecutive
-            iterates is at most <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#xtol"><code class="prettyprint lang-d">xtol</code></a>.
+            iterates is at most xtol.
 </td></tr>
 <tr><td id="maxfev">maxfev</td><td> a positive integer input variable. Termination
-            occurs when the number of calls to <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fcn"><code class="prettyprint lang-d">fcn</code></a> is at least <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#maxfev"><code class="prettyprint lang-d">maxfev</code></a>
+            occurs when the number of calls to fcn is at least maxfev
             by the end of an iteration.
 </td></tr>
 <tr><td id="ml">ml</td><td> a nonnegative integer input variable which specifies
             the number of subdiagonals within the band of the
             jacobian matrix. If the Jacobian is not banded, set
-            <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#ml"><code class="prettyprint lang-d">ml</code></a> to at least <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> - 1.
+            ml to at least n - 1.
 </td></tr>
 <tr><td id="mu">mu</td><td> a nonnegative integer input variable which specifies
             the number of superdiagonals within the band of the
             jacobian matrix. If the Jacobian is not banded, set
-            <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#mu"><code class="prettyprint lang-d">mu</code></a> to at least <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> - 1.
+            mu to at least n - 1.
 </td></tr>
 <tr><td id="epsfcn">epsfcn</td><td> an input variable used in determining a suitable
             step length for the forward-difference approximation. This
             approximation assumes that the relative errors in the
-            functions are of the order of <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#epsfcn"><code class="prettyprint lang-d">epsfcn</code></a>. If <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#epsfcn"><code class="prettyprint lang-d">epsfcn</code></a> is less
+            functions are of the order of epsfcn. If epsfcn is less
             than the machine precision, it is assumed that the relative
             errors in the functions are of the order of the machine
             precision.
 </td></tr>
-<tr><td id="diag">diag</td><td> an array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>. If <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#mode"><code class="prettyprint lang-d">mode</code></a> = 1 (see
-            below), <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#diag"><code class="prettyprint lang-d">diag</code></a> is internally set. If <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#mode"><code class="prettyprint lang-d">mode</code></a> = 2, <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#diag"><code class="prettyprint lang-d">diag</code></a>
+<tr><td id="diag">diag</td><td> an array of length n. If mode = 1 (see
+            below), diag is internally set. If mode = 2, diag
             must contain positive entries that serve as
             multiplicative scale factors for the variables.
 </td></tr>
-<tr><td id="mode">mode</td><td> an integer input variable. If <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#mode"><code class="prettyprint lang-d">mode</code></a> = 1, the
-            variables will be scaled internally. If <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#mode"><code class="prettyprint lang-d">mode</code></a> = 2,
-            the scaling is specified by the input <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#diag"><code class="prettyprint lang-d">diag</code></a>. Other
-            values of <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#mode"><code class="prettyprint lang-d">mode</code></a> are equivalent to <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#mode"><code class="prettyprint lang-d">mode</code></a> = 1.
+<tr><td id="mode">mode</td><td> an integer input variable. If mode = 1, the
+            variables will be scaled internally. If mode = 2,
+            the scaling is specified by the input diag. Other
+            values of mode are equivalent to mode = 1.
 </td></tr>
 <tr><td id="factor">factor</td><td> a positive input variable used in determining the
             initial step bound. This bound is set to the product of
-            <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#factor"><code class="prettyprint lang-d">factor</code></a> and the Euclidean norm of <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#diag"><code class="prettyprint lang-d">diag</code></a>*<a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a> if nonzero, or else
-            to <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#factor"><code class="prettyprint lang-d">factor</code></a> itself. In most cases <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#factor"><code class="prettyprint lang-d">factor</code></a> should lie in the
+            factor and the Euclidean norm of diag*x if nonzero, or else
+            to factor itself. In most cases factor should lie in the
             interval (.1,100.). 100. is a generally recommended value.
 </td></tr>
 <tr><td id="nprint">nprint</td><td> an integer input variable that enables controlled
             printing of iterates if it is positive. In this case,
-            <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fcn"><code class="prettyprint lang-d">fcn</code></a> is called with iflag = 0 at the beginning of the first
-            iteration and every <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#nprint"><code class="prettyprint lang-d">nprint</code></a> iterations thereafter and
-            immediately prior to return, with <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a> and <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fvec"><code class="prettyprint lang-d">fvec</code></a> available
-            for printing. If <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#nprint"><code class="prettyprint lang-d">nprint</code></a> is not positive, no special calls
-            of <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fcn"><code class="prettyprint lang-d">fcn</code></a> with iflag = 0 are made.
+            fcn is called with iflag = 0 at the beginning of the first
+            iteration and every nprint iterations thereafter and
+            immediately prior to return, with x and fvec available
+            for printing. If nprint is not positive, no special calls
+            of fcn with iflag = 0 are made.
 </td></tr>
 <tr><td id="info">info</td><td> an integer output variable. If the user has
-            terminated execution, <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#info"><code class="prettyprint lang-d">info</code></a> is set to the (negative)
-            value of iflag. See description of <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fcn"><code class="prettyprint lang-d">fcn</code></a>. Otherwise,
-            <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#info"><code class="prettyprint lang-d">info</code></a> is set as follows.
+            terminated execution, info is set to the (negative)
+            value of iflag. See description of fcn. Otherwise,
+            info is set as follows.
             ---
             0:  improper input parameters.
 
             1:  relative error between two consecutive iterates
-                is at most <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#xtol"><code class="prettyprint lang-d">xtol</code></a>.
+                is at most xtol.
 
-            2:  number of calls to <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fcn"><code class="prettyprint lang-d">fcn</code></a> has reached or exceeded
-                <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#maxfev"><code class="prettyprint lang-d">maxfev</code></a>.
+            2:  number of calls to fcn has reached or exceeded
+                maxfev.
 
-            3:  <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#xtol"><code class="prettyprint lang-d">xtol</code></a> is too small. no further improvement in
-                the approximate solution <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#x"><code class="prettyprint lang-d">x</code></a> is possible.
+            3:  xtol is too small. no further improvement in
+                the approximate solution x is possible.
 
             4:  iteration is not making good progress, as
                 measured by the improvement from the last
@@ -459,29 +458,29 @@ void hybrd(Real, Func)(
             ---
 </td></tr>
 <tr><td id="nfev">nfev</td><td> an integer output variable set to the number of
-            calls to <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fcn"><code class="prettyprint lang-d">fcn</code></a>.
+            calls to fcn.
 </td></tr>
-<tr><td id="fjac">fjac</td><td> an output <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> by <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> array which contains the
+<tr><td id="fjac">fjac</td><td> an output n by n array which contains the
             orthogonal matrix Q produced by the QR factorization
             of the final approximate Jacobian.
 </td></tr>
-<tr><td id="ldfjac">ldfjac</td><td> a positive integer input variable not less than <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>
-            which specifies the leading dimension of the array <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fjac"><code class="prettyprint lang-d">fjac</code></a>.
+<tr><td id="ldfjac">ldfjac</td><td> a positive integer input variable not less than n
+            which specifies the leading dimension of the array fjac.
 </td></tr>
-<tr><td id="r">r</td><td> an output array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#lr"><code class="prettyprint lang-d">lr</code></a> which contains the
+<tr><td id="r">r</td><td> an output array of length lr which contains the
             upper triangular matrix produced by the QR factorization
             of the final approximate Jacobian, stored rowwise.
 </td></tr>
 <tr><td id="lr">lr</td><td> a positive integer input variable not less than
-            (<a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>*(<a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>+1))/2.
+            (n*(n+1))/2.
 </td></tr>
-<tr><td id="qtf">qtf</td><td> an output array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a> which contains
-            the vector (Q transpose)*<a href="../../../../scid/ports/minpack/hybrd/hybrd.html#fvec"><code class="prettyprint lang-d">fvec</code></a>.
+<tr><td id="qtf">qtf</td><td> an output array of length n which contains
+            the vector (Q transpose)*fvec.
 </td></tr>
-<tr><td id="wa1">wa1</td><td> work array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>.</td></tr>
-<tr><td id="wa2">wa2</td><td> work array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>.</td></tr>
-<tr><td id="wa3">wa3</td><td> work array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>.</td></tr>
-<tr><td id="wa4">wa4</td><td> work array of length <a href="../../../../scid/ports/minpack/hybrd/hybrd.html#n"><code class="prettyprint lang-d">n</code></a>.</td></tr>
+<tr><td id="wa1">wa1</td><td> work array of length n.</td></tr>
+<tr><td id="wa2">wa2</td><td> work array of length n.</td></tr>
+<tr><td id="wa3">wa3</td><td> work array of length n.</td></tr>
+<tr><td id="wa4">wa4</td><td> work array of length n.</td></tr>
 </table>
 </section>
 

@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -297,25 +296,25 @@ $('#symbolSearchPane').show();
     the fastest way to compute a derivative.  However, it is also
     the least accurate method, and should only be used if the
     function is very expensive to compute <i>and</i> you have
-    already calculated <a href="../../scid/calculus/diff2.html#f"><code class="prettyprint lang-d">f</code></a>(<a href="../../scid/calculus/diff2.html#x"><code class="prettyprint lang-d">x</code></a>).
+    already calculated <code class="lang-d"><a href="../../scid/calculus/diff2.html#f"><span class="pln">f</span></a><span class="pun">(<a href="../../scid/calculus/diff2.html#x"></span><span class="pln">x</span></a><span class="pun">)</span></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-real diff2(Func)(
+							<code class="lang-d">
+<span class="typ">real</span> <span class="pln">diff2</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real x,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real fx,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">fx</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -323,17 +322,17 @@ real diff2(Func)(
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td> The function to differentiate.</td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.</td></tr>
-<tr><td id="fx">fx</td><td> The function value at <a href="../../scid/calculus/diff2.html#x"><code class="prettyprint lang-d">x</code></a>, i.e. <a href="../../scid/calculus/diff2.html#f"><code class="prettyprint lang-d">f</code></a>(<a href="../../scid/calculus/diff2.html#x"><code class="prettyprint lang-d">x</code></a>)</td></tr>
-<tr><td id="scale">scale</td><td> A characteristic <a href="../../scid/calculus/diff2.html#scale"><code class="prettyprint lang-d">scale</code></a> for <a href="../../scid/calculus/diff2.html#f"><code class="prettyprint lang-d">f</code></a>.  When this
+<tr><td id="fx">fx</td><td> The function value at <code class="lang-d"><a href="../../scid/calculus/diff2.html#x"><span class="pln">x</span></a></code>, i.e. <code class="lang-d"><a href="../../scid/calculus/diff2.html#f"><span class="pln">f</span></a><span class="pun">(<a href="../../scid/calculus/diff2.html#x"></span><span class="pln">x</span></a><span class="pun">)</span></code></td></tr>
+<tr><td id="scale">scale</td><td> A characteristic scale for <code class="lang-d"><a href="../../scid/calculus/diff2.html#f"><span class="pln">f</span></a></code>.  When this
             is positive, the forward-difference formula
             is used, and when it is negative, the
             backward-difference formula is used.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>An approximation to the derivative of <a href="../../scid/calculus/diff2.html#f"><code class="prettyprint lang-d">f</code></a> at the point
-        <a href="../../scid/calculus/diff2.html#x"><code class="prettyprint lang-d">x</code></a>.  The relative error in the result is <i>at best</i>
-        on the order of sqrt(real.epsilon).
+<p>An approximation to the derivative of <code class="lang-d"><a href="../../scid/calculus/diff2.html#f"><span class="pln">f</span></a></code> at the point
+        <code class="lang-d"><a href="../../scid/calculus/diff2.html#x"><span class="pln">x</span></a></code>.  The relative error in the result is <i>at best</i>
+        on the order of <code class="lang-d"><span class="pln">sqrt</span><span class="pun">(</span><span class="typ">real<wbr/></span><span class="pun">.</span><span class="pln">epsilon</span><span class="pun">)</span></code>.
         Usually it is much higher.
 </p>
 </section>

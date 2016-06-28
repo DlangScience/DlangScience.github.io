@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,9 +74,16 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct PolyFitRes</h1>
 			<section>
-				<p>Struct returned by <a href="../../dstats/regress/polyFit.html"><code class="prettyprint lang-d">polyFit</code></a>.
+				<p>Struct returned by polyFit.
 </p>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">PolyFitRes</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Fields</h3>
 						<table>
@@ -91,7 +97,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/PolyFitRes.regressRes.html" class="public"><code>regressRes</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/regress/RegressRes.html">RegressRes</a></code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/regress/RegressRes.html"><span class="typ">RegressRes</span></a></code></td>
 								<td>The rest of the results.  This is alias this'd.
 </td>
 							</tr>
@@ -99,8 +105,8 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/PolyFitRes.X.html" class="public"><code>X</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T</code></td>
-								<td>The array of <a href="../../dstats/regress/PowMap.html"><code class="prettyprint lang-d">PowMap</code></a> ranges created by <a href="../../dstats/regress/polyFit.html"><code class="prettyprint lang-d">polyFit</code></a>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td>
+								<td>The array of PowMap ranges created by polyFit.
 </td>
 							</tr>
 						</table>

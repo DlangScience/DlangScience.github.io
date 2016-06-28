@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,7 +66,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -132,7 +131,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">quadpack</a>
 						<ul class="tree-view">
 							<li>
@@ -294,56 +293,56 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void qawoe(Real, Func)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">qawoe</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Func f,
+&nbsp;&nbsp;<span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real b,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real omega,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">omega</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int integr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">integr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsabs,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsabs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsrel,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsrel</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int limit,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">limit</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int icall,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">icall</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int maxp1,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">maxp1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out Real result,
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">Real</span> <span class="pln">result</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out Real abserr,
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">Real</span> <span class="pln">abserr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out int neval,
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">int</span> <span class="pln">neval</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out int ier,
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">int</span> <span class="pln">ier</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out int last,
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">int</span> <span class="pln">last</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* alist_,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">alist_</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* blist_,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">blist_</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* rlist_,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">rlist_</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* elist_,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">elist_</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iord_,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iord_</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* nnlog_,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">nnlog_</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int momcom,
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">momcom</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* chebmo_
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">chebmo_</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

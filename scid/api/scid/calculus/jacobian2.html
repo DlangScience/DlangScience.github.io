@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -293,31 +292,31 @@ $('#symbolSearchPane').show();
     methods, also known as 2-point formulas.
 </p>
 <section><p>This is less accurate than the central-difference method
-    used in the <a href="../../scid/calculus/jacobian.html"><code class="prettyprint lang-d">jacobian</code></a>() function, but requires only half
+    used in the <code class="lang-d"><a href="../../scid/calculus/jacobian.html"><span class="pln">jacobian</span></a><span class="pun">()</span></code> function, but requires only half
     as many function evaluations. The relative accuracy is,
-    at best, on the order of sqrt(real.epsilon).
+    at best, on the order of <code class="lang-d"><span class="pln">sqrt</span><span class="pun">(</span><span class="typ">real<wbr/></span><span class="pun">.</span><span class="pln">epsilon</span><span class="pun">)</span></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!Real jacobian2(Real, Func)(
+							<code class="lang-d">
+<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!Real <span class="pln">jacobian2</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] fx = null,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">fx</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -326,33 +325,32 @@ $('#symbolSearchPane').show();
 <tr><td id="f">f</td><td> The set of functions. This is typically a function or delegate
             which takes a vector as input and returns a vector. If the
             function takes a second vector parameter, this is assumed to
-            be a <a href="../../scid/calculus/jacobian2.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the return value, and will be used as such.
+            be a buffer for the return value, and will be used as such.
 </td></tr>
-<tr><td id="m">m</td><td> The number of functions in <a href="../../scid/calculus/jacobian2.html#f"><code class="prettyprint lang-d">f</code></a>.
+<tr><td id="m">m</td><td> The number of functions in <code class="lang-d"><a href="../../scid/calculus/jacobian2.html#f"><span class="pln">f</span></a></code>.
 </td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.
 </td></tr>
-<tr><td id="scale">scale</td><td> abs(<a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a>) is the characteristic <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> of the
-            function, and the sign of <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> determines which
-            differentiation method is used. If <a href="../../scid/calculus/jacobian2.html#scale"><code class="prettyprint lang-d">scale</code></a> is
+<tr><td id="scale">scale</td><td> <code class="lang-d"><span class="pln">abs</span><span class="pun">(<a href="../../scid/calculus/jacobian2.html#scale"></span><span class="pln">scale</span></a><span class="pun">)</span></code> is the characteristic scale of the
+            function, and the sign of scale determines which
+            differentiation method is used. If <code class="lang-d"><a href="../../scid/calculus/jacobian2.html#scale"><span class="pln">scale</span></a></code> is
             negative, the backward difference method is used, and
             if it is positive, forward differences are used.
             (optional)
 </td></tr>
-<tr><td id="fx">fx</td><td> The result of evaluating the function at the point <a href="../../scid/calculus/jacobian2.html#x"><code class="prettyprint lang-d">x</code></a>.
+<tr><td id="fx">fx</td><td> The result of evaluating the function at the point <code class="lang-d"><a href="../../scid/calculus/jacobian2.html#x"><span class="pln">x</span></a></code>.
             Providing this saves one function evaluation if you
             for some reason have already calculated the value. (optional)
 </td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/jacobian2.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least <i><a href="../../scid/calculus/jacobian2.html#m"><code class="prettyprint lang-d">m</code></a></i>*<i>n</i>, for storing the calculated
+<tr><td id="buffer">buffer</td><td> A buffer of length at least <i>m</i>*<i>n</i>, for storing the calculated
             Jacobian matrix. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">// Continuing with the example for the <a href="../../scid/calculus/jacobian.html">jacobian</a>() function,
+<pre class="code"><code class="lang-d"><span class="com">// Continuing with the example for the jacobian() function,
 // we make it even faster by using a 2-point formula.
-auto gp = g(p);
-auto jFastest = jacobian2(&amp;g, p, 1.0, gp, <a href="../../scid/calculus/jacobian2.html#buffer">buffer</a>, workspace);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">gp </span><span class="pun">= </span><span class="pln">g</span><span class="pun">(</span><span class="pln">p</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">jFastest </span><span class="pun">= </span><span class="pln">jacobian2</span><span class="pun">(&amp;</span><span class="pln">g</span><span class="pun">, </span><span class="pln">p</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">, </span><span class="pln">gp</span><span class="pun">, <a href="../../scid/calculus/jacobian2.html#buffer"></span><span class="pln">buffer</span></a><span class="pun">, </span><span class="pln">workspace</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

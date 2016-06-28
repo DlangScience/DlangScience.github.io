@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,7 +74,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Class Loess1D</h1>
 			<section>
-				<p>This class is returned from the <a href="../../dstats/regress/loess1D.html"><code class="prettyprint lang-d">loess1D</code></a> function and holds the state of a
+				<p>This class is returned from the loess1D function and holds the state of a
 loess regression with one predictor variable.
 </p>
 
@@ -83,7 +82,7 @@ loess regression with one predictor variable.
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d">Object</code>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
 							</li>
 						</ul>
@@ -102,8 +101,8 @@ loess regression with one predictor variable.
 									<a href="../../dstats/regress/Loess1D.degree.html" class="public property"><code>degree</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">int</code></td>
-								<td>The polynomial <code class="prettyprint lang-d">degree</code> for the local regression.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">int</span></code></td>
+								<td>The polynomial degree for the local regression.
 </td>
 							</tr>
 							<tr>
@@ -111,8 +110,8 @@ loess regression with one predictor variable.
 									<a href="../../dstats/regress/Loess1D.x.html" class="public property"><code>x</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">const(double)[]</code></td>
-								<td>The <code class="prettyprint lang-d">x</code> values provided on object creation.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">[]</span></code></td>
+								<td>The x values provided on object creation.
 </td>
 							</tr>
 							<tr>
@@ -120,8 +119,8 @@ loess regression with one predictor variable.
 									<a href="../../dstats/regress/Loess1D.y.html" class="public property"><code>y</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">const(double)[]</code></td>
-								<td>The <code class="prettyprint lang-d">y</code> values provided on object creation.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">[]</span></code></td>
+								<td>The y values provided on object creation.
 </td>
 							</tr>
 						</table>
@@ -140,8 +139,8 @@ loess regression with one predictor variable.
 										<code>computeRobustWeights</code>
 									</a>
 								</td>
-								<td>Compute the weights for robust loess, for all <a href="../../dstats/regress/Loess1D.computeRobustWeights.html#robustness"><code class="prettyprint lang-d">robustness</code></a> levels &lt;= the
-    <a href="../../dstats/regress/Loess1D.computeRobustWeights.html#robustness"><code class="prettyprint lang-d">robustness</code></a> parameter.  This computation is embarrassingly parallel, so if a
+								<td>Compute the weights for robust loess, for all robustness levels &lt;= the
+    robustness parameter.  This computation is embarrassingly parallel, so if a
     TaskPool is provided it will be parallelized.
 </td>
 							</tr>
@@ -151,7 +150,7 @@ loess regression with one predictor variable.
 										<code>predict</code>
 									</a>
 								</td>
-								<td>Predict the value of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> when <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> == <a href="../../dstats/regress/Loess1D.predict.html#point"><code class="prettyprint lang-d">point</code></a>, using <a href="../../dstats/regress/Loess1D.predict.html#robustness"><code class="prettyprint lang-d">robustness</code></a> iterations
+								<td>Predict the value of y when x == point, using robustness iterations
     of the biweight procedure outlined in the reference to make the
     estimates more robust.
 </td>
@@ -162,8 +161,8 @@ loess regression with one predictor variable.
 										<code>predictions</code>
 									</a>
 								</td>
-								<td>Obtain smoothed <code class="prettyprint lang-d">predictions</code> of <a href="../../dstats/regress/Loess1D.y.html"><code class="prettyprint lang-d">y</code></a> at the values of <a href="../../dstats/regress/Loess1D.x.html"><code class="prettyprint lang-d">x</code></a> provided on creation
-    of this object, for the given level of <a href="../../dstats/regress/Loess1D.predictions.html#robustness"><code class="prettyprint lang-d">robustness</code></a>.  Evaluating
+								<td>Obtain smoothed predictions of y at the values of x provided on creation
+    of this object, for the given level of robustness.  Evaluating
     these is computationally expensive and may be parallelized by
     providing a TaskPool object.
 </td>

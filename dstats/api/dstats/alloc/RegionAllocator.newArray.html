@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,35 +74,34 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.newArray</h1>
 			<section>
-				<p>Allocates an <a href="../../dstats/alloc/RegionAllocator.array.html"><code class="prettyprint lang-d">array</code></a> of type T.  T may be a multidimensional
-    <a href="../../dstats/alloc/RegionAllocator.array.html"><code class="prettyprint lang-d">array</code></a>.  In this case <a href="../../dstats/alloc/RegionAllocator.newArray.html#sizes"><code class="prettyprint lang-d">sizes</code></a> may be specified for any number of dimensions
-    from 1 to the number in T.
+				<p>Allocates an array of type <code class="lang-d"><span class="pln">T</span></code>.  <code class="lang-d"><span class="pln">T</span></code> may be a multidimensional
+    array.  In this case sizes may be specified for any number of dimensions
+    from 1 to the number in <code class="lang-d"><span class="pln">T</span></code>.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-auto newArray(T, I...)(
+							<code class="lang-d">
+<span class="kwd">auto</span> <span class="pln">newArray</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">I</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;I sizes
+&nbsp;&nbsp;<span class="pln">I</span> <span class="pln">sizes</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (allSatisfy!(isIntegral, I));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">isIntegral</span><span class="pun">, </span><span class="pln">I</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
-double[] arr = alloc.newArray!(double[])(100);
-assert(arr.length == 100);
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">alloc </span><span class="pun">= <a href="../../dstats/alloc/newRegionAllocator.html"></span><span class="pln">newRegionAllocator</span></a><span class="pun">();
+</span><span class="typ">double</span><span class="pun">[] </span><span class="pln">arr </span><span class="pun">= </span><span class="pln">alloc<wbr/></span><span class="pun">.</span><span class="pln">newArray</span><span class="pun">!(</span><span class="typ">double</span><span class="pun">[])(</span><span class="lit">100</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">arr<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">100</span><span class="pun">);
 
-double[][] matrix = alloc.newArray!(double[][])(42, 31);
-assert(matrix.length == 42);
-assert(matrix[0].length == 31);
-</code></pre>
+</span><span class="typ">double</span><span class="pun">[][] </span><span class="pln">matrix </span><span class="pun">= </span><span class="pln">alloc<wbr/></span><span class="pun">.</span><span class="pln">newArray</span><span class="pun">!(</span><span class="typ">double</span><span class="pun">[][])(</span><span class="lit">42</span><span class="pun">, </span><span class="lit">31</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">42</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">matrix</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">31</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

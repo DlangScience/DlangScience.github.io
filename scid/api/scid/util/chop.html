@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -296,24 +295,23 @@ $('#symbolSearchPane').show();
 				<h2>Function chop</h2>
 				<p>Replaces real numbers that are close to zero by exactly zero.
 </p>
-<section><pre class="code"><code class="prettyprint lang-d">assert (chop(1.0) == 1.0);
-assert (chop(1e-20) == 0.0);
-</code></pre>
+<section><pre class="code"><code class="lang-d"><span class="kwd">assert </span><span class="pun">(</span><span class="pln">chop</span><span class="pun">(</span><span class="lit">1.0</span><span class="pun">) == </span><span class="lit">1.0</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">chop</span><span class="pun">(</span><span class="lit">1e-20</span><span class="pun">) == </span><span class="lit">0.0</span><span class="pun">);</span></code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Real chop(Real)(
+							<code class="lang-d">
+<span class="typ">Real</span> <span class="pln">chop</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Real x,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real threshold = 1e-10L
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">threshold</span> <span class="pun">=</span> <span class="lit">1e-10L</span>
 								<br/>
-) pure nothrow
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow</span>
 								<br/>
-if (isFloatingPoint!Real);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="typ">Real</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -322,33 +320,32 @@ if (isFloatingPoint!Real);
 			<section>
 				<h2>Function chop</h2>
 				<p>Replaces all numbers in the given array that are close to zero
-    by exactly zero. To <a href="../../scid/util/chop.html"><code class="prettyprint lang-d">chop</code></a> the array in-place, pass the same array
-    as both <a href="../../scid/util/chop.html#x"><code class="prettyprint lang-d">x</code></a> and <a href="../../scid/util/chop.html#buffer"><code class="prettyprint lang-d">buffer</code></a>.
+    by exactly zero. To chop the array in-place, pass the same array
+    as both x and buffer.
 </p>
-<section><pre class="code"><code class="prettyprint lang-d">double[] a = [1.0, 1e-20, 2.0];
-double[] <a href="../../scid/util/chop.html#x">x</a> = [1.0, 0.0, 2.0];
-auto b = <a href="../../scid/util/chop.html">chop</a>(a);
-assert (b == <a href="../../scid/util/chop.html#x">x</a>);
-<a href="../../scid/util/chop.html">chop</a>(a, 1e-12L, a);
-assert (a == <a href="../../scid/util/chop.html#x">x</a>);
-</code></pre>
+<section><pre class="code"><code class="lang-d"><span class="typ">double</span><span class="pun">[] </span><span class="pln">a </span><span class="pun">= [</span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">1e-20</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">];
+</span><span class="typ">double</span><span class="pun">[] <a href="../../scid/util/chop.html#x"></span><span class="pln">x</span></a><span class="pln"> </span><span class="pun">= [</span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">0.0</span><span class="pun">, </span><span class="lit">2.0</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">b </span><span class="pun">= </span><span class="pln">chop</span><span class="pun">(</span><span class="pln">a</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">b </span><span class="pun">== <a href="../../scid/util/chop.html#x"></span><span class="pln">x</span></a><span class="pun">);
+</span><span class="pln">chop</span><span class="pun">(</span><span class="pln">a</span><span class="pun">, </span><span class="lit">1e-12L</span><span class="pun">, </span><span class="pln">a</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">a </span><span class="pun">== <a href="../../scid/util/chop.html#x"></span><span class="pln">x</span></a><span class="pun">);</span></code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Real[] chop(Real)(
+							<code class="lang-d">
+<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">chop</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Real[] x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real threshold = 1e-10L,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">threshold</span> <span class="pun">=</span> <span class="lit">1e-10L</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-) nothrow
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow</span>
 								<br/>
-if (isFloatingPoint!Real);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="typ">Real</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

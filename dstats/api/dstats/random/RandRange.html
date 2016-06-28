@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -77,6 +76,13 @@ $('#symbolSearchPane').show();
 			<section>
 				<p></p>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">RandRange</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">randFun</span><span class="pun">, </span><span class="pln">T</span><span class="pun">...)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Constructors</h3>
 						<table>
@@ -108,21 +114,21 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/random/RandRange.args.html" class="public"><code>args</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/random/RandRange.frontElem.html" class="public"><code>frontElem</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(randFun(args))</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">randFun</span><span class="pun">(</span><span class="pln">args</span><span class="pun">))</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/random/RandRange.normData.html" class="public"><code>normData</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -141,7 +147,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/random/RandRange.front.html" class="public property"><code>front</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(randFun(args))</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">randFun</span><span class="pun">(</span><span class="pln">args</span><span class="pun">))</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -149,7 +155,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/random/RandRange.save.html" class="public property"><code>save</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(this)</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td>
 								<td></td>
 							</tr>
 						</table>

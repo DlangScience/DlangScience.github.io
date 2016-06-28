@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,28 +74,27 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function comb</h1>
 			<section>
-				<p>Create a <a href="../../dstats/base/Comb.html"><code class="prettyprint lang-d">Comb</code></a> struct from a range or of a set of bounds.
+				<p>Create a Comb struct from a range or of a set of bounds.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-auto comb(T)(
+							<code class="lang-d">
+<span class="kwd">auto</span> <span class="pln">comb</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T stuff,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">stuff</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint r
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">r</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto c1 = comb([1,2,3], 2);  // Any two elements from [1,2,3].
-auto c2 = comb(5, 3);  // Any three elements from [0,1,2,3,4].
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">c1 </span><span class="pun">= </span><span class="pln">comb</span><span class="pun">([</span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">3</span><span class="pun">], </span><span class="lit">2</span><span class="pun">);  </span><span class="com">// Any two elements from [1,2,3].
+</span><span class="kwd">auto </span><span class="pln">c2 </span><span class="pun">= </span><span class="pln">comb</span><span class="pun">(</span><span class="lit">5</span><span class="pun">, </span><span class="lit">3</span><span class="pun">);  </span><span class="com">// Any three elements from [0,1,2,3,4].</span></code></pre>
 </section>
 
 			</section>

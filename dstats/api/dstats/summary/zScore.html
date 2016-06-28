@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -80,66 +79,66 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function zScore</h2>
-				<p>Returns a <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> with whatever properties T has (forward <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>, random
- access <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>, bidirectional <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>, hasLength, etc.),
+				<p>Returns a range with whatever properties T has (forward range, random
+ access range, bidirectional range, hasLength, etc.),
  of the z-scores of the underlying
- <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>.  A z-score of an element in a <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> is defined as
- (element - <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a>(<a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>)) / <a href="../../dstats/summary/stdev.html"><code class="prettyprint lang-d">stdev</code></a>(<a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>).
+ range.  A z-score of an element in a range is defined as
+ (element - mean(range)) / stdev(range).
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/summary/ZScore.html">ZScore</a>!T zScore(T)(
+							<code class="lang-d">
+<a href="../../dstats/summary/ZScore.html"><span class="typ">ZScore</span></a>!T <span class="pln">zScore</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T range
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">range</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isForwardRange!T &amp;&amp; doubleInput!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Notes</h3>
-<p>If the data contained in the <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> is a sample of a larger population,
+<p>If the data contained in the range is a sample of a larger population,
  rather than an entire population, then technically, the results output
- from the <a href="../../dstats/summary/ZScore.html"><code class="prettyprint lang-d">ZScore</code></a> <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> are T statistics, not Z statistics.  This is because
- the sample <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a> and standard deviation are only estimates of the population
- parameters.  This does not affect the mechanics of using this <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a>,
+ from the ZScore range are T statistics, not Z statistics.  This is because
+ the sample mean and standard deviation are only estimates of the population
+ parameters.  This does not affect the mechanics of using this range,
  but it does affect the interpretation of its output.
 </p>
 
-<p> Accessing elements of this <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> is fairly expensive, as a
- floating point multiply is involved.  Also, constructing this <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> is
- costly, as the entire input <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> has to be iterated over to find the
- <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a> and standard deviation.
+<p> Accessing elements of this range is fairly expensive, as a
+ floating point multiply is involved.  Also, constructing this range is
+ costly, as the entire input range has to be iterated over to find the
+ mean and standard deviation.
 </p>
 </section>
 
 			</section>
 			<section>
 				<h2>Function zScore</h2>
-				<p>Allows the construction of a <a href="../../dstats/summary/ZScore.html"><code class="prettyprint lang-d">ZScore</code></a> <a href="../../dstats/summary/zScore.html#range"><code class="prettyprint lang-d">range</code></a> with precomputed <a href="../../dstats/summary/zScore.html#mean"><code class="prettyprint lang-d">mean</code></a> and
- <a href="../../dstats/summary/stdev.html"><code class="prettyprint lang-d">stdev</code></a>.
+				<p>Allows the construction of a ZScore range with precomputed mean and
+ stdev.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/summary/ZScore.html">ZScore</a>!T zScore(T)(
+							<code class="lang-d">
+<a href="../../dstats/summary/ZScore.html"><span class="typ">ZScore</span></a>!T <span class="pln">zScore</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T range,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">range</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double mean,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">mean</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double sd
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">sd</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isForwardRange!T &amp;&amp; doubleInput!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

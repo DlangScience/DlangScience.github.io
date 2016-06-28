@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -298,14 +297,14 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void invert(T, scid.matrix.Storage stor)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">invert</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor) m
+&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(T,stor) <span class="pln">m</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isFortranType!T &amp;&amp; !scid.core.traits.isComplex!T &amp;&amp; stor == Storage.General);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFortranType</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; !</span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">traits<wbr/></span><span class="pun">.</span><span class="pln">isComplex</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">stor </span><span class="pun">== </span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">General</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

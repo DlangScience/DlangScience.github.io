@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,15 +288,15 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function integrateQAWF</h1>
 			<section>
-				<p>Calculates <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> Fourier transform integral.
+				<p>Calculates a Fourier transform integral.
 </p>
-<section><p>Use this to calculate the integral of <a href="../../scid/calculus/integrateQAWF.html#f"><code class="prettyprint lang-d">f</code></a>(x)*cos(<a href="../../scid/calculus/integrateQAWF.html#omega"><code class="prettyprint lang-d">omega</code></a>*x)
-    or <a href="../../scid/calculus/integrateQAWF.html#f"><code class="prettyprint lang-d">f</code></a>(x)*sin(<a href="../../scid/calculus/integrateQAWF.html#omega"><code class="prettyprint lang-d">omega</code></a>*x)
-    on the interval (<a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a>,).  The <a href="../../scid/calculus/integrateQAWF.html#weight"><code class="prettyprint lang-d">weight</code></a> function is specified
-    by setting <a href="../../scid/calculus/integrateQAWF.html#weight"><code class="prettyprint lang-d">weight</code></a> to <a href="../../scid/calculus/Oscillation.cos.html"><code class="prettyprint lang-d">Oscillation.cos</code></a> or <a href="../../scid/calculus/Oscillation.sin.html"><code class="prettyprint lang-d">Oscillation.sin</code></a>.
+<section><p>Use this to calculate the integral of <code class="lang-d"><a href="../../scid/calculus/integrateQAWF.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)*</span><span class="pln">cos</span><span class="pun">(<a href="../../scid/calculus/integrateQAWF.html#omega"></span><span class="pln">omega</span></a><span class="pun">*</span><span class="pln">x</span><span class="pun">)</span></code>
+    or <code class="lang-d"><a href="../../scid/calculus/integrateQAWF.html#f"><span class="pln">f</span></a><span class="pun">(</span><span class="pln">x</span><span class="pun">)*</span><span class="pln">sin</span><span class="pun">(<a href="../../scid/calculus/integrateQAWF.html#omega"></span><span class="pln">omega</span></a><span class="pun">*</span><span class="pln">x</span><span class="pun">)</span></code>
+    on the interval (<code class="lang-d"><a href="../../scid/calculus/integrateQAWF.html#a"><span class="pln">a</span></a></code>,&infin;).  The weight function is specified
+    by setting <code class="lang-d"><a href="../../scid/calculus/integrateQAWF.html#weight"><span class="pln">weight</span></a></code> to <code class="lang-d"><a href="../../scid/calculus/Oscillation.cos.html"><span class="typ">Oscillation<wbr/></span><span class="pun">.</span><span class="pln">cos</span></a></code> or <code class="lang-d"><a href="../../scid/calculus/Oscillation.sin.html"><span class="typ">Oscillation<wbr/></span><span class="pun">.</span><span class="pln">sin</span></a></code>.
 </p>
 
-<p>    The procedure of <a href="../../scid/calculus/integrateQAWO.html"><code class="prettyprint lang-d">integrateQAWO</code></a>() is applied on successive finite
+<p>    The procedure of <code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html"><span class="pln">integrateQAWO</span></a><span class="pun">()</span></code> is applied on successive finite
     intervals, and convergence acceleration by means of the Epsilon
     algorithm is applied to the series of integral approximations.
 </p>
@@ -306,38 +305,37 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a>!Real integrateQAWF(Func, Real)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!Real <span class="pln">integrateQAWF</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real omega,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">omega</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/calculus/Oscillation.html">Oscillation</a> weight,
+&nbsp;&nbsp;<a href="../../scid/calculus/Oscillation.html"><span class="typ">Oscillation</span></a> <span class="pln">weight</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsAbs
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsAbs</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This function is unique among the QUADPACK integrators in that
-    you must specify an absolute accuracy, not <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> relative one.
+    you must specify an absolute accuracy, not a relative one.
 </p>
 </section>
 <section><h3>See Also</h3>
-<p><a href="../../scid/calculus/integrateQAWO.html"><code class="prettyprint lang-d">integrateQAWO</code></a>(), for similar integrals over <a href="../../scid/calculus/integrateQAWF.html#a"><code class="prettyprint lang-d">a</code></a> finite interval.
+<p><code class="lang-d"><a href="../../scid/calculus/integrateQAWO.html"><span class="pln">integrateQAWO</span></a><span class="pun">()</span></code>, for similar integrals over a finite interval.
 </p>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">// Calculate the integral of cos(x)*exp(-x/64)/sqrt(x) over
+<pre class="code"><code class="lang-d"><span class="com">// Calculate the integral of cos(x)*exp(-x/64)/sqrt(x) over
 // the interval (0, infinity).
-real <a href="../../scid/calculus/integrateQAWF.html#f">f</a>(real x) { return x &lt;= 0 ? 0 : exp(-x/64) / sqrt(x); }
-auto i = integrateQAWF(&amp;<a href="../../scid/calculus/integrateQAWF.html#f">f</a>, 0.0L, 1.0L, <a href="../../scid/calculus/Oscillation.cos.html">Oscillation.cos</a>, 1e-15L);
-</code></pre>
+</span><span class="typ">real <a href="../../scid/calculus/integrateQAWF.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">real </span><span class="pln">x</span><span class="pun">) { </span><span class="kwd">return </span><span class="pln">x </span><span class="pun">&lt;= </span><span class="lit">0 </span><span class="pun">? </span><span class="lit">0 </span><span class="pun">: </span><span class="pln">exp</span><span class="pun">(-</span><span class="pln">x</span><span class="pun">/</span><span class="lit">64</span><span class="pun">) / </span><span class="pln">sqrt</span><span class="pun">(</span><span class="pln">x</span><span class="pun">); }
+</span><span class="kwd">auto </span><span class="pln">i </span><span class="pun">= </span><span class="pln">integrateQAWF</span><span class="pun">(&amp;<a href="../../scid/calculus/integrateQAWF.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="lit">0.0L</span><span class="pun">, </span><span class="lit">1.0L</span><span class="pun">, <a href="../../scid/calculus/Oscillation.cos.html"></span><span class="typ">Oscillation<wbr/></span><span class="pun">.</span><span class="pln">cos</span></a><span class="pun">, </span><span class="lit">1e-15L</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

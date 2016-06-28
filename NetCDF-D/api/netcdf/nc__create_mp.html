@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -39,22 +38,22 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) int nc__create_mp(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">int</span> <span class="pln">nc__create_mp</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const(char)* path,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">)</span><span class="pun">*</span> <span class="pln">path</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int cmode,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">cmode</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ulong initialsz,
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">initialsz</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int basepe,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">basepe</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ulong* chunksizehintp,
+&nbsp;&nbsp;<span class="typ">ulong</span><span class="pun">*</span> <span class="pln">chunksizehintp</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ncidp
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ncidp</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

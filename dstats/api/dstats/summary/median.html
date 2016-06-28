@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,27 +74,27 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function median</h1>
 			<section>
-				<p>Finds <code class="prettyprint lang-d">median</code> of an input range in O(N) time on average.  In the case of an
- even number of elements, the <a href="../../dstats/summary/mean.html"><code class="prettyprint lang-d">mean</code></a> of the two middle elements is returned.
+				<p>Finds median of an input range in O(N) time on average.  In the case of an
+ even number of elements, the mean of the two middle elements is returned.
  This is a convenience founction designed specifically for numeric types,
  where the averaging of the two middle elements is desired.  A more general
  selection algorithm that can handle any type with a total ordering, as well
  as selecting any position in the ordering, can be found at
- <a href="../../dstats/sort/quickSelect.html"><code class="prettyprint lang-d">dstats.sort.quickSelect</code></a>() and <a href="../../dstats/sort/partitionK.html"><code class="prettyprint lang-d">dstats.sort.partitionK</code></a>().
- Allocates memory, does not reorder input <a href="../../dstats/summary/median.html#data"><code class="prettyprint lang-d">data</code></a>.
+ dstats.sort.quickSelect() and dstats.sort.partitionK().
+ Allocates memory, does not reorder input data.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double median(T)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">median</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T data
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

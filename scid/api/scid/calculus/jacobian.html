@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,34 +288,34 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function jacobian</h1>
 			<section>
-				<p>Calculate the Jacobian matrix associated with a set of <i><a href="../../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a></i> functions
+				<p>Calculate the Jacobian matrix associated with a set of <i>m</i> functions
     in <i>n</i> variables using a central-difference approximation to the
     Jacobian.
 </p>
 <section><p>This method requires 2<i>n</i> function evaluations, but is more
-    accurate than the faster <a href="../../scid/calculus/jacobian2.html"><code class="prettyprint lang-d">jacobian2</code></a>() function. The relative
+    accurate than the faster <code class="lang-d"><a href="../../scid/calculus/jacobian2.html"><span class="pln">jacobian2</span></a><span class="pun">()</span></code> function. The relative
     accuracy in the result is, at best, on the order of
-    (real.epsilon)^(2/3).
+    <code class="lang-d"><span class="pun">(</span><span class="typ">real<wbr/></span><span class="pun">.</span><span class="pln">epsilon</span><span class="pun">)^(</span><span class="lit">2</span><span class="pun">/</span><span class="lit">3</span><span class="pun">)</span></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!Real jacobian(Real, Func)(
+							<code class="lang-d">
+<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!Real <span class="pln">jacobian</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -325,49 +324,48 @@ $('#symbolSearchPane').show();
 <tr><td id="f">f</td><td> The set of functions. This is typically a function or delegate
             which takes a vector as input and returns a vector. If the
             function takes a second vector parameter, this is assumed to
-            be a <a href="../../scid/calculus/jacobian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the return value, and will be used as such.
+            be a buffer for the return value, and will be used as such.
 </td></tr>
-<tr><td id="m">m</td><td> The number of functions in <a href="../../scid/calculus/jacobian.html#f"><code class="prettyprint lang-d">f</code></a>.
+<tr><td id="m">m</td><td> The number of functions in <code class="lang-d"><a href="../../scid/calculus/jacobian.html#f"><span class="pln">f</span></a></code>.
 </td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.
 </td></tr>
-<tr><td id="scale">scale</td><td> A "characteristic <a href="../../scid/calculus/jacobian.html#scale"><code class="prettyprint lang-d">scale</code></a>" over which the function changes.
+<tr><td id="scale">scale</td><td> A "characteristic scale" over which the function changes.
             (optional)
 </td></tr>
-<tr><td id="buffer">buffer</td><td> A <a href="../../scid/calculus/jacobian.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least <i><a href="../../scid/calculus/jacobian.html#m"><code class="prettyprint lang-d">m</code></a></i>*<i>n</i>, for storing the calculated
+<tr><td id="buffer">buffer</td><td> A buffer of length at least <i>m</i>*<i>n</i>, for storing the calculated
             Jacobian matrix. (optional)</td></tr>
 </table>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">// Let's say we want to find the Jacobian of the function
-//      <a href="../../scid/calculus/jacobian.html#f">f</a>(<a href="../../scid/calculus/jacobian.html#x">x</a>,y) = (xy, <a href="../../scid/calculus/jacobian.html#x">x</a>-y)
+<pre class="code"><code class="lang-d"><span class="com">// Let's say we want to find the Jacobian of the function
+//      f(x,y) = (xy, x-y)
 // at the point p = (1, 2).
-real[] p = [ 1.0, 2.0 ];
+</span><span class="typ">real</span><span class="pun">[] </span><span class="pln">p </span><span class="pun">= [ </span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">2.0 </span><span class="pun">];
 
-// This is the simplest way to do it:
-real[] <a href="../../scid/calculus/jacobian.html#f">f</a>(real[] a)
+</span><span class="com">// This is the simplest way to do it:
+</span><span class="typ">real</span><span class="pun">[] <a href="../../scid/calculus/jacobian.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">real</span><span class="pun">[] </span><span class="pln">a</span><span class="pun">)
 {
-    auto r = new real[2];
-    r[0] = a[0] * a[1];
-    r[1] = a[0] - a[1];
-    return r;
+    </span><span class="kwd">auto </span><span class="pln">r </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">real</span><span class="pun">[</span><span class="lit">2</span><span class="pun">];
+    </span><span class="pln">r</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] = </span><span class="pln">a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] * </span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
+    </span><span class="pln">r</span><span class="pun">[</span><span class="lit">1</span><span class="pun">] = </span><span class="pln">a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] - </span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
+    </span><span class="kwd">return </span><span class="pln">r</span><span class="pun">;
 }
 
-auto j = jacobian(&amp;<a href="../../scid/calculus/jacobian.html#f">f</a>, 2, p);
+</span><span class="kwd">auto </span><span class="pln">j </span><span class="pun">= </span><span class="pln">jacobian</span><span class="pun">(&amp;<a href="../../scid/calculus/jacobian.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="pln">p</span><span class="pun">);
 
-// However, if we need to perform this operation many times,
+</span><span class="com">// However, if we need to perform this operation many times,
 // we may want to speed things up a bit. To avoid unnecessary
-// repeated allocations, we can add a <a href="../../scid/calculus/jacobian.html#buffer">buffer</a> parameter to the
+// repeated allocations, we can add a buffer parameter to the
 // function:
-real[] g(real[] a, real[] r)
+</span><span class="typ">real</span><span class="pun">[] </span><span class="pln">g</span><span class="pun">(</span><span class="typ">real</span><span class="pun">[] </span><span class="pln">a</span><span class="pun">, </span><span class="typ">real</span><span class="pun">[] </span><span class="pln">r</span><span class="pun">)
 {
-    r[0] = a[0] * a[1];
-    r[1] = a[0] - a[1];
-    return r[0 .. 2];
+    </span><span class="pln">r</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] = </span><span class="pln">a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] * </span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
+    </span><span class="pln">r</span><span class="pun">[</span><span class="lit">1</span><span class="pun">] = </span><span class="pln">a</span><span class="pun">[</span><span class="lit">0</span><span class="pun">] - </span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
+    </span><span class="kwd">return </span><span class="pln">r</span><span class="pun">[</span><span class="lit">0 </span><span class="pun">.. </span><span class="lit">2</span><span class="pun">];
 }
 
-auto jFaster = jacobian(&amp;g, 2, p);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">jFaster </span><span class="pun">= </span><span class="pln">jacobian</span><span class="pun">(&amp;</span><span class="pln">g</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="pln">p</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>See also</h3>
 <p><ul><li>Wikipedia:

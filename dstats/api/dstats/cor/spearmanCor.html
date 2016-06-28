@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -83,16 +82,16 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double spearmanCor(R, S)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">spearmanCor</span><span class="pun">(</span><span class="pln">R</span><span class="pun">, </span><span class="pln">S</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R input1,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">input1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;S input2
+&nbsp;&nbsp;<span class="pln">S</span> <span class="pln">input2</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!R &amp;&amp; isInputRange!S &amp;&amp; is(typeof(input1.front &lt; input1.front) == bool) &amp;&amp; is(typeof(input2.front &lt; input2.front) == bool));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">R </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">S </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">input1<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">input1<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">) == </span><span class="typ">bool</span><span class="pun">) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">input2<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">input2<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">) == </span><span class="typ">bool</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

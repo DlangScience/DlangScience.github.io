@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -87,16 +86,16 @@ calls the overload.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> fisherExact(T)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">fisherExact</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const T[][] contingencyTable,
+&nbsp;&nbsp;<span class="kwd">const </span><span class="pln">T</span><span class="pun">[]</span><span class="pun">[]</span> <span class="pln">contingencyTable</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isIntegral!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isIntegral</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -107,8 +106,8 @@ if (isIntegral!T);
 				<p>Fisher's Exact test for difference in odds between rows/columns
 in a 2x2 contingency table.  Specifically, this function tests the odds
 ratio, which is defined, for a contingency table c, as (c[0][0] * c[1][1])
- / (c[1][0] * c[0][1]).  Alternatives are <a href="../../dstats/tests/Alt.less.html"><code class="prettyprint lang-d">Alt.less</code></a>, meaning true odds ratio
-&lt; 1, <a href="../../dstats/tests/Alt.greater.html"><code class="prettyprint lang-d">Alt.greater</code></a>, meaning true odds ratio &gt; 1, and <a href="../../dstats/tests/Alt.twoSided.html"><code class="prettyprint lang-d">Alt.twoSided</code></a>, meaning
+ / (c[1][0] * c[0][1]).  Alternatives are Alt.less, meaning true odds ratio
+&lt; 1, Alt.greater, meaning true odds ratio &gt; 1, and Alt.twoSided, meaning
 true odds ratio != 1.
 </p>
 <section><p>Accepts a 2x2 contingency table as an array of arrays of uints.
@@ -119,16 +118,16 @@ For now, only does 2x2 contingency tables.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> fisherExact(T)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">fisherExact</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const T[2][2] contingencyTable,
+&nbsp;&nbsp;<span class="kwd">const </span><span class="pln">T</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span> <span class="pln">contingencyTable</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html">Alt</a> alt = Alt.twoSided
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isIntegral!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isIntegral</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -137,20 +136,19 @@ if (isIntegral!T);
 approximations, it is very statistically conservative when the marginals
 are not truly fixed in the experimental design in question.  If a
 closer but possibly non-conservative approximation of the true P-value is
-desired, Pearson's chi-square test (<a href="../../dstats/tests/chiSquareContingency.html"><code class="prettyprint lang-d">chiSquareContingency</code></a>) may perform better,
+desired, Pearson's chi-square test (chiSquareContingency) may perform better,
 even for small samples.
 </p>
 </section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> of the odds ratio and the P-value against the given
+<p>A TestRes of the odds ratio and the P-value against the given
 alternative.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">double res = <a href="../../dstats/tests/fisherExact.html">fisherExact</a>([[2u, 7], [8, 2]], <a href="../../dstats/tests/Alt.less.html">Alt.less</a>);
-assert(approxEqual(res.p, 0.01852));  // Odds ratio is very small in this case.
-assert(approxEqual(res.testStat, 4.0 / 56.0));
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">double </span><span class="pln">res </span><span class="pun">= </span><span class="pln">fisherExact</span><span class="pun">([[</span><span class="lit">2u</span><span class="pun">, </span><span class="lit">7</span><span class="pun">], [</span><span class="lit">8</span><span class="pun">, </span><span class="lit">2</span><span class="pun">]], <a href="../../dstats/tests/Alt.less.html"></span><span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">less</span></a><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">res<wbr/></span><span class="pun">.</span><span class="pln">p</span><span class="pun">, </span><span class="lit">0.01852</span><span class="pun">));  </span><span class="com">// Odds ratio is very small in this case.
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">res<wbr/></span><span class="pun">.</span><span class="pln">testStat</span><span class="pun">, </span><span class="lit">4.0 </span><span class="pun">/ </span><span class="lit">56.0</span><span class="pun">));</span></code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Fisher%27s_Exact_Test

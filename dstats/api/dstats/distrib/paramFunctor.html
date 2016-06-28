@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,9 +75,9 @@ $('#symbolSearchPane').show();
 			<h1>Function paramFunctor</h1>
 			<section>
 				<p>Takes a distribution function (CDF or PDF/PMF) as a template argument, and
- <a href="../../dstats/distrib/paramFunctor.html#parameters"><code class="prettyprint lang-d">parameters</code></a> as function arguments in the order that they appear in the
+ parameters as function arguments in the order that they appear in the
  function declaration and returns a functor that binds the supplied
- <a href="../../dstats/distrib/paramFunctor.html#parameters"><code class="prettyprint lang-d">parameters</code></a> to the distribution function.  Assumes the non-parameter
+ parameters to the distribution function.  Assumes the non-parameter
  argument is the first argument to the distribution function.
 </p>
 <section></section>
@@ -86,18 +85,17 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/distrib/ParamFunctor.html">ParamFunctor</a>!distrib paramFunctor(alias distrib)(
+							<code class="lang-d">
+<a href="../../dstats/distrib/ParamFunctor.html"><span class="typ">ParamFunctor</span></a>!distrib <span class="pln">paramFunctor</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">distrib</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;ParameterTypeTuple!distrib[1..__dollar] parameters
+&nbsp;&nbsp;<span class="typ">ParameterTypeTuple</span>!distrib<span class="pun">[</span><span class="lit">1</span><span class="pun">..</span><span class="pln">__dollar</span><span class="pun">]</span> <span class="pln">parameters</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto stdNormal = paramFunctor!(<a href="../../dstats/distrib/normalCDF.html">normalCDF</a>)(0.0L, 1.0L);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">stdNormal </span><span class="pun">= </span><span class="pln">paramFunctor</span><span class="pun">!(<a href="../../dstats/distrib/normalCDF.html"></span><span class="pln">normalCDF</span></a><span class="pun">)(</span><span class="lit">0.0L</span><span class="pun">, </span><span class="lit">1.0L</span><span class="pun">);</span></code></pre>
 
 <p> stdNormal is now a functor for the normal(0, 1) distribution.
 </p>

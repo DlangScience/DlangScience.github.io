@@ -6,19 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">bindings</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">lapack</a>
 						<ul class="tree-view">
 							<li>
@@ -301,28 +300,28 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void sycon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">sycon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char uplo,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">uplo</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* anorm,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double rcond,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -335,28 +334,28 @@ void sycon(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void sycon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">sycon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char uplo,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">uplo</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* anorm,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float rcond,
+&nbsp;&nbsp;<span class="typ">float</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -369,30 +368,30 @@ void sycon(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void sycon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">sycon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char uplo,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">uplo</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* a,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* anorm,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double rcond,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* work,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -400,7 +399,7 @@ void sycon(
 			</section>
 			<section>
 				<h2>Function sycon</h2>
-				<p>Estimates the reciprocal of the condition number of <a href="../../../../scid/bindings/lapack/dlapack/sycon.html#a"><code class="prettyprint lang-d">a</code></a>
+				<p>Estimates the reciprocal of the condition number of a
 </p>
 <section><p>real symmetric indefinite matrix,
 </p>
@@ -412,30 +411,30 @@ void sycon(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void sycon(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">sycon</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char uplo,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">uplo</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* a,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* ipiv,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ipiv</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* anorm,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">anorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float rcond,
+&nbsp;&nbsp;<span class="typ">float</span> <span class="pln">rcond</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* work,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

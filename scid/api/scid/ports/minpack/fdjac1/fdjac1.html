@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,7 +66,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -89,7 +88,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">minpack</a>
 						<ul class="tree-view">
 							<li>
@@ -290,8 +289,8 @@ $('#symbolSearchPane').show();
 			<h1>Function fdjac1</h1>
 			<section>
 				<p>This subroutine computes a forward-difference approximation
-    to the <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> by <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> Jacobian matrix associated with a specified
-    problem of <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> functions in <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> variables. If the Jacobian has
+    to the n by n Jacobian matrix associated with a specified
+    problem of n functions in n variables. If the Jacobian has
     a banded form, then function evaluations are saved by only
     approximating the nonzero terms.
 </p>
@@ -300,34 +299,34 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void fdjac1(Real, Func)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">fdjac1</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Func fcn,
+&nbsp;&nbsp;<span class="typ">Func</span> <span class="pln">fcn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t n,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* fvec,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">fvec</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* fjac,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">fjac</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t ldfjac,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">ldfjac</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int iflag,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">iflag</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t ml,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">ml</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real epsfcn,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">epsfcn</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t mu,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">mu</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* wa1,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">wa1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* wa2
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">wa2</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -335,52 +334,52 @@ void fdjac1(Real, Func)(
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="fcn">fcn</td><td>
             the name of the user-supplied function or delegate which
-            calculates the functions. <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#fcn"><code class="prettyprint lang-d">fcn</code></a> should be written as follows.
+            calculates the functions. fcn should be written as follows.
             ---
-            void f(size_t <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a>, real* <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#x"><code class="prettyprint lang-d">x</code></a>, real* <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#fvec"><code class="prettyprint lang-d">fvec</code></a>, int <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#iflag"><code class="prettyprint lang-d">iflag</code></a>)
+            void f(size_t n, real* x, real* fvec, int iflag)
             {
-                // calculate the functions at <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#x"><code class="prettyprint lang-d">x</code></a> and
-                // return this vector in <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#fvec"><code class="prettyprint lang-d">fvec</code></a>.
+                // calculate the functions at x and
+                // return this vector in fvec.
             }
             ---
-            The value of <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#iflag"><code class="prettyprint lang-d">iflag</code></a> should not be changed by <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#fcn"><code class="prettyprint lang-d">fcn</code></a> unless
-            the user wants to terminate execution of <code class="prettyprint lang-d">fdjac1</code>.
-            In this case set <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#iflag"><code class="prettyprint lang-d">iflag</code></a> to a negative integer.
+            The value of iflag should not be changed by fcn unless
+            the user wants to terminate execution of fdjac1.
+            In this case set iflag to a negative integer.
 </td></tr>
 <tr><td id="n">n</td><td>
             a positive integer input variable set to the number
             of functions and variables.
 </td></tr>
 <tr><td id="x">x</td><td>
-            an input array of length <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a>.
+            an input array of length n.
 </td></tr>
 <tr><td id="fvec">fvec</td><td>
-            an input array of length <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> which must contain the
-            functions evaluated at <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#x"><code class="prettyprint lang-d">x</code></a>.
+            an input array of length n which must contain the
+            functions evaluated at x.
 </td></tr>
 <tr><td id="fjac">fjac</td><td>
-            an output <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> by <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> array which contains the
-            approximation to the Jacobian matrix evaluated at <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#x"><code class="prettyprint lang-d">x</code></a>.
+            an output n by n array which contains the
+            approximation to the Jacobian matrix evaluated at x.
 </td></tr>
 <tr><td id="ldfjac">ldfjac</td><td>
-            a positive integer input variable not less than <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a>
-            which specifies the leading dimension of the array <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#fjac"><code class="prettyprint lang-d">fjac</code></a>.
+            a positive integer input variable not less than n
+            which specifies the leading dimension of the array fjac.
 </td></tr>
 <tr><td id="iflag">iflag</td><td>
             an integer variable which can be used to terminate
-            the execution of <code class="prettyprint lang-d">fdjac1</code>. See description of <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#fcn"><code class="prettyprint lang-d">fcn</code></a>.
+            the execution of fdjac1. See description of fcn.
 </td></tr>
 <tr><td id="ml">ml</td><td>
             a nonnegative integer input variable which specifies
             the number of subdiagonals within the band of the
             Jacobian matrix. If the Jacobian is not banded, set
-            <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#ml"><code class="prettyprint lang-d">ml</code></a> to at least <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> - 1.
+            ml to at least n - 1.
 </td></tr>
 <tr><td id="epsfcn">epsfcn</td><td>
             an input variable used in determining a suitable
             step length for the forward-difference approximation. This
             approximation assumes that the relative errors in the
-            functions are of the order of <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#epsfcn"><code class="prettyprint lang-d">epsfcn</code></a>. If <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#epsfcn"><code class="prettyprint lang-d">epsfcn</code></a> is less
+            functions are of the order of epsfcn. If epsfcn is less
             than the machine precision, it is assumed that the relative
             errors in the functions are of the order of the machine
             precision.
@@ -389,14 +388,14 @@ void fdjac1(Real, Func)(
             a nonnegative integer input variable which specifies
             the number of superdiagonals within the band of the
             Jacobian matrix. If the jacobian is not banded, set
-            <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#mu"><code class="prettyprint lang-d">mu</code></a> to at least <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a> - 1.
+            mu to at least n - 1.
 </td></tr>
 <tr><td id="wa1">wa1</td><td>
-            work array of length <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a>.
+            work array of length n.
 </td></tr>
 <tr><td id="wa2">wa2</td><td>
-            work array of length <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a>. If <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#ml"><code class="prettyprint lang-d">ml</code></a> + <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#mu"><code class="prettyprint lang-d">mu</code></a> + 1 is at
-            least <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#n"><code class="prettyprint lang-d">n</code></a>, then the Jacobian is considered dense, and <a href="../../../../scid/ports/minpack/fdjac1/fdjac1.html#wa2"><code class="prettyprint lang-d">wa2</code></a> is
+            work array of length n. If ml + mu + 1 is at
+            least n, then the Jacobian is considered dense, and wa2 is
             not referenced.</td></tr>
 </table>
 </section>

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,12 +74,12 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function pearsonMatrix</h1>
 			<section>
-				<p>These overloads allow for correlation and <a href="../../dstats/cor/covariance.html"><code class="prettyprint lang-d">covariance</code></a> matrices to be computed
-with the results being stored in a pre-allocated variable, <a href="../../dstats/cor/pearsonMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a>.  <a href="../../dstats/cor/pearsonMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> must
+				<p>These overloads allow for correlation and covariance matrices to be computed
+with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
-as the number of vectors in <a href="../../dstats/cor/pearsonMatrix.html#mat"><code class="prettyprint lang-d">mat</code></a> and must have at least enough columns in
-each row to support storing the lower triangle.  If <a href="../../dstats/cor/pearsonMatrix.html#ans"><code class="prettyprint lang-d">ans</code></a> is a full rectangular
+as the number of vectors in mat and must have at least enough columns in
+each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
 </p>
 <section></section>
@@ -88,18 +87,18 @@ matrix/range of ranges, only the lower triangle results will be stored.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void pearsonMatrix(RoR, Ret)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">pearsonMatrix</span><span class="pun">(</span><span class="typ">RoR</span><span class="pun">, </span><span class="typ">Ret</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;RoR mat,
+&nbsp;&nbsp;<span class="typ">RoR</span> <span class="pln">mat</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref Ret ans,
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">Ret</span> <span class="pln">ans</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;TaskPool pool = null
+&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!RoR &amp;&amp; isInputRange!(ElementType!RoR) &amp;&amp; is(ElementType!(ElementType!RoR) : double) &amp;&amp; !isInfinite!RoR &amp;&amp; (is(typeof(ans[0, 0] = 2.00000)) || is(typeof(ans[0][0] = 2.00000))));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="typ">RoR </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">RoR</span><span class="pun">) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">RoR</span><span class="pun">) : </span><span class="typ">double</span><span class="pun">) &amp;&amp; !</span><span class="pln">isInfinite</span><span class="pun">!</span><span class="typ">RoR </span><span class="pun">&amp;&amp; (</span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">ans</span><span class="pun">[</span><span class="lit">0</span><span class="pun">, </span><span class="lit">0</span><span class="pun">] = </span><span class="lit">2.00000</span><span class="pun">)) || </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">ans</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="lit">0</span><span class="pun">] = </span><span class="lit">2.00000</span><span class="pun">)))</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -109,10 +108,9 @@ if (isInputRange!RoR &amp;&amp; isInputRange!(ElementType!RoR) &amp;&amp; is(Ele
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto pearsonRoR = [[0.0], [0.0, 0.0], [0.0, 0.0, 0.0]];
-pearsonMatrix(input, pearsonRoR);
-assert(approxEqual(pearsonRoR[1][1], 1));
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">pearsonRoR </span><span class="pun">= [[</span><span class="lit">0.0</span><span class="pun">], [</span><span class="lit">0.0</span><span class="pun">, </span><span class="lit">0.0</span><span class="pun">], [</span><span class="lit">0.0</span><span class="pun">, </span><span class="lit">0.0</span><span class="pun">, </span><span class="lit">0.0</span><span class="pun">]];
+</span><span class="pln">pearsonMatrix</span><span class="pun">(</span><span class="pln">input</span><span class="pun">, </span><span class="pln">pearsonRoR</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">pearsonRoR</span><span class="pun">[</span><span class="lit">1</span><span class="pun">][</span><span class="lit">1</span><span class="pun">], </span><span class="lit">1</span><span class="pun">));</span></code></pre>
 </section>
 
 			</section>

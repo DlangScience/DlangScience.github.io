@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,33 +74,33 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function medianAbsDev</h1>
 			<section>
-				<p>Calculates the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation of a dataset.  This is the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a>
- of all absolute differences from the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> of the dataset.
+				<p>Calculates the median absolute deviation of a dataset.  This is the median
+ of all absolute differences from the median of the dataset.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/summary/MedianAbsDev.html">MedianAbsDev</a> medianAbsDev(T)(
+							<code class="lang-d">
+<a href="../../dstats/summary/MedianAbsDev.html"><span class="typ">MedianAbsDev</span></a> <span class="pln">medianAbsDev</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T data
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/summary/MedianAbsDev.html"><code class="prettyprint lang-d">MedianAbsDev</code></a> struct that contains the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> (since it is
- computed anyhow) and the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> absolute deviation.
+<p>A MedianAbsDev struct that contains the median (since it is
+ computed anyhow) and the median absolute deviation.
 </p>
 </section>
 <section><h3>Notes</h3>
 <p>No bias correction is used in this implementation, since using
- one would require assumptions about the underlying distribution of the <a href="../../dstats/summary/medianAbsDev.html#data"><code class="prettyprint lang-d">data</code></a>.
+ one would require assumptions about the underlying distribution of the data.
 </p>
 </section>
 

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">libcerf</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../libcerf.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../libcerf/erfcx_.html" class="selected module">erfcx_</a>
 							</li>
@@ -31,9 +33,6 @@
 								<a href="../../libcerf/w_of_z.html" class=" module">w_of_z</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../../libcerf.html" class=" module">libcerf</a>
 							</li>
 						</ul>
 				<noscript>
@@ -56,17 +55,17 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>This function combines a few different ideas.
 </p>
-<section><p>First, for <a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a> &gt; 50, it uses a continued-fraction expansion (same as
-for the Faddeeva function, but with algebraic simplifications for z=i*<a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a>).
+<section><p>First, for x &gt; 50, it uses a continued-fraction expansion (same as
+for the Faddeeva function, but with algebraic simplifications for z=i*x).
 </p>
 
-<p>Second, for 0 &lt;= <a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a> &lt;= 50, it uses Chebyshev polynomial approximations,
+<p>Second, for 0 &lt;= x &lt;= 50, it uses Chebyshev polynomial approximations,
 but with two twists:
 </p>
 
-<p>a. It maps <a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a> to y = 4 / (4+<a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a>) in [0,1].  This simple transformation,
+<p>a. It maps x to y = 4 / (4+x) in [0,1].  This simple transformation,
 inspired by a similar transformation in the octave-forge/specfun
-<code class="prettyprint lang-d">erfcx</code> by Soren Hauberg, results in much faster Chebyshev convergence
+erfcx by Soren Hauberg, results in much faster Chebyshev convergence
 than other simple transformations I have examined.
 </p>
 
@@ -77,12 +76,12 @@ degree Chebyshev polynomials in each subinterval. This greatly
 improves performance in my tests.
 </p>
 
-<p>For <a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a> &lt; 0, we use the relationship <code class="prettyprint lang-d">erfcx</code>(-<a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a>) = 2 exp(<a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a>^2) - erfc(<a href="../../libcerf/erfcx_/erfcx.html#x"><code class="prettyprint lang-d">x</code></a>),
+<p>For x &lt; 0, we use the relationship erfcx(-x) = 2 exp(x^2) - erfc(x),
 with the usual checks for overflow etcetera.
 </p>
 
 <p>Performance-wise, it seems to be substantially faster than either
-the SLATEC DERFC function [or an <code class="prettyprint lang-d">erfcx</code> function derived therefrom]
+the SLATEC DERFC function [or an erfcx function derived therefrom]
 or Cody's CALERF function (from netlib.org/specfun), while
 retaining near machine precision in accuracy.
 </p>
@@ -91,12 +90,12 @@ retaining near machine precision in accuracy.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double erfcx(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">erfcx</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const(double) x
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span> <span class="pln">x</span>
 								<br/>
-) nothrow @nogc @safe;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

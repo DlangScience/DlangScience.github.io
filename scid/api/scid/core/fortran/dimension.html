@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -31,7 +30,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">core</a>
 						<ul class="tree-view">
 							<li>
@@ -290,31 +289,31 @@ $('#symbolSearchPane').show();
 			<h1>Function dimension</h1>
 			<section>
 				<p>Wrap a one- or two-dimensional array around the given pointer.
-    Meant as a substitute for FORTRAN's <code class="prettyprint lang-d">dimension</code> statement.
+    Meant as a substitute for FORTRAN's dimension statement.
 </p>
 
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../../scid/core/fortran/FortranArray.html">FortranArray</a>!T dimension(T)(
+							<code class="lang-d">
+<a href="../../../scid/core/fortran/FortranArray.html"><span class="typ">FortranArray</span></a>!T <span class="pln">dimension</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T* ptr,
+&nbsp;&nbsp;<span class="pln">T</span><span class="pun">*</span> <span class="pln">ptr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t len
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">len</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 								<br/>
 								<br/>
-<a href="../../../scid/core/fortran/FortranArray2D.html">FortranArray2D</a>!T dimension(T)(
+<a href="../../../scid/core/fortran/FortranArray2D.html"><span class="typ">FortranArray2D</span></a>!T <span class="pln">dimension</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T* ptr,
+&nbsp;&nbsp;<span class="pln">T</span><span class="pun">*</span> <span class="pln">ptr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t rows,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">rows</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t cols
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">cols</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

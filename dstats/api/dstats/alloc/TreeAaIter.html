@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,10 +74,17 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct TreeAaIter</h1>
 			<section>
-				<p>Struct that iterates over keys or values of a <a href="../../dstats/alloc/StackTreeAA.html"><code class="prettyprint lang-d">StackTreeAA</code></a>.
+				<p>Struct that iterates over keys or values of a StackTreeAA.
 </p>
 <section></section>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">TreeAaIter</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="kwd">alias </span><span class="pln">mapFun</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Fields</h3>
 						<table>
@@ -92,7 +98,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/alloc/TreeAaIter.tree.html" class="public"><code>tree</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -111,7 +117,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/alloc/TreeAaIter.length.html" class="public property"><code>length</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -169,9 +175,9 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Bugs</h3>
-<p>Uses <a href="../../dstats/alloc/TreeAaIter.opApply.html"><code class="prettyprint lang-d">opApply</code></a> instead of the more flexible ranges, because I
+<p>Uses opApply instead of the more flexible ranges, because I
  haven't figured out how to iterate efficiently and in sorted order over a
- <a href="../../dstats/alloc/TreeAaIter.tree.html"><code class="prettyprint lang-d">tree</code></a> without control of the stack.
+ tree without control of the stack.
 </p>
 </section>
 

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -86,16 +85,16 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-ElementType!V[][2] byCategory(V, C)(
+							<code class="lang-d">
+<span class="typ">ElementType</span>!V<span class="pun">[]</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span> <span class="pln">byCategory</span><span class="pun">(</span><span class="pln">V</span><span class="pun">, </span><span class="pln">C</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;V values,
+&nbsp;&nbsp;<span class="pln">V</span> <span class="pln">values</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;C categories
+&nbsp;&nbsp;<span class="pln">C</span> <span class="pln">categories</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">V </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">C </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">C </span><span class="pun">== </span><span class="typ">bool</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -103,7 +102,7 @@ if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool
 			</section>
 			<section>
 				<h2>Function byCategory</h2>
-				<p>Given a range of <a href="../../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a> and a range of <a href="../../dstats/base/byCategory.html#categories"><code class="prettyprint lang-d">categories</code></a>, separates <a href="../../dstats/base/byCategory.html#values"><code class="prettyprint lang-d">values</code></a>
+				<p>Given a range of values and a range of categories, separates values
  by category.  This function also guarantees that the order within each
  category will be maintained.
 </p>
@@ -112,16 +111,16 @@ if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; is(ElementType!C == bool
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-ElementType!V[][ElementType!C] byCategory(V, C)(
+							<code class="lang-d">
+<span class="typ">ElementType</span>!V<span class="pun">[]</span><span class="pun">[</span><span class="typ">ElementType</span>!C<span class="pun">]</span> <span class="pln">byCategory</span><span class="pun">(</span><span class="pln">V</span><span class="pun">, </span><span class="pln">C</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;V values,
+&nbsp;&nbsp;<span class="pln">V</span> <span class="pln">values</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;C categories
+&nbsp;&nbsp;<span class="pln">C</span> <span class="pln">categories</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; !is(ElementType!C == bool));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">V </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">C </span><span class="pun">&amp;&amp; !</span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">C </span><span class="pun">== </span><span class="typ">bool</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -134,11 +133,10 @@ if (isInputRange!V &amp;&amp; isInputRange!C &amp;&amp; !is(ElementType!C == boo
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">uint[] <a href="../../dstats/base/byCategory.html#values">values</a> = [1,2,3,4,5,6,7,8];
-bool[] <a href="../../dstats/base/byCategory.html#categories">categories</a> = [false, false, false, false, true, true, true, true];
-auto separated = <a href="../../dstats/base/byCategory.html">byCategory</a>(<a href="../../dstats/base/byCategory.html#values">values</a>, <a href="../../dstats/base/byCategory.html#categories">categories</a>);
-auto tResult = studentsTTest(separated.values);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">uint</span><span class="pun">[] <a href="../../dstats/base/byCategory.html#values"></span><span class="pln">values</span></a><span class="pln"> </span><span class="pun">= [</span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">7</span><span class="pun">,</span><span class="lit">8</span><span class="pun">];
+</span><span class="typ">bool</span><span class="pun">[] <a href="../../dstats/base/byCategory.html#categories"></span><span class="pln">categories</span></a><span class="pln"> </span><span class="pun">= [</span><span class="kwd">false</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">separated </span><span class="pun">= </span><span class="pln">byCategory</span><span class="pun">(<a href="../../dstats/base/byCategory.html#values"></span><span class="pln">values</span></a><span class="pun">, <a href="../../dstats/base/byCategory.html#categories"></span><span class="pln">categories</span></a><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">tResult </span><span class="pun">= </span><span class="pln">studentsTTest</span><span class="pun">(</span><span class="pln">separated<wbr/></span><span class="pun">.</span><span class="pln">values</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

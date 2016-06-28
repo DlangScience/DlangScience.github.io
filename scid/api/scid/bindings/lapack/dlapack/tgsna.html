@@ -6,19 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">bindings</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">lapack</a>
 						<ul class="tree-view">
 							<li>
@@ -301,50 +300,50 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void tgsna(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">tgsna</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char job,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">job</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char howmny,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">howmny</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int select,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">select</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* b,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* vl,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">vl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* vr,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">vr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* s,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">s</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* dif,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">dif</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int mm,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">mm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(double)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(double)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -357,50 +356,50 @@ void tgsna(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void tgsna(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">tgsna</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char job,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">job</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char howmny,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">howmny</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int select,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">select</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* a,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* b,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* vl,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">vl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* vr,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">vr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* s,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">s</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* dif,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">dif</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int mm,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">mm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;std.<wbr/>complex.<wbr/>Complex!(float)* work,
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex<wbr/></span><span class="pun">.</span><span class="typ">Complex</span>!(float)<span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -413,50 +412,50 @@ void tgsna(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void tgsna(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">tgsna</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char job,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">job</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char howmny,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">howmny</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int select,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">select</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* a,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* b,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* vl,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">vl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* vr,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">vr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* s,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">s</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* dif,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">dif</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int mm,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">mm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double* work,
+&nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -466,7 +465,7 @@ void tgsna(
 				<h2>Function tgsna</h2>
 				<p>Estimates reciprocal condition numbers for specified
 </p>
-<section><p>eigenvalues and/or eigenvectors of <a href="../../../../scid/bindings/lapack/dlapack/tgsna.html#a"><code class="prettyprint lang-d">a</code></a> matrix pair (A, B) in
+<section><p>eigenvalues and/or eigenvectors of a matrix pair (A, B) in
 </p>
 
 <p>generalized real Schur canonical form, as returned by SGGES.
@@ -476,50 +475,50 @@ void tgsna(
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void tgsna(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">tgsna</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;char job,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">job</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char howmny,
+&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">howmny</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int select,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">select</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int n,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* a,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lda,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* b,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldb,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldb</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* vl,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">vl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvl,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvl</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* vr,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">vr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int ldvr,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">ldvr</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* s,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">s</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* dif,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">dif</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int mm,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">mm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int m,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;float* work,
+&nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int lwork,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">lwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* iwork,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ref int info
+&nbsp;&nbsp;<span class="kwd">ref </span><span class="typ">int</span> <span class="pln">info</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

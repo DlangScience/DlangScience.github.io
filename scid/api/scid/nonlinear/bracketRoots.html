@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,12 +288,12 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function bracketRoots</h1>
 			<section>
-				<p>Divides the interval [<a href="../../scid/nonlinear/bracketRoots.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../scid/nonlinear/bracketRoots.html#b"><code class="prettyprint lang-d">b</code></a>] into the given number of equal-sized
+				<p>Divides the interval [a,b] into the given number of equal-sized
     subintervals,
-    checks whether any of the subintervals bracket <a href="../../scid/nonlinear/bracketRoots.html#a"><code class="prettyprint lang-d">a</code></a> root, and returns
+    checks whether any of the subintervals bracket a root, and returns
     the ones that do, together with the function values at those points.
 </p>
-<section><p>A <a href="../../scid/nonlinear/bracketRoots.html#buffer"><code class="prettyprint lang-d">buffer</code></a> of length at least <a href="../../scid/nonlinear/bracketRoots.html#nIntervals"><code class="prettyprint lang-d">nIntervals</code></a>+1, for storing the brackets, may
+<section><p>A buffer of length at least nIntervals+1, for storing the brackets, may
     optionally be provided.  If not, one will be allocated.
 </p>
 </section>
@@ -302,20 +301,20 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/nonlinear/RootBracket.html">RootBracket</a>!(T,ReturnType!Func)[] bracketRoots(T, Func)(
+							<code class="lang-d">
+<a href="../../scid/nonlinear/RootBracket.html"><span class="typ">RootBracket</span></a>!(T,ReturnType!Func)<span class="pun">[]</span> <span class="pln">bracketRoots</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T a,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T b,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint nIntervals,
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">nIntervals</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/nonlinear/RootBracket.html">RootBracket</a>!(T,ReturnType!Func)[] buffer = null
+&nbsp;&nbsp;<a href="../../scid/nonlinear/RootBracket.html"><span class="typ">RootBracket</span></a>!(T,ReturnType!Func)<span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

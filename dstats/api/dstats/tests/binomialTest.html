@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,9 +74,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function binomialTest</h1>
 			<section>
-				<p>Two-sided binomial test for whether P(success) == <a href="../../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a>.  The one-sided
-alternatives are covered by <a href="../../dstats/distrib/binomialCDF.html"><code class="prettyprint lang-d">dstats.distrib.binomialCDF</code></a> and binomialCDFR.
-<a href="../../dstats/tests/binomialTest.html#k"><code class="prettyprint lang-d">k</code></a> is the number of successes observed, <a href="../../dstats/tests/binomialTest.html#n"><code class="prettyprint lang-d">n</code></a> is the number of trials, <a href="../../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a>
+				<p>Two-sided binomial test for whether P(success) == p.  The one-sided
+alternatives are covered by dstats.distrib.binomialCDF and binomialCDFR.
+k is the number of successes observed, n is the number of trials, p
 is the probability of success under the null.
 </p>
 <section></section>
@@ -85,26 +84,26 @@ is the probability of success under the null.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double binomialTest(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">binomialTest</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;ulong k,
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">k</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ulong n,
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double p
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">p</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>The P-value for the alternative that P(success) != <a href="../../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a> against
-the null that P(success) == <a href="../../dstats/tests/binomialTest.html#p"><code class="prettyprint lang-d">p</code></a>.
+<p>The P-value for the alternative that P(success) != p against
+the null that P(success) == p.
 </p>
 </section>
 <section><h3>Notes</h3>
-<p>This test can also be performed using <a href="../../dstats/tests/multinomialTest.html"><code class="prettyprint lang-d">multinomialTest</code></a>, but this
+<p>This test can also be performed using multinomialTest, but this
 implementation is much faster and easier to use.
 </p>
 </section>

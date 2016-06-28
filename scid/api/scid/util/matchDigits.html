@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,13 +288,12 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function matchDigits</h1>
 			<section>
-				<p>Check whether <a href="../../scid/util/matchDigits.html#lhs"><code class="prettyprint lang-d">lhs</code></a> and <a href="../../scid/util/matchDigits.html#rhs"><code class="prettyprint lang-d">rhs</code></a> are equal to within the specified number
-    of significant digits.  Both <a href="../../scid/util/matchDigits.html#lhs"><code class="prettyprint lang-d">lhs</code></a> and <a href="../../scid/util/matchDigits.html#rhs"><code class="prettyprint lang-d">rhs</code></a> can be floating-point
+				<p>Check whether lhs and rhs are equal to within the specified number
+    of significant digits.  Both lhs and rhs can be floating-point
     numbers, complex numbers, or input ranges of floating-point or
     complex numbers.
 </p>
-<section><pre class="code"><code class="prettyprint lang-d">assert (matchDigits(0.1234567, 0.1234568));
-</code></pre>
+<section><pre class="code"><code class="lang-d"><span class="kwd">assert </span><span class="pun">(</span><span class="pln">matchDigits</span><span class="pun">(</span><span class="lit">0.1234567</span><span class="pun">, </span><span class="lit">0.1234568</span><span class="pun">));</span></code></pre>
 
 <p>    Note that numbers which are very close to zero should normally be
     compared using an absolute difference criterion.  This can be
@@ -307,35 +305,35 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-bool matchDigits(L, R)(
+							<code class="lang-d">
+<span class="typ">bool</span> <span class="pln">matchDigits</span><span class="pun">(</span><span class="pln">L</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;L lhs,
+&nbsp;&nbsp;<span class="pln">L</span> <span class="pln">lhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;R rhs,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">rhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint significantDigits = 6,
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">significantDigits</span> <span class="pun">=</span> <span class="lit">6</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real maxAbsDiff = 1e-20
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">maxAbsDiff</span> <span class="pun">=</span> <span class="lit">1e-20</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if ((isFloatingPoint!L || is(L T == Complex!T)) &amp;&amp; (isFloatingPoint!R || is(R U == Complex!U)));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">L </span><span class="pun">|| </span><span class="kwd">is</span><span class="pun">(</span><span class="pln">L T </span><span class="pun">== </span><span class="typ">Complex</span><span class="pun">!</span><span class="pln">T</span><span class="pun">)) &amp;&amp; (</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">R </span><span class="pun">|| </span><span class="kwd">is</span><span class="pun">(</span><span class="pln">R U </span><span class="pun">== </span><span class="typ">Complex</span><span class="pun">!</span><span class="pln">U</span><span class="pun">))</span><span class="pun">);</span>
 								<br/>
 								<br/>
-bool matchDigits(L, R)(
+<span class="typ">bool</span> <span class="pln">matchDigits</span><span class="pun">(</span><span class="pln">L</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;L lhs,
+&nbsp;&nbsp;<span class="pln">L</span> <span class="pln">lhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;R rhs,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">rhs</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint significantDigits = 6,
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">significantDigits</span> <span class="pun">=</span> <span class="lit">6</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real maxAbsDiff = 1e-20
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">maxAbsDiff</span> <span class="pun">=</span> <span class="lit">1e-20</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!L || isInputRange!R);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">L </span><span class="pun">|| </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">R</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

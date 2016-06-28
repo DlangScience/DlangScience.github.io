@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,7 +66,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -89,7 +88,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">minpack</a>
 						<ul class="tree-view">
 							<li>
@@ -289,13 +288,12 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function r1mpyq</h1>
 			<section>
-				<p>Given an <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a> matrix A, this subroutine computes AQ where
-    Q is the product of 2*(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>-1) transformations
+				<p>Given an m by n matrix A, this subroutine computes AQ where
+    Q is the product of 2*(n-1) transformations
 </p>
-<section><pre class="code"><code class="prettyprint lang-d">gv(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n">n</a>-1)*...*gv(1)*gw(1)*...*gw(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n">n</a>-1)
-</code></pre>
-<p>    and gv(i), gw(i) are Givens rotations in the (i,<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>) plane which
-    eliminate elements in the i-th and <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>-th planes, respectively.
+<section><pre class="code"><code class="lang-d"><span class="pln">gv</span><span class="pun">(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"></span><span class="pln">n</span></a><span class="pun">-</span><span class="lit">1</span><span class="pun">)*...*</span><span class="pln">gv</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)*</span><span class="pln">gw</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)*...*</span><span class="pln">gw</span><span class="pun">(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"></span><span class="pln">n</span></a><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span></code></pre>
+<p>    and gv(i), gw(i) are Givens rotations in the (i,n) plane which
+    eliminate elements in the i-th and n-th planes, respectively.
     Q itself is not given, rather the information to recover the
     gv, gw rotations is supplied.
 </p>
@@ -304,47 +302,47 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void r1mpyq(Real)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">r1mpyq</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;size_t m,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t n,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* a,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t lda,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* v,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">v</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* w
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">w</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="m">m</td><td> <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#a"><code class="prettyprint lang-d">a</code></a> positive integer input variable set to the number
+<tr><td id="m">m</td><td> a positive integer input variable set to the number
             of rows of A.
 </td></tr>
-<tr><td id="n">n</td><td> <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#a"><code class="prettyprint lang-d">a</code></a> positive integer input variable set to the number
+<tr><td id="n">n</td><td> a positive integer input variable set to the number
             of columns of A.
 </td></tr>
-<tr><td id="a">a</td><td> an array of length <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#m"><code class="prettyprint lang-d">m</code></a>^2. On input <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#a"><code class="prettyprint lang-d">a</code></a> must contain the matrix
+<tr><td id="a">a</td><td> an array of length m^2. On input a must contain the matrix
             A to be postmultiplied by the orthogonal matrix Q
             described above. On output AQ has replaced A.
-            the first min(<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#m"><code class="prettyprint lang-d">m</code></a>,<a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>) columns of Q contains the factored form.
-            on output Q has been accumulated into <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#a"><code class="prettyprint lang-d">a</code></a> square matrix.
+            the first min(m,n) columns of Q contains the factored form.
+            on output Q has been accumulated into a square matrix.
 </td></tr>
-<tr><td id="lda">lda</td><td> <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#a"><code class="prettyprint lang-d">a</code></a> positive integer input variable not less than <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#m"><code class="prettyprint lang-d">m</code></a>
-            which specifies the leading dimension of the array <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#a"><code class="prettyprint lang-d">a</code></a>.
+<tr><td id="lda">lda</td><td> a positive integer input variable not less than m
+            which specifies the leading dimension of the array a.
 </td></tr>
-<tr><td id="v">v</td><td> an input array of length <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>. <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#v"><code class="prettyprint lang-d">v</code></a>(i) must contain the
+<tr><td id="v">v</td><td> an input array of length n. v(i) must contain the
             information necessary to recover the Givens rotation gv(i)
             described above.
 </td></tr>
-<tr><td id="v">v</td><td> an input array of length <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#n"><code class="prettyprint lang-d">n</code></a>. <a href="../../../../scid/ports/minpack/r1mpyq/r1mpyq.html#v"><code class="prettyprint lang-d">v</code></a>(i) must contain the
+<tr><td id="v">v</td><td> an input array of length n. v(i) must contain the
             information necessary to recover the Givens rotation gw(i)
             described above.</td></tr>
 </table>

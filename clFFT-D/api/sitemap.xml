@@ -136,11 +136,4 @@
 <url><loc>http://127.0.0.1/clFFT/clfftVersionPatch.html</loc></url>
 <url><loc>http://127.0.0.1/clFFT/CLFFT_DUMP_PROGRAMS.html</loc></url>
 <url><loc>http://127.0.0.1/clFFT/FreeEnumMembers.html</loc></url>
-<url><loc>http://127.0.0.1/clFFT/FreeEnumMembers%21%28clfftDim%29.html</loc></url>
-<url><loc>http://127.0.0.1/clFFT/FreeEnumMembers%21%28clfftDirection%29.html</loc></url>
-<url><loc>http://127.0.0.1/clFFT/FreeEnumMembers%21%28clfftLayout%29.html</loc></url>
-<url><loc>http://127.0.0.1/clFFT/FreeEnumMembers%21%28clfftPrecision%29.html</loc></url>
-<url><loc>http://127.0.0.1/clFFT/FreeEnumMembers%21%28clfftResultLocation%29.html</loc></url>
-<url><loc>http://127.0.0.1/clFFT/FreeEnumMembers%21%28clfftResultTransposed%29.html</loc></url>
-<url><loc>http://127.0.0.1/clFFT/FreeEnumMembers%21%28clfftStatus%29.html</loc></url>
 </urlset>

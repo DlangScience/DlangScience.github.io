@@ -135,11 +135,4 @@ var symbols = [
 {name: 'clFFT.clfftVersionPatch', kind: "enummemberdeclaration", path: './clFFT/clfftVersionPatch.html', attributes: []},
 {name: 'clFFT.CLFFT_DUMP_PROGRAMS', kind: "enummemberdeclaration", path: './clFFT/CLFFT_DUMP_PROGRAMS.html', attributes: []},
 {name: 'clFFT.FreeEnumMembers', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers.html', attributes: []},
-{name: 'clFFT.FreeEnumMembers!(clfftDim)', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers!(clfftDim).html', attributes: []},
-{name: 'clFFT.FreeEnumMembers!(clfftDirection)', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers!(clfftDirection).html', attributes: []},
-{name: 'clFFT.FreeEnumMembers!(clfftLayout)', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers!(clfftLayout).html', attributes: []},
-{name: 'clFFT.FreeEnumMembers!(clfftPrecision)', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers!(clfftPrecision).html', attributes: []},
-{name: 'clFFT.FreeEnumMembers!(clfftResultLocation)', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers!(clfftResultLocation).html', attributes: []},
-{name: 'clFFT.FreeEnumMembers!(clfftResultTransposed)', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers!(clfftResultTransposed).html', attributes: []},
-{name: 'clFFT.FreeEnumMembers!(clfftStatus)', kind: "templatedeclaration", path: './clFFT/FreeEnumMembers!(clfftStatus).html', attributes: []},
 ];

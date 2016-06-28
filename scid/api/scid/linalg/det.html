@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -296,25 +295,24 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Unqual!T det(T, scid.matrix.Storage stor)(
+							<code class="lang-d">
+<span class="typ">Unqual</span>!T <span class="pln">det</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const <a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor) m
+&nbsp;&nbsp;<span class="kwd">const </span><a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(T,stor) <span class="pln">m</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">import <a href="../../scid/matrix.html">scid.matrix</a>;
+<pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../scid/matrix.html"></span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix</span></a><span class="pun">;
 ...
-auto <a href="../../scid/linalg/det.html#m">m</a> = matrix!double(2, 2);
-<a href="../../scid/linalg/det.html#m">m</a>[0,0] = 1.0;  <a href="../../scid/linalg/det.html#m">m</a>[0,1] = 2.0;
-<a href="../../scid/linalg/det.html#m">m</a>[1,0] = 3.0;  <a href="../../scid/linalg/det.html#m">m</a>[1,1] = 4.0;
+</span><span class="kwd">auto <a href="../../scid/linalg/det.html#m"></span><span class="pln">m</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">matrix</span><span class="pun">!</span><span class="typ">double</span><span class="pun">(</span><span class="lit">2</span><span class="pun">, </span><span class="lit">2</span><span class="pun">);
+<a href="../../scid/linalg/det.html#m"></span><span class="pln">m</span></a><span class="pun">[</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">] = </span><span class="lit">1.0</span><span class="pun">;  <a href="../../scid/linalg/det.html#m"></span><span class="pln">m</span></a><span class="pun">[</span><span class="lit">0</span><span class="pun">,</span><span class="lit">1</span><span class="pun">] = </span><span class="lit">2.0</span><span class="pun">;
+<a href="../../scid/linalg/det.html#m"></span><span class="pln">m</span></a><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">0</span><span class="pun">] = </span><span class="lit">3.0</span><span class="pun">;  <a href="../../scid/linalg/det.html#m"></span><span class="pln">m</span></a><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">1</span><span class="pun">] = </span><span class="lit">4.0</span><span class="pun">;
 
-auto d = det(<a href="../../scid/linalg/det.html#m">m</a>);
-writeln(d);   // Prints "-2"
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">d </span><span class="pun">= </span><span class="pln">det</span><span class="pun">(<a href="../../scid/linalg/det.html#m"></span><span class="pln">m</span></a><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">d</span><span class="pun">);   </span><span class="com">// Prints "-2"</span></code></pre>
 </section>
 
 			</section>

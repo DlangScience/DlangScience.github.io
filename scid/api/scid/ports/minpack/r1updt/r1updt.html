@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,7 +66,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -89,7 +88,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">minpack</a>
 						<ul class="tree-view">
 							<li>
@@ -289,23 +288,21 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function r1updt</h1>
 			<section>
-				<p>Given an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a> lower trapezoidal matrix S, an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a>-vector <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#u"><code class="prettyprint lang-d">u</code></a>,
-    and an <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>-vector <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#v"><code class="prettyprint lang-d">v</code></a>, the problem is to determine an
+				<p>Given an m by n lower trapezoidal matrix S, an m-vector u,
+    and an n-vector v, the problem is to determine an
     orthogonal matrix Q such that
 </p>
-<section><pre class="code"><code class="prettyprint lang-d">        t
-(S + <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#u">u</a> <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#v">v</a> ) Q
-</code></pre>
+<section><pre class="code"><code class="lang-d"><span class="pln">        t
+</span><span class="pun">(</span><span class="pln">S </span><span class="pun">+ <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#u"></span><span class="pln">u</span></a><span class="pln"> v </span><span class="pun">) </span><span class="pln">Q</span></code></pre>
 <p>    is again lower trapezoidal.
 </p>
 
-<p>    This subroutine determines Q as the product of 2*(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a> - 1)
+<p>    This subroutine determines Q as the product of 2*(n - 1)
     transformations
 </p>
-<pre class="code"><code class="prettyprint lang-d">gv(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n">n</a>-1)*...*gv(1)*gw(1)*...*gw(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n">n</a>-1)
-</code></pre>
-<p>    where gv(i), gw(i) are Givens rotations in the (i,<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>) plane
-    which eliminate elements in the i-th and <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>-th planes,
+<pre class="code"><code class="lang-d"><span class="pln">gv</span><span class="pun">(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"></span><span class="pln">n</span></a><span class="pun">-</span><span class="lit">1</span><span class="pun">)*...*</span><span class="pln">gv</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)*</span><span class="pln">gw</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)*...*</span><span class="pln">gw</span><span class="pun">(<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"></span><span class="pln">n</span></a><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span></code></pre>
+<p>    where gv(i), gw(i) are Givens rotations in the (i,n) plane
+    which eliminate elements in the i-th and n-th planes,
     respectively. Q itself is not accumulated, rather the
     information to recover the gv, gw rotations is returned.
 </p>
@@ -314,26 +311,26 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void r1updt(Real)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">r1updt</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;size_t m,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t n,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* s,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">s</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t ls,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">ls</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* u,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">u</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* v,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">v</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* w,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">w</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;out bool sing
+&nbsp;&nbsp;<span class="kwd">out </span><span class="typ">bool</span> <span class="pln">sing</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -343,29 +340,29 @@ void r1updt(Real)(
         of rows of S.
 </td></tr>
 <tr><td id="n">n</td><td> a positive integer input variable set to the number
-        of columns of S. <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a> must not exceed <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a>.
+        of columns of S. n must not exceed m.
 </td></tr>
-<tr><td id="s">s</td><td> an array of length <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#ls"><code class="prettyprint lang-d">ls</code></a>. on input <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#s"><code class="prettyprint lang-d">s</code></a> must contain the lower
-        trapezoidal matrix S stored by columns. on output <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#s"><code class="prettyprint lang-d">s</code></a> contains
+<tr><td id="s">s</td><td> an array of length ls. on input s must contain the lower
+        trapezoidal matrix S stored by columns. on output s contains
         the lower trapezoidal matrix produced as described above.
 </td></tr>
 <tr><td id="ls">ls</td><td> a positive integer input variable not less than
-        (<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>*(2*<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a>-<a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>+1))/2.
+        (n*(2*m-n+1))/2.
 </td></tr>
-<tr><td id="u">u</td><td> an input array of length <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a> which must contain the
-        vector <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#u"><code class="prettyprint lang-d">u</code></a>.
+<tr><td id="u">u</td><td> an input array of length m which must contain the
+        vector u.
 </td></tr>
-<tr><td id="v">v</td><td> an array of length <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#n"><code class="prettyprint lang-d">n</code></a>. on input <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#v"><code class="prettyprint lang-d">v</code></a> must contain the vector
-        <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#v"><code class="prettyprint lang-d">v</code></a>. on output <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#v"><code class="prettyprint lang-d">v</code></a>(i) contains the information necessary to
+<tr><td id="v">v</td><td> an array of length n. on input v must contain the vector
+        v. on output v(i) contains the information necessary to
         recover the Givens rotation gv(i) described above.
 </td></tr>
-<tr><td id="w">w</td><td> an output array of length <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#m"><code class="prettyprint lang-d">m</code></a>. <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#w"><code class="prettyprint lang-d">w</code></a>(i) contains information
+<tr><td id="w">w</td><td> an output array of length m. w(i) contains information
         necessary to recover the Givens rotation gw(i) described
         above.
 </td></tr>
-<tr><td id="sing">sing</td><td> a logical output variable. <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#sing"><code class="prettyprint lang-d">sing</code></a> is set true if any
-        of the diagonal elements of the output <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#s"><code class="prettyprint lang-d">s</code></a> are zero. otherwise
-        <a href="../../../../scid/ports/minpack/r1updt/r1updt.html#sing"><code class="prettyprint lang-d">sing</code></a> is set false.</td></tr>
+<tr><td id="sing">sing</td><td> a logical output variable. sing is set true if any
+        of the diagonal elements of the output s are zero. otherwise
+        sing is set false.</td></tr>
 </table>
 </section>
 

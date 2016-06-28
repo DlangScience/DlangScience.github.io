@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -88,14 +87,14 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> kruskalWallis(T...)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">kruskalWallis</span><span class="pun">(</span><span class="pln">T</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T dataIn
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">dataIn</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!(typeof(dataIn[0].front)) || allSatisfy!(doubleInput, T));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">dataIn</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">front</span><span class="pun">)) || </span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">doubleInput</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -105,7 +104,7 @@ if (doubleInput!(typeof(dataIn[0].front)) || allSatisfy!(doubleInput, T));
 </p>
 </section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the K statistic and the P-value for the null that
+<p>A TestRes with the K statistic and the P-value for the null that
  no group is stochastically larger than any other against the alternative that
  groups are stochastically ordered.
 </p>

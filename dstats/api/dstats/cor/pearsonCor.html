@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -86,21 +85,21 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/cor/PearsonCor.html">PearsonCor</a> pearsonCor(T, U)(
+							<code class="lang-d">
+<a href="../../dstats/cor/PearsonCor.html"><span class="typ">PearsonCor</span></a> <span class="pln">pearsonCor</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T input1,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">input1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U input2
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">input2</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!T &amp;&amp; doubleInput!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Note</h3>
-<p>The <a href="../../dstats/cor/PearsonCor.html"><code class="prettyprint lang-d">PearsonCor</code></a> struct returned by this function is alias this'd to the
+<p>The PearsonCor struct returned by this function is alias this'd to the
  correlation coefficient.  Therefore, the result from this function can
  be treated simply as a floating point number.
 </p>

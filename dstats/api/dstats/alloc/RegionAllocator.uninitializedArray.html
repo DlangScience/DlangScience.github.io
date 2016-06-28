@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,21 +74,21 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.uninitializedArray</h1>
 			<section>
-				<p>Same as <a href="../../dstats/alloc/RegionAllocator.newArray.html"><code class="prettyprint lang-d">newArray</code></a>, except skips initialization of elements for
+				<p>Same as <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.newArray.html"><span class="pln">newArray</span></a></code>, except skips initialization of elements for
     performance reasons.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-auto uninitializedArray(T, I...)(
+							<code class="lang-d">
+<span class="kwd">auto</span> <span class="pln">uninitializedArray</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">I</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;I sizes
+&nbsp;&nbsp;<span class="pln">I</span> <span class="pln">sizes</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (allSatisfy!(isIntegral, I));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">isIntegral</span><span class="pun">, </span><span class="pln">I</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

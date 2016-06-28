@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,19 +288,19 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Interval.contains</h1>
 			<section>
-				<p>Check whether the value <a href="../../scid/types/Interval.contains.html#x"><code class="prettyprint lang-d">x</code></a> is contained in the <a href="../../scid/types/interval.html"><code class="prettyprint lang-d">interval</code></a>,
-        i.e. whether <a href="../../scid/types/Interval.a.html"><code class="prettyprint lang-d">a</code></a> &lt;= <a href="../../scid/types/Interval.contains.html#x"><code class="prettyprint lang-d">x</code></a> &lt;= <a href="../../scid/types/Interval.b.html"><code class="prettyprint lang-d">b</code></a> or <a href="../../scid/types/Interval.b.html"><code class="prettyprint lang-d">b</code></a> &lt;= <a href="../../scid/types/Interval.contains.html#x"><code class="prettyprint lang-d">x</code></a> &lt;= <a href="../../scid/types/Interval.a.html"><code class="prettyprint lang-d">a</code></a>.
+				<p>Check whether the value x is contained in the interval,
+        i.e. whether a &lt;= x &lt;= b or b &lt;= x &lt;= a.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-bool contains(X)(
+							<code class="lang-d">
+<span class="typ">bool</span> <span class="pln">contains</span><span class="pun">(</span><span class="pln">X</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;X x
+&nbsp;&nbsp;<span class="pln">X</span> <span class="pln">x</span>
 								<br/>
-) const @safe;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">const @safe</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

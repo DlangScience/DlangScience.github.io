@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -300,25 +299,25 @@ $('#symbolSearchPane').show();
 <p>    This method gives a much higher degree of accuracy in the answer
     compared to a single finite difference calculation, but requires
     more function evaluations; typically 6 to 12. The maximum number
-    of function evaluations is 2*<a href="../../scid/calculus/diff.html#tableauSize"><code class="prettyprint lang-d">tableauSize</code></a>.
+    of function evaluations is <code class="lang-d"><span class="lit">2</span><span class="pun">*<a href="../../scid/calculus/diff.html#tableauSize"></span><span class="pln">tableauSize</span></a></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/types/Result.html">Result</a>!real diff(Func)(
+							<code class="lang-d">
+<a href="../../scid/types/Result.html"><span class="typ">Result</span></a>!real <span class="pln">diff</span><span class="pun">(</span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real x,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t tableauSize = 10
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">tableauSize</span> <span class="pun">=</span> <span class="lit">10</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
@@ -326,10 +325,10 @@ $('#symbolSearchPane').show();
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="f">f</td><td> The function of which to take the derivative.</td></tr>
 <tr><td id="x">x</td><td> The point at which to take the derivative.</td></tr>
-<tr><td id="scale">scale</td><td> A "characteristic <a href="../../scid/calculus/diff.html#scale"><code class="prettyprint lang-d">scale</code></a>" over which the function
+<tr><td id="scale">scale</td><td> A "characteristic scale" over which the function
             changes. (optional)</td></tr>
 <tr><td id="tableauSize">tableauSize</td><td> The values of the consecutive approximations
-            are stored in a <a href="../../scid/calculus/diff.html#tableauSize"><code class="prettyprint lang-d">tableauSize</code></a>-by-<a href="../../scid/calculus/diff.html#tableauSize"><code class="prettyprint lang-d">tableauSize</code></a> triangular
+            are stored in a <code class="lang-d"><a href="../../scid/calculus/diff.html#tableauSize"><span class="pln">tableauSize</span></a></code>-by-<code class="lang-d"><a href="../../scid/calculus/diff.html#tableauSize"><span class="pln">tableauSize</span></a></code> triangular
             matrix. Sometimes this number can be reduced to limit
             the possible number of function evaluations (see above)
             and thus greater speed, and sometimes it can be increased
@@ -339,28 +338,27 @@ $('#symbolSearchPane').show();
 <section><h3>Example</h3>
 <p>This example is from Ridders' paper:
 </p>
-<pre class="code"><code class="prettyprint lang-d">// Let's take the derivative of
-//                 <a href="../../scid/calculus/diff.html#x">x</a>
+<pre class="code"><code class="lang-d"><span class="com">// Let's take the derivative of
+//                 x
 //                e
-//     <a href="../../scid/calculus/diff.html#f">f</a>(<a href="../../scid/calculus/diff.html#x">x</a>) = ----------
+//     f(x) = ----------
 //                     2
-//            sin <a href="../../scid/calculus/diff.html#x">x</a> - <a href="../../scid/calculus/diff.html#x">x</a>
-// at <a href="../../scid/calculus/diff.html#x">x</a>=1.
-real <a href="../../scid/calculus/diff.html#f">f</a>(real <a href="../../scid/calculus/diff.html#x">x</a>) { return exp(<a href="../../scid/calculus/diff.html#x">x</a>)/(sin(<a href="../../scid/calculus/diff.html#x">x</a>)-<a href="../../scid/calculus/diff.html#x">x</a>*<a href="../../scid/calculus/diff.html#x">x</a>); }
-real dfdxAt1 = 140.73773557129660339;
+//            sin x - x
+// at x=1.
+</span><span class="typ">real <a href="../../scid/calculus/diff.html#f"></span><span class="pln">f</span></a><span class="pun">(</span><span class="typ">real <a href="../../scid/calculus/diff.html#x"></span><span class="pln">x</span></a><span class="pun">) { </span><span class="kwd">return </span><span class="pln">exp</span><span class="pun">(<a href="../../scid/calculus/diff.html#x"></span><span class="pln">x</span></a><span class="pun">)/(</span><span class="pln">sin</span><span class="pun">(<a href="../../scid/calculus/diff.html#x"></span><span class="pln">x</span></a><span class="pun">)-<a href="../../scid/calculus/diff.html#x"></span><span class="pln">x</span></a><span class="pun">*<a href="../../scid/calculus/diff.html#x"></span><span class="pln">x</span></a><span class="pun">); }
+</span><span class="typ">real </span><span class="pln">dfdxAt1 </span><span class="pun">= </span><span class="lit">140.73773557129660339</span><span class="pun">;
 
-// <a href="../../scid/calculus/diff.html#scale">scale</a>=0.01 is appropriate for this function.
-auto r = diff(&amp;<a href="../../scid/calculus/diff.html#f">f</a>, 1.0, 0.01);
-assert (abs(r.value - dfdxAt1) &lt;= r.error);
+</span><span class="com">// scale=0.01 is appropriate for this function.
+</span><span class="kwd">auto </span><span class="pln">r </span><span class="pun">= </span><span class="pln">diff</span><span class="pun">(&amp;<a href="../../scid/calculus/diff.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">0.01</span><span class="pun">);
+</span><span class="kwd">assert </span><span class="pun">(</span><span class="pln">abs</span><span class="pun">(</span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">value </span><span class="pun">- </span><span class="pln">dfdxAt1</span><span class="pun">) &lt;= </span><span class="pln">r<wbr/></span><span class="pun">.</span><span class="pln">error</span><span class="pun">);
 
-// Note that if we use the default <a href="../../scid/calculus/diff.html#scale">scale</a>, it won't work:
-auto s = diff(&amp;<a href="../../scid/calculus/diff.html#f">f</a>, 1.0);
-writeln(s.error);           // prints "inf"
-</code></pre>
+</span><span class="com">// Note that if we use the default scale, it won't work:
+</span><span class="kwd">auto </span><span class="pln">s </span><span class="pun">= </span><span class="pln">diff</span><span class="pun">(&amp;<a href="../../scid/calculus/diff.html#f"></span><span class="pln">f</span></a><span class="pun">, </span><span class="lit">1.0</span><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">s<wbr/></span><span class="pun">.</span><span class="pln">error</span><span class="pun">);           </span><span class="com">// prints "inf"</span></code></pre>
 </section>
 <section><h3>References</h3>
 <p><ul>        <li>            C. J. F. Ridders,
-            <i>Accurate computation of F'(<a href="../../scid/calculus/diff.html#x"><code class="prettyprint lang-d">x</code></a>) and F'(<a href="../../scid/calculus/diff.html#x"><code class="prettyprint lang-d">x</code></a>)F''(<a href="../../scid/calculus/diff.html#x"><code class="prettyprint lang-d">x</code></a>)</i>.
+            <i>Accurate computation of F'(x) and F'(x)F''(x)</i>.
             Advances in Engineering Software, vol. 4 (1982), issue 2, p. 75.</li>
         <li>            W. H. Press, S. A. Teukolsky, W. T. Vetterling, and B. P. Flannery,
             <i>Numerical Recipes in C++</i> (2nd ed.).

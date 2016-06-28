@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,29 +75,29 @@ $('#symbolSearchPane').show();
 			<h1>Function scanThreadLocalStack</h1>
 			<section>
 				<p>These properties determine whether the default thread-local
-<a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance is scanned by the garbage collector.
+<code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance is scanned by the garbage collector.
 The default is no.  In most cases, scanning a stack this long-lived is not
-recommended, as it will cause too many false pointers.  (See regionallocator, <a href="../../dstats/alloc/GCScan.html"><code class="prettyprint lang-d">GCScan</code></a> for details.)
+recommended, as it will cause too many false pointers.  (See regionallocator, GCScan for details.)
 </p>
 <section><p>The setter is only effective before the global function
-<a href="../../dstats/alloc/newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a> has been called for the first time in the current
+<code class="lang-d"><a href="../../dstats/alloc/newRegionAllocator.html"><span class="pln">newRegionAllocator</span></a></code> has been called for the first time in the current
 thread.  Attempts to set this property after the first call to this
-function from the current thread throw a <a href="../../dstats/alloc/RegionAllocatorException.html"><code class="prettyprint lang-d">RegionAllocatorException</code></a>.
+function from the current thread throw a <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorException.html"><span class="typ">RegionAllocatorException</span></a></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-bool scanThreadLocalStack() nothrow @property @safe;
+							<code class="lang-d">
+<span class="typ">bool</span> <span class="pln">scanThreadLocalStack<span class="pun">()</span><span class="pln"> </span><span class="kwd">nothrow @property @safe</span><span class="pun">;</span>
 								<br/>
 								<br/>
-bool scanThreadLocalStack(
+<span class="typ">bool</span> <span class="pln">scanThreadLocalStack</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;bool shouldScan
+&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">shouldScan</span>
 								<br/>
-) @property @safe;
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">@property @safe</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

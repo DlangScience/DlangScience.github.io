@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -308,7 +307,7 @@ $('#symbolSearchPane').show();
 								<code>bisect</code>
 							</a>
 						</td>
-						<td>Use bisection to find the point where the given <a href="../scid/nonlinear/bisect.html#predicate"><code class="prettyprint lang-d">predicate</code></a> goes from
+						<td>Use bisection to find the point where the given predicate goes from
     returning false to returning true.
 </td>
 					</tr>
@@ -318,7 +317,7 @@ $('#symbolSearchPane').show();
 								<code>bracketRoot</code>
 							</a>
 						</td>
-						<td>Bracket a root of the function <a href="../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
+						<td>Bracket a root of the function f.
 </td>
 					</tr>
 					<tr>
@@ -327,9 +326,9 @@ $('#symbolSearchPane').show();
 								<code>bracketRoots</code>
 							</a>
 						</td>
-						<td>Divides the interval [<a href="../scid/nonlinear/bracketRoots.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/nonlinear/bracketRoots.html#b"><code class="prettyprint lang-d">b</code></a>] into the given number of equal-sized
+						<td>Divides the interval [a,b] into the given number of equal-sized
     subintervals,
-    checks whether any of the subintervals bracket <a href="../scid/nonlinear/bracketRoots.html#a"><code class="prettyprint lang-d">a</code></a> root, and returns
+    checks whether any of the subintervals bracket a root, and returns
     the ones that do, together with the function values at those points.
 </td>
 					</tr>
@@ -349,7 +348,7 @@ $('#symbolSearchPane').show();
 								<code>findRoot</code>
 							</a>
 						</td>
-						<td>Find a root of the function <a href="../scid/nonlinear/findRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
+						<td>Find a root of the function f.
 </td>
 					</tr>
 					<tr>
@@ -358,8 +357,8 @@ $('#symbolSearchPane').show();
 								<code>findRoots</code>
 							</a>
 						</td>
-						<td>Uses <a href="../scid/nonlinear/bracketRoots.html"><code class="prettyprint lang-d">bracketRoots</code></a>() to divide the interval [<a href="../scid/nonlinear/findRoots.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../scid/nonlinear/findRoots.html#b"><code class="prettyprint lang-d">b</code></a>] into subintervals
-    and check which ones bracket roots.  Then, <a href="../scid/nonlinear/findRoot.html"><code class="prettyprint lang-d">findRoot</code></a>() is applied
+						<td>Uses bracketRoots() to divide the interval [a,b] into subintervals
+    and check which ones bracket roots.  Then, findRoot() is applied
     to each bracketing interval, and an array containing the roots
     is returned.
 </td>

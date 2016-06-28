@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -92,7 +91,7 @@ also the values in PrinCompOptions.init.
 								<td>
 									<a href="../../dstats/pca/PrinCompOptions.absError.html" class="public"><code>absError</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>Absolute error at which to stop the optimization procedure.  Default:  1e-5
 </td>
 							</tr>
@@ -100,7 +99,7 @@ also the values in PrinCompOptions.init.
 								<td>
 									<a href="../../dstats/pca/PrinCompOptions.destructive.html" class="public"><code>destructive</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
 								<td>Overwrite input matrix instead of copying.  Ignored if the matrix
     passed in does not have assignable, lvalue elements and centering or
     scaling is enabled.  Default value:  false.
@@ -110,7 +109,7 @@ also the values in PrinCompOptions.init.
 								<td>
 									<a href="../../dstats/pca/PrinCompOptions.maxIter.html" class="public"><code>maxIter</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span></code></td>
 								<td>Maximum iterations for the optimization procedure.  After this many
     iterations, the algorithm gives up and calls teh solution "good enough"
     no matter what.  For exploratory analyses, "good enough" solutions
@@ -121,7 +120,7 @@ also the values in PrinCompOptions.init.
 								<td>
 									<a href="../../dstats/pca/PrinCompOptions.relError.html" class="public"><code>relError</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>Relative error at which to stop the optimization procedure.  Default: 1e-4
 </td>
 							</tr>
@@ -129,8 +128,8 @@ also the values in PrinCompOptions.init.
 								<td>
 									<a href="../../dstats/pca/PrinCompOptions.transpose.html" class="public"><code>transpose</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
-								<td>Effectively <code class="prettyprint lang-d">transpose</code> the matrix.  If enabled, treat each column as a
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
+								<td>Effectively transpose the matrix.  If enabled, treat each column as a
     data points and each row as a dimension.  If disabled, do the opposite.
     Note that, if this is enabled, each row will be scaled and centered,
     not each column.  Default value:  false.
@@ -140,17 +139,17 @@ also the values in PrinCompOptions.init.
 								<td>
 									<a href="../../dstats/pca/PrinCompOptions.unitVariance.html" class="public"><code>unitVariance</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
 								<td>Scale each column to unit variance.  Note that, if this option is set to
-    true, <a href="../../dstats/pca/PrinCompOptions.zeroMean.html"><code class="prettyprint lang-d">zeroMean</code></a> is ignored and the mean of each column is set to zero even
-    if <a href="../../dstats/pca/PrinCompOptions.zeroMean.html"><code class="prettyprint lang-d">zeroMean</code></a> is false.  Default value:  false.
+    true, zeroMean is ignored and the mean of each column is set to zero even
+    if zeroMean is false.  Default value:  false.
 </td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/pca/PrinCompOptions.zeroMean.html" class="public"><code>zeroMean</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
 								<td>Center each column to zero mean.  Default value:  true.
 </td>
 							</tr>

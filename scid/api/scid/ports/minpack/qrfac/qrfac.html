@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,7 +66,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -89,7 +88,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">minpack</a>
 						<ul class="tree-view">
 							<li>
@@ -290,16 +289,15 @@ $('#symbolSearchPane').show();
 			<h1>Function qrfac</h1>
 			<section>
 				<p>This subroutine uses Householder transformations with column
-    pivoting (optional) to compute <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> QR factorization of the
-    <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a> matrix A. That is, <code class="prettyprint lang-d">qrfac</code> determines an orthogonal
-    matrix Q, <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> permutation matrix P, and an upper trapezoidal
+    pivoting (optional) to compute a QR factorization of the
+    m by n matrix A. That is, qrfac determines an orthogonal
+    matrix Q, a permutation matrix P, and an upper trapezoidal
     matrix R with diagonal elements of nonincreasing magnitude,
     such that AP = QR. The Householder transformation for
-    column k, k = 1,2,...,min(<a href="../../../../scid/ports/minpack/qrfac/qrfac.html#m"><code class="prettyprint lang-d">m</code></a>,<a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a>), is of the form
+    column k, k = 1,2,...,min(m,n), is of the form
 </p>
-<section><pre class="code"><code class="prettyprint lang-d">                t
-i - (1/u(k)) u u
-</code></pre>
+<section><pre class="code"><code class="lang-d"><span class="pln">                t
+i </span><span class="pun">- (</span><span class="lit">1</span><span class="pun">/</span><span class="pln">u</span><span class="pun">(</span><span class="pln">k</span><span class="pun">)) </span><span class="pln">u u</span></code></pre>
 <p>    where u has zeros in the first k-1 positions. The form of
     this transformation and the method of pivoting first
     appeared in the corresponding LINPACK subroutine.
@@ -309,74 +307,74 @@ i - (1/u(k)) u u
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void qrfac(Real)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">qrfac</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;size_t m,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t n,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* a,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t lda,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">lda</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;bool pivot,
+&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">pivot</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t* ipvt,
+&nbsp;&nbsp;<span class="pln">size_t</span><span class="pun">*</span> <span class="pln">ipvt</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t lipvt,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">lipvt</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* rdiag,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">rdiag</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* acnorm,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">acnorm</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* wa
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">wa</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="m">m</td><td> <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> positive integer input variable set to the number
-        of rows of <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a>.
+<tr><td id="m">m</td><td> a positive integer input variable set to the number
+        of rows of a.
 </td></tr>
-<tr><td id="n">n</td><td> <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> positive integer input variable set to the number
-        of columns of <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a>.
+<tr><td id="n">n</td><td> a positive integer input variable set to the number
+        of columns of a.
 </td></tr>
-<tr><td id="a">a</td><td> an <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#m"><code class="prettyprint lang-d">m</code></a> by <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a> array. on input <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> contains the matrix for
+<tr><td id="a">a</td><td> an m by n array. on input a contains the matrix for
         which the qr factorization is to be computed. on output
-        the strict upper trapezoidal part of <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> contains the strict
+        the strict upper trapezoidal part of a contains the strict
         upper trapezoidal part of r, and the lower trapezoidal
-        part of <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> contains <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> factored form of q (the non-trivial
+        part of a contains a factored form of q (the non-trivial
         elements of the u vectors described above).
 </td></tr>
-<tr><td id="lda">lda</td><td> <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> positive integer input variable not less than <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#m"><code class="prettyprint lang-d">m</code></a>
-        which specifies the leading dimension of the array <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a>.
+<tr><td id="lda">lda</td><td> a positive integer input variable not less than m
+        which specifies the leading dimension of the array a.
 </td></tr>
-<tr><td id="pivot">pivot</td><td> <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> logical input variable. if <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#pivot"><code class="prettyprint lang-d">pivot</code></a> is set true,
-        then column pivoting is enforced. if <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#pivot"><code class="prettyprint lang-d">pivot</code></a> is set false,
+<tr><td id="pivot">pivot</td><td> a logical input variable. if pivot is set true,
+        then column pivoting is enforced. if pivot is set false,
         then no column pivoting is done.
 </td></tr>
-<tr><td id="ipvt">ipvt</td><td> an integer output array of length <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#lipvt"><code class="prettyprint lang-d">lipvt</code></a>. <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#ipvt"><code class="prettyprint lang-d">ipvt</code></a>
-        defines the permutation matrix p such that <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a>*p = q*r.
-        column j of p is column <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#ipvt"><code class="prettyprint lang-d">ipvt</code></a>(j) of the identity matrix.
-        if <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#pivot"><code class="prettyprint lang-d">pivot</code></a> is false, <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#ipvt"><code class="prettyprint lang-d">ipvt</code></a> is not referenced.
+<tr><td id="ipvt">ipvt</td><td> an integer output array of length lipvt. ipvt
+        defines the permutation matrix p such that a*p = q*r.
+        column j of p is column ipvt(j) of the identity matrix.
+        if pivot is false, ipvt is not referenced.
 </td></tr>
-<tr><td id="lipvt">lipvt</td><td> <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> positive integer input variable. if <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#pivot"><code class="prettyprint lang-d">pivot</code></a> is false,
-        then <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#lipvt"><code class="prettyprint lang-d">lipvt</code></a> may be as small as 1. if <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#pivot"><code class="prettyprint lang-d">pivot</code></a> is true, then
-        <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#lipvt"><code class="prettyprint lang-d">lipvt</code></a> must be at least <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a>.
+<tr><td id="lipvt">lipvt</td><td> a positive integer input variable. if pivot is false,
+        then lipvt may be as small as 1. if pivot is true, then
+        lipvt must be at least n.
 </td></tr>
-<tr><td id="rdiag">rdiag</td><td> an output array of length <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a> which contains the
+<tr><td id="rdiag">rdiag</td><td> an output array of length n which contains the
         diagonal elements of r.
 </td></tr>
-<tr><td id="acnorm">acnorm</td><td> an output array of length <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a> which contains the
-        norms of the corresponding columns of the input matrix <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a>.
-        if this information is not needed, then <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#acnorm"><code class="prettyprint lang-d">acnorm</code></a> can coincide
-        with <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#rdiag"><code class="prettyprint lang-d">rdiag</code></a>.
+<tr><td id="acnorm">acnorm</td><td> an output array of length n which contains the
+        norms of the corresponding columns of the input matrix a.
+        if this information is not needed, then acnorm can coincide
+        with rdiag.
 </td></tr>
-<tr><td id="wa">wa</td><td> <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#a"><code class="prettyprint lang-d">a</code></a> work array of length <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#n"><code class="prettyprint lang-d">n</code></a>. if <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#pivot"><code class="prettyprint lang-d">pivot</code></a> is false, then <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#wa"><code class="prettyprint lang-d">wa</code></a>
-        can coincide with <a href="../../../../scid/ports/minpack/qrfac/qrfac.html#rdiag"><code class="prettyprint lang-d">rdiag</code></a>.</td></tr>
+<tr><td id="wa">wa</td><td> a work array of length n. if pivot is false, then wa
+        can coincide with rdiag.</td></tr>
 </table>
 </section>
 

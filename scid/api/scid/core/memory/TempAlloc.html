@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -31,7 +30,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">core</a>
 						<ul class="tree-view">
 							<li>
@@ -298,9 +297,9 @@ $('#symbolSearchPane').show();
 <section><p>Under the hood, this works by allocating large blocks (currently 4 MB)
  from the GC, and sub-allocating these as a stack.  Very large allocations
  (currently &gt; 4MB) are simply performed on the heap.  There are two ways to
- <a href="../../../scid/core/memory/TempAlloc.free.html"><code class="prettyprint lang-d">free</code></a> memory:  Calling <a href="../../../scid/core/memory/TempAlloc.free.html"><code class="prettyprint lang-d">TempAlloc.free</code></a>() frees the last allocated block.
- Calling <a href="../../../scid/core/memory/TempAlloc.frameFree.html"><code class="prettyprint lang-d">TempAlloc.frameFree</code></a>() frees all memory allocated since the last
- call to <a href="../../../scid/core/memory/TempAlloc.frameInit.html"><code class="prettyprint lang-d">TempAlloc.frameInit</code></a>().
+ free memory:  Calling TempAlloc.free() frees the last allocated block.
+ Calling TempAlloc.frameFree() frees all memory allocated since the last
+ call to TempAlloc.frameInit().
 </p>
 
 <p> All allocations are aligned on 16-byte boundaries using padding, since on x86,
@@ -324,8 +323,8 @@ $('#symbolSearchPane').show();
 										<code>frameFree</code>
 									</a>
 								</td>
-								<td>Frees all memory allocated by <a href="../../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> since the last call to
- <a href="../../../scid/core/memory/TempAlloc.frameInit.html"><code class="prettyprint lang-d">frameInit</code></a>().
+								<td>Frees all memory allocated by TempAlloc since the last call to
+ frameInit().
 </td>
 							</tr>
 							<tr>
@@ -334,7 +333,7 @@ $('#symbolSearchPane').show();
 										<code>frameFree</code>
 									</a>
 								</td>
-								<td>Same as <a href="../../../scid/core/memory/TempAlloc.frameFree.html"><code class="prettyprint lang-d">frameFree</code></a>() but uses <a href="../../../scid/core/memory/TempAlloc.frameFree.html#stateCopy"><code class="prettyprint lang-d">stateCopy</code></a> cached on stack by caller
+								<td>Same as frameFree() but uses stateCopy cached on stack by caller
  to avoid a thread-local storage lookup.  Strictly a speed hack.
 </td>
 							</tr>
@@ -346,7 +345,7 @@ $('#symbolSearchPane').show();
 								</td>
 								<td>Initializes a frame, i.e. marks the current allocation position.
  Memory past the position at which this was last called will be
- freed when <a href="../../../scid/core/memory/TempAlloc.frameFree.html"><code class="prettyprint lang-d">frameFree</code></a>() is called.  Returns a reference to the
+ freed when frameFree() is called.  Returns a reference to the
  State class in case the caller wants to cache it for speed.
 </td>
 							</tr>
@@ -356,7 +355,7 @@ $('#symbolSearchPane').show();
 										<code>frameInit</code>
 									</a>
 								</td>
-								<td>Same as <a href="../../../scid/core/memory/TempAlloc.frameInit.html"><code class="prettyprint lang-d">frameInit</code></a>() but uses <a href="../../../scid/core/memory/TempAlloc.frameInit.html#stateCopy"><code class="prettyprint lang-d">stateCopy</code></a> cached on stack by caller
+								<td>Same as frameInit() but uses stateCopy cached on stack by caller
  to avoid a thread-local storage lookup.  Strictly a speed hack.
 </td>
 							</tr>
@@ -366,10 +365,10 @@ $('#symbolSearchPane').show();
 										<code>free</code>
 									</a>
 								</td>
-								<td>Frees the last piece of memory allocated by <a href="../../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a>.  Since
+								<td>Frees the last piece of memory allocated by TempAlloc.  Since
  all memory must be allocated and freed in strict LIFO order,
  there's no need to pass a pointer in.  All bookkeeping for figuring
- out what to <code class="prettyprint lang-d">free</code> is done internally.
+ out what to free is done internally.
 </td>
 							</tr>
 							<tr>
@@ -378,7 +377,7 @@ $('#symbolSearchPane').show();
 										<code>free</code>
 									</a>
 								</td>
-								<td>Same as <a href="../../../scid/core/memory/TempAlloc.free.html"><code class="prettyprint lang-d">free</code></a>() but uses <a href="../../../scid/core/memory/TempAlloc.free.html#stateCopy"><code class="prettyprint lang-d">stateCopy</code></a> cached on stack by caller
+								<td>Same as free() but uses stateCopy cached on stack by caller
  to avoid a thread-local storage lookup.  Strictly a speed hack.
 </td>
 							</tr>
@@ -400,7 +399,7 @@ $('#symbolSearchPane').show();
 										<code>malloc</code>
 									</a>
 								</td>
-								<td>Allocates <a href="../../../scid/core/memory/TempAlloc.malloc.html#nbytes"><code class="prettyprint lang-d">nbytes</code></a> bytes on the <a href="../../../scid/core/memory/TempAlloc.html"><code class="prettyprint lang-d">TempAlloc</code></a> stack.  NOT safe for real-time
+								<td>Allocates nbytes bytes on the TempAlloc stack.  NOT safe for real-time
  programming, since if there's not enough space on the current block,
  a new one will automatically be created.  Also, very large objects
  (currently over 4MB) will simply be heap-allocated.
@@ -412,7 +411,7 @@ $('#symbolSearchPane').show();
 										<code>malloc</code>
 									</a>
 								</td>
-								<td>Same as <a href="../../../scid/core/memory/TempAlloc.malloc.html"><code class="prettyprint lang-d">malloc</code></a>() but uses <a href="../../../scid/core/memory/TempAlloc.malloc.html#stateCopy"><code class="prettyprint lang-d">stateCopy</code></a> cached on stack by caller
+								<td>Same as malloc() but uses stateCopy cached on stack by caller
  to avoid a thread-local storage lookup.  Strictly a speed hack.
 </td>
 							</tr>
@@ -422,7 +421,7 @@ $('#symbolSearchPane').show();
 										<code>opCall</code>
 									</a>
 								</td>
-								<td>Purely a convenience overload, forwards arguments to <a href="../../../scid/core/memory/TempAlloc.malloc.html"><code class="prettyprint lang-d">TempAlloc.malloc</code></a>().
+								<td>Purely a convenience overload, forwards arguments to TempAlloc.malloc().
 </td>
 							</tr>
 						</table>

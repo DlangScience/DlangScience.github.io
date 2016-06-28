@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,7 +66,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -89,7 +88,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">minpack</a>
 						<ul class="tree-view">
 							<li>
@@ -305,12 +304,12 @@ $('#symbolSearchPane').show();
 								<code>dogleg</code>
 							</a>
 						</td>
-						<td>Given an m by <a href="../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> matrix A, an <a href="../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> by <a href="../../../scid/ports/minpack/dogleg/dogleg.html#n"><code class="prettyprint lang-d">n</code></a> nonsingular diagonal matrix D,
-    an m-vector b, and a positive number <a href="../../../scid/ports/minpack/dogleg/dogleg.html#delta"><code class="prettyprint lang-d">delta</code></a>, the problem is to
-    determine the convex combination <a href="../../../scid/ports/minpack/dogleg/dogleg.html#x"><code class="prettyprint lang-d">x</code></a> of the Gauss-Newton and scaled
+						<td>Given an m by n matrix A, an n by n nonsingular diagonal matrix D,
+    an m-vector b, and a positive number delta, the problem is to
+    determine the convex combination x of the Gauss-Newton and scaled
     gradient directions that minimizes (Ax-b) in the least squares
     sense, subject to the restriction that the Euclidean norm of Dx
-    be at most <a href="../../../scid/ports/minpack/dogleg/dogleg.html#delta"><code class="prettyprint lang-d">delta</code></a>.
+    be at most delta.
 </td>
 					</tr>
 				</table>

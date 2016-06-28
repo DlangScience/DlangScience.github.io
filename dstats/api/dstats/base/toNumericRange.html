@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -83,7 +82,7 @@ $('#symbolSearchPane').show();
  less typing and that it ignores non-convertible elements, such as blank
  lines.
 </p>
-<section><p>If <a href="../../dstats/base/toNumericRange.html#rangeIn"><code class="prettyprint lang-d">rangeIn</code></a> is an inputRange, then the result of this function is an input
+<section><p>If rangeIn is an inputRange, then the result of this function is an input
  range.  Otherwise, the result is a forward range.
 </p>
 </section>
@@ -91,32 +90,31 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/base/ToNumericRange.html">ToNumericRange</a>!R toNumericRange(R)(
+							<code class="lang-d">
+<a href="../../dstats/base/ToNumericRange.html"><span class="typ">ToNumericRange</span></a>!R <span class="pln">toNumericRange</span><span class="pun">(</span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R rangeIn
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">rangeIn</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!R);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">R</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Note</h3>
 <p>The reason this struct doesn't have length or random access,
- even if this is supported by <a href="../../dstats/base/toNumericRange.html#rangeIn"><code class="prettyprint lang-d">rangeIn</code></a>, is because it has to be able to
+ even if this is supported by rangeIn, is because it has to be able to
  filter out non-convertible elements.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">// Perform a T-test to see whether the mean of the data being input as text
+<pre class="code"><code class="lang-d"><span class="com">// Perform a T-test to see whether the mean of the data being input as text
 // from stdin is different from zero.  This data might not even fit in memory
 // if it were read in eagerly.
 
-auto myRange = toNumericRange( stdin.byLine() );
-TestRes result = studentsTTest(myRange);
-writeln(result);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">myRange </span><span class="pun">= </span><span class="pln">toNumericRange</span><span class="pun">( </span><span class="pln">stdin<wbr/></span><span class="pun">.</span><span class="pln">byLine</span><span class="pun">() );
+</span><span class="typ">TestRes </span><span class="pln">result </span><span class="pun">= </span><span class="pln">studentsTTest</span><span class="pun">(</span><span class="pln">myRange</span><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">result</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

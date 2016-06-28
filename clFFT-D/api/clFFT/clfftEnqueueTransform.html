@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -39,30 +38,30 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) <a href="../clFFT/clfftStatus.html">clfftStatus</a> clfftEnqueueTransform(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><a href="../clFFT/clfftStatus.html"><span class="pln">clfftStatus</span></a> <span class="pln">clfftEnqueueTransform</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;ulong plHandle,
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">plHandle</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<a href="../clFFT/clfftDirection.html">clfftDirection</a> dir,
+&nbsp;&nbsp;<a href="../clFFT/clfftDirection.html"><span class="pln">clfftDirection</span></a> <span class="pln">dir</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint numQueuesAndEvents,
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">numQueuesAndEvents</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;void** commQueues,
+&nbsp;&nbsp;<span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="pln">commQueues</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;uint numWaitEvents,
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">numWaitEvents</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const(void**) waitEvents,
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span> <span class="pln">waitEvents</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;void** outEvents,
+&nbsp;&nbsp;<span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="pln">outEvents</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;void** inputBuffers,
+&nbsp;&nbsp;<span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="pln">inputBuffers</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;void** outputBuffers,
+&nbsp;&nbsp;<span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="pln">outputBuffers</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;void* tmpBuffer
+&nbsp;&nbsp;<span class="typ">void</span><span class="pun">*</span> <span class="pln">tmpBuffer</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

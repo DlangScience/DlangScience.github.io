@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -294,10 +293,10 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function eigenvalues_</h2>
-				<p>Calculate the <a href="../../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a general dense square matrix.
+				<p>Calculate the eigenvalues of a general dense square matrix.
 </p>
-<section><p>If some <a href="../../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> cannot be calculated, the algorithm
-    throws an <a href="../../scid/linalg/EigenvalueException.html"><code class="prettyprint lang-d">EigenvalueException</code></a> containing an array of the ones
+<section><p>If some eigenvalues cannot be calculated, the algorithm
+    throws an EigenvalueException containing an array of the ones
     that have been calculated.
 </p>
 </section>
@@ -305,69 +304,68 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/linalg/EigenvalueType.html">EigenvalueType</a>!ElementT[] eigenvalues_(ElementT, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+							<code class="lang-d">
+<a href="../../scid/linalg/EigenvalueType.html"><span class="typ">EigenvalueType</span></a>!ElementT<span class="pun">[]</span> <span class="pln">eigenvalues_</span><span class="pun">(</span><span class="typ">ElementT</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Triangle </span><span class="pln">tri</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(ElementT,stor,tri) m
+&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(ElementT,stor,tri) <span class="pln">m</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (stor == Storage.General);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">stor </span><span class="pun">== </span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">General</span><span class="pun">);</span>
 								<br/>
 								<br/>
-ComplexT[] eigenvalues_(ElementT, ComplexT, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+<span class="typ">ComplexT</span><span class="pun">[]</span> <span class="pln">eigenvalues_</span><span class="pun">(</span><span class="typ">ElementT</span><span class="pun">, </span><span class="typ">ComplexT</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Triangle </span><span class="pln">tri</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(ElementT,stor,tri) m,
+&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(ElementT,stor,tri) <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ComplexT[] buffer
+&nbsp;&nbsp;<span class="typ">ComplexT</span><span class="pun">[]</span> <span class="pln">buffer</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (stor == Storage.General);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">stor </span><span class="pun">== </span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">General</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="m">m</td><td> An n-by-n symmetric matrix.</td></tr>
-<tr><td id="buffer">buffer</td><td> (optional) A <a href="../../scid/linalg/eigenvalues_.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the returned values, must
+<tr><td id="buffer">buffer</td><td> (optional) A buffer for the returned values, must
             have length &gt;= n and type Complex!T[].</td></tr>
 </table>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto <a href="../../scid/linalg/eigenvalues_.html#m">m</a> = matrix!double(3, 3);
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../scid/linalg/eigenvalues_.html#m"></span><span class="pln">m</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">matrix</span><span class="pun">!</span><span class="typ">double</span><span class="pun">(</span><span class="lit">3</span><span class="pun">, </span><span class="lit">3</span><span class="pun">);
 ...
-auto e = <a href="../../scid/linalg/eigenvalues.html">eigenvalues</a>(<a href="../../scid/linalg/eigenvalues_.html#m">m</a>);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">e </span><span class="pun">= <a href="../../scid/linalg/eigenvalues.html"></span><span class="pln">eigenvalues</span></a><span class="pun">(<a href="../../scid/linalg/eigenvalues_.html#m"></span><span class="pln">m</span></a><span class="pun">);</span></code></pre>
 </section>
 
 			</section>
 			<section>
 				<h2>Function eigenvalues_</h2>
-				<p>Calculate the <a href="../../scid/linalg/eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a> of a symmetric matrix.
+				<p>Calculate the eigenvalues of a symmetric matrix.
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-T[] eigenvalues_(T, scid.matrix.Storage stor, scid.matrix.Triangle tri)(
+							<code class="lang-d">
+<span class="pln">T</span><span class="pun">[]</span> <span class="pln">eigenvalues_</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Storage </span><span class="pln">stor</span><span class="pun">, </span><span class="pln">scid<wbr/></span><span class="pun">.</span><span class="pln">matrix<wbr/></span><span class="pun">.</span><span class="typ">Triangle </span><span class="pln">tri</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html">MatrixView</a>!(T,stor,tri) m,
+&nbsp;&nbsp;<a href="../../scid/matrix/MatrixView.html"><span class="typ">MatrixView</span></a>!(T,stor,tri) <span class="pln">m</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T[] buffer = null
+&nbsp;&nbsp;<span class="pln">T</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isFloatingPoint!T &amp;&amp; stor == Storage.Symmetric);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">stor </span><span class="pun">== </span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">Symmetric</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="m">m</td><td> An n-by-n symmetric matrix.</td></tr>
-<tr><td id="buffer">buffer</td><td> (optional) A <a href="../../scid/linalg/eigenvalues_.html#buffer"><code class="prettyprint lang-d">buffer</code></a> for the returned values, must
+<tr><td id="buffer">buffer</td><td> (optional) A buffer for the returned values, must
             have length &gt;= n.</td></tr>
 </table>
 </section>

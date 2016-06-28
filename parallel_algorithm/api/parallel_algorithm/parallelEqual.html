@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -39,20 +38,20 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-bool parallelEqual(alias pred, R1, R2)(
+							<code class="lang-d">
+<span class="typ">bool</span> <span class="pln">parallelEqual</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">pred</span><span class="pun">, </span><span class="pln">R1</span><span class="pun">, </span><span class="pln">R2</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R1 range1,
+&nbsp;&nbsp;<span class="pln">R1</span> <span class="pln">range1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;R2 range2,
+&nbsp;&nbsp;<span class="pln">R2</span> <span class="pln">range2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t workUnitSize = 2000,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">workUnitSize</span> <span class="pun">=</span> <span class="lit">2000</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;TaskPool pool = null
+&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isRandomAccessRange!R1 &amp;&amp; isRandomAccessRange!R2 &amp;&amp; hasLength!R1 &amp;&amp; hasLength!R2);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">&amp;&amp; </span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">R2 </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">R2</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

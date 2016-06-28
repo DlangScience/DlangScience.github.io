@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,12 +74,12 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function partial</h1>
 			<section>
-				<p>Computes the <code class="prettyprint lang-d">partial</code> correlation between <a href="../../dstats/cor/partial.html#vec1"><code class="prettyprint lang-d">vec1</code></a>, <a href="../../dstats/cor/partial.html#vec2"><code class="prettyprint lang-d">vec2</code></a> given
+				<p>Computes the partial correlation between vec1, vec2 given
  conditions.  conditions can be either a tuple of ranges, a range of ranges,
  or (for a single condition) a single range.
 </p>
-<section><p>cor is the correlation metric to use.  It can be either <a href="../../dstats/cor/pearsonCor.html"><code class="prettyprint lang-d">pearsonCor</code></a>,
- <a href="../../dstats/cor/spearmanCor.html"><code class="prettyprint lang-d">spearmanCor</code></a>, <a href="../../dstats/cor/kendallCor.html"><code class="prettyprint lang-d">kendallCor</code></a>, or any custom correlation metric you can come up
+<section><p>cor is the correlation metric to use.  It can be either pearsonCor,
+ spearmanCor, kendallCor, or any custom correlation metric you can come up
  with.
 </p>
 </section>
@@ -88,33 +87,32 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double partial(alias cor, T, U, V...)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">partial</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">cor</span><span class="pun">, </span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">, </span><span class="pln">V</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T vec1,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">vec1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U vec2,
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">vec2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;V conditionsIn
+&nbsp;&nbsp;<span class="pln">V</span> <span class="pln">conditionsIn</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!T &amp;&amp; isInputRange!U &amp;&amp; allSatisfy!(isInputRange, V));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">U </span><span class="pun">&amp;&amp; </span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">isInputRange</span><span class="pun">, </span><span class="pln">V</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">uint[] stock1Price = [8, 6, 7, 5, 3, 0, 9];
-uint[] stock2Price = [3, 1, 4, 1, 5, 9, 2];
-uint[] economicHealth = [2, 7, 1, 8, 2, 8, 1];
-uint[] consumerFear = [1, 2, 3, 4, 5, 6, 7];
+<pre class="code"><code class="lang-d"><span class="typ">uint</span><span class="pun">[] </span><span class="pln">stock1Price </span><span class="pun">= [</span><span class="lit">8</span><span class="pun">, </span><span class="lit">6</span><span class="pun">, </span><span class="lit">7</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">0</span><span class="pun">, </span><span class="lit">9</span><span class="pun">];
+</span><span class="typ">uint</span><span class="pun">[] </span><span class="pln">stock2Price </span><span class="pun">= [</span><span class="lit">3</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">9</span><span class="pun">, </span><span class="lit">2</span><span class="pun">];
+</span><span class="typ">uint</span><span class="pun">[] </span><span class="pln">economicHealth </span><span class="pun">= [</span><span class="lit">2</span><span class="pun">, </span><span class="lit">7</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">8</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">8</span><span class="pun">, </span><span class="lit">1</span><span class="pun">];
+</span><span class="typ">uint</span><span class="pun">[] </span><span class="pln">consumerFear </span><span class="pun">= [</span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">6</span><span class="pun">, </span><span class="lit">7</span><span class="pun">];
 
-// See whether the prices of stock 1 and stock 2 are correlated even
+</span><span class="com">// See whether the prices of stock 1 and stock 2 are correlated even
 // after adjusting for the overall condition of the economy and consumer
 // fear.
-double partialCor =
-  partial!<a href="../../dstats/cor/pearsonCor.html">pearsonCor</a>(stock1Price, stock2Price, economicHealth, consumerFear);
-</code></pre>
+</span><span class="typ">double </span><span class="pln">partialCor </span><span class="pun">=
+  </span><span class="pln">partial</span><span class="pun">!<a href="../../dstats/cor/pearsonCor.html"></span><span class="pln">pearsonCor</span></a><span class="pun">(</span><span class="pln">stock1Price</span><span class="pun">, </span><span class="pln">stock2Price</span><span class="pun">, </span><span class="pln">economicHealth</span><span class="pun">, </span><span class="pln">consumerFear</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

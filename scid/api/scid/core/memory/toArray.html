@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -31,7 +30,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">core</a>
 						<ul class="tree-view">
 							<li>
@@ -289,21 +288,21 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function toArray</h1>
 			<section>
-				<p>Converts any <a href="../../../scid/core/memory/toArray.html#range"><code class="prettyprint lang-d">range</code></a> to an array on the GC heap by the most efficient means
- available.  If it is already an array, duplicates the <a href="../../../scid/core/memory/toArray.html#range"><code class="prettyprint lang-d">range</code></a>.
+				<p>Converts any range to an array on the GC heap by the most efficient means
+ available.  If it is already an array, duplicates the range.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Unqual!(IterType!T)[] toArray(T)(
+							<code class="lang-d">
+<span class="typ">Unqual</span>!(IterType!T)<span class="pun">[]</span> <span class="pln">toArray</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T range
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">range</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isIterable!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isIterable</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

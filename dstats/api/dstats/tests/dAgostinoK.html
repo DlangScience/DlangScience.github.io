@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,7 +74,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function dAgostinoK</h1>
 			<section>
-				<p>A test for normality of the distribution of a <a href="../../dstats/tests/dAgostinoK.html#range"><code class="prettyprint lang-d">range</code></a> of values.  Based on
+				<p>A test for normality of the distribution of a range of values.  Based on
  the assumption that normally distributed values will have a sample skewness
  and sample kurtosis very close to zero.
 </p>
@@ -84,19 +83,19 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> dAgostinoK(T)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">dAgostinoK</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T range
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">range</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleIterable!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleIterable</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the K statistic, which is Chi-Square distributed
+<p>A TestRes with the K statistic, which is Chi-Square distributed
  with 2 degrees of freedom under the null, and the P-value for the alternative
  that the data has skewness and kurtosis not equal to zero against the null
  that skewness and kurtosis are near zero.  A normal distribution always has

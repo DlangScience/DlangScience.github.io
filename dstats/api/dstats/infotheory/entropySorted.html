@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,24 +74,24 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function entropySorted</h1>
 			<section>
-				<p>Calculates the <a href="../../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> of any old input range of observations more quickly
- than <a href="../../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a>(), provided that all equal values are adjacent.  If the input
- is sorted by more than one key, i.e. structs, the result will be the <a href="../../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a>
- <a href="../../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> of all of the keys.  The compFun alias will be used to compare
+				<p>Calculates the entropy of any old input range of observations more quickly
+ than entropy(), provided that all equal values are adjacent.  If the input
+ is sorted by more than one key, i.e. structs, the result will be the joint
+ entropy of all of the keys.  The compFun alias will be used to compare
  adjacent elements and determine how many instances of each value exist.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double entropySorted(alias compFun, T)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">entropySorted</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">compFun</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T data
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

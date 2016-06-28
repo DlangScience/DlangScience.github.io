@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -74,9 +73,9 @@ $('#symbolSearchPane').show();
 		</nav>
 		<div id="main-contents">
 			<h1>Module dstats.infotheory</h1>
-			<p>Basic information theory.  <a href="../dstats/infotheory/Joint.html"><code class="prettyprint lang-d">Joint</code></a> <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a>, mutual information, conditional
+			<p>Basic information theory.  Joint entropy, mutual information, conditional
  mutual information.  This module uses the base 2 definition of these
- quantities, i.e, <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a>, mutual info, etc. are output in bits.
+ quantities, i.e, entropy, mutual info, etc. are output in bits.
 </p>
 <section></section>
 
@@ -99,7 +98,7 @@ $('#symbolSearchPane').show();
 								<code>condEntropy</code>
 							</a>
 						</td>
-						<td>Calculate the conditional <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> H(<a href="../dstats/infotheory/condEntropy.html#data"><code class="prettyprint lang-d">data</code></a> | <a href="../dstats/infotheory/condEntropy.html#cond"><code class="prettyprint lang-d">cond</code></a>).
+						<td>Calculate the conditional entropy H(data | cond).
 </td>
 					</tr>
 					<tr>
@@ -108,7 +107,7 @@ $('#symbolSearchPane').show();
 								<code>condMutualInfo</code>
 							</a>
 						</td>
-						<td>Calculates the conditional mutual information I(<a href="../dstats/infotheory/condMutualInfo.html#x"><code class="prettyprint lang-d">x</code></a>, <a href="../dstats/infotheory/condMutualInfo.html#y"><code class="prettyprint lang-d">y</code></a> | <a href="../dstats/infotheory/condMutualInfo.html#z"><code class="prettyprint lang-d">z</code></a>) from a set of
+						<td>Calculates the conditional mutual information I(x, y | z) from a set of
 observations.
 </td>
 					</tr>
@@ -118,9 +117,9 @@ observations.
 								<code>entropy</code>
 							</a>
 						</td>
-						<td>Calculates the <a href="../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a> <code class="prettyprint lang-d">entropy</code> of a set of observations.  Each input range
+						<td>Calculates the joint entropy of a set of observations.  Each input range
  represents a vector of observations. If only one range is given, this reduces
- to the plain old <code class="prettyprint lang-d">entropy</code>.  Input range must have a length.
+ to the plain old entropy.  Input range must have a length.
 </td>
 					</tr>
 					<tr>
@@ -129,7 +128,7 @@ observations.
 								<code>entropyCounts</code>
 							</a>
 						</td>
-						<td>This function calculates the Shannon <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> of a forward range that is
+						<td>This function calculates the Shannon entropy of a forward range that is
  treated as frequency counts of a set of discrete observations.
 </td>
 					</tr>
@@ -147,10 +146,10 @@ observations.
 								<code>entropySorted</code>
 							</a>
 						</td>
-						<td>Calculates the <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> of any old input range of observations more quickly
- than <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a>(), provided that all equal values are adjacent.  If the input
- is sorted by more than one key, i.e. structs, the result will be the <a href="../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a>
- <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> of all of the keys.  The compFun alias will be used to compare
+						<td>Calculates the entropy of any old input range of observations more quickly
+ than entropy(), provided that all equal values are adjacent.  If the input
+ is sorted by more than one key, i.e. structs, the result will be the joint
+ entropy of all of the keys.  The compFun alias will be used to compare
  adjacent elements and determine how many instances of each value exist.
 </td>
 					</tr>
@@ -168,7 +167,7 @@ observations.
 								<code>joint</code>
 							</a>
 						</td>
-						<td>Bind a set of ranges together to represent a <code class="prettyprint lang-d">joint</code> probability distribution.
+						<td>Bind a set of ranges together to represent a joint probability distribution.
 </td>
 					</tr>
 					<tr>
@@ -194,9 +193,9 @@ observations.
 								<code>mutualInfoTable</code>
 							</a>
 						</td>
-						<td>Calculates the mutual information of a contingency <a href="../dstats/infotheory/mutualInfoTable.html#table"><code class="prettyprint lang-d">table</code></a> representing a <a href="../dstats/infotheory/joint.html"><code class="prettyprint lang-d">joint</code></a>
+						<td>Calculates the mutual information of a contingency table representing a joint
 discrete probability distribution.  Takes a set of finite forward ranges,
-one for each column in the contingency <a href="../dstats/infotheory/mutualInfoTable.html#table"><code class="prettyprint lang-d">table</code></a>.  These can be expressed either as
+one for each column in the contingency table.  These can be expressed either as
 a tuple of ranges or a range of ranges.
 </td>
 					</tr>
@@ -219,7 +218,7 @@ a tuple of ranges or a range of ranges.
 						<td>Much faster implementations of information theory functions for the special
 but common case where all observations are integers on the range [0, nBin).
 This is the case, for example, when the observations have been previously
-binned using, for example, <a href="../dstats/base/frqBin.html"><code class="prettyprint lang-d">dstats.base.frqBin</code></a>().
+binned using, for example, dstats.base.frqBin().
 </td>
 					</tr>
 					<tr>
@@ -228,8 +227,8 @@ binned using, for example, <a href="../dstats/base/frqBin.html"><code class="pre
 								<code>Joint</code>
 							</a>
 						</td>
-						<td>Iterate over a set of ranges by value in lockstep and return an <a href="../dstats/infotheory/ObsEnt.html"><code class="prettyprint lang-d">ObsEnt</code></a>,
- which is used internally by <a href="../dstats/infotheory/entropy.html"><code class="prettyprint lang-d">entropy</code></a> functions on each iteration.
+						<td>Iterate over a set of ranges by value in lockstep and return an ObsEnt,
+ which is used internally by entropy functions on each iteration.
 </td>
 					</tr>
 					<tr>
@@ -284,7 +283,7 @@ binned using, for example, <a href="../dstats/base/frqBin.html"><code class="pre
 							</a>
 						</td>
 						<td>
-<code class="prettyprint lang-d"><a href="../dstats/infotheory/FlattenTypeImpl.html">FlattenTypeImpl</a>!T</code>
+<code class="prettyprint lang-d"><a href="../dstats/infotheory/FlattenTypeImpl.html"><span class="typ">FlattenTypeImpl</span></a>!T</code>
 						</td>
 						<td></td>
 					</tr>

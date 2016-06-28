@@ -6,22 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">mpi</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../mpi.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../mpi/util.html" class="selected module">util</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../../mpi.html" class=" module">mpi</a>
 							</li>
 						</ul>
 				<noscript>
@@ -42,33 +41,32 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function toArgv</h1>
 			<section>
-				<p>Convert D's string[] <a href="../../mpi/util/toArgv.html#args"><code class="prettyprint lang-d">args</code></a> to a correct C char** argv.
+				<p>Convert D's string[] args to a correct C char** argv.
 </p>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-char** toArgv(
+							<code class="lang-d">
+<span class="typ">char</span><span class="pun">*</span><span class="pun">*</span> <span class="pln">toArgv</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;string[] args
+&nbsp;&nbsp;<span class="typ">string</span><span class="pun">[]</span> <span class="pln">args</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Example</h3>
-<pre class="code"><code class="prettyprint lang-d">auto <a href="../../mpi/util/toArgv.html#args">args</a> = ["hello", "world"];
-auto argv = args.toArgv;
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../mpi/util/toArgv.html#args"></span><span class="pln">args</span></a><span class="pln"> </span><span class="pun">= [</span><span class="str">"hello"</span><span class="pun">, </span><span class="str">"world"</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">argv </span><span class="pun">= </span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">toArgv</span><span class="pun">;
 
-foreach(i, arg; <a href="../../mpi/util/toArgv.html#args">args</a>)
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">, </span><span class="pln">arg</span><span class="pun">; <a href="../../mpi/util/toArgv.html#args"></span><span class="pln">args</span></a><span class="pun">)
 {
-    assert(argv[i][0 .. <a href="../../mpi/util/toArgv.html#args">args</a>[i].length] == <a href="../../mpi/util/toArgv.html#args">args</a>[i]);
-    assert(argv[i][<a href="../../mpi/util/toArgv.html#args">args</a>[i].length] == 0);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">argv</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="lit">0 </span><span class="pun">.. <a href="../../mpi/util/toArgv.html#args"></span><span class="pln">args</span></a><span class="pun">[</span><span class="pln">i</span><span class="pun">]<wbr/>.</span><span class="pln">length</span><span class="pun">] == <a href="../../mpi/util/toArgv.html#args"></span><span class="pln">args</span></a><span class="pun">[</span><span class="pln">i</span><span class="pun">]);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">argv</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][<a href="../../mpi/util/toArgv.html#args"></span><span class="pln">args</span></a><span class="pun">[</span><span class="pln">i</span><span class="pun">]<wbr/>.</span><span class="pln">length</span><span class="pun">] == </span><span class="lit">0</span><span class="pun">);
 }
-assert(argv[args.length] == null);
-
-</code></pre>
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">argv</span><span class="pun">[</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">] == </span><span class="kwd">null</span><span class="pun">);
+</span></code></pre>
 </section>
 
 			</section>

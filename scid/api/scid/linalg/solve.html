@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -302,45 +301,43 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Real[] solve(MatrixViewA, Real)(
+							<code class="lang-d">
+<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">solve</span><span class="pun">(</span><span class="typ">MatrixViewA</span><span class="pun">, </span><span class="typ">Real</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const MatrixViewA a,
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">MatrixViewA</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const Real[] b,
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">Real</span><span class="pun">[]</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isMatrixView!MatrixViewA &amp;&amp; isFortranType!Real);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isMatrixView</span><span class="pun">!</span><span class="typ">MatrixViewA </span><span class="pun">&amp;&amp; </span><span class="pln">isFortranType</span><span class="pun">!</span><span class="typ">Real</span><span class="pun">);</span>
 								<br/>
 								<br/>
-MatrixViewB solve(MatrixViewA, MatrixViewB)(
+<span class="typ">MatrixViewB</span> <span class="pln">solve</span><span class="pun">(</span><span class="typ">MatrixViewA</span><span class="pun">, </span><span class="typ">MatrixViewB</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;const MatrixViewA a,
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">MatrixViewA</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;const MatrixViewB b
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">MatrixViewB</span> <span class="pln">b</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isMatrixView!MatrixViewA &amp;&amp; isMatrixView!(MatrixViewB, Storage.General));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isMatrixView</span><span class="pun">!</span><span class="typ">MatrixViewA </span><span class="pun">&amp;&amp; </span><span class="pln">isMatrixView</span><span class="pun">!(</span><span class="typ">MatrixViewB</span><span class="pun">, </span><span class="typ">Storage<wbr/></span><span class="pun">.</span><span class="typ">General</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<p>Solving <a href="../../scid/linalg/solve.html#a"><code class="prettyprint lang-d">a</code></a> system of equations:
+<p>Solving a system of equations:
 </p>
-<pre class="code"><code class="prettyprint lang-d">MatrixView!double <a href="../../scid/linalg/solve.html#a">a</a> = ...
-double[] <a href="../../scid/linalg/solve.html#b">b</a> = ...
-double[] x = solve(<a href="../../scid/linalg/solve.html#a">a</a>, <a href="../../scid/linalg/solve.html#b">b</a>);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">MatrixView</span><span class="pun">!</span><span class="typ">double <a href="../../scid/linalg/solve.html#a"></span><span class="pln">a</span></a><span class="pln"> </span><span class="pun">= ...
+</span><span class="typ">double</span><span class="pun">[] <a href="../../scid/linalg/solve.html#b"></span><span class="pln">b</span></a><span class="pln"> </span><span class="pun">= ...
+</span><span class="typ">double</span><span class="pun">[] </span><span class="pln">x </span><span class="pun">= </span><span class="pln">solve</span><span class="pun">(<a href="../../scid/linalg/solve.html#a"></span><span class="pln">a</span></a><span class="pun">, <a href="../../scid/linalg/solve.html#b"></span><span class="pln">b</span></a><span class="pun">);</span></code></pre>
 <p>    Solving several systems of equations:
 </p>
-<pre class="code"><code class="prettyprint lang-d">MatrixView!double <a href="../../scid/linalg/solve.html#a">a</a> = ...
-MatrixView!double <a href="../../scid/linalg/solve.html#b">b</a> = ...
-MatrixView!double x = solve(<a href="../../scid/linalg/solve.html#a">a</a>, <a href="../../scid/linalg/solve.html#b">b</a>);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">MatrixView</span><span class="pun">!</span><span class="typ">double <a href="../../scid/linalg/solve.html#a"></span><span class="pln">a</span></a><span class="pln"> </span><span class="pun">= ...
+</span><span class="typ">MatrixView</span><span class="pun">!</span><span class="typ">double <a href="../../scid/linalg/solve.html#b"></span><span class="pln">b</span></a><span class="pln"> </span><span class="pun">= ...
+</span><span class="typ">MatrixView</span><span class="pun">!</span><span class="typ">double </span><span class="pln">x </span><span class="pun">= </span><span class="pln">solve</span><span class="pun">(<a href="../../scid/linalg/solve.html#a"></span><span class="pln">a</span></a><span class="pun">, <a href="../../scid/linalg/solve.html#b"></span><span class="pln">b</span></a><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

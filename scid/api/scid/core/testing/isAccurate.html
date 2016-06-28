@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -31,7 +30,7 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">core</a>
 						<ul class="tree-view">
 							<li>
@@ -292,41 +291,40 @@ $('#symbolSearchPane').show();
 				<p>This function is used to check a computed value along with
     its error estimate.  It evaluates to the following:
 </p>
-<section><pre class="code"><code class="prettyprint lang-d">    abs(<a href="../../../scid/core/testing/isAccurate.html#result">result</a>-<a href="../../../scid/core/testing/isAccurate.html#expected">expected</a>) &lt;= <a href="../../../scid/core/testing/isAccurate.html#absError">absError</a>
-&amp;&amp;  <a href="../../../scid/core/testing/isAccurate.html#absError">absError</a> &lt;= max(abs(<a href="../../../scid/core/testing/isAccurate.html#result">result</a>*<a href="../../../scid/core/testing/isAccurate.html#relAccuracy">relAccuracy</a>), <a href="../../../scid/core/testing/isAccurate.html#absAccuracy">absAccuracy</a>)
-</code></pre>
+<section><pre class="code"><code class="lang-d"><span class="pln">    abs</span><span class="pun">(<a href="../../../scid/core/testing/isAccurate.html#result"></span><span class="pln">result</span></a><span class="pun">-<a href="../../../scid/core/testing/isAccurate.html#expected"></span><span class="pln">expected</span></a><span class="pun">) &lt;= <a href="../../../scid/core/testing/isAccurate.html#absError"></span><span class="pln">absError</span></a><span class="pln">
+</span><span class="pun">&amp;&amp;  <a href="../../../scid/core/testing/isAccurate.html#absError"></span><span class="pln">absError</span></a><span class="pln"> </span><span class="pun">&lt;= </span><span class="pln">max</span><span class="pun">(</span><span class="pln">abs</span><span class="pun">(<a href="../../../scid/core/testing/isAccurate.html#result"></span><span class="pln">result</span></a><span class="pun">*<a href="../../../scid/core/testing/isAccurate.html#relAccuracy"></span><span class="pln">relAccuracy</span></a><span class="pun">), <a href="../../../scid/core/testing/isAccurate.html#absAccuracy"></span><span class="pln">absAccuracy</span></a><span class="pun">)</span></code></pre>
 </section>
 
 					<section>
 						<h3>Prototypes</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-bool isAccurate(T)(
+							<code class="lang-d">
+<span class="typ">bool</span> <span class="pln">isAccurate</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<a href="../../../scid/types/Result.html">Result</a>!T result,
+&nbsp;&nbsp;<a href="../../../scid/types/Result.html"><span class="typ">Result</span></a>!T <span class="pln">result</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T expected,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">expected</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T relAccuracy,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">relAccuracy</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T absAccuracy = Zero!T
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">absAccuracy</span> <span class="pun">=</span> <span class="typ">Zero</span><span class="pun">!</span><span class="pln">T</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 								<br/>
 								<br/>
-bool isAccurate(T)(
+<span class="typ">bool</span> <span class="pln">isAccurate</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T result,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">result</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T absError,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">absError</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T expected,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">expected</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T relAccuracy,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">relAccuracy</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;T absAccuracy = Zero!T
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">absAccuracy</span> <span class="pun">=</span> <span class="typ">Zero</span><span class="pun">!</span><span class="pln">T</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

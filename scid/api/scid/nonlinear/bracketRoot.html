@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,68 +288,68 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function bracketRoot</h1>
 			<section>
-				<p>Bracket a root of the function <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>.
+				<p>Bracket a root of the function f.
 </p>
-<section><p>If a function <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x) is continuous on an interval [x1,x2],
-    and <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x1) and <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x2) have opposite sign, we know the function
+<section><p>If a function f(x) is continuous on an interval [x1,x2],
+    and f(x1) and f(x2) have opposite sign, we know the function
     must pass through zero somewhere in the interval.
     The points x1 and x2 are then said to 'bracket' the
     root.  This is usually the first step in locating the root
     of a function.
 </p>
 
-<p>    If this function succeeds, it returns a <a href="../../scid/nonlinear/RootBracket.html"><code class="prettyprint lang-d">RootBracket</code></a> containing
-    the points x1 and x2, together with the function values <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x1)
-    and <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x2).  If it fails, an exception is thrown.
+<p>    If this function succeeds, it returns a RootBracket containing
+    the points x1 and x2, together with the function values f(x1)
+    and f(x2).  If it fails, an exception is thrown.
     Note that this library considers the points to be bracketing
     a root also if the root is located exactly at x1 and/or x2,
-    i.e. if <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x1)=0 and/or <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x2)=0.
+    i.e. if f(x1)=0 and/or f(x2)=0.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../scid/nonlinear/RootBracket.html">RootBracket</a>!(T,ReturnType!F) bracketRoot(F, T)(
+							<code class="lang-d">
+<a href="../../scid/nonlinear/RootBracket.html"><span class="typ">RootBracket</span></a>!(T,ReturnType!F) <span class="pln">bracketRoot</span><span class="pun">(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope F f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">F</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;in T x0,
+&nbsp;&nbsp;<span class="kwd">in </span><span class="pln">T</span> <span class="pln">x0</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;in T scale,
+&nbsp;&nbsp;<span class="kwd">in </span><span class="pln">T</span> <span class="pln">scale</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;in T xMin = -T.infinity,
+&nbsp;&nbsp;<span class="kwd">in </span><span class="pln">T</span> <span class="pln">xMin</span> <span class="pun">=</span> <span class="pun">-</span><span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">infinity</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;in T xMax = T.infinity
+&nbsp;&nbsp;<span class="kwd">in </span><span class="pln">T</span> <span class="pln">xMax</span> <span class="pun">=</span> <span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">infinity</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isFloatingPoint!T &amp;&amp; isUnaryFunction!(F, T));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isFloatingPoint</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isUnaryFunction</span><span class="pun">!(</span><span class="pln">F</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Details</h3>
-<p>This function will start by evaluating <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x) in the points
-    <a href="../../scid/nonlinear/bracketRoot.html#x0"><code class="prettyprint lang-d">x0</code></a> and <a href="../../scid/nonlinear/bracketRoot.html#x0"><code class="prettyprint lang-d">x0</code></a>+<a href="../../scid/nonlinear/bracketRoot.html#scale"><code class="prettyprint lang-d">scale</code></a> and see if those
+<p>This function will start by evaluating f(x) in the points
+    x0 and x0+scale and see if those
     points bracket a root of the given function.  If not, the interval
     is expanded geometrically (i.e. the distance between the points
     is multiplied by a constant factor), always in the direction where
-    <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>(x) is smallest, until the points bracket a root.
+    f(x) is smallest, until the points bracket a root.
 </p>
 
-<p>    You may optionally specify a limiting interval [<a href="../../scid/nonlinear/bracketRoot.html#xMin"><code class="prettyprint lang-d">xMin</code></a>, <a href="../../scid/nonlinear/bracketRoot.html#xMax"><code class="prettyprint lang-d">xMax</code></a>], and the
+<p>    You may optionally specify a limiting interval [xMin, xMax], and the
     algorithm will never search outside it.  This is useful,
     for instance, for functions that are only defined for certain
     values of x.  If you do specify such an interval, the
-    initial point <a href="../../scid/nonlinear/bracketRoot.html#x0"><code class="prettyprint lang-d">x0</code></a> must lie inside it.
+    initial point x0 must lie inside it.
 </p>
 
 <p>    It is usually worthwhile analysing the behaviour of the function
-    in order to find appropriate values for <a href="../../scid/nonlinear/bracketRoot.html#x0"><code class="prettyprint lang-d">x0</code></a> and <a href="../../scid/nonlinear/bracketRoot.html#scale"><code class="prettyprint lang-d">scale</code></a>.
-    The closer <a href="../../scid/nonlinear/bracketRoot.html#x0"><code class="prettyprint lang-d">x0</code></a> is to the actual root, the fewer steps (i.e. the
-    fewer evaluations of <a href="../../scid/nonlinear/bracketRoot.html#f"><code class="prettyprint lang-d">f</code></a>) this algorithm will require to succeed.
-    If <a href="../../scid/nonlinear/bracketRoot.html#scale"><code class="prettyprint lang-d">scale</code></a> is too large, and the function has several roots,
+    in order to find appropriate values for x0 and scale.
+    The closer x0 is to the actual root, the fewer steps (i.e. the
+    fewer evaluations of f) this algorithm will require to succeed.
+    If scale is too large, and the function has several roots,
     there is a chance that it will just step across both roots
     and not find any of them.  On the other hand, if it is too small,
     it may again cause the algorithm to take more steps than would

@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -292,6 +291,13 @@ $('#symbolSearchPane').show();
 				<p></p>
 
 					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">LimitCalls</span><span class="pun">(</span><span class="pln">R</span><span class="pun">, </span><span class="pln">T</span><span class="pun">...)</span>;
+							</code>
+						</div>
+					</section>
+					<section>
 						<h3>Fields</h3>
 						<table>
 							<col class="caption"/>
@@ -304,21 +310,21 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../scid/util/LimitCalls.calls.html" class="public"><code>calls</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../scid/util/LimitCalls.dg.html" class="public"><code>dg</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">R delegate(T)</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">R</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../scid/util/LimitCalls.maxCalls.html" class="public"><code>maxCalls</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">uint</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span></code></td>
 								<td></td>
 							</tr>
 						</table>

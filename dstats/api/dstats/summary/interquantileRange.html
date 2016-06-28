@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,40 +74,40 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function interquantileRange</h1>
 			<section>
-				<p>Computes the interquantile range of <a href="../../dstats/summary/interquantileRange.html#data"><code class="prettyprint lang-d">data</code></a> at the given <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> value in O(N)
- time complexity.  For example, using a <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> value of either 0.25 or 0.75
+				<p>Computes the interquantile range of data at the given quantile value in O(N)
+ time complexity.  For example, using a quantile value of either 0.25 or 0.75
  will give the interquartile range.  (This is the default since it is
  apparently the most common interquantile range in common usage.)
- Using a <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> value of 0.2 or 0.8 will give the interquntile range.
+ Using a quantile value of 0.2 or 0.8 will give the interquntile range.
 </p>
-<section><p>If the <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> point falls between two indices, linear interpolation is
+<section><p>If the quantile point falls between two indices, linear interpolation is
  used.
 </p>
 
 <p> This function is somewhat more efficient than simply finding the upper and
- lower <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> and subtracting them.
+ lower quantile and subtracting them.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double interquantileRange(R)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">interquantileRange</span><span class="pun">(</span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R data,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">data</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double quantile = 0.25
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">quantile</span> <span class="pun">=</span> <span class="lit">0.25</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!R);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">R</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Tip</h3>
-<p>A <a href="../../dstats/summary/interquantileRange.html#quantile"><code class="prettyprint lang-d">quantile</code></a> of 0 or 1 is handled as a special case and will compute the
-       plain old range of the <a href="../../dstats/summary/interquantileRange.html#data"><code class="prettyprint lang-d">data</code></a> in a single pass.
+<p>A quantile of 0 or 1 is handled as a special case and will compute the
+       plain old range of the data in a single pass.
 </p>
 </section>
 

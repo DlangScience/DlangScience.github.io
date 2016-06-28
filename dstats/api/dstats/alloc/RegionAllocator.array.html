@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,59 +74,58 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function RegionAllocator.array</h1>
 			<section>
-				<p>Copies <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> to an <code class="prettyprint lang-d">array</code>.  The <code class="prettyprint lang-d">array</code> will be located on the
-    <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> stack if any of the following conditions apply:
+				<p>Copies <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.array.html#range"><span class="pln">range</span></a></code> to an array.  The array will be located on the
+    <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> stack if any of the following conditions apply:
 </p>
-<section><p>1.  std.traits.hasIndirections!(ElementType!R) is false.
+<section><p>1.  <code class="lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">traits<wbr/></span><span class="pun">.</span><span class="pln">hasIndirections</span><span class="pun">!(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R</span><span class="pun">)</span></code> is false.
 </p>
 
-<p>    2.  R is a builtin <code class="prettyprint lang-d">array</code>.  In this case <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> maintains pointers
-        to all elements at least until <code class="prettyprint lang-d">array</code> returns, preventing the
+<p>    2.  <code class="lang-d"><span class="pln">R</span></code> is a builtin array.  In this case <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.array.html#range"><span class="pln">range</span></a></code> maintains pointers
+        to all elements at least until <code class="lang-d"><span class="pln">array</span></code> returns, preventing the
         elements from being freed by the garbage collector.  A similar
         assumption cannot be made for ranges other than builtin arrays.
 </p>
 
-<p>    3.  The <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> instance used by this
-        <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> is scanned by the garbage collector.
+<p>    3.  The <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance used by this
+        <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> is scanned by the garbage collector.
 </p>
 
-<p>    If none of these conditions is met, the <code class="prettyprint lang-d">array</code> is returned on the C heap
-    and GC.addRange is called.  In either case, <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">RegionAllocator.free</code></a>,
-    <a href="../../dstats/alloc/RegionAllocator.freeLast.html"><code class="prettyprint lang-d">RegionAllocator.freeLast</code></a>, or the last copy of this <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
-    instance going out of scope will <a href="../../dstats/alloc/RegionAllocator.free.html"><code class="prettyprint lang-d">free</code></a> the <code class="prettyprint lang-d">array</code> as if it had been
-    allocated on the <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> stack.
+<p>    If none of these conditions is met, the array is returned on the C heap
+    and <code class="lang-d"><span class="pln">GC<wbr/></span><span class="pun">.</span><span class="pln">addRange</span></code> is called.  In either case, <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.free.html"><span class="typ">RegionAllocator<wbr/></span><span class="pun">.</span><span class="pln">free</span></a></code>,
+    <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.freeLast.html"><span class="typ">RegionAllocator<wbr/></span><span class="pun">.</span><span class="pln">freeLast</span></a></code>, or the last copy of this <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code>
+    instance going out of scope will free the array as if it had been
+    allocated on the <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> stack.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Unqual!(ElementType!R)[] array(R)(
+							<code class="lang-d">
+<span class="typ">Unqual</span>!(ElementType!R)<span class="pun">[]</span> <span class="pln">array</span><span class="pun">(</span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R range
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">range</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isInputRange!R);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">R</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Rationale</h3>
-<p>The most common reason to call <code class="prettyprint lang-d">array</code> on a builtin <code class="prettyprint lang-d">array</code> is
+<p>The most common reason to call <code class="lang-d"><span class="pln">array</span></code> on a builtin array is
                 to modify its contents inside a function without affecting the
-                caller's view.  In this case <a href="../../dstats/alloc/RegionAllocator.array.html#range"><code class="prettyprint lang-d">range</code></a> is not modified and
+                caller's view.  In this case <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.array.html#range"><span class="pln">range</span></a></code> is not modified and
                 prevents the elements from being freed by the garbage
                 collector.  Furthermore, if the copy returned does need
-                to be scanned, the client can call GC.addRange before
-                modifying the original <code class="prettyprint lang-d">array</code>.
+                to be scanned, the client can call <code class="lang-d"><span class="pln">GC<wbr/></span><span class="pun">.</span><span class="pln">addRange</span></code> before
+                modifying the original array.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto alloc = <a href="../../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a>();
-auto arr = alloc.array(iota(5));
-assert(arr == [0, 1, 2, 3, 4]);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">alloc </span><span class="pun">= <a href="../../dstats/alloc/newRegionAllocator.html"></span><span class="pln">newRegionAllocator</span></a><span class="pun">();
+</span><span class="kwd">auto </span><span class="pln">arr </span><span class="pun">= </span><span class="pln">alloc<wbr/></span><span class="pun">.</span><span class="pln">array</span><span class="pun">(</span><span class="pln">iota</span><span class="pun">(</span><span class="lit">5</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">arr </span><span class="pun">== [</span><span class="lit">0</span><span class="pun">, </span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">]);</span></code></pre>
 </section>
 
 			</section>

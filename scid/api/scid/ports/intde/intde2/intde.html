@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -67,10 +66,10 @@
 							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">ports</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">intde</a>
 						<ul class="tree-view">
 							<li>
@@ -289,48 +288,47 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function intde</h1>
 			<section>
-				<p>I = integral of <a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x) over (<a href="../../../../scid/ports/intde/intde2/intde.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../../../scid/ports/intde/intde2/intde.html#b"><code class="prettyprint lang-d">b</code></a>)
+				<p>I = integral of f(x) over (a,b)
 </p>
 <section></section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-void intde(Real, Func)(
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">intde</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;Func f,
+&nbsp;&nbsp;<span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real a,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">a</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real b,
+&nbsp;&nbsp;<span class="typ">Real</span> <span class="pln">b</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* aw,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">aw</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* i,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">i</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real* err
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">*</span> <span class="pln">err</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto <a href="../../../../scid/ports/intde/intde2/intde.html#aw">aw</a> = new real[8000];
-<a href="../../../../scid/ports/intde/intde2/intdeini.html">intdeini</a>(aw.length, tiny, eps, aw.ptr);  // initialization of <a href="../../../../scid/ports/intde/intde2/intde.html#aw">aw</a>
-...
-intde(<a href="../../../../scid/ports/intde/intde2/intde.html#f">f</a>, <a href="../../../../scid/ports/intde/intde2/intde.html#a">a</a>, <a href="../../../../scid/ports/intde/intde2/intde.html#b">b</a>, aw.ptr, &amp;<a href="../../../../scid/ports/intde/intde2/intde.html#i">i</a>, &amp;<a href="../../../../scid/ports/intde/intde2/intde.html#err">err</a>);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../../../scid/ports/intde/intde2/intde.html#aw"></span><span class="pln">aw</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">real</span><span class="pun">[</span><span class="lit">8000</span><span class="pun">];
+<a href="../../../../scid/ports/intde/intde2/intdeini.html"></span><span class="pln">intdeini</span></a><span class="pun">(</span><span class="pln">aw<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">, </span><span class="pln">tiny</span><span class="pun">, </span><span class="pln">eps</span><span class="pun">, </span><span class="pln">aw<wbr/></span><span class="pun">.</span><span class="pln">ptr</span><span class="pun">);  </span><span class="com">// initialization of aw
+</span><span class="pun">...
+</span><span class="pln">intde</span><span class="pun">(<a href="../../../../scid/ports/intde/intde2/intde.html#f"></span><span class="pln">f</span></a><span class="pun">, <a href="../../../../scid/ports/intde/intde2/intde.html#a"></span><span class="pln">a</span></a><span class="pun">, <a href="../../../../scid/ports/intde/intde2/intde.html#b"></span><span class="pln">b</span></a><span class="pun">, </span><span class="pln">aw<wbr/></span><span class="pun">.</span><span class="pln">ptr</span><span class="pun">, &amp;<a href="../../../../scid/ports/intde/intde2/intde.html#i"></span><span class="pln">i</span></a><span class="pun">, &amp;<a href="../../../../scid/ports/intde/intde2/intde.html#err"></span><span class="pln">err</span></a><span class="pun">);</span></code></pre>
 </section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="lenaw">lenaw</td><td> length of <a href="../../../../scid/ports/intde/intde2/intde.html#aw"><code class="prettyprint lang-d">aw</code></a></td></tr>
+<tr><td id="lenaw">lenaw</td><td> length of aw</td></tr>
 <tr><td id="tiny">tiny</td><td> minimum value that 1/tiny does not
                     overflow</td></tr>
 <tr><td id="eps">eps</td><td> relative error requested</td></tr>
 <tr><td id="aw">aw</td><td> points and weights of the quadrature
-                    formula, <a href="../../../../scid/ports/intde/intde2/intde.html#aw"><code class="prettyprint lang-d">aw</code></a>[0...lenaw-1]</td></tr>
-<tr><td id="f">f</td><td> integrand <a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x)</td></tr>
+                    formula, aw[0...lenaw-1]</td></tr>
+<tr><td id="f">f</td><td> integrand f(x)</td></tr>
 <tr><td id="a">a</td><td> lower limit of integration</td></tr>
 <tr><td id="b">b</td><td> upper limit of integration</td></tr>
 <tr><td id="i">i</td><td> approximation to the integral</td></tr>
@@ -345,25 +343,25 @@ intde(<a href="../../../../scid/ports/intde/intde2/intde.html#f">f</a>, <a href=
                 lenaw = 8000;
                 tiny = 1.0e-307;
         function
-            <a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x) needs to be analytic over (<a href="../../../../scid/ports/intde/intde2/intde.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../../../scid/ports/intde/intde2/intde.html#b"><code class="prettyprint lang-d">b</code></a>).
+            f(x) needs to be analytic over (a,b).
         relative error
             eps is relative error requested excluding
             cancellation of significant digits.
             i.e. eps means : (absolute error) /
-                             (integral_a^<a href="../../../../scid/ports/intde/intde2/intde.html#b"><code class="prettyprint lang-d">b</code></a> |<a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x)| dx).
+                             (integral_a^b |f(x)| dx).
             eps does not mean : (absolute error) / I.
         error message
-            <a href="../../../../scid/ports/intde/intde2/intde.html#err"><code class="prettyprint lang-d">err</code></a> &gt;= 0 : normal termination.
-            <a href="../../../../scid/ports/intde/intde2/intde.html#err"><code class="prettyprint lang-d">err</code></a> &lt; 0  : abnormal termination.
+            err &gt;= 0 : normal termination.
+            err &lt; 0  : abnormal termination.
                        i.e. convergent error is detected :
-                           1. <a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x) or (d/dx)^n <a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x) has
+                           1. f(x) or (d/dx)^n f(x) has
                               discontinuous points or sharp
-                              peaks over (<a href="../../../../scid/ports/intde/intde2/intde.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../../../scid/ports/intde/intde2/intde.html#b"><code class="prettyprint lang-d">b</code></a>).
+                              peaks over (a,b).
                               you must divide the interval
-                              (<a href="../../../../scid/ports/intde/intde2/intde.html#a"><code class="prettyprint lang-d">a</code></a>,<a href="../../../../scid/ports/intde/intde2/intde.html#b"><code class="prettyprint lang-d">b</code></a>) at this points.
-                           2. relative error of <a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x) is
+                              (a,b) at this points.
+                           2. relative error of f(x) is
                               greater than eps.
-                           3. <a href="../../../../scid/ports/intde/intde2/intde.html#f"><code class="prettyprint lang-d">f</code></a>(x) has oscillatory factor
+                           3. f(x) has oscillatory factor
                               and frequency of the oscillation
                               is very high.
     </pre>

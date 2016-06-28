@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -79,39 +78,39 @@ $('#symbolSearchPane').show();
 </p>
 <section><p>Finds the F density argument x such that the integral
  from x to infinity of the F density is equal to the
- given probability <a href="../../dstats/distrib/invFisherCDFR.html#p"><code class="prettyprint lang-d">p</code></a>.
+ given probability p.
 </p>
 
 <p> This is accomplished using the inverse beta integral
  function and the relations
 </p>
 
-<p>      z = betaIncompleteInverse( <a href="../../dstats/distrib/invFisherCDFR.html#df2"><code class="prettyprint lang-d">df2</code></a>/2, <a href="../../dstats/distrib/invFisherCDFR.html#df1"><code class="prettyprint lang-d">df1</code></a>/2, <a href="../../dstats/distrib/invFisherCDFR.html#p"><code class="prettyprint lang-d">p</code></a> ),
-      x = <a href="../../dstats/distrib/invFisherCDFR.html#df2"><code class="prettyprint lang-d">df2</code></a> (1-z) / (<a href="../../dstats/distrib/invFisherCDFR.html#df1"><code class="prettyprint lang-d">df1</code></a> z).
+<p>      z = betaIncompleteInverse( df2/2, df1/2, p ),
+      x = df2 (1-z) / (df1 z).
 </p>
 
 <p> Note that the following relations hold for the inverse of
  the uncomplemented F distribution:
 </p>
 
-<p>      z = betaIncompleteInverse( <a href="../../dstats/distrib/invFisherCDFR.html#df1"><code class="prettyprint lang-d">df1</code></a>/2, <a href="../../dstats/distrib/invFisherCDFR.html#df2"><code class="prettyprint lang-d">df2</code></a>/2, <a href="../../dstats/distrib/invFisherCDFR.html#p"><code class="prettyprint lang-d">p</code></a> ),
-      x = <a href="../../dstats/distrib/invFisherCDFR.html#df2"><code class="prettyprint lang-d">df2</code></a> z / (<a href="../../dstats/distrib/invFisherCDFR.html#df1"><code class="prettyprint lang-d">df1</code></a> (1-z)).
+<p>      z = betaIncompleteInverse( df1/2, df2/2, p ),
+      x = df2 z / (df1 (1-z)).
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double invFisherCDFR(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">invFisherCDFR</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;double df1,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">df1</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double df2,
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">df2</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double p
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">p</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

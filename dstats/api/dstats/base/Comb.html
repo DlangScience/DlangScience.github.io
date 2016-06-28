@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,11 +75,18 @@ $('#symbolSearchPane').show();
 			<h1>Struct Comb</h1>
 			<section>
 				<p>Generates every possible combination of r elements of the given sequence, or
-array indices from zero to <a href="../../dstats/base/Comb.N.html"><code class="prettyprint lang-d">N</code></a>, depending on which c'tor is called.  Uses
+array indices from zero to N, depending on which c'tor is called.  Uses
 an input range interface.
 </p>
 <section></section>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">Comb</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Constructors</h3>
 						<table>
@@ -95,8 +101,8 @@ an input range interface.
 										<code>this</code>
 									</a>
 								</td>
-								<td>General ctor.  <a href="../../dstats/base/Comb.this.html#array"><code class="prettyprint lang-d">array</code></a> is a sequence from which to generate the
- combinations.  <a href="../../dstats/base/Comb.this.html#r"><code class="prettyprint lang-d">r</code></a> is the <a href="../../dstats/base/Comb.length.html"><code class="prettyprint lang-d">length</code></a> of the combinations to be generated.
+								<td>General ctor.  array is a sequence from which to generate the
+ combinations.  r is the length of the combinations to be generated.
 </td>
 							</tr>
 						</table>
@@ -114,49 +120,49 @@ an input range interface.
 								<td>
 									<a href="../../dstats/base/Comb.chosen.html" class="public"><code>chosen</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T*</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Comb.diff.html" class="public"><code>diff</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">int</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">int</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Comb.myArray.html" class="public"><code>myArray</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T*</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Comb.N.html" class="public"><code>N</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">int</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">int</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Comb.pos.html" class="public"><code>pos</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">uint*</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span><span class="pun">*</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Comb.R.html" class="public"><code>R</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">int</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">int</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/base/Comb._length.html" class="public"><code>_length</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -175,7 +181,7 @@ an input range interface.
 									<a href="../../dstats/base/Comb.empty.html" class="public property"><code>empty</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -183,7 +189,7 @@ an input range interface.
 									<a href="../../dstats/base/Comb.front.html" class="public property"><code>front</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">const(T)[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">[]</span></code></td>
 								<td>Gets the current combination.
 </td>
 							</tr>
@@ -192,7 +198,7 @@ an input range interface.
 									<a href="../../dstats/base/Comb.length.html" class="public property"><code>length</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">size_t</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -200,7 +206,7 @@ an input range interface.
 									<a href="../../dstats/base/Comb.save.html" class="public property"><code>save</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">typeof(this)</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -219,7 +225,7 @@ an input range interface.
 										<code>popFront</code>
 									</a>
 								</td>
-								<td>Advances to the next combination.  The array returned by <a href="../../dstats/base/Comb.front.html"><code class="prettyprint lang-d">front</code></a> will be
+								<td>Advances to the next combination.  The array returned by front will be
     overwritten with the new results.
 </td>
 							</tr>
@@ -268,36 +274,35 @@ an input range interface.
 						</table>
 					</section>
 <section><h3>Note</h3>
-<p>The buffer that is returned by <a href="../../dstats/base/Comb.front.html"><code class="prettyprint lang-d">front</code></a> is recycled across iterations.
+<p>The buffer that is returned by front is recycled across iterations.
 To duplicate it instead, use map!"a.dup" or map!"a.idup".
 </p>
 </section>
 <section><h3>Bugs</h3>
 <p>Only supports iterating over up to size_t.max combinations.
 This was a conscious tradeoff to allow this range to have a
-<a href="../../dstats/base/Comb.length.html"><code class="prettyprint lang-d">length</code></a> of type size_t, since iterating over such huge combination spaces
+length of type size_t, since iterating over such huge combination spaces
 would be insanely slow anyhow.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto comb1 = map!"a.dup"(Comb!(uint)(5, 2));
-uint[][] vals;
-foreach(c; comb1) {
-    vals ~= c;
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">comb1 </span><span class="pun">= </span><span class="pln">map</span><span class="pun">!</span><span class="str">"a.dup"</span><span class="pun">(</span><span class="typ">Comb</span><span class="pun">!(</span><span class="typ">uint</span><span class="pun">)(</span><span class="lit">5</span><span class="pun">, </span><span class="lit">2</span><span class="pun">));
+</span><span class="typ">uint</span><span class="pun">[][] </span><span class="pln">vals</span><span class="pun">;
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">c</span><span class="pun">; </span><span class="pln">comb1</span><span class="pun">) {
+    </span><span class="pln">vals </span><span class="pun">~= </span><span class="pln">c</span><span class="pun">;
 }
-auto sorted = sort(vals);
-assert(sorted.canFind([0u,1]));
-assert(sorted.canFind([0u,2]));
-assert(sorted.canFind([0u,3]));
-assert(sorted.canFind([0u,4]));
-assert(sorted.canFind([1u,2]));
-assert(sorted.canFind([1u,3]));
-assert(sorted.canFind([1u,4]));
-assert(sorted.canFind([2u,3]));
-assert(sorted.canFind([2u,4]));
-assert(sorted.canFind([3u,4]));
-assert(sorted.length == 10);
-</code></pre>
+</span><span class="kwd">auto </span><span class="pln">sorted </span><span class="pun">= </span><span class="pln">sort</span><span class="pun">(</span><span class="pln">vals</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">0u</span><span class="pun">,</span><span class="lit">1</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">0u</span><span class="pun">,</span><span class="lit">2</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">0u</span><span class="pun">,</span><span class="lit">3</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">0u</span><span class="pun">,</span><span class="lit">4</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">1u</span><span class="pun">,</span><span class="lit">2</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">1u</span><span class="pun">,</span><span class="lit">3</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">1u</span><span class="pun">,</span><span class="lit">4</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">2u</span><span class="pun">,</span><span class="lit">3</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">2u</span><span class="pun">,</span><span class="lit">4</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">([</span><span class="lit">3u</span><span class="pun">,</span><span class="lit">4</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">10</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

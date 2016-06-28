@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -89,22 +88,22 @@ between an empirical distribution and a reference distribution.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> ksTest(T, U)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">ksTest</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T F,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">F</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;U Fprime
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">Fprime</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!T &amp;&amp; doubleInput!U);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the K-S D value and a P value for the null that
-FPrime is distributed identically to <a href="../../dstats/tests/ksTest.html#F"><code class="prettyprint lang-d">F</code></a> against the alternative that it isn't.
+<p>A TestRes with the K-S D value and a P value for the null that
+FPrime is distributed identically to F against the alternative that it isn't.
 This implementation uses a signed D value to indicate the direction of the
 difference between distributions.  To get the D value used in standard
 notation, simply take the absolute value of this D value.
@@ -130,22 +129,22 @@ Takes a callable object for the CDF of refernce distribution.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> ksTest(T, Func)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">ksTest</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T Femp,
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">Femp</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Func F
+&nbsp;&nbsp;<span class="typ">Func</span> <span class="pln">F</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (doubleInput!T &amp;&amp; is(ReturnType!Func : double));
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ReturnType</span><span class="pun">!</span><span class="typ">Func </span><span class="pun">: </span><span class="typ">double</span><span class="pun">)</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> with the Kolmogorov-Smirnov D value and a P value for the
-null that <a href="../../dstats/tests/ksTest.html#Femp"><code class="prettyprint lang-d">Femp</code></a> is a sample from <a href="../../dstats/tests/ksTest.html#F"><code class="prettyprint lang-d">F</code></a> against the alternative that it isn't. This
+<p>A TestRes with the Kolmogorov-Smirnov D value and a P value for the
+null that Femp is a sample from F against the alternative that it isn't. This
 implementation uses a signed D value to indicate the direction of the
 difference between distributions.  To get the D value used in standard
 notation, simply take the absolute value of this D value.
@@ -156,10 +155,9 @@ notation, simply take the absolute value of this D value.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">auto stdNormal = parametrize!(normalCDF)(0.0, 1.0);
-auto empirical = [1, 2, 3, 4, 5];
-auto res = <a href="../../dstats/tests/ksTest.html">ksTest</a>(empirical, stdNormal);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">stdNormal </span><span class="pun">= </span><span class="pln">parametrize</span><span class="pun">!(</span><span class="pln">normalCDF</span><span class="pun">)(</span><span class="lit">0.0</span><span class="pun">, </span><span class="lit">1.0</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">empirical </span><span class="pun">= [</span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">5</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">res </span><span class="pun">= </span><span class="pln">ksTest</span><span class="pun">(</span><span class="pln">empirical</span><span class="pun">, </span><span class="pln">stdNormal</span><span class="pun">);</span></code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -77,7 +76,7 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>A plain old data struct for returning the results of hypothesis tests
 that also produce confidence intervals.  Contains, can implicitly convert
-to, a <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a>.
+to, a TestRes.
 </p>
 
 					<section>
@@ -93,7 +92,7 @@ to, a <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d"
 								<td>
 									<a href="../../dstats/tests/ConfInt.lowerBound.html" class="public"><code>lowerBound</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>Lower bound of the confidence interval at the level specified.
 </td>
 							</tr>
@@ -101,7 +100,7 @@ to, a <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d"
 								<td>
 									<a href="../../dstats/tests/ConfInt.testRes.html" class="public"><code>testRes</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/tests/TestRes.html">TestRes</a></code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a></code></td>
 								<td>This is alias this'd.
 </td>
 							</tr>
@@ -109,7 +108,7 @@ to, a <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d"
 								<td>
 									<a href="../../dstats/tests/ConfInt.upperBound.html" class="public"><code>upperBound</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>Upper bound of the confidence interval at the level specified.
 </td>
 							</tr>

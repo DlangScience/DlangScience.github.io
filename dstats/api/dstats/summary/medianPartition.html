@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,10 +74,10 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function medianPartition</h1>
 			<section>
-				<p>Median finding as in <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a>(), but will partition input <a href="../../dstats/summary/medianPartition.html#data"><code class="prettyprint lang-d">data</code></a> such that
- elements less than the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> will have smaller indices than that of the
- <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a>, and elements larger than the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a> will have larger indices than
- that of the <a href="../../dstats/summary/median.html"><code class="prettyprint lang-d">median</code></a>. Useful both for its partititioning and to avoid
+				<p>Median finding as in median(), but will partition input data such that
+ elements less than the median will have smaller indices than that of the
+ median, and elements larger than the median will have larger indices than
+ that of the median. Useful both for its partititioning and to avoid
  memory allocations.  Requires a random access range with swappable
  elements.
 </p>
@@ -86,14 +85,14 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double medianPartition(T)(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">medianPartition</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T data
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (isRandomAccessRange!T &amp;&amp; is(ElementType!T : double) &amp;&amp; hasSwappableElements!T &amp;&amp; hasLength!T);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">T </span><span class="pun">: </span><span class="typ">double</span><span class="pun">) &amp;&amp; </span><span class="pln">hasSwappableElements</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,8 +74,8 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct GTestRes</h1>
 			<section>
-				<p>This struct is a subtype of <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> and is used to return the results of
-<a href="../../dstats/tests/gTestContingency.html"><code class="prettyprint lang-d">gTestContingency</code></a> and <a href="../../dstats/tests/gTestObs.html"><code class="prettyprint lang-d">gTestObs</code></a>.  Due to the information theoretic interpretation
+				<p>This struct is a subtype of TestRes and is used to return the results of
+gTestContingency and gTestObs.  Due to the information theoretic interpretation
 of the G test, it contains an extra field to return the mutual information
 in bits.
 </p>
@@ -94,7 +93,7 @@ in bits.
 								<td>
 									<a href="../../dstats/tests/GTestRes.mutualInfo.html" class="public"><code>mutualInfo</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>The mutual info of the two random variables in the joint distribution
     represented by the contingency table, in bits (base 2).
 </td>
@@ -103,7 +102,7 @@ in bits.
 								<td>
 									<a href="../../dstats/tests/GTestRes.testRes.html" class="public"><code>testRes</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/tests/TestRes.html">TestRes</a></code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a></code></td>
 								<td></td>
 							</tr>
 						</table>

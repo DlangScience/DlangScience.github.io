@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -92,7 +91,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.adjustedR2.html" class="public"><code>adjustedR2</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>The adjusted coefficient of determination.
 </td>
 							</tr>
@@ -100,7 +99,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.betas.html" class="public"><code>betas</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The coefficients, one for each range in X.  These will be in the order
  that the X ranges were passed in.
 </td>
@@ -109,7 +108,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.lowerBound.html" class="public"><code>lowerBound</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The lower confidence bounds of the beta terms, at the confidence level
  specificied.  (Default 0.95).
 </td>
@@ -118,7 +117,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.overallP.html" class="public"><code>overallP</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>The P-value for the model as a whole.  Based on an F-statistic.  The
  null here is that the model has no predictive value, the alternative
  is that it does.
@@ -128,7 +127,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.p.html" class="public"><code>p</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The P-value for the alternative that the corresponding beta value is
  different from zero against the null that it is equal to zero.
 </td>
@@ -137,7 +136,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.R2.html" class="public"><code>R2</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>The coefficient of determination.
 </td>
 							</tr>
@@ -145,15 +144,15 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.residualError.html" class="public"><code>residualError</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td>The root mean square of the <a href="../../dstats/regress/residuals.html"><code class="prettyprint lang-d">residuals</code></a>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
+								<td>The root mean square of the residuals.
 </td>
 							</tr>
 							<tr>
 								<td>
 									<a href="../../dstats/regress/RegressRes.stdErr.html" class="public"><code>stdErr</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The standard error terms of the X ranges passed in.
 </td>
 							</tr>
@@ -161,7 +160,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/RegressRes.upperBound.html" class="public"><code>upperBound</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The upper confidence bounds of the beta terms, at the confidence level
  specificied.  (Default 0.95).
 </td>

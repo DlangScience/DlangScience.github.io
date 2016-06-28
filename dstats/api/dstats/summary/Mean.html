@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,8 +74,8 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct Mean</h1>
 			<section>
-				<p>Output range to calculate the <a href="../../dstats/summary/Mean.mean.html"><code class="prettyprint lang-d">mean</code></a> online.  Getter for <a href="../../dstats/summary/Mean.mean.html"><code class="prettyprint lang-d">mean</code></a> costs a branch to
- check for <a href="../../dstats/summary/Mean.N.html"><code class="prettyprint lang-d">N</code></a> == 0.  This struct uses O(1) space and does *NOT* store the
+				<p>Output range to calculate the mean online.  Getter for mean costs a branch to
+ check for N == 0.  This struct uses O(1) space and does *NOT* store the
  individual elements.
 </p>
 <section></section>
@@ -95,7 +94,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/Mean.mean.html" class="public property"><code>mean</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -103,7 +102,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/Mean.N.html" class="public property"><code>N</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -111,7 +110,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/Mean.sum.html" class="public property"><code>sum</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -119,7 +118,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/Mean.toMean.html" class="public property"><code>toMean</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/Mean.html">Mean</a></code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/Mean.html"><span class="typ">Mean</span></a></code></td>
 								<td>Simply returns this.  Useful in generic programming contexts.
 </td>
 							</tr>
@@ -147,7 +146,7 @@ $('#symbolSearchPane').show();
 										<code>put</code>
 									</a>
 								</td>
-								<td>Adds the contents of <a href="../../dstats/summary/Mean.put.html#rhs"><code class="prettyprint lang-d">rhs</code></a> to this instance.
+								<td>Adds the contents of rhs to this instance.
 </td>
 							</tr>
 							<tr>
@@ -161,18 +160,17 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Note</h3>
-<p>This struct can implicitly convert to the value of the <a href="../../dstats/summary/Mean.mean.html"><code class="prettyprint lang-d">mean</code></a>.
+<p>This struct can implicitly convert to the value of the mean.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">Mean summ;
-summ.put(1);
-summ.put(2);
-summ.put(3);
-summ.put(4);
-summ.put(5);
-assert(summ.mean == 3);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">Mean </span><span class="pln">summ</span><span class="pun">;
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">2</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">3</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">4</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">5</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">mean </span><span class="pun">== </span><span class="lit">3</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

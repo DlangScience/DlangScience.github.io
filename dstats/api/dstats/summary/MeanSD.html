@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,10 +74,10 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct MeanSD</h1>
 			<section>
-				<p>Output range to compute <a href="../../dstats/summary/MeanSD.mean.html"><code class="prettyprint lang-d">mean</code></a>, <a href="../../dstats/summary/MeanSD.stdev.html"><code class="prettyprint lang-d">stdev</code></a>, <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a> online.  Getter methods
- for <a href="../../dstats/summary/MeanSD.stdev.html"><code class="prettyprint lang-d">stdev</code></a>, <a href="../../dstats/summary/MeanSD.var.html"><code class="prettyprint lang-d">var</code></a> cost a few floating point ops.  Getter for <a href="../../dstats/summary/MeanSD.mean.html"><code class="prettyprint lang-d">mean</code></a> costs
- a single branch to check for <a href="../../dstats/summary/MeanSD.N.html"><code class="prettyprint lang-d">N</code></a> == 0.  Relatively expensive floating point
- ops, if you only need <a href="../../dstats/summary/MeanSD.mean.html"><code class="prettyprint lang-d">mean</code></a>, try <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a>.  This struct uses O(1) space and
+				<p>Output range to compute mean, stdev, variance online.  Getter methods
+ for stdev, var cost a few floating point ops.  Getter for mean costs
+ a single branch to check for N == 0.  Relatively expensive floating point
+ ops, if you only need mean, try Mean.  This struct uses O(1) space and
  does *NOT* store the individual elements.
 </p>
 <section></section>
@@ -97,7 +96,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.mean.html" class="public property"><code>mean</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -105,8 +104,8 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.mse.html" class="public property"><code>mse</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
-								<td><a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> squared error.  In other words, a biased estimate of <a href="../../dstats/summary/variance.html"><code class="prettyprint lang-d">variance</code></a>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
+								<td>Mean squared error.  In other words, a biased estimate of variance.
 </td>
 							</tr>
 							<tr>
@@ -114,7 +113,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.N.html" class="public property"><code>N</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -122,7 +121,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.stdev.html" class="public property"><code>stdev</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -130,7 +129,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.sum.html" class="public property"><code>sum</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 							<tr>
@@ -138,8 +137,8 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.toMean.html" class="public property"><code>toMean</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/Mean.html">Mean</a></code></td>
-								<td>Converts this struct to a <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> struct.  Also called when an
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/Mean.html"><span class="typ">Mean</span></a></code></td>
+								<td>Converts this struct to a Mean struct.  Also called when an
  implicit conversion via alias this takes place.
 </td>
 							</tr>
@@ -148,7 +147,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.toMeanSD.html" class="public property"><code>toMeanSD</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/MeanSD.html">MeanSD</a></code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/MeanSD.html"><span class="typ">MeanSD</span></a></code></td>
 								<td>Simply returns this.  Useful in generic programming contexts.
 </td>
 							</tr>
@@ -157,7 +156,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/summary/MeanSD.var.html" class="public property"><code>var</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td></td>
 							</tr>
 						</table>
@@ -184,7 +183,7 @@ $('#symbolSearchPane').show();
 										<code>put</code>
 									</a>
 								</td>
-								<td>Combine two <a href="../../dstats/summary/MeanSD.html"><code class="prettyprint lang-d">MeanSD</code></a>'s.
+								<td>Combine two MeanSD's.
 </td>
 							</tr>
 							<tr>
@@ -198,7 +197,7 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Note</h3>
-<p>This struct can implicitly convert to a <a href="../../dstats/summary/Mean.html"><code class="prettyprint lang-d">Mean</code></a> struct.
+<p>This struct can implicitly convert to a Mean struct.
 </p>
 </section>
 <section><h3>References</h3>
@@ -210,16 +209,15 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">MeanSD summ;
-summ.put(1);
-summ.put(2);
-summ.put(3);
-summ.put(4);
-summ.put(5);
-assert(summ.mean == 3);
-assert(summ.stdev == sqrt(2.5));
-assert(summ.var == 2.5);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">MeanSD </span><span class="pln">summ</span><span class="pun">;
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">2</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">3</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">4</span><span class="pun">);
+</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="lit">5</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">mean </span><span class="pun">== </span><span class="lit">3</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">stdev </span><span class="pun">== </span><span class="pln">sqrt</span><span class="pun">(</span><span class="lit">2.5</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">var </span><span class="pun">== </span><span class="lit">2.5</span><span class="pun">);</span></code></pre>
 </section>
 
 			</section>

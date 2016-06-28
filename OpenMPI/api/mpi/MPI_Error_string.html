@@ -6,22 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class="collapsed tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">mpi</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../mpi.html" class="selected module">Package members</a>
+							</li>
 							<li>
 								<a href="../mpi/util.html" class=" module">util</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
 						</ul>
 				<noscript>
@@ -47,16 +46,16 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) int MPI_Error_string(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">int</span> <span class="pln">MPI_Error_string</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;int errorcode,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">errorcode</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char* string,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">string</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* resultlen
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">resultlen</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

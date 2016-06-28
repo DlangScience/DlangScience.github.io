@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -290,15 +289,22 @@ $('#symbolSearchPane').show();
 			<h1>Class EigenvalueException</h1>
 			<section>
 				<p>This exception is thrown when the eigenvalue() function fails to
-    compute all <a href="../../scid/linalg/EigenvalueException.eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a>. The ones that have been computed are stored
-    in the member variable <a href="../../scid/linalg/EigenvalueException.eigenvalues.html"><code class="prettyprint lang-d">eigenvalues</code></a>.
+    compute all eigenvalues. The ones that have been computed are stored
+    in the member variable eigenvalues.
 </p>
 
+					<section>
+						<h3>Template arguments</h3>
+						<div class="prototype">
+							<code class="lang-d"><span class="kwd">class</span> <span class="typ">EigenvalueException</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span>;
+							</code>
+						</div>
+					</section>
 					<section>
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d">Object</code>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
 							</li>
 						</ul>
@@ -334,8 +340,8 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../scid/linalg/EigenvalueException.eigenvalues.html" class="public"><code>eigenvalues</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">T</code></td>
-								<td>The computed <code class="prettyprint lang-d">eigenvalues</code>.
+								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">T</span></code></td>
+								<td>The computed eigenvalues.
 </td>
 							</tr>
 						</table>

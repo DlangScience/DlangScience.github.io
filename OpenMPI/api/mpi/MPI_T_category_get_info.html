@@ -6,22 +6,21 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class="collapsed tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">mpi</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../mpi.html" class="selected module">Package members</a>
+							</li>
 							<li>
 								<a href="../mpi/util.html" class=" module">util</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="../mpi.html" class="selected module">mpi</a>
 							</li>
 						</ul>
 				<noscript>
@@ -47,26 +46,26 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-extern(C) int MPI_T_category_get_info(
+							<code class="lang-d">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">int</span> <span class="pln">MPI_T_category_get_info</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;int cat_index,
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">cat_index</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char* name,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">name</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* name_len,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">name_len</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;char* desc,
+&nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">desc</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* desc_len,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">desc_len</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* num_cvars,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">num_cvars</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* num_pvars,
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">num_pvars</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;int* num_categories
+&nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">num_categories</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

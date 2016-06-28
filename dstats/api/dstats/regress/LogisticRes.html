@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -75,7 +74,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct LogisticRes</h1>
 			<section>
-				<p>Plain old data struct to hold the results of a <a href="../../dstats/regress/logistic.html"><code class="prettyprint lang-d">logistic</code></a> regression.
+				<p>Plain old data struct to hold the results of a logistic regression.
 </p>
 
 					<section>
@@ -91,7 +90,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.betas.html" class="public"><code>betas</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The coefficients, one for each range in X.  These will be in the order
  that the X ranges were passed in.
 </td>
@@ -100,7 +99,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.logLikelihood.html" class="public"><code>logLikelihood</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>The log likelihood for the model fit.
 </td>
 							</tr>
@@ -108,7 +107,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.lowerBound.html" class="public"><code>lowerBound</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The Wald lower confidence bounds of the beta terms, at the confidence level
     specificied.  (Default 0.95).
 </td>
@@ -117,7 +116,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.nullLogLikelihood.html" class="public"><code>nullLogLikelihood</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>The log likelihood for the null model.
 </td>
 							</tr>
@@ -125,7 +124,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.overallP.html" class="public"><code>overallP</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>The P-value for the model as a whole, based on the likelihood ratio test.
     The null here is that the model has no predictive value, the alternative
     is that it does have predictive value.
@@ -135,7 +134,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.p.html" class="public"><code>p</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The P-value for the alternative that the corresponding beta value is
     different from zero against the null that it is equal to zero.  These
     are calculated using the Wald Test.
@@ -145,7 +144,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.stdErr.html" class="public"><code>stdErr</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The standard error terms of the X ranges passed in.
 </td>
 							</tr>
@@ -153,7 +152,7 @@ $('#symbolSearchPane').show();
 								<td>
 									<a href="../../dstats/regress/LogisticRes.upperBound.html" class="public"><code>upperBound</code></a>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double[]</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span><span class="pun">[]</span></code></td>
 								<td>The Wald upper confidence bounds of the beta terms, at the confidence level
     specificied.  (Default 0.95).
 </td>
@@ -174,7 +173,7 @@ $('#symbolSearchPane').show();
 									<a href="../../dstats/regress/LogisticRes.aic.html" class="public property"><code>aic</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">double</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td>
 								<td>Akaike Information Criterion, which is a complexity-penalized goodness-
     of-fit score, equal to 2 * k - 2 log(L) where L is the log likelihood and
     k is the number of parameters.

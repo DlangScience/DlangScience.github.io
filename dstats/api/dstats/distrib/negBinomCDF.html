@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -77,42 +76,41 @@ $('#symbolSearchPane').show();
 			<section>
 				<p>Negative binomial distribution.
 </p>
-<section><p>Returns the sum of the terms 0 through <a href="../../dstats/distrib/negBinomCDF.html#k"><code class="prettyprint lang-d">k</code></a> of the negative
+<section><p>Returns the sum of the terms 0 through k of the negative
  binomial distribution:
 </p>
 
-<p> j=0, <a href="../../dstats/distrib/negBinomCDF.html#k"><code class="prettyprint lang-d">k</code></a> <a href="../../dstats/distrib/negBinomCDF.html#n"><code class="prettyprint lang-d">n</code></a>+j-1, j <a href="../../dstats/distrib/negBinomCDF.html#p"><code class="prettyprint lang-d">p</code></a>, <a href="../../dstats/distrib/negBinomCDF.html#n"><code class="prettyprint lang-d">n</code></a> (1-<a href="../../dstats/distrib/negBinomCDF.html#p"><code class="prettyprint lang-d">p</code></a>), j
+<p> j=0, k n+j-1, j p, n (1-p), j
  ???? In mathworld, it is
- j=0, <a href="../../dstats/distrib/negBinomCDF.html#k"><code class="prettyprint lang-d">k</code></a> <a href="../../dstats/distrib/negBinomCDF.html#n"><code class="prettyprint lang-d">n</code></a>+j-1, j-1 <a href="../../dstats/distrib/negBinomCDF.html#p"><code class="prettyprint lang-d">p</code></a>, j (1-<a href="../../dstats/distrib/negBinomCDF.html#p"><code class="prettyprint lang-d">p</code></a>), <a href="../../dstats/distrib/negBinomCDF.html#n"><code class="prettyprint lang-d">n</code></a>
+ j=0, k n+j-1, j-1 p, j (1-p), n
 </p>
 
 <p> In a sequence of Bernoulli trials, this is the probability
- that <a href="../../dstats/distrib/negBinomCDF.html#k"><code class="prettyprint lang-d">k</code></a> or fewer failures precede the <a href="../../dstats/distrib/negBinomCDF.html#n"><code class="prettyprint lang-d">n</code></a>-th success.
+ that k or fewer failures precede the n-th success.
 </p>
 
-<p> The arguments must be positive, with 0 &lt; <a href="../../dstats/distrib/negBinomCDF.html#p"><code class="prettyprint lang-d">p</code></a> &lt; 1 and r&gt;0.
+<p> The arguments must be positive, with 0 &lt; p &lt; 1 and r&gt;0.
 </p>
 
 <p> The Geometric Distribution is a special case of the negative binomial
  distribution.
 </p>
-<pre class="code"><code class="prettyprint lang-d">geometricDistribution(<a href="../../dstats/distrib/negBinomCDF.html#k">k</a>, <a href="../../dstats/distrib/negBinomCDF.html#p">p</a>) = negativeBinomialDistribution(<a href="../../dstats/distrib/negBinomCDF.html#k">k</a>, 1, <a href="../../dstats/distrib/negBinomCDF.html#p">p</a>);
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="pln">geometricDistribution</span><span class="pun">(<a href="../../dstats/distrib/negBinomCDF.html#k"></span><span class="pln">k</span></a><span class="pun">, <a href="../../dstats/distrib/negBinomCDF.html#p"></span><span class="pln">p</span></a><span class="pun">) = </span><span class="pln">negativeBinomialDistribution</span><span class="pun">(<a href="../../dstats/distrib/negBinomCDF.html#k"></span><span class="pln">k</span></a><span class="pun">, </span><span class="lit">1</span><span class="pun">, <a href="../../dstats/distrib/negBinomCDF.html#p"></span><span class="pln">p</span></a><span class="pun">);</span></code></pre>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-double negBinomCDF(
+							<code class="lang-d">
+<span class="typ">double</span> <span class="pln">negBinomCDF</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;ulong k,
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">k</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;ulong n,
+&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">n</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;double p
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">p</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

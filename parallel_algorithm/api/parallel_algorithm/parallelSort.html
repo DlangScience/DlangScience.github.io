@@ -6,10 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li>
@@ -34,8 +33,8 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function parallelSort</h1>
 			<section>
-				<p>Sort a <a href="../parallel_algorithm/parallelSort.html#range"><code class="prettyprint lang-d">range</code></a> using a parallel <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> sort algorithm, falling back to
-baseAlgorithm for small subranges.  Usage is similar to
+				<p>Sort a range using a parallel merge sort algorithm, falling back to
+<code class="lang-d"><span class="pln">baseAlgorithm</span></code> for small subranges.  Usage is similar to
 algorithm, sort.
 </p>
 <section></section>
@@ -43,20 +42,20 @@ algorithm, sort.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-SortedRange!(R,pred) parallelSort(alias pred, alias baseAlgorithm, R)(
+							<code class="lang-d">
+<span class="typ">SortedRange</span>!(R,pred) <span class="pln">parallelSort</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">pred</span><span class="pun">, </span><span class="kwd">alias </span><span class="pln">baseAlgorithm</span><span class="pun">, </span><span class="pln">R</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;R range,
+&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">range</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t minParallelSort = 1024,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">minParallelSort</span> <span class="pun">=</span> <span class="lit">1024</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;size_t minParallelMerge = 4096,
+&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">minParallelMerge</span> <span class="pun">=</span> <span class="lit">4096</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;TaskPool pool = null
+&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-)
+<span class="pun">)</span>
 								<br/>
-if (finiteRandom!R &amp;&amp; hasAssignableElements!R);
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">finiteRandom</span><span class="pun">!</span><span class="pln">R </span><span class="pun">&amp;&amp; </span><span class="pln">hasAssignableElements</span><span class="pun">!</span><span class="pln">R</span><span class="pun">);</span>
 							</code>
 						</div>
 					</section>
@@ -65,19 +64,19 @@ if (finiteRandom!R &amp;&amp; hasAssignableElements!R);
 <tr><td id="pred">pred</td><td> The predicate to sort on.
 </td></tr>
 <tr><td id="baseAlgorithm">baseAlgorithm</td><td> The algorithm to fall back to for small subranges.
-<code class="prettyprint lang-d">parallelSort</code> is a stable sort iff baseAlgorithm is a stable sort.
+<code class="lang-d"><span class="pln">parallelSort</span></code> is a stable sort iff <code class="lang-d"><span class="pln">baseAlgorithm</span></code> is a stable sort.
 </td></tr>
-<tr><td id="range">range</td><td> The <a href="../parallel_algorithm/parallelSort.html#range"><code class="prettyprint lang-d">range</code></a> to be sorted.
+<tr><td id="range">range</td><td> The range to be sorted.
 </td></tr>
 <tr><td id="minParallelSort">minParallelSort</td><td> The smallest subrange to sort in parallel. Small values
 will expose more parallelism, but also incur more overhead.
 </td></tr>
-<tr><td id="minParallelMerge">minParallelMerge</td><td> The smallest subrange to <a href="../parallel_algorithm/merge.html"><code class="prettyprint lang-d">merge</code></a> in parallel.  Since
+<tr><td id="minParallelMerge">minParallelMerge</td><td> The smallest subrange to merge in parallel.  Since
 merging is a cheaper operation than sorting, this should be somewhat larger
-than <a href="../parallel_algorithm/parallelSort.html#minParallelSort"><code class="prettyprint lang-d">minParallelSort</code></a>.
+than <code class="lang-d"><a href="../parallel_algorithm/parallelSort.html#minParallelSort"><span class="pln">minParallelSort</span></a></code>.
 </td></tr>
 <tr><td id="pool">pool</td><td> The parallelism, TaskPool to use.  If null, the global
-default task <a href="../parallel_algorithm/parallelSort.html#pool"><code class="prettyprint lang-d">pool</code></a> returned by parallelism, taskPool will be used.</td></tr>
+default task pool returned by parallelism, taskPool will be used.</td></tr>
 </table>
 </section>
 

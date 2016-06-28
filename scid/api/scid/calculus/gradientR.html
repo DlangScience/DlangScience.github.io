@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">scid</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -289,35 +288,35 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function gradientR</h1>
 			<section>
-				<p>Calculate the <a href="../../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a> of a function of several variables
+				<p>Calculate the gradient of a function of several variables
     using Ridders' method.
 </p>
-<section><p>This function uses <a href="../../scid/calculus/diff.html"><code class="prettyprint lang-d">diff</code></a>() to calculate the derivative
+<section><p>This function uses <code class="lang-d"><a href="../../scid/calculus/diff.html"><span class="pln">diff</span></a><span class="pun">()</span></code> to calculate the derivative
     in each direction. It is therefore more accurate, but slower, than
-    the <a href="../../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a>() function. The function <a href="../../scid/calculus/gradientR.html#f"><code class="prettyprint lang-d">f</code></a> is typically evaluated
-    between 6<i>n</i> and 12<i>n</i> times, where <i>n</i> is the length of <a href="../../scid/calculus/gradientR.html#x"><code class="prettyprint lang-d">x</code></a>.
-    See the documentation for <a href="../../scid/calculus/diff.html"><code class="prettyprint lang-d">diff</code></a>() for more information on this method.
+    the <code class="lang-d"><a href="../../scid/calculus/gradient.html"><span class="pln">gradient</span></a><span class="pun">()</span></code> function. The function <code class="lang-d"><a href="../../scid/calculus/gradientR.html#f"><span class="pln">f</span></a></code> is typically evaluated
+    between 6<i>n</i> and 12<i>n</i> times, where <i>n</i> is the length of <code class="lang-d"><a href="../../scid/calculus/gradientR.html#x"><span class="pln">x</span></a></code>.
+    See the documentation for <code class="lang-d"><a href="../../scid/calculus/diff.html"><span class="pln">diff</span></a><span class="pun">()</span></code> for more information on this method.
 </p>
 
-<p>    This function is used in the same way as <a href="../../scid/calculus/gradient.html"><code class="prettyprint lang-d">gradient</code></a>().
+<p>    This function is used in the same way as <code class="lang-d"><a href="../../scid/calculus/gradient.html"><span class="pln">gradient</span></a><span class="pun">()</span></code>.
 </p>
 </section>
 
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-Real[] gradientR(Real, Func)(
+							<code class="lang-d">
+<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">gradientR</span><span class="pun">(</span><span class="typ">Real</span><span class="pun">, </span><span class="typ">Func</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;scope Func f,
+&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">Func</span> <span class="pln">f</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] x,
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">x</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;real scale = 1.00000,
+&nbsp;&nbsp;<span class="typ">real</span> <span class="pln">scale</span> <span class="pun">=</span> <span class="lit">1.00000</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;Real[] buffer = null
+&nbsp;&nbsp;<span class="typ">Real</span><span class="pun">[]</span> <span class="pln">buffer</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>

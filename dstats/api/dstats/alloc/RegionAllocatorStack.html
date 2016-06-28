@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -76,25 +75,25 @@ $('#symbolSearchPane').show();
 			<h1>Struct RegionAllocatorStack</h1>
 			<section>
 				<p>This object represents a segmented stack.  Memory can be allocated from this
-stack using a regionallocator <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> object.  Multiple
-<a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> objects may be created per
-<code class="prettyprint lang-d">RegionAllocatorStack</code> but each <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> uses a single
-<code class="prettyprint lang-d">RegionAllocatorStack</code>.
+stack using a regionallocator RegionAllocator object.  Multiple
+<code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> objects may be created per
+<code class="lang-d"><span class="typ">RegionAllocatorStack</span></code> but each <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> uses a single
+<code class="lang-d"><span class="typ">RegionAllocatorStack</span></code>.
 </p>
 <section><p>For most use cases it's convenient to use the default thread-local
-instance of <code class="prettyprint lang-d">RegionAllocatorStack</code>, which is lazily instantiated on
+instance of <code class="lang-d"><span class="typ">RegionAllocatorStack</span></code>, which is lazily instantiated on
 the first call to the global function
-regionallocator, <a href="../../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><code class="prettyprint lang-d">newRegionAllocator</code></a>.  Occasionally it may be useful
+regionallocator, newRegionAllocator.  Occasionally it may be useful
 to have multiple independent stacks in one thread, in which case a
-<code class="prettyprint lang-d">RegionAllocatorStack</code> can be created manually.
+<code class="lang-d"><span class="typ">RegionAllocatorStack</span></code> can be created manually.
 </p>
 
-<p><code class="prettyprint lang-d">RegionAllocatorStack</code> is reference counted and has reference semantics.
+<p><code class="lang-d"><span class="typ">RegionAllocatorStack</span></code> is reference counted and has reference semantics.
 When the last copy of a given instance goes out of scope, the memory
-held by the <code class="prettyprint lang-d">RegionAllocatorStack</code> instance is released back to the
-heap.  This cannot happen before memory allocated to a <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
-instance is released back to the stack, because a <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a>
-holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code> instance it uses.
+held by the <code class="lang-d"><span class="typ">RegionAllocatorStack</span></code> instance is released back to the
+heap.  This cannot happen before memory allocated to a <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code>
+instance is released back to the stack, because a <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code>
+holds a copy of the <code class="lang-d"><span class="typ">RegionAllocatorStack</span></code> instance it uses.
 </p>
 </section>
 
@@ -112,7 +111,7 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 										<code>this</code>
 									</a>
 								</td>
-								<td>Create a new <a href="../../dstats/alloc/RegionAllocatorStack.html"><code class="prettyprint lang-d">RegionAllocatorStack</code></a> with a given segment size in bytes.
+								<td>Create a new <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> with a given segment size in bytes.
 </td>
 							</tr>
 						</table>
@@ -131,7 +130,7 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 									<a href="../../dstats/alloc/RegionAllocatorStack.gcScanned.html" class="public property"><code>gcScanned</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d">bool</code></td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
 								<td>Whether this stack is scanned by the garbage collector.
 </td>
 							</tr>
@@ -151,7 +150,7 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 										<code>newRegionAllocator</code>
 									</a>
 								</td>
-								<td>Creates a new <a href="../../dstats/alloc/RegionAllocator.html"><code class="prettyprint lang-d">RegionAllocator</code></a> region using this stack.
+								<td>Creates a new <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> region using this stack.
 </td>
 							</tr>
 							<tr>
@@ -165,30 +164,29 @@ holds a copy of the <code class="prettyprint lang-d">RegionAllocatorStack</code>
 						</table>
 					</section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">import std.regionallocator;
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">regionallocator</span><span class="pun">;
 
-void main() {
-    fun1();
+</span><span class="typ">void </span><span class="pln">main</span><span class="pun">() {
+    </span><span class="pln">fun1</span><span class="pun">();
 }
 
-void fun1() {
-    auto stack = RegionAllocatorStack(1_048_576, <a href="../../dstats/alloc/GCScan.no.html">GCScan.no</a>);
-    fun2(stack);
+</span><span class="typ">void </span><span class="pln">fun1</span><span class="pun">() {
+    </span><span class="kwd">auto </span><span class="pln">stack </span><span class="pun">= </span><span class="typ">RegionAllocatorStack</span><span class="pun">(</span><span class="lit">1_048_576</span><span class="pun">, <a href="../../dstats/alloc/GCScan.no.html"></span><span class="typ">GCScan<wbr/></span><span class="pun">.</span><span class="pln">no</span></a><span class="pun">);
+    </span><span class="pln">fun2</span><span class="pun">(</span><span class="pln">stack</span><span class="pun">);
 
-    // At the end of fun1, the last copy of the RegionAllocatorStack
+    </span><span class="com">// At the end of fun1, the last copy of the RegionAllocatorStack
     // instance pointed to by stack goes out of scope.  The memory
     // held by stack is released back to the heap.
-}
+</span><span class="pun">}
 
-void fun2(RegionAllocatorStack stack) {
-    auto alloc = stack.newRegionAllocator();
-    auto arr = alloc.newArray!(double[])(1_024);
+</span><span class="typ">void </span><span class="pln">fun2</span><span class="pun">(</span><span class="typ">RegionAllocatorStack </span><span class="pln">stack</span><span class="pun">) {
+    </span><span class="kwd">auto </span><span class="pln">alloc </span><span class="pun">= </span><span class="pln">stack<wbr/></span><span class="pun">.</span><span class="pln">newRegionAllocator</span><span class="pun">();
+    </span><span class="kwd">auto </span><span class="pln">arr </span><span class="pun">= </span><span class="pln">alloc<wbr/></span><span class="pun">.</span><span class="pln">newArray</span><span class="pun">!(</span><span class="typ">double</span><span class="pun">[])(</span><span class="lit">1_024</span><span class="pun">);
 
-    // At the end of fun2, the last copy of the <a href="../../dstats/alloc/RegionAllocator.html">RegionAllocator</a> instance
+    </span><span class="com">// At the end of fun2, the last copy of the RegionAllocator instance
     // pointed to by alloc goes out of scope.  The memory used by arr
     // is released back to stack.
-}
-</code></pre>
+</span><span class="pun">}</span></code></pre>
 </section>
 
 			</section>

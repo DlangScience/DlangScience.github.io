@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">dstats</a>
 						<ul class="tree-view">
+							<li>
+								<a href="../../dstats.html" class=" module">Package members</a>
+							</li>
 							<li>
 								<a href="../../dstats/alloc.html" class=" module">alloc</a>
 							</li>
@@ -53,9 +55,6 @@
 							</li>
 						</ul>
 							</li>
-							<li>
-								<a href="../../dstats.html" class=" module">dstats</a>
-							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -86,36 +85,35 @@ types, MeanSD structs and Summary structs.
 					<section>
 						<h3>Prototype</h3>
 						<div class="prototype">
-							<code class="prettyprint lang-d">
-<a href="../../dstats/tests/TestRes.html">TestRes</a> fTest(T...)(
+							<code class="lang-d">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">fTest</span><span class="pun">(</span><span class="pln">T</span><span class="pun">...)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;T data
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span>
 								<br/>
-);
+<span class="pun">)</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Note</h3>
 <p>This test makes the assumption that all groups have equal variances,
 also known as homoskedasticity.  For a similar test that does not make these
-assumptions, see <a href="../../dstats/tests/welchAnova.html"><code class="prettyprint lang-d">welchAnova</code></a>.
+assumptions, see welchAnova.
 </p>
 </section>
 <section><h3>Examples</h3>
-<pre class="code"><code class="prettyprint lang-d">uint[] thing1 = [3,1,4,1],
-       thing2 = [5,9,2,6,5,3],
-       thing3 = [5,8,9,7,9,3];
-auto result = fTest(thing1, meanStdev(thing2), summary(thing3));
-assert(approxEqual(result.testStat, 4.9968));
-assert(approxEqual(result.p, 0.02456));
-</code></pre>
+<pre class="code"><code class="lang-d"><span class="typ">uint</span><span class="pun">[] </span><span class="pln">thing1 </span><span class="pun">= [</span><span class="lit">3</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">1</span><span class="pun">],
+       </span><span class="pln">thing2 </span><span class="pun">= [</span><span class="lit">5</span><span class="pun">,</span><span class="lit">9</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">3</span><span class="pun">],
+       </span><span class="pln">thing3 </span><span class="pun">= [</span><span class="lit">5</span><span class="pun">,</span><span class="lit">8</span><span class="pun">,</span><span class="lit">9</span><span class="pun">,</span><span class="lit">7</span><span class="pun">,</span><span class="lit">9</span><span class="pun">,</span><span class="lit">3</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">result </span><span class="pun">= </span><span class="pln">fTest</span><span class="pun">(</span><span class="pln">thing1</span><span class="pun">, </span><span class="pln">meanStdev</span><span class="pun">(</span><span class="pln">thing2</span><span class="pun">), </span><span class="pln">summary</span><span class="pun">(</span><span class="pln">thing3</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">testStat</span><span class="pun">, </span><span class="lit">4.9968</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">approxEqual</span><span class="pun">(</span><span class="pln">result<wbr/></span><span class="pun">.</span><span class="pln">p</span><span class="pun">, </span><span class="lit">0.02456</span><span class="pun">));</span></code></pre>
 </section>
 <section><h3>References</h3>
 <p>http://en.wikipedia.org/wiki/F-test
 </p>
 </section>
 <section><h3>Returns</h3>
-<p>A <a href="../../dstats/tests/TestRes.html"><code class="prettyprint lang-d">TestRes</code></a> containing the F statistic and the P-value for the alternative
+<p>A TestRes containing the F statistic and the P-value for the alternative
 that the means of the groups are different against the null that they
 are identical.
 </p>

@@ -6,15 +6,17 @@
 		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
 		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="./scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="./prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="./scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class="collapsed tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">libcerf</a>
 						<ul class="tree-view">
+							<li>
+								<a href="./libcerf.html" class="selected module">Package members</a>
+							</li>
 							<li>
 								<a href="./libcerf/erfcx_.html" class=" module">erfcx_</a>
 							</li>
@@ -31,9 +33,6 @@
 								<a href="./libcerf/w_of_z.html" class=" module">w_of_z</a>
 							</li>
 						</ul>
-							</li>
-							<li>
-								<a href="./libcerf.html" class="selected module">libcerf</a>
 							</li>
 						</ul>
 				<noscript>
@@ -58,14 +57,13 @@ $('#symbolSearchPane').show();
 <section></section>
 
 			<section><section><h2>Example</h2>
-<pre class="code"><code class="prettyprint lang-d">import std.complex, std.math;
-import libcerf;
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">complex</span><span class="pun">, </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">math</span><span class="pun">;
+</span><span class="kwd">import </span><span class="pln">libcerf</span><span class="pun">;
 
-auto c = <a href="./libcerf/erfi.html">erfi</a>(complex(1.0, 0.0));
-auto f = <a href="./libcerf/erfi.html">erfi</a>(1.0);
+</span><span class="kwd">auto </span><span class="pln">c </span><span class="pun">= <a href="./libcerf/erfi.html"></span><span class="pln">erfi</span></a><span class="pun">(</span><span class="pln">complex</span><span class="pun">(</span><span class="lit">1.0</span><span class="pun">, </span><span class="lit">0.0</span><span class="pun">));
+</span><span class="kwd">auto </span><span class="pln">f </span><span class="pun">= <a href="./libcerf/erfi.html"></span><span class="pln">erfi</span></a><span class="pun">(</span><span class="lit">1.0</span><span class="pun">);
 
-assert(fabs((c.re - f)/f) &lt; 1e-13);
-</code></pre>
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">fabs</span><span class="pun">((</span><span class="pln">c<wbr/></span><span class="pun">.</span><span class="pln">re </span><span class="pun">- </span><span class="pln">f</span><span class="pun">)/</span><span class="pln">f</span><span class="pun">) &lt; </span><span class="lit">1e-13</span><span class="pun">);</span></code></pre>
 </section>
 <section><h2>See Also</h2>
 <p>Original <a href="http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package">Faddeeva Package</a>
@@ -103,7 +101,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/err_fcts/cdawson.html"><code class="prettyprint lang-d">libcerf.err_fcts.cdawson</code></a> and <a href="./libcerf/err_fcts/dawson.html"><code class="prettyprint lang-d">libcerf.err_fcts.dawson</code></a>.
+						<td>Alias for libcerf.err_fcts.cdawson and libcerf.err_fcts.dawson.
 </td>
 					</tr>
 					<tr>
@@ -114,7 +112,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/err_fcts/cerf.html"><code class="prettyprint lang-d">libcerf.err_fcts.cerf</code></a>.
+						<td>Alias for libcerf.err_fcts.cerf.
 </td>
 					</tr>
 					<tr>
@@ -125,7 +123,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/err_fcts/cerfc.html"><code class="prettyprint lang-d">libcerf.err_fcts.cerfc</code></a>.
+						<td>Alias for libcerf.err_fcts.cerfc.
 </td>
 					</tr>
 					<tr>
@@ -136,7 +134,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/err_fcts/cerfcx.html"><code class="prettyprint lang-d">libcerf.err_fcts.cerfcx</code></a> and <a href="./libcerf/erfcx_/erfcx.html"><code class="prettyprint lang-d">libcerf.erfcx_.erfcx</code></a>.
+						<td>Alias for libcerf.err_fcts.cerfcx and libcerf.erfcx_.erfcx.
 </td>
 					</tr>
 					<tr>
@@ -147,7 +145,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/err_fcts/cerfi.html"><code class="prettyprint lang-d">libcerf.err_fcts.cerfi</code></a> and <a href="./libcerf/err_fcts/erfi.html"><code class="prettyprint lang-d">libcerf.err_fcts.erfi</code></a>.
+						<td>Alias for libcerf.err_fcts.cerfi and libcerf.err_fcts.erfi.
 </td>
 					</tr>
 					<tr>
@@ -158,7 +156,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/w_of_z/w_of_z.html"><code class="prettyprint lang-d">libcerf.w_of_z.w_of_z</code></a>.
+						<td>Alias for libcerf.w_of_z.w_of_z.
 </td>
 					</tr>
 					<tr>
@@ -169,7 +167,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/im_w_of_x/im_w_of_x.html"><code class="prettyprint lang-d">libcerf.im_w_of_x.im_w_of_x</code></a>.
+						<td>Alias for libcerf.im_w_of_x.im_w_of_x.
 </td>
 					</tr>
 					<tr>
@@ -180,7 +178,7 @@ assert(fabs((c.re - f)/f) &lt; 1e-13);
 						</td>
 						<td>
 						</td>
-						<td>Alias for <a href="./libcerf/err_fcts/voigt.html"><code class="prettyprint lang-d">libcerf.err_fcts.voigt</code></a>
+						<td>Alias for libcerf.err_fcts.voigt
 </td>
 					</tr>
 				</table>
