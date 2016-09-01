@@ -2,6 +2,13 @@
 
 set -e
 
+pushd ddox
+dub upgrade
+dub build --build=release
+popd
+
+root=`pwd`
+
 for pageName in content/main $(ls content/repos/); do
     printf "****************\nbuilding: $pageName\n****************\n"
     
@@ -15,7 +22,7 @@ for pageName in content/main $(ls content/repos/); do
         then
             ./gen_docs
         else
-            dub build --build=DSddox
+            PATH=$root/ddox:$PATH dub build --build=DSddox
         fi
         popd
         
@@ -24,6 +31,13 @@ for pageName in content/main $(ls content/repos/); do
             cat content/repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
         fi
         cp -r content/repos/${pageName}/site/* ${pageName}/
+
+        if [ -d ${pageName}/api ]
+        then
+            pushd ${pageName}/api    
+            ln -s ../../ddox/public/* .
+	    popd
+        fi
 
         mdFiles=$(find ${pageName} -name \*.md)
     else

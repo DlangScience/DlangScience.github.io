@@ -38,3 +38,6 @@
 	path = content/repos/nlopt
 	url = https://github.com/DlangScience/nlopt
 	branch = master
+[submodule "ddox"]
+	path = ddox
+	url = https://github.com/rejectedsoftware/ddox
