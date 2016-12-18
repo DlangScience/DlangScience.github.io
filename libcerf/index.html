@@ -1,14 +1,10 @@
 ---
 layout: default
 ---
-<p><a href="https://travis-ci.org/DlangScience/libcerf"><img src="https://camo.githubusercontent.com/af514a793e74d8b022cf9839f57927f8caeba195/68747470733a2f2f7472617669732d63692e6f72672f446c616e67536369656e63652f6c6962636572662e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/DlangScience/libcerf.svg?branch=master" style="max-width:100%;"></a></p>
-
-<h1>libcerf</h1>
-
+<h1><a href="https://travis-ci.org/DlangScience/libcerf"><img src="https://camo.githubusercontent.com/af514a793e74d8b022cf9839f57927f8caeba195/68747470733a2f2f7472617669732d63692e6f72672f446c616e67536369656e63652f6c6962636572662e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/DlangScience/libcerf.svg?branch=master" style="max-width:100%;"></a><br>
+libcerf</h1>
 <p>Self-contained numeric library that provides an efficient and accurate implementation of complex error functions, along with Dawson, Faddeeva, and Voigt functions.</p>
-
 <h4>Functions:</h4>
-
 <ul>
 <li>erf (complex)</li>
 <li>erfc (complex)</li>
@@ -19,9 +15,7 @@ layout: default
 <li>fadeeva (complex)</li>
 <li>fadeevaIm (double)</li>
 </ul>
-
 <h4>Example:</h4>
-
 <div class="highlight highlight-source-d"><pre><span class="pl-k">import</span> <span class="pl-c1">std.complex</span>, <span class="pl-c1">std.math</span>;
 <span class="pl-k">import</span> libcerf;
 
@@ -29,14 +23,9 @@ layout: default
 <span class="pl-k">auto</span> f = erfi(<span class="pl-c1">1.0</span>);
 
 <span class="pl-k">assert</span>(fabs((c.re <span class="pl-k">-</span> f)<span class="pl-k">/</span>f) <span class="pl-k">&lt;</span> <span class="pl-c1">1e-13</span>);</pre></div>
-
 <h4>Links</h4>
-
 <ul>
-<li>D source code on <a href="https://github.com/DlangScience/libcerf">GitHub</a>
-</li>
-<li>Original <a href="http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package">Faddeeva Package</a>
-</li>
-<li>Original C <a href="http://apps.jcns.fz-juelich.de/doku//sc/libcerf">source code</a>
-</li>
+<li>D source code on <a href="https://github.com/DlangScience/libcerf">GitHub</a></li>
+<li>Original <a href="http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package">Faddeeva Package</a></li>
+<li>Original C <a href="http://apps.jcns.fz-juelich.de/doku//sc/libcerf">source code</a></li>
 </ul>
