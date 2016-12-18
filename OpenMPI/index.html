@@ -2,23 +2,14 @@
 layout: default
 ---
 <p><a href="https://travis-ci.org/DlangScience/OpenMPI"><img src="https://camo.githubusercontent.com/4a91b6a2aad1039c55a4fc84e3535ed925c3a893/68747470733a2f2f7472617669732d63692e6f72672f446c616e67536369656e63652f4f70656e4d50492e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/DlangScience/OpenMPI.svg?branch=master" style="max-width:100%;"></a></p>
-
 <h1>OpenMPI</h1>
-
 <p>D bindings to OpenMPI.</p>
-
 <h1>How to use:</h1>
-
 <p>This is a slightly unusual dub package, in that it requires some extra steps to use. The first time you try and use this package as a dependency (unless you specify the "noLibs" configuration) you will get an error message saying that it has not been configured. Follow the instructions and hopefully everything will just work. Essentially all that is necessary is to run <code>gen/setup.sh</code>.</p>
-
 <p>Here's what to do if it doesn't work out:</p>
-
 <p>Option 1:<br>
 Manually tweak the dub.json file to get it to work with your OpenMPI system. This probably involves changing the <code>"dflags"</code> and <code>"lflags"</code> fields. Instead of editing the file in the <code>dub</code> cache (e.g. <code>~/.dub/packages/</code>), you might want to make your own copy to make it more permanant. Using <code>dub add-local</code> or <code>dub add-path</code> will allow you to locally register this copy with <code>dub</code> so it works automatically for all your projects.</p>
-
 <p>Option 2:<br>
 Use the "noLibs" configuration and work out how to link to openmpi yourself (<code>mpicc --showme:link</code> will show you what is necessary)</p>
-
 <h1>Status:</h1>
-
 <p>At the moment everything should work fine on OpenMPI versions 1.4.3 upwards, not including pre-release versions. Other versions may work, but haven't been tested. However, please do report any problems you have, on any version of OpenMPI and any system, however old or new.</p>
