@@ -1,336 +1,72 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Module dstats.cor</title>
-		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../dstats/alloc.html" class=" module">alloc</a>
-							</li>
-							<li>
-								<a href="../dstats/base.html" class=" module">base</a>
-							</li>
-							<li>
-								<a href="../dstats/cor.html" class="selected module">cor</a>
-							</li>
-							<li>
-								<a href="../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../dstats/regress.html" class=" module">regress</a>
-							</li>
-							<li>
-								<a href="../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../dstats/summary.html" class=" module">summary</a>
-							</li>
-							<li>
-								<a href="../dstats/tests.html" class=" module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Module dstats.cor</h1>
-			<p>Pearson, Spearman and Kendall correlations, covariance.
-</p>
-<section></section>
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Module dstats.cor</title>
+<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../dstats/base.html">base</a></div></li><li><div class="module selected"><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../dstats/random.html">random</a></div></li><li><div class="module "><a href="../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.cor</h1><p>Pearson, Spearman and Kendall correlations, covariance.
+</p><section></section>
 
-			<section><section><h2>Author</h2>
+<section><section><h2>Author</h2>
 <p>David Simcha
 </p>
 </section>
-</section>
-			<section>
-				<h2>Functions</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="covariance" class="public" href="../dstats/cor/covariance.html">
-								<code>covariance</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="covarianceMatrix" class="public" href="../dstats/cor/covarianceMatrix.html">
-								<code>covarianceMatrix</code>
-							</a>
-						</td>
-						<td>These overloads allow for correlation and covariance matrices to be computed
+</section><section><h2>Functions</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="covariance" class="["public"]" href="../dstats/cor/covariance.html">covariance</a><span class="decoration">(input1, input2)</span></code></td><td></td></tr><tr><td><code><a id="covarianceMatrix" class="["public"]" href="../dstats/cor/covarianceMatrix.html">covarianceMatrix</a><span class="decoration">(mat, ans, pool)</span></code></td><td>These overloads allow for correlation and covariance matrices to be computed
 with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
 as the number of vectors in mat and must have at least enough columns in
 each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="kendallCor" class="public" href="../dstats/cor/kendallCor.html">
-								<code>kendallCor</code>
-							</a>
-						</td>
-						<td>Kendall's Tau-b, O(N log N) version.  This is a non-parametric measure
+</td></tr><tr><td><code><a id="kendallCor" class="["public"]" href="../dstats/cor/kendallCor.html">kendallCor</a><span class="decoration">(input1, input2)</span></code></td><td>Kendall's Tau-b, O(N log N) version.  This is a non-parametric measure
 of monotonic association and can be defined in terms of the
 bubble sort distance, or the number of swaps that would be needed in a
 bubble sort to sort input2 into the same order as input1.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="kendallCorDestructive" class="public" href="../dstats/cor/kendallCorDestructive.html">
-								<code>kendallCorDestructive</code>
-							</a>
-						</td>
-						<td>Kendall's Tau-b O(N log N), overwrites input arrays with undefined data but
+</td></tr><tr><td><code><a id="kendallCorDestructive" class="["public"]" href="../dstats/cor/kendallCorDestructive.html">kendallCorDestructive</a><span class="decoration">(input1, input2)</span></code></td><td>Kendall's Tau-b O(N log N), overwrites input arrays with undefined data but
 uses only O(log N) stack space for sorting, not O(N) space to duplicate
 input.  R1 and R2 must be either SortedRange structs with the default predicate
 or arrays.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="kendallCorDestructiveLowLevel" class="public" href="../dstats/cor/kendallCorDestructiveLowLevel.html">
-								<code>kendallCorDestructiveLowLevel</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="kendallMatrix" class="public" href="../dstats/cor/kendallMatrix.html">
-								<code>kendallMatrix</code>
-							</a>
-						</td>
-						<td>These overloads allow for correlation and covariance matrices to be computed
+</td></tr><tr><td><code><a id="kendallCorDestructiveLowLevel" class="["public"]" href="../dstats/cor/kendallCorDestructiveLowLevel.html">kendallCorDestructiveLowLevel</a><span class="decoration">(input1, input2, needTies)</span></code></td><td></td></tr><tr><td><code><a id="kendallMatrix" class="["public"]" href="../dstats/cor/kendallMatrix.html">kendallMatrix</a><span class="decoration">(mat, ans, pool)</span></code></td><td>These overloads allow for correlation and covariance matrices to be computed
 with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
 as the number of vectors in mat and must have at least enough columns in
 each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="partial" class="public" href="../dstats/cor/partial.html">
-								<code>partial</code>
-							</a>
-						</td>
-						<td>Computes the partial correlation between vec1, vec2 given
+</td></tr><tr><td><code><a id="partial" class="["public"]" href="../dstats/cor/partial.html">partial</a><span class="decoration">(vec1, vec2, conditionsIn)</span></code></td><td>Computes the partial correlation between vec1, vec2 given
  conditions.  conditions can be either a tuple of ranges, a range of ranges,
  or (for a single condition) a single range.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="pearsonCor" class="public" href="../dstats/cor/pearsonCor.html">
-								<code>pearsonCor</code>
-							</a>
-						</td>
-						<td>Convenience function for calculating Pearson correlation.
+</td></tr><tr><td><code><a id="pearsonCor" class="["public"]" href="../dstats/cor/pearsonCor.html">pearsonCor</a><span class="decoration">(input1, input2)</span></code></td><td>Convenience function for calculating Pearson correlation.
  When the term correlation is used unqualified, it is
  usually referring to this quantity.  This is a parametric correlation
  metric and should not be used with extremely ill-behaved data.
  This function works with any pair of input ranges.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="pearsonMatrix" class="public" href="../dstats/cor/pearsonMatrix.html">
-								<code>pearsonMatrix</code>
-							</a>
-						</td>
-						<td>These overloads allow for correlation and covariance matrices to be computed
+</td></tr><tr><td><code><a id="pearsonMatrix" class="["public"]" href="../dstats/cor/pearsonMatrix.html">pearsonMatrix</a><span class="decoration">(mat, ans, pool)</span></code></td><td>These overloads allow for correlation and covariance matrices to be computed
 with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
 as the number of vectors in mat and must have at least enough columns in
 each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="spearmanCor" class="public" href="../dstats/cor/spearmanCor.html">
-								<code>spearmanCor</code>
-							</a>
-						</td>
-						<td>Spearman's rank correlation.  Non-parametric.  This is essentially the
+</td></tr><tr><td><code><a id="spearmanCor" class="["public"]" href="../dstats/cor/spearmanCor.html">spearmanCor</a><span class="decoration">(input1, input2)</span></code></td><td>Spearman's rank correlation.  Non-parametric.  This is essentially the
  Pearson correlation of the ranks of the data, with ties dealt with by
  averaging.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="spearmanMatrix" class="public" href="../dstats/cor/spearmanMatrix.html">
-								<code>spearmanMatrix</code>
-							</a>
-						</td>
-						<td>These overloads allow for correlation and covariance matrices to be computed
+</td></tr><tr><td><code><a id="spearmanMatrix" class="["public"]" href="../dstats/cor/spearmanMatrix.html">spearmanMatrix</a><span class="decoration">(mat, ans, pool)</span></code></td><td>These overloads allow for correlation and covariance matrices to be computed
 with the results being stored in a pre-allocated variable, ans.  ans must
 be either a SciD matrix or a random-access range of ranges with assignable
 elements of a floating point type.  It must have the same number of rows
 as the number of vectors in mat and must have at least enough columns in
 each row to support storing the lower triangle.  If ans is a full rectangular
 matrix/range of ranges, only the lower triangle results will be stored.
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Structs</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="KendallLowLevel" class="public" href="../dstats/cor/KendallLowLevel.html">
-								<code>KendallLowLevel</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="PearsonCor" class="public" href="../dstats/cor/PearsonCor.html">
-								<code>PearsonCor</code>
-							</a>
-						</td>
-						<td>Allows computation of mean, stdev, variance, covariance, Pearson correlation online.
+</td></tr></table></section><section><h2>Structs</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="KendallLowLevel" class="["public"]" href="../dstats/cor/KendallLowLevel.html">KendallLowLevel</a></code></td><td></td></tr><tr><td><code><a id="PearsonCor" class="["public"]" href="../dstats/cor/PearsonCor.html">PearsonCor</a></code></td><td>Allows computation of mean, stdev, variance, covariance, Pearson correlation online.
  Getters for stdev, var, cov, cor cost floating point division ops.  Getters
  for means cost a single branch to check for N == 0.  This struct uses O(1)
  space.
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Aliases</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="kcor" class="public" href="../dstats/cor/kcor.html">
-								<code>kcor</code>
-							</a>
-						</td>
-						<td>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="kcorDestructive" class="public" href="../dstats/cor/kcorDestructive.html">
-								<code>kcorDestructive</code>
-							</a>
-						</td>
-						<td>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="Pcor" class="public" href="../dstats/cor/Pcor.html">
-								<code>Pcor</code>
-							</a>
-						</td>
-						<td>
-<code class="prettyprint lang-d"><a href="../dstats/cor/PearsonCor.html"><span class="typ">PearsonCor</span></a></code>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="pcor" class="public" href="../dstats/cor/pcor.html">
-								<code>pcor</code>
-							</a>
-						</td>
-						<td>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="scor" class="public" href="../dstats/cor/scor.html">
-								<code>scor</code>
-							</a>
-						</td>
-						<td>
-						</td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+</td></tr></table></section><section><h2>Aliases</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="kcor" class="["public"]" href="../dstats/cor/kcor.html"><code>kcor</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="kcorDestructive" class="["public"]" href="../dstats/cor/kcorDestructive.html"><code>kcorDestructive</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="Pcor" class="["public"]" href="../dstats/cor/Pcor.html"><code>Pcor</code></a></td><td><code class="prettyprint lang-d"><a href="../dstats/cor/PearsonCor.html"><span class="typ">PearsonCor</span></a></code></td><td></td></tr><tr><td><a id="pcor" class="["public"]" href="../dstats/cor/pcor.html"><code>pcor</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="scor" class="["public"]" href="../dstats/cor/scor.html"><code>scor</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

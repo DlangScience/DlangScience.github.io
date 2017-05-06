@@ -1,107 +1,31 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Function chiSquareObs</title>
-		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../dstats/alloc.html" class=" module">alloc</a>
-							</li>
-							<li>
-								<a href="../../dstats/base.html" class=" module">base</a>
-							</li>
-							<li>
-								<a href="../../dstats/cor.html" class=" module">cor</a>
-							</li>
-							<li>
-								<a href="../../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../../dstats/regress.html" class=" module">regress</a>
-							</li>
-							<li>
-								<a href="../../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../../dstats/summary.html" class=" module">summary</a>
-							</li>
-							<li>
-								<a href="../../dstats/tests.html" class="selected module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Function chiSquareObs</h1>
-			<section>
-				<p>Given two vectors of observations of jointly distributed variables x, y, tests
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Function chiSquareObs</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module selected"><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function chiSquareObs</h1><p>Given two vectors of observations of jointly distributed variables x, y, tests
 the null hypothesis that values in x are independent of the corresponding
 values in y.  This is done using Pearson's Chi-Square Test.  For a similar test
 that assumes the data has already been tabulated into a contingency table, see
 chiSquareContingency.
-</p>
-<section><p>x and y must both be input ranges.  If they are not the same length, a
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">chiSquareObs</span>(T, U)
+<span class="pun">(</span>
+<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">x</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">y</span>
+<br/>
+<span class="pun">)</span>
+<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span></div></code></div><section><p>x and y must both be input ranges.  If they are not the same length, a
 DstatsArgumentException is thrown.
 </p>
 </section>
 
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">chiSquareObs</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="pln">U</span><span class="pun">)</span><span class="pun">(</span>
-								<br/>
-&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">x</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">y</span>
-								<br/>
-<span class="pun">)</span>
-								<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">isInputRange</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Examples</h3>
+<section><h2>Examples</h2>
 <pre class="code"><code class="lang-d"><span class="com">// Test whether the appearance of "foo" vs. "bar" is independent of the
 // appearance of "baz" vs. "xxx".
 </span><span class="kwd">auto <a href="../../dstats/tests/chiSquareObs.html#x"></span><span class="pln">x</span></a><span class="pln"> </span><span class="pun">= [</span><span class="str">"foo"</span><span class="pun">, </span><span class="str">"bar"</span><span class="pun">, </span><span class="str">"bar"</span><span class="pun">, </span><span class="str">"foo"</span><span class="pun">, </span><span class="str">"foo"</span><span class="pun">];
@@ -119,19 +43,4 @@ DstatsArgumentException is thrown.
 </span><span class="kwd">auto </span><span class="pln">result2 </span><span class="pun">= <a href="../../dstats/tests/chiSquareContingency.html"></span><span class="pln">chiSquareContingency</span></a><span class="pun">(</span><span class="pln">contingency</span><span class="pun">);</span></code></pre>
 </section>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

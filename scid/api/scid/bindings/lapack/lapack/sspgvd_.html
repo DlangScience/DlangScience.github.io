@@ -1,371 +1,58 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Function sspgvd_</title>
-		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">scid</a>
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">bindings</a>
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">lapack</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/bindings/lapack/dlapack.html" class=" module">dlapack</a>
-							</li>
-							<li>
-								<a href="../../../../scid/bindings/lapack/lapack.html" class="selected module">lapack</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">core</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/core/fortran.html" class=" module">fortran</a>
-							</li>
-							<li>
-								<a href="../../../../scid/core/memory.html" class=" module">memory</a>
-							</li>
-							<li>
-								<a href="../../../../scid/core/meta.html" class=" module">meta</a>
-							</li>
-							<li>
-								<a href="../../../../scid/core/testing.html" class=" module">testing</a>
-							</li>
-							<li>
-								<a href="../../../../scid/core/traits.html" class=" module">traits</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">internal</a>
-						<ul class="tree-view">
-							<li class="collapsed tree-view">
-								<a href="#" class="package">calculus</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/internal/calculus/integrate_qk.html" class=" module">integrate_qk</a>
-							</li>
-							<li>
-								<a href="../../../../scid/internal/calculus/integrate_qng.html" class=" module">integrate_qng</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">ports</a>
-						<ul class="tree-view">
-							<li class="collapsed tree-view">
-								<a href="#" class="package">intde</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/ports/intde/intde1.html" class=" module">intde1</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/intde/intde2.html" class=" module">intde2</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">linpack</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/ports/linpack/gtsl.html" class=" module">gtsl</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">minpack</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/ports/minpack/dogleg.html" class=" module">dogleg</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/minpack/enorm.html" class=" module">enorm</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/minpack/fdjac1.html" class=" module">fdjac1</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/minpack/hybrd.html" class=" module">hybrd</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/minpack/qform.html" class=" module">qform</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/minpack/qrfac.html" class=" module">qrfac</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/minpack/r1mpyq.html" class=" module">r1mpyq</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/minpack/r1updt.html" class=" module">r1updt</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">napack</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/ports/napack/addchg.html" class=" module">addchg</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/napack/quasi.html" class=" module">quasi</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/napack/stopit.html" class=" module">stopit</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">quadpack</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../../../scid/ports/quadpack/qag.html" class=" module">qag</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qage.html" class=" module">qage</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qagi.html" class=" module">qagi</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qagie.html" class=" module">qagie</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qagp.html" class=" module">qagp</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qagpe.html" class=" module">qagpe</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qags.html" class=" module">qags</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qagse.html" class=" module">qagse</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qawc.html" class=" module">qawc</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qawce.html" class=" module">qawce</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qawf.html" class=" module">qawf</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qawfe.html" class=" module">qawfe</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qawo.html" class=" module">qawo</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qawoe.html" class=" module">qawoe</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qaws.html" class=" module">qaws</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qawse.html" class=" module">qawse</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qc25c.html" class=" module">qc25c</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qc25f.html" class=" module">qc25f</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qc25s.html" class=" module">qc25s</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qcheb.html" class=" module">qcheb</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qelg.html" class=" module">qelg</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk15.html" class=" module">qk15</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk15i.html" class=" module">qk15i</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk15w.html" class=" module">qk15w</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk21.html" class=" module">qk21</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk31.html" class=" module">qk31</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk41.html" class=" module">qk41</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk51.html" class=" module">qk51</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qk61.html" class=" module">qk61</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qmomo.html" class=" module">qmomo</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qng.html" class=" module">qng</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qpsrt.html" class=" module">qpsrt</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qwgtc.html" class=" module">qwgtc</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qwgtf.html" class=" module">qwgtf</a>
-							</li>
-							<li>
-								<a href="../../../../scid/ports/quadpack/qwgts.html" class=" module">qwgts</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-							</li>
-							<li>
-								<a href="../../../../scid/calculus.html" class=" module">calculus</a>
-							</li>
-							<li>
-								<a href="../../../../scid/constants.html" class=" module">constants</a>
-							</li>
-							<li>
-								<a href="../../../../scid/functions.html" class=" module">functions</a>
-							</li>
-							<li>
-								<a href="../../../../scid/linalg.html" class=" module">linalg</a>
-							</li>
-							<li>
-								<a href="../../../../scid/matrix.html" class=" module">matrix</a>
-							</li>
-							<li>
-								<a href="../../../../scid/nonlinear.html" class=" module">nonlinear</a>
-							</li>
-							<li>
-								<a href="../../../../scid/types.html" class=" module">types</a>
-							</li>
-							<li>
-								<a href="../../../../scid/util.html" class=" module">util</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Function sspgvd_</h1>
-			<section>
-				<p>Computes all eigenvalues and eigenvectors of  a generalized
-</p>
-<section><p>symmetric-definite generalized eigenproblem,  Ax= lambda
-</p>
-
-<p>Bx,  ABx= lambda x,  or BAx= lambda x, where A and B are in packed
-</p>
-
-<p>storage.
-</p>
-
-<p>If eigenvectors are desired, it uses a divide and conquer algorithm.
-</p>
-</section>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">sspgvd_</span><span class="pun">(</span>
-								<br/>
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Function sspgvd_</title>
+<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package ">scid</div><ul class="tree-view"><li class="tree-view "><div class="package ">bindings</div><ul class="tree-view"><li class="tree-view "><div class="package ">lapack</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/bindings/lapack/dlapack.html">dlapack</a></div></li><li><div class="module selected"><a href="../../../../scid/bindings/lapack/lapack.html">lapack</a></div></li></ul></li></ul></li><li class="tree-view collapsed"><div class="package ">core</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/core/fortran.html">fortran</a></div></li><li><div class="module "><a href="../../../../scid/core/memory.html">memory</a></div></li><li><div class="module "><a href="../../../../scid/core/meta.html">meta</a></div></li><li><div class="module "><a href="../../../../scid/core/testing.html">testing</a></div></li><li><div class="module "><a href="../../../../scid/core/traits.html">traits</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">internal</div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">calculus</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/internal/calculus/integrate_qk.html">integrate_qk</a></div></li><li><div class="module "><a href="../../../../scid/internal/calculus/integrate_qng.html">integrate_qng</a></div></li></ul></li></ul></li><li class="tree-view collapsed"><div class="package ">ports</div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">intde</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/ports/intde/intde1.html">intde1</a></div></li><li><div class="module "><a href="../../../../scid/ports/intde/intde2.html">intde2</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">linpack</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/ports/linpack/gtsl.html">gtsl</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">minpack</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/ports/minpack/dogleg.html">dogleg</a></div></li><li><div class="module "><a href="../../../../scid/ports/minpack/enorm.html">enorm</a></div></li><li><div class="module "><a href="../../../../scid/ports/minpack/fdjac1.html">fdjac1</a></div></li><li><div class="module "><a href="../../../../scid/ports/minpack/hybrd.html">hybrd</a></div></li><li><div class="module "><a href="../../../../scid/ports/minpack/qform.html">qform</a></div></li><li><div class="module "><a href="../../../../scid/ports/minpack/qrfac.html">qrfac</a></div></li><li><div class="module "><a href="../../../../scid/ports/minpack/r1mpyq.html">r1mpyq</a></div></li><li><div class="module "><a href="../../../../scid/ports/minpack/r1updt.html">r1updt</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">napack</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/ports/napack/addchg.html">addchg</a></div></li><li><div class="module "><a href="../../../../scid/ports/napack/quasi.html">quasi</a></div></li><li><div class="module "><a href="../../../../scid/ports/napack/stopit.html">stopit</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">quadpack</div><ul class="tree-view"><li><div class="module "><a href="../../../../scid/ports/quadpack/qag.html">qag</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qage.html">qage</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qagi.html">qagi</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qagie.html">qagie</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qagp.html">qagp</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qagpe.html">qagpe</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qags.html">qags</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qagse.html">qagse</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qawc.html">qawc</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qawce.html">qawce</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qawf.html">qawf</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qawfe.html">qawfe</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qawo.html">qawo</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qawoe.html">qawoe</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qaws.html">qaws</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qawse.html">qawse</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qc25c.html">qc25c</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qc25f.html">qc25f</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qc25s.html">qc25s</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qcheb.html">qcheb</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qelg.html">qelg</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk15.html">qk15</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk15i.html">qk15i</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk15w.html">qk15w</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk21.html">qk21</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk31.html">qk31</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk41.html">qk41</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk51.html">qk51</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qk61.html">qk61</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qmomo.html">qmomo</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qng.html">qng</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qpsrt.html">qpsrt</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qwgtc.html">qwgtc</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qwgtf.html">qwgtf</a></div></li><li><div class="module "><a href="../../../../scid/ports/quadpack/qwgts.html">qwgts</a></div></li></ul></li></ul></li><li><div class="module "><a href="../../../../scid/calculus.html">calculus</a></div></li><li><div class="module "><a href="../../../../scid/constants.html">constants</a></div></li><li><div class="module "><a href="../../../../scid/functions.html">functions</a></div></li><li><div class="module "><a href="../../../../scid/linalg.html">linalg</a></div></li><li><div class="module "><a href="../../../../scid/matrix.html">matrix</a></div></li><li><div class="module "><a href="../../../../scid/nonlinear.html">nonlinear</a></div></li><li><div class="module "><a href="../../../../scid/types.html">types</a></div></li><li><div class="module "><a href="../../../../scid/util.html">util</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function sspgvd_</h1><p>Computes all eigenvalues and eigenvectors of  a generalized
+symmetric-definite generalized eigenproblem,  Ax= lambda
+Bx,  ABx= lambda x,  or BAx= lambda x, where A and B are in packed
+storage.
+If eigenvectors are desired, it uses a divide and conquer algorithm.
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">sspgvd_</span>
+<span class="pun">(</span>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">itype</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">jobz</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">char</span><span class="pun">*</span> <span class="pln">uplo</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">n</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">ap</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">bp</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">w</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">z</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">ldz</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">float</span><span class="pun">*</span> <span class="pln">work</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">lwork</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">iwork</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">liwork</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span><span class="pun">*</span> <span class="pln">info</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span> <span class="pln">jobz_len</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">int</span> <span class="pln">uplo_len</span>
-								<br/>
-<span class="pun">)</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
+<br/>
+<span class="pun">)</span><span class="pun">;</span></div></code></div>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-<p>William V. Baxter III (with slight modifications by
+<footer><table class="license-info"><tr><th>Authors</th><td><p>William V. Baxter III (with slight modifications by
                 Lars Tandle Kyllingstad).
 </p>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-<p>Copyright (c) 2009, Lars T. Kyllingstad. All rights reserved.
+</td></tr><tr><th>Copyright</th><td><p>Copyright (c) 2009, Lars T. Kyllingstad. All rights reserved.
 </p>
-
-			</section>
-			<section>
-				<h2>License</h2>
-<p>Boost License 1.0
+</td></tr><tr><th>License</th><td><p>Boost License 1.0
 </p>
-
-			</section>
-		</div>
-	</body>
-</html>
+</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

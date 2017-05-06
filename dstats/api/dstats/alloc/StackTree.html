@@ -1,84 +1,15 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Struct StackTree</title>
-		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
-							</li>
-							<li>
-								<a href="../../dstats/base.html" class=" module">base</a>
-							</li>
-							<li>
-								<a href="../../dstats/cor.html" class=" module">cor</a>
-							</li>
-							<li>
-								<a href="../../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../../dstats/regress.html" class=" module">regress</a>
-							</li>
-							<li>
-								<a href="../../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../../dstats/summary.html" class=" module">summary</a>
-							</li>
-							<li>
-								<a href="../../dstats/tests.html" class=" module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Struct StackTree</h1>
-			<section>
-				<p>An AVL tree implementation on top of RegionAllocator.  If elements are removed,
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Struct StackTree</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module selected"><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct StackTree</h1><p>An AVL tree implementation on top of RegionAllocator.  If elements are removed,
  they are stored on an internal free list and recycled when new elements
  are added to the tree.
-</p>
-<section><p>Template paramters:
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">StackTree</span>(T, alias key, alias compFun)
+<span class="pun">;</span></div></code></div><section><p>Template paramters:
 </p>
 
 <p> T = The type to be stored in the tree.
@@ -91,264 +22,27 @@ $('#symbolSearchPane').show();
 <p> compFun = The function for comparing keys.
 </p>
 </section>
-
-					<section>
-						<h3>Template arguments</h3>
-						<div class="prototype">
-							<code class="lang-d"><span class="kwd">struct</span> <span class="typ">StackTree</span><span class="pun">(</span><span class="pln">T</span><span class="pun">, </span><span class="kwd">alias </span><span class="pln">key</span><span class="pun">, </span><span class="kwd">alias </span><span class="pln">compFun</span><span class="pun">)</span>;
-							</code>
-						</div>
-					</section>
-					<section>
-						<h3>Constructors</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Fields</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.alloc.html" class="public"><code>alloc</code></a>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.freeList.html" class="public"><code>freeList</code></a>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">*</span></code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.head.html" class="public"><code>head</code></a>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span></code></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree._length.html" class="public"><code>_length</code></a>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.length.html" class="public property"><code>length</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td>
-								<td>Number of elements in the tree.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.find.html" class="public">
-										<code>find</code>
-									</a>
-								</td>
-								<td>Find an element and return it.  Throw an exception if it is not
+<section><h2>Constructors</h2><h4>Constructors</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackTree.this.html" class="["public"]"><code>this</code></a></td><td></td></tr></table></section><section><h2>Fields</h2><h4>Fields</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackTree.alloc.html" class="["public"]"><code>alloc</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.freeList.html" class="["public"]"><code>freeList</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">*</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.head.html" class="["public"]"><code>head</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree._length.html" class="["public"]"><code>_length</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr></table></section><section><h2>Properties</h2><h4>Properties</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackTree.length.html" class="["public", "property"]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td>Number of elements in the tree.
+</td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackTree.find.html" class="["public"]"><code>find</code></a></td><td>Find an element and return it.  Throw an exception if it is not
  present.  U is expected to be the type of the key that this tree is
  sorted on.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.findImpl.html" class="public">
-										<code>findImpl</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.insert.html" class="public">
-										<code>insert</code>
-									</a>
-								</td>
-								<td>Insert an element.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.insertComp.html" class="public">
-										<code>insertComp</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.insertImpl.html" class="public">
-										<code>insertImpl</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.newNode.html" class="public">
-										<code>newNode</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.opApply.html" class="public">
-										<code>opApply</code>
-									</a>
-								</td>
-								<td>Iterate over the elements of this tree in sorted order.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.opIn_r.html" class="public">
-										<code>opIn_r</code>
-									</a>
-								</td>
-								<td>Find an element and return a pointer to it, or null if not present.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.popFreeList.html" class="public">
-										<code>popFreeList</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.pushFreeList.html" class="public">
-										<code>pushFreeList</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.rebalance.html" class="public">
-										<code>rebalance</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.remove.html" class="public">
-										<code>remove</code>
-									</a>
-								</td>
-								<td>Remove an element from this tree.  The type of U is expected to be the
+</td></tr><tr><td><a href="../../dstats/alloc/StackTree.findImpl.html" class="["public"]"><code>findImpl</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.insert.html" class="["public"]"><code>insert</code></a></td><td>Insert an element.
+</td></tr><tr><td><a href="../../dstats/alloc/StackTree.insertComp.html" class="["public"]"><code>insertComp</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.insertImpl.html" class="["public"]"><code>insertImpl</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.newNode.html" class="["public"]"><code>newNode</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.opApply.html" class="["public"]"><code>opApply</code></a></td><td>Iterate over the elements of this tree in sorted order.
+</td></tr><tr><td><a href="../../dstats/alloc/StackTree.opIn_r.html" class="["public"]"><code>opIn_r</code></a></td><td>Find an element and return a pointer to it, or null if not present.
+</td></tr><tr><td><a href="../../dstats/alloc/StackTree.popFreeList.html" class="["public"]"><code>popFreeList</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.pushFreeList.html" class="["public"]"><code>pushFreeList</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.rebalance.html" class="["public"]"><code>rebalance</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.remove.html" class="["public"]"><code>remove</code></a></td><td>Remove an element from this tree.  The type of U is expected to be the
  type of the key that this tree is sorted on.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.rotateLeft.html" class="public">
-										<code>rotateLeft</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.rotateRight.html" class="public">
-										<code>rotateRight</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Aliases</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.BitwiseNode.html" class="public">
-										<code>BitwiseNode</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.comp.html" class="public">
-										<code>comp</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.getKey.html" class="public">
-										<code>getKey</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/StackTree.RealNode.html" class="public">
-										<code>RealNode</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Examples</h3>
+</td></tr><tr><td><a href="../../dstats/alloc/StackTree.rotateLeft.html" class="["public"]"><code>rotateLeft</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.rotateRight.html" class="["public"]"><code>rotateRight</code></a></td><td></td></tr></table></section><section><h2>Aliases</h2><h4>Aliases</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackTree.BitwiseNode.html" class="["public"]"><code>BitwiseNode</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.comp.html" class="["public"]"><code>comp</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.getKey.html" class="["public"]"><code>getKey</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackTree.RealNode.html" class="["public"]"><code>RealNode</code></a></td><td></td></tr></table></section>
+<section><h2>Examples</h2>
 <pre class="code"><code class="lang-d"><span class="kwd">struct </span><span class="typ">StringNum </span><span class="pun">{
     </span><span class="typ">string </span><span class="pln">someString</span><span class="pun">;
     </span><span class="typ">uint </span><span class="pln">num</span><span class="pun">;
@@ -367,12 +61,12 @@ $('#symbolSearchPane').show();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myTree<wbr/></span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">"foo"</span><span class="pun">) == </span><span class="typ">StringNum</span><span class="pun">(</span><span class="str">"foo"</span><span class="pun">, </span><span class="lit">3</span><span class="pun">));
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">myTree<wbr/></span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">"bar"</span><span class="pun">) == </span><span class="typ">StringNum</span><span class="pun">(</span><span class="str">"bar"</span><span class="pun">, </span><span class="lit">2</span><span class="pun">));</span></code></pre>
 </section>
-<section><h3>Note</h3>
+<section><h2>Note</h2>
 <p>This tree supports a compile-time interface similar to StackSet
  and can be used as a finite set implementation.
 </p>
 </section>
-<section><h3>Warning</h3>
+<section><h2>Warning</h2>
 <p>This implementation places removed nodes on an internal free list and
  recycles them, since there is no way to delete RegionAllocator-allocated data
  in a non-LIFO order.  Therefore, you may not retain the address of a
@@ -384,19 +78,4 @@ $('#symbolSearchPane').show();
 *</span><span class="pln">myPtr </span><span class="pun">= </span><span class="pln">someValue</span><span class="pun">;</span></code></pre>
 </section>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

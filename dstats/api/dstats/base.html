@@ -1,86 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Module dstats.base</title>
-		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../dstats/alloc.html" class=" module">alloc</a>
-							</li>
-							<li>
-								<a href="../dstats/base.html" class="selected module">base</a>
-							</li>
-							<li>
-								<a href="../dstats/cor.html" class=" module">cor</a>
-							</li>
-							<li>
-								<a href="../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../dstats/regress.html" class=" module">regress</a>
-							</li>
-							<li>
-								<a href="../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../dstats/summary.html" class=" module">summary</a>
-							</li>
-							<li>
-								<a href="../dstats/tests.html" class=" module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Module dstats.base</h1>
-			<p>Relatively low-level primitives on which to build higher-level math/stat
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Module dstats.base</title>
+<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module selected"><a href="../dstats/base.html">base</a></div></li><li><div class="module "><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../dstats/random.html">random</a></div></li><li><div class="module "><a href="../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.base</h1><p>Relatively low-level primitives on which to build higher-level math/stat
  functionality.  Some are used internally, some are just things that may be
  useful to users of this library.  This module is starting to take on the
  appearance of a small utility library.
-</p>
-<section></section>
+</p><section></section>
 
-			<section><section><h2>Note</h2>
+<section><section><h2>Note</h2>
 <p>In several functions in this module that return arrays, the last
  parameter is an optional buffer for storing the return value.  If this
  parameter is ommitted or the buffer is not large enough, one will be
@@ -91,363 +22,69 @@ $('#symbolSearchPane').show();
 <p>David Simcha
 </p>
 </section>
-</section>
-			<section>
-				<h2>Functions</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="auroc" class="public" href="../dstats/base/auroc.html">
-								<code>auroc</code>
-							</a>
-						</td>
-						<td>Finds the area under the ROC curve (a curve with sensitivity on the Y-axis
+</section><section><h2>Functions</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="auroc" class="["public"]" href="../dstats/base/auroc.html">auroc</a><span class="decoration">(classATs, classBTs)</span></code></td><td>Finds the area under the ROC curve (a curve with sensitivity on the Y-axis
  and 1 - specificity on the X-axis).  This is a useful metric for
  determining how well a test statistic discriminates between two classes.
  The following assumptions are made in this implementation:
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="bin" class="public" href="../dstats/base/bin.html">
-								<code>bin</code>
-							</a>
-						</td>
-						<td>Bins data into nbin equal width bins, indexed from
+</td></tr><tr><td><code><a id="bin" class="["public"]" href="../dstats/base/bin.html">bin</a><span class="decoration">(data, nbin, buf)</span></code></td><td>Bins data into nbin equal width bins, indexed from
  0 to nbin - 1, with 0 being the smallest bin, etc.
  The values returned are the bin index for each element.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="binCounts" class="public" href="../dstats/base/binCounts.html">
-								<code>binCounts</code>
-							</a>
-						</td>
-						<td>Bins data into nbin equal width bins, indexed from
+</td></tr><tr><td><code><a id="binCounts" class="["public"]" href="../dstats/base/binCounts.html">binCounts</a><span class="decoration">(data, nbin, buf)</span></code></td><td>Bins data into nbin equal width bins, indexed from
  0 to nbin - 1, with 0 being the smallest bin, etc.
  The values returned are the counts for each bin.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="byCategory" class="public" href="../dstats/base/byCategory.html">
-								<code>byCategory</code>
-							</a>
-						</td>
-						<td>Special case implementation for when ElementType!C is boolean.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="byCategory" class="public" href="../dstats/base/byCategory.html">
-								<code>byCategory</code>
-							</a>
-						</td>
-						<td>Given a range of values and a range of categories, separates values
+</td></tr><tr><td><code><a id="byCategory" class="["public"]" href="../dstats/base/byCategory.html">byCategory</a><span class="decoration">(values, categories)</span></code></td><td>Given a range of values and a range of categories, separates values
  by category.  This function also guarantees that the order within each
  category will be maintained.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="comb" class="public" href="../dstats/base/comb.html">
-								<code>comb</code>
-							</a>
-						</td>
-						<td>Create a Comb struct from a range or of a set of bounds.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="dstatsEnforce" class="public" href="../dstats/base/dstatsEnforce.html">
-								<code>dstatsEnforce</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="frequency" class="public" href="../dstats/base/frequency.html">
-								<code>frequency</code>
-							</a>
-						</td>
-						<td>Returns an associative array of counts of every element in input.
+</td></tr><tr><td><code><a id="byCategory" class="["public"]" href="../dstats/base/byCategory.html">byCategory</a><span class="decoration">(values, categories)</span></code></td><td>Special case implementation for when ElementType!C is boolean.
+</td></tr><tr><td><code><a id="comb" class="["public"]" href="../dstats/base/comb.html">comb</a><span class="decoration">(stuff, r)</span></code></td><td>Create a Comb struct from a range or of a set of bounds.
+</td></tr><tr><td><code><a id="dstatsEnforce" class="["public"]" href="../dstats/base/dstatsEnforce.html">dstatsEnforce</a><span class="decoration">(value, msg)</span></code></td><td></td></tr><tr><td><code><a id="frequency" class="["public"]" href="../dstats/base/frequency.html">frequency</a><span class="decoration">(input)</span></code></td><td>Returns an associative array of counts of every element in input.
  Works w/ any iterable.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="frqBin" class="public" href="../dstats/base/frqBin.html">
-								<code>frqBin</code>
-							</a>
-						</td>
-						<td>Bins data into nbin equal frequency bins, indexed from
+</td></tr><tr><td><code><a id="frqBin" class="["public"]" href="../dstats/base/frqBin.html">frqBin</a><span class="decoration">(data, nbin, buf)</span></code></td><td>Bins data into nbin equal frequency bins, indexed from
  0 to nbin - 1, with 0 being the smallest bin, etc.
  The values returned are the bin index for each element.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="logFactorial" class="public" href="../dstats/base/logFactorial.html">
-								<code>logFactorial</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="logNcomb" class="public" href="../dstats/base/logNcomb.html">
-								<code>logNcomb</code>
-							</a>
-						</td>
-						<td>Log of (n choose k).
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="perm" class="public" href="../dstats/base/perm.html">
-								<code>perm</code>
-							</a>
-						</td>
-						<td>Create a Perm struct from a range or of a set of bounds.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="rank" class="public" href="../dstats/base/rank.html">
-								<code>rank</code>
-							</a>
-						</td>
-						<td>Given an input array, outputs an array containing the rank from
+</td></tr><tr><td><code><a id="logFactorial" class="["public"]" href="../dstats/base/logFactorial.html">logFactorial</a><span class="decoration">(n)</span></code></td><td></td></tr><tr><td><code><a id="logNcomb" class="["public"]" href="../dstats/base/logNcomb.html">logNcomb</a><span class="decoration">(n, k)</span></code></td><td>Log of (n choose k).
+</td></tr><tr><td><code><a id="perm" class="["public"]" href="../dstats/base/perm.html">perm</a><span class="decoration">(stuff)</span></code></td><td>Create a Perm struct from a range or of a set of bounds.
+</td></tr><tr><td><code><a id="rank" class="["public"]" href="../dstats/base/rank.html">rank</a><span class="decoration">(input, buf)</span></code></td><td>Given an input array, outputs an array containing the rank from
  [1, input.length] corresponding to each element.  Ties are dealt with by
  averaging.  This function does not reorder the input range.
  Return type is float[] by default, but if you are sure you have no ties,
  ints can be used for efficiency (in which case ties will not be averaged),
  and if you need more precision when averaging ties, you can use double or
  real.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="rankSort" class="public" href="../dstats/base/rankSort.html">
-								<code>rankSort</code>
-							</a>
-						</td>
-						<td>Same as rank(), but also sorts the input range.
+</td></tr><tr><td><code><a id="rankSort" class="["public"]" href="../dstats/base/rankSort.html">rankSort</a><span class="decoration">(input, buf)</span></code></td><td>Same as rank(), but also sorts the input range.
  The array returned will still be identical to that returned by rank(), i.e.
  the rank of each element will correspond to the ranks of the elements in the
  input array before sorting.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="saveAll" class="public" href="../dstats/base/saveAll.html">
-								<code>saveAll</code>
-							</a>
-						</td>
-						<td>Given a tuple possibly containing forward ranges, returns a tuple where
+</td></tr><tr><td><code><a id="saveAll" class="["public"]" href="../dstats/base/saveAll.html">saveAll</a><span class="decoration">(args)</span></code></td><td>Given a tuple possibly containing forward ranges, returns a tuple where
 save() has been called on all forward ranges.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="seq" class="public" href="../dstats/base/seq.html">
-								<code>seq</code>
-							</a>
-						</td>
-						<td>Generates a sequence from [start..end] by increment.  Includes start,
+</td></tr><tr><td><code><a id="seq" class="["public"]" href="../dstats/base/seq.html">seq</a><span class="decoration">(start, end, increment)</span></code></td><td>Generates a sequence from [start..end] by increment.  Includes start,
  excludes end.  Does so eagerly as an array.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="sign" class="public" href="../dstats/base/sign.html">
-								<code>sign</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="toNumericRange" class="public" href="../dstats/base/toNumericRange.html">
-								<code>toNumericRange</code>
-							</a>
-						</td>
-						<td>Converts a range with arbitrary element types (usually strings) to a
+</td></tr><tr><td><code><a id="sign" class="["public"]" href="../dstats/base/sign.html">sign</a><span class="decoration">(num)</span></code></td><td></td></tr><tr><td><code><a id="toNumericRange" class="["public"]" href="../dstats/base/toNumericRange.html">toNumericRange</a><span class="decoration">(rangeIn)</span></code></td><td>Converts a range with arbitrary element types (usually strings) to a
  range of reals lazily.  Ignores any elements that could not be successfully
  converted.  Useful for creating an input range that can be used with this
  lib out of a File without having to read the whole file into an array first.
  The advantages to this over just using std.algorithm.map are that it's
  less typing and that it ignores non-convertible elements, such as blank
  lines.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="_arrayExpSliceDivass_d" class="public" href="../dstats/base/_arrayExpSliceDivass_d.html">
-								<code>_arrayExpSliceDivass_d</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="_arrayExpSliceMulass_d" class="public" href="../dstats/base/_arrayExpSliceMulass_d.html">
-								<code>_arrayExpSliceMulass_d</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>
-							<a id="_arraySliceExpMulSliceSubass_d" class="public" href="../dstats/base/_arraySliceExpMulSliceSubass_d.html">
-								<code>_arraySliceExpMulSliceSubass_d</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Classes</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="DstatsArgumentException" class="public" href="../dstats/base/DstatsArgumentException.html">
-								<code>DstatsArgumentException</code>
-							</a>
-						</td>
-						<td>This is the exception that is thrown on invalid arguments to a dstats function.
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Structs</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="Comb" class="public" href="../dstats/base/Comb.html">
-								<code>Comb</code>
-							</a>
-						</td>
-						<td>Generates every possible combination of r elements of the given sequence, or
+</td></tr><tr><td><code><a id="_arrayExpSliceDivass_d" class="["public"]" href="../dstats/base/_arrayExpSliceDivass_d.html">_arrayExpSliceDivass_d</a><span class="decoration">(p1, c0)</span></code></td><td></td></tr><tr><td><code><a id="_arrayExpSliceMulass_d" class="["public"]" href="../dstats/base/_arrayExpSliceMulass_d.html">_arrayExpSliceMulass_d</a><span class="decoration">(p1, c0)</span></code></td><td></td></tr><tr><td><code><a id="_arraySliceExpMulSliceMinass_d" class="["public"]" href="../dstats/base/_arraySliceExpMulSliceMinass_d.html">_arraySliceExpMulSliceMinass_d</a><span class="decoration">(p2, c1, p0)</span></code></td><td></td></tr></table></section><section><h2>Classes</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="DstatsArgumentException" class="["public"]" href="../dstats/base/DstatsArgumentException.html">DstatsArgumentException</a></code></td><td>This is the exception that is thrown on invalid arguments to a dstats function.
+</td></tr></table></section><section><h2>Structs</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="Comb" class="["public"]" href="../dstats/base/Comb.html">Comb</a></code></td><td>Generates every possible combination of r elements of the given sequence, or
 array indices from zero to N, depending on which c'tor is called.  Uses
 an input range interface.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="Perm" class="public" href="../dstats/base/Perm.html">
-								<code>Perm</code>
-							</a>
-						</td>
-						<td>A struct that generates all possible permutations of a sequence.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="ToNumericRange" class="public" href="../dstats/base/ToNumericRange.html">
-								<code>ToNumericRange</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Templates</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="doubleIterable" class="public" href="../dstats/base/doubleIterable.html">
-								<code>doubleIterable</code>
-							</a>
-						</td>
-						<td>Tests whether T is iterable and has elements of a type implicitly
+</td></tr><tr><td><code><a id="Perm" class="["public"]" href="../dstats/base/Perm.html">Perm</a></code></td><td>A struct that generates all possible permutations of a sequence.
+</td></tr><tr><td><code><a id="ToNumericRange" class="["public"]" href="../dstats/base/ToNumericRange.html">ToNumericRange</a></code></td><td></td></tr></table></section><section><h2>Templates</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="doubleIterable" class="["public"]" href="../dstats/base/doubleIterable.html">doubleIterable</a></code></td><td>Tests whether T is iterable and has elements of a type implicitly
  convertible to double.
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Enum values</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="doubleInput" class="public" href="../dstats/base/doubleInput.html">
-								<code>doubleInput</code>
-							</a>
-						</td>
-						<td>
-						</td>
-						<td>Tests whether T is an input range whose elements can be implicitly
+</td></tr></table></section><section><h2>Manifest constants</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="doubleInput" class="["public"]" href="../dstats/base/doubleInput.html"><code>doubleInput</code></a></td><td></td><td>Tests whether T is an input range whose elements can be implicitly
 converted to doubles.
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Global variables</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="logFactorialTable" class="public" href="../dstats/base/logFactorialTable.html">
-								<code>logFactorialTable</code>
-							</a>
-						</td>
-						<td>
-<code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">double</span><span class="pun">[]</span><span class="pun">)</span></code>
-						</td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+</td></tr></table></section><section><h2>Global variables</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="logFactorialTable" class="["public"]" href="../dstats/base/logFactorialTable.html"><code>logFactorialTable</code></a></td><td><code class="prettyprint lang-d"><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">double</span><span class="pun">[]</span><span class="pun">)</span></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

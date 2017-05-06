@@ -1,92 +1,34 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Function cblas_dtrsv</title>
-		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">cblas</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../cblas.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../cblas/cblas.html" class="selected module">cblas</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Function cblas_dtrsv</h1>
-			<section>
-				<p></p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">cblas_dtrsv</span><span class="pun">(</span>
-								<br/>
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Function cblas_dtrsv</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../cblas.html">cblas</a></div><ul class="tree-view"><li><div class="module selected"><a href="../../cblas/cblas.html">cblas</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function cblas_dtrsv</h1><p></p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="typ">void</span> <span class="pln">cblas_dtrsv</span>
+<span class="pun">(</span>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_ORDER.html"><span class="pln">CBLAS_ORDER</span></a><span class="pun">)</span> <span class="pln">order</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_UPLO.html"><span class="pln">CBLAS_UPLO</span></a><span class="pun">)</span> <span class="pln">Uplo</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_TRANSPOSE.html"><span class="pln">CBLAS_TRANSPOSE</span></a><span class="pun">)</span> <span class="pln">TransA</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../cblas/cblas/CBLAS_DIAG.html"><span class="pln">CBLAS_DIAG</span></a><span class="pun">)</span> <span class="pln">Diag</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">N</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">*</span><span class="pun">)</span> <span class="pln">A</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">lda</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="typ">double</span><span class="pun">*</span> <span class="pln">X</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">incX</span>
-								<br/>
-<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
+<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc</span><span class="pun">;</span></div></code></div>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-<p>Ilya Yaroshenko
+<footer><table class="license-info"><tr><th>Authors</th><td><p>Ilya Yaroshenko
 </p>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+</td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

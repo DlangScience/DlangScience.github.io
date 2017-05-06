@@ -66,7 +66,6 @@
 <url><loc>http://127.0.0.1/dstats/alloc/RegionAllocatorStack.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/RegionAllocatorStack.gcScanned.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/RegionAllocatorStack.newRegionAllocator.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/alloc/RegionAllocatorStack.opAssign.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/RegionAllocatorStack.this.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/scanThreadLocalStack.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/scanThreadLocalStack.html</loc></url>
@@ -182,7 +181,6 @@
 <url><loc>http://127.0.0.1/dstats/base/binCounts.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/byCategory.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/byCategory.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/base/comb.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/Comb.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/Comb.chosen.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/Comb.CombArray.html</loc></url>
@@ -201,6 +199,7 @@
 <url><loc>http://127.0.0.1/dstats/base/Comb.setLen.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/Comb.this.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/Comb._length.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/base/comb.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/doubleInput.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/doubleIterable.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/DstatsArgumentException.html</loc></url>
@@ -240,7 +239,7 @@
 <url><loc>http://127.0.0.1/dstats/base/ToNumericRange._front.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/_arrayExpSliceDivass_d.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/base/_arrayExpSliceMulass_d.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/base/_arraySliceExpMulSliceSubass_d.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/base/_arraySliceExpMulSliceMinass_d.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/cor.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/cor/covariance.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/cor/covarianceMatrix.html</loc></url>
@@ -461,6 +460,7 @@
 <url><loc>http://127.0.0.1/dstats/regress/linearRegressBeta.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/linearRegressBetaBuf.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/linearRegressPenalized.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/regress/loess1D.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Loess1D.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Loess1D.computeRobustWeights.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Loess1D.degree.html</loc></url>
@@ -468,7 +468,6 @@
 <url><loc>http://127.0.0.1/dstats/regress/Loess1D.predictions.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Loess1D.x.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Loess1D.y.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/regress/loess1D.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/logistic.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/logisticRegress.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/logisticRegressBeta.html</loc></url>
@@ -512,7 +511,6 @@
 <url><loc>http://127.0.0.1/dstats/regress/RegressRes.toString.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/RegressRes.upperBound.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/repeat.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/regress/residuals.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Residuals.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Residuals.betas.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Residuals.empty.html</loc></url>
@@ -525,12 +523,13 @@
 <url><loc>http://127.0.0.1/dstats/regress/Residuals.X.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Residuals.Y.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/Residuals._empty.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/regress/residuals.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/_arrayExpSliceMulSliceAddass_d.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/_arrayExpSliceMulSliceAssign_d.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/regress/_arrayExpSliceMulSliceSubass_d.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/regress/_arrayExpSliceMulSliceMinass_d.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/_arraySliceExpMulSliceAddass_d.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/regress/_arraySliceSliceMinSliceAssign_d.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/regress/_arraySliceSliceMulSliceAssign_d.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/regress/_arraySliceSliceSubSliceAssign_d.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/sort.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/sort/ArrayElemType.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/sort/DATA.html</loc></url>

@@ -1,80 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Function runsTest</title>
-		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../dstats/alloc.html" class=" module">alloc</a>
-							</li>
-							<li>
-								<a href="../../dstats/base.html" class=" module">base</a>
-							</li>
-							<li>
-								<a href="../../dstats/cor.html" class=" module">cor</a>
-							</li>
-							<li>
-								<a href="../../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../../dstats/regress.html" class=" module">regress</a>
-							</li>
-							<li>
-								<a href="../../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../../dstats/summary.html" class=" module">summary</a>
-							</li>
-							<li>
-								<a href="../../dstats/tests.html" class="selected module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Function runsTest</h1>
-			<section>
-				<p>Wald-wolfowitz or runs test for randomness of the distribution of
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Function runsTest</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module selected"><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function runsTest</h1><p>Wald-wolfowitz or runs test for randomness of the distribution of
 elements for which positive() evaluates to true.  For example, given
 a sequence of coin flips [H,H,H,H,H,T,T,T,T,T] and a positive() function of
 "a == 'H'", this test would determine that the heads are non-randomly
@@ -84,8 +15,17 @@ positive() evaluates to true, and the number of consecutive runs for which
 it evaluates to false.  In the example above, we have 2 runs.  These are the
 block of 5 consecutive heads at the beginning and the 5 consecutive tails
 at the end.
-</p>
-<section><p>Alternatives are Alt.less, meaning that less runs than expected have been
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<span class="typ">double</span> <span class="pln">runsTest</span>(alias positive, T)
+<span class="pun">(</span>
+<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">obs</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
+<br/>
+<span class="pun">)</span>
+<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isIterable</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span></div></code></div><section><p>Alternatives are Alt.less, meaning that less runs than expected have been
 observed and data for which positive() is true tends to cluster,
 Alt.greater, which means that more runs than expected have been observed
 and data for which positive() is true tends to not cluster even moreso than
@@ -94,44 +34,13 @@ positive() is true cluster as much as expected by chance.
 </p>
 </section>
 
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="typ">double</span> <span class="pln">runsTest</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">positive</span><span class="pun">, </span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
-								<br/>
-&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">obs</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
-								<br/>
-<span class="pun">)</span>
-								<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isIterable</span><span class="pun">!</span><span class="pln">T</span><span class="pun">);</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Bugs</h3>
+<section><h2>Bugs</h2>
 <p>No exact calculation of the P-value.  Asymptotic approximation only.
 </p>
 </section>
-<section><h3>References</h3>
+<section><h2>References</h2>
 <p>http://en.wikipedia.org/wiki/Runs_test
 </p>
 </section>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

@@ -480,8 +480,8 @@
 <url><loc>http://127.0.0.1/mpi/MPI_NO_OP.html</loc></url>
 <url><loc>http://127.0.0.1/mpi/MPI_NULL_COPY_FN.html</loc></url>
 <url><loc>http://127.0.0.1/mpi/MPI_NULL_DELETE_FN.html</loc></url>
-<url><loc>http://127.0.0.1/mpi/MPI_OFFSET.html</loc></url>
 <url><loc>http://127.0.0.1/mpi/MPI_Offset.html</loc></url>
+<url><loc>http://127.0.0.1/mpi/MPI_OFFSET.html</loc></url>
 <url><loc>http://127.0.0.1/mpi/MPI_Op.html</loc></url>
 <url><loc>http://127.0.0.1/mpi/MPI_Open_port.html</loc></url>
 <url><loc>http://127.0.0.1/mpi/MPI_Op_c2f.html</loc></url>

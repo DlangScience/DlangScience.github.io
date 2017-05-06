@@ -1870,6 +1870,7 @@
 <url><loc>http://127.0.0.1/scid/nonlinear/RootBracket.y1.html</loc></url>
 <url><loc>http://127.0.0.1/scid/nonlinear/RootBracket.y2.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types.html</loc></url>
+<url><loc>http://127.0.0.1/scid/types/interval.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Interval.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Interval.a.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Interval.b.html</loc></url>
@@ -1878,7 +1879,6 @@
 <url><loc>http://127.0.0.1/scid/types/Interval.isOrdered.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Interval.length.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Interval.order.html</loc></url>
-<url><loc>http://127.0.0.1/scid/types/interval.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Result.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Result.error.html</loc></url>
 <url><loc>http://127.0.0.1/scid/types/Result.opBinary.html</loc></url>

@@ -1,87 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Struct RegionAllocator</title>
-		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../dstats/alloc.html" class="selected module">alloc</a>
-							</li>
-							<li>
-								<a href="../../dstats/base.html" class=" module">base</a>
-							</li>
-							<li>
-								<a href="../../dstats/cor.html" class=" module">cor</a>
-							</li>
-							<li>
-								<a href="../../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../../dstats/regress.html" class=" module">regress</a>
-							</li>
-							<li>
-								<a href="../../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../../dstats/summary.html" class=" module">summary</a>
-							</li>
-							<li>
-								<a href="../../dstats/tests.html" class=" module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Struct RegionAllocator</h1>
-			<section>
-				<p>This struct provides an interface to the <code class="lang-d"><span class="typ">RegionAllocator</span></code> functionality
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Struct RegionAllocator</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module selected"><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct RegionAllocator</h1><p>This struct provides an interface to the <code class="lang-d"><span class="typ">RegionAllocator</span></code> functionality
 and enforces scoped deletion.  A new instance using the thread-local
 <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance is created using the global
 <code class="lang-d"><a href="../../dstats/alloc/newRegionAllocator.html"><span class="pln">newRegionAllocator</span></a></code> function.  A new instance using
 an explicitly created <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> is created using
 <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><span class="typ">RegionAllocatorStack<wbr/></span><span class="pun">.</span><span class="pln">newRegionAllocator</span></a></code>.
-</p>
-<section><p>Each instance has reference semantics in that any copy will allocate from the
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">RegionAllocator</span>
+<span class="pun">;</span></div></code></div><section><p>Each instance has reference semantics in that any copy will allocate from the
 same memory.  When the last copy of an instance goes out of scope, all memory
 allocated via that instance is freed.  Only the most recently created
 still-existing <code class="lang-d"><span class="typ">RegionAllocator</span></code> using a given <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code>
@@ -95,172 +26,51 @@ a function.  However, any attempt to call a method will result in a
 <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorException.html"><span class="typ">RegionAllocatorException</span></a></code> being thrown.
 </p>
 </section>
-
-					<section>
-						<h3>Properties</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Type</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.gcScanned.html" class="public property"><code>gcScanned</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
-								<td>Returns whether the <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> used by this
+<section><h2>Properties</h2><h4>Properties</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.gcScanned.html" class="["public", "property"]"><code>gcScanned</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether the <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> used by this
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> instance is scanned by the garbage collector.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.segmentSize.html" class="public property"><code>segmentSize</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td>
-								<td>Returns the segment size of the <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> used by this
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.segmentSize.html" class="["public", "property"]"><code>segmentSize</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td>Returns the segment size of the <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> used by this
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code>.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.segmentSlack.html" class="public property"><code>segmentSlack</code></a>
-									<span class="tableEntryAnnotation">[get]</span>
-								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td>
-								<td>Returns the maximum number of bytes that may be allocated in the
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.segmentSlack.html" class="["public", "property"]"><code>segmentSlack</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td>Returns the maximum number of bytes that may be allocated in the
     current segment.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.alignBytes.html" class="public">
-										<code>alignBytes</code>
-									</a>
-								</td>
-								<td>Returns the number of bytes to which an allocation of size nBytes is
+</td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.alignBytes.html" class="["public"]"><code>alignBytes</code></a></td><td>Returns the number of bytes to which an allocation of size nBytes is
     guaranteed to be aligned.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.allocate.html" class="public">
-										<code>allocate</code>
-									</a>
-								</td>
-								<td>Allocates <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.allocate.html#nBytes"><span class="pln">nBytes</span></a></code> bytes on the <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> used by this
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.allocate.html" class="["public"]"><code>allocate</code></a></td><td>Allocates <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.allocate.html#nBytes"><span class="pln">nBytes</span></a></code> bytes on the <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> used by this
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> instance.  The last block allocated from this
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> instance can be freed by calling
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.free.html"><span class="typ">RegionAllocator<wbr/></span><span class="pun">.</span><span class="pln">free</span></a></code> or <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.freeLast.html"><span class="typ">RegionAllocator<wbr/></span><span class="pun">.</span><span class="pln">freeLast</span></a></code> or will be
     automatically freed when the last copy of this <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code>
     instance goes out of scope.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.allocSize.html" class="public">
-										<code>allocSize</code>
-									</a>
-								</td>
-								<td>Returns the number of bytes used to satisfy an allocation request
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.allocSize.html" class="["public"]"><code>allocSize</code></a></td><td>Returns the number of bytes used to satisfy an allocation request
     of <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.allocSize.html#nBytes"><span class="pln">nBytes</span></a></code>.  Will return a value greater than or equal to
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.allocSize.html#nBytes"><span class="pln">nBytes</span></a></code> to account for alignment overhead.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.array.html" class="public">
-										<code>array</code>
-									</a>
-								</td>
-								<td>Copies <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.array.html#range"><span class="pln">range</span></a></code> to an array.  The array will be located on the
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.array.html" class="["public"]"><code>array</code></a></td><td>Copies <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.array.html#range"><span class="pln">range</span></a></code> to an array.  The array will be located on the
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> stack if any of the following conditions apply:
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.free.html" class="public">
-										<code>free</code>
-									</a>
-								</td>
-								<td>Checks that <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.free.html#ptr"><span class="pln">ptr</span></a></code> is a pointer to the block that would be freed by
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.free.html" class="["public"]"><code>free</code></a></td><td>Checks that <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.free.html#ptr"><span class="pln">ptr</span></a></code> is a pointer to the block that would be freed by
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.freeLast.html"><span class="pln">freeLast</span></a></code> then calls <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.freeLast.html"><span class="pln">freeLast</span></a></code>.  Throws a
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorException.html"><span class="typ">RegionAllocatorException</span></a></code> if the pointer does not point to the
     block that would be freed by <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.freeLast.html"><span class="pln">freeLast</span></a></code>.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.freeLast.html" class="public">
-										<code>freeLast</code>
-									</a>
-								</td>
-								<td>Frees the last block of memory allocated by the current
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.freeLast.html" class="["public"]"><code>freeLast</code></a></td><td>Frees the last block of memory allocated by the current
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code>.  Throws a <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorException.html"><span class="typ">RegionAllocatorException</span></a></code> if
     this <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> is not the most recently created still-existing
     <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> using its <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.newArray.html" class="public">
-										<code>newArray</code>
-									</a>
-								</td>
-								<td>Allocates an array of type <code class="lang-d"><span class="pln">T</span></code>.  <code class="lang-d"><span class="pln">T</span></code> may be a multidimensional
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.newArray.html" class="["public"]"><code>newArray</code></a></td><td>Allocates an array of type <code class="lang-d"><span class="pln">T</span></code>.  <code class="lang-d"><span class="pln">T</span></code> may be a multidimensional
     array.  In this case sizes may be specified for any number of dimensions
     from 1 to the number in <code class="lang-d"><span class="pln">T</span></code>.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.opAssign.html" class="public">
-										<code>opAssign</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.resize.html" class="public">
-										<code>resize</code>
-									</a>
-								</td>
-								<td>Attempts to resize a previously allocated block of memory in place.
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.opAssign.html" class="["public"]"><code>opAssign</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.resize.html" class="["public"]"><code>resize</code></a></td><td>Attempts to resize a previously allocated block of memory in place.
     This is possible only if <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.resize.html#ptr"><span class="pln">ptr</span></a></code> points to the beginning of the last
     block allocated by this <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> instance and, in the
     case where <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.resize.html#newSize"><span class="pln">newSize</span></a></code> is greater than the old size, there is
     additional space in the segment that <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.resize.html#ptr"><span class="pln">ptr</span></a></code> was allocated from.
     Additionally, blocks larger than this <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code>'s segment size
     cannot be grown or shrunk.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../dstats/alloc/RegionAllocator.uninitializedArray.html" class="public">
-										<code>uninitializedArray</code>
-									</a>
-								</td>
-								<td>Same as <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.newArray.html"><span class="pln">newArray</span></a></code>, except skips initialization of elements for
+</td></tr><tr><td><a href="../../dstats/alloc/RegionAllocator.uninitializedArray.html" class="["public"]"><code>uninitializedArray</code></a></td><td>Same as <code class="lang-d"><a href="../../dstats/alloc/RegionAllocator.newArray.html"><span class="pln">newArray</span></a></code>, except skips initialization of elements for
     performance reasons.
-</td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Examples</h3>
+</td></tr></table></section>
+<section><h2>Examples</h2>
 <pre class="code"><code class="lang-d"><span class="typ">void </span><span class="pln">foo</span><span class="pun">() {
     </span><span class="kwd">auto </span><span class="pln">alloc </span><span class="pun">= <a href="../../dstats/alloc/newRegionAllocator.html"></span><span class="pln">newRegionAllocator</span></a><span class="pun">();
     </span><span class="kwd">auto </span><span class="pln">ptr1 </span><span class="pun">= </span><span class="pln">bar</span><span class="pun">(</span><span class="pln">alloc</span><span class="pun">);
@@ -322,7 +132,7 @@ a function.  However, any attempt to call a method will result in a
     </span><span class="kwd">auto </span><span class="pln">ptr4 </span><span class="pun">= </span><span class="pln">alloc<wbr/></span><span class="pun">.</span><span class="pln">allocate</span><span class="pun">(</span><span class="lit">42</span><span class="pun">);  </span><span class="com">// Ok.
 </span><span class="pun">}</span></code></pre>
 </section>
-<section><h3>Note</h3>
+<section><h2>Note</h2>
 <p>Allocations larger than <code class="lang-d"><span class="kwd">this<wbr/></span><span class="pun">.</span><span class="pln">segmentSize</span></code> are handled as a special
 case and fall back to allocating directly from the C heap.  These large
 allocations are freed as if they were allocated on a <code class="lang-d"><a href="../../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code>
@@ -335,19 +145,4 @@ large allocations are present.
 </p>
 </section>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

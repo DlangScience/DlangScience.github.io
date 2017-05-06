@@ -1,62 +1,27 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Function merge</title>
-		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li>
-								<a href="../parallel_algorithm.html" class="selected module">parallel_algorithm</a>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Function merge</h1>
-			<section>
-				<p>Merge ranges <code class="lang-d"><a href="../parallel_algorithm/merge.html#from1"><span class="pln">from1</span></a></code> and <code class="lang-d"><a href="../parallel_algorithm/merge.html#from2"><span class="pln">from2</span></a></code>, which are assumed sorted according
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Function merge</title>
+<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li><div class="module selected"><a href="../parallel_algorithm.html">parallel_algorithm</a></div></li></ul></nav><div id="main-contents"><h1>Function merge</h1><p>Merge ranges <code class="lang-d"><a href="../parallel_algorithm/merge.html#from1"><span class="pln">from1</span></a></code> and <code class="lang-d"><a href="../parallel_algorithm/merge.html#from2"><span class="pln">from2</span></a></code>, which are assumed sorted according
 to <code class="lang-d"><span class="pln">pred</span></code>, into <code class="lang-d"><a href="../parallel_algorithm/merge.html#buf"><span class="pln">buf</span></a></code> using a sequential algorithm.
-</p>
-<section></section>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="typ">void</span> <span class="pln">merge</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">pred</span><span class="pun">, </span><span class="pln">R1</span><span class="pun">, </span><span class="pln">R2</span><span class="pun">, </span><span class="pln">R3</span><span class="pun">)</span><span class="pun">(</span>
-								<br/>
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<span class="typ">void</span> <span class="pln">merge</span>(alias pred, R1, R2, R3)
+<span class="pun">(</span>
+<br/>
 &nbsp;&nbsp;<span class="pln">R1</span> <span class="pln">from1</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="pln">R2</span> <span class="pln">from2</span><span class="pun">,</span>
-								<br/>
+<br/>
 &nbsp;&nbsp;<span class="pln">R3</span> <span class="pln">buf</span>
-								<br/>
+<br/>
 <span class="pun">)</span>
-								<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">isInputRange</span><span class="pun">, </span><span class="typ">TypeTuple</span><span class="pun">!(</span><span class="pln">R1</span><span class="pun">, </span><span class="pln">R2</span><span class="pun">)) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2</span><span class="pun">) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R3</span><span class="pun">) &amp;&amp; </span><span class="pln">isOutputRange</span><span class="pun">!(</span><span class="pln">R3</span><span class="pun">, </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R1</span><span class="pun">)</span><span class="pun">);</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Parameters</h3>
+<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">isInputRange</span><span class="pun">, </span><span class="typ">TypeTuple</span><span class="pun">!(</span><span class="pln">R1</span><span class="pun">, </span><span class="pln">R2</span><span class="pun">)) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2</span><span class="pun">) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R3</span><span class="pun">) &amp;&amp; </span><span class="pln">isOutputRange</span><span class="pun">!(</span><span class="pln">R3</span><span class="pun">, </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R1</span><span class="pun">)</span><span class="pun">);</span></div></code></div><section></section>
+
+<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="from1">from1</td><td> The first of the two sorted ranges to be merged.
 </td></tr>
@@ -68,7 +33,7 @@ be an input range and must have an identical element type to
 capacity at least equal to <code class="lang-d"><span class="pln">walkLength</span><span class="pun">(<a href="../parallel_algorithm/merge.html#from1"></span><span class="pln">from1</span></a><span class="pun">) + </span><span class="pln">walkLength</span><span class="pun">(<a href="../parallel_algorithm/merge.html#from2"></span><span class="pln">from2</span></a><span class="pun">)</span></code>.</td></tr>
 </table>
 </section>
-<section><h3>Example</h3>
+<section><h2>Example</h2>
 <pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../parallel_algorithm/merge.html#from1"></span><span class="pln">from1</span></a><span class="pln"> </span><span class="pun">= [</span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">8</span><span class="pun">, </span><span class="lit">16</span><span class="pun">, </span><span class="lit">32</span><span class="pun">];
 </span><span class="kwd">auto <a href="../parallel_algorithm/merge.html#from2"></span><span class="pln">from2</span></a><span class="pln"> </span><span class="pun">= [</span><span class="lit">2</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">6</span><span class="pun">, </span><span class="lit">8</span><span class="pun">, </span><span class="lit">10</span><span class="pun">, </span><span class="lit">12</span><span class="pun">];
 </span><span class="kwd">auto <a href="../parallel_algorithm/merge.html#buf"></span><span class="pln">buf</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">int</span><span class="pun">[</span><span class="pln">from1<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">+ </span><span class="pln">from2<wbr/></span><span class="pun">.</span><span class="pln">length</span><span class="pun">];
@@ -76,19 +41,4 @@ capacity at least equal to <code class="lang-d"><span class="pln">walkLength</sp
 </span><span class="kwd">assert</span><span class="pun">(<a href="../parallel_algorithm/merge.html#buf"></span><span class="pln">buf</span></a><span class="pln"> </span><span class="pun">== [</span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">6</span><span class="pun">, </span><span class="lit">8</span><span class="pun">, </span><span class="lit">8</span><span class="pun">, </span><span class="lit">10</span><span class="pun">, </span><span class="lit">12</span><span class="pun">, </span><span class="lit">16</span><span class="pun">, </span><span class="lit">32</span><span class="pun">]);</span></code></pre>
 </section>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

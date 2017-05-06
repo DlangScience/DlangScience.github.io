@@ -1,110 +1,34 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Function loess1D</title>
-		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../dstats/alloc.html" class=" module">alloc</a>
-							</li>
-							<li>
-								<a href="../../dstats/base.html" class=" module">base</a>
-							</li>
-							<li>
-								<a href="../../dstats/cor.html" class=" module">cor</a>
-							</li>
-							<li>
-								<a href="../../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../../dstats/regress.html" class="selected module">regress</a>
-							</li>
-							<li>
-								<a href="../../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../../dstats/summary.html" class=" module">summary</a>
-							</li>
-							<li>
-								<a href="../../dstats/tests.html" class=" module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Function loess1D</h1>
-			<section>
-				<p>This function performs loess regression.  Loess regression is a local
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Function loess1D</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module selected"><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function loess1D</h1><p>This function performs loess regression.  Loess regression is a local
 regression procedure, where a prediction of the dependent (y) variable
 is made from an observation of the independent (x) variable by weighted
 least squares over x values in the neighborhood of the value being evaluated.
-</p>
-<section><p>In the future a separate function may be included to perform loess regression
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<a href="../../dstats/regress/Loess1D.html"><span class="typ">Loess1D</span></a> <span class="pln">loess1D</span>(RX, RY)
+<span class="pun">(</span>
+<br/>
+&nbsp;&nbsp;<span class="pln">RY</span> <span class="pln">y</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="pln">RX</span> <span class="pln">x</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">span</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">degree</span> <span class="pun">=</span> <span class="lit">1</span>
+<br/>
+<span class="pun">)</span><span class="pun">;</span></div></code></div><section><p>In the future a separate function may be included to perform loess regression
 with multiple predictors.  However, one predictor is the much more common
 case and the multiple predictor case will require a much different API
 and implementation, so for now only one predictor is supported.
 </p>
 </section>
 
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<a href="../../dstats/regress/Loess1D.html"><span class="typ">Loess1D</span></a> <span class="pln">loess1D</span><span class="pun">(</span><span class="pln">RX</span><span class="pun">, </span><span class="pln">RY</span><span class="pun">)</span><span class="pun">(</span>
-								<br/>
-&nbsp;&nbsp;<span class="pln">RY</span> <span class="pln">y</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<span class="pln">RX</span> <span class="pln">x</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">span</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">degree</span> <span class="pun">=</span> <span class="lit">1</span>
-								<br/>
-<span class="pun">)</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Parameters</h3>
+<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="y">y</td><td> Observations of the dependent variable.</td></tr>
 <tr><td id="x">x</td><td> Observations of the independent variable.</td></tr>
@@ -116,14 +40,14 @@ and implementation, so for now only one predictor is supported.
          the number of neighbors (span * x.length).</td></tr>
 </table>
 </section>
-<section><h3>Returns</h3>
+<section><h2>Returns</h2>
 <p>A Loess1D object.  This object can be used to make predictions based on
 the loess model.  The computations involved are done lazily, i.e. this
 function sets up the Loess1D instance and returns without computing
 any regression models.
 </p>
 </section>
-<section><h3>Examples</h3>
+<section><h2>Examples</h2>
 <pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../dstats/regress/loess1D.html#x"></span><span class="pln">x</span></a><span class="pln"> </span><span class="pun">= [</span><span class="lit">1</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">5</span><span class="pun">, </span><span class="lit">6</span><span class="pun">, </span><span class="lit">7</span><span class="pun">];
 </span><span class="kwd">auto <a href="../../dstats/regress/loess1D.html#y"></span><span class="pln">y</span></a><span class="pln"> </span><span class="pun">= [</span><span class="lit">3</span><span class="pun">, </span><span class="lit">6</span><span class="pun">, </span><span class="lit">2</span><span class="pun">, </span><span class="lit">4</span><span class="pun">, </span><span class="lit">3</span><span class="pun">, </span><span class="lit">6</span><span class="pun">, </span><span class="lit">8</span><span class="pun">];
 
@@ -136,26 +60,11 @@ any regression models.
 </span><span class="com">// Predict the value of y when x == 5.5, using a robustness level of 2.
 </span><span class="kwd">auto </span><span class="pln">prediction </span><span class="pun">= </span><span class="pln">model<wbr/></span><span class="pun">.</span><span class="pln">predict</span><span class="pun">(</span><span class="lit">5.5</span><span class="pun">, </span><span class="lit">2</span><span class="pun">);</span></code></pre>
 </section>
-<section><h3>References</h3>
+<section><h2>References</h2>
 <p>Cleveland, W.S. (1979). "Robust Locally Weighted Regression and Smoothing
 Scatterplots". Journal of the American Statistical Association 74 (368):
 829-836.
 </p>
 </section>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

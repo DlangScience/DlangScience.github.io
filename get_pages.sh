@@ -4,19 +4,19 @@ set -e
 
 pushd ddox
 dub upgrade
-dub build --build=release
+dub build
 popd
 
 root=`pwd`
 
 for pageName in content/main $(ls content/repos/); do
     printf "****************\nbuilding: $pageName\n****************\n"
-    
+
     if [ $pageName != content/main ]
     then
         rm -rf ${pageName}
         mkdir ${pageName}
-    
+
         pushd content/repos/${pageName}
         if [ -f gen_docs ]
         then
@@ -25,7 +25,7 @@ for pageName in content/main $(ls content/repos/); do
             PATH=$root/ddox:$PATH dub build --build=DSddox
         fi
         popd
-        
+
         if [ -f content/repos/${pageName}/site/readme_as_index ]
         then
             cat content/repos/${pageName}/README.md | tr -d '\r' > ${pageName}/index.md
@@ -34,7 +34,7 @@ for pageName in content/main $(ls content/repos/); do
 
         if [ -d ${pageName}/api ]
         then
-            pushd ${pageName}/api    
+            pushd ${pageName}/api
             ln -s ../../ddox/public/* .
 	    popd
         fi

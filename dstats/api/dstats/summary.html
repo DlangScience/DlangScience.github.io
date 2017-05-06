@@ -1,86 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Module dstats.summary</title>
-		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="tree-view">
-								<a href="#" class="package">dstats</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../dstats.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../dstats/alloc.html" class=" module">alloc</a>
-							</li>
-							<li>
-								<a href="../dstats/base.html" class=" module">base</a>
-							</li>
-							<li>
-								<a href="../dstats/cor.html" class=" module">cor</a>
-							</li>
-							<li>
-								<a href="../dstats/distrib.html" class=" module">distrib</a>
-							</li>
-							<li>
-								<a href="../dstats/infotheory.html" class=" module">infotheory</a>
-							</li>
-							<li>
-								<a href="../dstats/kerneldensity.html" class=" module">kerneldensity</a>
-							</li>
-							<li>
-								<a href="../dstats/pca.html" class=" module">pca</a>
-							</li>
-							<li>
-								<a href="../dstats/random.html" class=" module">random</a>
-							</li>
-							<li>
-								<a href="../dstats/regress.html" class=" module">regress</a>
-							</li>
-							<li>
-								<a href="../dstats/sort.html" class=" module">sort</a>
-							</li>
-							<li>
-								<a href="../dstats/summary.html" class="selected module">summary</a>
-							</li>
-							<li>
-								<a href="../dstats/tests.html" class=" module">tests</a>
-							</li>
-						</ul>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Module dstats.summary</h1>
-			<p>Summary statistics such as mean, median, sum, variance, skewness, kurtosis.
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Module dstats.summary</title>
+<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../dstats/base.html">base</a></div></li><li><div class="module "><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../dstats/random.html">random</a></div></li><li><div class="module "><a href="../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../dstats/sort.html">sort</a></div></li><li><div class="module selected"><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.summary</h1><p>Summary statistics such as mean, median, sum, variance, skewness, kurtosis.
  Except for median and median absolute deviation, which cannot be calculated
  online, all summary statistics have both an input range interface and an
  output range interface.
-</p>
-<section></section>
+</p><section></section>
 
-			<section><section><h2>Notes</h2>
+<section><section><h2>Notes</h2>
 <p>The put method on the structs defined in this module returns this by
         ref.  The use case for returning this is to enable these structs
         to be used with std.algorithm.reduce.  The rationale for returning
@@ -101,79 +32,26 @@ $('#symbolSearchPane').show();
 <p>David Simcha
 </p>
 </section>
-</section>
-			<section>
-				<h2>Functions</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="geometricMean" class="public" href="../dstats/summary/geometricMean.html">
-								<code>geometricMean</code>
-							</a>
-						</td>
-						<td>Calculates the geometric mean of any input range that has elements implicitly
+</section><section><h2>Functions</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="geometricMean" class="["public"]" href="../dstats/summary/geometricMean.html">geometricMean</a><span class="decoration">(data)</span></code></td><td>Calculates the geometric mean of any input range that has elements implicitly
  convertible to double
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="interquantileRange" class="public" href="../dstats/summary/interquantileRange.html">
-								<code>interquantileRange</code>
-							</a>
-						</td>
-						<td>Computes the interquantile range of data at the given quantile value in O(N)
+</td></tr><tr><td><code><a id="interquantileRange" class="["public"]" href="../dstats/summary/interquantileRange.html">interquantileRange</a><span class="decoration">(data, quantile)</span></code></td><td>Computes the interquantile range of data at the given quantile value in O(N)
  time complexity.  For example, using a quantile value of either 0.25 or 0.75
  will give the interquartile range.  (This is the default since it is
  apparently the most common interquantile range in common usage.)
  Using a quantile value of 0.2 or 0.8 will give the interquntile range.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="kurtosis" class="public" href="../dstats/summary/kurtosis.html">
-								<code>kurtosis</code>
-							</a>
-						</td>
-						<td>Excess kurtosis relative to normal distribution.  High kurtosis means that
+</td></tr><tr><td><code><a id="kurtosis" class="["public"]" href="../dstats/summary/kurtosis.html">kurtosis</a><span class="decoration">(data)</span></code></td><td>Excess kurtosis relative to normal distribution.  High kurtosis means that
  the variance is due to infrequent, large deviations from the mean.  Low
  kurtosis means that the variance is due to frequent, small deviations from
  the mean.  The normal distribution is defined as having kurtosis of 0.
  Input must be an input range with elements implicitly convertible to double.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="mean" class="public" href="../dstats/summary/mean.html">
-								<code>mean</code>
-							</a>
-						</td>
-						<td>Finds the arithmetic mean of any input range whose elements are implicitly
+</td></tr><tr><td><code><a id="mean" class="["public"]" href="../dstats/summary/mean.html">mean</a><span class="decoration">(data)</span></code></td><td>Finds the arithmetic mean of any input range whose elements are implicitly
  convertible to double.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="meanStdev" class="public" href="../dstats/summary/meanStdev.html">
-								<code>meanStdev</code>
-							</a>
-						</td>
-						<td>Puts all elements of data into a MeanSD struct,
+</td></tr><tr><td><code><a id="meanStdev" class="["public"]" href="../dstats/summary/meanStdev.html">meanStdev</a><span class="decoration">(data)</span></code></td><td>Puts all elements of data into a MeanSD struct,
  then returns this struct.  This can be faster than doing this manually
  due to ILP optimizations.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="median" class="public" href="../dstats/summary/median.html">
-								<code>median</code>
-							</a>
-						</td>
-						<td>Finds median of an input range in O(N) time on average.  In the case of an
+</td></tr><tr><td><code><a id="median" class="["public"]" href="../dstats/summary/median.html">median</a><span class="decoration">(data)</span></code></td><td>Finds median of an input range in O(N) time on average.  In the case of an
  even number of elements, the mean of the two middle elements is returned.
  This is a convenience founction designed specifically for numeric types,
  where the averaging of the two middle elements is desired.  A more general
@@ -181,201 +59,55 @@ $('#symbolSearchPane').show();
  as selecting any position in the ordering, can be found at
  dstats.sort.quickSelect() and dstats.sort.partitionK().
  Allocates memory, does not reorder input data.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="medianAbsDev" class="public" href="../dstats/summary/medianAbsDev.html">
-								<code>medianAbsDev</code>
-							</a>
-						</td>
-						<td>Calculates the median absolute deviation of a dataset.  This is the median
+</td></tr><tr><td><code><a id="medianAbsDev" class="["public"]" href="../dstats/summary/medianAbsDev.html">medianAbsDev</a><span class="decoration">(data)</span></code></td><td>Calculates the median absolute deviation of a dataset.  This is the median
  of all absolute differences from the median of the dataset.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="medianPartition" class="public" href="../dstats/summary/medianPartition.html">
-								<code>medianPartition</code>
-							</a>
-						</td>
-						<td>Median finding as in median(), but will partition input data such that
+</td></tr><tr><td><code><a id="medianPartition" class="["public"]" href="../dstats/summary/medianPartition.html">medianPartition</a><span class="decoration">(data)</span></code></td><td>Median finding as in median(), but will partition input data such that
  elements less than the median will have smaller indices than that of the
  median, and elements larger than the median will have larger indices than
  that of the median. Useful both for its partititioning and to avoid
  memory allocations.  Requires a random access range with swappable
  elements.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="skewness" class="public" href="../dstats/summary/skewness.html">
-								<code>skewness</code>
-							</a>
-						</td>
-						<td>Skewness is a measure of symmetry of a distribution.  Positive skewness
+</td></tr><tr><td><code><a id="skewness" class="["public"]" href="../dstats/summary/skewness.html">skewness</a><span class="decoration">(data)</span></code></td><td>Skewness is a measure of symmetry of a distribution.  Positive skewness
  means that the right tail is longer/fatter than the left tail.  Negative
  skewness means the left tail is longer/fatter than the right tail.  Zero
  skewness indicates a symmetrical distribution.  Input must be an input
  range with elements implicitly convertible to double.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="stdev" class="public" href="../dstats/summary/stdev.html">
-								<code>stdev</code>
-							</a>
-						</td>
-						<td>Calculate the standard deviation of an input range with members
+</td></tr><tr><td><code><a id="stdev" class="["public"]" href="../dstats/summary/stdev.html">stdev</a><span class="decoration">(data)</span></code></td><td>Calculate the standard deviation of an input range with members
  implicitly converitble to double.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="sum" class="public" href="../dstats/summary/sum.html">
-								<code>sum</code>
-							</a>
-						</td>
-						<td>Finds the sum of an input range whose elements implicitly convert to double.
+</td></tr><tr><td><code><a id="sum" class="["public"]" href="../dstats/summary/sum.html">sum</a><span class="decoration">(data)</span></code></td><td>Finds the sum of an input range whose elements implicitly convert to double.
  User has option of making U a different type than T to prevent overflows
  on large array summing operations.  However, by default, return type is
  T (same as input type).
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="summary" class="public" href="../dstats/summary/summary.html">
-								<code>summary</code>
-							</a>
-						</td>
-						<td>Convenience function.  Puts all elements of data into a Summary struct,
+</td></tr><tr><td><code><a id="summary" class="["public"]" href="../dstats/summary/summary.html">summary</a><span class="decoration">(data)</span></code></td><td>Convenience function.  Puts all elements of data into a Summary struct,
  and returns this struct.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="variance" class="public" href="../dstats/summary/variance.html">
-								<code>variance</code>
-							</a>
-						</td>
-						<td>Finds the variance of an input range with members implicitly convertible
+</td></tr><tr><td><code><a id="variance" class="["public"]" href="../dstats/summary/variance.html">variance</a><span class="decoration">(data)</span></code></td><td>Finds the variance of an input range with members implicitly convertible
  to doubles.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="zScore" class="public" href="../dstats/summary/zScore.html">
-								<code>zScore</code>
-							</a>
-						</td>
-						<td>Returns a range with whatever properties T has (forward range, random
+</td></tr><tr><td><code><a id="zScore" class="["public"]" href="../dstats/summary/zScore.html">zScore</a><span class="decoration">(range)</span></code></td><td>Returns a range with whatever properties T has (forward range, random
  access range, bidirectional range, hasLength, etc.),
  of the z-scores of the underlying
  range.  A z-score of an element in a range is defined as
  (element - mean(range)) / stdev(range).
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="zScore" class="public" href="../dstats/summary/zScore.html">
-								<code>zScore</code>
-							</a>
-						</td>
-						<td>Allows the construction of a ZScore range with precomputed mean and
+</td></tr><tr><td><code><a id="zScore" class="["public"]" href="../dstats/summary/zScore.html">zScore</a><span class="decoration">(range, mean, sd)</span></code></td><td>Allows the construction of a ZScore range with precomputed mean and
  stdev.
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Structs</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="GeometricMean" class="public" href="../dstats/summary/GeometricMean.html">
-								<code>GeometricMean</code>
-							</a>
-						</td>
-						<td>Output range to calculate the geometric mean online.
+</td></tr></table></section><section><h2>Structs</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="GeometricMean" class="["public"]" href="../dstats/summary/GeometricMean.html">GeometricMean</a></code></td><td>Output range to calculate the geometric mean online.
  Operates similarly to dstats.summary.Mean
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="Mean" class="public" href="../dstats/summary/Mean.html">
-								<code>Mean</code>
-							</a>
-						</td>
-						<td>Output range to calculate the mean online.  Getter for mean costs a branch to
+</td></tr><tr><td><code><a id="Mean" class="["public"]" href="../dstats/summary/Mean.html">Mean</a></code></td><td>Output range to calculate the mean online.  Getter for mean costs a branch to
  check for N == 0.  This struct uses O(1) space and does *NOT* store the
  individual elements.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="MeanSD" class="public" href="../dstats/summary/MeanSD.html">
-								<code>MeanSD</code>
-							</a>
-						</td>
-						<td>Output range to compute mean, stdev, variance online.  Getter methods
+</td></tr><tr><td><code><a id="MeanSD" class="["public"]" href="../dstats/summary/MeanSD.html">MeanSD</a></code></td><td>Output range to compute mean, stdev, variance online.  Getter methods
  for stdev, var cost a few floating point ops.  Getter for mean costs
  a single branch to check for N == 0.  Relatively expensive floating point
  ops, if you only need mean, try Mean.  This struct uses O(1) space and
  does *NOT* store the individual elements.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="MedianAbsDev" class="public" href="../dstats/summary/MedianAbsDev.html">
-								<code>MedianAbsDev</code>
-							</a>
-						</td>
-						<td>Plain old data holder struct for median, median absolute deviation.
+</td></tr><tr><td><code><a id="MedianAbsDev" class="["public"]" href="../dstats/summary/MedianAbsDev.html">MedianAbsDev</a></code></td><td>Plain old data holder struct for median, median absolute deviation.
  Alias this'd to the median absolute deviation member.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="Summary" class="public" href="../dstats/summary/Summary.html">
-								<code>Summary</code>
-							</a>
-						</td>
-						<td>Output range to compute mean, stdev, variance, skewness, kurtosis, min, and
+</td></tr><tr><td><code><a id="Summary" class="["public"]" href="../dstats/summary/Summary.html">Summary</a></code></td><td>Output range to compute mean, stdev, variance, skewness, kurtosis, min, and
  max online. Using this struct is relatively expensive, so if you just need
  mean and/or stdev, try MeanSD or Mean. Getter methods for stdev,
  var cost a few floating point ops.  Getter for mean costs a single branch to
  check for N == 0.  Getters for skewness and kurtosis cost a whole bunch of
  floating point ops.  This struct uses O(1) space and does *NOT* store the
  individual elements.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="ZScore" class="public" href="../dstats/summary/ZScore.html">
-								<code>ZScore</code>
-							</a>
-						</td>
-						<td></td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Authors</h2>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-
-			</section>
-			<section>
-				<h2>License</h2>
-
-			</section>
-		</div>
-	</body>
-</html>
+</td></tr><tr><td><code><a id="ZScore" class="["public"]" href="../dstats/summary/ZScore.html">ZScore</a></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
