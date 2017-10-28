@@ -1,15 +1,108 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Class KernelDensity1D</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module selected"><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Class KernelDensity1D</h1><p>Estimates densities in the 1-dimensional case.  The 1-D case is special
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class KernelDensity1D</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class KernelDensity1D</h1><p>Estimates densities in the 1-dimensional case.  The 1-D case is special
  enough to be treated as a special case, since it's very common and enables
  some significant optimizations that are otherwise not feasible.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">class</span> <span class="typ">KernelDensity1D</span>
-<span class="pun">;</span></div></code></div><section><p>Under the hood, this works by binning the data into a large number of bins
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">KernelDensity1D</span>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>Under the hood, this works by binning the data into a large number of bins
  (currently 1,000), convolving it with the kernel function to smooth it, and
  then using linear interpolation to evaluate the density estimates.  This
  will produce results that are different from the textbook definition of
@@ -18,20 +111,99 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
  evaluating a density estimate can be done in O(1) time complexity afterwords.
 </p>
 </section>
-<section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/kerneldensity/KernelDensity1D.cdf.html" class="["public"]"><code>cdf</code></a></td><td>Compute the cumulative density, i.e. the integral from -infinity to x.
-</td></tr><tr><td><a href="../../dstats/kerneldensity/KernelDensity1D.cdfr.html" class="["public"]"><code>cdfr</code></a></td><td>Compute the cumulative density from the rhs, i.e. the integral from
+
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/kerneldensity/KernelDensity1D.cdf.html" class="[&quot;public&quot;]">
+								<code>cdf</code>
+							</a>
+						</td>
+						<td>Compute the cumulative density, i.e. the integral from -infinity to x.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/kerneldensity/KernelDensity1D.cdfr.html" class="[&quot;public&quot;]">
+								<code>cdfr</code>
+							</a>
+						</td>
+						<td>Compute the cumulative density from the rhs, i.e. the integral from
  x to infinity.
-</td></tr><tr><td><a href="../../dstats/kerneldensity/KernelDensity1D.fromAlias.html" class="["public"]"><code>fromAlias</code></a></td><td>Construct a kernel density estimator from an alias.
-</td></tr><tr><td><a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html" class="["public"]"><code>fromCallable</code></a></td><td>Construct a kernel density estimation object from a callable object.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/kerneldensity/KernelDensity1D.fromAlias.html" class="[&quot;public&quot;]">
+								<code>fromAlias</code>
+							</a>
+						</td>
+						<td>Construct a kernel density estimator from an alias.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html" class="[&quot;public&quot;]">
+								<code>fromCallable</code>
+							</a>
+						</td>
+						<td>Construct a kernel density estimation object from a callable object.
  R must be a range of numeric types.  C must be a kernel function,
  delegate, or class or struct with overloaded opCall.  The kernel
  function is assumed to be symmetric about zero, to take its maximum
  value at zero and to be unimodal.
-</td></tr><tr><td><a href="../../dstats/kerneldensity/KernelDensity1D.fromDefaultKernel.html" class="["public"]"><code>fromDefaultKernel</code></a></td><td>Construct a kernel density estimator using the default kernel, which is
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/kerneldensity/KernelDensity1D.fromDefaultKernel.html" class="[&quot;public&quot;]">
+								<code>fromDefaultKernel</code>
+							</a>
+						</td>
+						<td>Construct a kernel density estimator using the default kernel, which is
  a Gaussian kernel with the Scott bandwidth.
-</td></tr><tr><td><a href="../../dstats/kerneldensity/KernelDensity1D.opCall.html" class="["public"]"><code>opCall</code></a></td><td>Compute the probability density at a given point.
-</td></tr></table></section>
-
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/kerneldensity/KernelDensity1D.opCall.html" class="[&quot;public&quot;]">
+								<code>opCall</code>
+							</a>
+						</td>
+						<td>Compute the probability density at a given point.
+</td>
+					</tr>
+				</table>
+			</section>
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

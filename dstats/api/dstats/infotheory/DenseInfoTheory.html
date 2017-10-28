@@ -1,16 +1,109 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct DenseInfoTheory</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module selected"><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct DenseInfoTheory</h1><p>Much faster implementations of information theory functions for the special
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct DenseInfoTheory</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct DenseInfoTheory</h1><p>Much faster implementations of information theory functions for the special
 but common case where all observations are integers on the range [0, nBin).
 This is the case, for example, when the observations have been previously
 binned using, for example, dstats.base.frqBin().
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">DenseInfoTheory</span>
-<span class="pun">;</span></div></code></div><section><p>Note that, due to the optimizations used, joint() cannot be used with
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">DenseInfoTheory</span>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>Note that, due to the optimizations used, joint() cannot be used with
 the member functions of this struct, except entropy().
 </p>
 
@@ -19,21 +112,114 @@ faster than the generic implementations according to my quick and dirty
 benchmarks.
 </p>
 </section>
-<section><h2>Constructors</h2><h4>Constructors</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/infotheory/DenseInfoTheory.this.html" class="["public"]"><code>this</code></a></td><td>Constructs a DenseInfoTheory object for nBin bins.  The values taken by
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/infotheory/DenseInfoTheory.this.html" class="[&quot;public&quot;]">
+								<code>this</code>
+							</a>
+						</td>
+						<td>Constructs a DenseInfoTheory object for nBin bins.  The values taken by
     each observation must then be on the interval [0, nBin).
-</td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/infotheory/DenseInfoTheory.condEntropy.html" class="["public"]"><code>condEntropy</code></a></td><td>H(X | Y)
-</td></tr><tr><td><a href="../../dstats/infotheory/DenseInfoTheory.condMutualInfo.html" class="["public"]"><code>condMutualInfo</code></a></td><td>I(X; Y | Z)
-</td></tr><tr><td><a href="../../dstats/infotheory/DenseInfoTheory.entropy.html" class="["public"]"><code>entropy</code></a></td><td>Computes the entropy of a set of observations.  Note that, for this
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/infotheory/DenseInfoTheory.condEntropy.html" class="[&quot;public&quot;]">
+								<code>condEntropy</code>
+							</a>
+						</td>
+						<td>H(X | Y)
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/infotheory/DenseInfoTheory.condMutualInfo.html" class="[&quot;public&quot;]">
+								<code>condMutualInfo</code>
+							</a>
+						</td>
+						<td>I(X; Y | Z)
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/infotheory/DenseInfoTheory.entropy.html" class="[&quot;public&quot;]">
+								<code>entropy</code>
+							</a>
+						</td>
+						<td>Computes the entropy of a set of observations.  Note that, for this
     function, the joint() function can be used to compute joint entropies
     as long as each individual range contains only integers on [0, nBin).
-</td></tr><tr><td><a href="../../dstats/infotheory/DenseInfoTheory.mutualInfo.html" class="["public"]"><code>mutualInfo</code></a></td><td>I(x; y)
-</td></tr><tr><td><a href="../../dstats/infotheory/DenseInfoTheory.mutualInfoPval.html" class="["public"]"><code>mutualInfoPval</code></a></td><td>Calculates the P-value for I(X; Y) assuming x and y both have supports
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/infotheory/DenseInfoTheory.mutualInfo.html" class="[&quot;public&quot;]">
+								<code>mutualInfo</code>
+							</a>
+						</td>
+						<td>I(x; y)
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/infotheory/DenseInfoTheory.mutualInfoPval.html" class="[&quot;public&quot;]">
+								<code>mutualInfoPval</code>
+							</a>
+						</td>
+						<td>Calculates the P-value for I(X; Y) assuming x and y both have supports
     of [0, nBin).  The P-value is calculated using a Chi-Square approximation.
     It is asymptotically correct, but is approximate for finite sample size.
-</td></tr><tr><td><a href="../../dstats/infotheory/DenseInfoTheory.selectSize.html" class="["public"]"><code>selectSize</code></a></td><td></td></tr></table></section>
-
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/infotheory/DenseInfoTheory.selectSize.html" class="[&quot;public&quot;]">
+								<code>selectSize</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

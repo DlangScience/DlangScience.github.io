@@ -1,28 +1,120 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Function KernelDensity1D.fromCallable</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module selected"><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function KernelDensity1D.fromCallable</h1><p>Construct a kernel density estimation object from a callable object.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function KernelDensity1D.fromCallable</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function KernelDensity1D.fromCallable</h1><p>Construct a kernel density estimation object from a callable object.
  R must be a range of numeric types.  C must be a kernel function,
  delegate, or class or struct with overloaded opCall.  The kernel
  function is assumed to be symmetric about zero, to take its maximum
  value at zero and to be unimodal.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<a href="../../dstats/kerneldensity/KernelDensity1D.html"><span class="typ">KernelDensity1D</span></a> <span class="pln">fromCallable</span>(C, R)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">C</span> <span class="pln">kernel</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">range</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">edgeBuffer</span> <span class="pun">=</span> <span class="pun">(</span><span class="typ">double</span><span class="pun">)<wbr/>.</span><span class="pln">nan</span>
-<br/>
-<span class="pun">)</span>
-<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="pln">R </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">kernel</span><span class="pun">(</span><span class="lit">2.00000</span><span class="pun">)) : </span><span class="typ">double</span><span class="pun">)</span><span class="pun">);</span></div></code></div><section><p>edgeBuffer determines how much space below and above the smallest and
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<a href="../../dstats/kerneldensity/KernelDensity1D.html"><span class="typ">KernelDensity1D</span></a> <span class="pln">fromCallable</span>(C, R)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="pln">C</span> <span class="pln">kernel</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">range</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">edgeBuffer</span> <span class="pun">=</span> <span class="pun">(</span><span class="typ">double</span><span class="pun">)<wbr/>.</span><span class="pln">nan</span>
+			<br/>
+			<span class="pun">)</span>
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="pln">R </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">kernel</span><span class="pun">(</span><span class="lit">2.00000</span><span class="pun">)) : </span><span class="typ">double</span><span class="pun">)</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			<section><p>edgeBuffer determines how much space below and above the smallest and
  largest observed value will be allocated when doing the binning.
  Values less than reduce!min(range) - edgeBuffer or greater than
  reduce!max(range) + edgeBuffer will be assigned a density of zero.
@@ -35,11 +127,36 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
 </p>
 </section>
 
-<section><h2>Examples</h2>
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">randNums </span><span class="pun">= </span><span class="pln">randArray</span><span class="pun">!</span><span class="pln">rNorm</span><span class="pun">(</span><span class="lit">1_000</span><span class="pun">, </span><span class="lit">0</span><span class="pun">, </span><span class="lit">1</span><span class="pun">);
+			<section><h2>Examples</h2>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">randNums </span><span class="pun">= </span><span class="pln">randArray</span><span class="pun">!</span><span class="pln">rNormal</span><span class="pun">(</span><span class="lit">1_000</span><span class="pun">, </span><span class="lit">0</span><span class="pun">, </span><span class="lit">1</span><span class="pun">);
 </span><span class="kwd">auto <a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"></span><span class="pln">kernel</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">parametrize</span><span class="pun">!</span><span class="pln">normalPDF</span><span class="pun">(</span><span class="lit">0</span><span class="pun">, </span><span class="lit">0.01</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">density </span><span class="pun">= <a href="../../dstats/kerneldensity/KernelDensity1D.html"></span><span class="typ">KernelDensity1D</span></a><span class="pun">(<a href="../../dstats/kerneldensity/KernelDensity1D.fromCallable.html#kernel"></span><span class="pln">kernel</span></a><span class="pun">, </span><span class="pln">randNums</span><span class="pun">);
 </span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">normalPDF</span><span class="pun">(</span><span class="lit">1</span><span class="pun">, </span><span class="lit">0</span><span class="pun">, </span><span class="lit">1</span><span class="pun">), </span><span class="str">"  "</span><span class="pun">, </span><span class="pln">density</span><span class="pun">(</span><span class="lit">1</span><span class="pun">))<wbr/>.  </span><span class="com">// Should be about the same.</span></code></pre>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

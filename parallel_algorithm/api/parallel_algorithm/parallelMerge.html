@@ -1,31 +1,61 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Function parallelMerge</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li><div class="module selected"><a href="../parallel_algorithm.html">parallel_algorithm</a></div></li></ul></nav><div id="main-contents"><h1>Function parallelMerge</h1><p>Merge ranges <code class="lang-d"><a href="../parallel_algorithm/parallelMerge.html#from1"><span class="pln">from1</span></a></code> and <code class="lang-d"><a href="../parallel_algorithm/parallelMerge.html#from2"><span class="pln">from2</span></a></code>, which are assumed sorted according
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function parallelMerge</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../parallel_algorithm.html">parallel_algorithm</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function parallelMerge</h1><p>Merge ranges <code class="lang-d"><a href="../parallel_algorithm/parallelMerge.html#from1"><span class="pln">from1</span></a></code> and <code class="lang-d"><a href="../parallel_algorithm/parallelMerge.html#from2"><span class="pln">from2</span></a></code>, which are assumed sorted according
 to <code class="lang-d"><span class="pln">pred</span></code>, into <code class="lang-d"><a href="../parallel_algorithm/parallelMerge.html#buf"><span class="pln">buf</span></a></code> using a parallel divide-and-conquer algorithm.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<span class="typ">void</span> <span class="pln">parallelMerge</span>(alias pred, R1, R2, R3)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">R1</span> <span class="pln">from1</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">R2</span> <span class="pln">from2</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">R3</span> <span class="pln">buf</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">minParallel</span> <span class="pun">=</span> <span class="lit">4096</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
-<br/>
-<span class="pun">)</span>
-<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">finiteRandom</span><span class="pun">, </span><span class="typ">TypeTuple</span><span class="pun">!(</span><span class="pln">R1</span><span class="pun">, </span><span class="pln">R2</span><span class="pun">, </span><span class="pln">R3</span><span class="pun">)) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2</span><span class="pun">) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R3</span><span class="pun">) &amp;&amp; </span><span class="pln">hasAssignableElements</span><span class="pun">!</span><span class="pln">R3</span><span class="pun">);</span></div></code></div><section></section>
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">void</span> <span class="pln">parallelMerge</span>(alias pred, R1, R2, R3)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">R1</span> <span class="pln">from1</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">R2</span> <span class="pln">from2</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">R3</span> <span class="pln">buf</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">minParallel</span> <span class="pun">=</span> <span class="lit">4096</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
+			<br/>
+			<span class="pun">)</span>
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="pln">allSatisfy</span><span class="pun">!(</span><span class="pln">finiteRandom</span><span class="pun">, </span><span class="typ">TypeTuple</span><span class="pun">!(</span><span class="pln">R1</span><span class="pun">, </span><span class="pln">R2</span><span class="pun">, </span><span class="pln">R3</span><span class="pun">)) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2</span><span class="pun">) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R2 </span><span class="pun">== </span><span class="typ">ElementType</span><span class="pun">!</span><span class="pln">R3</span><span class="pun">) &amp;&amp; </span><span class="pln">hasAssignableElements</span><span class="pun">!</span><span class="pln">R3</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
 
-<section><h2>Parameters</h2>
+			<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="from1">from1</td><td> The first of the two sorted ranges to be merged.  This must be a
 random access range with length.
@@ -47,4 +77,29 @@ default task pool returned by parallelism, taskPool will be used.</td></tr>
 </table>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

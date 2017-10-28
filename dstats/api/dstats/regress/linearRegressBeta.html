@@ -1,27 +1,119 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Function linearRegressBeta</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module selected"><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function linearRegressBeta</h1><p>Perform a linear regression and return just the beta values.  The advantages
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function linearRegressBeta</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function linearRegressBeta</h1><p>Perform a linear regression and return just the beta values.  The advantages
 to just returning the beta values are that it's faster and that each range
 needs to be iterated over only once, and thus can be just an input range.
 The beta values are returned such that the smallest index corresponds to
 the leftmost element of X.  X can be either a tuple or a range of input
 ranges.  Y must be an input range.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<span class="typ">double</span><span class="pun">[]</span> <span class="pln">linearRegressBeta</span>(U, T...)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">Y</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">XIn</span>
-<br/>
-<span class="pun">)</span>
-<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span></div></code></div><section><p>If, after all X variables are passed in, a numeric type is passed as the last
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">double</span><span class="pun">[]</span> <span class="pln">linearRegressBeta</span>(U, T...)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">Y</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">XIn</span>
+			<br/>
+			<span class="pun">)</span>
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			<section><p>If, after all X variables are passed in, a numeric type is passed as the last
 parameter, this is treated as a ridge parameter and ridge regression is
 performed.  Ridge regression is a form of regression that penalizes the L2 norm
 of the beta vector and therefore results in more parsimonious models.
@@ -35,7 +127,7 @@ zero, then ordinary least squares regression is performed.
 </p>
 </section>
 
-<section><h2>Notes</h2>
+			<section><h2>Notes</h2>
 <p>The X ranges are traversed in lockstep, but the traversal is stopped
 at the end of the shortest one.  Therefore, using infinite ranges is safe.
 For example, using repeat(1) to get an intercept term works.
@@ -65,4 +157,29 @@ Fourth Edition. Springer, New York. ISBN 0-387-95457-0
     </span><span class="pln">nCoffees</span><span class="pun">, </span><span class="pln">musicVolume</span><span class="pun">, </span><span class="pln">map</span><span class="pun">!</span><span class="str">"a * a"</span><span class="pun">(</span><span class="pln">musicVolume</span><span class="pun">), </span><span class="lit">2.5</span><span class="pun">);</span></code></pre>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

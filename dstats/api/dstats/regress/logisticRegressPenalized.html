@@ -1,30 +1,122 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Function logisticRegressPenalized</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module selected"><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Function logisticRegressPenalized</h1><p>Performs lasso (L1) and/or ridge (L2) penalized logistic regression.  Due to the
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function logisticRegressPenalized</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function logisticRegressPenalized</h1><p>Performs lasso (L1) and/or ridge (L2) penalized logistic regression.  Due to the
 way the data is standardized, no intercept term should be included in x
 (unlike logisticRegress and logisticRegressBeta).  The intercept coefficient is
 implicitly included and returned in the first element of the returned array.
 Usage is otherwise identical.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<span class="typ">double</span><span class="pun">[]</span> <span class="pln">logisticRegressPenalized</span>(Y, X...)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">Y</span> <span class="pln">yIn</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">X</span> <span class="pln">xIn</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">lasso</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">ridge</span>
-<br/>
-<span class="pun">)</span><span class="pun">;</span></div></code></div><section></section>
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">double</span><span class="pun">[]</span> <span class="pln">logisticRegressPenalized</span>(Y, X...)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">Y</span> <span class="pln">yIn</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">X</span> <span class="pln">xIn</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">lasso</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">ridge</span>
+			<br/>
+			<span class="pun">)</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
 
-<section><h2>Note</h2>
+			<section><h2>Note</h2>
 <p>Setting lasso equal to zero is equivalent to performing ridge regression.
        This can also be done with logisticRegressBeta.  However, the
        logisticRegressBeta algorithm is optimized for memory efficiency and
@@ -59,4 +151,29 @@ Issue 2, 28 August 2002, Pages 253-262
 </p>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

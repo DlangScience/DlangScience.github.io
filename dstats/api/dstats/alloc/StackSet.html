@@ -1,34 +1,289 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct StackSet</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module selected"><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct StackSet</h1><p>A hash set that allocates its memory on RegionAllocator.  Good for building a
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct StackSet</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct StackSet</h1><p>A hash set that allocates its memory on RegionAllocator.  Good for building a
  temporary set that will not escape the current scope.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">StackSet</span>(K)
-<span class="pun">;</span></div></code></div><section></section>
-<section><h2>Constructors</h2><h4>Constructors</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackSet.this.html" class="["public"]"><code>this</code></a></td><td>Due to the nature of RegionAllocator, you must specify on object creation
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">StackSet</span>(K)
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.this.html" class="[&quot;public&quot;]">
+								<code>this</code>
+							</a>
+						</td>
+						<td>Due to the nature of RegionAllocator, you must specify on object creation
  the approximate number of elements your set will have.  Too large a
  number will waste space and incur poor cache performance.  Too low a
  number will make this struct perform like a linked list.  Generally,
  if you're building a set from some other range, some fraction of the
  size of that range is a good guess.
-</td></tr></table></section><section><h2>Fields</h2><h4>Fields</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackSet.alloc.html" class="["public"]"><code>alloc</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.freeList.html" class="["public"]"><code>freeList</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">*</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.rKeys.html" class="["public"]"><code>rKeys</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!K<span class="pun">[]</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.rNext.html" class="["public"]"><code>rNext</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">[]</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet._length.html" class="["public"]"><code>_length</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr></table></section><section><h2>Properties</h2><h4>Properties</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackSet.length.html" class="["public", "property"]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackSet.allocNode.html" class="["public"]"><code>allocNode</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.elems.html" class="["public"]"><code>elems</code></a></td><td>Returns a forward range of the elements of this struct.  The range's
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.alloc.html" class="[&quot;public&quot;]"><code>alloc</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.freeList.html" class="[&quot;public&quot;]"><code>freeList</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.rKeys.html" class="[&quot;public&quot;]"><code>rKeys</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!K<span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.rNext.html" class="[&quot;public&quot;]"><code>rNext</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackTreeAA.Node.html"><span class="typ">StackTreeAA<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet._length.html" class="[&quot;public&quot;]"><code>_length</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.length.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.allocNode.html" class="[&quot;public&quot;]">
+								<code>allocNode</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.elems.html" class="[&quot;public&quot;]">
+								<code>elems</code>
+							</a>
+						</td>
+						<td>Returns a forward range of the elements of this struct.  The range's
  lifetime must not exceed the lifetime of this object.
-</td></tr><tr><td><a href="../../dstats/alloc/StackSet.getHash.html" class="["public"]"><code>getHash</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.insert.html" class="["public"]"><code>insert</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.newNode.html" class="["public"]"><code>newNode</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.opIn_r.html" class="["public"]"><code>opIn_r</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.pushFreeList.html" class="["public"]"><code>pushFreeList</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.remove.html" class="["public"]"><code>remove</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.usedSentinel.html" class="["public"]"><code>usedSentinel</code></a></td><td></td></tr></table></section><section><h2>Inner structs</h2><h4>Inner structs</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackSet.Node1.html" class="["public"]"><code>Node1</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackSet.Node2.html" class="["public"]"><code>Node2</code></a></td><td></td></tr></table></section>
-<section><h2>Examples</h2>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.getHash.html" class="[&quot;public&quot;]">
+								<code>getHash</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.insert.html" class="[&quot;public&quot;]">
+								<code>insert</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.newNode.html" class="[&quot;public&quot;]">
+								<code>newNode</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.opIn_r.html" class="[&quot;public&quot;]">
+								<code>opIn_r</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.pushFreeList.html" class="[&quot;public&quot;]">
+								<code>pushFreeList</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.remove.html" class="[&quot;public&quot;]">
+								<code>remove</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.usedSentinel.html" class="[&quot;public&quot;]">
+								<code>usedSentinel</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Inner structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.Node1.html" class="[&quot;public&quot;]">
+								<code>Node1</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackSet.Node2.html" class="[&quot;public&quot;]">
+								<code>Node2</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Examples</h2>
 <pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../dstats/alloc/StackSet.alloc.html"></span><span class="pln">alloc</span></a><span class="pln"> </span><span class="pun">= <a href="../../dstats/alloc/newRegionAllocator.html"></span><span class="pln">newRegionAllocator</span></a><span class="pun">();
 </span><span class="kwd">auto </span><span class="pln">ss </span><span class="pun">= </span><span class="typ">StackSet</span><span class="pun">!(</span><span class="typ">uint</span><span class="pun">)(</span><span class="lit">5</span><span class="pun">, <a href="../../dstats/alloc/StackSet.alloc.html"></span><span class="pln">alloc</span></a><span class="pun">);
 </span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0</span><span class="pun">..</span><span class="lit">5</span><span class="pun">) {
@@ -37,4 +292,29 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="lit">3 </span><span class="kwd">in </span><span class="pln">ss</span><span class="pun">);</span></code></pre>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

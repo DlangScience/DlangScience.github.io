@@ -1,30 +1,202 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Class Loess1D</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module selected"><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Class Loess1D</h1><p>This class is returned from the loess1D function and holds the state of a
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class Loess1D</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class Loess1D</h1><p>This class is returned from the loess1D function and holds the state of a
 loess regression with one predictor variable.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">class</span> <span class="typ">Loess1D</span>
-<span class="pun">;</span></div></code></div><section><h2>Properties</h2><h4>Properties</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/regress/Loess1D.degree.html" class="["public", "property"]"><code>degree</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">int</span></code></td><td>The polynomial degree for the local regression.
-</td></tr><tr><td><a href="../../dstats/regress/Loess1D.x.html" class="["public", "property"]"><code>x</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">[]</span></code></td><td>The x values provided on object creation.
-</td></tr><tr><td><a href="../../dstats/regress/Loess1D.y.html" class="["public", "property"]"><code>y</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">[]</span></code></td><td>The y values provided on object creation.
-</td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/regress/Loess1D.computeRobustWeights.html" class="["public"]"><code>computeRobustWeights</code></a></td><td>Compute the weights for robust loess, for all robustness levels &lt;= the
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">Loess1D</span>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/regress/Loess1D.degree.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>degree</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">int</span></code></td><td>The polynomial degree for the local regression.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/regress/Loess1D.x.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>x</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">[]</span></code></td><td>The x values provided on object creation.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/regress/Loess1D.y.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>y</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">[]</span></code></td><td>The y values provided on object creation.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/regress/Loess1D.computeRobustWeights.html" class="[&quot;public&quot;]">
+								<code>computeRobustWeights</code>
+							</a>
+						</td>
+						<td>Compute the weights for robust loess, for all robustness levels &lt;= the
     robustness parameter.  This computation is embarrassingly parallel, so if a
     TaskPool is provided it will be parallelized.
-</td></tr><tr><td><a href="../../dstats/regress/Loess1D.predict.html" class="["public"]"><code>predict</code></a></td><td>Predict the value of y when x == point, using robustness iterations
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/regress/Loess1D.predict.html" class="[&quot;public&quot;]">
+								<code>predict</code>
+							</a>
+						</td>
+						<td>Predict the value of y when x == point, using robustness iterations
     of the biweight procedure outlined in the reference to make the
     estimates more robust.
-</td></tr><tr><td><a href="../../dstats/regress/Loess1D.predictions.html" class="["public"]"><code>predictions</code></a></td><td>Obtain smoothed predictions of y at the values of x provided on creation
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/regress/Loess1D.predictions.html" class="[&quot;public&quot;]">
+								<code>predictions</code>
+							</a>
+						</td>
+						<td>Obtain smoothed predictions of y at the values of x provided on creation
     of this object, for the given level of robustness.  Evaluating
     these is computationally expensive and may be parallelized by
     providing a TaskPool object.
-</td></tr></table></section>
-
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+				</table>
+			</section>
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

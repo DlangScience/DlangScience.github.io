@@ -1,26 +1,201 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct PearsonCor</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module selected"><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct PearsonCor</h1><p>Allows computation of mean, stdev, variance, covariance, Pearson correlation online.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct PearsonCor</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct PearsonCor</h1><p>Allows computation of mean, stdev, variance, covariance, Pearson correlation online.
  Getters for stdev, var, cov, cor cost floating point division ops.  Getters
  for means cost a single branch to check for N == 0.  This struct uses O(1)
  space.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">PearsonCor</span>
-<span class="pun">;</span></div></code></div><section><p>PearsonCor.cor is alias this'd, so if this struct is used as a float, it will
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">PearsonCor</span>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>PearsonCor.cor is alias this'd, so if this struct is used as a float, it will
  be converted to a simple correlation coefficient automatically.
 </p>
 </section>
-<section><h2>Properties</h2><h4>Properties</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/cor/PearsonCor.cor.html" class="["public", "property"]"><code>cor</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.cov.html" class="["public", "property"]"><code>cov</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.mean1.html" class="["public", "property"]"><code>mean1</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.mean2.html" class="["public", "property"]"><code>mean2</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.N.html" class="["public", "property"]"><code>N</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.stdev1.html" class="["public", "property"]"><code>stdev1</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.stdev2.html" class="["public", "property"]"><code>stdev2</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.var1.html" class="["public", "property"]"><code>var1</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.var2.html" class="["public", "property"]"><code>var2</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/cor/PearsonCor.put.html" class="["public"]"><code>put</code></a></td><td></td></tr><tr><td><a href="../../dstats/cor/PearsonCor.put.html" class="["public"]"><code>put</code></a></td><td>Combine two PearsonCor's.
-</td></tr></table></section>
-<section><h2>Bugs</h2>
+
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.cor.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>cor</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.cov.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>cov</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.mean1.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>mean1</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.mean2.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>mean2</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.N.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>N</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.stdev1.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>stdev1</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.stdev2.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>stdev2</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.var1.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>var1</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.var2.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>var2</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.put.html" class="[&quot;public&quot;]">
+								<code>put</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/cor/PearsonCor.put.html" class="[&quot;public&quot;]">
+								<code>put</code>
+							</a>
+						</td>
+						<td>Combine two PearsonCor's.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Bugs</h2>
 <p>Alias this disabled due to compiler bugs.
 </p>
 </section>
@@ -33,4 +208,29 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
 </p>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

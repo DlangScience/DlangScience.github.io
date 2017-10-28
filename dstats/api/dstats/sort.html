@@ -1,11 +1,96 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module dstats.sort</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../dstats/base.html">base</a></div></li><li><div class="module "><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../dstats/random.html">random</a></div></li><li><div class="module "><a href="../dstats/regress.html">regress</a></div></li><li><div class="module selected"><a href="../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.sort</h1><p>A comprehensive sorting library for statistical functions.  Each function
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.sort</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.sort</h1><p>A comprehensive sorting library for statistical functions.  Each function
 takes N arguments, which are arrays or array-like objects, sorts the first
 and sorts the rest in lockstep.  For merge and insertion sort, if the last
 argument is a ulong*, increments the dereference of this ulong* by the bubble
@@ -16,7 +101,7 @@ must have the same length.
 </p>
 </section>
 
-<section><section><h2>Notes</h2>
+			<section><section><h2>Notes</h2>
 <p>Comparison functions must be written such that compFun(x, x) == false.
 For example, "a &lt; b" is good, "a &lt;= b" is not.
 </p>
@@ -57,55 +142,386 @@ performance gains.  However, it comes at a price in terms of generality:
 <p>David Simcha
 </p>
 </section>
-</section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="heapSort" class="["public"]" href="../dstats/sort/heapSort.html">heapSort</a><span class="decoration">(data)</span></code></td><td>Heap sort.  Unstable, O(N log N) time average and worst case, O(1) space,
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="heapSort" class="[&quot;public&quot;]" href="../dstats/sort/heapSort.html">heapSort</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td>Heap sort.  Unstable, O(N log N) time average and worst case, O(1) space,
  large constant term in time complexity.
-</td></tr><tr><td><code><a id="heapSortImpl" class="["public"]" href="../dstats/sort/heapSortImpl.html">heapSortImpl</a><span class="decoration">(input)</span></code></td><td></td></tr><tr><td><code><a id="insertionSort" class="["public"]" href="../dstats/sort/insertionSort.html">insertionSort</a><span class="decoration">(data)</span></code></td><td>Insertion sort.  O(N<sup>2</sup>) time worst, average case, O(1) space, VERY
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="heapSortImpl" class="[&quot;public&quot;]" href="../dstats/sort/heapSortImpl.html">heapSortImpl</a><span class="decoration">(input)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="insertionSort" class="[&quot;public&quot;]" href="../dstats/sort/insertionSort.html">insertionSort</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td>Insertion sort.  O(N<sup>2</sup>) time worst, average case, O(1) space, VERY
  small constant, which is why it's useful for sorting small subarrays in
  divide and conquer algorithms.  If last argument is a ulong*, increments
  the dereference of this argument by the bubble sort distance between the
  input array and the sorted version of the input.
-</td></tr><tr><td><code><a id="insertionSortImpl" class="["public"]" href="../dstats/sort/insertionSortImpl.html">insertionSortImpl</a><span class="decoration">(data)</span></code></td><td></td></tr><tr><td><code><a id="intIsNaN" class="["public"]" href="../dstats/sort/intIsNaN.html">intIsNaN</a><span class="decoration">(i)</span></code></td><td></td></tr><tr><td><code><a id="makeMultiHeap" class="["public"]" href="../dstats/sort/makeMultiHeap.html">makeMultiHeap</a><span class="decoration">(input)</span></code></td><td></td></tr><tr><td><code><a id="medianOf3" class="["public"]" href="../dstats/sort/medianOf3.html">medianOf3</a><span class="decoration">(data)</span></code></td><td></td></tr><tr><td><code><a id="merge" class="["public"]" href="../dstats/sort/merge.html">merge</a><span class="decoration">(data)</span></code></td><td></td></tr><tr><td><code><a id="mergeInPlace" class="["public"]" href="../dstats/sort/mergeInPlace.html">mergeInPlace</a><span class="decoration">(data, middle)</span></code></td><td></td></tr><tr><td><code><a id="mergeSort" class="["public"]" href="../dstats/sort/mergeSort.html">mergeSort</a><span class="decoration">(data)</span></code></td><td>Merge sort.  O(N log N) time, O(N) space, small constant.  Stable sort.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="insertionSortImpl" class="[&quot;public&quot;]" href="../dstats/sort/insertionSortImpl.html">insertionSortImpl</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="intIsNaN" class="[&quot;public&quot;]" href="../dstats/sort/intIsNaN.html">intIsNaN</a><span class="decoration">(i)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="makeMultiHeap" class="[&quot;public&quot;]" href="../dstats/sort/makeMultiHeap.html">makeMultiHeap</a><span class="decoration">(input)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="medianOf3" class="[&quot;public&quot;]" href="../dstats/sort/medianOf3.html">medianOf3</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="merge" class="[&quot;public&quot;]" href="../dstats/sort/merge.html">merge</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mergeInPlace" class="[&quot;public&quot;]" href="../dstats/sort/mergeInPlace.html">mergeInPlace</a><span class="decoration">(data, middle)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mergeSort" class="[&quot;public&quot;]" href="../dstats/sort/mergeSort.html">mergeSort</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td>Merge sort.  O(N log N) time, O(N) space, small constant.  Stable sort.
  If last argument is a ulong* instead of an array-like type,
  the dereference of the ulong* will be incremented by the bubble sort
  distance between the input array and the sorted version.  This is useful
  in some statistics functions such as Kendall's tau.
-</td></tr><tr><td><code><a id="mergeSortImpl" class="["public"]" href="../dstats/sort/mergeSortImpl.html">mergeSortImpl</a><span class="decoration">(dataIn)</span></code></td><td></td></tr><tr><td><code><a id="mergeSortInPlace" class="["public"]" href="../dstats/sort/mergeSortInPlace.html">mergeSortInPlace</a><span class="decoration">(data)</span></code></td><td>In-place merge sort, based on C++ STL's stable_sort().  O(N log<sup>2</sup> N)
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mergeSortImpl" class="[&quot;public&quot;]" href="../dstats/sort/mergeSortImpl.html">mergeSortImpl</a><span class="decoration">(dataIn)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mergeSortInPlace" class="[&quot;public&quot;]" href="../dstats/sort/mergeSortInPlace.html">mergeSortInPlace</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td>In-place merge sort, based on C++ STL's stable_sort().  O(N log<sup>2</sup> N)
  time complexity, O(1) space complexity, stable.  Much slower than plain
  old mergeSort(), so only use it if you really need the O(1) space.
-</td></tr><tr><td><code><a id="mergeSortInPlaceImpl" class="["public"]" href="../dstats/sort/mergeSortInPlaceImpl.html">mergeSortInPlaceImpl</a><span class="decoration">(data)</span></code></td><td></td></tr><tr><td><code><a id="mergeSortTemp" class="["public"]" href="../dstats/sort/mergeSortTemp.html">mergeSortTemp</a><span class="decoration">(data)</span></code></td><td>Merge sort, allowing caller to provide a temp variable.  This allows
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mergeSortInPlaceImpl" class="[&quot;public&quot;]" href="../dstats/sort/mergeSortInPlaceImpl.html">mergeSortInPlaceImpl</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mergeSortTemp" class="[&quot;public&quot;]" href="../dstats/sort/mergeSortTemp.html">mergeSortTemp</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td>Merge sort, allowing caller to provide a temp variable.  This allows
  recycling instead of repeated allocations.  If D is data, T is temp,
  and U is a ulong* for calculating bubble sort distance, this can be called
  as mergeSortTemp(D, D, D, T, T, T, U) or mergeSortTemp(D, D, D, T, T, T)
  where each D has a T of corresponding type.
-</td></tr><tr><td><code><a id="multiSiftDown" class="["public"]" href="../dstats/sort/multiSiftDown.html">multiSiftDown</a><span class="decoration">(input, root, end)</span></code></td><td></td></tr><tr><td><code><a id="partitionK" class="["public"]" href="../dstats/sort/partitionK.html">partitionK</a><span class="decoration">(data, k)</span></code></td><td>Partitions the input data according to compFun, such that position k contains
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="multiSiftDown" class="[&quot;public&quot;]" href="../dstats/sort/multiSiftDown.html">multiSiftDown</a><span class="decoration">(input, root, end)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="partitionK" class="[&quot;public&quot;]" href="../dstats/sort/partitionK.html">partitionK</a><span class="decoration">(data, k)</span>
+							</code>
+						</td>
+						<td>Partitions the input data according to compFun, such that position k contains
  the kth largest/smallest element according to compFun.  For all elements e
  with indices &lt; k, !compFun(data[k], e) is guaranteed to be true.  For all
  elements e with indices &gt; k, !compFun(e, data[k]) is guaranteed to be true.
  For example, if compFun is "a &lt; b", all elements with indices &lt; k will be
  &lt;= data[k], and all elements with indices larger than k will be &gt;= k.
  Reorders any additional input arrays in lockstep.
-</td></tr><tr><td><code><a id="partitionKImpl" class="["public"]" href="../dstats/sort/partitionKImpl.html">partitionKImpl</a><span class="decoration">(data, k)</span></code></td><td></td></tr><tr><td><code><a id="postProcess" class="["public"]" href="../dstats/sort/postProcess.html">postProcess</a><span class="decoration">(arr)</span></code></td><td></td></tr><tr><td><code><a id="postProcess" class="["public"]" href="../dstats/sort/postProcess.html">postProcess</a><span class="decoration">(arr)</span></code></td><td></td></tr><tr><td><code><a id="prepareForSorting" class="["public"]" href="../dstats/sort/prepareForSorting.html">prepareForSorting</a><span class="decoration">(arr)</span></code></td><td></td></tr><tr><td><code><a id="qsort" class="["public"]" href="../dstats/sort/qsort.html">qsort</a><span class="decoration">(data)</span></code></td><td>Quick sort.  Unstable, O(N log N) time average, worst
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="partitionKImpl" class="[&quot;public&quot;]" href="../dstats/sort/partitionKImpl.html">partitionKImpl</a><span class="decoration">(data, k)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="postProcess" class="[&quot;public&quot;]" href="../dstats/sort/postProcess.html">postProcess</a><span class="decoration">(arr)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="postProcess" class="[&quot;public&quot;]" href="../dstats/sort/postProcess.html">postProcess</a><span class="decoration">(arr)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="prepareForSorting" class="[&quot;public&quot;]" href="../dstats/sort/prepareForSorting.html">prepareForSorting</a><span class="decoration">(arr)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="qsort" class="[&quot;public&quot;]" href="../dstats/sort/qsort.html">qsort</a><span class="decoration">(data)</span>
+							</code>
+						</td>
+						<td>Quick sort.  Unstable, O(N log N) time average, worst
  case, O(log N) space, small constant term in time complexity.
-</td></tr><tr><td><code><a id="qsortImpl" class="["public"]" href="../dstats/sort/qsortImpl.html">qsortImpl</a><span class="decoration">(data, TTL)</span></code></td><td></td></tr><tr><td><code><a id="quickSelect" class="["public"]" href="../dstats/sort/quickSelect.html">quickSelect</a><span class="decoration">(data, k)</span></code></td><td>Returns the kth largest/smallest element (depending on compFun, 0-indexed)
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="qsortImpl" class="[&quot;public&quot;]" href="../dstats/sort/qsortImpl.html">qsortImpl</a><span class="decoration">(data, TTL)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="quickSelect" class="[&quot;public&quot;]" href="../dstats/sort/quickSelect.html">quickSelect</a><span class="decoration">(data, k)</span>
+							</code>
+						</td>
+						<td>Returns the kth largest/smallest element (depending on compFun, 0-indexed)
  in the input array in O(N) time.  Allocates memory, does not modify input
  array.
-</td></tr><tr><td><code><a id="removeWhitespace" class="["public"]" href="../dstats/sort/removeWhitespace.html">removeWhitespace</a><span class="decoration">(input)</span></code></td><td></td></tr><tr><td><code><a id="rotateLeft" class="["public"]" href="../dstats/sort/rotateLeft.html">rotateLeft</a><span class="decoration">(input)</span></code></td><td></td></tr><tr><td><code><a id="rotateRight" class="["public"]" href="../dstats/sort/rotateRight.html">rotateRight</a><span class="decoration">(input)</span></code></td><td></td></tr></table></section><section><h2>Classes</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="SortException" class="["public"]" href="../dstats/sort/SortException.html">SortException</a></code></td><td></td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="TopN" class="["public"]" href="../dstats/sort/TopN.html">TopN</a></code></td><td>Given a set of data points entered through the put function, this output range
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="removeWhitespace" class="[&quot;public&quot;]" href="../dstats/sort/removeWhitespace.html">removeWhitespace</a><span class="decoration">(input)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rotateLeft" class="[&quot;public&quot;]" href="../dstats/sort/rotateLeft.html">rotateLeft</a><span class="decoration">(input)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rotateRight" class="[&quot;public&quot;]" href="../dstats/sort/rotateRight.html">rotateRight</a><span class="decoration">(input)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="SortException" class="[&quot;public&quot;]" href="../dstats/sort/SortException.html">SortException</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="TopN" class="[&quot;public&quot;]" href="../dstats/sort/TopN.html">TopN</a>
+							</code>
+						</td>
+						<td>Given a set of data points entered through the put function, this output range
  maintains the invariant that the top N according to compFun will be
  contained in the data structure.  Uses a heap internally, O(log N) insertion
  time.  Good for finding the largest/smallest N elements of a very large
  dataset that cannot be sorted quickly in its entirety, and may not even fit
  in memory. If less than N datapoints have been entered, all are contained in
  the structure.
-</td></tr></table></section><section><h2>Templates</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="isSimpleComparison" class="["public"]" href="../dstats/sort/isSimpleComparison.html">isSimpleComparison</a></code></td><td></td></tr></table></section><section><h2>Manifest constants</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="DATA" class="["public"]" href="../dstats/sort/DATA.html"><code>DATA</code></a></td><td></td><td></td></tr><tr><td><a id="TEMP" class="["public"]" href="../dstats/sort/TEMP.html"><code>TEMP</code></a></td><td></td><td></td></tr></table></section><section><h2>Aliases</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="ArrayElemType" class="["public"]" href="../dstats/sort/ArrayElemType.html"><code>ArrayElemType</code></a></td><td><code class="prettyprint lang-d"><span class="pln">T</span></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Templates</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="isSimpleComparison" class="[&quot;public&quot;]" href="../dstats/sort/isSimpleComparison.html">isSimpleComparison</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="DATA" class="[&quot;public&quot;]" href="../dstats/sort/DATA.html">
+								<code>DATA</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="TEMP" class="[&quot;public&quot;]" href="../dstats/sort/TEMP.html">
+								<code>TEMP</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="ArrayElemType" class="[&quot;public&quot;]" href="../dstats/sort/ArrayElemType.html">
+								<code>ArrayElemType</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="pln">T</span></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

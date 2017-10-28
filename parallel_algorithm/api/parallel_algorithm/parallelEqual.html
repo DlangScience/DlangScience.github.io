@@ -1,24 +1,79 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Function parallelEqual</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li><div class="module selected"><a href="../parallel_algorithm.html">parallel_algorithm</a></div></li></ul></nav><div id="main-contents"><h1>Function parallelEqual</h1><p></p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<span class="typ">bool</span> <span class="pln">parallelEqual</span>(alias pred, R1, R2)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">R1</span> <span class="pln">range1</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">R2</span> <span class="pln">range2</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">workUnitSize</span> <span class="pun">=</span> <span class="lit">2000</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
-<br/>
-<span class="pun">)</span>
-<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">&amp;&amp; </span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">R2 </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">R2</span><span class="pun">);</span></div></code></div>
-
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function parallelEqual</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../parallel_algorithm.html">parallel_algorithm</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function parallelEqual</h1><p></p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">bool</span> <span class="pln">parallelEqual</span>(alias pred, R1, R2)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">R1</span> <span class="pln">range1</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">R2</span> <span class="pln">range2</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">size_t</span> <span class="pln">workUnitSize</span> <span class="pun">=</span> <span class="lit">2000</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">TaskPool</span> <span class="pln">pool</span> <span class="pun">=</span> <span class="kwd">null</span>
+			<br/>
+			<span class="pun">)</span>
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">&amp;&amp; </span><span class="pln">isRandomAccessRange</span><span class="pun">!</span><span class="pln">R2 </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">R1 </span><span class="pun">&amp;&amp; </span><span class="pln">hasLength</span><span class="pun">!</span><span class="pln">R2</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

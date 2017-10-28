@@ -1,15 +1,738 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module cblas</title>
-<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
-<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package selected"><a href="./cblas.html">cblas</a></div><ul class="tree-view"><li><div class="module "><a href="./cblas/cblas.html">cblas</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module cblas</h1><p>D BLAS header.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module cblas</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package selected">
+						<a href="./cblas.html">cblas</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./cblas/cblas.html">cblas</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module cblas</h1><p>D BLAS header.
 </p><section></section>
 
-<section></section><section><h2>Aliases</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="asum" class="["public"]" href="./cblas/asum.html"><code>asum</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="axpy" class="["public"]" href="./cblas/axpy.html"><code>axpy</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="camax" class="["public"]" href="./cblas/camax.html"><code>camax</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="cnrm2" class="["public"]" href="./cblas/cnrm2.html"><code>cnrm2</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="copy" class="["public"]" href="./cblas/copy.html"><code>copy</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="damax" class="["public"]" href="./cblas/damax.html"><code>damax</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="dot" class="["public"]" href="./cblas/dot.html"><code>dot</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="dotc" class="["public"]" href="./cblas/dotc.html"><code>dotc</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="dotc_sub" class="["public"]" href="./cblas/dotc_sub.html"><code>dotc_sub</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="dotu" class="["public"]" href="./cblas/dotu.html"><code>dotu</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="dotu_sub" class="["public"]" href="./cblas/dotu_sub.html"><code>dotu_sub</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="dscal" class="["public"]" href="./cblas/dscal.html"><code>dscal</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="dsdot" class="["public"]" href="./cblas/dsdot.html"><code>dsdot</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="gbmv" class="["public"]" href="./cblas/gbmv.html"><code>gbmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="gemm" class="["public"]" href="./cblas/gemm.html"><code>gemm</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="gemv" class="["public"]" href="./cblas/gemv.html"><code>gemv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="ger" class="["public"]" href="./cblas/ger.html"><code>ger</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="gerc" class="["public"]" href="./cblas/gerc.html"><code>gerc</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="geru" class="["public"]" href="./cblas/geru.html"><code>geru</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="hbmv" class="["public"]" href="./cblas/hbmv.html"><code>hbmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="hemm" class="["public"]" href="./cblas/hemm.html"><code>hemm</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="hemv" class="["public"]" href="./cblas/hemv.html"><code>hemv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="her" class="["public"]" href="./cblas/her.html"><code>her</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="her2" class="["public"]" href="./cblas/her2.html"><code>her2</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="her2k" class="["public"]" href="./cblas/her2k.html"><code>her2k</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="herk" class="["public"]" href="./cblas/herk.html"><code>herk</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="hpmv" class="["public"]" href="./cblas/hpmv.html"><code>hpmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="hpr" class="["public"]" href="./cblas/hpr.html"><code>hpr</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="hpr2" class="["public"]" href="./cblas/hpr2.html"><code>hpr2</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="nrm2" class="["public"]" href="./cblas/nrm2.html"><code>nrm2</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="rot" class="["public"]" href="./cblas/rot.html"><code>rot</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="rotg" class="["public"]" href="./cblas/rotg.html"><code>rotg</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="rotm" class="["public"]" href="./cblas/rotm.html"><code>rotm</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="rotmg" class="["public"]" href="./cblas/rotmg.html"><code>rotmg</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="samax" class="["public"]" href="./cblas/samax.html"><code>samax</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="sbmv" class="["public"]" href="./cblas/sbmv.html"><code>sbmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="scal" class="["public"]" href="./cblas/scal.html"><code>scal</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="sdsdot" class="["public"]" href="./cblas/sdsdot.html"><code>sdsdot</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="spmv" class="["public"]" href="./cblas/spmv.html"><code>spmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="spr" class="["public"]" href="./cblas/spr.html"><code>spr</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="spr2" class="["public"]" href="./cblas/spr2.html"><code>spr2</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="sscal" class="["public"]" href="./cblas/sscal.html"><code>sscal</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="swap" class="["public"]" href="./cblas/swap.html"><code>swap</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="symm" class="["public"]" href="./cblas/symm.html"><code>symm</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="symv" class="["public"]" href="./cblas/symv.html"><code>symv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="syr" class="["public"]" href="./cblas/syr.html"><code>syr</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="syr2" class="["public"]" href="./cblas/syr2.html"><code>syr2</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="syr2k" class="["public"]" href="./cblas/syr2k.html"><code>syr2k</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="syrk" class="["public"]" href="./cblas/syrk.html"><code>syrk</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="tbmv" class="["public"]" href="./cblas/tbmv.html"><code>tbmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="tbsv" class="["public"]" href="./cblas/tbsv.html"><code>tbsv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="tpmv" class="["public"]" href="./cblas/tpmv.html"><code>tpmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="tpsv" class="["public"]" href="./cblas/tpsv.html"><code>tpsv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="trmm" class="["public"]" href="./cblas/trmm.html"><code>trmm</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="trmv" class="["public"]" href="./cblas/trmv.html"><code>trmv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="trsm" class="["public"]" href="./cblas/trsm.html"><code>trsm</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="trsv" class="["public"]" href="./cblas/trsv.html"><code>trsv</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="xerbla" class="["public"]" href="./cblas/xerbla.html"><code>xerbla</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="zamax" class="["public"]" href="./cblas/zamax.html"><code>zamax</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr><tr><td><a id="znrm2" class="["public"]" href="./cblas/znrm2.html"><code>znrm2</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td><p>Ilya Yaroshenko
+			<section></section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="asum" class="[&quot;public&quot;]" href="./cblas/asum.html">
+								<code>asum</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="axpy" class="[&quot;public&quot;]" href="./cblas/axpy.html">
+								<code>axpy</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="camax" class="[&quot;public&quot;]" href="./cblas/camax.html">
+								<code>camax</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="cnrm2" class="[&quot;public&quot;]" href="./cblas/cnrm2.html">
+								<code>cnrm2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="copy" class="[&quot;public&quot;]" href="./cblas/copy.html">
+								<code>copy</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="damax" class="[&quot;public&quot;]" href="./cblas/damax.html">
+								<code>damax</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dot" class="[&quot;public&quot;]" href="./cblas/dot.html">
+								<code>dot</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dotc" class="[&quot;public&quot;]" href="./cblas/dotc.html">
+								<code>dotc</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dotc_sub" class="[&quot;public&quot;]" href="./cblas/dotc_sub.html">
+								<code>dotc_sub</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dotu" class="[&quot;public&quot;]" href="./cblas/dotu.html">
+								<code>dotu</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dotu_sub" class="[&quot;public&quot;]" href="./cblas/dotu_sub.html">
+								<code>dotu_sub</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dscal" class="[&quot;public&quot;]" href="./cblas/dscal.html">
+								<code>dscal</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dsdot" class="[&quot;public&quot;]" href="./cblas/dsdot.html">
+								<code>dsdot</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="gbmv" class="[&quot;public&quot;]" href="./cblas/gbmv.html">
+								<code>gbmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="gemm" class="[&quot;public&quot;]" href="./cblas/gemm.html">
+								<code>gemm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="gemv" class="[&quot;public&quot;]" href="./cblas/gemv.html">
+								<code>gemv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ger" class="[&quot;public&quot;]" href="./cblas/ger.html">
+								<code>ger</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="gerc" class="[&quot;public&quot;]" href="./cblas/gerc.html">
+								<code>gerc</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="geru" class="[&quot;public&quot;]" href="./cblas/geru.html">
+								<code>geru</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="hbmv" class="[&quot;public&quot;]" href="./cblas/hbmv.html">
+								<code>hbmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="hemm" class="[&quot;public&quot;]" href="./cblas/hemm.html">
+								<code>hemm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="hemv" class="[&quot;public&quot;]" href="./cblas/hemv.html">
+								<code>hemv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="her" class="[&quot;public&quot;]" href="./cblas/her.html">
+								<code>her</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="her2" class="[&quot;public&quot;]" href="./cblas/her2.html">
+								<code>her2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="her2k" class="[&quot;public&quot;]" href="./cblas/her2k.html">
+								<code>her2k</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="herk" class="[&quot;public&quot;]" href="./cblas/herk.html">
+								<code>herk</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="hpmv" class="[&quot;public&quot;]" href="./cblas/hpmv.html">
+								<code>hpmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="hpr" class="[&quot;public&quot;]" href="./cblas/hpr.html">
+								<code>hpr</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="hpr2" class="[&quot;public&quot;]" href="./cblas/hpr2.html">
+								<code>hpr2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nrm2" class="[&quot;public&quot;]" href="./cblas/nrm2.html">
+								<code>nrm2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rot" class="[&quot;public&quot;]" href="./cblas/rot.html">
+								<code>rot</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rotg" class="[&quot;public&quot;]" href="./cblas/rotg.html">
+								<code>rotg</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rotm" class="[&quot;public&quot;]" href="./cblas/rotm.html">
+								<code>rotm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rotmg" class="[&quot;public&quot;]" href="./cblas/rotmg.html">
+								<code>rotmg</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="samax" class="[&quot;public&quot;]" href="./cblas/samax.html">
+								<code>samax</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sbmv" class="[&quot;public&quot;]" href="./cblas/sbmv.html">
+								<code>sbmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="scal" class="[&quot;public&quot;]" href="./cblas/scal.html">
+								<code>scal</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sdsdot" class="[&quot;public&quot;]" href="./cblas/sdsdot.html">
+								<code>sdsdot</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spmv" class="[&quot;public&quot;]" href="./cblas/spmv.html">
+								<code>spmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spr" class="[&quot;public&quot;]" href="./cblas/spr.html">
+								<code>spr</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="spr2" class="[&quot;public&quot;]" href="./cblas/spr2.html">
+								<code>spr2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="sscal" class="[&quot;public&quot;]" href="./cblas/sscal.html">
+								<code>sscal</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="swap" class="[&quot;public&quot;]" href="./cblas/swap.html">
+								<code>swap</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="symm" class="[&quot;public&quot;]" href="./cblas/symm.html">
+								<code>symm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="symv" class="[&quot;public&quot;]" href="./cblas/symv.html">
+								<code>symv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="syr" class="[&quot;public&quot;]" href="./cblas/syr.html">
+								<code>syr</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="syr2" class="[&quot;public&quot;]" href="./cblas/syr2.html">
+								<code>syr2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="syr2k" class="[&quot;public&quot;]" href="./cblas/syr2k.html">
+								<code>syr2k</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="syrk" class="[&quot;public&quot;]" href="./cblas/syrk.html">
+								<code>syrk</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tbmv" class="[&quot;public&quot;]" href="./cblas/tbmv.html">
+								<code>tbmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tbsv" class="[&quot;public&quot;]" href="./cblas/tbsv.html">
+								<code>tbsv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tpmv" class="[&quot;public&quot;]" href="./cblas/tpmv.html">
+								<code>tpmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tpsv" class="[&quot;public&quot;]" href="./cblas/tpsv.html">
+								<code>tpsv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="trmm" class="[&quot;public&quot;]" href="./cblas/trmm.html">
+								<code>trmm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="trmv" class="[&quot;public&quot;]" href="./cblas/trmv.html">
+								<code>trmv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="trsm" class="[&quot;public&quot;]" href="./cblas/trsm.html">
+								<code>trsm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="trsv" class="[&quot;public&quot;]" href="./cblas/trsv.html">
+								<code>trsv</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="xerbla" class="[&quot;public&quot;]" href="./cblas/xerbla.html">
+								<code>xerbla</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="zamax" class="[&quot;public&quot;]" href="./cblas/zamax.html">
+								<code>zamax</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="znrm2" class="[&quot;public&quot;]" href="./cblas/znrm2.html">
+								<code>znrm2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p>Ilya Yaroshenko
 </p>
-</td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

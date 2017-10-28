@@ -1,19 +1,1411 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module cblas.cblas</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../cblas.html">cblas</a></div><ul class="tree-view"><li><div class="module selected"><a href="../cblas/cblas.html">cblas</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module cblas.cblas</h1><p>C BLAS header.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module cblas.cblas</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../cblas.html">cblas</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../cblas/cblas.html">cblas</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module cblas.cblas</h1><p>C BLAS header.
 </p><section></section>
 
-<section></section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="cblas_caxpy" class="["public"]" href="../cblas/cblas/cblas_caxpy.html">cblas_caxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ccopy" class="["public"]" href="../cblas/cblas/cblas_ccopy.html">cblas_ccopy</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cdotc" class="["public"]" href="../cblas/cblas/cblas_cdotc.html">cblas_cdotc</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cdotc_sub" class="["public"]" href="../cblas/cblas/cblas_cdotc_sub.html">cblas_cdotc_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cdotu" class="["public"]" href="../cblas/cblas/cblas_cdotu.html">cblas_cdotu</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cdotu_sub" class="["public"]" href="../cblas/cblas/cblas_cdotu_sub.html">cblas_cdotu_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cgbmv" class="["public"]" href="../cblas/cblas/cblas_cgbmv.html">cblas_cgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cgemm" class="["public"]" href="../cblas/cblas/cblas_cgemm.html">cblas_cgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cgemv" class="["public"]" href="../cblas/cblas/cblas_cgemv.html">cblas_cgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cgerc" class="["public"]" href="../cblas/cblas/cblas_cgerc.html">cblas_cgerc</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cgeru" class="["public"]" href="../cblas/cblas/cblas_cgeru.html">cblas_cgeru</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_chbmv" class="["public"]" href="../cblas/cblas/cblas_chbmv.html">cblas_chbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_chemm" class="["public"]" href="../cblas/cblas/cblas_chemm.html">cblas_chemm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_chemv" class="["public"]" href="../cblas/cblas/cblas_chemv.html">cblas_chemv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cher" class="["public"]" href="../cblas/cblas/cblas_cher.html">cblas_cher</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cher2" class="["public"]" href="../cblas/cblas/cblas_cher2.html">cblas_cher2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cher2k" class="["public"]" href="../cblas/cblas/cblas_cher2k.html">cblas_cher2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cherk" class="["public"]" href="../cblas/cblas/cblas_cherk.html">cblas_cherk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_chpmv" class="["public"]" href="../cblas/cblas/cblas_chpmv.html">cblas_chpmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_chpr" class="["public"]" href="../cblas/cblas/cblas_chpr.html">cblas_chpr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A)</span></code></td><td></td></tr><tr><td><code><a id="cblas_chpr2" class="["public"]" href="../cblas/cblas/cblas_chpr2.html">cblas_chpr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, Ap)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cscal" class="["public"]" href="../cblas/cblas/cblas_cscal.html">cblas_cscal</a><span class="decoration">(N, alpha, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_csscal" class="["public"]" href="../cblas/cblas/cblas_csscal.html">cblas_csscal</a><span class="decoration">(N, alpha, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_cswap" class="["public"]" href="../cblas/cblas/cblas_cswap.html">cblas_cswap</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_csymm" class="["public"]" href="../cblas/cblas/cblas_csymm.html">cblas_csymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_csyr2k" class="["public"]" href="../cblas/cblas/cblas_csyr2k.html">cblas_csyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_csyrk" class="["public"]" href="../cblas/cblas/cblas_csyrk.html">cblas_csyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctbmv" class="["public"]" href="../cblas/cblas/cblas_ctbmv.html">cblas_ctbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctbsv" class="["public"]" href="../cblas/cblas/cblas_ctbsv.html">cblas_ctbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctpmv" class="["public"]" href="../cblas/cblas/cblas_ctpmv.html">cblas_ctpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctpsv" class="["public"]" href="../cblas/cblas/cblas_ctpsv.html">cblas_ctpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctrmm" class="["public"]" href="../cblas/cblas/cblas_ctrmm.html">cblas_ctrmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctrmv" class="["public"]" href="../cblas/cblas/cblas_ctrmv.html">cblas_ctrmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctrsm" class="["public"]" href="../cblas/cblas/cblas_ctrsm.html">cblas_ctrsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ctrsv" class="["public"]" href="../cblas/cblas/cblas_ctrsv.html">cblas_ctrsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dasum" class="["public"]" href="../cblas/cblas/cblas_dasum.html">cblas_dasum</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_daxpy" class="["public"]" href="../cblas/cblas/cblas_daxpy.html">cblas_daxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dcopy" class="["public"]" href="../cblas/cblas/cblas_dcopy.html">cblas_dcopy</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ddot" class="["public"]" href="../cblas/cblas/cblas_ddot.html">cblas_ddot</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dgbmv" class="["public"]" href="../cblas/cblas/cblas_dgbmv.html">cblas_dgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dgemm" class="["public"]" href="../cblas/cblas/cblas_dgemm.html">cblas_dgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dgemv" class="["public"]" href="../cblas/cblas/cblas_dgemv.html">cblas_dgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dger" class="["public"]" href="../cblas/cblas/cblas_dger.html">cblas_dger</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dnrm2" class="["public"]" href="../cblas/cblas/cblas_dnrm2.html">cblas_dnrm2</a><span class="decoration">(N, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_drot" class="["public"]" href="../cblas/cblas/cblas_drot.html">cblas_drot</a><span class="decoration">(N, X, incX, Y, incY, c, s)</span></code></td><td></td></tr><tr><td><code><a id="cblas_drotg" class="["public"]" href="../cblas/cblas/cblas_drotg.html">cblas_drotg</a><span class="decoration">(a, b, c, s)</span></code></td><td></td></tr><tr><td><code><a id="cblas_drotm" class="["public"]" href="../cblas/cblas/cblas_drotm.html">cblas_drotm</a><span class="decoration">(N, X, incX, Y, incY, P)</span></code></td><td></td></tr><tr><td><code><a id="cblas_drotmg" class="["public"]" href="../cblas/cblas/cblas_drotmg.html">cblas_drotmg</a><span class="decoration">(d1, d2, b1, b2, P)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsbmv" class="["public"]" href="../cblas/cblas/cblas_dsbmv.html">cblas_dsbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dscal" class="["public"]" href="../cblas/cblas/cblas_dscal.html">cblas_dscal</a><span class="decoration">(N, alpha, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsdot" class="["public"]" href="../cblas/cblas/cblas_dsdot.html">cblas_dsdot</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dspmv" class="["public"]" href="../cblas/cblas/cblas_dspmv.html">cblas_dspmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dspr" class="["public"]" href="../cblas/cblas/cblas_dspr.html">cblas_dspr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Ap)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dspr2" class="["public"]" href="../cblas/cblas/cblas_dspr2.html">cblas_dspr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dswap" class="["public"]" href="../cblas/cblas/cblas_dswap.html">cblas_dswap</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsymm" class="["public"]" href="../cblas/cblas/cblas_dsymm.html">cblas_dsymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsymv" class="["public"]" href="../cblas/cblas/cblas_dsymv.html">cblas_dsymv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsyr" class="["public"]" href="../cblas/cblas/cblas_dsyr.html">cblas_dsyr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsyr2" class="["public"]" href="../cblas/cblas/cblas_dsyr2.html">cblas_dsyr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsyr2k" class="["public"]" href="../cblas/cblas/cblas_dsyr2k.html">cblas_dsyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dsyrk" class="["public"]" href="../cblas/cblas/cblas_dsyrk.html">cblas_dsyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtbmv" class="["public"]" href="../cblas/cblas/cblas_dtbmv.html">cblas_dtbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtbsv" class="["public"]" href="../cblas/cblas/cblas_dtbsv.html">cblas_dtbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtpmv" class="["public"]" href="../cblas/cblas/cblas_dtpmv.html">cblas_dtpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtpsv" class="["public"]" href="../cblas/cblas/cblas_dtpsv.html">cblas_dtpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtrmm" class="["public"]" href="../cblas/cblas/cblas_dtrmm.html">cblas_dtrmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtrmv" class="["public"]" href="../cblas/cblas/cblas_dtrmv.html">cblas_dtrmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtrsm" class="["public"]" href="../cblas/cblas/cblas_dtrsm.html">cblas_dtrsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dtrsv" class="["public"]" href="../cblas/cblas/cblas_dtrsv.html">cblas_dtrsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dzasum" class="["public"]" href="../cblas/cblas/cblas_dzasum.html">cblas_dzasum</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_dznrm2" class="["public"]" href="../cblas/cblas/cblas_dznrm2.html">cblas_dznrm2</a><span class="decoration">(N, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_icamax" class="["public"]" href="../cblas/cblas/cblas_icamax.html">cblas_icamax</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_idamax" class="["public"]" href="../cblas/cblas/cblas_idamax.html">cblas_idamax</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_isamax" class="["public"]" href="../cblas/cblas/cblas_isamax.html">cblas_isamax</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_izamax" class="["public"]" href="../cblas/cblas/cblas_izamax.html">cblas_izamax</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sasum" class="["public"]" href="../cblas/cblas/cblas_sasum.html">cblas_sasum</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_saxpy" class="["public"]" href="../cblas/cblas/cblas_saxpy.html">cblas_saxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_scasum" class="["public"]" href="../cblas/cblas/cblas_scasum.html">cblas_scasum</a><span class="decoration">(n, x, incx)</span></code></td><td></td></tr><tr><td><code><a id="cblas_scnrm2" class="["public"]" href="../cblas/cblas/cblas_scnrm2.html">cblas_scnrm2</a><span class="decoration">(N, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_scopy" class="["public"]" href="../cblas/cblas/cblas_scopy.html">cblas_scopy</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sdot" class="["public"]" href="../cblas/cblas/cblas_sdot.html">cblas_sdot</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sdsdot" class="["public"]" href="../cblas/cblas/cblas_sdsdot.html">cblas_sdsdot</a><span class="decoration">(n, alpha, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sgbmv" class="["public"]" href="../cblas/cblas/cblas_sgbmv.html">cblas_sgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sgemm" class="["public"]" href="../cblas/cblas/cblas_sgemm.html">cblas_sgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sgemv" class="["public"]" href="../cblas/cblas/cblas_sgemv.html">cblas_sgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sger" class="["public"]" href="../cblas/cblas/cblas_sger.html">cblas_sger</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_snrm2" class="["public"]" href="../cblas/cblas/cblas_snrm2.html">cblas_snrm2</a><span class="decoration">(N, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_srot" class="["public"]" href="../cblas/cblas/cblas_srot.html">cblas_srot</a><span class="decoration">(N, X, incX, Y, incY, c, s)</span></code></td><td></td></tr><tr><td><code><a id="cblas_srotg" class="["public"]" href="../cblas/cblas/cblas_srotg.html">cblas_srotg</a><span class="decoration">(a, b, c, s)</span></code></td><td></td></tr><tr><td><code><a id="cblas_srotm" class="["public"]" href="../cblas/cblas/cblas_srotm.html">cblas_srotm</a><span class="decoration">(N, X, incX, Y, incY, P)</span></code></td><td></td></tr><tr><td><code><a id="cblas_srotmg" class="["public"]" href="../cblas/cblas/cblas_srotmg.html">cblas_srotmg</a><span class="decoration">(d1, d2, b1, b2, P)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ssbmv" class="["public"]" href="../cblas/cblas/cblas_ssbmv.html">cblas_ssbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sscal" class="["public"]" href="../cblas/cblas/cblas_sscal.html">cblas_sscal</a><span class="decoration">(N, alpha, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sspmv" class="["public"]" href="../cblas/cblas/cblas_sspmv.html">cblas_sspmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sspr" class="["public"]" href="../cblas/cblas/cblas_sspr.html">cblas_sspr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Ap)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sspr2" class="["public"]" href="../cblas/cblas/cblas_sspr2.html">cblas_sspr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A)</span></code></td><td></td></tr><tr><td><code><a id="cblas_sswap" class="["public"]" href="../cblas/cblas/cblas_sswap.html">cblas_sswap</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ssymm" class="["public"]" href="../cblas/cblas/cblas_ssymm.html">cblas_ssymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ssymv" class="["public"]" href="../cblas/cblas/cblas_ssymv.html">cblas_ssymv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ssyr" class="["public"]" href="../cblas/cblas/cblas_ssyr.html">cblas_ssyr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ssyr2" class="["public"]" href="../cblas/cblas/cblas_ssyr2.html">cblas_ssyr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ssyr2k" class="["public"]" href="../cblas/cblas/cblas_ssyr2k.html">cblas_ssyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ssyrk" class="["public"]" href="../cblas/cblas/cblas_ssyrk.html">cblas_ssyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_stbmv" class="["public"]" href="../cblas/cblas/cblas_stbmv.html">cblas_stbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_stbsv" class="["public"]" href="../cblas/cblas/cblas_stbsv.html">cblas_stbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_stpmv" class="["public"]" href="../cblas/cblas/cblas_stpmv.html">cblas_stpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_stpsv" class="["public"]" href="../cblas/cblas/cblas_stpsv.html">cblas_stpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_strmm" class="["public"]" href="../cblas/cblas/cblas_strmm.html">cblas_strmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_strmv" class="["public"]" href="../cblas/cblas/cblas_strmv.html">cblas_strmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_strsm" class="["public"]" href="../cblas/cblas/cblas_strsm.html">cblas_strsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_strsv" class="["public"]" href="../cblas/cblas/cblas_strsv.html">cblas_strsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_xerbla" class="["public"]" href="../cblas/cblas/cblas_xerbla.html">cblas_xerbla</a><span class="decoration">(p, rout, form)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zaxpy" class="["public"]" href="../cblas/cblas/cblas_zaxpy.html">cblas_zaxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zcopy" class="["public"]" href="../cblas/cblas/cblas_zcopy.html">cblas_zcopy</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zdotc" class="["public"]" href="../cblas/cblas/cblas_zdotc.html">cblas_zdotc</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zdotc_sub" class="["public"]" href="../cblas/cblas/cblas_zdotc_sub.html">cblas_zdotc_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zdotu" class="["public"]" href="../cblas/cblas/cblas_zdotu.html">cblas_zdotu</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zdotu_sub" class="["public"]" href="../cblas/cblas/cblas_zdotu_sub.html">cblas_zdotu_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zdscal" class="["public"]" href="../cblas/cblas/cblas_zdscal.html">cblas_zdscal</a><span class="decoration">(N, alpha, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zgbmv" class="["public"]" href="../cblas/cblas/cblas_zgbmv.html">cblas_zgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zgemm" class="["public"]" href="../cblas/cblas/cblas_zgemm.html">cblas_zgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zgemv" class="["public"]" href="../cblas/cblas/cblas_zgemv.html">cblas_zgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zgerc" class="["public"]" href="../cblas/cblas/cblas_zgerc.html">cblas_zgerc</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zgeru" class="["public"]" href="../cblas/cblas/cblas_zgeru.html">cblas_zgeru</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zhbmv" class="["public"]" href="../cblas/cblas/cblas_zhbmv.html">cblas_zhbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zhemm" class="["public"]" href="../cblas/cblas/cblas_zhemm.html">cblas_zhemm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zhemv" class="["public"]" href="../cblas/cblas/cblas_zhemv.html">cblas_zhemv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zher" class="["public"]" href="../cblas/cblas/cblas_zher.html">cblas_zher</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zher2" class="["public"]" href="../cblas/cblas/cblas_zher2.html">cblas_zher2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zher2k" class="["public"]" href="../cblas/cblas/cblas_zher2k.html">cblas_zher2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zherk" class="["public"]" href="../cblas/cblas/cblas_zherk.html">cblas_zherk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zhpmv" class="["public"]" href="../cblas/cblas/cblas_zhpmv.html">cblas_zhpmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zhpr" class="["public"]" href="../cblas/cblas/cblas_zhpr.html">cblas_zhpr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zhpr2" class="["public"]" href="../cblas/cblas/cblas_zhpr2.html">cblas_zhpr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, Ap)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zscal" class="["public"]" href="../cblas/cblas/cblas_zscal.html">cblas_zscal</a><span class="decoration">(N, alpha, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zswap" class="["public"]" href="../cblas/cblas/cblas_zswap.html">cblas_zswap</a><span class="decoration">(n, x, incx, y, incy)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zsymm" class="["public"]" href="../cblas/cblas/cblas_zsymm.html">cblas_zsymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zsyr2k" class="["public"]" href="../cblas/cblas/cblas_zsyr2k.html">cblas_zsyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_zsyrk" class="["public"]" href="../cblas/cblas/cblas_zsyrk.html">cblas_zsyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztbmv" class="["public"]" href="../cblas/cblas/cblas_ztbmv.html">cblas_ztbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztbsv" class="["public"]" href="../cblas/cblas/cblas_ztbsv.html">cblas_ztbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztpmv" class="["public"]" href="../cblas/cblas/cblas_ztpmv.html">cblas_ztpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztpsv" class="["public"]" href="../cblas/cblas/cblas_ztpsv.html">cblas_ztpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztrmm" class="["public"]" href="../cblas/cblas/cblas_ztrmm.html">cblas_ztrmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztrmv" class="["public"]" href="../cblas/cblas/cblas_ztrmv.html">cblas_ztrmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztrsm" class="["public"]" href="../cblas/cblas/cblas_ztrsm.html">cblas_ztrsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span></code></td><td></td></tr><tr><td><code><a id="cblas_ztrsv" class="["public"]" href="../cblas/cblas/cblas_ztrsv.html">cblas_ztrsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span></code></td><td></td></tr></table></section><section><h2>Enums</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="CBLAS_DIAG" class="["public"]" href="../cblas/cblas/CBLAS_DIAG.html">CBLAS_DIAG</a></code></td><td></td></tr><tr><td><code><a id="CBLAS_ORDER" class="["public"]" href="../cblas/cblas/CBLAS_ORDER.html">CBLAS_ORDER</a></code></td><td></td></tr><tr><td><code><a id="CBLAS_SIDE" class="["public"]" href="../cblas/cblas/CBLAS_SIDE.html">CBLAS_SIDE</a></code></td><td></td></tr><tr><td><code><a id="CBLAS_TRANSPOSE" class="["public"]" href="../cblas/cblas/CBLAS_TRANSPOSE.html">CBLAS_TRANSPOSE</a></code></td><td></td></tr><tr><td><code><a id="CBLAS_UPLO" class="["public"]" href="../cblas/cblas/CBLAS_UPLO.html">CBLAS_UPLO</a></code></td><td></td></tr></table></section><section><h2>Aliases</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="blasint" class="["public"]" href="../cblas/cblas/blasint.html"><code>blasint</code></a></td><td><code class="prettyprint lang-d"><span class="typ">int</span></code></td><td></td></tr><tr><td><a id="CBLAS_INDEX" class="["public"]" href="../cblas/cblas/CBLAS_INDEX.html"><code>CBLAS_INDEX</code></a></td><td><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td></tr><tr><td><a id="Diag" class="["public"]" href="../cblas/cblas/Diag.html"><code>Diag</code></a></td><td><code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_DIAG.html"><span class="pln">CBLAS_DIAG</span></a></code></td><td></td></tr><tr><td><a id="Order" class="["public"]" href="../cblas/cblas/Order.html"><code>Order</code></a></td><td><code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_ORDER.html"><span class="pln">CBLAS_ORDER</span></a></code></td><td></td></tr><tr><td><a id="Side" class="["public"]" href="../cblas/cblas/Side.html"><code>Side</code></a></td><td><code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_SIDE.html"><span class="pln">CBLAS_SIDE</span></a></code></td><td></td></tr><tr><td><a id="Transpose" class="["public"]" href="../cblas/cblas/Transpose.html"><code>Transpose</code></a></td><td><code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_TRANSPOSE.html"><span class="pln">CBLAS_TRANSPOSE</span></a></code></td><td></td></tr><tr><td><a id="Uplo" class="["public"]" href="../cblas/cblas/Uplo.html"><code>Uplo</code></a></td><td><code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_UPLO.html"><span class="pln">CBLAS_UPLO</span></a></code></td><td></td></tr><tr><td><a id="_cdouble" class="["public"]" href="../cblas/cblas/_cdouble.html"><code>_cdouble</code></a></td><td><code class="prettyprint lang-d"><span class="typ">cdouble</span></code></td><td></td></tr><tr><td><a id="_cfloat" class="["public"]" href="../cblas/cblas/_cfloat.html"><code>_cfloat</code></a></td><td><code class="prettyprint lang-d"><span class="typ">cfloat</span></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td><p>Ilya Yaroshenko
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_caxpy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_caxpy.html">cblas_caxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ccopy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ccopy.html">cblas_ccopy</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cdotc" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cdotc.html">cblas_cdotc</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cdotc_sub" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cdotc_sub.html">cblas_cdotc_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cdotu" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cdotu.html">cblas_cdotu</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cdotu_sub" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cdotu_sub.html">cblas_cdotu_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cgbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cgbmv.html">cblas_cgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cgemm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cgemm.html">cblas_cgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cgemv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cgemv.html">cblas_cgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cgerc" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cgerc.html">cblas_cgerc</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cgeru" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cgeru.html">cblas_cgeru</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_chbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_chbmv.html">cblas_chbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_chemm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_chemm.html">cblas_chemm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_chemv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_chemv.html">cblas_chemv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cher" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cher.html">cblas_cher</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cher2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cher2.html">cblas_cher2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cher2k" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cher2k.html">cblas_cher2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cherk" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cherk.html">cblas_cherk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_chpmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_chpmv.html">cblas_chpmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_chpr" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_chpr.html">cblas_chpr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_chpr2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_chpr2.html">cblas_chpr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, Ap)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cscal" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cscal.html">cblas_cscal</a><span class="decoration">(N, alpha, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_csscal" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_csscal.html">cblas_csscal</a><span class="decoration">(N, alpha, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_cswap" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_cswap.html">cblas_cswap</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_csymm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_csymm.html">cblas_csymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_csyr2k" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_csyr2k.html">cblas_csyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_csyrk" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_csyrk.html">cblas_csyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctbmv.html">cblas_ctbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctbsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctbsv.html">cblas_ctbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctpmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctpmv.html">cblas_ctpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctpsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctpsv.html">cblas_ctpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctrmm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctrmm.html">cblas_ctrmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctrmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctrmv.html">cblas_ctrmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctrsm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctrsm.html">cblas_ctrsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ctrsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ctrsv.html">cblas_ctrsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dasum" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dasum.html">cblas_dasum</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_daxpy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_daxpy.html">cblas_daxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dcopy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dcopy.html">cblas_dcopy</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ddot" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ddot.html">cblas_ddot</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dgbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dgbmv.html">cblas_dgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dgemm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dgemm.html">cblas_dgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dgemv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dgemv.html">cblas_dgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dger" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dger.html">cblas_dger</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dnrm2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dnrm2.html">cblas_dnrm2</a><span class="decoration">(N, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_drot" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_drot.html">cblas_drot</a><span class="decoration">(N, X, incX, Y, incY, c, s)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_drotg" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_drotg.html">cblas_drotg</a><span class="decoration">(a, b, c, s)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_drotm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_drotm.html">cblas_drotm</a><span class="decoration">(N, X, incX, Y, incY, P)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_drotmg" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_drotmg.html">cblas_drotmg</a><span class="decoration">(d1, d2, b1, b2, P)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsbmv.html">cblas_dsbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dscal" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dscal.html">cblas_dscal</a><span class="decoration">(N, alpha, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsdot" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsdot.html">cblas_dsdot</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dspmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dspmv.html">cblas_dspmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dspr" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dspr.html">cblas_dspr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Ap)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dspr2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dspr2.html">cblas_dspr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dswap" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dswap.html">cblas_dswap</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsymm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsymm.html">cblas_dsymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsymv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsymv.html">cblas_dsymv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsyr" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsyr.html">cblas_dsyr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsyr2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsyr2.html">cblas_dsyr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsyr2k" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsyr2k.html">cblas_dsyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dsyrk" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dsyrk.html">cblas_dsyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtbmv.html">cblas_dtbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtbsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtbsv.html">cblas_dtbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtpmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtpmv.html">cblas_dtpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtpsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtpsv.html">cblas_dtpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtrmm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtrmm.html">cblas_dtrmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtrmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtrmv.html">cblas_dtrmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtrsm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtrsm.html">cblas_dtrsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dtrsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dtrsv.html">cblas_dtrsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dzasum" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dzasum.html">cblas_dzasum</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_dznrm2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_dznrm2.html">cblas_dznrm2</a><span class="decoration">(N, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_icamax" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_icamax.html">cblas_icamax</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_idamax" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_idamax.html">cblas_idamax</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_isamax" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_isamax.html">cblas_isamax</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_izamax" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_izamax.html">cblas_izamax</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sasum" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sasum.html">cblas_sasum</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_saxpy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_saxpy.html">cblas_saxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_scasum" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_scasum.html">cblas_scasum</a><span class="decoration">(n, x, incx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_scnrm2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_scnrm2.html">cblas_scnrm2</a><span class="decoration">(N, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_scopy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_scopy.html">cblas_scopy</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sdot" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sdot.html">cblas_sdot</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sdsdot" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sdsdot.html">cblas_sdsdot</a><span class="decoration">(n, alpha, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sgbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sgbmv.html">cblas_sgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sgemm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sgemm.html">cblas_sgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sgemv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sgemv.html">cblas_sgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sger" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sger.html">cblas_sger</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_snrm2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_snrm2.html">cblas_snrm2</a><span class="decoration">(N, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_srot" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_srot.html">cblas_srot</a><span class="decoration">(N, X, incX, Y, incY, c, s)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_srotg" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_srotg.html">cblas_srotg</a><span class="decoration">(a, b, c, s)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_srotm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_srotm.html">cblas_srotm</a><span class="decoration">(N, X, incX, Y, incY, P)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_srotmg" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_srotmg.html">cblas_srotmg</a><span class="decoration">(d1, d2, b1, b2, P)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ssbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ssbmv.html">cblas_ssbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sscal" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sscal.html">cblas_sscal</a><span class="decoration">(N, alpha, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sspmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sspmv.html">cblas_sspmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sspr" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sspr.html">cblas_sspr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Ap)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sspr2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sspr2.html">cblas_sspr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_sswap" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_sswap.html">cblas_sswap</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ssymm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ssymm.html">cblas_ssymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ssymv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ssymv.html">cblas_ssymv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ssyr" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ssyr.html">cblas_ssyr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ssyr2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ssyr2.html">cblas_ssyr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ssyr2k" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ssyr2k.html">cblas_ssyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ssyrk" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ssyrk.html">cblas_ssyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_stbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_stbmv.html">cblas_stbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_stbsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_stbsv.html">cblas_stbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_stpmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_stpmv.html">cblas_stpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_stpsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_stpsv.html">cblas_stpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_strmm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_strmm.html">cblas_strmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_strmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_strmv.html">cblas_strmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_strsm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_strsm.html">cblas_strsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_strsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_strsv.html">cblas_strsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_xerbla" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_xerbla.html">cblas_xerbla</a><span class="decoration">(p, rout, form)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zaxpy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zaxpy.html">cblas_zaxpy</a><span class="decoration">(n, alpha, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zcopy" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zcopy.html">cblas_zcopy</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zdotc" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zdotc.html">cblas_zdotc</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zdotc_sub" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zdotc_sub.html">cblas_zdotc_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zdotu" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zdotu.html">cblas_zdotu</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zdotu_sub" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zdotu_sub.html">cblas_zdotu_sub</a><span class="decoration">(n, x, incx, y, incy, ret)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zdscal" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zdscal.html">cblas_zdscal</a><span class="decoration">(N, alpha, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zgbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zgbmv.html">cblas_zgbmv</a><span class="decoration">(order, TransA, M, N, KL, KU, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zgemm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zgemm.html">cblas_zgemm</a><span class="decoration">(order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zgemv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zgemv.html">cblas_zgemv</a><span class="decoration">(order, trans, m, n, alpha, a, lda, x, incx, beta, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zgerc" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zgerc.html">cblas_zgerc</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zgeru" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zgeru.html">cblas_zgeru</a><span class="decoration">(order, M, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zhbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zhbmv.html">cblas_zhbmv</a><span class="decoration">(order, Uplo, N, K, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zhemm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zhemm.html">cblas_zhemm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zhemv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zhemv.html">cblas_zhemv</a><span class="decoration">(order, Uplo, N, alpha, A, lda, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zher" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zher.html">cblas_zher</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zher2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zher2.html">cblas_zher2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, A, lda)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zher2k" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zher2k.html">cblas_zher2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zherk" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zherk.html">cblas_zherk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zhpmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zhpmv.html">cblas_zhpmv</a><span class="decoration">(order, Uplo, N, alpha, Ap, X, incX, beta, Y, incY)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zhpr" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zhpr.html">cblas_zhpr</a><span class="decoration">(order, Uplo, N, alpha, X, incX, A)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zhpr2" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zhpr2.html">cblas_zhpr2</a><span class="decoration">(order, Uplo, N, alpha, X, incX, Y, incY, Ap)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zscal" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zscal.html">cblas_zscal</a><span class="decoration">(N, alpha, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zswap" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zswap.html">cblas_zswap</a><span class="decoration">(n, x, incx, y, incy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zsymm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zsymm.html">cblas_zsymm</a><span class="decoration">(order, Side, Uplo, M, N, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zsyr2k" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zsyr2k.html">cblas_zsyr2k</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, B, ldb, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_zsyrk" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_zsyrk.html">cblas_zsyrk</a><span class="decoration">(order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztbmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztbmv.html">cblas_ztbmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztbsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztbsv.html">cblas_ztbsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, K, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztpmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztpmv.html">cblas_ztpmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztpsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztpsv.html">cblas_ztpsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, Ap, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztrmm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztrmm.html">cblas_ztrmm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztrmv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztrmv.html">cblas_ztrmv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztrsm" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztrsm.html">cblas_ztrsm</a><span class="decoration">(order, Side, Uplo, TransA, Diag, M, N, alpha, A, lda, B, ldb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="cblas_ztrsv" class="[&quot;public&quot;]" href="../cblas/cblas/cblas_ztrsv.html">cblas_ztrsv</a><span class="decoration">(order, Uplo, TransA, Diag, N, A, lda, X, incX)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="CBLAS_DIAG" class="[&quot;public&quot;]" href="../cblas/cblas/CBLAS_DIAG.html">CBLAS_DIAG</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="CBLAS_ORDER" class="[&quot;public&quot;]" href="../cblas/cblas/CBLAS_ORDER.html">CBLAS_ORDER</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="CBLAS_SIDE" class="[&quot;public&quot;]" href="../cblas/cblas/CBLAS_SIDE.html">CBLAS_SIDE</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="CBLAS_TRANSPOSE" class="[&quot;public&quot;]" href="../cblas/cblas/CBLAS_TRANSPOSE.html">CBLAS_TRANSPOSE</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="CBLAS_UPLO" class="[&quot;public&quot;]" href="../cblas/cblas/CBLAS_UPLO.html">CBLAS_UPLO</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="blasint" class="[&quot;public&quot;]" href="../cblas/cblas/blasint.html">
+								<code>blasint</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">int</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="CBLAS_INDEX" class="[&quot;public&quot;]" href="../cblas/cblas/CBLAS_INDEX.html">
+								<code>CBLAS_INDEX</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">ulong</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Diag" class="[&quot;public&quot;]" href="../cblas/cblas/Diag.html">
+								<code>Diag</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_DIAG.html"><span class="pln">CBLAS_DIAG</span></a></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Order" class="[&quot;public&quot;]" href="../cblas/cblas/Order.html">
+								<code>Order</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_ORDER.html"><span class="pln">CBLAS_ORDER</span></a></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Side" class="[&quot;public&quot;]" href="../cblas/cblas/Side.html">
+								<code>Side</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_SIDE.html"><span class="pln">CBLAS_SIDE</span></a></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Transpose" class="[&quot;public&quot;]" href="../cblas/cblas/Transpose.html">
+								<code>Transpose</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_TRANSPOSE.html"><span class="pln">CBLAS_TRANSPOSE</span></a></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="Uplo" class="[&quot;public&quot;]" href="../cblas/cblas/Uplo.html">
+								<code>Uplo</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><a href="../cblas/cblas/CBLAS_UPLO.html"><span class="pln">CBLAS_UPLO</span></a></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="_cdouble" class="[&quot;public&quot;]" href="../cblas/cblas/_cdouble.html">
+								<code>_cdouble</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">cdouble</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="_cfloat" class="[&quot;public&quot;]" href="../cblas/cblas/_cfloat.html">
+								<code>_cfloat</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">cfloat</span></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p>Ilya Yaroshenko
 </p>
-</td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

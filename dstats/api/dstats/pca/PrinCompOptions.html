@@ -1,32 +1,198 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct PrinCompOptions</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module selected"><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct PrinCompOptions</h1><p>Sets options for principal component analysis.  The default options are
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct PrinCompOptions</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct PrinCompOptions</h1><p>Sets options for principal component analysis.  The default options are
 also the values in PrinCompOptions.init.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">PrinCompOptions</span>
-<span class="pun">;</span></div></code></div><section><h2>Fields</h2><h4>Fields</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/pca/PrinCompOptions.absError.html" class="["public"]"><code>absError</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td>Absolute error at which to stop the optimization procedure.  Default:  1e-5
-</td></tr><tr><td><a href="../../dstats/pca/PrinCompOptions.destructive.html" class="["public"]"><code>destructive</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Overwrite input matrix instead of copying.  Ignored if the matrix
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">PrinCompOptions</span>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/pca/PrinCompOptions.absError.html" class="[&quot;public&quot;]"><code>absError</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td>Absolute error at which to stop the optimization procedure.  Default:  1e-5
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/pca/PrinCompOptions.destructive.html" class="[&quot;public&quot;]"><code>destructive</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Overwrite input matrix instead of copying.  Ignored if the matrix
     passed in does not have assignable, lvalue elements and centering or
     scaling is enabled.  Default value:  false.
-</td></tr><tr><td><a href="../../dstats/pca/PrinCompOptions.maxIter.html" class="["public"]"><code>maxIter</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span></code></td><td>Maximum iterations for the optimization procedure.  After this many
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/pca/PrinCompOptions.maxIter.html" class="[&quot;public&quot;]"><code>maxIter</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">uint</span></code></td><td>Maximum iterations for the optimization procedure.  After this many
     iterations, the algorithm gives up and calls teh solution "good enough"
     no matter what.  For exploratory analyses, "good enough" solutions
     can be had fast sometimes by making this value small.  Default:  uint.max
-</td></tr><tr><td><a href="../../dstats/pca/PrinCompOptions.relError.html" class="["public"]"><code>relError</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td>Relative error at which to stop the optimization procedure.  Default: 1e-4
-</td></tr><tr><td><a href="../../dstats/pca/PrinCompOptions.transpose.html" class="["public"]"><code>transpose</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Effectively transpose the matrix.  If enabled, treat each column as a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/pca/PrinCompOptions.relError.html" class="[&quot;public&quot;]"><code>relError</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td>Relative error at which to stop the optimization procedure.  Default: 1e-4
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/pca/PrinCompOptions.transpose.html" class="[&quot;public&quot;]"><code>transpose</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Effectively transpose the matrix.  If enabled, treat each column as a
     data points and each row as a dimension.  If disabled, do the opposite.
     Note that, if this is enabled, each row will be scaled and centered,
     not each column.  Default value:  false.
-</td></tr><tr><td><a href="../../dstats/pca/PrinCompOptions.unitVariance.html" class="["public"]"><code>unitVariance</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Scale each column to unit variance.  Note that, if this option is set to
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/pca/PrinCompOptions.unitVariance.html" class="[&quot;public&quot;]"><code>unitVariance</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Scale each column to unit variance.  Note that, if this option is set to
     true, zeroMean is ignored and the mean of each column is set to zero even
     if zeroMean is false.  Default value:  false.
-</td></tr><tr><td><a href="../../dstats/pca/PrinCompOptions.zeroMean.html" class="["public"]"><code>zeroMean</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Center each column to zero mean.  Default value:  true.
-</td></tr></table></section>
-
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/pca/PrinCompOptions.zeroMean.html" class="[&quot;public&quot;]"><code>zeroMean</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Center each column to zero mean.  Default value:  true.
+</td>
+					</tr>
+				</table>
+			</section>
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

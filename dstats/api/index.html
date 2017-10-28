@@ -1,50 +1,249 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>API documentation</title>
-<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
-<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="./dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="./dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="./dstats/base.html">base</a></div></li><li><div class="module "><a href="./dstats/cor.html">cor</a></div></li><li><div class="module "><a href="./dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="./dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="./dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="./dstats/pca.html">pca</a></div></li><li><div class="module "><a href="./dstats/random.html">random</a></div></li><li><div class="module "><a href="./dstats/regress.html">regress</a></div></li><li><div class="module "><a href="./dstats/sort.html">sort</a></div></li><li><div class="module "><a href="./dstats/summary.html">summary</a></div></li><li><div class="module "><a href="./dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>API documentation</h1><table>
-<col class="caption"/>
-<tr><th>Module</th><th>Description</th></tr><tr><td><a href="./dstats/alloc.html">dstats.alloc</a></td><td>Stuff having to do with memory management.  Mostly a copy of RegionAllocator
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="./dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>API documentation</h1>
+			<table>
+				<col class="caption"/>
+				<tr>
+					<th>Module</th><th>Description</th>
+				</tr>
+			<tr>
+				<td>
+					<a href="./dstats/alloc.html">dstats.alloc</a>
+				</td>
+				<td>
+					Stuff having to do with memory management.  Mostly a copy of RegionAllocator
 for now until it gets into Phobos, as well as some RegionAllocator-specific
 data structures.
-</td></tr><tr><td><a href="./dstats/base.html">dstats.base</a></td><td>Relatively low-level primitives on which to build higher-level math/stat
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/base.html">dstats.base</a>
+				</td>
+				<td>
+					Relatively low-level primitives on which to build higher-level math/stat
  functionality.  Some are used internally, some are just things that may be
  useful to users of this library.  This module is starting to take on the
  appearance of a small utility library.
-</td></tr><tr><td><a href="./dstats/cor.html">dstats.cor</a></td><td>Pearson, Spearman and Kendall correlations, covariance.
-</td></tr><tr><td><a href="./dstats/distrib.html">dstats.distrib</a></td><td>Probability distribution CDFs, PDFs/PMFs, and a few inverse CDFs.
-</td></tr><tr><td><a href="./dstats/infotheory.html">dstats.infotheory</a></td><td>Basic information theory.  Joint entropy, mutual information, conditional
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/cor.html">dstats.cor</a>
+				</td>
+				<td>
+					Pearson, Spearman and Kendall correlations, covariance.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/distrib.html">dstats.distrib</a>
+				</td>
+				<td>
+					Probability distribution CDFs, PDFs/PMFs, and a few inverse CDFs.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/infotheory.html">dstats.infotheory</a>
+				</td>
+				<td>
+					Basic information theory.  Joint entropy, mutual information, conditional
  mutual information.  This module uses the base 2 definition of these
  quantities, i.e, entropy, mutual info, etc. are output in bits.
-</td></tr><tr><td><a href="./dstats/kerneldensity.html">dstats.kerneldensity</a></td><td>This module contains a small but growing library for performing kernel
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/kerneldensity.html">dstats.kerneldensity</a>
+				</td>
+				<td>
+					This module contains a small but growing library for performing kernel
  density estimation.
-</td></tr><tr><td><a href="./dstats/pca.html">dstats.pca</a></td><td>This module contains a basic implementation of principal component analysis,
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/pca.html">dstats.pca</a>
+				</td>
+				<td>
+					This module contains a basic implementation of principal component analysis,
 based on the NIPALS algorithm.  This is fast when you only need the first
 few components (which is usually the case since PCA's main uses are
 visualization and dimensionality reduction).  However, convergence slows
 drastically after the first few components have been removed and most of
 the matrix is just noise.
-</td></tr><tr><td><a href="./dstats/random.html">dstats.random</a></td><td>Generates random samples from a various probability distributions.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/random.html">dstats.random</a>
+				</td>
+				<td>
+					Generates random samples from a various probability distributions.
  These are mostly D ports of the NumPy random number generators.
-</td></tr><tr><td><a href="./dstats/regress.html">dstats.regress</a></td><td>A module for performing linear regression.  This module has an unusual
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/regress.html">dstats.regress</a>
+				</td>
+				<td>
+					A module for performing linear regression.  This module has an unusual
  interface, as it is range-based instead of matrix based. Values for
  independent variables are provided as either a tuple or a range of ranges.
  This means that one can use, for example, map, to fit high order models and
  lazily evaluate certain values.  (For details, see examples below.)
-</td></tr><tr><td><a href="./dstats/sort.html">dstats.sort</a></td><td>A comprehensive sorting library for statistical functions.  Each function
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/sort.html">dstats.sort</a>
+				</td>
+				<td>
+					A comprehensive sorting library for statistical functions.  Each function
 takes N arguments, which are arrays or array-like objects, sorts the first
 and sorts the rest in lockstep.  For merge and insertion sort, if the last
 argument is a ulong*, increments the dereference of this ulong* by the bubble
 sort distance between the first argument and the sorted version of the first
 argument.  This is useful for some statistical calculations.
-</td></tr><tr><td><a href="./dstats/summary.html">dstats.summary</a></td><td>Summary statistics such as mean, median, sum, variance, skewness, kurtosis.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/summary.html">dstats.summary</a>
+				</td>
+				<td>
+					Summary statistics such as mean, median, sum, variance, skewness, kurtosis.
  Except for median and median absolute deviation, which cannot be calculated
  online, all summary statistics have both an input range interface and an
  output range interface.
-</td></tr><tr><td><a href="./dstats/tests.html">dstats.tests</a></td><td>Hypothesis testing beyond simple CDFs.  All functions work with input
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats/tests.html">dstats.tests</a>
+				</td>
+				<td>
+					Hypothesis testing beyond simple CDFs.  All functions work with input
  ranges with elements implicitly convertible to double unless otherwise noted.
-</td></tr><tr><td><a href="./dstats.html">dstats</a></td><td>Convenience module that simply publicly imports everything else.
-</td></tr></table><footer><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./dstats.html">dstats</a>
+				</td>
+				<td>
+					Convenience module that simply publicly imports everything else.
+
+				</td>
+			</tr>
+			</table>
+			<footer>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

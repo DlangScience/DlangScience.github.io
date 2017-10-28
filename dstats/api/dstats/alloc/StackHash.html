@@ -1,42 +1,341 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct StackHash</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module selected"><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct StackHash</h1><p>A hash table that allocates its memory on RegionAllocator.  Good for building a
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct StackHash</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct StackHash</h1><p>A hash table that allocates its memory on RegionAllocator.  Good for building a
  temporary hash tables that will not escape the current scope.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">StackHash</span>(K, V)
-<span class="pun">;</span></div></code></div><section></section>
-<section><h2>Constructors</h2><h4>Constructors</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackHash.this.html" class="["public"]"><code>this</code></a></td><td>Due to the nature of RegionAllocator, you must specify on object creation
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">StackHash</span>(K, V)
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.this.html" class="[&quot;public&quot;]">
+								<code>this</code>
+							</a>
+						</td>
+						<td>Due to the nature of RegionAllocator, you must specify on object creation
  the approximate number of elements your table will have.  Too large a
  number will waste space and incur poor cache performance.  Too low a
  number will make this struct perform like a linked list.  Generally,
  if you're building a table from some other range, some fraction of the
  size of that range is a good guess.
-</td></tr></table></section><section><h2>Fields</h2><h4>Fields</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackHash.alloc.html" class="["public"]"><code>alloc</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.freeList.html" class="["public"]"><code>freeList</code></a></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html"><span class="typ">StackHash<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">*</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.rKeys.html" class="["public"]"><code>rKeys</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!K<span class="pun">[]</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.rNext.html" class="["public"]"><code>rNext</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!(Node*)<span class="pun">[]</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.rVals.html" class="["public"]"><code>rVals</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!V<span class="pun">[]</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash._length.html" class="["public"]"><code>_length</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr></table></section><section><h2>Properties</h2><h4>Properties</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackHash.length.html" class="["public", "property"]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.usedSentinel.html" class="["public", "property"]"><code>usedSentinel</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html"><span class="typ">StackHash<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span></code></td><td></td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackHash.allocNode.html" class="["public"]"><code>allocNode</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.efficiency.html" class="["public"]"><code>efficiency</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.get.html" class="["public"]"><code>get</code></a></td><td>Attempt to look up a key and return a default value if the key is not
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.alloc.html" class="[&quot;public&quot;]"><code>alloc</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.freeList.html" class="[&quot;public&quot;]"><code>freeList</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html"><span class="typ">StackHash<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.rKeys.html" class="[&quot;public&quot;]"><code>rKeys</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!K<span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.rNext.html" class="[&quot;public&quot;]"><code>rNext</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!(Node*)<span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.rVals.html" class="[&quot;public&quot;]"><code>rVals</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">Unqual</span>!V<span class="pun">[]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash._length.html" class="[&quot;public&quot;]"><code>_length</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.length.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.usedSentinel.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>usedSentinel</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/alloc/StackHash.Node.html"><span class="typ">StackHash<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Node</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.allocNode.html" class="[&quot;public&quot;]">
+								<code>allocNode</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.efficiency.html" class="[&quot;public&quot;]">
+								<code>efficiency</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.get.html" class="[&quot;public&quot;]">
+								<code>get</code>
+							</a>
+						</td>
+						<td>Attempt to look up a key and return a default value if the key is not
     present.
-</td></tr><tr><td><a href="../../dstats/alloc/StackHash.getHash.html" class="["public"]"><code>getHash</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.keys.html" class="["public"]"><code>keys</code></a></td><td>Returns a forward range to iterate over the keys of this table.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.getHash.html" class="[&quot;public&quot;]">
+								<code>getHash</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.keys.html" class="[&quot;public&quot;]">
+								<code>keys</code>
+							</a>
+						</td>
+						<td>Returns a forward range to iterate over the keys of this table.
  The lifetime of this range must not exceed the lifetime of this
  StackHash.
-</td></tr><tr><td><a href="../../dstats/alloc/StackHash.newNode.html" class="["public"]"><code>newNode</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.newNode.html" class="["public"]"><code>newNode</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.opApply.html" class="["public"]"><code>opApply</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.opIndex.html" class="["public"]"><code>opIndex</code></a></td><td>Index an element of the range.  If it does not exist, it will be created
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.newNode.html" class="[&quot;public&quot;]">
+								<code>newNode</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.newNode.html" class="[&quot;public&quot;]">
+								<code>newNode</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.opApply.html" class="[&quot;public&quot;]">
+								<code>opApply</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.opIndex.html" class="[&quot;public&quot;]">
+								<code>opIndex</code>
+							</a>
+						</td>
+						<td>Index an element of the range.  If it does not exist, it will be created
  and initialized to V.init.
-</td></tr><tr><td><a href="../../dstats/alloc/StackHash.opIndexAssign.html" class="["public"]"><code>opIndexAssign</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.opIn_r.html" class="["public"]"><code>opIn_r</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.pushFreeList.html" class="["public"]"><code>pushFreeList</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.remove.html" class="["public"]"><code>remove</code></a></td><td></td></tr><tr><td><a href="../../dstats/alloc/StackHash.values.html" class="["public"]"><code>values</code></a></td><td>Returns a forward range to iterate over the values of this table.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.opIndexAssign.html" class="[&quot;public&quot;]">
+								<code>opIndexAssign</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.opIn_r.html" class="[&quot;public&quot;]">
+								<code>opIn_r</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.pushFreeList.html" class="[&quot;public&quot;]">
+								<code>pushFreeList</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.remove.html" class="[&quot;public&quot;]">
+								<code>remove</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.values.html" class="[&quot;public&quot;]">
+								<code>values</code>
+							</a>
+						</td>
+						<td>Returns a forward range to iterate over the values of this table.
  The lifetime of this range must not exceed the lifetime of this
  StackHash.
-</td></tr></table></section><section><h2>Aliases</h2><h4>Aliases</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/StackHash.Node.html" class="["public"]"><code>Node</code></a></td><td></td></tr></table></section>
-<section><h2>Examples</h2>
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/StackHash.Node.html" class="[&quot;public&quot;]">
+								<code>Node</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Examples</h2>
 <pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../dstats/alloc/StackHash.alloc.html"></span><span class="pln">alloc</span></a><span class="pln"> </span><span class="pun">= <a href="../../dstats/alloc/newRegionAllocator.html"></span><span class="pln">newRegionAllocator</span></a><span class="pun">();
 </span><span class="kwd">auto </span><span class="pln">ss </span><span class="pun">= </span><span class="typ">StackHash</span><span class="pun">!(</span><span class="typ">uint</span><span class="pun">)(</span><span class="lit">5</span><span class="pun">, <a href="../../dstats/alloc/StackHash.alloc.html"></span><span class="pln">alloc</span></a><span class="pun">);
 </span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">i</span><span class="pun">; </span><span class="lit">0</span><span class="pun">..</span><span class="lit">5</span><span class="pun">) {
@@ -56,4 +355,29 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
 *</span><span class="pln">myPtr </span><span class="pun">= </span><span class="pln">someValue</span><span class="pun">;</span></code></pre>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

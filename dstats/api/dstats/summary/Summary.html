@@ -1,29 +1,224 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct Summary</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module selected"><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct Summary</h1><p>Output range to compute mean, stdev, variance, skewness, kurtosis, min, and
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct Summary</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct Summary</h1><p>Output range to compute mean, stdev, variance, skewness, kurtosis, min, and
  max online. Using this struct is relatively expensive, so if you just need
  mean and/or stdev, try MeanSD or Mean. Getter methods for stdev,
  var cost a few floating point ops.  Getter for mean costs a single branch to
  check for N == 0.  Getters for skewness and kurtosis cost a whole bunch of
  floating point ops.  This struct uses O(1) space and does *NOT* store the
  individual elements.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">Summary</span>
-<span class="pun">;</span></div></code></div><section></section>
-<section><h2>Properties</h2><h4>Properties</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/summary/Summary.kurtosis.html" class="["public", "property"]"><code>kurtosis</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.max.html" class="["public", "property"]"><code>max</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.mean.html" class="["public", "property"]"><code>mean</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.min.html" class="["public", "property"]"><code>min</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.mse.html" class="["public", "property"]"><code>mse</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td>Mean squared error.  In other words, a biased estimate of variance.
-</td></tr><tr><td><a href="../../dstats/summary/Summary.N.html" class="["public", "property"]"><code>N</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.skewness.html" class="["public", "property"]"><code>skewness</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.stdev.html" class="["public", "property"]"><code>stdev</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.sum.html" class="["public", "property"]"><code>sum</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.toMeanSD.html" class="["public", "property"]"><code>toMeanSD</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/MeanSD.html"><span class="typ">MeanSD</span></a></code></td><td>Converts this struct to a MeanSD.  Called via alias this when an
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">Summary</span>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
+
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.kurtosis.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>kurtosis</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.max.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>max</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.mean.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>mean</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.min.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>min</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.mse.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>mse</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td>Mean squared error.  In other words, a biased estimate of variance.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.N.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>N</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.skewness.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>skewness</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.stdev.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>stdev</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.sum.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>sum</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.toMeanSD.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>toMeanSD</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../dstats/summary/MeanSD.html"><span class="typ">MeanSD</span></a></code></td><td>Converts this struct to a MeanSD.  Called via alias this when an
  implicit conversion is attetmpted.
-</td></tr><tr><td><a href="../../dstats/summary/Summary.var.html" class="["public", "property"]"><code>var</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/summary/Summary.put.html" class="["public"]"><code>put</code></a></td><td></td></tr><tr><td><a href="../../dstats/summary/Summary.put.html" class="["public"]"><code>put</code></a></td><td>Combine two Summary's.
-</td></tr><tr><td><a href="../../dstats/summary/Summary.toString.html" class="["public"]"><code>toString</code></a></td><td></td></tr></table></section>
-<section><h2>Note</h2>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.var.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>var</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">double</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.put.html" class="[&quot;public&quot;]">
+								<code>put</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.put.html" class="[&quot;public&quot;]">
+								<code>put</code>
+							</a>
+						</td>
+						<td>Combine two Summary's.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/summary/Summary.toString.html" class="[&quot;public&quot;]">
+								<code>toString</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Note</h2>
 <p>This struct can implicitly convert to a MeanSD.
 </p>
 </section>
@@ -52,4 +247,29 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">summ<wbr/></span><span class="pun">.</span><span class="pln">sum </span><span class="pun">== </span><span class="lit">15</span><span class="pun">);</span></code></pre>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

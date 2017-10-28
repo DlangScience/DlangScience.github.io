@@ -1,11 +1,96 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module dstats.pca</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../dstats/base.html">base</a></div></li><li><div class="module "><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module selected"><a href="../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../dstats/random.html">random</a></div></li><li><div class="module "><a href="../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.pca</h1><p>This module contains a basic implementation of principal component analysis,
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.pca</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.pca</h1><p>This module contains a basic implementation of principal component analysis,
 based on the NIPALS algorithm.  This is fast when you only need the first
 few components (which is usually the case since PCA's main uses are
 visualization and dimensionality reduction).  However, convergence slows
@@ -13,7 +98,7 @@ drastically after the first few components have been removed and most of
 the matrix is just noise.
 </p><section></section>
 
-<section><section><h2>References</h2>
+			<section><section><h2>References</h2>
 <p>en.wikipedia.org/wiki/Principal_component_analysis#Computing_principal_components_iteratively
 </p>
 </section>
@@ -21,26 +106,129 @@ the matrix is just noise.
 <p>David Simcha
 </p>
 </section>
-</section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="doubleTempdup" class="["public"]" href="../dstats/pca/doubleTempdup.html">doubleTempdup</a><span class="decoration">(range, alloc)</span></code></td><td></td></tr><tr><td><code><a id="firstComponent" class="["public"]" href="../dstats/pca/firstComponent.html">firstComponent</a><span class="decoration">(data, opts, buf)</span></code></td><td>Uses expectation-maximization to compute the first principal component of mat.
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="doubleTempdup" class="[&quot;public&quot;]" href="../dstats/pca/doubleTempdup.html">doubleTempdup</a><span class="decoration">(range, alloc)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="firstComponent" class="[&quot;public&quot;]" href="../dstats/pca/firstComponent.html">firstComponent</a><span class="decoration">(data, opts, buf)</span>
+							</code>
+						</td>
+						<td>Uses expectation-maximization to compute the first principal component of mat.
 Since there are a lot of options, they are controlled by a PrinCompOptions
 struct.  (See above.  PrinCompOptions.init contains the default values.)
 To have the results returned in a pre-allocated space, pass an explicit value
 for buf.
-</td></tr><tr><td><code><a id="firstNComponents" class="["public"]" href="../dstats/pca/firstNComponents.html">firstNComponents</a><span class="decoration">(data, n, opts, buf)</span></code></td><td>Computes the first N principal components of the matrix.  More efficient than
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="firstNComponents" class="[&quot;public&quot;]" href="../dstats/pca/firstNComponents.html">firstNComponents</a><span class="decoration">(data, n, opts, buf)</span>
+							</code>
+						</td>
+						<td>Computes the first N principal components of the matrix.  More efficient than
 calling firstComponent and removeComponent repeatedly because copying and
 transposing, if enabled, only happen once.
-</td></tr><tr><td><code><a id="removeComponent" class="["public"]" href="../dstats/pca/removeComponent.html">removeComponent</a><span class="decoration">(data, rotation, transposed)</span></code></td><td>Remove the principal component specified by the given rotation vector from
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="removeComponent" class="[&quot;public&quot;]" href="../dstats/pca/removeComponent.html">removeComponent</a><span class="decoration">(data, rotation, transposed)</span>
+							</code>
+						</td>
+						<td>Remove the principal component specified by the given rotation vector from
 data.  data must have assignable elements.  Transposed controls whether
 rotation is considered a loading for the transposed matrix or the matrix
 as-is.
-</td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="PrincipalComponent" class="["public"]" href="../dstats/pca/PrincipalComponent.html">PrincipalComponent</a></code></td><td>Result holder
-</td></tr><tr><td><code><a id="PrinCompOptions" class="["public"]" href="../dstats/pca/PrinCompOptions.html">PrinCompOptions</a></code></td><td>Sets options for principal component analysis.  The default options are
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PrincipalComponent" class="[&quot;public&quot;]" href="../dstats/pca/PrincipalComponent.html">PrincipalComponent</a>
+							</code>
+						</td>
+						<td>Result holder
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PrinCompOptions" class="[&quot;public&quot;]" href="../dstats/pca/PrinCompOptions.html">PrinCompOptions</a>
+							</code>
+						</td>
+						<td>Sets options for principal component analysis.  The default options are
 also the values in PrinCompOptions.init.
-</td></tr></table></section><section><h2>Enums</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="Transposed" class="["public"]" href="../dstats/pca/Transposed.html">Transposed</a></code></td><td>Used for removeComponent().
-</td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Transposed" class="[&quot;public&quot;]" href="../dstats/pca/Transposed.html">Transposed</a>
+							</code>
+						</td>
+						<td>Used for removeComponent().
+</td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

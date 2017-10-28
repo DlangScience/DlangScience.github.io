@@ -1,69 +1,315 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module dstats.alloc</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module selected"><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../dstats/base.html">base</a></div></li><li><div class="module "><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../dstats/random.html">random</a></div></li><li><div class="module "><a href="../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.alloc</h1><p>Stuff having to do with memory management.  Mostly a copy of RegionAllocator
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.alloc</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.alloc</h1><p>Stuff having to do with memory management.  Mostly a copy of RegionAllocator
 for now until it gets into Phobos, as well as some RegionAllocator-specific
 data structures.
 </p><section></section>
 
-<section><section><h2>Author</h2>
+			<section><section><h2>Author</h2>
 <p>David Simcha
 </p>
 </section>
-</section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="appendDelOld" class="["public"]" href="../dstats/alloc/appendDelOld.html">appendDelOld</a><span class="decoration">(to, from)</span></code></td><td>Appends to an array, deleting the old array if it has to be realloced.
-</td></tr><tr><td><code><a id="newRegionAllocator" class="["public"]" href="../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a><span class="decoration">()</span></code></td><td>Returns a new <code class="lang-d"><a href="../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> that uses the default thread-local
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="appendDelOld" class="[&quot;public&quot;]" href="../dstats/alloc/appendDelOld.html">appendDelOld</a><span class="decoration">(to, from)</span>
+							</code>
+						</td>
+						<td>Appends to an array, deleting the old array if it has to be realloced.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="newRegionAllocator" class="[&quot;public&quot;]" href="../dstats/alloc/newRegionAllocator.html">newRegionAllocator</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>Returns a new <code class="lang-d"><a href="../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> that uses the default thread-local
 <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance.
-</td></tr><tr><td><code><a id="scanThreadLocalStack" class="["public", "property"]" href="../dstats/alloc/scanThreadLocalStack.html">scanThreadLocalStack</a><span class="decoration">()</span></code></td><td>These properties determine whether the default thread-local
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="scanThreadLocalStack" class="[&quot;public&quot;, &quot;property&quot;]" href="../dstats/alloc/scanThreadLocalStack.html">scanThreadLocalStack</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>These properties determine whether the default thread-local
 <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance is scanned by the garbage collector.
 The default is no.  In most cases, scanning a stack this long-lived is not
 recommended, as it will cause too many false pointers.  (See regionallocator, GCScan for details.)
-</td></tr><tr><td><code><a id="threadLocalSegmentSize" class="["public", "property"]" href="../dstats/alloc/threadLocalSegmentSize.html">threadLocalSegmentSize</a><span class="decoration">()</span></code></td><td>These properties get and set the segment size of the default thread-local
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="threadLocalSegmentSize" class="[&quot;public&quot;, &quot;property&quot;]" href="../dstats/alloc/threadLocalSegmentSize.html">threadLocalSegmentSize</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>These properties get and set the segment size of the default thread-local
 <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance.  The default size is 4 megabytes.
 The setter is only effective before the global function
 <code class="lang-d"><a href="../dstats/alloc/newRegionAllocator.html"><span class="pln">newRegionAllocator</span></a></code> has been called for the first time in the current
 thread.  Attempts to set this property after the first call to this
 function from the current thread throw a <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorException.html"><span class="typ">RegionAllocatorException</span></a></code>.
-</td></tr></table></section><section><h2>Classes</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="RegionAllocatorException" class="["public"]" href="../dstats/alloc/RegionAllocatorException.html">RegionAllocatorException</a></code></td><td>The exception that is thrown on invalid use of  and
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="RegionAllocatorException" class="[&quot;public&quot;]" href="../dstats/alloc/RegionAllocatorException.html">RegionAllocatorException</a>
+							</code>
+						</td>
+						<td>The exception that is thrown on invalid use of  and
 <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code>.  This exception is not thrown on out of memory.
 An <code class="lang-d"><span class="typ">OutOfMemoryError</span></code> is thrown instead.
-</td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="AVLNodeBitwise" class="["public"]" href="../dstats/alloc/AVLNodeBitwise.html">AVLNodeBitwise</a></code></td><td></td></tr><tr><td><code><a id="AVLNodeRealHeight" class="["public"]" href="../dstats/alloc/AVLNodeRealHeight.html">AVLNodeRealHeight</a></code></td><td></td></tr><tr><td><code><a id="HashRange" class="["public"]" href="../dstats/alloc/HashRange.html">HashRange</a></code></td><td>Forward range struct for iterating over the keys or values of a
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="AVLNodeBitwise" class="[&quot;public&quot;]" href="../dstats/alloc/AVLNodeBitwise.html">AVLNodeBitwise</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="AVLNodeRealHeight" class="[&quot;public&quot;]" href="../dstats/alloc/AVLNodeRealHeight.html">AVLNodeRealHeight</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="HashRange" class="[&quot;public&quot;]" href="../dstats/alloc/HashRange.html">HashRange</a>
+							</code>
+						</td>
+						<td>Forward range struct for iterating over the keys or values of a
  StackHash or StackSet.  The lifetime of this object must not exceed that
  of the underlying StackHash or StackSet.
-</td></tr><tr><td><code><a id="RegionAllocator" class="["public"]" href="../dstats/alloc/RegionAllocator.html">RegionAllocator</a></code></td><td>This struct provides an interface to the <code class="lang-d"><span class="typ">RegionAllocator</span></code> functionality
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="RegionAllocator" class="[&quot;public&quot;]" href="../dstats/alloc/RegionAllocator.html">RegionAllocator</a>
+							</code>
+						</td>
+						<td>This struct provides an interface to the <code class="lang-d"><span class="typ">RegionAllocator</span></code> functionality
 and enforces scoped deletion.  A new instance using the thread-local
 <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> instance is created using the global
 <code class="lang-d"><a href="../dstats/alloc/newRegionAllocator.html"><span class="pln">newRegionAllocator</span></a></code> function.  A new instance using
 an explicitly created <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> is created using
 <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.newRegionAllocator.html"><span class="typ">RegionAllocatorStack<wbr/></span><span class="pun">.</span><span class="pln">newRegionAllocator</span></a></code>.
-</td></tr><tr><td><code><a id="RegionAllocatorStack" class="["public"]" href="../dstats/alloc/RegionAllocatorStack.html">RegionAllocatorStack</a></code></td><td>This object represents a segmented stack.  Memory can be allocated from this
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="RegionAllocatorStack" class="[&quot;public&quot;]" href="../dstats/alloc/RegionAllocatorStack.html">RegionAllocatorStack</a>
+							</code>
+						</td>
+						<td>This object represents a segmented stack.  Memory can be allocated from this
 stack using a regionallocator RegionAllocator object.  Multiple
 <code class="lang-d"><a href="../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> objects may be created per
 <code class="lang-d"><span class="typ">RegionAllocatorStack</span></code> but each <code class="lang-d"><a href="../dstats/alloc/RegionAllocator.html"><span class="typ">RegionAllocator</span></a></code> uses a single
 <code class="lang-d"><span class="typ">RegionAllocatorStack</span></code>.
-</td></tr><tr><td><code><a id="SimpleStack" class="["public"]" href="../dstats/alloc/SimpleStack.html">SimpleStack</a></code></td><td></td></tr><tr><td><code><a id="StackHash" class="["public"]" href="../dstats/alloc/StackHash.html">StackHash</a></code></td><td>A hash table that allocates its memory on RegionAllocator.  Good for building a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="SimpleStack" class="[&quot;public&quot;]" href="../dstats/alloc/SimpleStack.html">SimpleStack</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="StackHash" class="[&quot;public&quot;]" href="../dstats/alloc/StackHash.html">StackHash</a>
+							</code>
+						</td>
+						<td>A hash table that allocates its memory on RegionAllocator.  Good for building a
  temporary hash tables that will not escape the current scope.
-</td></tr><tr><td><code><a id="StackSet" class="["public"]" href="../dstats/alloc/StackSet.html">StackSet</a></code></td><td>A hash set that allocates its memory on RegionAllocator.  Good for building a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="StackSet" class="[&quot;public&quot;]" href="../dstats/alloc/StackSet.html">StackSet</a>
+							</code>
+						</td>
+						<td>A hash set that allocates its memory on RegionAllocator.  Good for building a
  temporary set that will not escape the current scope.
-</td></tr><tr><td><code><a id="StackTree" class="["public"]" href="../dstats/alloc/StackTree.html">StackTree</a></code></td><td>An AVL tree implementation on top of RegionAllocator.  If elements are removed,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="StackTree" class="[&quot;public&quot;]" href="../dstats/alloc/StackTree.html">StackTree</a>
+							</code>
+						</td>
+						<td>An AVL tree implementation on top of RegionAllocator.  If elements are removed,
  they are stored on an internal free list and recycled when new elements
  are added to the tree.
-</td></tr><tr><td><code><a id="StackTreeAA" class="["public"]" href="../dstats/alloc/StackTreeAA.html">StackTreeAA</a></code></td><td>An associative array implementation based on StackTree.  Lookups and
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="StackTreeAA" class="[&quot;public&quot;]" href="../dstats/alloc/StackTreeAA.html">StackTreeAA</a>
+							</code>
+						</td>
+						<td>An associative array implementation based on StackTree.  Lookups and
  insertions are O(log N).  This is significantly slower in both theory and
  practice than StackHash, but you may want to use it if:
-</td></tr><tr><td><code><a id="TreeAaIter" class="["public"]" href="../dstats/alloc/TreeAaIter.html">TreeAaIter</a></code></td><td>Struct that iterates over keys or values of a StackTreeAA.
-</td></tr></table></section><section><h2>Enums</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="GCScan" class="["public"]" href="../dstats/alloc/GCScan.html">GCScan</a></code></td><td>This flag determines whether a given <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> is scanned for
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="TreeAaIter" class="[&quot;public&quot;]" href="../dstats/alloc/TreeAaIter.html">TreeAaIter</a>
+							</code>
+						</td>
+						<td>Struct that iterates over keys or values of a StackTreeAA.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="GCScan" class="[&quot;public&quot;]" href="../dstats/alloc/GCScan.html">GCScan</a>
+							</code>
+						</td>
+						<td>This flag determines whether a given <code class="lang-d"><a href="../dstats/alloc/RegionAllocatorStack.html"><span class="typ">RegionAllocatorStack</span></a></code> is scanned for
 pointers by the garbage collector (GC).  If yes, the entire stack is scanned,
 not just the part currently in use, since there is currently no efficient way to
 modify the bounds of a GC region.  The stack is scanned conservatively, meaning
@@ -71,6 +317,52 @@ that any bit pattern that would point to GC-allocated memory if interpreted as
 a pointer is considered to be a pointer.  This can result in GC-allocated
 memory being retained when it should be freed.  Due to these caveats,
 it is recommended that any stack scanned by the GC be small and/or short-lived.
-</td></tr></table></section><section><h2>Manifest constants</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="defaultSegmentSize" class="["public"]" href="../dstats/alloc/defaultSegmentSize.html"><code>defaultSegmentSize</code></a></td><td></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="defaultSegmentSize" class="[&quot;public&quot;]" href="../dstats/alloc/defaultSegmentSize.html">
+								<code>defaultSegmentSize</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

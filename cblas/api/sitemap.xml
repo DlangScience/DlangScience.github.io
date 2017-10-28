@@ -47,8 +47,6 @@
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_dgemv.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_dger.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/CBLAS_DIAG.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_DIAG.NonUnit.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_DIAG.Unit.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_dnrm2.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_drot.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_drotg.html</loc></url>
@@ -83,8 +81,6 @@
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_isamax.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_izamax.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/CBLAS_ORDER.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_ORDER.ColMajor.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_ORDER.RowMajor.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_sasum.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_saxpy.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_scasum.html</loc></url>
@@ -97,8 +93,6 @@
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_sgemv.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_sger.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/CBLAS_SIDE.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_SIDE.Left.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_SIDE.Right.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_snrm2.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_srot.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_srotg.html</loc></url>
@@ -125,13 +119,7 @@
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_strsm.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_strsv.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/CBLAS_TRANSPOSE.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_TRANSPOSE.ConjNoTrans.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_TRANSPOSE.ConjTrans.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_TRANSPOSE.NoTrans.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_TRANSPOSE.Trans.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/CBLAS_UPLO.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_UPLO.Lower.html</loc></url>
-<url><loc>http://127.0.0.1/cblas/cblas/CBLAS_UPLO.Upper.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_xerbla.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_zaxpy.html</loc></url>
 <url><loc>http://127.0.0.1/cblas/cblas/cblas_zcopy.html</loc></url>

@@ -1,19 +1,1266 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module nlopt</title>
-<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
-<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li><div class="module selected"><a href="./nlopt.html">nlopt</a></div></li></ul></nav><div id="main-contents"><h1>Module nlopt</h1><p></p>
-<section></section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="nlopt_add_equality_constraint" class="["public"]" href="./nlopt/nlopt_add_equality_constraint.html">nlopt_add_equality_constraint</a><span class="decoration">(opt, h, h_data, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_add_equality_mconstraint" class="["public"]" href="./nlopt/nlopt_add_equality_mconstraint.html">nlopt_add_equality_mconstraint</a><span class="decoration">(opt, m, h, h_data, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_add_inequality_constraint" class="["public"]" href="./nlopt/nlopt_add_inequality_constraint.html">nlopt_add_inequality_constraint</a><span class="decoration">(opt, fc, fc_data, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_add_inequality_mconstraint" class="["public"]" href="./nlopt/nlopt_add_inequality_mconstraint.html">nlopt_add_inequality_mconstraint</a><span class="decoration">(opt, m, fc, fc_data, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_add_precond_equality_constraint" class="["public"]" href="./nlopt/nlopt_add_precond_equality_constraint.html">nlopt_add_precond_equality_constraint</a><span class="decoration">(opt, h, pre, h_data, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_add_precond_inequality_constraint" class="["public"]" href="./nlopt/nlopt_add_precond_inequality_constraint.html">nlopt_add_precond_inequality_constraint</a><span class="decoration">(opt, fc, pre, fc_data, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_algorithm_name" class="["public"]" href="./nlopt/nlopt_algorithm_name.html">nlopt_algorithm_name</a><span class="decoration">(a)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_copy" class="["public"]" href="./nlopt/nlopt_copy.html">nlopt_copy</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_create" class="["public"]" href="./nlopt/nlopt_create.html">nlopt_create</a><span class="decoration">(algorithm, n)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_destroy" class="["public"]" href="./nlopt/nlopt_destroy.html">nlopt_destroy</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_force_stop" class="["public"]" href="./nlopt/nlopt_force_stop.html">nlopt_force_stop</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_algorithm" class="["public"]" href="./nlopt/nlopt_get_algorithm.html">nlopt_get_algorithm</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_dimension" class="["public"]" href="./nlopt/nlopt_get_dimension.html">nlopt_get_dimension</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_force_stop" class="["public"]" href="./nlopt/nlopt_get_force_stop.html">nlopt_get_force_stop</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_ftol_abs" class="["public"]" href="./nlopt/nlopt_get_ftol_abs.html">nlopt_get_ftol_abs</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_ftol_rel" class="["public"]" href="./nlopt/nlopt_get_ftol_rel.html">nlopt_get_ftol_rel</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_initial_step" class="["public"]" href="./nlopt/nlopt_get_initial_step.html">nlopt_get_initial_step</a><span class="decoration">(opt, x, dx)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_local_search_algorithm" class="["public"]" href="./nlopt/nlopt_get_local_search_algorithm.html">nlopt_get_local_search_algorithm</a><span class="decoration">(deriv, nonderiv, maxeval)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_lower_bounds" class="["public"]" href="./nlopt/nlopt_get_lower_bounds.html">nlopt_get_lower_bounds</a><span class="decoration">(opt, lb)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_maxeval" class="["public"]" href="./nlopt/nlopt_get_maxeval.html">nlopt_get_maxeval</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_maxtime" class="["public"]" href="./nlopt/nlopt_get_maxtime.html">nlopt_get_maxtime</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_population" class="["public"]" href="./nlopt/nlopt_get_population.html">nlopt_get_population</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_stochastic_population" class="["public"]" href="./nlopt/nlopt_get_stochastic_population.html">nlopt_get_stochastic_population</a><span class="decoration">()</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_stopval" class="["public"]" href="./nlopt/nlopt_get_stopval.html">nlopt_get_stopval</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_upper_bounds" class="["public"]" href="./nlopt/nlopt_get_upper_bounds.html">nlopt_get_upper_bounds</a><span class="decoration">(opt, ub)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_vector_storage" class="["public"]" href="./nlopt/nlopt_get_vector_storage.html">nlopt_get_vector_storage</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_xtol_abs" class="["public"]" href="./nlopt/nlopt_get_xtol_abs.html">nlopt_get_xtol_abs</a><span class="decoration">(opt, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_get_xtol_rel" class="["public"]" href="./nlopt/nlopt_get_xtol_rel.html">nlopt_get_xtol_rel</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_minimize" class="["public"]" href="./nlopt/nlopt_minimize.html">nlopt_minimize</a><span class="decoration">(algorithm, n, f, f_data, lb, ub, x, minf, minf_max, ftol_rel, ftol_abs, xtol_rel, xtol_abs, maxeval, maxtime)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_minimize_constrained" class="["public"]" href="./nlopt/nlopt_minimize_constrained.html">nlopt_minimize_constrained</a><span class="decoration">(algorithm, n, f, f_data, m, fc, fc_data, fc_datum_size, lb, ub, x, minf, minf_max, ftol_rel, ftol_abs, xtol_rel, xtol_abs, maxeval, maxtime)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_minimize_econstrained" class="["public"]" href="./nlopt/nlopt_minimize_econstrained.html">nlopt_minimize_econstrained</a><span class="decoration">(algorithm, n, f, f_data, m, fc, fc_data, fc_datum_size, p, h, h_data, h_datum_size, lb, ub, x, minf, minf_max, ftol_rel, ftol_abs, xtol_rel, xtol_abs, htol_rel, htol_abs, maxeval, maxtime)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_munge_data" class="["public"]" href="./nlopt/nlopt_munge_data.html">nlopt_munge_data</a><span class="decoration">(opt, munge, data)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_optimize" class="["public"]" href="./nlopt/nlopt_optimize.html">nlopt_optimize</a><span class="decoration">(opt, x, opt_f)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_remove_equality_constraints" class="["public"]" href="./nlopt/nlopt_remove_equality_constraints.html">nlopt_remove_equality_constraints</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_remove_inequality_constraints" class="["public"]" href="./nlopt/nlopt_remove_inequality_constraints.html">nlopt_remove_inequality_constraints</a><span class="decoration">(opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_default_initial_step" class="["public"]" href="./nlopt/nlopt_set_default_initial_step.html">nlopt_set_default_initial_step</a><span class="decoration">(opt, x)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_force_stop" class="["public"]" href="./nlopt/nlopt_set_force_stop.html">nlopt_set_force_stop</a><span class="decoration">(opt, val)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_ftol_abs" class="["public"]" href="./nlopt/nlopt_set_ftol_abs.html">nlopt_set_ftol_abs</a><span class="decoration">(opt, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_ftol_rel" class="["public"]" href="./nlopt/nlopt_set_ftol_rel.html">nlopt_set_ftol_rel</a><span class="decoration">(opt, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_initial_step" class="["public"]" href="./nlopt/nlopt_set_initial_step.html">nlopt_set_initial_step</a><span class="decoration">(opt, dx)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_initial_step1" class="["public"]" href="./nlopt/nlopt_set_initial_step1.html">nlopt_set_initial_step1</a><span class="decoration">(opt, dx)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_local_optimizer" class="["public"]" href="./nlopt/nlopt_set_local_optimizer.html">nlopt_set_local_optimizer</a><span class="decoration">(opt, local_opt)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_local_search_algorithm" class="["public"]" href="./nlopt/nlopt_set_local_search_algorithm.html">nlopt_set_local_search_algorithm</a><span class="decoration">(deriv, nonderiv, maxeval)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_lower_bounds" class="["public"]" href="./nlopt/nlopt_set_lower_bounds.html">nlopt_set_lower_bounds</a><span class="decoration">(opt, lb)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_lower_bounds1" class="["public"]" href="./nlopt/nlopt_set_lower_bounds1.html">nlopt_set_lower_bounds1</a><span class="decoration">(opt, lb)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_maxeval" class="["public"]" href="./nlopt/nlopt_set_maxeval.html">nlopt_set_maxeval</a><span class="decoration">(opt, maxeval)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_maxtime" class="["public"]" href="./nlopt/nlopt_set_maxtime.html">nlopt_set_maxtime</a><span class="decoration">(opt, maxtime)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_max_objective" class="["public"]" href="./nlopt/nlopt_set_max_objective.html">nlopt_set_max_objective</a><span class="decoration">(opt, f, f_data)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_min_objective" class="["public"]" href="./nlopt/nlopt_set_min_objective.html">nlopt_set_min_objective</a><span class="decoration">(opt, f, f_data)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_munge" class="["public"]" href="./nlopt/nlopt_set_munge.html">nlopt_set_munge</a><span class="decoration">(opt, munge_on_destroy, munge_on_copy)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_population" class="["public"]" href="./nlopt/nlopt_set_population.html">nlopt_set_population</a><span class="decoration">(opt, pop)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_precond_max_objective" class="["public"]" href="./nlopt/nlopt_set_precond_max_objective.html">nlopt_set_precond_max_objective</a><span class="decoration">(opt, f, pre, f_data)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_precond_min_objective" class="["public"]" href="./nlopt/nlopt_set_precond_min_objective.html">nlopt_set_precond_min_objective</a><span class="decoration">(opt, f, pre, f_data)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_stochastic_population" class="["public"]" href="./nlopt/nlopt_set_stochastic_population.html">nlopt_set_stochastic_population</a><span class="decoration">(pop)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_stopval" class="["public"]" href="./nlopt/nlopt_set_stopval.html">nlopt_set_stopval</a><span class="decoration">(opt, stopval)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_upper_bounds" class="["public"]" href="./nlopt/nlopt_set_upper_bounds.html">nlopt_set_upper_bounds</a><span class="decoration">(opt, ub)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_upper_bounds1" class="["public"]" href="./nlopt/nlopt_set_upper_bounds1.html">nlopt_set_upper_bounds1</a><span class="decoration">(opt, ub)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_vector_storage" class="["public"]" href="./nlopt/nlopt_set_vector_storage.html">nlopt_set_vector_storage</a><span class="decoration">(opt, dim)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_xtol_abs" class="["public"]" href="./nlopt/nlopt_set_xtol_abs.html">nlopt_set_xtol_abs</a><span class="decoration">(opt, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_xtol_abs1" class="["public"]" href="./nlopt/nlopt_set_xtol_abs1.html">nlopt_set_xtol_abs1</a><span class="decoration">(opt, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_set_xtol_rel" class="["public"]" href="./nlopt/nlopt_set_xtol_rel.html">nlopt_set_xtol_rel</a><span class="decoration">(opt, tol)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_srand" class="["public"]" href="./nlopt/nlopt_srand.html">nlopt_srand</a><span class="decoration">(seed)</span></code></td><td></td></tr><tr><td><code><a id="nlopt_srand_time" class="["public"]" href="./nlopt/nlopt_srand_time.html">nlopt_srand_time</a><span class="decoration">()</span></code></td><td></td></tr><tr><td><code><a id="nlopt_version" class="["public"]" href="./nlopt/nlopt_version.html">nlopt_version</a><span class="decoration">(major, minor, bugfix)</span></code></td><td></td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="nlopt_opt_s" class="["public"]" href="./nlopt/nlopt_opt_s.html">nlopt_opt_s</a></code></td><td></td></tr></table></section><section><h2>Enums</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="nlopt_algorithm" class="["public"]" href="./nlopt/nlopt_algorithm.html">nlopt_algorithm</a></code></td><td></td></tr><tr><td><code><a id="nlopt_result" class="["public"]" href="./nlopt/nlopt_result.html">nlopt_result</a></code></td><td></td></tr></table></section><section><h2>Manifest constants</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="NLOPT_AUGLAG" class="["public"]" href="./nlopt/NLOPT_AUGLAG.html"><code>NLOPT_AUGLAG</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_AUGLAG_EQ" class="["public"]" href="./nlopt/NLOPT_AUGLAG_EQ.html"><code>NLOPT_AUGLAG_EQ</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_FAILURE" class="["public"]" href="./nlopt/NLOPT_FAILURE.html"><code>NLOPT_FAILURE</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_FORCED_STOP" class="["public"]" href="./nlopt/NLOPT_FORCED_STOP.html"><code>NLOPT_FORCED_STOP</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_FTOL_REACHED" class="["public"]" href="./nlopt/NLOPT_FTOL_REACHED.html"><code>NLOPT_FTOL_REACHED</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GD_MLSL" class="["public"]" href="./nlopt/NLOPT_GD_MLSL.html"><code>NLOPT_GD_MLSL</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GD_MLSL_LDS" class="["public"]" href="./nlopt/NLOPT_GD_MLSL_LDS.html"><code>NLOPT_GD_MLSL_LDS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GD_STOGO" class="["public"]" href="./nlopt/NLOPT_GD_STOGO.html"><code>NLOPT_GD_STOGO</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GD_STOGO_RAND" class="["public"]" href="./nlopt/NLOPT_GD_STOGO_RAND.html"><code>NLOPT_GD_STOGO_RAND</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_CRS2_LM" class="["public"]" href="./nlopt/NLOPT_GN_CRS2_LM.html"><code>NLOPT_GN_CRS2_LM</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_DIRECT" class="["public"]" href="./nlopt/NLOPT_GN_DIRECT.html"><code>NLOPT_GN_DIRECT</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_DIRECT_L" class="["public"]" href="./nlopt/NLOPT_GN_DIRECT_L.html"><code>NLOPT_GN_DIRECT_L</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_DIRECT_L_NOSCAL" class="["public"]" href="./nlopt/NLOPT_GN_DIRECT_L_NOSCAL.html"><code>NLOPT_GN_DIRECT_L_NOSCAL</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_DIRECT_L_RAND" class="["public"]" href="./nlopt/NLOPT_GN_DIRECT_L_RAND.html"><code>NLOPT_GN_DIRECT_L_RAND</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_DIRECT_L_RAND_NOSCAL" class="["public"]" href="./nlopt/NLOPT_GN_DIRECT_L_RAND_NOSCAL.html"><code>NLOPT_GN_DIRECT_L_RAND_NOSCAL</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_DIRECT_NOSCAL" class="["public"]" href="./nlopt/NLOPT_GN_DIRECT_NOSCAL.html"><code>NLOPT_GN_DIRECT_NOSCAL</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_ESCH" class="["public"]" href="./nlopt/NLOPT_GN_ESCH.html"><code>NLOPT_GN_ESCH</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_ISRES" class="["public"]" href="./nlopt/NLOPT_GN_ISRES.html"><code>NLOPT_GN_ISRES</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_MLSL" class="["public"]" href="./nlopt/NLOPT_GN_MLSL.html"><code>NLOPT_GN_MLSL</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_MLSL_LDS" class="["public"]" href="./nlopt/NLOPT_GN_MLSL_LDS.html"><code>NLOPT_GN_MLSL_LDS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_ORIG_DIRECT" class="["public"]" href="./nlopt/NLOPT_GN_ORIG_DIRECT.html"><code>NLOPT_GN_ORIG_DIRECT</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_GN_ORIG_DIRECT_L" class="["public"]" href="./nlopt/NLOPT_GN_ORIG_DIRECT_L.html"><code>NLOPT_GN_ORIG_DIRECT_L</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_G_MLSL" class="["public"]" href="./nlopt/NLOPT_G_MLSL.html"><code>NLOPT_G_MLSL</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_G_MLSL_LDS" class="["public"]" href="./nlopt/NLOPT_G_MLSL_LDS.html"><code>NLOPT_G_MLSL_LDS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_INVALID_ARGS" class="["public"]" href="./nlopt/NLOPT_INVALID_ARGS.html"><code>NLOPT_INVALID_ARGS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_AUGLAG" class="["public"]" href="./nlopt/NLOPT_LD_AUGLAG.html"><code>NLOPT_LD_AUGLAG</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_AUGLAG_EQ" class="["public"]" href="./nlopt/NLOPT_LD_AUGLAG_EQ.html"><code>NLOPT_LD_AUGLAG_EQ</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_CCSAQ" class="["public"]" href="./nlopt/NLOPT_LD_CCSAQ.html"><code>NLOPT_LD_CCSAQ</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_LBFGS" class="["public"]" href="./nlopt/NLOPT_LD_LBFGS.html"><code>NLOPT_LD_LBFGS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_LBFGS_NOCEDAL" class="["public"]" href="./nlopt/NLOPT_LD_LBFGS_NOCEDAL.html"><code>NLOPT_LD_LBFGS_NOCEDAL</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_MMA" class="["public"]" href="./nlopt/NLOPT_LD_MMA.html"><code>NLOPT_LD_MMA</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_SLSQP" class="["public"]" href="./nlopt/NLOPT_LD_SLSQP.html"><code>NLOPT_LD_SLSQP</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_TNEWTON" class="["public"]" href="./nlopt/NLOPT_LD_TNEWTON.html"><code>NLOPT_LD_TNEWTON</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_TNEWTON_PRECOND" class="["public"]" href="./nlopt/NLOPT_LD_TNEWTON_PRECOND.html"><code>NLOPT_LD_TNEWTON_PRECOND</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_TNEWTON_PRECOND_RESTART" class="["public"]" href="./nlopt/NLOPT_LD_TNEWTON_PRECOND_RESTART.html"><code>NLOPT_LD_TNEWTON_PRECOND_RESTART</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_TNEWTON_RESTART" class="["public"]" href="./nlopt/NLOPT_LD_TNEWTON_RESTART.html"><code>NLOPT_LD_TNEWTON_RESTART</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_VAR1" class="["public"]" href="./nlopt/NLOPT_LD_VAR1.html"><code>NLOPT_LD_VAR1</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LD_VAR2" class="["public"]" href="./nlopt/NLOPT_LD_VAR2.html"><code>NLOPT_LD_VAR2</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_AUGLAG" class="["public"]" href="./nlopt/NLOPT_LN_AUGLAG.html"><code>NLOPT_LN_AUGLAG</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_AUGLAG_EQ" class="["public"]" href="./nlopt/NLOPT_LN_AUGLAG_EQ.html"><code>NLOPT_LN_AUGLAG_EQ</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_BOBYQA" class="["public"]" href="./nlopt/NLOPT_LN_BOBYQA.html"><code>NLOPT_LN_BOBYQA</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_COBYLA" class="["public"]" href="./nlopt/NLOPT_LN_COBYLA.html"><code>NLOPT_LN_COBYLA</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_NELDERMEAD" class="["public"]" href="./nlopt/NLOPT_LN_NELDERMEAD.html"><code>NLOPT_LN_NELDERMEAD</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_NEWUOA" class="["public"]" href="./nlopt/NLOPT_LN_NEWUOA.html"><code>NLOPT_LN_NEWUOA</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_NEWUOA_BOUND" class="["public"]" href="./nlopt/NLOPT_LN_NEWUOA_BOUND.html"><code>NLOPT_LN_NEWUOA_BOUND</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_PRAXIS" class="["public"]" href="./nlopt/NLOPT_LN_PRAXIS.html"><code>NLOPT_LN_PRAXIS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_LN_SBPLX" class="["public"]" href="./nlopt/NLOPT_LN_SBPLX.html"><code>NLOPT_LN_SBPLX</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_MAXEVAL_REACHED" class="["public"]" href="./nlopt/NLOPT_MAXEVAL_REACHED.html"><code>NLOPT_MAXEVAL_REACHED</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_MAXTIME_REACHED" class="["public"]" href="./nlopt/NLOPT_MAXTIME_REACHED.html"><code>NLOPT_MAXTIME_REACHED</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_NUM_ALGORITHMS" class="["public"]" href="./nlopt/NLOPT_NUM_ALGORITHMS.html"><code>NLOPT_NUM_ALGORITHMS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_OUT_OF_MEMORY" class="["public"]" href="./nlopt/NLOPT_OUT_OF_MEMORY.html"><code>NLOPT_OUT_OF_MEMORY</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_ROUNDOFF_LIMITED" class="["public"]" href="./nlopt/NLOPT_ROUNDOFF_LIMITED.html"><code>NLOPT_ROUNDOFF_LIMITED</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_STOPVAL_REACHED" class="["public"]" href="./nlopt/NLOPT_STOPVAL_REACHED.html"><code>NLOPT_STOPVAL_REACHED</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_SUCCESS" class="["public"]" href="./nlopt/NLOPT_SUCCESS.html"><code>NLOPT_SUCCESS</code></a></td><td></td><td></td></tr><tr><td><a id="NLOPT_XTOL_REACHED" class="["public"]" href="./nlopt/NLOPT_XTOL_REACHED.html"><code>NLOPT_XTOL_REACHED</code></a></td><td></td><td></td></tr></table></section><section><h2>Aliases</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="nlopt_func" class="["public"]" href="./nlopt/nlopt_func.html"><code>nlopt_func</code></a></td><td><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">double</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td></tr><tr><td><a id="nlopt_func_old" class="["public"]" href="./nlopt/nlopt_func_old.html"><code>nlopt_func_old</code></a></td><td><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">double</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td></tr><tr><td><a id="nlopt_mfunc" class="["public"]" href="./nlopt/nlopt_mfunc.html"><code>nlopt_mfunc</code></a></td><td><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">uint</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td></tr><tr><td><a id="nlopt_munge" class="["public"]" href="./nlopt/nlopt_munge.html"><code>nlopt_munge</code></a></td><td><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td></tr><tr><td><a id="nlopt_munge2" class="["public"]" href="./nlopt/nlopt_munge2.html"><code>nlopt_munge2</code></a></td><td><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td></tr><tr><td><a id="nlopt_opt" class="["public"]" href="./nlopt/nlopt_opt.html"><code>nlopt_opt</code></a></td><td><code class="prettyprint lang-d"><a href="./nlopt/nlopt_opt_s.html"><span class="pln">nlopt_opt_s</span></a><span class="pun">*</span></code></td><td></td></tr><tr><td><a id="nlopt_precond" class="["public"]" href="./nlopt/nlopt_precond.html"><code>nlopt_precond</code></a></td><td><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module nlopt</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="./nlopt.html">nlopt</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module nlopt</h1><p></p>
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_add_equality_constraint" class="[&quot;public&quot;]" href="./nlopt/nlopt_add_equality_constraint.html">nlopt_add_equality_constraint</a><span class="decoration">(opt, h, h_data, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_add_equality_mconstraint" class="[&quot;public&quot;]" href="./nlopt/nlopt_add_equality_mconstraint.html">nlopt_add_equality_mconstraint</a><span class="decoration">(opt, m, h, h_data, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_add_inequality_constraint" class="[&quot;public&quot;]" href="./nlopt/nlopt_add_inequality_constraint.html">nlopt_add_inequality_constraint</a><span class="decoration">(opt, fc, fc_data, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_add_inequality_mconstraint" class="[&quot;public&quot;]" href="./nlopt/nlopt_add_inequality_mconstraint.html">nlopt_add_inequality_mconstraint</a><span class="decoration">(opt, m, fc, fc_data, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_add_precond_equality_constraint" class="[&quot;public&quot;]" href="./nlopt/nlopt_add_precond_equality_constraint.html">nlopt_add_precond_equality_constraint</a><span class="decoration">(opt, h, pre, h_data, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_add_precond_inequality_constraint" class="[&quot;public&quot;]" href="./nlopt/nlopt_add_precond_inequality_constraint.html">nlopt_add_precond_inequality_constraint</a><span class="decoration">(opt, fc, pre, fc_data, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_algorithm_name" class="[&quot;public&quot;]" href="./nlopt/nlopt_algorithm_name.html">nlopt_algorithm_name</a><span class="decoration">(a)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_copy" class="[&quot;public&quot;]" href="./nlopt/nlopt_copy.html">nlopt_copy</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_create" class="[&quot;public&quot;]" href="./nlopt/nlopt_create.html">nlopt_create</a><span class="decoration">(algorithm, n)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_destroy" class="[&quot;public&quot;]" href="./nlopt/nlopt_destroy.html">nlopt_destroy</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_force_stop" class="[&quot;public&quot;]" href="./nlopt/nlopt_force_stop.html">nlopt_force_stop</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_algorithm" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_algorithm.html">nlopt_get_algorithm</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_dimension" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_dimension.html">nlopt_get_dimension</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_force_stop" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_force_stop.html">nlopt_get_force_stop</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_ftol_abs" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_ftol_abs.html">nlopt_get_ftol_abs</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_ftol_rel" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_ftol_rel.html">nlopt_get_ftol_rel</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_initial_step" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_initial_step.html">nlopt_get_initial_step</a><span class="decoration">(opt, x, dx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_local_search_algorithm" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_local_search_algorithm.html">nlopt_get_local_search_algorithm</a><span class="decoration">(deriv, nonderiv, maxeval)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_lower_bounds" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_lower_bounds.html">nlopt_get_lower_bounds</a><span class="decoration">(opt, lb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_maxeval" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_maxeval.html">nlopt_get_maxeval</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_maxtime" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_maxtime.html">nlopt_get_maxtime</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_population" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_population.html">nlopt_get_population</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_stochastic_population" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_stochastic_population.html">nlopt_get_stochastic_population</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_stopval" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_stopval.html">nlopt_get_stopval</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_upper_bounds" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_upper_bounds.html">nlopt_get_upper_bounds</a><span class="decoration">(opt, ub)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_vector_storage" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_vector_storage.html">nlopt_get_vector_storage</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_xtol_abs" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_xtol_abs.html">nlopt_get_xtol_abs</a><span class="decoration">(opt, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_get_xtol_rel" class="[&quot;public&quot;]" href="./nlopt/nlopt_get_xtol_rel.html">nlopt_get_xtol_rel</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_minimize" class="[&quot;public&quot;]" href="./nlopt/nlopt_minimize.html">nlopt_minimize</a><span class="decoration">(algorithm, n, f, f_data, lb, ub, x, minf, minf_max, ftol_rel, ftol_abs, xtol_rel, xtol_abs, maxeval, maxtime)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_minimize_constrained" class="[&quot;public&quot;]" href="./nlopt/nlopt_minimize_constrained.html">nlopt_minimize_constrained</a><span class="decoration">(algorithm, n, f, f_data, m, fc, fc_data, fc_datum_size, lb, ub, x, minf, minf_max, ftol_rel, ftol_abs, xtol_rel, xtol_abs, maxeval, maxtime)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_minimize_econstrained" class="[&quot;public&quot;]" href="./nlopt/nlopt_minimize_econstrained.html">nlopt_minimize_econstrained</a><span class="decoration">(algorithm, n, f, f_data, m, fc, fc_data, fc_datum_size, p, h, h_data, h_datum_size, lb, ub, x, minf, minf_max, ftol_rel, ftol_abs, xtol_rel, xtol_abs, htol_rel, htol_abs, maxeval, maxtime)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_munge_data" class="[&quot;public&quot;]" href="./nlopt/nlopt_munge_data.html">nlopt_munge_data</a><span class="decoration">(opt, munge, data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_optimize" class="[&quot;public&quot;]" href="./nlopt/nlopt_optimize.html">nlopt_optimize</a><span class="decoration">(opt, x, opt_f)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_remove_equality_constraints" class="[&quot;public&quot;]" href="./nlopt/nlopt_remove_equality_constraints.html">nlopt_remove_equality_constraints</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_remove_inequality_constraints" class="[&quot;public&quot;]" href="./nlopt/nlopt_remove_inequality_constraints.html">nlopt_remove_inequality_constraints</a><span class="decoration">(opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_default_initial_step" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_default_initial_step.html">nlopt_set_default_initial_step</a><span class="decoration">(opt, x)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_force_stop" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_force_stop.html">nlopt_set_force_stop</a><span class="decoration">(opt, val)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_ftol_abs" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_ftol_abs.html">nlopt_set_ftol_abs</a><span class="decoration">(opt, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_ftol_rel" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_ftol_rel.html">nlopt_set_ftol_rel</a><span class="decoration">(opt, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_initial_step" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_initial_step.html">nlopt_set_initial_step</a><span class="decoration">(opt, dx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_initial_step1" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_initial_step1.html">nlopt_set_initial_step1</a><span class="decoration">(opt, dx)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_local_optimizer" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_local_optimizer.html">nlopt_set_local_optimizer</a><span class="decoration">(opt, local_opt)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_local_search_algorithm" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_local_search_algorithm.html">nlopt_set_local_search_algorithm</a><span class="decoration">(deriv, nonderiv, maxeval)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_lower_bounds" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_lower_bounds.html">nlopt_set_lower_bounds</a><span class="decoration">(opt, lb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_lower_bounds1" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_lower_bounds1.html">nlopt_set_lower_bounds1</a><span class="decoration">(opt, lb)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_maxeval" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_maxeval.html">nlopt_set_maxeval</a><span class="decoration">(opt, maxeval)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_maxtime" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_maxtime.html">nlopt_set_maxtime</a><span class="decoration">(opt, maxtime)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_max_objective" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_max_objective.html">nlopt_set_max_objective</a><span class="decoration">(opt, f, f_data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_min_objective" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_min_objective.html">nlopt_set_min_objective</a><span class="decoration">(opt, f, f_data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_munge" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_munge.html">nlopt_set_munge</a><span class="decoration">(opt, munge_on_destroy, munge_on_copy)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_population" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_population.html">nlopt_set_population</a><span class="decoration">(opt, pop)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_precond_max_objective" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_precond_max_objective.html">nlopt_set_precond_max_objective</a><span class="decoration">(opt, f, pre, f_data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_precond_min_objective" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_precond_min_objective.html">nlopt_set_precond_min_objective</a><span class="decoration">(opt, f, pre, f_data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_stochastic_population" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_stochastic_population.html">nlopt_set_stochastic_population</a><span class="decoration">(pop)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_stopval" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_stopval.html">nlopt_set_stopval</a><span class="decoration">(opt, stopval)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_upper_bounds" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_upper_bounds.html">nlopt_set_upper_bounds</a><span class="decoration">(opt, ub)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_upper_bounds1" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_upper_bounds1.html">nlopt_set_upper_bounds1</a><span class="decoration">(opt, ub)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_vector_storage" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_vector_storage.html">nlopt_set_vector_storage</a><span class="decoration">(opt, dim)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_xtol_abs" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_xtol_abs.html">nlopt_set_xtol_abs</a><span class="decoration">(opt, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_xtol_abs1" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_xtol_abs1.html">nlopt_set_xtol_abs1</a><span class="decoration">(opt, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_set_xtol_rel" class="[&quot;public&quot;]" href="./nlopt/nlopt_set_xtol_rel.html">nlopt_set_xtol_rel</a><span class="decoration">(opt, tol)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_srand" class="[&quot;public&quot;]" href="./nlopt/nlopt_srand.html">nlopt_srand</a><span class="decoration">(seed)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_srand_time" class="[&quot;public&quot;]" href="./nlopt/nlopt_srand_time.html">nlopt_srand_time</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_version" class="[&quot;public&quot;]" href="./nlopt/nlopt_version.html">nlopt_version</a><span class="decoration">(major, minor, bugfix)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_opt_s" class="[&quot;public&quot;]" href="./nlopt/nlopt_opt_s.html">nlopt_opt_s</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_algorithm" class="[&quot;public&quot;]" href="./nlopt/nlopt_algorithm.html">nlopt_algorithm</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="nlopt_result" class="[&quot;public&quot;]" href="./nlopt/nlopt_result.html">nlopt_result</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_AUGLAG" class="[&quot;public&quot;]" href="./nlopt/NLOPT_AUGLAG.html">
+								<code>NLOPT_AUGLAG</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_AUGLAG_EQ" class="[&quot;public&quot;]" href="./nlopt/NLOPT_AUGLAG_EQ.html">
+								<code>NLOPT_AUGLAG_EQ</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_FAILURE" class="[&quot;public&quot;]" href="./nlopt/NLOPT_FAILURE.html">
+								<code>NLOPT_FAILURE</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_FORCED_STOP" class="[&quot;public&quot;]" href="./nlopt/NLOPT_FORCED_STOP.html">
+								<code>NLOPT_FORCED_STOP</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_FTOL_REACHED" class="[&quot;public&quot;]" href="./nlopt/NLOPT_FTOL_REACHED.html">
+								<code>NLOPT_FTOL_REACHED</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GD_MLSL" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GD_MLSL.html">
+								<code>NLOPT_GD_MLSL</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GD_MLSL_LDS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GD_MLSL_LDS.html">
+								<code>NLOPT_GD_MLSL_LDS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GD_STOGO" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GD_STOGO.html">
+								<code>NLOPT_GD_STOGO</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GD_STOGO_RAND" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GD_STOGO_RAND.html">
+								<code>NLOPT_GD_STOGO_RAND</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_CRS2_LM" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_CRS2_LM.html">
+								<code>NLOPT_GN_CRS2_LM</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_DIRECT" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_DIRECT.html">
+								<code>NLOPT_GN_DIRECT</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_DIRECT_L" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_DIRECT_L.html">
+								<code>NLOPT_GN_DIRECT_L</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_DIRECT_L_NOSCAL" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_DIRECT_L_NOSCAL.html">
+								<code>NLOPT_GN_DIRECT_L_NOSCAL</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_DIRECT_L_RAND" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_DIRECT_L_RAND.html">
+								<code>NLOPT_GN_DIRECT_L_RAND</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_DIRECT_L_RAND_NOSCAL" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_DIRECT_L_RAND_NOSCAL.html">
+								<code>NLOPT_GN_DIRECT_L_RAND_NOSCAL</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_DIRECT_NOSCAL" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_DIRECT_NOSCAL.html">
+								<code>NLOPT_GN_DIRECT_NOSCAL</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_ESCH" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_ESCH.html">
+								<code>NLOPT_GN_ESCH</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_ISRES" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_ISRES.html">
+								<code>NLOPT_GN_ISRES</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_MLSL" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_MLSL.html">
+								<code>NLOPT_GN_MLSL</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_MLSL_LDS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_MLSL_LDS.html">
+								<code>NLOPT_GN_MLSL_LDS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_ORIG_DIRECT" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_ORIG_DIRECT.html">
+								<code>NLOPT_GN_ORIG_DIRECT</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_GN_ORIG_DIRECT_L" class="[&quot;public&quot;]" href="./nlopt/NLOPT_GN_ORIG_DIRECT_L.html">
+								<code>NLOPT_GN_ORIG_DIRECT_L</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_G_MLSL" class="[&quot;public&quot;]" href="./nlopt/NLOPT_G_MLSL.html">
+								<code>NLOPT_G_MLSL</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_G_MLSL_LDS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_G_MLSL_LDS.html">
+								<code>NLOPT_G_MLSL_LDS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_INVALID_ARGS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_INVALID_ARGS.html">
+								<code>NLOPT_INVALID_ARGS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_AUGLAG" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_AUGLAG.html">
+								<code>NLOPT_LD_AUGLAG</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_AUGLAG_EQ" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_AUGLAG_EQ.html">
+								<code>NLOPT_LD_AUGLAG_EQ</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_CCSAQ" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_CCSAQ.html">
+								<code>NLOPT_LD_CCSAQ</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_LBFGS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_LBFGS.html">
+								<code>NLOPT_LD_LBFGS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_LBFGS_NOCEDAL" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_LBFGS_NOCEDAL.html">
+								<code>NLOPT_LD_LBFGS_NOCEDAL</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_MMA" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_MMA.html">
+								<code>NLOPT_LD_MMA</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_SLSQP" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_SLSQP.html">
+								<code>NLOPT_LD_SLSQP</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_TNEWTON" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_TNEWTON.html">
+								<code>NLOPT_LD_TNEWTON</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_TNEWTON_PRECOND" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_TNEWTON_PRECOND.html">
+								<code>NLOPT_LD_TNEWTON_PRECOND</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_TNEWTON_PRECOND_RESTART" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_TNEWTON_PRECOND_RESTART.html">
+								<code>NLOPT_LD_TNEWTON_PRECOND_RESTART</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_TNEWTON_RESTART" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_TNEWTON_RESTART.html">
+								<code>NLOPT_LD_TNEWTON_RESTART</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_VAR1" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_VAR1.html">
+								<code>NLOPT_LD_VAR1</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LD_VAR2" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LD_VAR2.html">
+								<code>NLOPT_LD_VAR2</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_AUGLAG" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_AUGLAG.html">
+								<code>NLOPT_LN_AUGLAG</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_AUGLAG_EQ" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_AUGLAG_EQ.html">
+								<code>NLOPT_LN_AUGLAG_EQ</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_BOBYQA" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_BOBYQA.html">
+								<code>NLOPT_LN_BOBYQA</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_COBYLA" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_COBYLA.html">
+								<code>NLOPT_LN_COBYLA</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_NELDERMEAD" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_NELDERMEAD.html">
+								<code>NLOPT_LN_NELDERMEAD</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_NEWUOA" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_NEWUOA.html">
+								<code>NLOPT_LN_NEWUOA</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_NEWUOA_BOUND" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_NEWUOA_BOUND.html">
+								<code>NLOPT_LN_NEWUOA_BOUND</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_PRAXIS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_PRAXIS.html">
+								<code>NLOPT_LN_PRAXIS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_LN_SBPLX" class="[&quot;public&quot;]" href="./nlopt/NLOPT_LN_SBPLX.html">
+								<code>NLOPT_LN_SBPLX</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_MAXEVAL_REACHED" class="[&quot;public&quot;]" href="./nlopt/NLOPT_MAXEVAL_REACHED.html">
+								<code>NLOPT_MAXEVAL_REACHED</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_MAXTIME_REACHED" class="[&quot;public&quot;]" href="./nlopt/NLOPT_MAXTIME_REACHED.html">
+								<code>NLOPT_MAXTIME_REACHED</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_NUM_ALGORITHMS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_NUM_ALGORITHMS.html">
+								<code>NLOPT_NUM_ALGORITHMS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_OUT_OF_MEMORY" class="[&quot;public&quot;]" href="./nlopt/NLOPT_OUT_OF_MEMORY.html">
+								<code>NLOPT_OUT_OF_MEMORY</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_ROUNDOFF_LIMITED" class="[&quot;public&quot;]" href="./nlopt/NLOPT_ROUNDOFF_LIMITED.html">
+								<code>NLOPT_ROUNDOFF_LIMITED</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_STOPVAL_REACHED" class="[&quot;public&quot;]" href="./nlopt/NLOPT_STOPVAL_REACHED.html">
+								<code>NLOPT_STOPVAL_REACHED</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_SUCCESS" class="[&quot;public&quot;]" href="./nlopt/NLOPT_SUCCESS.html">
+								<code>NLOPT_SUCCESS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NLOPT_XTOL_REACHED" class="[&quot;public&quot;]" href="./nlopt/NLOPT_XTOL_REACHED.html">
+								<code>NLOPT_XTOL_REACHED</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="nlopt_func" class="[&quot;public&quot;]" href="./nlopt/nlopt_func.html">
+								<code>nlopt_func</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">double</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nlopt_func_old" class="[&quot;public&quot;]" href="./nlopt/nlopt_func_old.html">
+								<code>nlopt_func_old</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">double</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nlopt_mfunc" class="[&quot;public&quot;]" href="./nlopt/nlopt_mfunc.html">
+								<code>nlopt_mfunc</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">uint</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nlopt_munge" class="[&quot;public&quot;]" href="./nlopt/nlopt_munge.html">
+								<code>nlopt_munge</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nlopt_munge2" class="[&quot;public&quot;]" href="./nlopt/nlopt_munge2.html">
+								<code>nlopt_munge2</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nlopt_opt" class="[&quot;public&quot;]" href="./nlopt/nlopt_opt.html">
+								<code>nlopt_opt</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><a href="./nlopt/nlopt_opt_s.html"><span class="pln">nlopt_opt_s</span></a><span class="pun">*</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="nlopt_precond" class="[&quot;public&quot;]" href="./nlopt/nlopt_precond.html">
+								<code>nlopt_precond</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">double</span><span class="pun">)</span><span class="pun">*</span><span class="pun">, </span><span class="typ">double</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

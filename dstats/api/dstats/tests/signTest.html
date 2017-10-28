@@ -1,31 +1,137 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>signTest - multiple declarations</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module selected"><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>signTest - multiple declarations</h1><nav class="page-nav"><ul><li><a href="#0">Function <code>signTest</code></a></li><li><a href="#1">Function <code>signTest</code></a></li></ul></nav><h2 id="0">Function signTest</h2><p>Sign test for differences between paired values.  This is a very robust
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>signTest - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>signTest - multiple declarations</h1>
+			<nav class="page-nav">
+				<ul>
+					<li>
+						<a href="#0">
+							Function <code>signTest</code>
+						</a>
+					</li>
+					<li>
+						<a href="#1">
+							Function <code>signTest</code>
+						</a>
+					</li>
+				</ul>
+			</nav><h2 id="0">Function signTest</h2><p>Sign test for differences between paired values.  This is a very robust
  but very low power test.  Alternatives are Alt.less, meaning elements
  of before are typically less than corresponding elements of after,
  Alt.greater, meaning elements of before are typically greater than
  elements of after, and Alt.twoSided, meaning that there is a significant
  difference in either direction.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">signTest</span>(T, U)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">before</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">after</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
-<br/>
-<span class="pun">)</span>
-<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">before<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">after<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">) == </span><span class="typ">bool</span><span class="pun">)</span><span class="pun">);</span></div></code></div><section></section>
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">signTest</span>(T, U)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">before</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">U</span> <span class="pln">after</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
+			<br/>
+			<span class="pun">)</span>
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">U </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">before<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">after<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">) == </span><span class="typ">bool</span><span class="pun">)</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
 
-<section><h3>Returns</h3>
+			<section><h3>Returns</h3>
 <p>A TestRes with the proportion of elements of before that were
  greater than the corresponding element of after, and the P-value against
  the given alternative.
@@ -33,18 +139,50 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
 </section>
 <h2 id="1">Function signTest</h2><p>Similar to the overload, but allows testing for a difference between a
  range and a fixed value mu.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">signTest</span>(T)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">mu</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
-<br/>
-<span class="pun">)</span>
-<br/>
-<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">data<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">mu</span><span class="pun">) == </span><span class="typ">bool</span><span class="pun">)</span><span class="pun">);</span></div></code></div>
-
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<a href="../../dstats/tests/TestRes.html"><span class="typ">TestRes</span></a> <span class="pln">signTest</span>(T)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">data</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">double</span> <span class="pln">mu</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<a href="../../dstats/tests/Alt.html"><span class="typ">Alt</span></a> <span class="pln">alt</span> <span class="pun">=</span> <span class="typ">Alt<wbr/></span><span class="pun">.</span><span class="pln">twoSided</span>
+			<br/>
+			<span class="pun">)</span>
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="pln">doubleInput</span><span class="pun">!</span><span class="pln">T </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">data<wbr/></span><span class="pun">.</span><span class="pln">front </span><span class="pun">&lt; </span><span class="pln">mu</span><span class="pun">) == </span><span class="typ">bool</span><span class="pun">)</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

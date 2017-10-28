@@ -1,21 +1,499 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module clFFT</title>
-<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
-<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li><div class="module selected"><a href="./clFFT.html">clFFT</a></div></li></ul></nav><div id="main-contents"><h1>Module clFFT</h1><p></p>
-<section></section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="clfftBakePlan" class="["public"]" href="./clFFT/clfftBakePlan.html">clfftBakePlan</a><span class="decoration">(plHandle, numQueues, commQueueFFT, pfn_notify, user_data)</span></code></td><td></td></tr><tr><td><code><a id="clfftCopyPlan" class="["public"]" href="./clFFT/clfftCopyPlan.html">clfftCopyPlan</a><span class="decoration">(out_plHandle, new_context, in_plHandle)</span></code></td><td></td></tr><tr><td><code><a id="clfftCreateDefaultPlan" class="["public"]" href="./clFFT/clfftCreateDefaultPlan.html">clfftCreateDefaultPlan</a><span class="decoration">(plHandle, context, dim, clLengths)</span></code></td><td></td></tr><tr><td><code><a id="clfftDestroyPlan" class="["public"]" href="./clFFT/clfftDestroyPlan.html">clfftDestroyPlan</a><span class="decoration">(plHandle)</span></code></td><td></td></tr><tr><td><code><a id="clfftEnqueueTransform" class="["public"]" href="./clFFT/clfftEnqueueTransform.html">clfftEnqueueTransform</a><span class="decoration">(plHandle, dir, numQueuesAndEvents, commQueues, numWaitEvents, waitEvents, outEvents, inputBuffers, outputBuffers, tmpBuffer)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetLayout" class="["public"]" href="./clFFT/clfftGetLayout.html">clfftGetLayout</a><span class="decoration">(plHandle, iLayout, oLayout)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanBatchSize" class="["public"]" href="./clFFT/clfftGetPlanBatchSize.html">clfftGetPlanBatchSize</a><span class="decoration">(plHandle, batchSize)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanContext" class="["public"]" href="./clFFT/clfftGetPlanContext.html">clfftGetPlanContext</a><span class="decoration">(plHandle, context)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanDim" class="["public"]" href="./clFFT/clfftGetPlanDim.html">clfftGetPlanDim</a><span class="decoration">(plHandle, dim, size)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanDistance" class="["public"]" href="./clFFT/clfftGetPlanDistance.html">clfftGetPlanDistance</a><span class="decoration">(plHandle, iDist, oDist)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanInStride" class="["public"]" href="./clFFT/clfftGetPlanInStride.html">clfftGetPlanInStride</a><span class="decoration">(plHandle, dim, clStrides)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanLength" class="["public"]" href="./clFFT/clfftGetPlanLength.html">clfftGetPlanLength</a><span class="decoration">(plHandle, dim, clLengths)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanOutStride" class="["public"]" href="./clFFT/clfftGetPlanOutStride.html">clfftGetPlanOutStride</a><span class="decoration">(plHandle, dim, clStrides)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanPrecision" class="["public"]" href="./clFFT/clfftGetPlanPrecision.html">clfftGetPlanPrecision</a><span class="decoration">(plHandle, precision)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanScale" class="["public"]" href="./clFFT/clfftGetPlanScale.html">clfftGetPlanScale</a><span class="decoration">(plHandle, dir, scale)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetPlanTransposeResult" class="["public"]" href="./clFFT/clfftGetPlanTransposeResult.html">clfftGetPlanTransposeResult</a><span class="decoration">(plHandle, transposed)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetResultLocation" class="["public"]" href="./clFFT/clfftGetResultLocation.html">clfftGetResultLocation</a><span class="decoration">(plHandle, placeness)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetTmpBufSize" class="["public"]" href="./clFFT/clfftGetTmpBufSize.html">clfftGetTmpBufSize</a><span class="decoration">(plHandle, buffersize)</span></code></td><td></td></tr><tr><td><code><a id="clfftGetVersion" class="["public"]" href="./clFFT/clfftGetVersion.html">clfftGetVersion</a><span class="decoration">(major, minor, patch)</span></code></td><td></td></tr><tr><td><code><a id="clfftInitSetupData" class="["public"]" href="./clFFT/clfftInitSetupData.html">clfftInitSetupData</a><span class="decoration">(setupData)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetLayout" class="["public"]" href="./clFFT/clfftSetLayout.html">clfftSetLayout</a><span class="decoration">(plHandle, iLayout, oLayout)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanBatchSize" class="["public"]" href="./clFFT/clfftSetPlanBatchSize.html">clfftSetPlanBatchSize</a><span class="decoration">(plHandle, batchSize)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanDim" class="["public"]" href="./clFFT/clfftSetPlanDim.html">clfftSetPlanDim</a><span class="decoration">(plHandle, dim)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanDistance" class="["public"]" href="./clFFT/clfftSetPlanDistance.html">clfftSetPlanDistance</a><span class="decoration">(plHandle, iDist, oDist)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanInStride" class="["public"]" href="./clFFT/clfftSetPlanInStride.html">clfftSetPlanInStride</a><span class="decoration">(plHandle, dim, clStrides)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanLength" class="["public"]" href="./clFFT/clfftSetPlanLength.html">clfftSetPlanLength</a><span class="decoration">(plHandle, dim, clLengths)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanOutStride" class="["public"]" href="./clFFT/clfftSetPlanOutStride.html">clfftSetPlanOutStride</a><span class="decoration">(plHandle, dim, clStrides)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanPrecision" class="["public"]" href="./clFFT/clfftSetPlanPrecision.html">clfftSetPlanPrecision</a><span class="decoration">(plHandle, precision)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanScale" class="["public"]" href="./clFFT/clfftSetPlanScale.html">clfftSetPlanScale</a><span class="decoration">(plHandle, dir, scale)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetPlanTransposeResult" class="["public"]" href="./clFFT/clfftSetPlanTransposeResult.html">clfftSetPlanTransposeResult</a><span class="decoration">(plHandle, transposed)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetResultLocation" class="["public"]" href="./clFFT/clfftSetResultLocation.html">clfftSetResultLocation</a><span class="decoration">(plHandle, placeness)</span></code></td><td></td></tr><tr><td><code><a id="clfftSetup" class="["public"]" href="./clFFT/clfftSetup.html">clfftSetup</a><span class="decoration">(setupData)</span></code></td><td></td></tr><tr><td><code><a id="clfftTeardown" class="["public"]" href="./clFFT/clfftTeardown.html">clfftTeardown</a><span class="decoration">()</span></code></td><td></td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="clfftSetupData" class="["public"]" href="./clFFT/clfftSetupData.html">clfftSetupData</a></code></td><td></td></tr></table></section><section><h2>Enums</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="clfftDim" class="["public"]" href="./clFFT/clfftDim.html">clfftDim</a></code></td><td></td></tr><tr><td><code><a id="clfftDirection" class="["public"]" href="./clFFT/clfftDirection.html">clfftDirection</a></code></td><td></td></tr><tr><td><code><a id="clfftLayout" class="["public"]" href="./clFFT/clfftLayout.html">clfftLayout</a></code></td><td></td></tr><tr><td><code><a id="clfftPrecision" class="["public"]" href="./clFFT/clfftPrecision.html">clfftPrecision</a></code></td><td></td></tr><tr><td><code><a id="clfftResultLocation" class="["public"]" href="./clFFT/clfftResultLocation.html">clfftResultLocation</a></code></td><td></td></tr><tr><td><code><a id="clfftResultTransposed" class="["public"]" href="./clFFT/clfftResultTransposed.html">clfftResultTransposed</a></code></td><td></td></tr><tr><td><code><a id="clfftStatus" class="["public"]" href="./clFFT/clfftStatus.html">clfftStatus</a></code></td><td></td></tr></table></section><section><h2>Templates</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="FreeEnumMembers" class="["public"]" href="./clFFT/FreeEnumMembers.html">FreeEnumMembers</a></code></td><td></td></tr></table></section><section><h2>Manifest constants</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="clfftVersionMajor" class="["public"]" href="./clFFT/clfftVersionMajor.html"><code>clfftVersionMajor</code></a></td><td></td><td></td></tr><tr><td><a id="clfftVersionMinor" class="["public"]" href="./clFFT/clfftVersionMinor.html"><code>clfftVersionMinor</code></a></td><td></td><td></td></tr><tr><td><a id="clfftVersionPatch" class="["public"]" href="./clFFT/clfftVersionPatch.html"><code>clfftVersionPatch</code></a></td><td></td><td></td></tr><tr><td><a id="CLFFT_DUMP_PROGRAMS" class="["public"]" href="./clFFT/CLFFT_DUMP_PROGRAMS.html"><code>CLFFT_DUMP_PROGRAMS</code></a></td><td></td><td></td></tr></table></section><section><h2>Aliases</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="clfftPlanHandle" class="["public"]" href="./clFFT/clfftPlanHandle.html"><code>clfftPlanHandle</code></a></td><td><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module clFFT</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="./clFFT.html">clFFT</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module clFFT</h1><p></p>
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftBakePlan" class="[&quot;public&quot;]" href="./clFFT/clfftBakePlan.html">clfftBakePlan</a><span class="decoration">(plHandle, numQueues, commQueueFFT, pfn_notify, user_data)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftCopyPlan" class="[&quot;public&quot;]" href="./clFFT/clfftCopyPlan.html">clfftCopyPlan</a><span class="decoration">(out_plHandle, new_context, in_plHandle)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftCreateDefaultPlan" class="[&quot;public&quot;]" href="./clFFT/clfftCreateDefaultPlan.html">clfftCreateDefaultPlan</a><span class="decoration">(plHandle, context, dim, clLengths)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftDestroyPlan" class="[&quot;public&quot;]" href="./clFFT/clfftDestroyPlan.html">clfftDestroyPlan</a><span class="decoration">(plHandle)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftEnqueueTransform" class="[&quot;public&quot;]" href="./clFFT/clfftEnqueueTransform.html">clfftEnqueueTransform</a><span class="decoration">(plHandle, dir, numQueuesAndEvents, commQueues, numWaitEvents, waitEvents, outEvents, inputBuffers, outputBuffers, tmpBuffer)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetLayout" class="[&quot;public&quot;]" href="./clFFT/clfftGetLayout.html">clfftGetLayout</a><span class="decoration">(plHandle, iLayout, oLayout)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanBatchSize" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanBatchSize.html">clfftGetPlanBatchSize</a><span class="decoration">(plHandle, batchSize)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanContext" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanContext.html">clfftGetPlanContext</a><span class="decoration">(plHandle, context)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanDim" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanDim.html">clfftGetPlanDim</a><span class="decoration">(plHandle, dim, size)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanDistance" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanDistance.html">clfftGetPlanDistance</a><span class="decoration">(plHandle, iDist, oDist)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanInStride" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanInStride.html">clfftGetPlanInStride</a><span class="decoration">(plHandle, dim, clStrides)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanLength" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanLength.html">clfftGetPlanLength</a><span class="decoration">(plHandle, dim, clLengths)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanOutStride" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanOutStride.html">clfftGetPlanOutStride</a><span class="decoration">(plHandle, dim, clStrides)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanPrecision" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanPrecision.html">clfftGetPlanPrecision</a><span class="decoration">(plHandle, precision)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanScale" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanScale.html">clfftGetPlanScale</a><span class="decoration">(plHandle, dir, scale)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetPlanTransposeResult" class="[&quot;public&quot;]" href="./clFFT/clfftGetPlanTransposeResult.html">clfftGetPlanTransposeResult</a><span class="decoration">(plHandle, transposed)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetResultLocation" class="[&quot;public&quot;]" href="./clFFT/clfftGetResultLocation.html">clfftGetResultLocation</a><span class="decoration">(plHandle, placeness)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetTmpBufSize" class="[&quot;public&quot;]" href="./clFFT/clfftGetTmpBufSize.html">clfftGetTmpBufSize</a><span class="decoration">(plHandle, buffersize)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftGetVersion" class="[&quot;public&quot;]" href="./clFFT/clfftGetVersion.html">clfftGetVersion</a><span class="decoration">(major, minor, patch)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftInitSetupData" class="[&quot;public&quot;]" href="./clFFT/clfftInitSetupData.html">clfftInitSetupData</a><span class="decoration">(setupData)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetLayout" class="[&quot;public&quot;]" href="./clFFT/clfftSetLayout.html">clfftSetLayout</a><span class="decoration">(plHandle, iLayout, oLayout)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanBatchSize" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanBatchSize.html">clfftSetPlanBatchSize</a><span class="decoration">(plHandle, batchSize)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanDim" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanDim.html">clfftSetPlanDim</a><span class="decoration">(plHandle, dim)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanDistance" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanDistance.html">clfftSetPlanDistance</a><span class="decoration">(plHandle, iDist, oDist)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanInStride" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanInStride.html">clfftSetPlanInStride</a><span class="decoration">(plHandle, dim, clStrides)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanLength" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanLength.html">clfftSetPlanLength</a><span class="decoration">(plHandle, dim, clLengths)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanOutStride" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanOutStride.html">clfftSetPlanOutStride</a><span class="decoration">(plHandle, dim, clStrides)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanPrecision" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanPrecision.html">clfftSetPlanPrecision</a><span class="decoration">(plHandle, precision)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanScale" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanScale.html">clfftSetPlanScale</a><span class="decoration">(plHandle, dir, scale)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetPlanTransposeResult" class="[&quot;public&quot;]" href="./clFFT/clfftSetPlanTransposeResult.html">clfftSetPlanTransposeResult</a><span class="decoration">(plHandle, transposed)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetResultLocation" class="[&quot;public&quot;]" href="./clFFT/clfftSetResultLocation.html">clfftSetResultLocation</a><span class="decoration">(plHandle, placeness)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetup" class="[&quot;public&quot;]" href="./clFFT/clfftSetup.html">clfftSetup</a><span class="decoration">(setupData)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftTeardown" class="[&quot;public&quot;]" href="./clFFT/clfftTeardown.html">clfftTeardown</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftSetupData" class="[&quot;public&quot;]" href="./clFFT/clfftSetupData.html">clfftSetupData</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftDim" class="[&quot;public&quot;]" href="./clFFT/clfftDim.html">clfftDim</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftDirection" class="[&quot;public&quot;]" href="./clFFT/clfftDirection.html">clfftDirection</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftLayout" class="[&quot;public&quot;]" href="./clFFT/clfftLayout.html">clfftLayout</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftPrecision" class="[&quot;public&quot;]" href="./clFFT/clfftPrecision.html">clfftPrecision</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftResultLocation" class="[&quot;public&quot;]" href="./clFFT/clfftResultLocation.html">clfftResultLocation</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftResultTransposed" class="[&quot;public&quot;]" href="./clFFT/clfftResultTransposed.html">clfftResultTransposed</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="clfftStatus" class="[&quot;public&quot;]" href="./clFFT/clfftStatus.html">clfftStatus</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Templates</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="FreeEnumMembers" class="[&quot;public&quot;]" href="./clFFT/FreeEnumMembers.html">FreeEnumMembers</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="clfftVersionMajor" class="[&quot;public&quot;]" href="./clFFT/clfftVersionMajor.html">
+								<code>clfftVersionMajor</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="clfftVersionMinor" class="[&quot;public&quot;]" href="./clFFT/clfftVersionMinor.html">
+								<code>clfftVersionMinor</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="clfftVersionPatch" class="[&quot;public&quot;]" href="./clFFT/clfftVersionPatch.html">
+								<code>clfftVersionPatch</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="CLFFT_DUMP_PROGRAMS" class="[&quot;public&quot;]" href="./clFFT/CLFFT_DUMP_PROGRAMS.html">
+								<code>CLFFT_DUMP_PROGRAMS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="clfftPlanHandle" class="[&quot;public&quot;]" href="./clFFT/clfftPlanHandle.html">
+								<code>clfftPlanHandle</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">ulong</span></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

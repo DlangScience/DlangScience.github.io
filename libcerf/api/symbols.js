@@ -15,7 +15,7 @@ var symbols = [
 {name: 'libcerf.im_w_of_x.im_w_of_x', kind: "functiondeclaration", path: './libcerf/im_w_of_x/im_w_of_x.html', attributes: ["pure", "nothrow", "nogc", "safe"]},
 {name: 'libcerf.testutils', kind: "module", path: './libcerf/testutils.html', attributes: []},
 {name: 'libcerf.w_of_z', kind: "module", path: './libcerf/w_of_z.html', attributes: []},
-{name: 'libcerf.w_of_z.cexp', kind: "functiondeclaration", path: './libcerf/w_of_z/cexp.html', attributes: ["extern(C)", "nothrow", "nogc", "trusted"]},
+{name: 'libcerf.w_of_z.cexp', kind: "functiondeclaration", path: './libcerf/w_of_z/cexp.html', attributes: ["nothrow", "nogc", "trusted", "extern(C)"]},
 {name: 'libcerf.w_of_z.w_of_z', kind: "functiondeclaration", path: './libcerf/w_of_z/w_of_z.html', attributes: ["nothrow", "nogc", "safe"]},
 {name: 'libcerf', kind: "module", path: './libcerf.html', attributes: []},
 {name: 'libcerf.dawson', kind: "aliasdeclaration", path: './libcerf/dawson.html', attributes: []},

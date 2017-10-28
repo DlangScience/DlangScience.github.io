@@ -1,34 +1,229 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct Perm</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module selected"><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct Perm</h1><p>A struct that generates all possible permutations of a sequence.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">Perm</span>(T)
-<span class="pun">;</span></div></code></div><section></section>
-<section><h2>Constructors</h2><h4>Constructors</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/base/Perm.this.html" class="["public"]"><code>this</code></a></td><td>Generate permutations from an input range.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct Perm</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct Perm</h1><p>A struct that generates all possible permutations of a sequence.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">Perm</span>(T)
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section></section>
+
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.this.html" class="[&quot;public&quot;]">
+								<code>this</code>
+							</a>
+						</td>
+						<td>Generate permutations from an input range.
  Create a duplicate of this sequence
  so that the original sequence is not modified.
-</td></tr></table></section><section><h2>Fields</h2><h4>Fields</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/base/Perm.currentIndex.html" class="["public"]"><code>currentIndex</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span></code></td><td></td></tr><tr><td><a href="../../dstats/base/Perm.Is.html" class="["public"]"><code>Is</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span><span class="pun">[</span><span class="pln">MAX_PERM_LEN</span><span class="pun">]</span></code></td><td></td></tr><tr><td><a href="../../dstats/base/Perm.len.html" class="["public"]"><code>len</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span></code></td><td></td></tr><tr><td><a href="../../dstats/base/Perm.nPerms.html" class="["public"]"><code>nPerms</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr></table></section><section><h2>Properties</h2><h4>Properties</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/base/Perm.empty.html" class="["public", "property"]"><code>empty</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td></tr><tr><td><a href="../../dstats/base/Perm.front.html" class="["public", "property"]"><code>front</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">[]</span></code></td><td>Returns the current permutation.  The array is const because it is
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.currentIndex.html" class="[&quot;public&quot;]"><code>currentIndex</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.Is.html" class="[&quot;public&quot;]"><code>Is</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span><span class="pun">[</span><span class="pln">MAX_PERM_LEN</span><span class="pun">]</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.len.html" class="[&quot;public&quot;]"><code>len</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ubyte</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.nPerms.html" class="[&quot;public&quot;]"><code>nPerms</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.empty.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>empty</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.front.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>front</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">[]</span></code></td><td>Returns the current permutation.  The array is const because it is
     recycled across iterations and modifying it would destroy the state of
     the permutation generator.
-</td></tr><tr><td><a href="../../dstats/base/Perm.length.html" class="["public", "property"]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td>The number of permutations left.
-</td></tr><tr><td><a href="../../dstats/base/Perm.save.html" class="["public", "property"]"><code>save</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td><td></td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/base/Perm.popFront.html" class="["public"]"><code>popFront</code></a></td><td>Get the next permutation in the sequence.  This will overwrite the
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.length.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td>The number of permutations left.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.save.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>save</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.popFront.html" class="[&quot;public&quot;]">
+								<code>popFront</code>
+							</a>
+						</td>
+						<td>Get the next permutation in the sequence.  This will overwrite the
     contents of the array returned by the last call to front.
-</td></tr></table></section><section><h2>Aliases</h2><h4>Aliases</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/base/Perm.PermArray.html" class="["public"]"><code>PermArray</code></a></td><td></td></tr></table></section>
-<section><h2>Notes</h2>
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/base/Perm.PermArray.html" class="[&quot;public&quot;]">
+								<code>PermArray</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Notes</h2>
 <p>Permutations are output in undefined order.
 </p>
 
@@ -62,4 +257,29 @@ would be insanely slow anyhow.
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">sorted<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">6</span><span class="pun">);</span></code></pre>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

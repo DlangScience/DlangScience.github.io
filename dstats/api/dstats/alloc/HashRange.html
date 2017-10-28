@@ -1,22 +1,228 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Struct HashRange</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module selected"><a href="../../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../../dstats/base.html">base</a></div></li><li><div class="module "><a href="../../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../../dstats/random.html">random</a></div></li><li><div class="module "><a href="../../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Struct HashRange</h1><p>Forward range struct for iterating over the keys or values of a
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct HashRange</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct HashRange</h1><p>Forward range struct for iterating over the keys or values of a
  StackHash or StackSet.  The lifetime of this object must not exceed that
  of the underlying StackHash or StackSet.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">HashRange</span>(K, S, <span class="typ">bool</span> vals<span class="pln"> </span><span class="pun">= </span><span class="kwd">false</span>)
-<span class="pun">;</span></div></code></div><section><h2>Constructors</h2><h4>Constructors</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/HashRange.this.html" class="["public"]"><code>this</code></a></td><td></td></tr></table></section><section><h2>Fields</h2><h4>Fields</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/HashRange.frontElem.html" class="["public"]"><code>frontElem</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">K</span><span class="pun">*</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/HashRange.index.html" class="["public"]"><code>index</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/HashRange.next.html" class="["public"]"><code>next</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">S<wbr/></span><span class="pun">.</span><span class="typ">Node</span><span class="pun">*</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/HashRange.set.html" class="["public"]"><code>set</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">S</span><span class="pun">*</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/HashRange._length.html" class="["public"]"><code>_length</code></a></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr></table></section><section><h2>Properties</h2><h4>Properties</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/HashRange.empty.html" class="["public", "property"]"><code>empty</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/HashRange.length.html" class="["public", "property"]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td></tr><tr><td><a href="../../dstats/alloc/HashRange.save.html" class="["public", "property"]"><code>save</code></a><span class="tableEntryAnnotation">[get]</span></td><td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td><td></td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../dstats/alloc/HashRange.popFront.html" class="["public"]"><code>popFront</code></a></td><td></td></tr></table></section>
-
-<footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">HashRange</span>(K, S, <span class="typ">bool</span> vals<span class="pln"> </span><span class="pun">= </span><span class="kwd">false</span>)
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Constructors</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.this.html" class="[&quot;public&quot;]">
+								<code>this</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.frontElem.html" class="[&quot;public&quot;]"><code>frontElem</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">K</span><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.index.html" class="[&quot;public&quot;]"><code>index</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.next.html" class="[&quot;public&quot;]"><code>next</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">S<wbr/></span><span class="pun">.</span><span class="typ">Node</span><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.set.html" class="[&quot;public&quot;]"><code>set</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">S</span><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange._length.html" class="[&quot;public&quot;]"><code>_length</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.empty.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>empty</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.length.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>length</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">size_t</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.save.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>save</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">typeof</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../dstats/alloc/HashRange.popFront.html" class="[&quot;public&quot;]">
+								<code>popFront</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

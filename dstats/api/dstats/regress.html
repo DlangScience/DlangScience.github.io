@@ -1,87 +1,462 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module dstats.regress</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../dstats/base.html">base</a></div></li><li><div class="module "><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../dstats/pca.html">pca</a></div></li><li><div class="module "><a href="../dstats/random.html">random</a></div></li><li><div class="module selected"><a href="../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.regress</h1><p>A module for performing linear regression.  This module has an unusual
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.regress</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.regress</h1><p>A module for performing linear regression.  This module has an unusual
  interface, as it is range-based instead of matrix based. Values for
  independent variables are provided as either a tuple or a range of ranges.
  This means that one can use, for example, map, to fit high order models and
  lazily evaluate certain values.  (For details, see examples below.)
 </p><section></section>
 
-<section><section><h2>Author</h2>
+			<section><section><h2>Author</h2>
 <p>David Simcha
 </p>
 </section>
-</section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="linearRegress" class="["public"]" href="../dstats/regress/linearRegress.html">linearRegress</a><span class="decoration">(Y, input)</span></code></td><td>Perform a linear regression as in linearRegressBeta, but return a
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="linearRegress" class="[&quot;public&quot;]" href="../dstats/regress/linearRegress.html">linearRegress</a><span class="decoration">(Y, input)</span>
+							</code>
+						</td>
+						<td>Perform a linear regression as in linearRegressBeta, but return a
 RegressRes with useful stuff for statistical inference.  If the last element
 of input is a real, this is used to specify the confidence intervals to
 be calculated.  Otherwise, the default of 0.95 is used.  The rest of input
 should be the elements of X.
-</td></tr><tr><td><code><a id="linearRegressBeta" class="["public"]" href="../dstats/regress/linearRegressBeta.html">linearRegressBeta</a><span class="decoration">(Y, XIn)</span></code></td><td>Perform a linear regression and return just the beta values.  The advantages
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="linearRegressBeta" class="[&quot;public&quot;]" href="../dstats/regress/linearRegressBeta.html">linearRegressBeta</a><span class="decoration">(Y, XIn)</span>
+							</code>
+						</td>
+						<td>Perform a linear regression and return just the beta values.  The advantages
 to just returning the beta values are that it's faster and that each range
 needs to be iterated over only once, and thus can be just an input range.
 The beta values are returned such that the smallest index corresponds to
 the leftmost element of X.  X can be either a tuple or a range of input
 ranges.  Y must be an input range.
-</td></tr><tr><td><code><a id="linearRegressBetaBuf" class="["public"]" href="../dstats/regress/linearRegressBetaBuf.html">linearRegressBetaBuf</a><span class="decoration">(buf, Y, XRidge)</span></code></td><td>Same as linearRegressBeta, but allows the user to specify a buffer for
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="linearRegressBetaBuf" class="[&quot;public&quot;]" href="../dstats/regress/linearRegressBetaBuf.html">linearRegressBetaBuf</a><span class="decoration">(buf, Y, XRidge)</span>
+							</code>
+						</td>
+						<td>Same as linearRegressBeta, but allows the user to specify a buffer for
 the beta terms.  If the buffer is too short, a new one is allocated.
 Otherwise, the results are returned in the user-provided buffer.
-</td></tr><tr><td><code><a id="linearRegressPenalized" class="["public"]" href="../dstats/regress/linearRegressPenalized.html">linearRegressPenalized</a><span class="decoration">(yIn, xIn, lasso, ridge)</span></code></td><td>Performs lasso (L1) and/or ridge (L2) penalized linear regression.  Due to the
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="linearRegressPenalized" class="[&quot;public&quot;]" href="../dstats/regress/linearRegressPenalized.html">linearRegressPenalized</a><span class="decoration">(yIn, xIn, lasso, ridge)</span>
+							</code>
+						</td>
+						<td>Performs lasso (L1) and/or ridge (L2) penalized linear regression.  Due to the
 way the data is standardized, no intercept term should be included in x
 (unlike linearRegress and linearRegressBeta).  The intercept coefficient is
 implicitly included and returned in the first element of the returned array.
 Usage is otherwise identical.
-</td></tr><tr><td><code><a id="loess1D" class="["public"]" href="../dstats/regress/loess1D.html">loess1D</a><span class="decoration">(y, x, span, degree)</span></code></td><td>This function performs loess regression.  Loess regression is a local
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="loess1D" class="[&quot;public&quot;]" href="../dstats/regress/loess1D.html">loess1D</a><span class="decoration">(y, x, span, degree)</span>
+							</code>
+						</td>
+						<td>This function performs loess regression.  Loess regression is a local
 regression procedure, where a prediction of the dependent (y) variable
 is made from an observation of the independent (x) variable by weighted
 least squares over x values in the neighborhood of the value being evaluated.
-</td></tr><tr><td><code><a id="logistic" class="["public"]" href="../dstats/regress/logistic.html">logistic</a><span class="decoration">(xb)</span></code></td><td>The logistic function used in logistic regression.
-</td></tr><tr><td><code><a id="logisticRegress" class="["public"]" href="../dstats/regress/logisticRegress.html">logisticRegress</a><span class="decoration">(yIn, input)</span></code></td><td>Similar to logisticRegressBeta, but returns a LogisticRes with useful stuff for
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="logistic" class="[&quot;public&quot;]" href="../dstats/regress/logistic.html">logistic</a><span class="decoration">(xb)</span>
+							</code>
+						</td>
+						<td>The logistic function used in logistic regression.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="logisticRegress" class="[&quot;public&quot;]" href="../dstats/regress/logisticRegress.html">logisticRegress</a><span class="decoration">(yIn, input)</span>
+							</code>
+						</td>
+						<td>Similar to logisticRegressBeta, but returns a LogisticRes with useful stuff for
 statistical inference.  If the last element of input is a floating point
 number instead of a range, it is used to specify the confidence interval
 calculated.  Otherwise, the default of 0.95 is used.
-</td></tr><tr><td><code><a id="logisticRegressBeta" class="["public"]" href="../dstats/regress/logisticRegressBeta.html">logisticRegressBeta</a><span class="decoration">(yIn, xRidge)</span></code></td><td>Computes a logistic regression using a maximum likelihood estimator
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="logisticRegressBeta" class="[&quot;public&quot;]" href="../dstats/regress/logisticRegressBeta.html">logisticRegressBeta</a><span class="decoration">(yIn, xRidge)</span>
+							</code>
+						</td>
+						<td>Computes a logistic regression using a maximum likelihood estimator
 and returns the beta coefficients.  This is a generalized linear model with
 the link function f(XB) = 1 / (1 + exp(XB)). This is generally used to model
 the probability that a binary Y variable is 1 given a set of X variables.
-</td></tr><tr><td><code><a id="logisticRegressPenalized" class="["public"]" href="../dstats/regress/logisticRegressPenalized.html">logisticRegressPenalized</a><span class="decoration">(yIn, xIn, lasso, ridge)</span></code></td><td>Performs lasso (L1) and/or ridge (L2) penalized logistic regression.  Due to the
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="logisticRegressPenalized" class="[&quot;public&quot;]" href="../dstats/regress/logisticRegressPenalized.html">logisticRegressPenalized</a><span class="decoration">(yIn, xIn, lasso, ridge)</span>
+							</code>
+						</td>
+						<td>Performs lasso (L1) and/or ridge (L2) penalized logistic regression.  Due to the
 way the data is standardized, no intercept term should be included in x
 (unlike logisticRegress and logisticRegressBeta).  The intercept coefficient is
 implicitly included and returned in the first element of the returned array.
 Usage is otherwise identical.
-</td></tr><tr><td><code><a id="polyFit" class="["public"]" href="../dstats/regress/polyFit.html">polyFit</a><span class="decoration">(Y, X, N, confInt)</span></code></td><td>Convenience function that takes a forward range X and a forward range Y,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="polyFit" class="[&quot;public&quot;]" href="../dstats/regress/polyFit.html">polyFit</a><span class="decoration">(Y, X, N, confInt)</span>
+							</code>
+						</td>
+						<td>Convenience function that takes a forward range X and a forward range Y,
  creates an array of PowMap structs for integer powers 0 through N,
  and calls linearRegress.
-</td></tr><tr><td><code><a id="polyFitBeta" class="["public"]" href="../dstats/regress/polyFitBeta.html">polyFitBeta</a><span class="decoration">(Y, X, N, ridge)</span></code></td><td>Convenience function that takes a forward range X and a forward range Y,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="polyFitBeta" class="[&quot;public&quot;]" href="../dstats/regress/polyFitBeta.html">polyFitBeta</a><span class="decoration">(Y, X, N, ridge)</span>
+							</code>
+						</td>
+						<td>Convenience function that takes a forward range X and a forward range Y,
  creates an array of PowMap structs for integer powers from 0 through N,
  and calls linearRegressBeta.
-</td></tr><tr><td><code><a id="polyFitBetaBuf" class="["public"]" href="../dstats/regress/polyFitBetaBuf.html">polyFitBetaBuf</a><span class="decoration">(buf, Y, X, N, ridge)</span></code></td><td>Same as polyFitBeta, but allows the caller to provide an explicit buffer
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="polyFitBetaBuf" class="[&quot;public&quot;]" href="../dstats/regress/polyFitBetaBuf.html">polyFitBetaBuf</a><span class="decoration">(buf, Y, X, N, ridge)</span>
+							</code>
+						</td>
+						<td>Same as polyFitBeta, but allows the caller to provide an explicit buffer
  to return the coefficients in.  If it's too short, a new one will be
  allocated.  Otherwise, results will be returned in the user-provided buffer.
-</td></tr><tr><td><code><a id="powMap" class="["public"]" href="../dstats/regress/powMap.html">powMap</a><span class="decoration">(range, exponent)</span></code></td><td>Maps a forward range to a power determined at runtime.  ExpType is the type
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="powMap" class="[&quot;public&quot;]" href="../dstats/regress/powMap.html">powMap</a><span class="decoration">(range, exponent)</span>
+							</code>
+						</td>
+						<td>Maps a forward range to a power determined at runtime.  ExpType is the type
  of the exponent.  Using an int is faster than using a double, but obviously
  less flexible.
-</td></tr><tr><td><code><a id="residuals" class="["public"]" href="../dstats/regress/residuals.html">residuals</a><span class="decoration">(betas, Y, X)</span></code></td><td>Given the beta coefficients from a linear regression, and X and Y values,
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="residuals" class="[&quot;public&quot;]" href="../dstats/regress/residuals.html">residuals</a><span class="decoration">(betas, Y, X)</span>
+							</code>
+						</td>
+						<td>Given the beta coefficients from a linear regression, and X and Y values,
  returns a range that lazily computes the residuals.
-</td></tr><tr><td><code><a id="_arrayExpSliceMulSliceAddass_d" class="["public"]" href="../dstats/regress/_arrayExpSliceMulSliceAddass_d.html">_arrayExpSliceMulSliceAddass_d</a><span class="decoration">(p2, p1, c0)</span></code></td><td></td></tr><tr><td><code><a id="_arrayExpSliceMulSliceAssign_d" class="["public"]" href="../dstats/regress/_arrayExpSliceMulSliceAssign_d.html">_arrayExpSliceMulSliceAssign_d</a><span class="decoration">(p2, p1, c0)</span></code></td><td></td></tr><tr><td><code><a id="_arrayExpSliceMulSliceMinass_d" class="["public"]" href="../dstats/regress/_arrayExpSliceMulSliceMinass_d.html">_arrayExpSliceMulSliceMinass_d</a><span class="decoration">(p2, p1, c0)</span></code></td><td></td></tr><tr><td><code><a id="_arraySliceExpMulSliceAddass_d" class="["public"]" href="../dstats/regress/_arraySliceExpMulSliceAddass_d.html">_arraySliceExpMulSliceAddass_d</a><span class="decoration">(p2, c1, p0)</span></code></td><td></td></tr><tr><td><code><a id="_arraySliceSliceMinSliceAssign_d" class="["public"]" href="../dstats/regress/_arraySliceSliceMinSliceAssign_d.html">_arraySliceSliceMinSliceAssign_d</a><span class="decoration">(p2, p1, p0)</span></code></td><td></td></tr><tr><td><code><a id="_arraySliceSliceMulSliceAssign_d" class="["public"]" href="../dstats/regress/_arraySliceSliceMulSliceAssign_d.html">_arraySliceSliceMulSliceAssign_d</a><span class="decoration">(p2, p1, p0)</span></code></td><td></td></tr></table></section><section><h2>Classes</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="Loess1D" class="["public"]" href="../dstats/regress/Loess1D.html">Loess1D</a></code></td><td>This class is returned from the loess1D function and holds the state of a
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="_arrayExpSliceMulSliceAddass_d" class="[&quot;public&quot;]" href="../dstats/regress/_arrayExpSliceMulSliceAddass_d.html">_arrayExpSliceMulSliceAddass_d</a><span class="decoration">(p2, p1, c0)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="_arrayExpSliceMulSliceAssign_d" class="[&quot;public&quot;]" href="../dstats/regress/_arrayExpSliceMulSliceAssign_d.html">_arrayExpSliceMulSliceAssign_d</a><span class="decoration">(p2, p1, c0)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="_arrayExpSliceMulSliceMinass_d" class="[&quot;public&quot;]" href="../dstats/regress/_arrayExpSliceMulSliceMinass_d.html">_arrayExpSliceMulSliceMinass_d</a><span class="decoration">(p2, p1, c0)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="_arraySliceExpMulSliceAddass_d" class="[&quot;public&quot;]" href="../dstats/regress/_arraySliceExpMulSliceAddass_d.html">_arraySliceExpMulSliceAddass_d</a><span class="decoration">(p2, c1, p0)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="_arraySliceSliceMinSliceAssign_d" class="[&quot;public&quot;]" href="../dstats/regress/_arraySliceSliceMinSliceAssign_d.html">_arraySliceSliceMinSliceAssign_d</a><span class="decoration">(p2, p1, p0)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="_arraySliceSliceMulSliceAssign_d" class="[&quot;public&quot;]" href="../dstats/regress/_arraySliceSliceMulSliceAssign_d.html">_arraySliceSliceMulSliceAssign_d</a><span class="decoration">(p2, p1, p0)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Loess1D" class="[&quot;public&quot;]" href="../dstats/regress/Loess1D.html">Loess1D</a>
+							</code>
+						</td>
+						<td>This class is returned from the loess1D function and holds the state of a
 loess regression with one predictor variable.
-</td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="LogisticRes" class="["public"]" href="../dstats/regress/LogisticRes.html">LogisticRes</a></code></td><td>Plain old data struct to hold the results of a logistic regression.
-</td></tr><tr><td><code><a id="PolyFitRes" class="["public"]" href="../dstats/regress/PolyFitRes.html">PolyFitRes</a></code></td><td>Struct returned by polyFit.
-</td></tr><tr><td><code><a id="PowMap" class="["public"]" href="../dstats/regress/PowMap.html">PowMap</a></code></td><td></td></tr><tr><td><code><a id="RegressRes" class="["public"]" href="../dstats/regress/RegressRes.html">RegressRes</a></code></td><td>Struct that holds the results of a linear regression.  It's a plain old
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="LogisticRes" class="[&quot;public&quot;]" href="../dstats/regress/LogisticRes.html">LogisticRes</a>
+							</code>
+						</td>
+						<td>Plain old data struct to hold the results of a logistic regression.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PolyFitRes" class="[&quot;public&quot;]" href="../dstats/regress/PolyFitRes.html">PolyFitRes</a>
+							</code>
+						</td>
+						<td>Struct returned by polyFit.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PowMap" class="[&quot;public&quot;]" href="../dstats/regress/PowMap.html">PowMap</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="RegressRes" class="[&quot;public&quot;]" href="../dstats/regress/RegressRes.html">RegressRes</a>
+							</code>
+						</td>
+						<td>Struct that holds the results of a linear regression.  It's a plain old
  data struct.
-</td></tr><tr><td><code><a id="Residuals" class="["public"]" href="../dstats/regress/Residuals.html">Residuals</a></code></td><td>Forward Range for holding the residuals from a regression analysis.
-</td></tr></table></section><section><h2>Manifest constants</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="haveSvd" class="["public"]" href="../dstats/regress/haveSvd.html"><code>haveSvd</code></a></td><td></td><td></td></tr></table></section><section><h2>Aliases</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="repeat" class="["public"]" href="../dstats/regress/repeat.html"><code>repeat</code></a></td><td><code class="prettyprint lang-d"></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Residuals" class="[&quot;public&quot;]" href="../dstats/regress/Residuals.html">Residuals</a>
+							</code>
+						</td>
+						<td>Forward Range for holding the residuals from a regression analysis.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="haveSvd" class="[&quot;public&quot;]" href="../dstats/regress/haveSvd.html">
+								<code>haveSvd</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="repeat" class="[&quot;public&quot;]" href="../dstats/regress/repeat.html">
+								<code>repeat</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

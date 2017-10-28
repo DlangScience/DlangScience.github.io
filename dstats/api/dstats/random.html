@@ -1,23 +1,382 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module dstats.random</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="../dstats.html">dstats</a></div><ul class="tree-view"><li><div class="module "><a href="../dstats/alloc.html">alloc</a></div></li><li><div class="module "><a href="../dstats/base.html">base</a></div></li><li><div class="module "><a href="../dstats/cor.html">cor</a></div></li><li><div class="module "><a href="../dstats/distrib.html">distrib</a></div></li><li><div class="module "><a href="../dstats/infotheory.html">infotheory</a></div></li><li><div class="module "><a href="../dstats/kerneldensity.html">kerneldensity</a></div></li><li><div class="module "><a href="../dstats/pca.html">pca</a></div></li><li><div class="module selected"><a href="../dstats/random.html">random</a></div></li><li><div class="module "><a href="../dstats/regress.html">regress</a></div></li><li><div class="module "><a href="../dstats/sort.html">sort</a></div></li><li><div class="module "><a href="../dstats/summary.html">summary</a></div></li><li><div class="module "><a href="../dstats/tests.html">tests</a></div></li></ul></li></ul></nav><div id="main-contents"><h1>Module dstats.random</h1><p>Generates random samples from a various probability distributions.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module dstats.random</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../dstats.html">dstats</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../dstats/alloc.html">alloc</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/base.html">base</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/cor.html">cor</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/distrib.html">distrib</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/infotheory.html">infotheory</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/kerneldensity.html">kerneldensity</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/pca.html">pca</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../dstats/random.html">random</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/regress.html">regress</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/sort.html">sort</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/summary.html">summary</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../dstats/tests.html">tests</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module dstats.random</h1><p>Generates random samples from a various probability distributions.
  These are mostly D ports of the NumPy random number generators.
 </p>
-<section></section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="randArray" class="["public"]" href="../dstats/random/randArray.html">randArray</a><span class="decoration">(N, args)</span></code></td><td>Convenience function to allow one-statement creation of arrays of random
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="randArray" class="[&quot;public&quot;]" href="../dstats/random/randArray.html">randArray</a><span class="decoration">(N, args)</span>
+							</code>
+						</td>
+						<td>Convenience function to allow one-statement creation of arrays of random
  numbers.
-</td></tr><tr><td><code><a id="randArray" class="["public"]" href="../dstats/random/randArray.html">randArray</a><span class="decoration">(N, args)</span></code></td><td>Allows the creation of an array of random numbers with an explicitly
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="randArray" class="[&quot;public&quot;]" href="../dstats/random/randArray.html">randArray</a><span class="decoration">(N, args)</span>
+							</code>
+						</td>
+						<td>Allows the creation of an array of random numbers with an explicitly
  specified type.  Useful, for example, when single-precision floats are all
  you need.
-</td></tr><tr><td><code><a id="randRange" class="["public"]" href="../dstats/random/randRange.html">randRange</a><span class="decoration">(params)</span></code></td><td>Turn a random number generator function into an infinite range.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="randRange" class="[&quot;public&quot;]" href="../dstats/random/randRange.html">randRange</a><span class="decoration">(params)</span>
+							</code>
+						</td>
+						<td>Turn a random number generator function into an infinite range.
  Params is a tuple of the distribution parameters.  This is specified
  in the same order as when calling the function directly.
-</td></tr><tr><td><code><a id="rBernoulli" class="["public"]" href="../dstats/random/rBernoulli.html">rBernoulli</a><span class="decoration">(P, gen)</span></code></td><td></td></tr><tr><td><code><a id="rBeta" class="["public"]" href="../dstats/random/rBeta.html">rBeta</a><span class="decoration">(a, b, gen)</span></code></td><td></td></tr><tr><td><code><a id="rBinomial" class="["public"]" href="../dstats/random/rBinomial.html">rBinomial</a><span class="decoration">(n, p, gen)</span></code></td><td></td></tr><tr><td><code><a id="rCauchy" class="["public"]" href="../dstats/random/rCauchy.html">rCauchy</a><span class="decoration">(X0, gamma, gen)</span></code></td><td></td></tr><tr><td><code><a id="rChiSquare" class="["public"]" href="../dstats/random/rChiSquare.html">rChiSquare</a><span class="decoration">(df, gen)</span></code></td><td></td></tr><tr><td><code><a id="rExponential" class="["public"]" href="../dstats/random/rExponential.html">rExponential</a><span class="decoration">(lambda, gen)</span></code></td><td></td></tr><tr><td><code><a id="rFisher" class="["public"]" href="../dstats/random/rFisher.html">rFisher</a><span class="decoration">(df1, df2, gen)</span></code></td><td></td></tr><tr><td><code><a id="rGamma" class="["public"]" href="../dstats/random/rGamma.html">rGamma</a><span class="decoration">(a, b, gen)</span></code></td><td></td></tr><tr><td><code><a id="rGeometric" class="["public"]" href="../dstats/random/rGeometric.html">rGeometric</a><span class="decoration">(p, gen)</span></code></td><td></td></tr><tr><td><code><a id="rHypergeometric" class="["public"]" href="../dstats/random/rHypergeometric.html">rHypergeometric</a><span class="decoration">(n1, n2, n, gen)</span></code></td><td></td></tr><tr><td><code><a id="rLaplace" class="["public"]" href="../dstats/random/rLaplace.html">rLaplace</a><span class="decoration">(mu, b, gen)</span></code></td><td></td></tr><tr><td><code><a id="rLogistic" class="["public"]" href="../dstats/random/rLogistic.html">rLogistic</a><span class="decoration">(loc, scale, gen)</span></code></td><td></td></tr><tr><td><code><a id="rLogNorm" class="["public"]" href="../dstats/random/rLogNorm.html">rLogNorm</a><span class="decoration">(mu, sigma, gen)</span></code></td><td></td></tr><tr><td><code><a id="rNegBinom" class="["public"]" href="../dstats/random/rNegBinom.html">rNegBinom</a><span class="decoration">(n, p, gen)</span></code></td><td></td></tr><tr><td><code><a id="rNorm" class="["public"]" href="../dstats/random/rNorm.html">rNorm</a><span class="decoration">(mean, sd, gen)</span></code></td><td></td></tr><tr><td><code><a id="rPoisson" class="["public"]" href="../dstats/random/rPoisson.html">rPoisson</a><span class="decoration">(lam, gen)</span></code></td><td></td></tr><tr><td><code><a id="rRayleigh" class="["public"]" href="../dstats/random/rRayleigh.html">rRayleigh</a><span class="decoration">(mode, gen)</span></code></td><td></td></tr><tr><td><code><a id="rStudentT" class="["public"]" href="../dstats/random/rStudentT.html">rStudentT</a><span class="decoration">(df, gen)</span></code></td><td></td></tr><tr><td><code><a id="rWald" class="["public"]" href="../dstats/random/rWald.html">rWald</a><span class="decoration">(mu, lambda, gen)</span></code></td><td></td></tr><tr><td><code><a id="rWeibull" class="["public"]" href="../dstats/random/rWeibull.html">rWeibull</a><span class="decoration">(shape, scale, gen)</span></code></td><td></td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="RandRange" class="["public"]" href="../dstats/random/RandRange.html">RandRange</a></code></td><td></td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td></td></tr><tr><th>Copyright</th><td></td></tr><tr><th>License</th><td></td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rBernoulli" class="[&quot;public&quot;]" href="../dstats/random/rBernoulli.html">rBernoulli</a><span class="decoration">(P, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rBeta" class="[&quot;public&quot;]" href="../dstats/random/rBeta.html">rBeta</a><span class="decoration">(a, b, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rBinomial" class="[&quot;public&quot;]" href="../dstats/random/rBinomial.html">rBinomial</a><span class="decoration">(n, p, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rCauchy" class="[&quot;public&quot;]" href="../dstats/random/rCauchy.html">rCauchy</a><span class="decoration">(X0, gamma, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rChiSquare" class="[&quot;public&quot;]" href="../dstats/random/rChiSquare.html">rChiSquare</a><span class="decoration">(df, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rExponential" class="[&quot;public&quot;]" href="../dstats/random/rExponential.html">rExponential</a><span class="decoration">(lambda, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rFisher" class="[&quot;public&quot;]" href="../dstats/random/rFisher.html">rFisher</a><span class="decoration">(df1, df2, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rGamma" class="[&quot;public&quot;]" href="../dstats/random/rGamma.html">rGamma</a><span class="decoration">(a, b, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rGeometric" class="[&quot;public&quot;]" href="../dstats/random/rGeometric.html">rGeometric</a><span class="decoration">(p, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rHypergeometric" class="[&quot;public&quot;]" href="../dstats/random/rHypergeometric.html">rHypergeometric</a><span class="decoration">(n1, n2, n, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rLaplace" class="[&quot;public&quot;]" href="../dstats/random/rLaplace.html">rLaplace</a><span class="decoration">(mu, b, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rLogistic" class="[&quot;public&quot;]" href="../dstats/random/rLogistic.html">rLogistic</a><span class="decoration">(loc, scale, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rLogNormal" class="[&quot;public&quot;]" href="../dstats/random/rLogNormal.html">rLogNormal</a><span class="decoration">(mu, sigma, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rNegBinom" class="[&quot;public&quot;]" href="../dstats/random/rNegBinom.html">rNegBinom</a><span class="decoration">(n, p, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rNormal" class="[&quot;public&quot;]" href="../dstats/random/rNormal.html">rNormal</a><span class="decoration">(mean, sd, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rPoisson" class="[&quot;public&quot;]" href="../dstats/random/rPoisson.html">rPoisson</a><span class="decoration">(lam, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rRayleigh" class="[&quot;public&quot;]" href="../dstats/random/rRayleigh.html">rRayleigh</a><span class="decoration">(mode, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rStudentsT" class="[&quot;public&quot;]" href="../dstats/random/rStudentsT.html">rStudentsT</a><span class="decoration">(df, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rWald" class="[&quot;public&quot;]" href="../dstats/random/rWald.html">rWald</a><span class="decoration">(mu, lambda, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="rWeibull" class="[&quot;public&quot;]" href="../dstats/random/rWeibull.html">rWeibull</a><span class="decoration">(shape, scale, gen)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="RandRange" class="[&quot;public&quot;]" href="../dstats/random/RandRange.html">RandRange</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="rLogNorm" class="[&quot;public&quot;]" href="../dstats/random/rLogNorm.html">
+								<code>rLogNorm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rNorm" class="[&quot;public&quot;]" href="../dstats/random/rNorm.html">
+								<code>rNorm</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="rStudentT" class="[&quot;public&quot;]" href="../dstats/random/rStudentT.html">
+								<code>rStudentT</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

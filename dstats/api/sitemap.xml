@@ -30,8 +30,6 @@
 <url><loc>http://127.0.0.1/dstats/alloc/AVLNodeRealHeight.right.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/defaultSegmentSize.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/GCScan.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/alloc/GCScan.no.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/alloc/GCScan.yes.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/HashRange.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/HashRange.empty.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/alloc/HashRange.frontElem.html</loc></url>
@@ -419,8 +417,6 @@
 <url><loc>http://127.0.0.1/dstats/pca/PrinCompOptions.zeroMean.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/pca/removeComponent.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/pca/Transposed.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/pca/Transposed.no.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/pca/Transposed.yes.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/randArray.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/randArray.html</loc></url>
@@ -447,10 +443,13 @@
 <url><loc>http://127.0.0.1/dstats/random/rLaplace.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rLogistic.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rLogNorm.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/random/rLogNormal.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rNegBinom.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rNorm.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/random/rNormal.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rPoisson.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rRayleigh.html</loc></url>
+<url><loc>http://127.0.0.1/dstats/random/rStudentsT.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rStudentT.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rWald.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/random/rWeibull.html</loc></url>
@@ -644,10 +643,6 @@
 <url><loc>http://127.0.0.1/dstats/summary/zScore.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/Alt.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Alt.greater.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Alt.less.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Alt.none.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Alt.twoSided.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/binomialTest.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/chiSqrContingency.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/chiSqrFit.html</loc></url>
@@ -662,11 +657,7 @@
 <url><loc>http://127.0.0.1/dstats/tests/correlatedAnova.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/dAgostinoK.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/Dependency.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Dependency.no.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Dependency.yes.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/Expected.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Expected.count.html</loc></url>
-<url><loc>http://127.0.0.1/dstats/tests/Expected.proportion.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/falseDiscoveryRate.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/fisherExact.html</loc></url>
 <url><loc>http://127.0.0.1/dstats/tests/fisherExact.html</loc></url>
